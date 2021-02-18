@@ -74,6 +74,7 @@ namespace WilianMiranda01.VISTA
             this.btnAjustes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAjustes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAjustes.UseVisualStyleBackColor = true;
+            this.btnAjustes.Click += new System.EventHandler(this.btnAjustes_Click);
             // 
             // btnNotificaciones
             // 
@@ -92,9 +93,11 @@ namespace WilianMiranda01.VISTA
             this.btnNotificaciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNotificaciones.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNotificaciones.UseVisualStyleBackColor = true;
+            this.btnNotificaciones.Click += new System.EventHandler(this.btnNotificaciones_Click);
             // 
             // btnClientes
             // 
+            this.btnClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnClientes.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnClientes.FlatAppearance.BorderSize = 0;
             this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -109,7 +112,8 @@ namespace WilianMiranda01.VISTA
             this.btnClientes.Text = "Clientes";
             this.btnClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnClientes.UseVisualStyleBackColor = true;
+            this.btnClientes.UseVisualStyleBackColor = false;
+            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
             // 
             // btnMediciones
             // 
@@ -128,6 +132,7 @@ namespace WilianMiranda01.VISTA
             this.btnMediciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMediciones.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMediciones.UseVisualStyleBackColor = true;
+            this.btnMediciones.Click += new System.EventHandler(this.btnMediciones_Click);
             // 
             // btnReporte
             // 
@@ -146,6 +151,7 @@ namespace WilianMiranda01.VISTA
             this.btnReporte.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReporte.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReporte.UseVisualStyleBackColor = true;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
             // 
             // btnPrincipal
             // 
@@ -164,6 +170,7 @@ namespace WilianMiranda01.VISTA
             this.btnPrincipal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPrincipal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPrincipal.UseVisualStyleBackColor = true;
+            this.btnPrincipal.Click += new System.EventHandler(this.btnPrincipal_Click);
             // 
             // pnlLogo
             // 
@@ -175,7 +182,7 @@ namespace WilianMiranda01.VISTA
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel1.BackColor = System.Drawing.Color.Teal;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(240, 0);
             this.panel1.Name = "panel1";
