@@ -1,0 +1,13 @@
+C:\Users\Jose\Desktop\PROG I CICLO 3\PROYECTOS\SOFTWARE DE GESTIÓN DE AGUA\WilianMiranda01\WilianMiranda01\bin\Debug\WilianMiranda01.exe.config
+C:\Users\Jose\Desktop\PROG I CICLO 3\PROYECTOS\SOFTWARE DE GESTIÓN DE AGUA\WilianMiranda01\WilianMiranda01\bin\Debug\WilianMiranda01.exe
+C:\Users\Jose\Desktop\PROG I CICLO 3\PROYECTOS\SOFTWARE DE GESTIÓN DE AGUA\WilianMiranda01\WilianMiranda01\bin\Debug\WilianMiranda01.pdb
+C:\Users\Jose\Desktop\PROG I CICLO 3\PROYECTOS\SOFTWARE DE GESTIÓN DE AGUA\WilianMiranda01\WilianMiranda01\obj\Debug\Software de Gestión Rural de Agua.csprojAssemblyReference.cache
+C:\Users\Jose\Desktop\PROG I CICLO 3\PROYECTOS\SOFTWARE DE GESTIÓN DE AGUA\WilianMiranda01\WilianMiranda01\obj\Debug\WilianMiranda01.Properties.Resources.resources
+C:\Users\Jose\Desktop\PROG I CICLO 3\PROYECTOS\SOFTWARE DE GESTIÓN DE AGUA\WilianMiranda01\WilianMiranda01\obj\Debug\WilianMiranda01.Form1.resources
+C:\Users\Jose\Desktop\PROG I CICLO 3\PROYECTOS\SOFTWARE DE GESTIÓN DE AGUA\WilianMiranda01\WilianMiranda01\obj\Debug\WilianMiranda01.VISTA.FmrPrincipal.resources
+C:\Users\Jose\Desktop\PROG I CICLO 3\PROYECTOS\SOFTWARE DE GESTIÓN DE AGUA\WilianMiranda01\WilianMiranda01\obj\Debug\Software de Gestión Rural de Agua.csproj.GenerateResource.cache
+C:\Users\Jose\Desktop\PROG I CICLO 3\PROYECTOS\SOFTWARE DE GESTIÓN DE AGUA\WilianMiranda01\WilianMiranda01\obj\Debug\Software de Gestión Rural de Agua.csproj.CoreCompileInputs.cache
+C:\Users\Jose\Desktop\PROG I CICLO 3\PROYECTOS\SOFTWARE DE GESTIÓN DE AGUA\WilianMiranda01\WilianMiranda01\obj\Debug\WilianMiranda01.exe
+C:\Users\Jose\Desktop\PROG I CICLO 3\PROYECTOS\SOFTWARE DE GESTIÓN DE AGUA\WilianMiranda01\WilianMiranda01\obj\Debug\WilianMiranda01.pdb
+C:\Users\Jose\Desktop\PROG I CICLO 3\PROYECTOS\SOFTWARE DE GESTIÓN DE AGUA\WilianMiranda01\WilianMiranda01\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Jose\Desktop\PROG I CICLO 3\PROYECTOS\SOFTWARE DE GESTIÓN DE AGUA\WilianMiranda01\WilianMiranda01\obj\Debug\Software de Gestión Rural de Agua.csproj.CopyComplete
