@@ -36,7 +36,8 @@ namespace WilianMiranda01.VISTA
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.txtComunidad = new System.Windows.Forms.TextBox();
+            this.txtDUI = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -49,6 +50,7 @@ namespace WilianMiranda01.VISTA
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbComunidad = new System.Windows.Forms.ComboBox();
             this.pnlContenerdorAgregarCliente.SuspendLayout();
             this.pnlContenedorAgregarCliente.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -76,7 +78,7 @@ namespace WilianMiranda01.VISTA
             this.pnlContenerdorAgregarCliente.Location = new System.Drawing.Point(0, 0);
             this.pnlContenerdorAgregarCliente.Margin = new System.Windows.Forms.Padding(4);
             this.pnlContenerdorAgregarCliente.Name = "pnlContenerdorAgregarCliente";
-            this.pnlContenerdorAgregarCliente.Size = new System.Drawing.Size(544, 335);
+            this.pnlContenerdorAgregarCliente.Size = new System.Drawing.Size(544, 375);
             this.pnlContenerdorAgregarCliente.TabIndex = 1;
             this.pnlContenerdorAgregarCliente.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -90,7 +92,7 @@ namespace WilianMiranda01.VISTA
             this.pnlContenedorAgregarCliente.Location = new System.Drawing.Point(0, 28);
             this.pnlContenedorAgregarCliente.Name = "pnlContenedorAgregarCliente";
             this.pnlContenedorAgregarCliente.Padding = new System.Windows.Forms.Padding(20, 0, 20, 20);
-            this.pnlContenedorAgregarCliente.Size = new System.Drawing.Size(544, 307);
+            this.pnlContenedorAgregarCliente.Size = new System.Drawing.Size(544, 347);
             this.pnlContenedorAgregarCliente.TabIndex = 4;
             // 
             // panel4
@@ -98,7 +100,7 @@ namespace WilianMiranda01.VISTA
             this.panel4.Controls.Add(this.btnCancelar);
             this.panel4.Controls.Add(this.btnAgregar);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(20, 235);
+            this.panel4.Location = new System.Drawing.Point(20, 275);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(504, 52);
             this.panel4.TabIndex = 5;
@@ -134,7 +136,9 @@ namespace WilianMiranda01.VISTA
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.PowderBlue;
-            this.panel3.Controls.Add(this.txtComunidad);
+            this.panel3.Controls.Add(this.cbComunidad);
+            this.panel3.Controls.Add(this.txtDUI);
+            this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.txtEmail);
             this.panel3.Controls.Add(this.label6);
@@ -148,22 +152,32 @@ namespace WilianMiranda01.VISTA
             this.panel3.Location = new System.Drawing.Point(20, 47);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(10);
-            this.panel3.Size = new System.Drawing.Size(504, 174);
+            this.panel3.Size = new System.Drawing.Size(504, 212);
             this.panel3.TabIndex = 4;
             // 
-            // txtComunidad
+            // txtDUI
             // 
-            this.txtComunidad.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtComunidad.Location = new System.Drawing.Point(103, 135);
-            this.txtComunidad.Name = "txtComunidad";
-            this.txtComunidad.Size = new System.Drawing.Size(369, 26);
-            this.txtComunidad.TabIndex = 9;
+            this.txtDUI.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDUI.Location = new System.Drawing.Point(122, 77);
+            this.txtDUI.Name = "txtDUI";
+            this.txtDUI.Size = new System.Drawing.Size(369, 26);
+            this.txtDUI.TabIndex = 11;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(69, 84);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(47, 19);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "DUI: ";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(3, 145);
+            this.label7.Location = new System.Drawing.Point(8, 180);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(108, 19);
             this.label7.TabIndex = 8;
@@ -172,7 +186,7 @@ namespace WilianMiranda01.VISTA
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(103, 103);
+            this.txtEmail.Location = new System.Drawing.Point(122, 141);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(369, 26);
             this.txtEmail.TabIndex = 7;
@@ -181,16 +195,17 @@ namespace WilianMiranda01.VISTA
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(13, 112);
+            this.label6.Location = new System.Drawing.Point(50, 148);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(66, 19);
             this.label6.TabIndex = 6;
             this.label6.Text = "E-mail: ";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // txtTelefono
             // 
             this.txtTelefono.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefono.Location = new System.Drawing.Point(103, 71);
+            this.txtTelefono.Location = new System.Drawing.Point(122, 109);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(369, 26);
             this.txtTelefono.TabIndex = 5;
@@ -199,7 +214,7 @@ namespace WilianMiranda01.VISTA
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(13, 80);
+            this.label5.Location = new System.Drawing.Point(32, 118);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(85, 19);
             this.label5.TabIndex = 4;
@@ -208,7 +223,7 @@ namespace WilianMiranda01.VISTA
             // txtApellidos
             // 
             this.txtApellidos.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellidos.Location = new System.Drawing.Point(103, 39);
+            this.txtApellidos.Location = new System.Drawing.Point(122, 45);
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(369, 26);
             this.txtApellidos.TabIndex = 3;
@@ -217,7 +232,7 @@ namespace WilianMiranda01.VISTA
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(13, 48);
+            this.label4.Location = new System.Drawing.Point(26, 52);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(90, 19);
             this.label4.TabIndex = 2;
@@ -226,7 +241,7 @@ namespace WilianMiranda01.VISTA
             // txtNombreNuevoCliente
             // 
             this.txtNombreNuevoCliente.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreNuevoCliente.Location = new System.Drawing.Point(103, 7);
+            this.txtNombreNuevoCliente.Location = new System.Drawing.Point(122, 13);
             this.txtNombreNuevoCliente.Name = "txtNombreNuevoCliente";
             this.txtNombreNuevoCliente.Size = new System.Drawing.Size(369, 26);
             this.txtNombreNuevoCliente.TabIndex = 1;
@@ -235,7 +250,7 @@ namespace WilianMiranda01.VISTA
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(13, 16);
+            this.label3.Location = new System.Drawing.Point(27, 20);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 19);
             this.label3.TabIndex = 0;
@@ -272,11 +287,19 @@ namespace WilianMiranda01.VISTA
             this.panel1.Size = new System.Drawing.Size(544, 28);
             this.panel1.TabIndex = 2;
             // 
+            // cbComunidad
+            // 
+            this.cbComunidad.FormattingEnabled = true;
+            this.cbComunidad.Location = new System.Drawing.Point(122, 173);
+            this.cbComunidad.Name = "cbComunidad";
+            this.cbComunidad.Size = new System.Drawing.Size(369, 26);
+            this.cbComunidad.TabIndex = 15;
+            // 
             // FrmAgregarClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(544, 335);
+            this.ClientSize = new System.Drawing.Size(544, 375);
             this.Controls.Add(this.pnlContenerdorAgregarCliente);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -312,12 +335,14 @@ namespace WilianMiranda01.VISTA
         private System.Windows.Forms.TextBox txtNombreNuevoCliente;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox txtComunidad;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.TextBox txtDUI;
+        private System.Windows.Forms.Label label8;
+        public System.Windows.Forms.ComboBox cbComunidad;
     }
 }

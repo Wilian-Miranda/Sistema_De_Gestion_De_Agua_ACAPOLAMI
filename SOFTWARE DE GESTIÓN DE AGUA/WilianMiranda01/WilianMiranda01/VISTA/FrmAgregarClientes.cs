@@ -41,5 +41,10 @@ namespace WilianMiranda01.VISTA
         {
             this.Dispose();
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

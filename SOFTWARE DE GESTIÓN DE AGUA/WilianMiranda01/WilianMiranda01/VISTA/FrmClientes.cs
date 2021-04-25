@@ -36,16 +36,8 @@ namespace WilianMiranda01.VISTA
 
         private void FrmClientes_Load(object sender, EventArgs e)
         {
-            //ActualizarDatos();
-            //dataGridView1.Columns[0].HeaderText = "CÓDIGO";
-            //dataGridView1.Columns[0].Width = 100;
-            ////dataGridView1.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            //dataGridView1.Columns[1].HeaderText = "APELLIDOS";
-            //dataGridView1.Columns[2].HeaderText = "NOMBRES";
-            //dataGridView1.Columns[3].HeaderText = "TELÉFONO";
-            //dataGridView1.Columns[4].HeaderText = "COMUNIDAD";
 
-            //btnCantidadDeClientes.Text = dataGridView1.Rows.Count.ToString();
+            btnCantidadDeClientes.Text = dtgGestionDeConsumidores.Rows.Count.ToString();
 
         }
 
@@ -78,14 +70,16 @@ namespace WilianMiranda01.VISTA
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count > 0)
+            if (dtgGestionDeConsumidores.SelectedRows.Count > 0)
             {
                 FrmModificarCliente modificar = new FrmModificarCliente();
-                modificar.txtIdCliente.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-                modificar.txtNombre.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-                modificar.txtApellidos.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-                modificar.txtTelefono.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-                modificar.txtComunidad.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+                modificar.txtIdCliente.Text = dtgGestionDeConsumidores.CurrentRow.Cells[0].Value.ToString();
+                modificar.txtNombre.Text = dtgGestionDeConsumidores.CurrentRow.Cells[1].Value.ToString();
+                modificar.txtApellidos.Text = dtgGestionDeConsumidores.CurrentRow.Cells[2].Value.ToString();
+                modificar.txtDUI.Text = dtgGestionDeConsumidores.CurrentRow.Cells[3].Value.ToString();
+                modificar.txtEmail.Text = dtgGestionDeConsumidores.CurrentRow.Cells[4].Value.ToString();
+                modificar.txtTelefono.Text = dtgGestionDeConsumidores.CurrentRow.Cells[5].Value.ToString();           
+                modificar.cbComunidad.Text = dtgGestionDeConsumidores.CurrentRow.Cells[6].Value.ToString();
 
                 modificar.ShowDialog();
             }
@@ -99,15 +93,17 @@ namespace WilianMiranda01.VISTA
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count > 0)
+            if (dtgGestionDeConsumidores.SelectedRows.Count > 0)
             {
                 FrmEliminarCliente eliminar = new FrmEliminarCliente();
 
-                eliminar.txtIdCliente.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-                eliminar.txtNombre.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-                eliminar.txtApellidos.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-                eliminar.txtTelefono.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-                eliminar.txtComunidad.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+                eliminar.txtIdCliente.Text = dtgGestionDeConsumidores.CurrentRow.Cells[0].Value.ToString();
+                eliminar.txtNombre.Text = dtgGestionDeConsumidores.CurrentRow.Cells[1].Value.ToString();
+                eliminar.txtApellidos.Text = dtgGestionDeConsumidores.CurrentRow.Cells[2].Value.ToString();
+                eliminar.txtDUI.Text = dtgGestionDeConsumidores.CurrentRow.Cells[3].Value.ToString();
+                eliminar.txtEmail.Text = dtgGestionDeConsumidores.CurrentRow.Cells[4].Value.ToString();
+                eliminar.txtTelefono.Text = dtgGestionDeConsumidores.CurrentRow.Cells[5].Value.ToString();
+                eliminar.txtComunidad.Text= dtgGestionDeConsumidores.CurrentRow.Cells[6].Value.ToString();
 
                 eliminar.ShowDialog();
             }

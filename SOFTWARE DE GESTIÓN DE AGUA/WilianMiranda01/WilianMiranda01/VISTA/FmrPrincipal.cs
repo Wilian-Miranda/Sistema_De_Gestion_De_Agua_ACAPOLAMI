@@ -40,53 +40,14 @@ namespace WilianMiranda01.VISTA
 
         private void FmrPrincipal_Load(object sender, EventArgs e)
         {
-
-
-        }
-
-
-        private void btnCalcular_Click(object sender, EventArgs e)
-        {
-            /*double lectura = Convert.ToDouble(txtLecturatxtInter1.Text);
-            CalcularConsumo(lectura);*/
+            
 
         }
-        /*
-        private void CalcularConsumo(double lectura)
-        {
-            double pagoBase = Convert.ToDouble(txtPagoBase.Text);
 
-            int i1, i2, i3;
-            i1 = Convert.ToInt32(txtInter1.Text);
-            i2 = Convert.ToInt32(txtInter2.Text);
-            i3 = Convert.ToInt32(txtInter3.Text);
-
-
-
-            if (lectura <= i1)
-            {
-                txtResultado.Text = (pagoBase + ((0 + lectura)*0.00)).ToString();
-            }
-            else if (lectura > i1 && lectura <= i2)
-            {
-                txtResultado.Text = (pagoBase + ((-i1 + lectura)*0.29)+((i1) * 0.00)).ToString();
-            }
-            else if (lectura > i2 && lectura <= i3)
-            {
-                txtResultado.Text = (pagoBase + ((-i2 + lectura)*0.39)+((i2-i1) * 0.29) 
-                                  + ((i1) * 0.00)).ToString();
-            }
-            else
-            {
-                txtResultado.Text = (pagoBase + ((-i3 + lectura) * 0.49)+((i3-i2)*0.39) + ((i2-i1) * 0.29)
-                                  + ((i1) * 0.00)).ToString();
-            }
-        }*/
 
         private void btnPagos_Click(object sender, EventArgs e)
         {
             // Se pasa como parametro el objeto sender; el boton que es seleccionado, y un color.
-            //ClsPersonalizacionDeBotones PerBoton = new ClsPersonalizacionDeBotones();
             BotonActivo(sender, Color.Thistle);
             AbrirFormEnPanel<FrmPagos>();
 
@@ -95,21 +56,18 @@ namespace WilianMiranda01.VISTA
         private void btnPrincipal_Click_1(object sender, EventArgs e)
         {
             // Se pasa como parametro el objeto sender; el boton que es seleccionado, y un color.
-            //ClsPersonalizacionDeBotones PerBoton = new ClsPersonalizacionDeBotones();
             BotonActivo(sender, Color.Thistle);
         }
 
         private void btnAjustes_Click_1(object sender, EventArgs e)
         {
             // Se pasa como parametro el objeto sender; el boton que es seleccionado, y un color.
-            //ClsPersonalizacionDeBotones PerBoton = new ClsPersonalizacionDeBotones();
             BotonActivo(sender, Color.Thistle);
         }
 
         private void btnNotificaciones_Click_1(object sender, EventArgs e)
         {
             // Se pasa como parametro el objeto sender; el boton que es seleccionado, y un color.
-            //ClsPersonalizacionDeBotones PerBoton = new ClsPersonalizacionDeBotones();
             AbrirFormEnPanel<FrmActividades>();
             BotonActivo(sender, Color.Thistle);
         }
@@ -117,14 +75,12 @@ namespace WilianMiranda01.VISTA
         private void btnReporte_Click_1(object sender, EventArgs e)
         {
             // Se pasa como parametro el objeto sender; el boton que es seleccionado, y un color.
-            //ClsPersonalizacionDeBotones PerBoton = new ClsPersonalizacionDeBotones();
             BotonActivo(sender, Color.Thistle);
         }
 
         private void btnClientes_Click_1(object sender, EventArgs e)
         {
             // Se pasa como parametro el objeto sender; el boton que es seleccionado, y un color.
-            //ClsPersonalizacionDeBotones PerBoton = new ClsPersonalizacionDeBotones();
             BotonActivo(sender, Color.Thistle);
 
             AbrirFormEnPanel<FrmClientes>();
@@ -203,23 +159,6 @@ namespace WilianMiranda01.VISTA
 
         }
 
-        /* private void AbrirFormEnPanel(object frmHijo)
-         {
-
-             if (this.pnlPanelPadre.Controls.Count > 0)
-                 this.pnlPanelPadre.Controls.RemoveAt(0);
-             Form F = frmHijo as Form;
-             F.TopLevel = false;
-             F.Dock = DockStyle.Fill;
-             this.pnlPanelPadre.Controls.Add(F);
-             this.pnlPanelPadre.Tag = F;
-             F.Show();
-
-             if (pnlPanelPadre.Controls.Contains(F) == true)
-             {
-                 MessageBox.Show("Hay un form abierto");
-             }
-         }*/
         private Form formulario;
         private void AbrirFormEnPanel<Miform>() where Miform: Form, new()
         {

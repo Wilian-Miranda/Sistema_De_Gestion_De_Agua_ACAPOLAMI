@@ -50,6 +50,8 @@ namespace WilianMiranda01.VISTA
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtDUI = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.pnlContenerdorModificarCliente.SuspendLayout();
             this.pnlContenedorAgregarCliente.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -66,7 +68,7 @@ namespace WilianMiranda01.VISTA
             this.pnlContenerdorModificarCliente.Location = new System.Drawing.Point(0, 0);
             this.pnlContenerdorModificarCliente.Margin = new System.Windows.Forms.Padding(4);
             this.pnlContenerdorModificarCliente.Name = "pnlContenerdorModificarCliente";
-            this.pnlContenerdorModificarCliente.Size = new System.Drawing.Size(512, 357);
+            this.pnlContenerdorModificarCliente.Size = new System.Drawing.Size(540, 400);
             this.pnlContenerdorModificarCliente.TabIndex = 3;
             // 
             // pnlContenedorAgregarCliente
@@ -79,7 +81,7 @@ namespace WilianMiranda01.VISTA
             this.pnlContenedorAgregarCliente.Location = new System.Drawing.Point(0, 28);
             this.pnlContenedorAgregarCliente.Name = "pnlContenedorAgregarCliente";
             this.pnlContenedorAgregarCliente.Padding = new System.Windows.Forms.Padding(20, 0, 20, 20);
-            this.pnlContenedorAgregarCliente.Size = new System.Drawing.Size(512, 329);
+            this.pnlContenedorAgregarCliente.Size = new System.Drawing.Size(540, 372);
             this.pnlContenedorAgregarCliente.TabIndex = 4;
             // 
             // panel4
@@ -87,9 +89,9 @@ namespace WilianMiranda01.VISTA
             this.panel4.Controls.Add(this.btnCancelar);
             this.panel4.Controls.Add(this.btnEliminar);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(20, 257);
+            this.panel4.Location = new System.Drawing.Point(20, 300);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(472, 52);
+            this.panel4.Size = new System.Drawing.Size(500, 52);
             this.panel4.TabIndex = 5;
             // 
             // btnCancelar
@@ -123,6 +125,8 @@ namespace WilianMiranda01.VISTA
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.PowderBlue;
+            this.panel3.Controls.Add(this.txtDUI);
+            this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.txtIdCliente);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.txtComunidad);
@@ -139,13 +143,13 @@ namespace WilianMiranda01.VISTA
             this.panel3.Location = new System.Drawing.Point(20, 47);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(10);
-            this.panel3.Size = new System.Drawing.Size(472, 204);
+            this.panel3.Size = new System.Drawing.Size(500, 247);
             this.panel3.TabIndex = 4;
             // 
             // txtIdCliente
             // 
             this.txtIdCliente.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdCliente.Location = new System.Drawing.Point(103, 10);
+            this.txtIdCliente.Location = new System.Drawing.Point(116, 16);
             this.txtIdCliente.Name = "txtIdCliente";
             this.txtIdCliente.Size = new System.Drawing.Size(356, 26);
             this.txtIdCliente.TabIndex = 11;
@@ -154,7 +158,7 @@ namespace WilianMiranda01.VISTA
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 11);
+            this.label1.Location = new System.Drawing.Point(37, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 19);
             this.label1.TabIndex = 10;
@@ -164,7 +168,7 @@ namespace WilianMiranda01.VISTA
             // 
             this.txtComunidad.Enabled = false;
             this.txtComunidad.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtComunidad.Location = new System.Drawing.Point(103, 170);
+            this.txtComunidad.Location = new System.Drawing.Point(116, 208);
             this.txtComunidad.Name = "txtComunidad";
             this.txtComunidad.Size = new System.Drawing.Size(356, 26);
             this.txtComunidad.TabIndex = 9;
@@ -174,7 +178,7 @@ namespace WilianMiranda01.VISTA
             this.label7.AutoSize = true;
             this.label7.Enabled = false;
             this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(3, 171);
+            this.label7.Location = new System.Drawing.Point(2, 215);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(108, 19);
             this.label7.TabIndex = 8;
@@ -184,7 +188,7 @@ namespace WilianMiranda01.VISTA
             // 
             this.txtEmail.Enabled = false;
             this.txtEmail.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(103, 138);
+            this.txtEmail.Location = new System.Drawing.Point(116, 176);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(356, 26);
             this.txtEmail.TabIndex = 7;
@@ -194,7 +198,7 @@ namespace WilianMiranda01.VISTA
             this.label6.AutoSize = true;
             this.label6.Enabled = false;
             this.label6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 139);
+            this.label6.Location = new System.Drawing.Point(44, 183);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(66, 19);
             this.label6.TabIndex = 6;
@@ -204,7 +208,7 @@ namespace WilianMiranda01.VISTA
             // 
             this.txtTelefono.Enabled = false;
             this.txtTelefono.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefono.Location = new System.Drawing.Point(103, 106);
+            this.txtTelefono.Location = new System.Drawing.Point(116, 144);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(356, 26);
             this.txtTelefono.TabIndex = 5;
@@ -214,7 +218,7 @@ namespace WilianMiranda01.VISTA
             this.label5.AutoSize = true;
             this.label5.Enabled = false;
             this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 107);
+            this.label5.Location = new System.Drawing.Point(25, 151);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(85, 19);
             this.label5.TabIndex = 4;
@@ -224,7 +228,7 @@ namespace WilianMiranda01.VISTA
             // 
             this.txtApellidos.Enabled = false;
             this.txtApellidos.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellidos.Location = new System.Drawing.Point(103, 74);
+            this.txtApellidos.Location = new System.Drawing.Point(116, 80);
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(356, 26);
             this.txtApellidos.TabIndex = 3;
@@ -234,7 +238,7 @@ namespace WilianMiranda01.VISTA
             this.label4.AutoSize = true;
             this.label4.Enabled = false;
             this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(13, 75);
+            this.label4.Location = new System.Drawing.Point(20, 87);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(90, 19);
             this.label4.TabIndex = 2;
@@ -244,7 +248,7 @@ namespace WilianMiranda01.VISTA
             // 
             this.txtNombre.Enabled = false;
             this.txtNombre.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(103, 42);
+            this.txtNombre.Location = new System.Drawing.Point(116, 48);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(356, 26);
             this.txtNombre.TabIndex = 1;
@@ -254,7 +258,7 @@ namespace WilianMiranda01.VISTA
             this.label3.AutoSize = true;
             this.label3.Enabled = false;
             this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(13, 43);
+            this.label3.Location = new System.Drawing.Point(21, 55);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 19);
             this.label3.TabIndex = 0;
@@ -267,7 +271,7 @@ namespace WilianMiranda01.VISTA
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(20, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(472, 47);
+            this.panel2.Size = new System.Drawing.Size(500, 47);
             this.panel2.TabIndex = 3;
             // 
             // label2
@@ -288,14 +292,34 @@ namespace WilianMiranda01.VISTA
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(512, 28);
+            this.panel1.Size = new System.Drawing.Size(540, 28);
             this.panel1.TabIndex = 2;
+            // 
+            // txtDUI
+            // 
+            this.txtDUI.Enabled = false;
+            this.txtDUI.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDUI.Location = new System.Drawing.Point(116, 112);
+            this.txtDUI.Name = "txtDUI";
+            this.txtDUI.Size = new System.Drawing.Size(356, 26);
+            this.txtDUI.TabIndex = 13;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Enabled = false;
+            this.label8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(63, 119);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(47, 19);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "DUI: ";
             // 
             // FrmEliminarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(512, 357);
+            this.ClientSize = new System.Drawing.Size(540, 400);
             this.Controls.Add(this.pnlContenerdorModificarCliente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmEliminarCliente";
@@ -335,5 +359,7 @@ namespace WilianMiranda01.VISTA
         public System.Windows.Forms.TextBox txtTelefono;
         public System.Windows.Forms.TextBox txtApellidos;
         public System.Windows.Forms.TextBox txtNombre;
+        public System.Windows.Forms.TextBox txtDUI;
+        private System.Windows.Forms.Label label8;
     }
 }
