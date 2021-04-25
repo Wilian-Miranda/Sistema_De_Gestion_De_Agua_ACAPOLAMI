@@ -31,18 +31,19 @@ namespace WilianMiranda01.VISTA
         {
             this.components = new System.ComponentModel.Container();
             this.pnlMenu = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.pnlLogo = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pnlPanelPadre = new System.Windows.Forms.Panel();
-            this.lblHora = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
+            this.lblHora = new System.Windows.Forms.Label();
             this.tmrTiempo = new System.Windows.Forms.Timer(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
             this.btnMinimizarAplicacion = new System.Windows.Forms.Button();
             this.btnCerrarAplicacion = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnAjustes = new FontAwesome.Sharp.IconButton();
             this.btnNotificaciones = new FontAwesome.Sharp.IconButton();
             this.btnClientes = new FontAwesome.Sharp.IconButton();
@@ -51,13 +52,17 @@ namespace WilianMiranda01.VISTA
             this.btnPrincipal = new FontAwesome.Sharp.IconButton();
             this.bntMinimizarMenu = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.PictureBox();
+            this.lblNombreUSuario = new System.Windows.Forms.Label();
+            this.lblRol = new System.Windows.Forms.Label();
             this.pnlMenu.SuspendLayout();
             this.pnlLogo.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pnlPanelPadre.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnInicio)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,16 +83,6 @@ namespace WilianMiranda01.VISTA
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(200, 681);
             this.pnlMenu.TabIndex = 54;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 547);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 100);
-            this.panel2.TabIndex = 7;
-            this.panel2.Visible = false;
             // 
             // pnlLogo
             // 
@@ -143,19 +138,6 @@ namespace WilianMiranda01.VISTA
             this.pnlPanelPadre.TabIndex = 55;
             this.pnlPanelPadre.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlPanelPadre_Paint);
             // 
-            // lblHora
-            // 
-            this.lblHora.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblHora.AutoSize = true;
-            this.lblHora.Font = new System.Drawing.Font("Arial", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHora.ForeColor = System.Drawing.Color.Black;
-            this.lblHora.Location = new System.Drawing.Point(382, 398);
-            this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(185, 78);
-            this.lblHora.TabIndex = 1;
-            this.lblHora.Text = "Hora";
-            this.lblHora.Click += new System.EventHandler(this.lblHora_Click);
-            // 
             // lblFecha
             // 
             this.lblFecha.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -169,10 +151,34 @@ namespace WilianMiranda01.VISTA
             this.lblFecha.Text = "Fecha";
             this.lblFecha.Click += new System.EventHandler(this.lblFecha_Click);
             // 
+            // lblHora
+            // 
+            this.lblHora.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblHora.AutoSize = true;
+            this.lblHora.Font = new System.Drawing.Font("Arial", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHora.ForeColor = System.Drawing.Color.Black;
+            this.lblHora.Location = new System.Drawing.Point(382, 398);
+            this.lblHora.Name = "lblHora";
+            this.lblHora.Size = new System.Drawing.Size(185, 78);
+            this.lblHora.TabIndex = 1;
+            this.lblHora.Text = "Hora";
+            this.lblHora.Click += new System.EventHandler(this.lblHora_Click);
+            // 
             // tmrTiempo
             // 
             this.tmrTiempo.Enabled = true;
             this.tmrTiempo.Tick += new System.EventHandler(this.tmrTiempo_Tick);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.lblRol);
+            this.panel2.Controls.Add(this.lblNombreUSuario);
+            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 553);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(200, 128);
+            this.panel2.TabIndex = 7;
             // 
             // btnMinimizarAplicacion
             // 
@@ -210,6 +216,17 @@ namespace WilianMiranda01.VISTA
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::WilianMiranda01.Properties.Resources._585e4be1cb11b227491c33981;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Image = global::WilianMiranda01.Properties.Resources._585e4be1cb11b227491c3398;
+            this.pictureBox2.Location = new System.Drawing.Point(58, 10);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(77, 66);
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
             // 
             // btnAjustes
             // 
@@ -353,6 +370,24 @@ namespace WilianMiranda01.VISTA
             this.btnInicio.TabStop = false;
             this.btnInicio.Click += new System.EventHandler(this.ptrLogo_Click);
             // 
+            // lblNombreUSuario
+            // 
+            this.lblNombreUSuario.AutoSize = true;
+            this.lblNombreUSuario.Location = new System.Drawing.Point(66, 79);
+            this.lblNombreUSuario.Name = "lblNombreUSuario";
+            this.lblNombreUSuario.Size = new System.Drawing.Size(69, 19);
+            this.lblNombreUSuario.TabIndex = 1;
+            this.lblNombreUSuario.Text = "Usuario";
+            // 
+            // lblRol
+            // 
+            this.lblRol.AutoSize = true;
+            this.lblRol.Location = new System.Drawing.Point(70, 99);
+            this.lblRol.Name = "lblRol";
+            this.lblRol.Size = new System.Drawing.Size(35, 19);
+            this.lblRol.TabIndex = 2;
+            this.lblRol.Text = "Rol";
+            // 
             // FmrPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
@@ -377,7 +412,10 @@ namespace WilianMiranda01.VISTA
             this.panel3.ResumeLayout(false);
             this.pnlPanelPadre.ResumeLayout(false);
             this.pnlPanelPadre.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnInicio)).EndInit();
             this.ResumeLayout(false);
 
@@ -391,7 +429,6 @@ namespace WilianMiranda01.VISTA
         private FontAwesome.Sharp.IconButton btnReporte;
         private FontAwesome.Sharp.IconButton btnPrincipal;
         private System.Windows.Forms.Panel pnlLogo;
-        private System.Windows.Forms.Panel panel2;
         public FontAwesome.Sharp.IconButton btnClientes;
         public System.Windows.Forms.PictureBox btnInicio;
         private System.Windows.Forms.Panel panel1;
@@ -405,5 +442,9 @@ namespace WilianMiranda01.VISTA
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Timer tmrTiempo;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label lblRol;
+        private System.Windows.Forms.Label lblNombreUSuario;
     }
 }
