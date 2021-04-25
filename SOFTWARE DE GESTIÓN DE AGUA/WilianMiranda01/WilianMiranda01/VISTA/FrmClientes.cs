@@ -78,28 +78,43 @@ namespace WilianMiranda01.VISTA
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            FrmModificarCliente modificar = new FrmModificarCliente();
-            modificar.txtIdCliente.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            modificar.txtNombre.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            modificar.txtApellidos.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            modificar.txtTelefono.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            modificar.txtComunidad.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                FrmModificarCliente modificar = new FrmModificarCliente();
+                modificar.txtIdCliente.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                modificar.txtNombre.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                modificar.txtApellidos.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                modificar.txtTelefono.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                modificar.txtComunidad.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
 
-            modificar.ShowDialog();
+                modificar.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un registro que desea modificar");
+            }
+
 
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            FrmEliminarCliente eliminar = new FrmEliminarCliente();
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                FrmEliminarCliente eliminar = new FrmEliminarCliente();
 
-            eliminar.txtIdCliente.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            eliminar.txtNombre.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            eliminar.txtApellidos.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            eliminar.txtTelefono.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            eliminar.txtComunidad.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+                eliminar.txtIdCliente.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                eliminar.txtNombre.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                eliminar.txtApellidos.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                eliminar.txtTelefono.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                eliminar.txtComunidad.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
 
-            eliminar.ShowDialog();
+                eliminar.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione el registro que desea eliminar");
+            }
         }
     }
 }

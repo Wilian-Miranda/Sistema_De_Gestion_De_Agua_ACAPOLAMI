@@ -63,6 +63,26 @@ namespace WilianMiranda01.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _588a64cdd06f6719692a2d0d__1_ {
+            get {
+                object obj = ResourceManager.GetObject("588a64cdd06f6719692a2d0d (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _588a64e0d06f6719692a2d10 {
+            get {
+                object obj = ResourceManager.GetObject("588a64e0d06f6719692a2d10", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CERRAR {
             get {
                 object obj = ResourceManager.GetObject("CERRAR", resourceCulture);

@@ -342,6 +342,22 @@ namespace WilianMiranda01.VISTA
         {
 
         }
+
+        private void tmrTiempo_Tick(object sender, EventArgs e)
+        {
+            lblHora.Text = DateTime.Now.ToString("hh:mm:ss");
+            lblFecha.Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void lblHora_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblFecha_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

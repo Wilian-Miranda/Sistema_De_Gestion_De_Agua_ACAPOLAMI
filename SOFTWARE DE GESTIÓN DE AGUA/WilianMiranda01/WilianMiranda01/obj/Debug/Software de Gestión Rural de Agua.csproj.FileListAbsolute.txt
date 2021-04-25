@@ -48,3 +48,4 @@ C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\SOFTWARE DE GESTIÓN DE 
 C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\SOFTWARE DE GESTIÓN DE AGUA\WilianMiranda01\WilianMiranda01\obj\Debug\WilianMiranda01.VISTA.FrmModificarCliente.resources
 C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\SOFTWARE DE GESTIÓN DE AGUA\WilianMiranda01\WilianMiranda01\obj\Debug\WilianMiranda01.VISTA.FrmEliminarCliente.resources
 C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\SOFTWARE DE GESTIÓN DE AGUA\WilianMiranda01\WilianMiranda01\obj\Debug\WilianMiranda01.VISTA.FrmActividades.resources
+C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\SOFTWARE DE GESTIÓN DE AGUA\WilianMiranda01\WilianMiranda01\obj\Debug\WilianMiranda01.VISTA.FrmRegistroUsuario.resources

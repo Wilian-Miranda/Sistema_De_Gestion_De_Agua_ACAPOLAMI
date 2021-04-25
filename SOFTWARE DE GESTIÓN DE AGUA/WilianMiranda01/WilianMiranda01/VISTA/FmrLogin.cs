@@ -77,5 +77,21 @@ namespace WilianMiranda01
         {
             Application.Exit();
         }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmRegistroUsuario registro = new FrmRegistroUsuario();
+            registro.Show();
+        }
     }
 }

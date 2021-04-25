@@ -29,15 +29,20 @@ namespace WilianMiranda01.VISTA
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlLogo = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.pnlPanelPadre = new System.Windows.Forms.Panel();
+            this.lblHora = new System.Windows.Forms.Label();
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.tmrTiempo = new System.Windows.Forms.Timer(this.components);
             this.btnMinimizarAplicacion = new System.Windows.Forms.Button();
             this.btnCerrarAplicacion = new System.Windows.Forms.Button();
-            this.pnlPanelPadre = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnAjustes = new FontAwesome.Sharp.IconButton();
             this.btnNotificaciones = new FontAwesome.Sharp.IconButton();
             this.btnClientes = new FontAwesome.Sharp.IconButton();
@@ -46,15 +51,14 @@ namespace WilianMiranda01.VISTA
             this.btnPrincipal = new FontAwesome.Sharp.IconButton();
             this.bntMinimizarMenu = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlMenu.SuspendLayout();
             this.pnlLogo.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.pnlPanelPadre.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnInicio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnInicio)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -95,6 +99,16 @@ namespace WilianMiranda01.VISTA
             this.pnlLogo.Size = new System.Drawing.Size(200, 187);
             this.pnlLogo.TabIndex = 0;
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.panel4.Controls.Add(this.bntMinimizarMenu);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(200, 30);
+            this.panel4.TabIndex = 2;
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Teal;
@@ -115,15 +129,50 @@ namespace WilianMiranda01.VISTA
             this.panel3.Size = new System.Drawing.Size(59, 30);
             this.panel3.TabIndex = 14;
             // 
-            // panel4
+            // pnlPanelPadre
             // 
-            this.panel4.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.panel4.Controls.Add(this.bntMinimizarMenu);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(200, 30);
-            this.panel4.TabIndex = 2;
+            this.pnlPanelPadre.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlPanelPadre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pnlPanelPadre.Controls.Add(this.lblFecha);
+            this.pnlPanelPadre.Controls.Add(this.lblHora);
+            this.pnlPanelPadre.Controls.Add(this.pictureBox1);
+            this.pnlPanelPadre.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlPanelPadre.Location = new System.Drawing.Point(200, 29);
+            this.pnlPanelPadre.Name = "pnlPanelPadre";
+            this.pnlPanelPadre.Size = new System.Drawing.Size(1064, 652);
+            this.pnlPanelPadre.TabIndex = 55;
+            this.pnlPanelPadre.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlPanelPadre_Paint);
+            // 
+            // lblHora
+            // 
+            this.lblHora.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblHora.AutoSize = true;
+            this.lblHora.Font = new System.Drawing.Font("Arial", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHora.ForeColor = System.Drawing.Color.Black;
+            this.lblHora.Location = new System.Drawing.Point(382, 398);
+            this.lblHora.Name = "lblHora";
+            this.lblHora.Size = new System.Drawing.Size(185, 78);
+            this.lblHora.TabIndex = 1;
+            this.lblHora.Text = "Hora";
+            this.lblHora.Click += new System.EventHandler(this.lblHora_Click);
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Font = new System.Drawing.Font("Arial", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.ForeColor = System.Drawing.Color.DimGray;
+            this.lblFecha.Location = new System.Drawing.Point(294, 476);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(183, 63);
+            this.lblFecha.TabIndex = 2;
+            this.lblFecha.Text = "Fecha";
+            this.lblFecha.Click += new System.EventHandler(this.lblFecha_Click);
+            // 
+            // tmrTiempo
+            // 
+            this.tmrTiempo.Enabled = true;
+            this.tmrTiempo.Tick += new System.EventHandler(this.tmrTiempo_Tick);
             // 
             // btnMinimizarAplicacion
             // 
@@ -151,17 +200,16 @@ namespace WilianMiranda01.VISTA
             this.btnCerrarAplicacion.UseVisualStyleBackColor = false;
             this.btnCerrarAplicacion.Click += new System.EventHandler(this.btnCerrarAplicacion_Click);
             // 
-            // pnlPanelPadre
+            // pictureBox1
             // 
-            this.pnlPanelPadre.BackColor = System.Drawing.Color.Gainsboro;
-            this.pnlPanelPadre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pnlPanelPadre.Controls.Add(this.pictureBox1);
-            this.pnlPanelPadre.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlPanelPadre.Location = new System.Drawing.Point(200, 29);
-            this.pnlPanelPadre.Name = "pnlPanelPadre";
-            this.pnlPanelPadre.Size = new System.Drawing.Size(1064, 652);
-            this.pnlPanelPadre.TabIndex = 55;
-            this.pnlPanelPadre.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlPanelPadre_Paint);
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Image = global::WilianMiranda01.Properties.Resources.LOGO;
+            this.pictureBox1.Location = new System.Drawing.Point(395, 116);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(280, 263);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // btnAjustes
             // 
@@ -280,10 +328,12 @@ namespace WilianMiranda01.VISTA
             // 
             // bntMinimizarMenu
             // 
-            this.bntMinimizarMenu.BackColor = System.Drawing.Color.Teal;
-            this.bntMinimizarMenu.BackgroundImage = global::WilianMiranda01.Properties.Resources.MAXIMIZAR;
+            this.bntMinimizarMenu.BackColor = System.Drawing.Color.Transparent;
+            this.bntMinimizarMenu.BackgroundImage = global::WilianMiranda01.Properties.Resources._588a64e0d06f6719692a2d10;
             this.bntMinimizarMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bntMinimizarMenu.Dock = System.Windows.Forms.DockStyle.Right;
+            this.bntMinimizarMenu.FlatAppearance.BorderSize = 0;
+            this.bntMinimizarMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bntMinimizarMenu.Location = new System.Drawing.Point(150, 0);
             this.bntMinimizarMenu.Name = "bntMinimizarMenu";
             this.bntMinimizarMenu.Size = new System.Drawing.Size(50, 30);
@@ -295,24 +345,13 @@ namespace WilianMiranda01.VISTA
             // 
             this.btnInicio.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnInicio.Image = global::WilianMiranda01.Properties.Resources.LOGO;
-            this.btnInicio.Location = new System.Drawing.Point(0, 32);
+            this.btnInicio.Location = new System.Drawing.Point(0, 29);
             this.btnInicio.Name = "btnInicio";
-            this.btnInicio.Size = new System.Drawing.Size(200, 155);
+            this.btnInicio.Size = new System.Drawing.Size(200, 158);
             this.btnInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnInicio.TabIndex = 0;
             this.btnInicio.TabStop = false;
             this.btnInicio.Click += new System.EventHandler(this.ptrLogo_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = global::WilianMiranda01.Properties.Resources.LOGO;
-            this.pictureBox1.Location = new System.Drawing.Point(434, 182);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(280, 263);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // FmrPrincipal
             // 
@@ -333,12 +372,13 @@ namespace WilianMiranda01.VISTA
             this.Load += new System.EventHandler(this.FmrPrincipal_Load);
             this.pnlMenu.ResumeLayout(false);
             this.pnlLogo.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
             this.pnlPanelPadre.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnInicio)).EndInit();
+            this.pnlPanelPadre.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnInicio)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -362,5 +402,8 @@ namespace WilianMiranda01.VISTA
         private System.Windows.Forms.Button bntMinimizarMenu;
         private System.Windows.Forms.Panel pnlPanelPadre;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.Label lblHora;
+        private System.Windows.Forms.Timer tmrTiempo;
     }
 }
