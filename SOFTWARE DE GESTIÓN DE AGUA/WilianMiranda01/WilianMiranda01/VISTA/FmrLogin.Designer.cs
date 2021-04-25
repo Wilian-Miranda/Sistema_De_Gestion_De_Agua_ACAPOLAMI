@@ -37,8 +37,8 @@ namespace WilianMiranda01
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnMinimizarAplicacion = new System.Windows.Forms.Button();
+            this.btnCerrarAplicacion = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
@@ -134,38 +134,38 @@ namespace WilianMiranda01
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnMinimizarAplicacion);
+            this.panel1.Controls.Add(this.btnCerrarAplicacion);
             this.panel1.Location = new System.Drawing.Point(600, 1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(59, 26);
             this.panel1.TabIndex = 13;
             // 
-            // button3
+            // btnMinimizarAplicacion
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button3.BackgroundImage = global::WilianMiranda01.Properties.Resources.MINIMIZAR;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button3.Location = new System.Drawing.Point(7, 0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(26, 26);
-            this.button3.TabIndex = 2;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnMinimizarAplicacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnMinimizarAplicacion.BackgroundImage = global::WilianMiranda01.Properties.Resources.MINIMIZAR;
+            this.btnMinimizarAplicacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMinimizarAplicacion.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMinimizarAplicacion.Location = new System.Drawing.Point(7, 0);
+            this.btnMinimizarAplicacion.Name = "btnMinimizarAplicacion";
+            this.btnMinimizarAplicacion.Size = new System.Drawing.Size(26, 26);
+            this.btnMinimizarAplicacion.TabIndex = 2;
+            this.btnMinimizarAplicacion.UseVisualStyleBackColor = false;
+            this.btnMinimizarAplicacion.Click += new System.EventHandler(this.btnMinimizarVentana);
             // 
-            // button1
+            // btnCerrarAplicacion
             // 
-            this.button1.BackColor = System.Drawing.Color.Red;
-            this.button1.BackgroundImage = global::WilianMiranda01.Properties.Resources.CERRAR;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button1.Location = new System.Drawing.Point(33, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(26, 26);
-            this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_2);
+            this.btnCerrarAplicacion.BackColor = System.Drawing.Color.Red;
+            this.btnCerrarAplicacion.BackgroundImage = global::WilianMiranda01.Properties.Resources.CERRAR;
+            this.btnCerrarAplicacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCerrarAplicacion.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnCerrarAplicacion.Location = new System.Drawing.Point(33, 0);
+            this.btnCerrarAplicacion.Name = "btnCerrarAplicacion";
+            this.btnCerrarAplicacion.Size = new System.Drawing.Size(26, 26);
+            this.btnCerrarAplicacion.TabIndex = 0;
+            this.btnCerrarAplicacion.UseVisualStyleBackColor = false;
+            this.btnCerrarAplicacion.Click += new System.EventHandler(this.btnCerrarVentana);
             // 
             // pictureBox1
             // 
@@ -228,8 +228,8 @@ namespace WilianMiranda01
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnMinimizarAplicacion;
+        private System.Windows.Forms.Button btnCerrarAplicacion;
         private System.Windows.Forms.Label label4;
     }
 }

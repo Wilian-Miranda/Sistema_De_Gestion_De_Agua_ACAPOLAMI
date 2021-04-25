@@ -49,13 +49,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DOMINIO\EntLogin.cs" />
-    <Compile Include="DOMINIO\EntRegistroUsuario.cs" />
-    <Compile Include="NEGOCIO\ClsLogin.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\FrmActividades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VISTA\FrmActividades.Designer.cs">
+      <DependentUpon>FrmActividades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\FrmAgregarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VISTA\FrmAgregarClientes.Designer.cs">
+      <DependentUpon>FrmAgregarClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="VISTA\FmrLogin.cs">
       <SubType>Form</SubType>
@@ -71,16 +80,67 @@
     <Compile Include="VISTA\FmrPrincipal.Designer.cs">
       <DependentUpon>FmrPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="VISTA\FrmClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VISTA\FrmClientes.Designer.cs">
+      <DependentUpon>FrmClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\FrmEliminarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VISTA\FrmEliminarCliente.Designer.cs">
+      <DependentUpon>FrmEliminarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\FrmInvervalos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VISTA\FrmInvervalos.Designer.cs">
+      <DependentUpon>FrmInvervalos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\FrmModificarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VISTA\FrmModificarCliente.Designer.cs">
+      <DependentUpon>FrmModificarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\FrmPagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VISTA\FrmPagos.Designer.cs">
+      <DependentUpon>FrmPagos.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VISTA\FrmActividades.resx">
+      <DependentUpon>FrmActividades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VISTA\FrmAgregarClientes.resx">
+      <DependentUpon>FrmAgregarClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VISTA\FmrLogin.resx">
       <DependentUpon>FmrLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VISTA\FmrPrincipal.resx">
       <DependentUpon>FmrPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VISTA\FrmClientes.resx">
+      <DependentUpon>FrmClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VISTA\FrmEliminarCliente.resx">
+      <DependentUpon>FrmEliminarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VISTA\FrmInvervalos.resx">
+      <DependentUpon>FrmInvervalos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VISTA\FrmModificarCliente.resx">
+      <DependentUpon>FrmModificarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VISTA\FrmPagos.resx">
+      <DependentUpon>FrmPagos.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -107,6 +167,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\MINIMIZAR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DAO\" />
+    <Folder Include="DOMINIO\" />
+    <Folder Include="MODELO\" />
+    <Folder Include="NEGOCIO\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
