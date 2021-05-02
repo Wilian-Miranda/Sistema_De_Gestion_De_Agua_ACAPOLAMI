@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoCiclo3.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -38,7 +39,15 @@ namespace WilianMiranda01.VISTA
         {
 
             btnCantidadDeClientes.Text = dtgGestionDeConsumidores.Rows.Count.ToString();
-
+            //Llamada al método 
+            ejecutar();
+        }
+        
+        //Método utilizado para leer los datos del sp en el dtgGestionDeConsumidores
+        private void ejecutar()
+        {
+            clsMostrarConsumidores mostrarConsumidores = new clsMostrarConsumidores();
+            dtgGestionDeConsumidores.DataSource = mostrarConsumidores.Consultar();
         }
 
         private void ActualizarDatos()
