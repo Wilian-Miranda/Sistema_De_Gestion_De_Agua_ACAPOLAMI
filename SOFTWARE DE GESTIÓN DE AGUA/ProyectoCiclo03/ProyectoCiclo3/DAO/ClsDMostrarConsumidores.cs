@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoCiclo3.DAO
 {
-    class clsMostrarConsumidores
+    class ClsDMostrarConsumidores
     {
         //método que devolvera un listado de tipo sp_MostrarConsumidores_Result
         public List<sp_MostrarConsumidores_Result> Consultar()
@@ -15,7 +15,7 @@ namespace ProyectoCiclo3.DAO
             //Contexto de datos
             using (ACAPOLAMIEntities db = new ACAPOLAMIEntities())
             {
-               //Devolver el contenido como lista
+                //Devolver el contenido como lista
                 return db.sp_MostrarConsumidores().ToList();
 
             }
