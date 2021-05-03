@@ -59,6 +59,8 @@ namespace WilianMiranda01.VISTA
 
                 cls.InsertarUsuario(clientes);
 
+                Limpiar();
+
 
 
             }
@@ -143,6 +145,17 @@ namespace WilianMiranda01.VISTA
             }
 
 
+        }
+
+        //metodo para limpiar los textbox
+        private void Limpiar()
+        {
+            txtApellidos.Clear();
+            txtNombreNuevoCliente.Clear();
+            txtDUI.Clear();
+            txtEmail.Clear();
+            txtTelefono.Clear();
+            cbComunidad.ResetText();
         }
     }
 }

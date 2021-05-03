@@ -62,10 +62,10 @@ namespace WilianMiranda01.VISTA
             this.panel1.BackColor = System.Drawing.SystemColors.MenuBar;
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(20, 20);
+            this.panel1.Location = new System.Drawing.Point(22, 21);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1024, 92);
+            this.panel1.Size = new System.Drawing.Size(1020, 97);
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -76,10 +76,10 @@ namespace WilianMiranda01.VISTA
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(0, 25);
+            this.panel2.Location = new System.Drawing.Point(0, 26);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1024, 42);
+            this.panel2.Size = new System.Drawing.Size(1020, 44);
             this.panel2.TabIndex = 4;
             // 
             // label2
@@ -88,7 +88,7 @@ namespace WilianMiranda01.VISTA
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(422, 10);
+            this.label2.Location = new System.Drawing.Point(410, 11);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(193, 19);
@@ -100,9 +100,9 @@ namespace WilianMiranda01.VISTA
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.MenuBar;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(20, 590);
+            this.panel3.Location = new System.Drawing.Point(22, 587);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1024, 42);
+            this.panel3.Size = new System.Drawing.Size(1020, 44);
             this.panel3.TabIndex = 5;
             // 
             // pnlControlesCRUD
@@ -115,10 +115,10 @@ namespace WilianMiranda01.VISTA
             this.pnlControlesCRUD.Controls.Add(this.btnModificar);
             this.pnlControlesCRUD.Controls.Add(this.btnEliminar);
             this.pnlControlesCRUD.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlControlesCRUD.Location = new System.Drawing.Point(20, 112);
+            this.pnlControlesCRUD.Location = new System.Drawing.Point(22, 118);
             this.pnlControlesCRUD.Name = "pnlControlesCRUD";
-            this.pnlControlesCRUD.Padding = new System.Windows.Forms.Padding(5);
-            this.pnlControlesCRUD.Size = new System.Drawing.Size(1024, 45);
+            this.pnlControlesCRUD.Padding = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.pnlControlesCRUD.Size = new System.Drawing.Size(1020, 48);
             this.pnlControlesCRUD.TabIndex = 6;
             // 
             // btnRefrescar
@@ -129,9 +129,9 @@ namespace WilianMiranda01.VISTA
             this.btnRefrescar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRefrescar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefrescar.ForeColor = System.Drawing.Color.Black;
-            this.btnRefrescar.Location = new System.Drawing.Point(551, 5);
+            this.btnRefrescar.Location = new System.Drawing.Point(494, 5);
             this.btnRefrescar.Name = "btnRefrescar";
-            this.btnRefrescar.Size = new System.Drawing.Size(36, 35);
+            this.btnRefrescar.Size = new System.Drawing.Size(40, 38);
             this.btnRefrescar.TabIndex = 7;
             this.btnRefrescar.Text = "R";
             this.btnRefrescar.UseVisualStyleBackColor = false;
@@ -140,9 +140,9 @@ namespace WilianMiranda01.VISTA
             // cbBuscarCliente
             // 
             this.cbBuscarCliente.FormattingEnabled = true;
-            this.cbBuscarCliente.Location = new System.Drawing.Point(155, 10);
+            this.cbBuscarCliente.Location = new System.Drawing.Point(172, 11);
             this.cbBuscarCliente.Name = "cbBuscarCliente";
-            this.cbBuscarCliente.Size = new System.Drawing.Size(390, 26);
+            this.cbBuscarCliente.Size = new System.Drawing.Size(316, 27);
             this.cbBuscarCliente.TabIndex = 6;
             // 
             // btnBuscar
@@ -153,9 +153,9 @@ namespace WilianMiranda01.VISTA
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.Black;
-            this.btnBuscar.Location = new System.Drawing.Point(5, 5);
+            this.btnBuscar.Location = new System.Drawing.Point(6, 5);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(144, 35);
+            this.btnBuscar.Size = new System.Drawing.Size(160, 38);
             this.btnBuscar.TabIndex = 3;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -171,9 +171,9 @@ namespace WilianMiranda01.VISTA
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.Black;
-            this.btnAgregar.Location = new System.Drawing.Point(587, 5);
+            this.btnAgregar.Location = new System.Drawing.Point(534, 5);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(144, 35);
+            this.btnAgregar.Size = new System.Drawing.Size(160, 38);
             this.btnAgregar.TabIndex = 2;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
@@ -189,9 +189,9 @@ namespace WilianMiranda01.VISTA
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.Black;
-            this.btnModificar.Location = new System.Drawing.Point(731, 5);
+            this.btnModificar.Location = new System.Drawing.Point(694, 5);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(144, 35);
+            this.btnModificar.Size = new System.Drawing.Size(160, 38);
             this.btnModificar.TabIndex = 1;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
@@ -207,9 +207,9 @@ namespace WilianMiranda01.VISTA
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.Black;
-            this.btnEliminar.Location = new System.Drawing.Point(875, 5);
+            this.btnEliminar.Location = new System.Drawing.Point(854, 5);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(144, 35);
+            this.btnEliminar.Size = new System.Drawing.Size(160, 38);
             this.btnEliminar.TabIndex = 0;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -224,9 +224,9 @@ namespace WilianMiranda01.VISTA
             this.panel4.Controls.Add(this.btnCantidadDeClientes);
             this.panel4.Controls.Add(this.label1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(20, 561);
+            this.panel4.Location = new System.Drawing.Point(22, 556);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1024, 29);
+            this.panel4.Size = new System.Drawing.Size(1020, 31);
             this.panel4.TabIndex = 7;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
@@ -262,10 +262,10 @@ namespace WilianMiranda01.VISTA
             this.pnlContenedorDataGrid.BackColor = System.Drawing.Color.Gainsboro;
             this.pnlContenedorDataGrid.Controls.Add(this.dtgGestionDeConsumidores);
             this.pnlContenedorDataGrid.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlContenedorDataGrid.Location = new System.Drawing.Point(20, 163);
+            this.pnlContenedorDataGrid.Location = new System.Drawing.Point(22, 172);
             this.pnlContenedorDataGrid.Name = "pnlContenedorDataGrid";
-            this.pnlContenedorDataGrid.Padding = new System.Windows.Forms.Padding(20);
-            this.pnlContenedorDataGrid.Size = new System.Drawing.Size(1024, 398);
+            this.pnlContenedorDataGrid.Padding = new System.Windows.Forms.Padding(22, 21, 22, 21);
+            this.pnlContenedorDataGrid.Size = new System.Drawing.Size(1020, 384);
             this.pnlContenedorDataGrid.TabIndex = 8;
             // 
             // dtgGestionDeConsumidores
@@ -280,8 +280,8 @@ namespace WilianMiranda01.VISTA
             this.dtgGestionDeConsumidores.BackgroundColor = System.Drawing.Color.FloralWhite;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -290,40 +290,42 @@ namespace WilianMiranda01.VISTA
             this.dtgGestionDeConsumidores.Cursor = System.Windows.Forms.Cursors.IBeam;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtgGestionDeConsumidores.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dtgGestionDeConsumidores.Location = new System.Drawing.Point(23, 20);
-            this.dtgGestionDeConsumidores.Margin = new System.Windows.Forms.Padding(50, 0, 50, 3);
-            this.dtgGestionDeConsumidores.MaximumSize = new System.Drawing.Size(1500, 359);
+            this.dtgGestionDeConsumidores.Location = new System.Drawing.Point(26, 21);
+            this.dtgGestionDeConsumidores.Margin = new System.Windows.Forms.Padding(56, 0, 56, 3);
+            this.dtgGestionDeConsumidores.MaximumSize = new System.Drawing.Size(1667, 379);
             this.dtgGestionDeConsumidores.MultiSelect = false;
             this.dtgGestionDeConsumidores.Name = "dtgGestionDeConsumidores";
             this.dtgGestionDeConsumidores.ReadOnly = true;
             this.dtgGestionDeConsumidores.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtgGestionDeConsumidores.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgGestionDeConsumidores.RowHeadersVisible = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Beige;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FloralWhite;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Orchid;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
             this.dtgGestionDeConsumidores.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dtgGestionDeConsumidores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgGestionDeConsumidores.Size = new System.Drawing.Size(980, 355);
+            this.dtgGestionDeConsumidores.Size = new System.Drawing.Size(971, 339);
             this.dtgGestionDeConsumidores.TabIndex = 6;
+            this.dtgGestionDeConsumidores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgGestionDeConsumidores_CellContentClick);
             // 
             // FrmClientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuBar;
             this.ClientSize = new System.Drawing.Size(1064, 652);
@@ -332,11 +334,11 @@ namespace WilianMiranda01.VISTA
             this.Controls.Add(this.pnlControlesCRUD);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
-            this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmClientes";
-            this.Padding = new System.Windows.Forms.Padding(20);
+            this.Padding = new System.Windows.Forms.Padding(22, 21, 22, 21);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmClientes";
             this.Load += new System.EventHandler(this.FrmClientes_Load);

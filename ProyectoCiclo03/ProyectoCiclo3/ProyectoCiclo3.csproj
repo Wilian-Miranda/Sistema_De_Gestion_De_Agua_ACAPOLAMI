@@ -107,11 +107,29 @@
     <Compile Include="VISTA\FmrLogin.Designer.cs">
       <DependentUpon>FmrLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="VISTA\FrmAgregarPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VISTA\FrmAgregarPago.Designer.cs">
+      <DependentUpon>FrmAgregarPago.cs</DependentUpon>
+    </Compile>
     <Compile Include="VISTA\FrmAjustes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="VISTA\FrmAjustes.Designer.cs">
       <DependentUpon>FrmAjustes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\FrmEliminarPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VISTA\FrmEliminarPago.Designer.cs">
+      <DependentUpon>FrmEliminarPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\FrmModificarPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VISTA\FrmModificarPago.Designer.cs">
+      <DependentUpon>FrmModificarPago.cs</DependentUpon>
     </Compile>
     <Compile Include="VISTA\FrmPagos.cs">
       <SubType>Form</SubType>
@@ -174,8 +192,17 @@
     <EmbeddedResource Include="VISTA\FmrLogin.resx">
       <DependentUpon>FmrLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VISTA\FrmAgregarPago.resx">
+      <DependentUpon>FrmAgregarPago.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VISTA\FrmAjustes.resx">
       <DependentUpon>FrmAjustes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VISTA\FrmEliminarPago.resx">
+      <DependentUpon>FrmEliminarPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VISTA\FrmModificarPago.resx">
+      <DependentUpon>FrmModificarPago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VISTA\FrmPagos.resx">
       <DependentUpon>FrmPagos.cs</DependentUpon>

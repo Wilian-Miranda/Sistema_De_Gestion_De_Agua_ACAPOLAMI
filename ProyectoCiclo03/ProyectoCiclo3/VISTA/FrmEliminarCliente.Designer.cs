@@ -174,6 +174,7 @@ namespace WilianMiranda01.VISTA
             // 
             // txtIdCliente
             // 
+            this.txtIdCliente.Enabled = false;
             this.txtIdCliente.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIdCliente.Location = new System.Drawing.Point(116, 16);
             this.txtIdCliente.Name = "txtIdCliente";

@@ -160,6 +160,7 @@ namespace WilianMiranda01.VISTA
             this.cbComunidad.Name = "cbComunidad";
             this.cbComunidad.Size = new System.Drawing.Size(369, 27);
             this.cbComunidad.TabIndex = 14;
+            this.cbComunidad.SelectedIndexChanged += new System.EventHandler(this.cbComunidad_SelectedIndexChanged);
             // 
             // txtDUI
             // 
@@ -312,7 +313,7 @@ namespace WilianMiranda01.VISTA
             this.pnlCabeceraModificarCliente.Name = "pnlCabeceraModificarCliente";
             this.pnlCabeceraModificarCliente.Size = new System.Drawing.Size(560, 30);
             this.pnlCabeceraModificarCliente.TabIndex = 2;
-            this.pnlCabeceraModificarCliente.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pnlCabeceraModificarCliente_MouseUp);
+            this.pnlCabeceraModificarCliente.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlCabeceraModificarCliente_MouseMove);
             // 
             // FrmModificarCliente
             // 

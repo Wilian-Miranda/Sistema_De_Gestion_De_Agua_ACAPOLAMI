@@ -39,7 +39,13 @@ namespace WilianMiranda01.VISTA
         {
             //Llamada al método 
             ejecutar();
-            btnCantidadDeClientes.Text = dtgGestionDeConsumidores.Rows.Count.ToString();
+            dtgGestionDeConsumidores.Columns[0].Width = 70;
+            dtgGestionDeConsumidores.Columns[1].Width = 180;
+            dtgGestionDeConsumidores.Columns[2].Width = 180;
+            dtgGestionDeConsumidores.Columns[3].Width = 110;
+            dtgGestionDeConsumidores.Columns[4].Width = 200;
+            dtgGestionDeConsumidores.Columns[5].Width = 100;
+
         }
         
         //Método utilizado para leer los datos del sp en el dtgGestionDeConsumidores
@@ -47,21 +53,7 @@ namespace WilianMiranda01.VISTA
         {
             ClsDMostrarConsumidores mostrarConsumidores = new ClsDMostrarConsumidores();
             dtgGestionDeConsumidores.DataSource = mostrarConsumidores.Consultar();
-        }
-
-        private void ActualizarDatos()
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
+            btnCantidadDeClientes.Text = dtgGestionDeConsumidores.Rows.Count.ToString();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -87,7 +79,7 @@ namespace WilianMiranda01.VISTA
                 modificar.txtDUI.Text = dtgGestionDeConsumidores.CurrentRow.Cells[3].Value.ToString();
                 modificar.txtEmail.Text = dtgGestionDeConsumidores.CurrentRow.Cells[4].Value.ToString();
                 modificar.txtTelefono.Text = dtgGestionDeConsumidores.CurrentRow.Cells[5].Value.ToString();           
-                modificar.cbComunidad.Text = dtgGestionDeConsumidores.CurrentRow.Cells[6].Value.ToString();
+                modificar.comunidad = dtgGestionDeConsumidores.CurrentRow.Cells[6].Value.ToString();
 
                 modificar.ShowDialog();
             }
@@ -120,7 +112,7 @@ namespace WilianMiranda01.VISTA
                 MessageBox.Show("Seleccione el registro que desea eliminar");
             }
         }
-
+        #region Eventos del Mouse de los botones en el formulario
         private void btnBuscar_MouseHover(object sender, EventArgs e)
         {
             btnBuscar.BackColor = Color.Blue;
@@ -225,10 +217,15 @@ namespace WilianMiranda01.VISTA
             boton.BackColor = Color.Crimson;
             boton.ForeColor = Color.White;
         }
-
+        #endregion
         private void btnRefrescar_Click(object sender, EventArgs e)
         {
             ejecutar();
+        }
+
+        private void dtgGestionDeConsumidores_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -69,3 +69,6 @@ C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ProyectoCiclo03\Proyecto
 C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ProyectoCiclo03\ProyectoCiclo3\obj\Debug\ProyectoCiclo3.csproj.CopyComplete
 C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ProyectoCiclo03\ProyectoCiclo3\obj\Debug\ProyectoCiclo3.exe
 C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ProyectoCiclo03\ProyectoCiclo3\obj\Debug\ProyectoCiclo3.pdb
+C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ProyectoCiclo03\ProyectoCiclo3\obj\Debug\ProyectoCiclo3.VISTA.FrmEliminarPago.resources
+C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ProyectoCiclo03\ProyectoCiclo3\obj\Debug\ProyectoCiclo3.VISTA.FrmAgregarPago.resources
+C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ProyectoCiclo03\ProyectoCiclo3\obj\Debug\ProyectoCiclo3.VISTA.FrmModificarPago.resources
