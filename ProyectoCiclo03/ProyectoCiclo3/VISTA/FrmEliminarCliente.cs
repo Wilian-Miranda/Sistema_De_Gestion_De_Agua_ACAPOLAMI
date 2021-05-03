@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProyectoCiclo3.DAO;
+using ProyectoCiclo3.MODELO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +21,20 @@ namespace WilianMiranda01.VISTA
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            try
+            {
+                using (ACAPOLAMIEntities db = new ACAPOLAMIEntities())
+                {
+                    ClsDConsumidores consumidores = new ClsDConsumidores();
+
+                    consumidores.EliminarConsumidor(Convert.ToInt32(txtIdCliente.Text));
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
