@@ -226,5 +226,10 @@ namespace WilianMiranda01.VISTA
             boton.BackColor = Color.Crimson;
             boton.ForeColor = Color.White;
         }
+
+        private void btnRefrescar_Click(object sender, EventArgs e)
+        {
+            ejecutar();
+        }
     }
 }

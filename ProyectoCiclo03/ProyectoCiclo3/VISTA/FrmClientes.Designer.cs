@@ -48,6 +48,7 @@ namespace WilianMiranda01.VISTA
             this.label1 = new System.Windows.Forms.Label();
             this.pnlContenedorDataGrid = new System.Windows.Forms.Panel();
             this.dtgGestionDeConsumidores = new System.Windows.Forms.DataGridView();
+            this.btnRefrescar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pnlControlesCRUD.SuspendLayout();
@@ -107,6 +108,7 @@ namespace WilianMiranda01.VISTA
             // pnlControlesCRUD
             // 
             this.pnlControlesCRUD.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.pnlControlesCRUD.Controls.Add(this.btnRefrescar);
             this.pnlControlesCRUD.Controls.Add(this.cbBuscarCliente);
             this.pnlControlesCRUD.Controls.Add(this.btnBuscar);
             this.pnlControlesCRUD.Controls.Add(this.btnAgregar);
@@ -303,6 +305,22 @@ namespace WilianMiranda01.VISTA
             this.dtgGestionDeConsumidores.Size = new System.Drawing.Size(980, 355);
             this.dtgGestionDeConsumidores.TabIndex = 6;
             // 
+            // btnRefrescar
+            // 
+            this.btnRefrescar.BackColor = System.Drawing.Color.Transparent;
+            this.btnRefrescar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRefrescar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnRefrescar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefrescar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefrescar.ForeColor = System.Drawing.Color.Black;
+            this.btnRefrescar.Location = new System.Drawing.Point(551, 5);
+            this.btnRefrescar.Name = "btnRefrescar";
+            this.btnRefrescar.Size = new System.Drawing.Size(36, 35);
+            this.btnRefrescar.TabIndex = 7;
+            this.btnRefrescar.Text = "R";
+            this.btnRefrescar.UseVisualStyleBackColor = false;
+            this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
+            // 
             // FrmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -350,5 +368,6 @@ namespace WilianMiranda01.VISTA
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbBuscarCliente;
         public System.Windows.Forms.DataGridView dtgGestionDeConsumidores;
+        private System.Windows.Forms.Button btnRefrescar;
     }
 }

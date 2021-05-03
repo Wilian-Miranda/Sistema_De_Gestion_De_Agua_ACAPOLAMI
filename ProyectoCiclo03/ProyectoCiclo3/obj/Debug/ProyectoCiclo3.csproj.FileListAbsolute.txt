@@ -44,3 +44,28 @@ C:\Users\kembe\OneDrive\Documentos\GitHub\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\SOFT
 C:\Users\kembe\OneDrive\Documentos\GitHub\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\SOFTWARE DE GESTIÓN DE AGUA\ProyectoCiclo03\ProyectoCiclo3\obj\Debug\ProyectoCiclo3.csproj.CopyComplete
 C:\Users\kembe\OneDrive\Documentos\GitHub\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\SOFTWARE DE GESTIÓN DE AGUA\ProyectoCiclo03\ProyectoCiclo3\obj\Debug\ProyectoCiclo3.exe
 C:\Users\kembe\OneDrive\Documentos\GitHub\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\SOFTWARE DE GESTIÓN DE AGUA\ProyectoCiclo03\ProyectoCiclo3\obj\Debug\ProyectoCiclo3.pdb
+C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ProyectoCiclo03\ProyectoCiclo3\bin\Debug\ProyectoCiclo3.exe.config
+C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ProyectoCiclo03\ProyectoCiclo3\bin\Debug\ProyectoCiclo3.exe
+C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ProyectoCiclo03\ProyectoCiclo3\bin\Debug\ProyectoCiclo3.pdb
+C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ProyectoCiclo03\ProyectoCiclo3\bin\Debug\EntityFramework.dll
+C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ProyectoCiclo03\ProyectoCiclo3\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ProyectoCiclo03\ProyectoCiclo3\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ProyectoCiclo03\ProyectoCiclo3\bin\Debug\EntityFramework.xml
+C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ProyectoCiclo03\ProyectoCiclo3\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ProyectoCiclo03\ProyectoCiclo3\obj\Debug\ProyectoCiclo3.csprojAssemblyReference.cache
+C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ProyectoCiclo03\ProyectoCiclo3\obj\Debug\ProyectoCiclo3.Properties.Resources.resources
+C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ProyectoCiclo03\ProyectoCiclo3\obj\Debug\WilianMiranda01.Form1.resources
+C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ProyectoCiclo03\ProyectoCiclo3\obj\Debug\ProyectoCiclo3.VISTA.FrmAjustes.resources
+C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ProyectoCiclo03\ProyectoCiclo3\obj\Debug\WilianMiranda01.VISTA.FrmPagos.resources
+C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ProyectoCiclo03\ProyectoCiclo3\obj\Debug\WilianMiranda01.VISTA.FrmRegistroUsuario.resources
+C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ProyectoCiclo03\ProyectoCiclo3\obj\Debug\WilianMiranda01.VISTA.FmrPrincipal.resources
+C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ProyectoCiclo03\ProyectoCiclo3\obj\Debug\WilianMiranda01.VISTA.FrmActividades.resources
+C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ProyectoCiclo03\ProyectoCiclo3\obj\Debug\WilianMiranda01.VISTA.FrmAgregarClientes.resources
+C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ProyectoCiclo03\ProyectoCiclo3\obj\Debug\WilianMiranda01.VISTA.FrmClientes.resources
+C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ProyectoCiclo03\ProyectoCiclo3\obj\Debug\WilianMiranda01.VISTA.FrmEliminarCliente.resources
+C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ProyectoCiclo03\ProyectoCiclo3\obj\Debug\WilianMiranda01.VISTA.FrmModificarCliente.resources
+C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ProyectoCiclo03\ProyectoCiclo3\obj\Debug\ProyectoCiclo3.csproj.GenerateResource.cache
+C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ProyectoCiclo03\ProyectoCiclo3\obj\Debug\ProyectoCiclo3.csproj.CoreCompileInputs.cache
+C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ProyectoCiclo03\ProyectoCiclo3\obj\Debug\ProyectoCiclo3.csproj.CopyComplete
+C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ProyectoCiclo03\ProyectoCiclo3\obj\Debug\ProyectoCiclo3.exe
+C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ProyectoCiclo03\ProyectoCiclo3\obj\Debug\ProyectoCiclo3.pdb
