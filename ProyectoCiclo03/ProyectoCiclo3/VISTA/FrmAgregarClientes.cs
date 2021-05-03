@@ -17,6 +17,7 @@ namespace WilianMiranda01.VISTA
         public FrmAgregarClientes()
         {
             InitializeComponent();
+            ListarComunidades();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -53,7 +54,7 @@ namespace WilianMiranda01.VISTA
                 clientes.numeroDocumento = txtDUI.Text;
                 clientes.telefono = txtDUI.Text;
                 clientes.correo = txtEmail.Text;
-                clientes.idComunidad_FK = Convert.ToInt32(cbComunidad.Text);
+                clientes.idComunidad_FK = Convert.ToInt32(idComunidadSeleccionado);
 
 
                 cls.InsertarUsuario(clientes);
@@ -111,6 +112,37 @@ namespace WilianMiranda01.VISTA
         private void btnCancelar_MouseMove(object sender, MouseEventArgs e)
         {
             btnCancelar.BackColor = Color.FromArgb(0, 64, 64);
+        }
+
+        private string idComunidadSeleccionado = "";
+        private void cbComunidad_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbComunidad.SelectedValue != null)
+            {
+                idComunidadSeleccionado = cbComunidad.SelectedValue.ToString();
+            }
+        }
+
+        private void ListarComunidades()
+        {
+            using (ACAPOLAMIEntities db = new ACAPOLAMIEntities())
+            {
+                var lista = db.Comunidades.ToList();
+
+                if (lista.Count > 0)
+                {
+                    cbComunidad.DataSource = lista;
+                    cbComunidad.DisplayMember = "nombreComunidad";
+                    cbComunidad.ValueMember = "idComunidad";
+
+                    if (cbComunidad.Items.Count > 0)
+                    {
+                        cbComunidad.SelectedIndex = -1;
+                    }
+                }
+            }
+
+
         }
     }
 }

@@ -154,10 +154,11 @@ namespace WilianMiranda01.VISTA
             // 
             // cbComunidad
             // 
+            this.cbComunidad.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbComunidad.FormattingEnabled = true;
-            this.cbComunidad.Location = new System.Drawing.Point(125, 206);
+            this.cbComunidad.Location = new System.Drawing.Point(123, 202);
             this.cbComunidad.Name = "cbComunidad";
-            this.cbComunidad.Size = new System.Drawing.Size(367, 21);
+            this.cbComunidad.Size = new System.Drawing.Size(369, 27);
             this.cbComunidad.TabIndex = 14;
             // 
             // txtDUI

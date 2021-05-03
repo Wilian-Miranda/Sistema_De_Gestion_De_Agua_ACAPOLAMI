@@ -38,6 +38,7 @@ namespace WilianMiranda01.VISTA
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pnlControlesCRUD = new System.Windows.Forms.Panel();
+            this.btnRefrescar = new System.Windows.Forms.Button();
             this.cbBuscarCliente = new System.Windows.Forms.ComboBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -48,7 +49,6 @@ namespace WilianMiranda01.VISTA
             this.label1 = new System.Windows.Forms.Label();
             this.pnlContenedorDataGrid = new System.Windows.Forms.Panel();
             this.dtgGestionDeConsumidores = new System.Windows.Forms.DataGridView();
-            this.btnRefrescar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pnlControlesCRUD.SuspendLayout();
@@ -120,6 +120,22 @@ namespace WilianMiranda01.VISTA
             this.pnlControlesCRUD.Padding = new System.Windows.Forms.Padding(5);
             this.pnlControlesCRUD.Size = new System.Drawing.Size(1024, 45);
             this.pnlControlesCRUD.TabIndex = 6;
+            // 
+            // btnRefrescar
+            // 
+            this.btnRefrescar.BackColor = System.Drawing.Color.Transparent;
+            this.btnRefrescar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRefrescar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnRefrescar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefrescar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefrescar.ForeColor = System.Drawing.Color.Black;
+            this.btnRefrescar.Location = new System.Drawing.Point(551, 5);
+            this.btnRefrescar.Name = "btnRefrescar";
+            this.btnRefrescar.Size = new System.Drawing.Size(36, 35);
+            this.btnRefrescar.TabIndex = 7;
+            this.btnRefrescar.Text = "R";
+            this.btnRefrescar.UseVisualStyleBackColor = false;
+            this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
             // 
             // cbBuscarCliente
             // 
@@ -304,22 +320,6 @@ namespace WilianMiranda01.VISTA
             this.dtgGestionDeConsumidores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgGestionDeConsumidores.Size = new System.Drawing.Size(980, 355);
             this.dtgGestionDeConsumidores.TabIndex = 6;
-            // 
-            // btnRefrescar
-            // 
-            this.btnRefrescar.BackColor = System.Drawing.Color.Transparent;
-            this.btnRefrescar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRefrescar.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnRefrescar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefrescar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefrescar.ForeColor = System.Drawing.Color.Black;
-            this.btnRefrescar.Location = new System.Drawing.Point(551, 5);
-            this.btnRefrescar.Name = "btnRefrescar";
-            this.btnRefrescar.Size = new System.Drawing.Size(36, 35);
-            this.btnRefrescar.TabIndex = 7;
-            this.btnRefrescar.Text = "R";
-            this.btnRefrescar.UseVisualStyleBackColor = false;
-            this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
             // 
             // FrmClientes
             // 

@@ -163,11 +163,13 @@ namespace WilianMiranda01.VISTA
             // 
             // cbComunidad
             // 
+            this.cbComunidad.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbComunidad.FormattingEnabled = true;
             this.cbComunidad.Location = new System.Drawing.Point(122, 173);
             this.cbComunidad.Name = "cbComunidad";
-            this.cbComunidad.Size = new System.Drawing.Size(369, 26);
+            this.cbComunidad.Size = new System.Drawing.Size(369, 27);
             this.cbComunidad.TabIndex = 15;
+            this.cbComunidad.SelectedIndexChanged += new System.EventHandler(this.cbComunidad_SelectedIndexChanged);
             // 
             // txtDUI
             // 

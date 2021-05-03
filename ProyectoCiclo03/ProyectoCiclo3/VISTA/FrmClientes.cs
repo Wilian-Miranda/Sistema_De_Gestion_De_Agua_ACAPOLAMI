@@ -37,10 +37,9 @@ namespace WilianMiranda01.VISTA
 
         private void FrmClientes_Load(object sender, EventArgs e)
         {
-
-            btnCantidadDeClientes.Text = dtgGestionDeConsumidores.Rows.Count.ToString();
             //Llamada al método 
             ejecutar();
+            btnCantidadDeClientes.Text = dtgGestionDeConsumidores.Rows.Count.ToString();
         }
         
         //Método utilizado para leer los datos del sp en el dtgGestionDeConsumidores
