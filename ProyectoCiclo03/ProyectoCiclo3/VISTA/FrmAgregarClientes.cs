@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProyectoCiclo3.DAO;
+using ProyectoCiclo3.MODELO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -39,7 +41,26 @@ namespace WilianMiranda01.VISTA
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            using (ACAPOLAMIEntities db = new ACAPOLAMIEntities())
+            {
+
+                ClsDConsumidores cls = new ClsDConsumidores();
+
+                Consumidores clientes = new Consumidores();
+
+                clientes.nombresConsumidor = txtNombreNuevoCliente.Text;
+                clientes.apellidosConsumidor = txtApellidos.Text;
+                clientes.numeroDocumento = txtDUI.Text;
+                clientes.telefono = txtDUI.Text;
+                clientes.correo = txtEmail.Text;
+                clientes.idComunidad_FK = Convert.ToInt32(cbComunidad.Text);
+
+
+                cls.InsertarUsuario(clientes);
+
+
+
+            }
         }
 
         private void label6_Click(object sender, EventArgs e)
