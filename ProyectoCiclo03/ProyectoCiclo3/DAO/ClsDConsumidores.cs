@@ -61,5 +61,38 @@ namespace ProyectoCiclo3.DAO
             }
 
         }
+        public void ModificarCliente(Consumidores consumidor)
+        {
+            try
+            {
+                using (ACAPOLAMIEntities db = new ACAPOLAMIEntities())
+                {
+                    int modificar = consumidor.idConsumidor;
+                    Consumidores consu = db.Consumidores.Where(x => x.idConsumidor == modificar).Select(x => x).FirstOrDefault();
+
+                    consu.nombresConsumidor = consumidor.nombresConsumidor;
+                    consu.apellidosConsumidor = consumidor.apellidosConsumidor;
+                    consu.numeroDocumento = consumidor.numeroDocumento;
+                    consu.telefono = consumidor.telefono;
+                    consu.correo = consumidor.correo;
+                    //consu.idComunidad_FK = consumidor.idComunidad_FK;
+
+                    db.SaveChanges();
+
+                    MessageBox.Show("Los datos se actualizaron exitosamnete");
+
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+
+
+            }
+
+
+        }
     }
 }

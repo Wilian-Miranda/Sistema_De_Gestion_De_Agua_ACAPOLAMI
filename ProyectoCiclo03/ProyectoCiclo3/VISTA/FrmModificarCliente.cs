@@ -1,4 +1,5 @@
-﻿using ProyectoCiclo3.MODELO;
+﻿using ProyectoCiclo3.DAO;
+using ProyectoCiclo3.MODELO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,14 +36,43 @@ namespace WilianMiranda01.VISTA
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            try
+            {
+                ClsDConsumidores clsDconsumidores = new ClsDConsumidores();
+
+                Consumidores consumidor = new Consumidores();
+
+                consumidor.idConsumidor = Convert.ToInt32(txtIdCliente.Text);
+                consumidor.nombresConsumidor = txtNombre.Text;
+                consumidor.apellidosConsumidor = txtApellidos.Text;
+                consumidor.numeroDocumento = txtDUI.Text;
+                consumidor.telefono = txtTelefono.Text;
+                consumidor.correo = txtEmail.Text;
+                //consumidor.idComunidad_FK = Convert.ToInt32(comunidad);
+
+                clsDconsumidores.ModificarCliente(consumidor);
+                Limpieza();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+
+            }
         }
 
         private void FrmModificarCliente_Load(object sender, EventArgs e)
         {
             ListarComunidades();
         }
-
+        void Limpieza() {
+            txtIdCliente.Clear();
+            txtNombre.Clear();
+            txtApellidos.Clear();
+            txtDUI.Clear();
+            txtTelefono.Clear();
+            txtEmail.Clear();
+        } 
 
         private void btnModificar_MouseHover(object sender, EventArgs e)
         {
@@ -101,9 +131,11 @@ namespace WilianMiranda01.VISTA
 
                 }
             }
+        
+       
+        
 
-
-        }
+    }
         int posX = 0;
         int posY = 0;
         private void pnlCabeceraModificarCliente_MouseMove(object sender, MouseEventArgs e)
@@ -119,5 +151,6 @@ namespace WilianMiranda01.VISTA
                 Top += (e.Y - posY);
             }
         }
+
     }
 }
