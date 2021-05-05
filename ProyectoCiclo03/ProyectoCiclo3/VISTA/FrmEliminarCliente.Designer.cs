@@ -321,7 +321,7 @@ namespace WilianMiranda01.VISTA
             this.pnlCabeceraEliminarCliente.Name = "pnlCabeceraEliminarCliente";
             this.pnlCabeceraEliminarCliente.Size = new System.Drawing.Size(540, 30);
             this.pnlCabeceraEliminarCliente.TabIndex = 2;
-            this.pnlCabeceraEliminarCliente.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pnlCabeceraEliminarCliente_MouseUp);
+            this.pnlCabeceraEliminarCliente.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlCabeceraEliminarCliente_MouseMove);
             // 
             // FrmEliminarCliente
             // 

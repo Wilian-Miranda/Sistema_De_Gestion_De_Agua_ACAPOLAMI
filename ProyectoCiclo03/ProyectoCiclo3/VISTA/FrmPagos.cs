@@ -130,7 +130,7 @@ namespace WilianMiranda01.VISTA
                 modificarPago.txtIdPago.Text = dtgPagos.CurrentRow.Cells[0].Value.ToString();
                 modificarPago.txtNombres.Text = dtgPagos.CurrentRow.Cells[1].Value.ToString();
                 modificarPago.txtApellidos.Text = dtgPagos.CurrentRow.Cells[2].Value.ToString();
-                modificarPago.cbMonto.Text = dtgPagos.CurrentRow.Cells[3].Value.ToString();
+                modificarPago.txtMonto.Text = dtgPagos.CurrentRow.Cells[3].Value.ToString();
                 modificarPago.txtCancelado.Text = dtgPagos.CurrentRow.Cells[4].Value.ToString();
                 modificarPago.txtImpuesto.Text = dtgPagos.CurrentRow.Cells[5].Value.ToString();
                 modificarPago.cbEstado.Text = dtgPagos.CurrentRow.Cells[6].Value.ToString();

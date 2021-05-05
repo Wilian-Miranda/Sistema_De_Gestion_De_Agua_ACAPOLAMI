@@ -36,7 +36,6 @@ namespace ProyectoCiclo3.VISTA
             this.btnEliminar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.cbEstado = new System.Windows.Forms.ComboBox();
-            this.cbMonto = new System.Windows.Forms.ComboBox();
             this.txtApellidos = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtCancelado = new System.Windows.Forms.TextBox();
@@ -54,6 +53,7 @@ namespace ProyectoCiclo3.VISTA
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlCabeceraEliminarCliente = new System.Windows.Forms.Panel();
+            this.txtMonto = new System.Windows.Forms.TextBox();
             this.pnlContenerdorEliminarPago.SuspendLayout();
             this.pnlContenedor.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -134,8 +134,8 @@ namespace ProyectoCiclo3.VISTA
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.PowderBlue;
+            this.panel3.Controls.Add(this.txtMonto);
             this.panel3.Controls.Add(this.cbEstado);
-            this.panel3.Controls.Add(this.cbMonto);
             this.panel3.Controls.Add(this.txtApellidos);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.txtCancelado);
@@ -166,15 +166,6 @@ namespace ProyectoCiclo3.VISTA
             this.cbEstado.Size = new System.Drawing.Size(355, 27);
             this.cbEstado.TabIndex = 19;
             this.cbEstado.SelectedIndexChanged += new System.EventHandler(this.cbEstado_SelectedIndexChanged);
-            // 
-            // cbMonto
-            // 
-            this.cbMonto.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbMonto.FormattingEnabled = true;
-            this.cbMonto.Location = new System.Drawing.Point(144, 115);
-            this.cbMonto.Name = "cbMonto";
-            this.cbMonto.Size = new System.Drawing.Size(355, 27);
-            this.cbMonto.TabIndex = 18;
             // 
             // txtApellidos
             // 
@@ -341,6 +332,14 @@ namespace ProyectoCiclo3.VISTA
             this.pnlCabeceraEliminarCliente.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlCabeceraEliminarCliente_Paint);
             this.pnlCabeceraEliminarCliente.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlCabeceraEliminarCliente_MouseMove);
             // 
+            // txtMonto
+            // 
+            this.txtMonto.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMonto.Location = new System.Drawing.Point(143, 116);
+            this.txtMonto.Name = "txtMonto";
+            this.txtMonto.Size = new System.Drawing.Size(356, 26);
+            this.txtMonto.TabIndex = 20;
+            // 
             // FrmModificarPago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -387,7 +386,7 @@ namespace ProyectoCiclo3.VISTA
         private System.Windows.Forms.Label label7;
         public System.Windows.Forms.TextBox txtApellidos;
         private System.Windows.Forms.Label label9;
-        public System.Windows.Forms.ComboBox cbMonto;
         public System.Windows.Forms.ComboBox cbEstado;
+        public System.Windows.Forms.TextBox txtMonto;
     }
 }

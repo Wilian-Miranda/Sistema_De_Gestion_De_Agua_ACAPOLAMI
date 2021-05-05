@@ -19,6 +19,8 @@ namespace WilianMiranda01.VISTA
             InitializeComponent();
         }
 
+        private string idComunidad = "";
+
         private void pnlContenedorAgregarCliente_Paint(object sender, PaintEventArgs e)
         {
 
@@ -48,11 +50,11 @@ namespace WilianMiranda01.VISTA
                 consumidor.numeroDocumento = txtDUI.Text;
                 consumidor.telefono = txtTelefono.Text;
                 consumidor.correo = txtEmail.Text;
-                //consumidor.idComunidad_FK = Convert.ToInt32(comunidad);
+                consumidor.idComunidad_FK = Convert.ToInt32(idComunidad);
 
                 clsDconsumidores.ModificarCliente(consumidor);
                 Limpieza();
-
+                
             }
             catch (Exception ex)
             {
@@ -72,6 +74,7 @@ namespace WilianMiranda01.VISTA
             txtDUI.Clear();
             txtTelefono.Clear();
             txtEmail.Clear();
+            cbComunidad.ResetText();
         } 
 
         private void btnModificar_MouseHover(object sender, EventArgs e)
@@ -104,7 +107,7 @@ namespace WilianMiranda01.VISTA
             btnCancelar.BackColor = Color.FromArgb(0, 64, 64);
         }
 
-        private string idComunidad = "";
+
         private void cbComunidad_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbComunidad.SelectedValue != null)

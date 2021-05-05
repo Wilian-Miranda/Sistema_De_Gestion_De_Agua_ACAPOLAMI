@@ -26,7 +26,7 @@ namespace ProyectoCiclo3.DAO
                     db.Consumidores.Add(consumidores1);
                     db.SaveChanges();
 
-                    MessageBox.Show("Los datos se agregaron exitosamente ");
+                    MessageBox.Show("Los datos se agregaron exitosamente");
                 }
 
             }
@@ -75,7 +75,7 @@ namespace ProyectoCiclo3.DAO
                     consu.numeroDocumento = consumidor.numeroDocumento;
                     consu.telefono = consumidor.telefono;
                     consu.correo = consumidor.correo;
-                    //consu.idComunidad_FK = consumidor.idComunidad_FK;
+                    consu.idComunidad_FK = consumidor.idComunidad_FK;
 
                     db.SaveChanges();
 

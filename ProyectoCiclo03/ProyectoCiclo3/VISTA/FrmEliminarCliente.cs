@@ -29,12 +29,14 @@ namespace WilianMiranda01.VISTA
 
                     consumidores.EliminarConsumidor(Convert.ToInt32(txtIdCliente.Text));
 
+                    this.Dispose();
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
+
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -42,21 +44,6 @@ namespace WilianMiranda01.VISTA
             this.Dispose();
         }
 
-        int posX = 0;
-        int posY = 0;
-        private void pnlCabeceraEliminarCliente_MouseUp(object sender, MouseEventArgs e)
-        {
-            if (e.Button != MouseButtons.Left)
-            {
-                posX = e.X;
-                posY = e.Y;
-            }
-            else
-            {
-                Left += (e.X - posX);
-                Top += (e.Y - posY);
-            }
-        }
 
         private void btnEliminar_MouseHover(object sender, EventArgs e)
         {
@@ -86,6 +73,22 @@ namespace WilianMiranda01.VISTA
         private void btnCancelar_MouseMove(object sender, MouseEventArgs e)
         {
             btnCancelar.BackColor = Color.FromArgb(0, 64, 64);
+        }
+        int posX = 0;
+        int posY = 0;
+        private void pnlCabeceraEliminarCliente_MouseMove(object sender, MouseEventArgs e)
+        {
+
+            if (e.Button != MouseButtons.Left)
+            {
+                posX = e.X;
+                posY = e.Y;
+            }
+            else
+            {
+                Left += (e.X - posX);
+                Top += (e.Y - posY);
+            }
         }
     }
 }

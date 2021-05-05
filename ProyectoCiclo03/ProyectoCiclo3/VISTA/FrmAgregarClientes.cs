@@ -44,23 +44,36 @@ namespace WilianMiranda01.VISTA
         {
             using (ACAPOLAMIEntities db = new ACAPOLAMIEntities())
             {
+                if (txtApellidos.Text == "" && txtNombreNuevoCliente.Text == "" && txtDUI.Text == "")
+                {
+                    MessageBox.Show("El nombre completo del cliente y el DUI son datos de ingreso obligatorio");
+                }
+                else
+                {
 
-                ClsDConsumidores cls = new ClsDConsumidores();
+                    ClsDConsumidores cls = new ClsDConsumidores();
 
-                Consumidores clientes = new Consumidores();
+                    Consumidores clientes = new Consumidores();
 
-                clientes.nombresConsumidor = txtNombreNuevoCliente.Text;
-                clientes.apellidosConsumidor = txtApellidos.Text;
-                clientes.numeroDocumento = txtDUI.Text;
-                clientes.telefono = txtDUI.Text;
-                clientes.correo = txtEmail.Text;
-                clientes.idComunidad_FK = Convert.ToInt32(idComunidadSeleccionado);
+                    clientes.nombresConsumidor = txtNombreNuevoCliente.Text;
+                    clientes.apellidosConsumidor = txtApellidos.Text;
+                    clientes.numeroDocumento = txtDUI.Text;
+                    clientes.telefono = txtDUI.Text;
+                    clientes.correo = txtEmail.Text;
+                    if (cbComunidad.Text=="")
+                    {
+                        clientes.idComunidad_FK = null;
+                    }
+                    else
+                    {
+                        clientes.idComunidad_FK = Convert.ToInt32(idComunidadSeleccionado);
+                    }
 
 
-                cls.InsertarUsuario(clientes);
+                    cls.InsertarUsuario(clientes);
 
-                Limpiar();
-
+                    Limpiar();
+                }
 
 
             }

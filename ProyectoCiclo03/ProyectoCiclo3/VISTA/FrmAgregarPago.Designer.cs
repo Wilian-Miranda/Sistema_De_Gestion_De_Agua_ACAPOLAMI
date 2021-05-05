@@ -36,7 +36,6 @@ namespace ProyectoCiclo3.VISTA
             this.btnEliminar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.cbEstado = new System.Windows.Forms.ComboBox();
-            this.cbMonto = new System.Windows.Forms.ComboBox();
             this.cbConsumidor = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtCancelado = new System.Windows.Forms.TextBox();
@@ -48,8 +47,7 @@ namespace ProyectoCiclo3.VISTA
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlCabeceraEliminarCliente = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtFechaDePago = new System.Windows.Forms.TextBox();
+            this.txtMonto = new System.Windows.Forms.TextBox();
             this.pnlContenerdorAgregarPago.SuspendLayout();
             this.pnlContenedorAgregarCliente.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -66,7 +64,7 @@ namespace ProyectoCiclo3.VISTA
             this.pnlContenerdorAgregarPago.Location = new System.Drawing.Point(0, 0);
             this.pnlContenerdorAgregarPago.Margin = new System.Windows.Forms.Padding(4);
             this.pnlContenerdorAgregarPago.Name = "pnlContenerdorAgregarPago";
-            this.pnlContenerdorAgregarPago.Size = new System.Drawing.Size(568, 376);
+            this.pnlContenerdorAgregarPago.Size = new System.Drawing.Size(568, 342);
             this.pnlContenerdorAgregarPago.TabIndex = 4;
             // 
             // pnlContenedorAgregarCliente
@@ -79,7 +77,7 @@ namespace ProyectoCiclo3.VISTA
             this.pnlContenedorAgregarCliente.Location = new System.Drawing.Point(0, 30);
             this.pnlContenedorAgregarCliente.Name = "pnlContenedorAgregarCliente";
             this.pnlContenedorAgregarCliente.Padding = new System.Windows.Forms.Padding(20, 0, 20, 20);
-            this.pnlContenedorAgregarCliente.Size = new System.Drawing.Size(568, 346);
+            this.pnlContenedorAgregarCliente.Size = new System.Drawing.Size(568, 312);
             this.pnlContenedorAgregarCliente.TabIndex = 4;
             // 
             // panel4
@@ -87,7 +85,7 @@ namespace ProyectoCiclo3.VISTA
             this.panel4.Controls.Add(this.btnCancelar);
             this.panel4.Controls.Add(this.btnEliminar);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(20, 274);
+            this.panel4.Location = new System.Drawing.Point(20, 240);
             this.panel4.Name = "panel4";
             this.panel4.Padding = new System.Windows.Forms.Padding(50, 0, 50, 0);
             this.panel4.Size = new System.Drawing.Size(528, 52);
@@ -130,23 +128,21 @@ namespace ProyectoCiclo3.VISTA
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.PowderBlue;
+            this.panel3.Controls.Add(this.txtMonto);
             this.panel3.Controls.Add(this.cbEstado);
-            this.panel3.Controls.Add(this.cbMonto);
             this.panel3.Controls.Add(this.cbConsumidor);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.txtCancelado);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.txtImpuesto);
             this.panel3.Controls.Add(this.label8);
-            this.panel3.Controls.Add(this.txtFechaDePago);
-            this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(20, 47);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(10);
-            this.panel3.Size = new System.Drawing.Size(528, 217);
+            this.panel3.Size = new System.Drawing.Size(528, 182);
             this.panel3.TabIndex = 4;
             // 
             // cbEstado
@@ -158,16 +154,6 @@ namespace ProyectoCiclo3.VISTA
             this.cbEstado.Size = new System.Drawing.Size(355, 27);
             this.cbEstado.TabIndex = 19;
             this.cbEstado.SelectedIndexChanged += new System.EventHandler(this.cbEstado_SelectedIndexChanged);
-            // 
-            // cbMonto
-            // 
-            this.cbMonto.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbMonto.FormattingEnabled = true;
-            this.cbMonto.Location = new System.Drawing.Point(150, 45);
-            this.cbMonto.Name = "cbMonto";
-            this.cbMonto.Size = new System.Drawing.Size(355, 27);
-            this.cbMonto.TabIndex = 18;
-            this.cbMonto.SelectedIndexChanged += new System.EventHandler(this.cbMonto_SelectedIndexChanged);
             // 
             // cbConsumidor
             // 
@@ -279,30 +265,19 @@ namespace ProyectoCiclo3.VISTA
             this.pnlCabeceraEliminarCliente.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlCabeceraEliminarCliente_Paint);
             this.pnlCabeceraEliminarCliente.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlCabeceraEliminarCliente_MouseMove);
             // 
-            // label6
+            // txtMonto
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 182);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(132, 19);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Fecha de pago: ";
-            // 
-            // txtFechaDePago
-            // 
-            this.txtFechaDePago.Enabled = false;
-            this.txtFechaDePago.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFechaDePago.Location = new System.Drawing.Point(150, 175);
-            this.txtFechaDePago.Name = "txtFechaDePago";
-            this.txtFechaDePago.Size = new System.Drawing.Size(356, 26);
-            this.txtFechaDePago.TabIndex = 7;
+            this.txtMonto.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMonto.Location = new System.Drawing.Point(150, 46);
+            this.txtMonto.Name = "txtMonto";
+            this.txtMonto.Size = new System.Drawing.Size(356, 26);
+            this.txtMonto.TabIndex = 20;
             // 
             // FrmAgregarPago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(568, 376);
+            this.ClientSize = new System.Drawing.Size(568, 342);
             this.ControlBox = false;
             this.Controls.Add(this.pnlContenerdorAgregarPago);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -339,8 +314,6 @@ namespace ProyectoCiclo3.VISTA
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbConsumidor;
         private System.Windows.Forms.ComboBox cbEstado;
-        private System.Windows.Forms.ComboBox cbMonto;
-        public System.Windows.Forms.TextBox txtFechaDePago;
-        private System.Windows.Forms.Label label6;
+        public System.Windows.Forms.TextBox txtMonto;
     }
 }
