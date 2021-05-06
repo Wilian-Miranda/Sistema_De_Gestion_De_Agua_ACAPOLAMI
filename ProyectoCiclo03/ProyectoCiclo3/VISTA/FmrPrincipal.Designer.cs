@@ -30,6 +30,7 @@ namespace WilianMiranda01.VISTA
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FmrPrincipal));
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.btnCerrarSesión = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -122,11 +123,11 @@ namespace WilianMiranda01.VISTA
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackgroundImage = global::ProyectoCiclo3.Properties.Resources._585e4be1cb11b227491c339811;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(58, 19);
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox2.Location = new System.Drawing.Point(58, 6);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(77, 66);
+            this.pictureBox2.Size = new System.Drawing.Size(85, 79);
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
@@ -318,12 +319,13 @@ namespace WilianMiranda01.VISTA
             // btnMinimizarAplicacion
             // 
             this.btnMinimizarAplicacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
-            this.btnMinimizarAplicacion.BackgroundImage = global::ProyectoCiclo3.Properties.Resources.minimize_118918;
             this.btnMinimizarAplicacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnMinimizarAplicacion.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnMinimizarAplicacion.FlatAppearance.BorderSize = 0;
             this.btnMinimizarAplicacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimizarAplicacion.Location = new System.Drawing.Point(7, 0);
+            this.btnMinimizarAplicacion.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizarAplicacion.Image")));
+            this.btnMinimizarAplicacion.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnMinimizarAplicacion.Location = new System.Drawing.Point(3, 0);
             this.btnMinimizarAplicacion.Name = "btnMinimizarAplicacion";
             this.btnMinimizarAplicacion.Size = new System.Drawing.Size(26, 30);
             this.btnMinimizarAplicacion.TabIndex = 2;
@@ -336,14 +338,14 @@ namespace WilianMiranda01.VISTA
             // btnCerrarAplicacion
             // 
             this.btnCerrarAplicacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
-            this.btnCerrarAplicacion.BackgroundImage = global::ProyectoCiclo3.Properties.Resources.window_close_icon_135015__1_;
             this.btnCerrarAplicacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCerrarAplicacion.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnCerrarAplicacion.FlatAppearance.BorderSize = 0;
             this.btnCerrarAplicacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarAplicacion.Location = new System.Drawing.Point(33, 0);
+            this.btnCerrarAplicacion.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarAplicacion.Image")));
+            this.btnCerrarAplicacion.Location = new System.Drawing.Point(29, 0);
             this.btnCerrarAplicacion.Name = "btnCerrarAplicacion";
-            this.btnCerrarAplicacion.Size = new System.Drawing.Size(26, 30);
+            this.btnCerrarAplicacion.Size = new System.Drawing.Size(30, 30);
             this.btnCerrarAplicacion.TabIndex = 0;
             this.btnCerrarAplicacion.UseVisualStyleBackColor = false;
             this.btnCerrarAplicacion.Click += new System.EventHandler(this.btnCerrarAplicacion_Click);

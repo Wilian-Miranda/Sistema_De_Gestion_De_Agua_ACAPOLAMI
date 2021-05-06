@@ -14,11 +14,11 @@ namespace ProyectoCiclo3.NEGOCIO
 
         public void AzulClaro(ButtonColor btn)
         {
-            btn.BotonAzulClaro.BackColor = Color.FromArgb(67, 194, 243);
+            btn.BotonAzulClaro.BackColor = Color.FromArgb(103, 161, 207);
         }
         public void AzulOscuro(ButtonColor btn)
         {
-            btn.BotonAzulOscuro.BackColor = Color.FromArgb(51, 124, 173);
+            btn.BotonAzulOscuro.BackColor = Color.FromArgb(103, 161, 207);
         }
         public void Rojo(ButtonColor btn)
         {

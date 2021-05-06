@@ -29,7 +29,8 @@ namespace WilianMiranda01.VISTA
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPagos));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -120,12 +121,12 @@ namespace WilianMiranda01.VISTA
             this.dtgPagos.Name = "dtgPagos";
             this.dtgPagos.ReadOnly = true;
             this.dtgPagos.RowHeadersVisible = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FloralWhite;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Orchid;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            this.dtgPagos.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FloralWhite;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Orchid;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.dtgPagos.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgPagos.Size = new System.Drawing.Size(978, 340);
             this.dtgPagos.TabIndex = 0;
             // 
@@ -150,11 +151,11 @@ namespace WilianMiranda01.VISTA
             this.btnRefrescar.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnRefrescar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRefrescar.ForeColor = System.Drawing.Color.Black;
+            this.btnRefrescar.Image = ((System.Drawing.Image)(resources.GetObject("btnRefrescar.Image")));
             this.btnRefrescar.Location = new System.Drawing.Point(551, 5);
             this.btnRefrescar.Name = "btnRefrescar";
             this.btnRefrescar.Size = new System.Drawing.Size(36, 35);
             this.btnRefrescar.TabIndex = 6;
-            this.btnRefrescar.Text = "R";
             this.btnRefrescar.UseVisualStyleBackColor = true;
             this.btnRefrescar.MouseLeave += new System.EventHandler(this.btnRefrescar_MouseLeave);
             this.btnRefrescar.MouseHover += new System.EventHandler(this.btnRefrescar_MouseHover);
@@ -163,9 +164,9 @@ namespace WilianMiranda01.VISTA
             // cbBuscarConsumidor
             // 
             this.cbBuscarConsumidor.FormattingEnabled = true;
-            this.cbBuscarConsumidor.Location = new System.Drawing.Point(155, 10);
+            this.cbBuscarConsumidor.Location = new System.Drawing.Point(166, 10);
             this.cbBuscarConsumidor.Name = "cbBuscarConsumidor";
-            this.cbBuscarConsumidor.Size = new System.Drawing.Size(390, 27);
+            this.cbBuscarConsumidor.Size = new System.Drawing.Size(379, 27);
             this.cbBuscarConsumidor.TabIndex = 5;
             // 
             // btnBuscarConsumidor
@@ -173,11 +174,13 @@ namespace WilianMiranda01.VISTA
             this.btnBuscarConsumidor.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnBuscarConsumidor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarConsumidor.ForeColor = System.Drawing.Color.Black;
+            this.btnBuscarConsumidor.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarConsumidor.Image")));
+            this.btnBuscarConsumidor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBuscarConsumidor.Location = new System.Drawing.Point(5, 5);
             this.btnBuscarConsumidor.Name = "btnBuscarConsumidor";
-            this.btnBuscarConsumidor.Size = new System.Drawing.Size(144, 35);
+            this.btnBuscarConsumidor.Size = new System.Drawing.Size(155, 35);
             this.btnBuscarConsumidor.TabIndex = 4;
-            this.btnBuscarConsumidor.Text = "Consumidor:";
+            this.btnBuscarConsumidor.Text = "       Consumidor:";
             this.btnBuscarConsumidor.UseVisualStyleBackColor = true;
             this.btnBuscarConsumidor.MouseLeave += new System.EventHandler(this.btnBuscarConsumidor_MouseLeave);
             this.btnBuscarConsumidor.MouseHover += new System.EventHandler(this.btnBuscarConsumidor_MouseHover);
@@ -188,11 +191,13 @@ namespace WilianMiranda01.VISTA
             this.btnRegistrarPago.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnRegistrarPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrarPago.ForeColor = System.Drawing.Color.Black;
+            this.btnRegistrarPago.Image = ((System.Drawing.Image)(resources.GetObject("btnRegistrarPago.Image")));
+            this.btnRegistrarPago.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRegistrarPago.Location = new System.Drawing.Point(587, 5);
             this.btnRegistrarPago.Name = "btnRegistrarPago";
             this.btnRegistrarPago.Size = new System.Drawing.Size(144, 35);
             this.btnRegistrarPago.TabIndex = 2;
-            this.btnRegistrarPago.Text = "Registrar Pago";
+            this.btnRegistrarPago.Text = "     Registrar";
             this.btnRegistrarPago.UseVisualStyleBackColor = true;
             this.btnRegistrarPago.Click += new System.EventHandler(this.btnRegistrarPago_Click);
             this.btnRegistrarPago.MouseLeave += new System.EventHandler(this.btnRegistrarPago_MouseLeave);
@@ -204,11 +209,13 @@ namespace WilianMiranda01.VISTA
             this.btnModificarPago.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnModificarPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificarPago.ForeColor = System.Drawing.Color.Black;
+            this.btnModificarPago.Image = ((System.Drawing.Image)(resources.GetObject("btnModificarPago.Image")));
+            this.btnModificarPago.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnModificarPago.Location = new System.Drawing.Point(731, 5);
             this.btnModificarPago.Name = "btnModificarPago";
             this.btnModificarPago.Size = new System.Drawing.Size(144, 35);
             this.btnModificarPago.TabIndex = 1;
-            this.btnModificarPago.Text = "Modificar";
+            this.btnModificarPago.Text = "     Modificar";
             this.btnModificarPago.UseVisualStyleBackColor = true;
             this.btnModificarPago.Click += new System.EventHandler(this.btnModificarPago_Click);
             this.btnModificarPago.MouseLeave += new System.EventHandler(this.btnModificarPago_MouseLeave);
@@ -220,11 +227,13 @@ namespace WilianMiranda01.VISTA
             this.btnEliminarPago.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnEliminarPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminarPago.ForeColor = System.Drawing.Color.Black;
+            this.btnEliminarPago.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminarPago.Image")));
+            this.btnEliminarPago.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEliminarPago.Location = new System.Drawing.Point(875, 5);
             this.btnEliminarPago.Name = "btnEliminarPago";
             this.btnEliminarPago.Size = new System.Drawing.Size(144, 35);
             this.btnEliminarPago.TabIndex = 0;
-            this.btnEliminarPago.Text = "Eliminar";
+            this.btnEliminarPago.Text = "     Eliminar";
             this.btnEliminarPago.UseVisualStyleBackColor = true;
             this.btnEliminarPago.Click += new System.EventHandler(this.btnEliminarPago_Click);
             this.btnEliminarPago.MouseLeave += new System.EventHandler(this.btnEliminarPago_MouseLeave);
