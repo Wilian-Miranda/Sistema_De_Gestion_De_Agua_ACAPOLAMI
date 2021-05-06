@@ -31,8 +31,6 @@ namespace WilianMiranda01.VISTA
         {
             this.btnCancelarRegistro = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.btnRegistrarUsuario = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,22 +38,21 @@ namespace WilianMiranda01.VISTA
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.pnlCabeceraRegistroUsuario = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnCerrarAplicacion = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.panel2.SuspendLayout();
+            this.btnCerrarAplicacion = new System.Windows.Forms.Button();
             this.pnlCabeceraRegistroUsuario.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCancelarRegistro
             // 
-            this.btnCancelarRegistro.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnCancelarRegistro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
             this.btnCancelarRegistro.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancelarRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelarRegistro.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelarRegistro.ForeColor = System.Drawing.Color.White;
-            this.btnCancelarRegistro.Location = new System.Drawing.Point(206, 360);
+            this.btnCancelarRegistro.Location = new System.Drawing.Point(208, 305);
             this.btnCancelarRegistro.Name = "btnCancelarRegistro";
             this.btnCancelarRegistro.Size = new System.Drawing.Size(167, 43);
             this.btnCancelarRegistro.TabIndex = 25;
@@ -69,43 +66,22 @@ namespace WilianMiranda01.VISTA
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label4.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(96, 44);
+            this.label4.Location = new System.Drawing.Point(142, 44);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(203, 26);
+            this.label4.Size = new System.Drawing.Size(118, 24);
             this.label4.TabIndex = 24;
-            this.label4.Text = "SISTEMA DE AGUA";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(29, 92);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(344, 20);
-            this.panel2.TabIndex = 22;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(130, 1);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 19);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "REGISTRO";
+            this.label4.Text = "REGISTRO";
             // 
             // btnRegistrarUsuario
             // 
-            this.btnRegistrarUsuario.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnRegistrarUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
             this.btnRegistrarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRegistrarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrarUsuario.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarUsuario.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrarUsuario.Location = new System.Drawing.Point(29, 360);
+            this.btnRegistrarUsuario.Location = new System.Drawing.Point(31, 305);
             this.btnRegistrarUsuario.Name = "btnRegistrarUsuario";
             this.btnRegistrarUsuario.Size = new System.Drawing.Size(167, 43);
             this.btnRegistrarUsuario.TabIndex = 21;
@@ -118,15 +94,14 @@ namespace WilianMiranda01.VISTA
             // 
             // txtPassword
             // 
-            this.txtPassword.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(194)))), ((int)(((byte)(243)))));
             this.txtPassword.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtPassword.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.Color.White;
-            this.txtPassword.Location = new System.Drawing.Point(30, 238);
+            this.txtPassword.Location = new System.Drawing.Point(32, 183);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(343, 19);
+            this.txtPassword.Size = new System.Drawing.Size(343, 26);
             this.txtPassword.TabIndex = 20;
             // 
             // label2
@@ -134,7 +109,7 @@ namespace WilianMiranda01.VISTA
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(26, 216);
+            this.label2.Location = new System.Drawing.Point(28, 161);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(104, 19);
             this.label2.TabIndex = 19;
@@ -145,7 +120,7 @@ namespace WilianMiranda01.VISTA
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(26, 148);
+            this.label1.Location = new System.Drawing.Point(28, 93);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 19);
             this.label1.TabIndex = 18;
@@ -153,19 +128,18 @@ namespace WilianMiranda01.VISTA
             // 
             // txtUsuario
             // 
-            this.txtUsuario.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(194)))), ((int)(((byte)(243)))));
             this.txtUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtUsuario.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.ForeColor = System.Drawing.Color.White;
-            this.txtUsuario.Location = new System.Drawing.Point(29, 170);
+            this.txtUsuario.Location = new System.Drawing.Point(31, 115);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(344, 19);
+            this.txtUsuario.Size = new System.Drawing.Size(344, 26);
             this.txtUsuario.TabIndex = 17;
             // 
             // pnlCabeceraRegistroUsuario
             // 
-            this.pnlCabeceraRegistroUsuario.BackColor = System.Drawing.Color.Teal;
+            this.pnlCabeceraRegistroUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
             this.pnlCabeceraRegistroUsuario.Controls.Add(this.panel1);
             this.pnlCabeceraRegistroUsuario.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlCabeceraRegistroUsuario.Location = new System.Drawing.Point(0, 0);
@@ -183,9 +157,32 @@ namespace WilianMiranda01.VISTA
             this.panel1.Size = new System.Drawing.Size(33, 30);
             this.panel1.TabIndex = 13;
             // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(194)))), ((int)(((byte)(243)))));
+            this.textBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.textBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.White;
+            this.textBox1.Location = new System.Drawing.Point(31, 249);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.PasswordChar = '*';
+            this.textBox1.Size = new System.Drawing.Size(343, 26);
+            this.textBox1.TabIndex = 28;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(27, 227);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(181, 19);
+            this.label5.TabIndex = 27;
+            this.label5.Text = "Confirmar contraseña:";
+            // 
             // btnCerrarAplicacion
             // 
-            this.btnCerrarAplicacion.BackColor = System.Drawing.Color.Teal;
+            this.btnCerrarAplicacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
             this.btnCerrarAplicacion.BackgroundImage = global::ProyectoCiclo3.Properties.Resources.window_close_icon_135015__1_;
             this.btnCerrarAplicacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCerrarAplicacion.Dock = System.Windows.Forms.DockStyle.Right;
@@ -201,43 +198,18 @@ namespace WilianMiranda01.VISTA
             this.btnCerrarAplicacion.MouseHover += new System.EventHandler(this.btnCerrarAplicacion_MouseHover);
             this.btnCerrarAplicacion.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnCerrarAplicacion_MouseMove);
             // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.textBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(29, 304);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(343, 19);
-            this.textBox1.TabIndex = 28;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(25, 282);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(181, 19);
-            this.label5.TabIndex = 27;
-            this.label5.Text = "Confirmar contraseña:";
-            // 
             // FrmRegistroUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(403, 415);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(133)))), ((int)(((byte)(206)))));
+            this.ClientSize = new System.Drawing.Size(403, 383);
             this.ControlBox = false;
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pnlCabeceraRegistroUsuario);
             this.Controls.Add(this.btnCancelarRegistro);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnRegistrarUsuario);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.label2);
@@ -246,8 +218,6 @@ namespace WilianMiranda01.VISTA
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmRegistroUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.pnlCabeceraRegistroUsuario.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -259,8 +229,6 @@ namespace WilianMiranda01.VISTA
 
         private System.Windows.Forms.Button btnCancelarRegistro;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnRegistrarUsuario;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label2;

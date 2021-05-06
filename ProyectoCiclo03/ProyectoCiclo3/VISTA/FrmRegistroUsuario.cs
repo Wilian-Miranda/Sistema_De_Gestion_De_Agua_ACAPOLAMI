@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProyectoCiclo3.DOMINIO;
+using ProyectoCiclo3.NEGOCIO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +19,8 @@ namespace WilianMiranda01.VISTA
             InitializeComponent();
         }
 
+        ClsButtonColor button = new ClsButtonColor();
+        ButtonColor btn = new ButtonColor();
         private void btnCerrarAplicacion_Click(object sender, EventArgs e)
         {
             this.Dispose();
@@ -63,47 +67,56 @@ namespace WilianMiranda01.VISTA
 
         private void btnCerrarAplicacion_MouseHover(object sender, EventArgs e)
         {
-            btnCerrarAplicacion.BackColor = Color.Crimson;
+            btn.BotonRojo = btnCerrarAplicacion;
+            button.Rojo(btn);
         }
 
         private void btnCerrarAplicacion_MouseLeave(object sender, EventArgs e)
         {
-            btnCerrarAplicacion.BackColor = Color.Teal;
+            btn.BotonAzulOscuro = btnCerrarAplicacion;
+            button.Rojo(btn);
         }
 
         private void btnCerrarAplicacion_MouseMove(object sender, MouseEventArgs e)
         {
-            btnCerrarAplicacion.BackColor = Color.Crimson;
+            btn.BotonRojo = btnCerrarAplicacion;
+            button.Rojo(btn);
         }
         
         private void btnRegistrarUsuario_MouseHover(object sender, EventArgs e)
         {
-            btnRegistrarUsuario.BackColor = Color.Blue;
+            btn.BotonAzulClaro = btnRegistrarUsuario;
+            button.AzulClaro(btn);
         }
 
         private void btnRegistrarUsuario_MouseLeave(object sender, EventArgs e)
         {
-            btnRegistrarUsuario.BackColor = Color.DodgerBlue;
+            btn.BotonAzulOscuro = btnRegistrarUsuario;
+            button.AzulOscuro(btn);
         }
 
         private void btnRegistrarUsuario_MouseMove(object sender, MouseEventArgs e)
         {
-            btnRegistrarUsuario.BackColor = Color.Blue;
+            btn.BotonAzulClaro = btnRegistrarUsuario;
+            button.AzulClaro(btn);
         }
 
         private void btnCancelarRegistro_MouseHover(object sender, EventArgs e)
         {
-            btnCancelarRegistro.BackColor = Color.Blue;
+            btn.BotonAzulClaro = btnCancelarRegistro;
+            button.AzulClaro(btn);
         }
 
         private void btnCancelarRegistro_MouseLeave(object sender, EventArgs e)
         {
-            btnCancelarRegistro.BackColor = Color.DodgerBlue;
+            btn.BotonAzulOscuro = btnCancelarRegistro;
+            button.AzulOscuro(btn);
         }
 
         private void btnCancelarRegistro_MouseMove(object sender, MouseEventArgs e)
         {
-            btnCancelarRegistro.BackColor = Color.Blue;
+            btn.BotonAzulClaro = btnCancelarRegistro;
+            button.AzulClaro(btn);
         }
     }
 }

@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProyectoCiclo3.VISTA;
 using ProyectoCiclo3.MODELO;
+using ProyectoCiclo3.NEGOCIO;
+using ProyectoCiclo3.DOMINIO;
 
 namespace WilianMiranda01.VISTA
 {
@@ -19,6 +21,8 @@ namespace WilianMiranda01.VISTA
             InitializeComponent();
         }
 
+        ClsButtonColor button = new ClsButtonColor();
+        ButtonColor btn = new ButtonColor();
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -26,7 +30,8 @@ namespace WilianMiranda01.VISTA
 
         private void btnRegistrarPago_MouseHover(object sender, EventArgs e)
         {
-            btnRegistrarPago.BackColor = Color.Blue;
+            btn.BotonAzulOscuro = btnRegistrarPago;
+            button.AzulOscuro(btn);
             btnRegistrarPago.ForeColor = Color.White;
         }
 
@@ -36,33 +41,24 @@ namespace WilianMiranda01.VISTA
             btnRegistrarPago.ForeColor = Color.Black;
         }
 
-        private void btnRegistrarPago_MouseUp(object sender, MouseEventArgs e)
-        {
-            btnRegistrarPago.BackColor = Color.Blue;
-            btnRegistrarPago.ForeColor = Color.White;
-        }
-
         private void btnRegistrarPago_MouseMove(object sender, MouseEventArgs e)
         {
-            btnRegistrarPago.BackColor = Color.Blue;
+            btn.BotonAzulOscuro = btnRegistrarPago;
+            button.AzulOscuro(btn);
             btnRegistrarPago.ForeColor = Color.White;
         }
 
         private void btnModificarPago_MouseHover(object sender, EventArgs e)
         {
-            btnModificarPago.BackColor = Color.Blue;
+            btn.BotonAzulOscuro = btnModificarPago;
+            button.AzulOscuro(btn);
             btnModificarPago.ForeColor = Color.White;
         }
 
         private void btnModificarPago_MouseMove(object sender, MouseEventArgs e)
         {
-            btnModificarPago.BackColor = Color.Blue;
-            btnModificarPago.ForeColor = Color.White;
-        }
-
-        private void btnModificarPago_MouseUp(object sender, MouseEventArgs e)
-        {
-            btnModificarPago.BackColor = Color.Blue;
+            btn.BotonAzulOscuro = btnModificarPago;
+            button.AzulOscuro(btn);
             btnModificarPago.ForeColor = Color.White;
         }
 
@@ -74,7 +70,8 @@ namespace WilianMiranda01.VISTA
 
         private void btnEliminarPago_MouseHover(object sender, EventArgs e)
         {
-            btnEliminarPago.BackColor = Color.Crimson;
+            btn.BotonRojo = btnEliminarPago;
+            button.Rojo(btn);
             btnEliminarPago.ForeColor = Color.White;
         }
 
@@ -86,31 +83,22 @@ namespace WilianMiranda01.VISTA
 
         private void btnEliminarPago_MouseMove(object sender, MouseEventArgs e)
         {
-            btnEliminarPago.BackColor = Color.Crimson;
-            btnEliminarPago.ForeColor = Color.White;
-        }
-
-        private void btnEliminarPago_MouseUp(object sender, MouseEventArgs e)
-        {
-            btnEliminarPago.BackColor = Color.Crimson;
+            btn.BotonRojo = btnEliminarPago;
+            button.Rojo(btn);
             btnEliminarPago.ForeColor = Color.White;
         }
 
         private void btnBuscarConsumidor_MouseHover(object sender, EventArgs e)
         {
-            btnBuscarConsumidor.BackColor = Color.Blue;
+            btn.BotonAzulOscuro = btnBuscarConsumidor;
+            button.AzulOscuro(btn);
             btnBuscarConsumidor.ForeColor = Color.White;
         }
 
         private void btnBuscarConsumidor_MouseMove(object sender, MouseEventArgs e)
         {
-            btnBuscarConsumidor.BackColor = Color.Blue;
-            btnBuscarConsumidor.ForeColor = Color.White;
-        }
-
-        private void btnBuscarConsumidor_MouseUp(object sender, MouseEventArgs e)
-        {
-            btnBuscarConsumidor.BackColor = Color.Blue;
+            btn.BotonAzulOscuro = btnBuscarConsumidor;
+            button.AzulOscuro(btn);
             btnBuscarConsumidor.ForeColor = Color.White;
         }
 
@@ -180,5 +168,24 @@ namespace WilianMiranda01.VISTA
             
         }
 
+        private void btnRefrescar_MouseHover(object sender, EventArgs e)
+        {
+            btn.BotonAzulOscuro = btnRefrescar;
+            button.AzulOscuro(btn);
+            btnRefrescar.ForeColor = Color.White;
+        }
+
+        private void btnRefrescar_MouseLeave(object sender, EventArgs e)
+        {
+            btnRefrescar.BackColor = Color.WhiteSmoke;
+            btnRefrescar.ForeColor = Color.Black;
+        }
+
+        private void btnRefrescar_MouseMove(object sender, MouseEventArgs e)
+        {
+            btn.BotonAzulOscuro = btnRefrescar;
+            button.AzulOscuro(btn);
+            btnRefrescar.ForeColor = Color.White;
+        }
     }
 }

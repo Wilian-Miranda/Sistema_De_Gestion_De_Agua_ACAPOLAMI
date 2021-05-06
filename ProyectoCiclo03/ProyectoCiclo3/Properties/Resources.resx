@@ -121,19 +121,28 @@
   <data name="585e4be1cb11b227491c339811" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\585e4be1cb11b227491c339811.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="gif2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gif2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="588a64e0d06f6719692a2d10" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\588a64e0d06f6719692a2d101.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="585e4be1cb11b227491c33981" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\585e4be1cb11b227491c339811.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="minimize_118918" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minimize_118918.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="window_close_icon_135015 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\window_close_icon_135015 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LOGO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LOGO1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="minimize_118918" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minimize_118918.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="gif" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gif.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

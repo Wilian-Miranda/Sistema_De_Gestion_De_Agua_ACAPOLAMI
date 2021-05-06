@@ -1,4 +1,6 @@
 ﻿using ProyectoCiclo3.DAO;
+using ProyectoCiclo3.DOMINIO;
+using ProyectoCiclo3.NEGOCIO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,6 +22,8 @@ namespace WilianMiranda01.VISTA
             InitializeComponent();
         }
 
+        ClsButtonColor button = new ClsButtonColor();
+        ButtonColor btn = new ButtonColor();
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -115,7 +119,8 @@ namespace WilianMiranda01.VISTA
         #region Eventos del Mouse de los botones en el formulario
         private void btnBuscar_MouseHover(object sender, EventArgs e)
         {
-            btnBuscar.BackColor = Color.Blue;
+            btn.BotonAzulOscuro = btnBuscar;
+            button.AzulOscuro(btn);
             btnBuscar.ForeColor = Color.White;
         }
 
@@ -127,19 +132,15 @@ namespace WilianMiranda01.VISTA
 
         private void btnBuscar_MouseMove(object sender, MouseEventArgs e)
         {
-            btnBuscar.BackColor = Color.Blue;
-            btnBuscar.ForeColor = Color.White;
-        }
-
-        private void btnBuscar_MouseUp(object sender, MouseEventArgs e)
-        {
-            btnBuscar.BackColor = Color.Blue;
+            btn.BotonAzulOscuro = btnBuscar;
+            button.AzulOscuro(btn);
             btnBuscar.ForeColor = Color.White;
         }
 
         private void btnAgregar_MouseHover(object sender, EventArgs e)
         {
-            btnAgregar.BackColor = Color.Blue;
+            btn.BotonAzulOscuro = btnAgregar;
+            button.AzulOscuro(btn);
             btnAgregar.ForeColor = Color.White;
         }
 
@@ -151,19 +152,15 @@ namespace WilianMiranda01.VISTA
 
         private void btnAgregar_MouseMove(object sender, MouseEventArgs e)
         {
-            btnAgregar.BackColor = Color.Blue;
-            btnAgregar.ForeColor= Color.White;
-        }
-
-        private void btnAgregar_MouseUp(object sender, MouseEventArgs e)
-        {
-            btnAgregar.BackColor = Color.Blue;
+            btn.BotonAzulOscuro = btnAgregar;
+            button.AzulOscuro(btn);
             btnAgregar.ForeColor = Color.White;
         }
 
         private void btnModificar_MouseHover(object sender, EventArgs e)
         {
-            btnModificar.BackColor = Color.Blue;
+            btn.BotonAzulOscuro = btnModificar;
+            button.AzulOscuro(btn);
             btnModificar.ForeColor = Color.White;
         }
 
@@ -175,48 +172,32 @@ namespace WilianMiranda01.VISTA
 
         private void btnModificar_MouseMove(object sender, MouseEventArgs e)
         {
-            btnModificar.BackColor = Color.Blue;
-            btnModificar.ForeColor = Color.White;
-        }
-
-        private void btnModificar_MouseUp(object sender, MouseEventArgs e)
-        {
-            btnModificar.BackColor = Color.Blue;
+            btn.BotonAzulOscuro = btnModificar;
+            button.AzulOscuro(btn);
             btnModificar.ForeColor = Color.White;
         }
 
         private void btnEliminar_MouseHover(object sender, EventArgs e)
         {
-            ActivarColorRojoBoton(btnEliminar);
+            btn.BotonRojo = btnEliminar;
+            button.Rojo(btn);
+            btnEliminar.ForeColor = Color.White;
         }
 
         private void btnEliminar_MouseLeave(object sender, EventArgs e)
         {
-            ActivarColorPorDefecto(btnEliminar);
+            btnEliminar.BackColor = Color.WhiteSmoke;
+            btnEliminar.ForeColor = Color.Black;
             
         }
 
         private void btnEliminar_MouseMove(object sender, MouseEventArgs e)
         {
-            ActivarColorRojoBoton(btnEliminar);
+            btn.BotonRojo = btnEliminar;
+            button.Rojo(btn);
+            btnEliminar.ForeColor = Color.White;
         }
 
-
-        public void ActivarColorAzulBoton(Button boton)
-        {
-            boton.BackColor = Color.Blue;
-            boton.ForeColor = Color.White;
-        }
-        public void ActivarColorPorDefecto(Button boton)
-        {
-            boton.BackColor = Color.WhiteSmoke;
-            boton.ForeColor = Color.Black;
-        }
-        public void ActivarColorRojoBoton(Button boton)
-        {
-            boton.BackColor = Color.Crimson;
-            boton.ForeColor = Color.White;
-        }
         #endregion
         public void btnRefrescar_Click(object sender, EventArgs e)
         {
@@ -226,6 +207,31 @@ namespace WilianMiranda01.VISTA
         private void dtgGestionDeConsumidores_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRefrescar_MouseHover(object sender, EventArgs e)
+        {
+            btn.BotonAzulOscuro = btnRefrescar;
+            button.AzulOscuro(btn);
+            btnRefrescar.ForeColor = Color.White;
+        }
+
+        private void btnRefrescar_MouseLeave(object sender, EventArgs e)
+        {
+            btnRefrescar.BackColor = Color.WhiteSmoke;
+            btnRefrescar.ForeColor = Color.Black;
+        }
+
+        private void btnRefrescar_MouseMove(object sender, MouseEventArgs e)
+        {
+            btn.BotonAzulOscuro = btnRefrescar;
+            button.AzulOscuro(btn);
+            btnRefrescar.ForeColor = Color.White;
         }
     }
 }

@@ -78,13 +78,13 @@ namespace WilianMiranda01.VISTA
             this.pnlContenerdorAgregarCliente.Location = new System.Drawing.Point(0, 0);
             this.pnlContenerdorAgregarCliente.Margin = new System.Windows.Forms.Padding(4);
             this.pnlContenerdorAgregarCliente.Name = "pnlContenerdorAgregarCliente";
-            this.pnlContenerdorAgregarCliente.Size = new System.Drawing.Size(544, 375);
+            this.pnlContenerdorAgregarCliente.Size = new System.Drawing.Size(544, 372);
             this.pnlContenerdorAgregarCliente.TabIndex = 1;
             this.pnlContenerdorAgregarCliente.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pnlContenedorAgregarCliente
             // 
-            this.pnlContenedorAgregarCliente.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.pnlContenedorAgregarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(133)))), ((int)(((byte)(206)))));
             this.pnlContenedorAgregarCliente.Controls.Add(this.panel4);
             this.pnlContenedorAgregarCliente.Controls.Add(this.panel3);
             this.pnlContenedorAgregarCliente.Controls.Add(this.panel2);
@@ -92,7 +92,7 @@ namespace WilianMiranda01.VISTA
             this.pnlContenedorAgregarCliente.Location = new System.Drawing.Point(0, 30);
             this.pnlContenedorAgregarCliente.Name = "pnlContenedorAgregarCliente";
             this.pnlContenedorAgregarCliente.Padding = new System.Windows.Forms.Padding(20, 0, 20, 20);
-            this.pnlContenedorAgregarCliente.Size = new System.Drawing.Size(544, 345);
+            this.pnlContenedorAgregarCliente.Size = new System.Drawing.Size(544, 342);
             this.pnlContenedorAgregarCliente.TabIndex = 4;
             // 
             // panel4
@@ -100,18 +100,19 @@ namespace WilianMiranda01.VISTA
             this.panel4.Controls.Add(this.btnCancelar);
             this.panel4.Controls.Add(this.btnAgregar);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(20, 273);
+            this.panel4.Location = new System.Drawing.Point(20, 280);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(504, 52);
+            this.panel4.Padding = new System.Windows.Forms.Padding(50, 0, 50, 0);
+            this.panel4.Size = new System.Drawing.Size(504, 42);
             this.panel4.TabIndex = 5;
             // 
             // btnCancelar
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(311, 3);
+            this.btnCancelar.Location = new System.Drawing.Point(290, 3);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(161, 36);
             this.btnCancelar.TabIndex = 1;
@@ -124,11 +125,11 @@ namespace WilianMiranda01.VISTA
             // 
             // btnAgregar
             // 
-            this.btnAgregar.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(103, 3);
+            this.btnAgregar.Location = new System.Drawing.Point(53, 3);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(161, 36);
             this.btnAgregar.TabIndex = 0;
@@ -141,7 +142,7 @@ namespace WilianMiranda01.VISTA
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.PowderBlue;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(194)))), ((int)(((byte)(243)))));
             this.panel3.Controls.Add(this.cbComunidad);
             this.panel3.Controls.Add(this.txtDUI);
             this.panel3.Controls.Add(this.label8);
@@ -274,7 +275,7 @@ namespace WilianMiranda01.VISTA
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(133)))), ((int)(((byte)(206)))));
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(20, 0);
@@ -296,7 +297,7 @@ namespace WilianMiranda01.VISTA
             // 
             // pnlCabeceraAgregarCliente
             // 
-            this.pnlCabeceraAgregarCliente.BackColor = System.Drawing.Color.Teal;
+            this.pnlCabeceraAgregarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
             this.pnlCabeceraAgregarCliente.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlCabeceraAgregarCliente.Location = new System.Drawing.Point(0, 0);
             this.pnlCabeceraAgregarCliente.Name = "pnlCabeceraAgregarCliente";
@@ -308,7 +309,7 @@ namespace WilianMiranda01.VISTA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(544, 375);
+            this.ClientSize = new System.Drawing.Size(544, 372);
             this.Controls.Add(this.pnlContenerdorAgregarCliente);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

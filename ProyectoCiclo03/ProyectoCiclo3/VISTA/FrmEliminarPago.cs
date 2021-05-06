@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProyectoCiclo3.DOMINIO;
+using ProyectoCiclo3.NEGOCIO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,7 +18,8 @@ namespace ProyectoCiclo3.VISTA
         {
             InitializeComponent();
         }
-
+        ClsButtonColor button = new ClsButtonColor();
+        ButtonColor btn = new ButtonColor();
         private void pnlCabeceraEliminarCliente_Paint(object sender, PaintEventArgs e)
         {
 
@@ -40,32 +43,39 @@ namespace ProyectoCiclo3.VISTA
 
         private void btnEliminar_MouseHover(object sender, EventArgs e)
         {
-            btnEliminar.BackColor = Color.FromArgb(0, 64, 64);
+            btn.BotonAzulClaro = btnEliminar;
+            button.AzulClaro(btn);
         }
 
         private void btnEliminar_MouseLeave(object sender, EventArgs e)
         {
-            btnEliminar.BackColor = Color.Teal;
+            btn.BotonAzulOscuro = btnEliminar;
+            button.AzulOscuro(btn);
         }
 
         private void btnEliminar_MouseMove(object sender, MouseEventArgs e)
         {
-            btnEliminar.BackColor = Color.FromArgb(0, 64, 64);
+            btn.BotonAzulClaro = btnEliminar;
+            button.AzulClaro(btn);
+
         }
 
         private void btnCancelar_MouseHover(object sender, EventArgs e)
         {
-            btnCancelar.BackColor = Color.FromArgb(0, 64, 64);
+            btn.BotonAzulClaro = btnCancelar;
+            button.AzulClaro(btn);
         }
 
         private void btnCancelar_MouseLeave(object sender, EventArgs e)
         {
-            btnCancelar.BackColor = Color.Teal;
+            btn.BotonAzulOscuro = btnCancelar;
+            button.AzulOscuro(btn);
         }
 
         private void btnCancelar_MouseMove(object sender, MouseEventArgs e)
         {
-            btnCancelar.BackColor = Color.FromArgb(0, 64, 64);
+            btn.BotonAzulClaro = btnCancelar;
+            button.AzulClaro(btn);
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

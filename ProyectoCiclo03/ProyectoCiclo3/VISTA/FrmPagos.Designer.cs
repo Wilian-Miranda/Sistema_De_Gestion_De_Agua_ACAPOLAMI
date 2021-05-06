@@ -29,7 +29,7 @@ namespace WilianMiranda01.VISTA
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -37,12 +37,12 @@ namespace WilianMiranda01.VISTA
             this.panel4 = new System.Windows.Forms.Panel();
             this.dtgPagos = new System.Windows.Forms.DataGridView();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btnRefrescar = new System.Windows.Forms.Button();
             this.cbBuscarConsumidor = new System.Windows.Forms.ComboBox();
             this.btnBuscarConsumidor = new System.Windows.Forms.Button();
             this.btnRegistrarPago = new System.Windows.Forms.Button();
             this.btnModificarPago = new System.Windows.Forms.Button();
             this.btnEliminarPago = new System.Windows.Forms.Button();
-            this.btnRefrescar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -58,21 +58,20 @@ namespace WilianMiranda01.VISTA
             this.panel1.Location = new System.Drawing.Point(20, 20);
             this.panel1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panel1.Name = "panel1";
+            this.panel1.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
             this.panel1.Size = new System.Drawing.Size(1024, 106);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(0, 34);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 30);
             this.panel2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1024, 46);
+            this.panel2.Size = new System.Drawing.Size(1024, 50);
             this.panel2.TabIndex = 2;
             // 
             // label1
@@ -80,7 +79,7 @@ namespace WilianMiranda01.VISTA
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(431, 12);
+            this.label1.Location = new System.Drawing.Point(431, 14);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(168, 19);
@@ -121,12 +120,12 @@ namespace WilianMiranda01.VISTA
             this.dtgPagos.Name = "dtgPagos";
             this.dtgPagos.ReadOnly = true;
             this.dtgPagos.RowHeadersVisible = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FloralWhite;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Orchid;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            this.dtgPagos.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FloralWhite;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Orchid;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            this.dtgPagos.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dtgPagos.Size = new System.Drawing.Size(978, 340);
             this.dtgPagos.TabIndex = 0;
             // 
@@ -145,6 +144,21 @@ namespace WilianMiranda01.VISTA
             this.panel5.Padding = new System.Windows.Forms.Padding(5);
             this.panel5.Size = new System.Drawing.Size(1024, 45);
             this.panel5.TabIndex = 4;
+            // 
+            // btnRefrescar
+            // 
+            this.btnRefrescar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnRefrescar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefrescar.ForeColor = System.Drawing.Color.Black;
+            this.btnRefrescar.Location = new System.Drawing.Point(551, 5);
+            this.btnRefrescar.Name = "btnRefrescar";
+            this.btnRefrescar.Size = new System.Drawing.Size(36, 35);
+            this.btnRefrescar.TabIndex = 6;
+            this.btnRefrescar.Text = "R";
+            this.btnRefrescar.UseVisualStyleBackColor = true;
+            this.btnRefrescar.MouseLeave += new System.EventHandler(this.btnRefrescar_MouseLeave);
+            this.btnRefrescar.MouseHover += new System.EventHandler(this.btnRefrescar_MouseHover);
+            this.btnRefrescar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnRefrescar_MouseMove);
             // 
             // cbBuscarConsumidor
             // 
@@ -216,18 +230,6 @@ namespace WilianMiranda01.VISTA
             this.btnEliminarPago.MouseLeave += new System.EventHandler(this.btnEliminarPago_MouseLeave);
             this.btnEliminarPago.MouseHover += new System.EventHandler(this.btnEliminarPago_MouseHover);
             this.btnEliminarPago.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnEliminarPago_MouseMove);
-            // 
-            // btnRefrescar
-            // 
-            this.btnRefrescar.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnRefrescar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefrescar.ForeColor = System.Drawing.Color.Black;
-            this.btnRefrescar.Location = new System.Drawing.Point(551, 5);
-            this.btnRefrescar.Name = "btnRefrescar";
-            this.btnRefrescar.Size = new System.Drawing.Size(36, 35);
-            this.btnRefrescar.TabIndex = 6;
-            this.btnRefrescar.Text = "R";
-            this.btnRefrescar.UseVisualStyleBackColor = true;
             // 
             // FrmPagos
             // 

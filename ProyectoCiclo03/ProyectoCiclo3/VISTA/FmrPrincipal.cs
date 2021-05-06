@@ -3,6 +3,8 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Linq;
+using ProyectoCiclo3.NEGOCIO;
+using ProyectoCiclo3.DOMINIO;
 
 namespace WilianMiranda01.VISTA
 {
@@ -36,7 +38,8 @@ namespace WilianMiranda01.VISTA
         }
 
 
-
+        ClsButtonColor button = new ClsButtonColor();
+        ButtonColor btn = new ButtonColor();
 
         private void FmrPrincipal_Load(object sender, EventArgs e)
         {
@@ -48,7 +51,7 @@ namespace WilianMiranda01.VISTA
         private void btnPagos_Click(object sender, EventArgs e)
         {
             // Se pasa como parametro el objeto sender; el boton que es seleccionado, y un color.
-            BotonActivo(sender, Color.Thistle);
+            BotonActivo(sender, Color.White);
             AbrirFormEnPanel<FrmPagos>();
 
         }
@@ -56,32 +59,32 @@ namespace WilianMiranda01.VISTA
         private void btnPrincipal_Click_1(object sender, EventArgs e)
         {
             // Se pasa como parametro el objeto sender; el boton que es seleccionado, y un color.
-            BotonActivo(sender, Color.Thistle);
+            BotonActivo(sender, Color.White);
         }
 
         private void btnAjustes_Click_1(object sender, EventArgs e)
         {
             // Se pasa como parametro el objeto sender; el boton que es seleccionado, y un color.
-            BotonActivo(sender, Color.Thistle);
+            BotonActivo(sender, Color.White);
         }
 
         private void btnNotificaciones_Click_1(object sender, EventArgs e)
         {
             // Se pasa como parametro el objeto sender; el boton que es seleccionado, y un color.
             AbrirFormEnPanel<FrmActividades>();
-            BotonActivo(sender, Color.Thistle);
+            BotonActivo(sender, Color.White);
         }
 
         private void btnReporte_Click_1(object sender, EventArgs e)
         {
             // Se pasa como parametro el objeto sender; el boton que es seleccionado, y un color.
-            BotonActivo(sender, Color.Thistle);
+            BotonActivo(sender, Color.White);
         }
 
         private void btnClientes_Click_1(object sender, EventArgs e)
         {
             // Se pasa como parametro el objeto sender; el boton que es seleccionado, y un color.
-            BotonActivo(sender, Color.Thistle);
+            BotonActivo(sender, Color.White);
 
             AbrirFormEnPanel<FrmClientes>();
 
@@ -99,15 +102,16 @@ namespace WilianMiranda01.VISTA
             {
                 //RETORNANDO A LAS CONFIGURACIONES POR DEFECTO
                 //retornando el color por defecto del boton
-                btnEnUso.BackColor = Color.Teal;
+                btnEnUso.BackColor = Color.FromArgb(62, 133, 206);
                 //colocando el color por defecto del icono
-                btnEnUso.IconColor = Color.Cyan;
+                btnEnUso.IconColor = Color.White;
                 //Aliniando el texto al centro
                 btnEnUso.TextAlign = ContentAlignment.MiddleLeft;
                 //cambiado relacion de texto a imagen antes de texto
                 btnEnUso.TextImageRelation = TextImageRelation.ImageBeforeText;
                 //Aliniando el icono a la izquierda
                 btnEnUso.ImageAlign = ContentAlignment.MiddleLeft;
+                btnEnUso.FlatAppearance.BorderSize = 0;
             }
         }
 
@@ -123,7 +127,7 @@ namespace WilianMiranda01.VISTA
                 //BOTÓN
                 btnEnUso = (IconButton)btnActivo;
                 //cambiando el color de fondo del color
-                btnEnUso.BackColor = Color.Teal;
+                btnEnUso.BackColor = Color.FromArgb(51, 124, 173);
                 //color del icono
                 btnEnUso.IconColor = color;
                 //Aliniando el texto al centro
@@ -132,11 +136,12 @@ namespace WilianMiranda01.VISTA
                 btnEnUso.TextImageRelation = TextImageRelation.TextBeforeImage;
                 //Aliniando el icono a la derecha
                 btnEnUso.ImageAlign = ContentAlignment.MiddleRight;
+                btnEnUso.FlatAppearance.BorderSize = 2;
 
 
                 //BORDE IZQUIERDO DEL BOTON
                 //se cambia el borde izquierdo de acuerdo al parámetro color de método
-                bordeIzquierdoDelBoton.BackColor = color;
+                bordeIzquierdoDelBoton.BackColor = Color.White;
                 //nueva ubicacion en el eje x y obteniedo la ubicacion en el eje y del boton actual
                 bordeIzquierdoDelBoton.Location = new Point(0, btnEnUso.Location.Y);
                 //visibilidad en verdader
@@ -223,16 +228,15 @@ namespace WilianMiranda01.VISTA
         {
             if (pnlMenu.Width == 200)
             {
-                btnInicio.Dock = DockStyle.Fill;
+                btnInicio.Image = ProyectoCiclo3.Properties.Resources.gif;
                 bntMinimizarMenu.Dock = DockStyle.Left;
                 pnlMenu.Width = 53;
                 BorrarTextoBotonPanelMenu();
                 ActivarBorde();
-
-                
             }
             else
             {
+                btnInicio.Image = ProyectoCiclo3.Properties.Resources.gif2;
                 pnlMenu.Width = 200;
                 bntMinimizarMenu.Dock = DockStyle.Right;
                 BorrarTextoBotonPanelMenu();
@@ -321,32 +325,58 @@ namespace WilianMiranda01.VISTA
 
         private void btnCerrarAplicacion_MouseHover(object sender, EventArgs e)
         {
-            btnCerrarAplicacion.BackColor = Color.Crimson;
+            btn.BotonRojo = btnCerrarAplicacion;
+            button.Rojo(btn);
         }
 
         private void btnCerrarAplicacion_MouseLeave(object sender, EventArgs e)
         {
-            btnCerrarAplicacion.BackColor = Color.Teal;
+            btn.BotonAzulOscuro = btnCerrarAplicacion;
+            button.AzulOscuro(btn);
         }
 
         private void btnCerrarAplicacion_MouseMove(object sender, MouseEventArgs e)
         {
-            btnCerrarAplicacion.BackColor = Color.Crimson;
+            btn.BotonRojo = btnCerrarAplicacion;
+            button.Rojo(btn);
         }
 
         private void btnMinimizarAplicacion_MouseHover(object sender, EventArgs e)
         {
-            btnMinimizarAplicacion.BackColor = Color.Cyan;
+            btn.BotonAzulClaro = btnMinimizarAplicacion;
+            button.AzulClaro(btn);
         }
 
         private void btnMinimizarAplicacion_MouseLeave(object sender, EventArgs e)
         {
-            btnMinimizarAplicacion.BackColor = Color.Teal;
+            btn.BotonAzulOscuro = btnMinimizarAplicacion;
+            button.AzulOscuro(btn);
         }
 
         private void btnMinimizarAplicacion_MouseMove(object sender, MouseEventArgs e)
         {
-            btnMinimizarAplicacion.BackColor = Color.Cyan;
+            btn.BotonAzulClaro = btnMinimizarAplicacion;
+            button.AzulClaro(btn);
+        }
+
+
+
+        private void btnCerrarSesión_MouseHover(object sender, EventArgs e)
+        {
+            btn.BotonRojo = btnCerrarSesión;
+            button.Rojo(btn);
+        }
+
+        private void btnCerrarSesión_MouseLeave(object sender, EventArgs e)
+        {
+            btn.BotonAzulOscuro = btnCerrarSesión;
+            button.AzulOscuro(btn);
+        }
+
+        private void btnCerrarSesión_MouseMove(object sender, MouseEventArgs e)
+        {
+            btn.BotonRojo = btnCerrarSesión;
+            button.Rojo(btn);
         }
     }
 }

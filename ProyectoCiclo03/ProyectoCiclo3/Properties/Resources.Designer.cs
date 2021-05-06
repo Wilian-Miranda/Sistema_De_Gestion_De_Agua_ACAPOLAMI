@@ -63,6 +63,16 @@ namespace ProyectoCiclo3.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1 {
+            get {
+                object obj = ResourceManager.GetObject("1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _585e4be1cb11b227491c33981 {
             get {
                 object obj = ResourceManager.GetObject("585e4be1cb11b227491c33981", resourceCulture);
@@ -86,6 +96,26 @@ namespace ProyectoCiclo3.Properties {
         internal static System.Drawing.Bitmap _588a64e0d06f6719692a2d10 {
             get {
                 object obj = ResourceManager.GetObject("588a64e0d06f6719692a2d10", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gif {
+            get {
+                object obj = ResourceManager.GetObject("gif", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gif2 {
+            get {
+                object obj = ResourceManager.GetObject("gif2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

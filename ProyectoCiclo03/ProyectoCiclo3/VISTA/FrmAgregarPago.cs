@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProyectoCiclo3.DOMINIO;
 using ProyectoCiclo3.MODELO;
+using ProyectoCiclo3.NEGOCIO;
 
 namespace ProyectoCiclo3.VISTA
 {
@@ -19,11 +21,8 @@ namespace ProyectoCiclo3.VISTA
             ListarClientesCB();
             ListarEstadosCB();
         }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
+        ClsButtonColor button = new ClsButtonColor();
+        ButtonColor btn = new ButtonColor();
 
         private void pnlCabeceraEliminarCliente_Paint(object sender, PaintEventArgs e)
         {
@@ -48,32 +47,38 @@ namespace ProyectoCiclo3.VISTA
 
         private void btnEliminar_MouseHover(object sender, EventArgs e)
         {
-            btnEliminar.BackColor = Color.FromArgb(0, 64, 64);
+            btn.BotonAzulClaro = btnEliminar;
+            button.AzulClaro(btn);
         }
 
         private void btnEliminar_MouseLeave(object sender, EventArgs e)
         {
-            btnEliminar.BackColor = Color.Teal;
+            btn.BotonAzulOscuro = btnEliminar;
+            button.AzulOscuro(btn);
         }
 
         private void btnEliminar_MouseMove(object sender, MouseEventArgs e)
         {
-            btnEliminar.BackColor = Color.FromArgb(0, 64, 64);
+            btn.BotonAzulClaro = btnEliminar;
+            button.AzulClaro(btn);
         }
 
         private void btnCancelar_MouseHover(object sender, EventArgs e)
         {
-            btnCancelar.BackColor = Color.FromArgb(0, 64, 64);
+            btn.BotonAzulClaro = btnCancelar;
+            button.AzulClaro(btn);
         }
 
         private void btnCancelar_MouseLeave(object sender, EventArgs e)
         {
-            btnCancelar.BackColor = Color.Teal;
+            btn.BotonAzulOscuro = btnCancelar;
+            button.AzulOscuro(btn);
         }
 
         private void btnCancelar_MouseMove(object sender, MouseEventArgs e)
         {
-            btnCancelar.BackColor = Color.FromArgb(0, 64, 64);
+            btn.BotonAzulClaro = btnCancelar;
+            button.AzulClaro(btn);
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -118,10 +123,6 @@ namespace ProyectoCiclo3.VISTA
             }
         }
 
-        private void cbMonto_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
         //metodo para listar los pagos base en el combobox
         private void ListarEstadosCB()
         {

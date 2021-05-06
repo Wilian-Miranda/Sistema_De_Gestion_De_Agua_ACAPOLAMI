@@ -1,5 +1,7 @@
 ﻿using ProyectoCiclo3.DAO;
+using ProyectoCiclo3.DOMINIO;
 using ProyectoCiclo3.MODELO;
+using ProyectoCiclo3.NEGOCIO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,6 +21,8 @@ namespace WilianMiranda01.VISTA
             InitializeComponent();
             ListarComunidades();
         }
+        ClsButtonColor button = new ClsButtonColor();
+        ButtonColor btn = new ButtonColor();
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -26,11 +30,6 @@ namespace WilianMiranda01.VISTA
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
         {
 
         }
@@ -102,31 +101,38 @@ namespace WilianMiranda01.VISTA
 
         private void btnAgregar_MouseHover(object sender, EventArgs e)
         {
-            btnAgregar.BackColor = Color.FromArgb(0, 64, 64);        }
+            btn.BotonAzulClaro = btnAgregar;
+            button.AzulClaro(btn);
+        }
 
         private void btnAgregar_MouseLeave(object sender, EventArgs e)
         {
-            btnAgregar.BackColor = Color.DarkCyan;
+            btn.BotonAzulOscuro = btnAgregar;
+            button.AzulOscuro(btn);
         }
 
         private void btnAgregar_MouseMove(object sender, MouseEventArgs e)
         {
-            btnAgregar.BackColor = Color.FromArgb(0, 64, 64);
+            btn.BotonAzulClaro = btnAgregar;
+            button.AzulClaro(btn);
         }
 
         private void btnCancelar_MouseHover(object sender, EventArgs e)
         {
-            btnCancelar.BackColor = Color.FromArgb(0, 64, 64);
+            btn.BotonAzulClaro = btnCancelar;
+            button.AzulClaro(btn);
         }
 
         private void btnCancelar_MouseLeave(object sender, EventArgs e)
         {
-            btnCancelar.BackColor = Color.DarkCyan;
+            btn.BotonAzulOscuro = btnCancelar;
+            button.AzulOscuro(btn);
         }
 
         private void btnCancelar_MouseMove(object sender, MouseEventArgs e)
         {
-            btnCancelar.BackColor = Color.FromArgb(0, 64, 64);
+            btn.BotonAzulClaro = btnCancelar;
+            button.AzulClaro(btn);
         }
 
         private string idComunidadSeleccionado = "";

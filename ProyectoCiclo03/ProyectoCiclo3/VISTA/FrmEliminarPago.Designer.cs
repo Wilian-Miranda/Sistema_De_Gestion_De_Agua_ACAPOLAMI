@@ -70,12 +70,12 @@ namespace ProyectoCiclo3.VISTA
             this.pnlContenerdorEliminarPago.Location = new System.Drawing.Point(0, 0);
             this.pnlContenerdorEliminarPago.Margin = new System.Windows.Forms.Padding(4);
             this.pnlContenerdorEliminarPago.Name = "pnlContenerdorEliminarPago";
-            this.pnlContenerdorEliminarPago.Size = new System.Drawing.Size(556, 437);
+            this.pnlContenerdorEliminarPago.Size = new System.Drawing.Size(556, 441);
             this.pnlContenerdorEliminarPago.TabIndex = 5;
             // 
             // pnlContenedor
             // 
-            this.pnlContenedor.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.pnlContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(133)))), ((int)(((byte)(206)))));
             this.pnlContenedor.Controls.Add(this.panel4);
             this.pnlContenedor.Controls.Add(this.panel3);
             this.pnlContenedor.Controls.Add(this.panel2);
@@ -83,7 +83,7 @@ namespace ProyectoCiclo3.VISTA
             this.pnlContenedor.Location = new System.Drawing.Point(0, 30);
             this.pnlContenedor.Name = "pnlContenedor";
             this.pnlContenedor.Padding = new System.Windows.Forms.Padding(20, 0, 20, 20);
-            this.pnlContenedor.Size = new System.Drawing.Size(556, 407);
+            this.pnlContenedor.Size = new System.Drawing.Size(556, 411);
             this.pnlContenedor.TabIndex = 4;
             // 
             // panel4
@@ -91,19 +91,19 @@ namespace ProyectoCiclo3.VISTA
             this.panel4.Controls.Add(this.btnCancelar);
             this.panel4.Controls.Add(this.btnEliminar);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(20, 335);
+            this.panel4.Location = new System.Drawing.Point(20, 348);
             this.panel4.Name = "panel4";
             this.panel4.Padding = new System.Windows.Forms.Padding(50, 0, 50, 0);
-            this.panel4.Size = new System.Drawing.Size(516, 52);
+            this.panel4.Size = new System.Drawing.Size(516, 43);
             this.panel4.TabIndex = 5;
             // 
             // btnCancelar
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(314, 3);
+            this.btnCancelar.Location = new System.Drawing.Point(302, 3);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(161, 36);
             this.btnCancelar.TabIndex = 1;
@@ -116,7 +116,7 @@ namespace ProyectoCiclo3.VISTA
             // 
             // btnEliminar
             // 
-            this.btnEliminar.BackColor = System.Drawing.Color.Teal;
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
@@ -133,7 +133,7 @@ namespace ProyectoCiclo3.VISTA
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.PowderBlue;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(194)))), ((int)(((byte)(243)))));
             this.panel3.Controls.Add(this.txtApellidos);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.txtCancelado);
@@ -311,7 +311,7 @@ namespace ProyectoCiclo3.VISTA
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(133)))), ((int)(((byte)(206)))));
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(20, 0);
@@ -333,7 +333,7 @@ namespace ProyectoCiclo3.VISTA
             // 
             // pnlCabeceraEliminarCliente
             // 
-            this.pnlCabeceraEliminarCliente.BackColor = System.Drawing.Color.Teal;
+            this.pnlCabeceraEliminarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
             this.pnlCabeceraEliminarCliente.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlCabeceraEliminarCliente.Location = new System.Drawing.Point(0, 0);
             this.pnlCabeceraEliminarCliente.Name = "pnlCabeceraEliminarCliente";
@@ -346,7 +346,7 @@ namespace ProyectoCiclo3.VISTA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(556, 437);
+            this.ClientSize = new System.Drawing.Size(556, 441);
             this.Controls.Add(this.pnlContenerdorEliminarPago);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmEliminarPago";

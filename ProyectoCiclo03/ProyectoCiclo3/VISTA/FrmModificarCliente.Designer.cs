@@ -68,12 +68,12 @@ namespace WilianMiranda01.VISTA
             this.pnlContenerdorModificarCliente.Location = new System.Drawing.Point(0, 0);
             this.pnlContenerdorModificarCliente.Margin = new System.Windows.Forms.Padding(4);
             this.pnlContenerdorModificarCliente.Name = "pnlContenerdorModificarCliente";
-            this.pnlContenerdorModificarCliente.Size = new System.Drawing.Size(560, 405);
+            this.pnlContenerdorModificarCliente.Size = new System.Drawing.Size(560, 400);
             this.pnlContenerdorModificarCliente.TabIndex = 2;
             // 
             // pnlContenedorAgregarCliente
             // 
-            this.pnlContenedorAgregarCliente.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.pnlContenedorAgregarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(133)))), ((int)(((byte)(206)))));
             this.pnlContenedorAgregarCliente.Controls.Add(this.panel4);
             this.pnlContenedorAgregarCliente.Controls.Add(this.panel3);
             this.pnlContenedorAgregarCliente.Controls.Add(this.panel2);
@@ -81,7 +81,7 @@ namespace WilianMiranda01.VISTA
             this.pnlContenedorAgregarCliente.Location = new System.Drawing.Point(0, 30);
             this.pnlContenedorAgregarCliente.Name = "pnlContenedorAgregarCliente";
             this.pnlContenedorAgregarCliente.Padding = new System.Windows.Forms.Padding(20, 0, 20, 20);
-            this.pnlContenedorAgregarCliente.Size = new System.Drawing.Size(560, 375);
+            this.pnlContenedorAgregarCliente.Size = new System.Drawing.Size(560, 370);
             this.pnlContenedorAgregarCliente.TabIndex = 4;
             // 
             // panel4
@@ -89,18 +89,19 @@ namespace WilianMiranda01.VISTA
             this.panel4.Controls.Add(this.btnCancelar);
             this.panel4.Controls.Add(this.btnModificar);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(20, 303);
+            this.panel4.Location = new System.Drawing.Point(20, 309);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(520, 52);
+            this.panel4.Padding = new System.Windows.Forms.Padding(50, 0, 50, 0);
+            this.panel4.Size = new System.Drawing.Size(520, 41);
             this.panel4.TabIndex = 5;
             // 
             // btnCancelar
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(311, 3);
+            this.btnCancelar.Location = new System.Drawing.Point(306, 3);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(161, 36);
             this.btnCancelar.TabIndex = 1;
@@ -113,11 +114,11 @@ namespace WilianMiranda01.VISTA
             // 
             // btnModificar
             // 
-            this.btnModificar.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.White;
-            this.btnModificar.Location = new System.Drawing.Point(103, 3);
+            this.btnModificar.Location = new System.Drawing.Point(53, 2);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(161, 36);
             this.btnModificar.TabIndex = 0;
@@ -130,7 +131,7 @@ namespace WilianMiranda01.VISTA
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.PowderBlue;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(194)))), ((int)(((byte)(243)))));
             this.panel3.Controls.Add(this.cbComunidad);
             this.panel3.Controls.Add(this.txtDUI);
             this.panel3.Controls.Add(this.label8);
@@ -147,10 +148,12 @@ namespace WilianMiranda01.VISTA
             this.panel3.Controls.Add(this.label3);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(20, 47);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(10);
             this.panel3.Size = new System.Drawing.Size(520, 241);
             this.panel3.TabIndex = 4;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // cbComunidad
             // 
@@ -192,7 +195,6 @@ namespace WilianMiranda01.VISTA
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Enabled = false;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(86, 17);
             this.label1.Name = "label1";
@@ -285,7 +287,7 @@ namespace WilianMiranda01.VISTA
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(133)))), ((int)(((byte)(206)))));
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(20, 0);
@@ -307,12 +309,13 @@ namespace WilianMiranda01.VISTA
             // 
             // pnlCabeceraModificarCliente
             // 
-            this.pnlCabeceraModificarCliente.BackColor = System.Drawing.Color.Teal;
+            this.pnlCabeceraModificarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
             this.pnlCabeceraModificarCliente.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlCabeceraModificarCliente.Location = new System.Drawing.Point(0, 0);
             this.pnlCabeceraModificarCliente.Name = "pnlCabeceraModificarCliente";
             this.pnlCabeceraModificarCliente.Size = new System.Drawing.Size(560, 30);
             this.pnlCabeceraModificarCliente.TabIndex = 2;
+            this.pnlCabeceraModificarCliente.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlCabeceraModificarCliente_Paint);
             this.pnlCabeceraModificarCliente.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlCabeceraModificarCliente_MouseMove);
             // 
             // FrmModificarCliente
@@ -320,7 +323,7 @@ namespace WilianMiranda01.VISTA
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(560, 405);
+            this.ClientSize = new System.Drawing.Size(560, 400);
             this.Controls.Add(this.pnlContenerdorModificarCliente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmModificarCliente";

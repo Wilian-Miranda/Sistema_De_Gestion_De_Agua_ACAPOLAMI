@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProyectoCiclo3.DOMINIO;
+using ProyectoCiclo3.NEGOCIO;
 
 namespace WilianMiranda01.VISTA
 {
@@ -18,7 +20,8 @@ namespace WilianMiranda01.VISTA
         {
             InitializeComponent();
         }
-
+        ClsButtonColor button = new ClsButtonColor();
+        ButtonColor btn = new ButtonColor();
         private string idComunidad = "";
 
         private void pnlContenedorAgregarCliente_Paint(object sender, PaintEventArgs e)
@@ -53,7 +56,6 @@ namespace WilianMiranda01.VISTA
                 consumidor.idComunidad_FK = Convert.ToInt32(idComunidad);
 
                 clsDconsumidores.ModificarCliente(consumidor);
-                Limpieza();
                 
             }
             catch (Exception ex)
@@ -79,32 +81,38 @@ namespace WilianMiranda01.VISTA
 
         private void btnModificar_MouseHover(object sender, EventArgs e)
         {
-            btnModificar.BackColor =Color.FromArgb(0, 64, 64);
+            btn.BotonAzulClaro = btnModificar;
+            button.AzulClaro(btn);
         }
 
         private void btnModificar_MouseLeave(object sender, EventArgs e)
         {
-            btnModificar.BackColor = Color.DarkCyan;
+            btn.BotonAzulOscuro = btnModificar;
+            button.AzulOscuro(btn);
         }
 
         private void btnModificar_MouseMove(object sender, MouseEventArgs e)
         {
-            btnModificar.BackColor = Color.FromArgb(0, 64, 64);
+            btn.BotonAzulClaro = btnModificar;
+            button.AzulClaro(btn);
         }
 
         private void btnCancelar_MouseHover(object sender, EventArgs e)
         {
-            btnCancelar.BackColor = Color.FromArgb(0, 64, 64);
+            btn.BotonAzulClaro = btnCancelar;
+            button.AzulClaro(btn);
         }
 
         private void btnCancelar_MouseLeave(object sender, EventArgs e)
         {
-            btnCancelar.BackColor = Color.DarkCyan;
+            btn.BotonAzulOscuro = btnCancelar;
+            button.AzulOscuro(btn);
         }
 
         private void btnCancelar_MouseMove(object sender, MouseEventArgs e)
         {
-            btnCancelar.BackColor = Color.FromArgb(0, 64, 64);
+            btn.BotonAzulClaro = btnCancelar;
+            button.AzulClaro(btn);
         }
 
 
@@ -155,5 +163,14 @@ namespace WilianMiranda01.VISTA
             }
         }
 
+        private void pnlCabeceraModificarCliente_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
