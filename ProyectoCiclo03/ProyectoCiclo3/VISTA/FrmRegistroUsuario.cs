@@ -21,6 +21,7 @@ namespace WilianMiranda01.VISTA
 
         ClsButtonColor button = new ClsButtonColor();
         ButtonColor btn = new ButtonColor();
+
         private void btnCerrarAplicacion_Click(object sender, EventArgs e)
         {
             this.Dispose();
@@ -33,6 +34,7 @@ namespace WilianMiranda01.VISTA
             {
                 this.WindowState = FormWindowState.Minimized;
             }
+
             else if (this.WindowState == FormWindowState.Minimized)
             {
                 this.WindowState = FormWindowState.Normal;
@@ -58,6 +60,7 @@ namespace WilianMiranda01.VISTA
                 posX = e.X;
                 posY = e.Y;
             }
+
             else
             {
                 Left += (e.X - posX);
@@ -117,6 +120,11 @@ namespace WilianMiranda01.VISTA
         {
             btn.BotonAzulClaro = btnCancelarRegistro;
             button.AzulClaro(btn);
+        }
+
+        private void FrmRegistroUsuario_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

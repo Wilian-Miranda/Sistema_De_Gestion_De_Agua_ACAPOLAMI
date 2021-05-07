@@ -59,7 +59,6 @@ namespace WilianMiranda01
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(407, 26);
             this.txtUsuario.TabIndex = 0;
-            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             // 
             // label1
             // 
@@ -71,7 +70,6 @@ namespace WilianMiranda01
             this.label1.Size = new System.Drawing.Size(75, 19);
             this.label1.TabIndex = 1;
             this.label1.Text = "Usuario:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -83,7 +81,6 @@ namespace WilianMiranda01
             this.label2.Size = new System.Drawing.Size(104, 19);
             this.label2.TabIndex = 2;
             this.label2.Text = "Contraseña:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtPassword
             // 
@@ -96,7 +93,6 @@ namespace WilianMiranda01
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(407, 26);
             this.txtPassword.TabIndex = 3;
-            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // btnIniciarSesion
             // 
@@ -246,7 +242,6 @@ namespace WilianMiranda01
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);

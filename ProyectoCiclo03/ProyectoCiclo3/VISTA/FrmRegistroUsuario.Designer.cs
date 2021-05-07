@@ -38,9 +38,9 @@ namespace WilianMiranda01.VISTA
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.pnlCabeceraRegistroUsuario = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCerrarAplicacion = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnCerrarAplicacion = new System.Windows.Forms.Button();
             this.pnlCabeceraRegistroUsuario.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -157,6 +157,24 @@ namespace WilianMiranda01.VISTA
             this.panel1.Size = new System.Drawing.Size(33, 30);
             this.panel1.TabIndex = 13;
             // 
+            // btnCerrarAplicacion
+            // 
+            this.btnCerrarAplicacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
+            this.btnCerrarAplicacion.BackgroundImage = global::ProyectoCiclo3.Properties.Resources.window_close_icon_135015__1_;
+            this.btnCerrarAplicacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCerrarAplicacion.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnCerrarAplicacion.FlatAppearance.BorderSize = 0;
+            this.btnCerrarAplicacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarAplicacion.Location = new System.Drawing.Point(7, 0);
+            this.btnCerrarAplicacion.Name = "btnCerrarAplicacion";
+            this.btnCerrarAplicacion.Size = new System.Drawing.Size(26, 30);
+            this.btnCerrarAplicacion.TabIndex = 0;
+            this.btnCerrarAplicacion.UseVisualStyleBackColor = false;
+            this.btnCerrarAplicacion.Click += new System.EventHandler(this.btnCerrarAplicacion_Click);
+            this.btnCerrarAplicacion.MouseLeave += new System.EventHandler(this.btnCerrarAplicacion_MouseLeave);
+            this.btnCerrarAplicacion.MouseHover += new System.EventHandler(this.btnCerrarAplicacion_MouseHover);
+            this.btnCerrarAplicacion.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnCerrarAplicacion_MouseMove);
+            // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(194)))), ((int)(((byte)(243)))));
@@ -180,24 +198,6 @@ namespace WilianMiranda01.VISTA
             this.label5.TabIndex = 27;
             this.label5.Text = "Confirmar contraseña:";
             // 
-            // btnCerrarAplicacion
-            // 
-            this.btnCerrarAplicacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
-            this.btnCerrarAplicacion.BackgroundImage = global::ProyectoCiclo3.Properties.Resources.window_close_icon_135015__1_;
-            this.btnCerrarAplicacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCerrarAplicacion.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnCerrarAplicacion.FlatAppearance.BorderSize = 0;
-            this.btnCerrarAplicacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarAplicacion.Location = new System.Drawing.Point(7, 0);
-            this.btnCerrarAplicacion.Name = "btnCerrarAplicacion";
-            this.btnCerrarAplicacion.Size = new System.Drawing.Size(26, 30);
-            this.btnCerrarAplicacion.TabIndex = 0;
-            this.btnCerrarAplicacion.UseVisualStyleBackColor = false;
-            this.btnCerrarAplicacion.Click += new System.EventHandler(this.btnCerrarAplicacion_Click);
-            this.btnCerrarAplicacion.MouseLeave += new System.EventHandler(this.btnCerrarAplicacion_MouseLeave);
-            this.btnCerrarAplicacion.MouseHover += new System.EventHandler(this.btnCerrarAplicacion_MouseHover);
-            this.btnCerrarAplicacion.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnCerrarAplicacion_MouseMove);
-            // 
             // FrmRegistroUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -218,6 +218,7 @@ namespace WilianMiranda01.VISTA
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmRegistroUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.FrmRegistroUsuario_Load);
             this.pnlCabeceraRegistroUsuario.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

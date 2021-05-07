@@ -15,41 +15,12 @@ namespace WilianMiranda01
         }
         ClsButtonColor button = new ClsButtonColor();
         ButtonColor btn = new ButtonColor();
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtUsuario_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPassword_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            
-        }
         
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
             FmrPrincipal frm = new FmrPrincipal();
             frm.Show();
             Visible = false;
-        }
- 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -82,15 +53,6 @@ namespace WilianMiranda01
             Application.Exit();
         }
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
         
         private void button1_Click(object sender, EventArgs e)
         {

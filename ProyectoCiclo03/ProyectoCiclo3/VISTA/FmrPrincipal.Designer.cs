@@ -303,7 +303,6 @@ namespace WilianMiranda01.VISTA
             this.pnlCabezaPrincipal.Name = "pnlCabezaPrincipal";
             this.pnlCabezaPrincipal.Size = new System.Drawing.Size(1064, 30);
             this.pnlCabezaPrincipal.TabIndex = 56;
-            this.pnlCabezaPrincipal.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             this.pnlCabezaPrincipal.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlCabezaPrincipal_MouseMove);
             // 
             // panel3
@@ -365,7 +364,6 @@ namespace WilianMiranda01.VISTA
             this.pnlPanelPadre.Name = "pnlPanelPadre";
             this.pnlPanelPadre.Size = new System.Drawing.Size(1064, 652);
             this.pnlPanelPadre.TabIndex = 55;
-            this.pnlPanelPadre.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlPanelPadre_Paint);
             // 
             // lblFecha
             // 
@@ -373,13 +371,12 @@ namespace WilianMiranda01.VISTA
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Arial", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.ForeColor = System.Drawing.Color.DimGray;
-            this.lblFecha.Location = new System.Drawing.Point(321, 476);
+            this.lblFecha.Location = new System.Drawing.Point(179, 461);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(183, 63);
             this.lblFecha.TabIndex = 2;
             this.lblFecha.Text = "Fecha";
             this.lblFecha.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblFecha.Click += new System.EventHandler(this.lblFecha_Click);
             // 
             // lblHora
             // 
@@ -387,13 +384,12 @@ namespace WilianMiranda01.VISTA
             this.lblHora.AutoSize = true;
             this.lblHora.Font = new System.Drawing.Font("Arial", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHora.ForeColor = System.Drawing.Color.Black;
-            this.lblHora.Location = new System.Drawing.Point(382, 398);
+            this.lblHora.Location = new System.Drawing.Point(261, 383);
             this.lblHora.Name = "lblHora";
             this.lblHora.Size = new System.Drawing.Size(185, 78);
             this.lblHora.TabIndex = 1;
             this.lblHora.Text = "Hora";
             this.lblHora.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblHora.Click += new System.EventHandler(this.lblHora_Click);
             // 
             // pictureBox1
             // 

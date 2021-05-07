@@ -36,18 +36,17 @@ namespace WilianMiranda01.VISTA
                     this.Dispose();
                 }
             }
+
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
-
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Dispose();
         }
-
 
         private void btnEliminar_MouseHover(object sender, EventArgs e)
         {
@@ -88,12 +87,12 @@ namespace WilianMiranda01.VISTA
         int posY = 0;
         private void pnlCabeceraEliminarCliente_MouseMove(object sender, MouseEventArgs e)
         {
-
             if (e.Button != MouseButtons.Left)
             {
                 posX = e.X;
                 posY = e.Y;
             }
+
             else
             {
                 Left += (e.X - posX);

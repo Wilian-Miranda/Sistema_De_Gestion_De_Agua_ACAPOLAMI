@@ -24,11 +24,6 @@ namespace ProyectoCiclo3.VISTA
         ClsButtonColor button = new ClsButtonColor();
         ButtonColor btn = new ButtonColor();
 
-        private void pnlCabeceraEliminarCliente_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         int posX = 0;
         int posY = 0;
         private void pnlCabeceraEliminarCliente_MouseMove(object sender, MouseEventArgs e)
@@ -113,13 +108,12 @@ namespace ProyectoCiclo3.VISTA
                     cbConsumidor.DataSource = lista;
                     cbConsumidor.DisplayMember = "nombresConsumidor";
                     cbConsumidor.ValueMember = "idConsumidor";
+
                     if (cbConsumidor.Items.Count > 0)
                     {
                         cbConsumidor.SelectedIndex = -1;
                     }
                 }
-
-
             }
         }
 
@@ -140,7 +134,6 @@ namespace ProyectoCiclo3.VISTA
                         cbEstado.SelectedIndex = -1;
                     }
                 }
-
             }
         }
         private string idEstado = "";

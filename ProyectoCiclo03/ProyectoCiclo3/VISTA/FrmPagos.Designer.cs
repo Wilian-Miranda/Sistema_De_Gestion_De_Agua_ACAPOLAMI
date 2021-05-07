@@ -62,7 +62,6 @@ namespace WilianMiranda01.VISTA
             this.panel1.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
             this.panel1.Size = new System.Drawing.Size(1024, 106);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel2
             // 
@@ -182,6 +181,7 @@ namespace WilianMiranda01.VISTA
             this.btnBuscarConsumidor.TabIndex = 4;
             this.btnBuscarConsumidor.Text = "       Consumidor:";
             this.btnBuscarConsumidor.UseVisualStyleBackColor = true;
+            this.btnBuscarConsumidor.Click += new System.EventHandler(this.btnBuscarConsumidor_Click);
             this.btnBuscarConsumidor.MouseLeave += new System.EventHandler(this.btnBuscarConsumidor_MouseLeave);
             this.btnBuscarConsumidor.MouseHover += new System.EventHandler(this.btnBuscarConsumidor_MouseHover);
             this.btnBuscarConsumidor.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnBuscarConsumidor_MouseMove);

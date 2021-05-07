@@ -18,12 +18,9 @@ namespace ProyectoCiclo3.VISTA
         {
             InitializeComponent();
         }
+
         ClsButtonColor button = new ClsButtonColor();
         ButtonColor btn = new ButtonColor();
-        private void pnlCabeceraEliminarCliente_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         int posX = 0;
         int posY = 0;
@@ -34,6 +31,7 @@ namespace ProyectoCiclo3.VISTA
                 posX = e.X;
                 posY = e.Y;
             }
+
             else
             {
                 Left += (e.X - posX);

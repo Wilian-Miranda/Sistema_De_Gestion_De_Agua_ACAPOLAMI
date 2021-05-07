@@ -202,7 +202,6 @@ namespace WilianMiranda01.VISTA
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1020, 31);
             this.panel4.TabIndex = 7;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // btnCantidadDeClientes
             // 
@@ -229,7 +228,6 @@ namespace WilianMiranda01.VISTA
             this.label1.Size = new System.Drawing.Size(145, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "Total de Clientes: ";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pnlContenedorDataGrid
             // 
@@ -295,7 +293,6 @@ namespace WilianMiranda01.VISTA
             this.dtgGestionDeConsumidores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgGestionDeConsumidores.Size = new System.Drawing.Size(971, 339);
             this.dtgGestionDeConsumidores.TabIndex = 6;
-            this.dtgGestionDeConsumidores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgGestionDeConsumidores_CellContentClick);
             // 
             // panel1
             // 
@@ -308,7 +305,6 @@ namespace WilianMiranda01.VISTA
             this.panel1.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
             this.panel1.Size = new System.Drawing.Size(1020, 97);
             this.panel1.TabIndex = 2;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel2
             // 

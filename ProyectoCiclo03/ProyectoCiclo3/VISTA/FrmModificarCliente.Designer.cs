@@ -153,7 +153,6 @@ namespace WilianMiranda01.VISTA
             this.panel3.Padding = new System.Windows.Forms.Padding(10);
             this.panel3.Size = new System.Drawing.Size(520, 241);
             this.panel3.TabIndex = 4;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // cbComunidad
             // 
@@ -211,7 +210,6 @@ namespace WilianMiranda01.VISTA
             this.label7.Size = new System.Drawing.Size(108, 19);
             this.label7.TabIndex = 8;
             this.label7.Text = "Comunidad: ";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // txtEmail
             // 
@@ -315,7 +313,6 @@ namespace WilianMiranda01.VISTA
             this.pnlCabeceraModificarCliente.Name = "pnlCabeceraModificarCliente";
             this.pnlCabeceraModificarCliente.Size = new System.Drawing.Size(560, 30);
             this.pnlCabeceraModificarCliente.TabIndex = 2;
-            this.pnlCabeceraModificarCliente.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlCabeceraModificarCliente_Paint);
             this.pnlCabeceraModificarCliente.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlCabeceraModificarCliente_MouseMove);
             // 
             // FrmModificarCliente

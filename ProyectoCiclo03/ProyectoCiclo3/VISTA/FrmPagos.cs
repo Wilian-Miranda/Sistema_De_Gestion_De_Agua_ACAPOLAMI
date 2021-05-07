@@ -11,6 +11,7 @@ using ProyectoCiclo3.VISTA;
 using ProyectoCiclo3.MODELO;
 using ProyectoCiclo3.NEGOCIO;
 using ProyectoCiclo3.DOMINIO;
+using ProyectoCiclo3.MODELO.ViewModels;
 
 namespace WilianMiranda01.VISTA
 {
@@ -23,10 +24,6 @@ namespace WilianMiranda01.VISTA
 
         ClsButtonColor button = new ClsButtonColor();
         ButtonColor btn = new ButtonColor();
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void btnRegistrarPago_MouseHover(object sender, EventArgs e)
         {
@@ -130,9 +127,6 @@ namespace WilianMiranda01.VISTA
             {
                 MessageBox.Show("Primero debe sleccionar el registro que desea modificar");
             }
-
-
-            
         }
 
         private void btnRegistrarPago_Click(object sender, EventArgs e)
@@ -164,8 +158,6 @@ namespace WilianMiranda01.VISTA
             {
                 MessageBox.Show("Primero debe seleccionar el registro que desea eliminar");
             }
-
-            
         }
 
         private void btnRefrescar_MouseHover(object sender, EventArgs e)
@@ -186,6 +178,51 @@ namespace WilianMiranda01.VISTA
             btn.BotonAzulOscuro = btnRefrescar;
             button.AzulOscuro(btn);
             btnRefrescar.ForeColor = Color.White;
+        }
+
+        private void btnBuscarConsumidor_Click(object sender, EventArgs e)
+        {
+            Buscador(cbBuscarConsumidor.Text.Trim());
+
+            //Agregar al historial de busqueda
+            cbBuscarConsumidor.Items.Add(cbBuscarConsumidor.Text);
+        }
+
+        private void Buscador(string busqueda = null)
+        {
+            using (ACAPOLAMIEntities bd = new ACAPOLAMIEntities())
+            {
+                //Consulta
+                IQueryable<PagosViewModel> buscar = (
+                    from consumidor in bd.Consumidores
+                    from pagos in bd.Pagos
+                    from estado in bd.Estados
+                    where pagos.idConsumidor_FK == consumidor.idConsumidor 
+                    && pagos.idEstado_FK == estado.idEstado
+
+                    select new PagosViewModel
+                    {
+                        Id = pagos.idPago,
+                        Nombres = consumidor.nombresConsumidor,
+                        Apellidos = consumidor.apellidosConsumidor,
+                        Monto = pagos.monto,
+                        Cancelado = pagos.montoCancelado,
+                        Pendiente = pagos.montoPendiente,
+                        Impuesto = pagos.impuesto,
+                        Estado = estado.nombreEstado
+                    });
+
+                //Condicion para que sea diferente de nulo y vacio
+                if (busqueda != null && !busqueda.Equals(""))
+                {
+                    //Empresion lamda para crear las condiciones de busquedas
+                    buscar = buscar.Where(d => busqueda == d.Id.ToString() || d.Nombres == busqueda || busqueda == d.Apellidos
+                    || d.Monto.ToString() == busqueda || d.Impuesto.ToString() == busqueda || d.Estado == busqueda);
+                }
+
+                //Pasamos la lista de consultas al dataGridView
+                dtgPagos.DataSource = buscar.ToList();
+            }
         }
     }
 }

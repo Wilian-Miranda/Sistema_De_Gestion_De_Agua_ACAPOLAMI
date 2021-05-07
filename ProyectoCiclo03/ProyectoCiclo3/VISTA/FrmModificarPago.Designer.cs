@@ -124,7 +124,7 @@ namespace ProyectoCiclo3.VISTA
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(161, 36);
             this.btnEliminar.TabIndex = 0;
-            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.Text = "Agregar";
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             this.btnEliminar.MouseLeave += new System.EventHandler(this.btnEliminar_MouseLeave);
@@ -337,7 +337,6 @@ namespace ProyectoCiclo3.VISTA
             this.pnlCabeceraEliminarCliente.Name = "pnlCabeceraEliminarCliente";
             this.pnlCabeceraEliminarCliente.Size = new System.Drawing.Size(554, 30);
             this.pnlCabeceraEliminarCliente.TabIndex = 2;
-            this.pnlCabeceraEliminarCliente.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlCabeceraEliminarCliente_Paint);
             this.pnlCabeceraEliminarCliente.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlCabeceraEliminarCliente_MouseMove);
             // 
             // FrmModificarPago

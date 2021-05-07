@@ -17,9 +17,7 @@ namespace ProyectoCiclo3.DAO
             {
                 //Devolver el contenido como lista
                 return db.sp_MostrarConsumidores().ToList();
-
             }
-
         }
     }
 }

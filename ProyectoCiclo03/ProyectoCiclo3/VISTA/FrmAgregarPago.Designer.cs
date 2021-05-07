@@ -269,7 +269,6 @@ namespace ProyectoCiclo3.VISTA
             this.pnlCabeceraEliminarCliente.Name = "pnlCabeceraEliminarCliente";
             this.pnlCabeceraEliminarCliente.Size = new System.Drawing.Size(568, 30);
             this.pnlCabeceraEliminarCliente.TabIndex = 2;
-            this.pnlCabeceraEliminarCliente.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlCabeceraEliminarCliente_Paint);
             this.pnlCabeceraEliminarCliente.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlCabeceraEliminarCliente_MouseMove);
             // 
             // FrmAgregarPago

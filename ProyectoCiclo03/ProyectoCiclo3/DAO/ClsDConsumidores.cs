@@ -28,13 +28,11 @@ namespace ProyectoCiclo3.DAO
 
                     MessageBox.Show("Los datos se agregaron exitosamente");
                 }
-
             }
+
             catch (Exception ex) {
                 MessageBox.Show(ex.ToString());
-           
             }
-           
         }
 
         public void EliminarConsumidor(int iD)
@@ -50,14 +48,11 @@ namespace ProyectoCiclo3.DAO
                     db.SaveChanges();
 
                     MessageBox.Show("Los datos han sido eliminados exitosamente");
-
                 }
-
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
-
             }
 
         }
@@ -80,19 +75,13 @@ namespace ProyectoCiclo3.DAO
                     db.SaveChanges();
 
                     MessageBox.Show("Los datos se actualizaron exitosamnete");
-
-
                 }
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
-
-
             }
-
-
         }
     }
 }

@@ -18,6 +18,8 @@ namespace ProyectoCiclo3.MODELO
         public decimal monto { get; set; }
         public System.DateTime fechaPago { get; set; }
         public Nullable<decimal> impuesto { get; set; }
+        public Nullable<decimal> montoCancelado { get; set; }
+        public Nullable<decimal> montoPendiente { get; set; }
         public Nullable<int> idEstado_FK { get; set; }
         public Nullable<int> idConsumidor_FK { get; set; }
     

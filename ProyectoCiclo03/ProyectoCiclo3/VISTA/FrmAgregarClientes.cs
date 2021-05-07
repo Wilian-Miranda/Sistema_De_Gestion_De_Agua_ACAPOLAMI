@@ -24,16 +24,6 @@ namespace WilianMiranda01.VISTA
         ClsButtonColor button = new ClsButtonColor();
         ButtonColor btn = new ButtonColor();
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Dispose();
@@ -47,9 +37,9 @@ namespace WilianMiranda01.VISTA
                 {
                     MessageBox.Show("El nombre completo del cliente y el DUI son datos de ingreso obligatorio");
                 }
+
                 else
                 {
-
                     ClsDConsumidores cls = new ClsDConsumidores();
 
                     Consumidores clientes = new Consumidores();
@@ -59,28 +49,22 @@ namespace WilianMiranda01.VISTA
                     clientes.numeroDocumento = txtDUI.Text;
                     clientes.telefono = txtDUI.Text;
                     clientes.correo = txtEmail.Text;
+
                     if (cbComunidad.Text=="")
                     {
                         clientes.idComunidad_FK = null;
                     }
+
                     else
                     {
                         clientes.idComunidad_FK = Convert.ToInt32(idComunidadSeleccionado);
                     }
 
-
                     cls.InsertarUsuario(clientes);
 
                     Limpiar();
                 }
-
-
             }
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
         }
 
         int posX = 0;
@@ -162,8 +146,6 @@ namespace WilianMiranda01.VISTA
                     }
                 }
             }
-
-
         }
 
         //metodo para limpiar los textbox

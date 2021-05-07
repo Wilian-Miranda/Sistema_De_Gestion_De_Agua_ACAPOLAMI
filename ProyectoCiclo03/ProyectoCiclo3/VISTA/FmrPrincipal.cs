@@ -8,8 +8,6 @@ using ProyectoCiclo3.DOMINIO;
 
 namespace WilianMiranda01.VISTA
 {
-
-
     public partial class FmrPrincipal : Form
     {
         FrmClientes data = new FrmClientes();
@@ -37,16 +35,12 @@ namespace WilianMiranda01.VISTA
             }
         }
 
-
         ClsButtonColor button = new ClsButtonColor();
         ButtonColor btn = new ButtonColor();
 
         private void FmrPrincipal_Load(object sender, EventArgs e)
         {
-            
-
         }
-
 
         private void btnPagos_Click(object sender, EventArgs e)
         {
@@ -87,12 +81,6 @@ namespace WilianMiranda01.VISTA
             BotonActivo(sender, Color.White);
 
             AbrirFormEnPanel<FrmClientes>();
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         public void DesactivarResaltado()
@@ -148,20 +136,12 @@ namespace WilianMiranda01.VISTA
                 bordeIzquierdoDelBoton.Visible = true;
                 //trayendo al frente
                 bordeIzquierdoDelBoton.BringToFront();
-
-
             }
-
         }
 
         internal void BotonActivo(object sender)
         {
             throw new NotImplementedException();
-        }
-
-        private void pnlFormularioHijo_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private Form formulario;
@@ -173,6 +153,7 @@ namespace WilianMiranda01.VISTA
             }
             
             formulario = pnlPanelPadre.Controls.OfType<Miform>().FirstOrDefault();
+
             if(formulario == null)
             {
                 formulario = new Miform();
@@ -183,6 +164,7 @@ namespace WilianMiranda01.VISTA
                 formulario.Show();
                 formulario.BringToFront();
             }
+
             else
             {
                 formulario.BringToFront();
@@ -197,7 +179,6 @@ namespace WilianMiranda01.VISTA
                 Reiniciar();
                 //MessageBox.Show("Le das click :v");
             }
-
         }
 
         public void Reiniciar()
@@ -218,6 +199,7 @@ namespace WilianMiranda01.VISTA
             {
                 WindowState = FormWindowState.Minimized;
             }
+
             else
             {
                 WindowState = FormWindowState.Normal;
@@ -234,6 +216,7 @@ namespace WilianMiranda01.VISTA
                 BorrarTextoBotonPanelMenu();
                 ActivarBorde();
             }
+
             else
             {
                 btnInicio.Image = ProyectoCiclo3.Properties.Resources.gif2;
@@ -241,10 +224,7 @@ namespace WilianMiranda01.VISTA
                 bntMinimizarMenu.Dock = DockStyle.Right;
                 BorrarTextoBotonPanelMenu();
                 ActivarBorde();
-
             }
-
-
         }
 
         private void ActivarBorde()
@@ -253,6 +233,7 @@ namespace WilianMiranda01.VISTA
             {
                 bordeIzquierdoDelBoton.Size = new Size(3, 60);
             }
+
             else
             {
                 bordeIzquierdoDelBoton.Size = new Size(15, 60);
@@ -270,6 +251,7 @@ namespace WilianMiranda01.VISTA
                 btnAjustes.Text = "";
                 btnClientes.Text = "";
             }
+
             else
             {
                 btnPrincipal.Text = "Dashboard";
@@ -281,30 +263,10 @@ namespace WilianMiranda01.VISTA
             }
         }
 
-        private void pnlPanelPadre_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void tmrTiempo_Tick(object sender, EventArgs e)
         {
             lblHora.Text = DateTime.Now.ToString("hh:mm:ss");
             lblFecha.Text = DateTime.Now.ToLongDateString();
-        }
-
-        private void lblHora_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblFecha_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint_1(object sender, PaintEventArgs e)
-        {
-
         }
 
         int posX = 0;
@@ -359,8 +321,6 @@ namespace WilianMiranda01.VISTA
             button.AzulClaro(btn);
         }
 
-
-
         private void btnCerrarSesión_MouseHover(object sender, EventArgs e)
         {
             btn.BotonRojo = btnCerrarSesión;
@@ -380,4 +340,3 @@ namespace WilianMiranda01.VISTA
         }
     }
 }
-

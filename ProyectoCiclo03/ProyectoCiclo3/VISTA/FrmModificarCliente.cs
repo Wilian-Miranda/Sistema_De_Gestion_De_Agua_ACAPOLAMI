@@ -20,19 +20,10 @@ namespace WilianMiranda01.VISTA
         {
             InitializeComponent();
         }
+
         ClsButtonColor button = new ClsButtonColor();
         ButtonColor btn = new ButtonColor();
         private string idComunidad = "";
-
-        private void pnlContenedorAgregarCliente_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
@@ -58,10 +49,10 @@ namespace WilianMiranda01.VISTA
                 clsDconsumidores.ModificarCliente(consumidor);
                 
             }
+
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
-
             }
         }
 
@@ -69,6 +60,7 @@ namespace WilianMiranda01.VISTA
         {
             ListarComunidades();
         }
+
         void Limpieza() {
             txtIdCliente.Clear();
             txtNombre.Clear();
@@ -126,6 +118,7 @@ namespace WilianMiranda01.VISTA
 
         //Metodo para cargar los datos al ComboBox
         public string comunidad="";
+
         private void ListarComunidades()
         {
             using (ACAPOLAMIEntities db = new ACAPOLAMIEntities())
@@ -139,16 +132,14 @@ namespace WilianMiranda01.VISTA
                     cbComunidad.ValueMember = "idComunidad";
 
                     cbComunidad.Text = comunidad;
-
                 }
             }
         
-       
-        
+        }
 
-    }
         int posX = 0;
         int posY = 0;
+
         private void pnlCabeceraModificarCliente_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button != MouseButtons.Left)
@@ -156,21 +147,12 @@ namespace WilianMiranda01.VISTA
                 posX = e.X;
                 posY = e.Y;
             }
+
             else
             {
                 Left += (e.X - posX);
                 Top += (e.Y - posY);
             }
-        }
-
-        private void pnlCabeceraModificarCliente_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

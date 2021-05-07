@@ -67,7 +67,6 @@ namespace WilianMiranda01.VISTA
             this.label1.Size = new System.Drawing.Size(85, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "CLIENTES";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pnlContenerdorAgregarCliente
             // 
@@ -80,7 +79,6 @@ namespace WilianMiranda01.VISTA
             this.pnlContenerdorAgregarCliente.Name = "pnlContenerdorAgregarCliente";
             this.pnlContenerdorAgregarCliente.Size = new System.Drawing.Size(544, 372);
             this.pnlContenerdorAgregarCliente.TabIndex = 1;
-            this.pnlContenerdorAgregarCliente.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pnlContenedorAgregarCliente
             // 
@@ -217,7 +215,6 @@ namespace WilianMiranda01.VISTA
             this.label6.Size = new System.Drawing.Size(66, 19);
             this.label6.TabIndex = 6;
             this.label6.Text = "E-mail: ";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // txtTelefono
             // 

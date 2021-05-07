@@ -1,5 +1,7 @@
 ﻿using ProyectoCiclo3.DAO;
 using ProyectoCiclo3.DOMINIO;
+using ProyectoCiclo3.MODELO;
+using ProyectoCiclo3.MODELO.ViewModels;
 using ProyectoCiclo3.NEGOCIO;
 using System;
 using System.Collections.Generic;
@@ -10,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static ProyectoCiclo3.MODELO.ViewModels.ConsumidoresViewModel;
 
 namespace WilianMiranda01.VISTA
 {
@@ -24,20 +27,6 @@ namespace WilianMiranda01.VISTA
 
         ClsButtonColor button = new ClsButtonColor();
         ButtonColor btn = new ButtonColor();
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void FrmClientes_Load(object sender, EventArgs e)
         {
@@ -49,7 +38,6 @@ namespace WilianMiranda01.VISTA
             dtgGestionDeConsumidores.Columns[3].Width = 110;
             dtgGestionDeConsumidores.Columns[4].Width = 200;
             dtgGestionDeConsumidores.Columns[5].Width = 100;
-
         }
         
         //Método utilizado para leer los datos del sp en el dtgGestionDeConsumidores
@@ -59,12 +47,6 @@ namespace WilianMiranda01.VISTA
             dtgGestionDeConsumidores.DataSource = mostrarConsumidores.Consultar();
             btnCantidadDeClientes.Text = dtgGestionDeConsumidores.Rows.Count.ToString();
         }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         
         private void btnAgregar_Click(object sender, EventArgs e)
         {
@@ -87,12 +69,11 @@ namespace WilianMiranda01.VISTA
 
                 modificar.ShowDialog();
             }
+
             else
             {
                 MessageBox.Show("Seleccione un registro que desea modificar");
             }
-
-
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -111,6 +92,7 @@ namespace WilianMiranda01.VISTA
 
                 eliminar.ShowDialog();
             }
+
             else
             {
                 MessageBox.Show("Seleccione el registro que desea eliminar");
@@ -188,7 +170,6 @@ namespace WilianMiranda01.VISTA
         {
             btnEliminar.BackColor = Color.WhiteSmoke;
             btnEliminar.ForeColor = Color.Black;
-            
         }
 
         private void btnEliminar_MouseMove(object sender, MouseEventArgs e)
@@ -202,16 +183,6 @@ namespace WilianMiranda01.VISTA
         public void btnRefrescar_Click(object sender, EventArgs e)
         {
             ejecutar();
-        }
-
-        private void dtgGestionDeConsumidores_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnRefrescar_MouseHover(object sender, EventArgs e)
@@ -232,6 +203,49 @@ namespace WilianMiranda01.VISTA
             btn.BotonAzulOscuro = btnRefrescar;
             button.AzulOscuro(btn);
             btnRefrescar.ForeColor = Color.White;
+        }
+
+        //Evento click para buscar Consumidores
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            Buscador(cbBuscarCliente.Text.Trim());
+
+            //Agregar al historial de busqueda
+            cbBuscarCliente.Items.Add(cbBuscarCliente.Text);
+        }
+
+        private void Buscador(string busqueda = null)
+        {
+            using (ACAPOLAMIEntities bd = new ACAPOLAMIEntities())
+            {
+                //Consulta
+                IQueryable<ConsumidoresViewModel> buscar = (
+                    from consumidor in bd.Consumidores
+                    from comunidad in bd.Comunidades
+                    where comunidad.idComunidad == consumidor.idComunidad_FK
+                    select new ConsumidoresViewModel
+                    {
+                        Id = consumidor.idConsumidor,
+                        Nombres = consumidor.nombresConsumidor,
+                        Apellidos = consumidor.apellidosConsumidor,
+                        Dui = consumidor.numeroDocumento,
+                        Correo = consumidor.correo,
+                        Telefono = consumidor.telefono,
+                        Comunidad = comunidad.nombreComunidad
+                    });
+
+                //Condicion para que sea diferente de nulo y vacio
+                if (busqueda != null && !busqueda.Equals(""))
+                {
+                    //Empresion lamda para crear las condiciones de busquedas
+                    buscar = buscar.Where(d => busqueda == d.Id.ToString() || d.Nombres == busqueda || busqueda == d.Apellidos
+                    || busqueda == d.Dui || busqueda == d.Correo || busqueda == d.Telefono
+                    || busqueda == d.Comunidad);
+                }
+
+                //Pasamos la lista de consultas al dataGridView
+                dtgGestionDeConsumidores.DataSource = buscar.ToList();
+            }
         }
     }
 }
