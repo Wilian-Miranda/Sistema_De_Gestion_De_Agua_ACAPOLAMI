@@ -326,9 +326,9 @@ namespace WilianMiranda01.VISTA
             this.label2.Location = new System.Drawing.Point(410, 14);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(193, 19);
+            this.label2.Size = new System.Drawing.Size(246, 19);
             this.label2.TabIndex = 1;
-            this.label2.Text = "GESTIÓN DE CLIENTES";
+            this.label2.Text = "GESTIÓN DE CONSUMIDORES";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FrmClientes

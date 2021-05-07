@@ -117,15 +117,16 @@ namespace WilianMiranda01.VISTA
                 modificarPago.txtApellidos.Text = dtgPagos.CurrentRow.Cells[2].Value.ToString();
                 modificarPago.txtMonto.Text = dtgPagos.CurrentRow.Cells[3].Value.ToString();
                 modificarPago.txtCancelado.Text = dtgPagos.CurrentRow.Cells[4].Value.ToString();
-                modificarPago.txtImpuesto.Text = dtgPagos.CurrentRow.Cells[5].Value.ToString();
-                modificarPago.cbEstado.Text = dtgPagos.CurrentRow.Cells[6].Value.ToString();
-                modificarPago.txtFechaDePago.Text = dtgPagos.CurrentRow.Cells[7].Value.ToString();
+                modificarPago.txtPendiente.Text = dtgPagos.CurrentRow.Cells[5].Value.ToString();
+                modificarPago.txtImpuesto.Text = dtgPagos.CurrentRow.Cells[6].Value.ToString();
+                modificarPago.cbEstado.Text = dtgPagos.CurrentRow.Cells[7].Value.ToString();
+                modificarPago.txtFechaDePago.Text = dtgPagos.CurrentRow.Cells[8].Value.ToString();
 
                 modificarPago.ShowDialog();
             }
             else
             {
-                MessageBox.Show("Primero debe sleccionar el registro que desea modificar");
+                MessageBox.Show("Primero debe seleccionar el registro que desea modificar");
             }
         }
 
@@ -148,9 +149,10 @@ namespace WilianMiranda01.VISTA
                 eliminarPago.txtApellidos.Text = dtgPagos.CurrentRow.Cells[2].Value.ToString();
                 eliminarPago.txtMonto.Text = dtgPagos.CurrentRow.Cells[3].Value.ToString();
                 eliminarPago.txtCancelado.Text = dtgPagos.CurrentRow.Cells[4].Value.ToString();
-                eliminarPago.txtImpuesto.Text = dtgPagos.CurrentRow.Cells[5].Value.ToString();
-                eliminarPago.txtEstado.Text = dtgPagos.CurrentRow.Cells[6].Value.ToString();
-                eliminarPago.txtFechaDePago.Text = dtgPagos.CurrentRow.Cells[7].Value.ToString();
+                eliminarPago.txtPendiente.Text = dtgPagos.CurrentRow.Cells[5].ToString();
+                eliminarPago.txtImpuesto.Text = dtgPagos.CurrentRow.Cells[6].Value.ToString();
+                eliminarPago.txtEstado.Text = dtgPagos.CurrentRow.Cells[7].Value.ToString();
+                eliminarPago.txtFechaDePago.Text = dtgPagos.CurrentRow.Cells[8].Value.ToString();
 
                 eliminarPago.ShowDialog();
             }

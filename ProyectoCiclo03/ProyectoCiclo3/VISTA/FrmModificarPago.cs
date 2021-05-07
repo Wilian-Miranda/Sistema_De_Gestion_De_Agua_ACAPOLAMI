@@ -43,19 +43,19 @@ namespace ProyectoCiclo3.VISTA
 
         private void btnEliminar_MouseHover(object sender, EventArgs e)
         {
-            btn.BotonAzulClaro = btnEliminar;
+            btn.BotonAzulClaro = btnModificar;
             button.AzulClaro(btn);
         }
 
         private void btnEliminar_MouseLeave(object sender, EventArgs e)
         {
-            btn.BotonAzulOscuro = btnEliminar;
+            btn.BotonAzulOscuro = btnModificar;
             button.AzulOscuro(btn);
         }
 
         private void btnEliminar_MouseMove(object sender, MouseEventArgs e)
         {
-            btn.BotonAzulClaro = btnEliminar;
+            btn.BotonAzulClaro = btnModificar;
             button.AzulClaro(btn);
         }
 
@@ -116,6 +116,11 @@ namespace ProyectoCiclo3.VISTA
                     }
                 }
             }
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

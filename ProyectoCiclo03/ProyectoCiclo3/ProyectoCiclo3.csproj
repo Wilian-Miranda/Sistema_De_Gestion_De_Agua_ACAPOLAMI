@@ -159,11 +159,11 @@
     <Compile Include="VISTA\FrmActividades.Designer.cs">
       <DependentUpon>FrmActividades.cs</DependentUpon>
     </Compile>
-    <Compile Include="VISTA\FrmAgregarClientes.cs">
+    <Compile Include="VISTA\FrmAgregarConsumidor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VISTA\FrmAgregarClientes.Designer.cs">
-      <DependentUpon>FrmAgregarClientes.cs</DependentUpon>
+    <Compile Include="VISTA\FrmAgregarConsumidor.Designer.cs">
+      <DependentUpon>FrmAgregarConsumidor.cs</DependentUpon>
     </Compile>
     <Compile Include="VISTA\FrmClientes.cs">
       <SubType>Form</SubType>
@@ -171,17 +171,17 @@
     <Compile Include="VISTA\FrmClientes.Designer.cs">
       <DependentUpon>FrmClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="VISTA\FrmEliminarCliente.cs">
+    <Compile Include="VISTA\FrmEliminarConsumidor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VISTA\FrmEliminarCliente.Designer.cs">
-      <DependentUpon>FrmEliminarCliente.cs</DependentUpon>
+    <Compile Include="VISTA\FrmEliminarConsumidor.Designer.cs">
+      <DependentUpon>FrmEliminarConsumidor.cs</DependentUpon>
     </Compile>
-    <Compile Include="VISTA\FrmModificarCliente.cs">
+    <Compile Include="VISTA\FrmModificarConsumidor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VISTA\FrmModificarCliente.Designer.cs">
-      <DependentUpon>FrmModificarCliente.cs</DependentUpon>
+    <Compile Include="VISTA\FrmModificarConsumidor.Designer.cs">
+      <DependentUpon>FrmModificarConsumidor.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -220,17 +220,17 @@
     <EmbeddedResource Include="VISTA\FrmActividades.resx">
       <DependentUpon>FrmActividades.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VISTA\FrmAgregarClientes.resx">
-      <DependentUpon>FrmAgregarClientes.cs</DependentUpon>
+    <EmbeddedResource Include="VISTA\FrmAgregarConsumidor.resx">
+      <DependentUpon>FrmAgregarConsumidor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VISTA\FrmClientes.resx">
       <DependentUpon>FrmClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VISTA\FrmEliminarCliente.resx">
-      <DependentUpon>FrmEliminarCliente.cs</DependentUpon>
+    <EmbeddedResource Include="VISTA\FrmEliminarConsumidor.resx">
+      <DependentUpon>FrmEliminarConsumidor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VISTA\FrmModificarCliente.resx">
-      <DependentUpon>FrmModificarCliente.cs</DependentUpon>
+    <EmbeddedResource Include="VISTA\FrmModificarConsumidor.resx">
+      <DependentUpon>FrmModificarConsumidor.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="MODELO\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

@@ -102,7 +102,7 @@ namespace WilianMiranda01.VISTA
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(343, 26);
-            this.txtPassword.TabIndex = 20;
+            this.txtPassword.TabIndex = 2;
             // 
             // label2
             // 
@@ -135,7 +135,7 @@ namespace WilianMiranda01.VISTA
             this.txtUsuario.Location = new System.Drawing.Point(31, 115);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(344, 26);
-            this.txtUsuario.TabIndex = 17;
+            this.txtUsuario.TabIndex = 1;
             // 
             // pnlCabeceraRegistroUsuario
             // 
@@ -185,7 +185,7 @@ namespace WilianMiranda01.VISTA
             this.textBox1.Name = "textBox1";
             this.textBox1.PasswordChar = '*';
             this.textBox1.Size = new System.Drawing.Size(343, 26);
-            this.textBox1.TabIndex = 28;
+            this.textBox1.TabIndex = 3;
             // 
             // label5
             // 
@@ -200,6 +200,7 @@ namespace WilianMiranda01.VISTA
             // 
             // FrmRegistroUsuario
             // 
+            this.AcceptButton = this.btnRegistrarUsuario;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(133)))), ((int)(((byte)(206)))));

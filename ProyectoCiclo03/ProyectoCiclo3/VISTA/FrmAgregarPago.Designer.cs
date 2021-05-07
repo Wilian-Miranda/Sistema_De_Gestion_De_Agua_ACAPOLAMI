@@ -33,7 +33,7 @@ namespace ProyectoCiclo3.VISTA
             this.pnlContenedorAgregarCliente = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtMonto = new System.Windows.Forms.TextBox();
             this.cbEstado = new System.Windows.Forms.ComboBox();
@@ -83,7 +83,7 @@ namespace ProyectoCiclo3.VISTA
             // panel4
             // 
             this.panel4.Controls.Add(this.btnCancelar);
-            this.panel4.Controls.Add(this.btnEliminar);
+            this.panel4.Controls.Add(this.btnAgregar);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel4.Location = new System.Drawing.Point(20, 250);
             this.panel4.Name = "panel4";
@@ -108,22 +108,22 @@ namespace ProyectoCiclo3.VISTA
             this.btnCancelar.MouseHover += new System.EventHandler(this.btnCancelar_MouseHover);
             this.btnCancelar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnCancelar_MouseMove);
             // 
-            // btnEliminar
+            // btnAgregar
             // 
-            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(53, 3);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(161, 36);
-            this.btnEliminar.TabIndex = 0;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            this.btnEliminar.MouseLeave += new System.EventHandler(this.btnEliminar_MouseLeave);
-            this.btnEliminar.MouseHover += new System.EventHandler(this.btnEliminar_MouseHover);
-            this.btnEliminar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnEliminar_MouseMove);
+            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.ForeColor = System.Drawing.Color.White;
+            this.btnAgregar.Location = new System.Drawing.Point(53, 3);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(161, 36);
+            this.btnAgregar.TabIndex = 0;
+            this.btnAgregar.Text = "Agregar Pago";
+            this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnEliminar_Click);
+            this.btnAgregar.MouseLeave += new System.EventHandler(this.btnEliminar_MouseLeave);
+            this.btnAgregar.MouseHover += new System.EventHandler(this.btnEliminar_MouseHover);
+            this.btnAgregar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnEliminar_MouseMove);
             // 
             // panel3
             // 
@@ -151,7 +151,7 @@ namespace ProyectoCiclo3.VISTA
             this.txtMonto.Location = new System.Drawing.Point(150, 46);
             this.txtMonto.Name = "txtMonto";
             this.txtMonto.Size = new System.Drawing.Size(356, 26);
-            this.txtMonto.TabIndex = 20;
+            this.txtMonto.TabIndex = 2;
             // 
             // cbEstado
             // 
@@ -160,7 +160,7 @@ namespace ProyectoCiclo3.VISTA
             this.cbEstado.Location = new System.Drawing.Point(150, 142);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(355, 27);
-            this.cbEstado.TabIndex = 19;
+            this.cbEstado.TabIndex = 5;
             this.cbEstado.SelectedIndexChanged += new System.EventHandler(this.cbEstado_SelectedIndexChanged);
             // 
             // cbConsumidor
@@ -170,7 +170,7 @@ namespace ProyectoCiclo3.VISTA
             this.cbConsumidor.Location = new System.Drawing.Point(151, 12);
             this.cbConsumidor.Name = "cbConsumidor";
             this.cbConsumidor.Size = new System.Drawing.Size(355, 27);
-            this.cbConsumidor.TabIndex = 17;
+            this.cbConsumidor.TabIndex = 1;
             this.cbConsumidor.SelectedIndexChanged += new System.EventHandler(this.cbConsumidor_SelectedIndexChanged);
             // 
             // label7
@@ -189,7 +189,7 @@ namespace ProyectoCiclo3.VISTA
             this.txtCancelado.Location = new System.Drawing.Point(150, 78);
             this.txtCancelado.Name = "txtCancelado";
             this.txtCancelado.Size = new System.Drawing.Size(356, 26);
-            this.txtCancelado.TabIndex = 15;
+            this.txtCancelado.TabIndex = 3;
             // 
             // label1
             // 
@@ -207,7 +207,7 @@ namespace ProyectoCiclo3.VISTA
             this.txtImpuesto.Location = new System.Drawing.Point(150, 110);
             this.txtImpuesto.Name = "txtImpuesto";
             this.txtImpuesto.Size = new System.Drawing.Size(356, 26);
-            this.txtImpuesto.TabIndex = 13;
+            this.txtImpuesto.TabIndex = 4;
             // 
             // label8
             // 
@@ -273,6 +273,7 @@ namespace ProyectoCiclo3.VISTA
             // 
             // FrmAgregarPago
             // 
+            this.AcceptButton = this.btnAgregar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(568, 342);
@@ -298,7 +299,7 @@ namespace ProyectoCiclo3.VISTA
         private System.Windows.Forms.Panel pnlContenedorAgregarCliente;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Panel panel3;
         public System.Windows.Forms.TextBox txtImpuesto;
         private System.Windows.Forms.Label label8;

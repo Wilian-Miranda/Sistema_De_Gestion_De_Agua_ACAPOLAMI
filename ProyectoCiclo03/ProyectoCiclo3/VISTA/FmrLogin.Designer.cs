@@ -58,7 +58,7 @@ namespace WilianMiranda01
             this.txtUsuario.Location = new System.Drawing.Point(337, 112);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(407, 26);
-            this.txtUsuario.TabIndex = 0;
+            this.txtUsuario.TabIndex = 1;
             // 
             // label1
             // 
@@ -92,7 +92,7 @@ namespace WilianMiranda01
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(407, 26);
-            this.txtPassword.TabIndex = 3;
+            this.txtPassword.TabIndex = 2;
             // 
             // btnIniciarSesion
             // 
@@ -225,6 +225,7 @@ namespace WilianMiranda01
             // 
             // Form1
             // 
+            this.AcceptButton = this.btnIniciarSesion;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(133)))), ((int)(((byte)(206)))));
