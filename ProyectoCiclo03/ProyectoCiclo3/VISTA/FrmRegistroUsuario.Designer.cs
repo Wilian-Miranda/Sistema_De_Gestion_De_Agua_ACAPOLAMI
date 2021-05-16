@@ -94,7 +94,7 @@ namespace WilianMiranda01.VISTA
             // 
             // txtPassword
             // 
-            this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(194)))), ((int)(((byte)(243)))));
+            this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(133)))), ((int)(((byte)(206)))));
             this.txtPassword.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtPassword.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.Color.White;
@@ -102,7 +102,7 @@ namespace WilianMiranda01.VISTA
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(343, 26);
-            this.txtPassword.TabIndex = 2;
+            this.txtPassword.TabIndex = 20;
             // 
             // label2
             // 
@@ -128,14 +128,14 @@ namespace WilianMiranda01.VISTA
             // 
             // txtUsuario
             // 
-            this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(194)))), ((int)(((byte)(243)))));
+            this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(133)))), ((int)(((byte)(206)))));
             this.txtUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtUsuario.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.ForeColor = System.Drawing.Color.White;
             this.txtUsuario.Location = new System.Drawing.Point(31, 115);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(344, 26);
-            this.txtUsuario.TabIndex = 1;
+            this.txtUsuario.TabIndex = 17;
             // 
             // pnlCabeceraRegistroUsuario
             // 
@@ -177,7 +177,7 @@ namespace WilianMiranda01.VISTA
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(194)))), ((int)(((byte)(243)))));
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(133)))), ((int)(((byte)(206)))));
             this.textBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.White;
@@ -185,7 +185,7 @@ namespace WilianMiranda01.VISTA
             this.textBox1.Name = "textBox1";
             this.textBox1.PasswordChar = '*';
             this.textBox1.Size = new System.Drawing.Size(343, 26);
-            this.textBox1.TabIndex = 3;
+            this.textBox1.TabIndex = 28;
             // 
             // label5
             // 
@@ -200,7 +200,6 @@ namespace WilianMiranda01.VISTA
             // 
             // FrmRegistroUsuario
             // 
-            this.AcceptButton = this.btnRegistrarUsuario;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(133)))), ((int)(((byte)(206)))));
@@ -218,6 +217,7 @@ namespace WilianMiranda01.VISTA
             this.Controls.Add(this.txtUsuario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmRegistroUsuario";
+            this.Opacity = 0.95D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.FrmRegistroUsuario_Load);
             this.pnlCabeceraRegistroUsuario.ResumeLayout(false);

@@ -147,5 +147,10 @@ namespace WilianMiranda01
                 Top += (e.Y - posY);
             }
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
