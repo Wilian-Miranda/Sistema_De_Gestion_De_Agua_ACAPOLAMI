@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProyectoCiclo3.DAO;
 using ProyectoCiclo3.DOMINIO;
 using ProyectoCiclo3.MODELO;
 using ProyectoCiclo3.NEGOCIO;
@@ -83,7 +84,34 @@ namespace ProyectoCiclo3.VISTA
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            using (ACAPOLAMIEntities db = new ACAPOLAMIEntities())
+            {
+                if (cbConsumidor.Text == "" && txtMonto.Text == "")
+                {
+                    MessageBox.Show("Los campos de Consumidor y el monto son obligatorios");
+                }
+                else
+                {
+                    ClsDPagos cls = new ClsDPagos();
+
+                    Pagos pg = new Pagos();
+
+                    pg.monto = Convert.ToInt32(txtMonto.Text);
+                    pg.montoCancelado = Convert.ToInt32(txtCancelado.Text);
+                    pg.impuesto = Convert.ToInt32(txtImpuesto.Text);
+
+                    if (cbConsumidor.Text == "")
+                    {
+                        MessageBox.Show("Seleccione un consumidor");
+                    }
+                    else
+                    {
+                        cbConsumidor.Text = pg.idConsumidor_FK.ToString();
+                    }
+
+                    cls.AgregarPago(pg);
+                }
+            }
         }
 
         private string idConsumidor = "";
