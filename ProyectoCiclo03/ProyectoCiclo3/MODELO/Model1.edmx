@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ACAPOLAMIModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="ACAPOLAMIModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Comunidades">
           <Key>
             <PropertyRef Name="idComunidad" />
@@ -37,6 +37,8 @@
           </Key>
           <Property Name="idPago" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="monto" Type="money" Nullable="false" />
+          <Property Name="montoCancelado" Type="money" />
+          <Property Name="montoPendiente" Type="money" />
           <Property Name="fechaPago" Type="date" Nullable="false" />
           <Property Name="impuesto" Type="money" />
           <Property Name="idEstado_FK" Type="int" />
@@ -59,7 +61,7 @@
           <Property Name="clave" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="rol" Type="varchar" MaxLength="20" />
         </EntityType>
-        <Association Name="FK__Consumido__idCom__398D8EEE">
+        <Association Name="FK__Consumido__idCom__267ABA7A">
           <End Role="Comunidades" Type="Self.Comunidades" Multiplicity="0..1" />
           <End Role="Consumidores" Type="Self.Consumidores" Multiplicity="*" />
           <ReferentialConstraint>
@@ -71,7 +73,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Pagos__idConsumi__3F466844">
+        <Association Name="FK__Pagos__idConsumi__2C3393D0">
           <End Role="Consumidores" Type="Self.Consumidores" Multiplicity="0..1" />
           <End Role="Pagos" Type="Self.Pagos" Multiplicity="*" />
           <ReferentialConstraint>
@@ -83,7 +85,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Pagos__idEstado___3E52440B">
+        <Association Name="FK__Pagos__idEstado___2B3F6F97">
           <End Role="Estados" Type="Self.Estados" Multiplicity="0..1" />
           <End Role="Pagos" Type="Self.Pagos" Multiplicity="*" />
           <ReferentialConstraint>
@@ -107,17 +109,6 @@
         <Function Name="sp_EliminarConsumidor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="id" Type="int" Mode="In" />
         </Function>
-        <Function Name="sp_InsertarConsumidores" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="nombres" Type="varchar" Mode="In" />
-          <Parameter Name="apellidos" Type="varchar" Mode="In" />
-          <Parameter Name="dui" Type="varchar" Mode="In" />
-          <Parameter Name="telefono" Type="varchar" Mode="In" />
-          <Parameter Name="correo" Type="varchar" Mode="In" />
-          <Parameter Name="idComunidad" Type="int" Mode="In" />
-        </Function>
-        <Function Name="sp_MostrarClientesId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="idComunidad" Type="int" Mode="In" />
-        </Function>
         <Function Name="sp_MostrarConsumidores" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="ACAPOLAMIModelStoreContainer">
           <EntitySet Name="Comunidades" EntityType="Self.Comunidades" Schema="dbo" store:Type="Tables" />
@@ -126,21 +117,20 @@
           <EntitySet Name="Pagos" EntityType="Self.Pagos" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Sucesos" EntityType="Self.Sucesos" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__Consumido__idCom__398D8EEE" Association="Self.FK__Consumido__idCom__398D8EEE">
+          <AssociationSet Name="FK__Consumido__idCom__267ABA7A" Association="Self.FK__Consumido__idCom__267ABA7A">
             <End Role="Comunidades" EntitySet="Comunidades" />
             <End Role="Consumidores" EntitySet="Consumidores" />
           </AssociationSet>
-          <AssociationSet Name="FK__Pagos__idConsumi__3F466844" Association="Self.FK__Pagos__idConsumi__3F466844">
+          <AssociationSet Name="FK__Pagos__idConsumi__2C3393D0" Association="Self.FK__Pagos__idConsumi__2C3393D0">
             <End Role="Consumidores" EntitySet="Consumidores" />
             <End Role="Pagos" EntitySet="Pagos" />
           </AssociationSet>
-          <AssociationSet Name="FK__Pagos__idEstado___3E52440B" Association="Self.FK__Pagos__idEstado___3E52440B">
+          <AssociationSet Name="FK__Pagos__idEstado___2B3F6F97" Association="Self.FK__Pagos__idEstado___2B3F6F97">
             <End Role="Estados" EntitySet="Estados" />
             <End Role="Pagos" EntitySet="Pagos" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ACAPOLAMIModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -186,6 +176,8 @@
           <Property Name="idConsumidor_FK" Type="Int32" />
           <NavigationProperty Name="Consumidores" Relationship="Self.FK__Pagos__idConsumi__3F466844" FromRole="Pagos" ToRole="Consumidores" />
           <NavigationProperty Name="Estados" Relationship="Self.FK__Pagos__idEstado___3E52440B" FromRole="Pagos" ToRole="Estados" />
+          <Property Name="montoCancelado" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="montoPendiente" Type="Decimal" Precision="19" Scale="4" />
         </EntityType>
         <EntityType Name="Sucesos">
           <Key>
@@ -269,7 +261,7 @@
             <Parameter Name="correo" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_EliminarConsumidor">
-            <Parameter Name="id" Mode="In" Type="Int32" />
+          <Parameter Name="id" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_InsertarConsumidores">
             <Parameter Name="nombres" Mode="In" Type="String" />
@@ -340,6 +332,8 @@
           <EntitySetMapping Name="Pagos">
             <EntityTypeMapping TypeName="ACAPOLAMIModel.Pagos">
               <MappingFragment StoreEntitySet="Pagos">
+                <ScalarProperty Name="montoPendiente" ColumnName="montoPendiente" />
+                <ScalarProperty Name="montoCancelado" ColumnName="montoCancelado" />
                 <ScalarProperty Name="idPago" ColumnName="idPago" />
                 <ScalarProperty Name="monto" ColumnName="monto" />
                 <ScalarProperty Name="fechaPago" ColumnName="fechaPago" />
@@ -370,20 +364,6 @@
           </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="sp_ActualizarConsumidor" FunctionName="ACAPOLAMIModel.Store.sp_ActualizarConsumidor" />
           <FunctionImportMapping FunctionImportName="sp_EliminarConsumidor" FunctionName="ACAPOLAMIModel.Store.sp_EliminarConsumidor" />
-          <FunctionImportMapping FunctionImportName="sp_InsertarConsumidores" FunctionName="ACAPOLAMIModel.Store.sp_InsertarConsumidores" />
-          <FunctionImportMapping FunctionImportName="sp_MostrarClientesId" FunctionName="ACAPOLAMIModel.Store.sp_MostrarClientesId">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="ACAPOLAMIModel.sp_MostrarClientesId_Result">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Nombres" ColumnName="Nombres" />
-                <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
-                <ScalarProperty Name="DUI" ColumnName="DUI" />
-                <ScalarProperty Name="Correo_electrónico" ColumnName="Correo electrónico" />
-                <ScalarProperty Name="Teléfono" ColumnName="Teléfono" />
-                <ScalarProperty Name="Comunidad" ColumnName="Comunidad" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="sp_MostrarConsumidores" FunctionName="ACAPOLAMIModel.Store.sp_MostrarConsumidores">
             <ResultMapping>
               <ComplexTypeMapping TypeName="ACAPOLAMIModel.sp_MostrarConsumidores_Result">

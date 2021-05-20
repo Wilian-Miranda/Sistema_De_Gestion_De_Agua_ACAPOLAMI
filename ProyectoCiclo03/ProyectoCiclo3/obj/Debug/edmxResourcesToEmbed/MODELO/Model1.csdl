@@ -42,6 +42,8 @@
     <Property Name="idConsumidor_FK" Type="Int32" />
     <NavigationProperty Name="Consumidores" Relationship="Self.FK__Pagos__idConsumi__3F466844" FromRole="Pagos" ToRole="Consumidores" />
     <NavigationProperty Name="Estados" Relationship="Self.FK__Pagos__idEstado___3E52440B" FromRole="Pagos" ToRole="Estados" />
+    <Property Name="montoCancelado" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="montoPendiente" Type="Decimal" Precision="19" Scale="4" />
   </EntityType>
   <EntityType Name="Sucesos">
     <Key>

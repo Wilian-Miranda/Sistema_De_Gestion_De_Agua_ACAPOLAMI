@@ -10,15 +10,13 @@
 namespace ProyectoCiclo3.MODELO
 {
     using System;
-    using System.ComponentModel;
-
+    
     public partial class sp_MostrarConsumidores_Result
     {
         public int Id { get; set; }
         public string Nombres { get; set; }
         public string Apellidos { get; set; }
         public string DUI { get; set; }
-        [DisplayName("Correo")]
         public string Correo_electrónico { get; set; }
         public string Teléfono { get; set; }
         public string Comunidad { get; set; }
