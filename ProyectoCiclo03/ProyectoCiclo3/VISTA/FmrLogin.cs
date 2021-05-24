@@ -1,4 +1,6 @@
-﻿using ProyectoCiclo3.DOMINIO;
+﻿using ProyectoCiclo3.DAO;
+using ProyectoCiclo3.DOMINIO;
+using ProyectoCiclo3.MODELO;
 using ProyectoCiclo3.NEGOCIO;
 using System;
 using System.Drawing;
@@ -18,9 +20,26 @@ namespace WilianMiranda01
         
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-            FmrPrincipal frm = new FmrPrincipal();
-            frm.Show();
-            Visible = false;
+            ClsDLogin cls = new ClsDLogin();
+            Usuarios user = new Usuarios();
+
+            user.nombre = txtUsuario.Text;
+            user.clave = txtPassword.Text;
+
+            int comprobar;
+            comprobar = cls.ComprobarUsuario(user);
+
+            if (comprobar == 1)
+            {
+                MessageBox.Show("Bienvenido/a");
+                FmrPrincipal frmPrincipal = new FmrPrincipal();
+                this.Hide();
+                frmPrincipal.Show();
+
+            }else
+            {
+                MessageBox.Show("Error en el nombre o contraseña");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)

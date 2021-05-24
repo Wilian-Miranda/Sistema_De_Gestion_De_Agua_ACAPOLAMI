@@ -1,4 +1,6 @@
-﻿using ProyectoCiclo3.DOMINIO;
+﻿using ProyectoCiclo3.DAO;
+using ProyectoCiclo3.DOMINIO;
+using ProyectoCiclo3.MODELO;
 using ProyectoCiclo3.NEGOCIO;
 using System;
 using System.Collections.Generic;
@@ -48,7 +50,25 @@ namespace WilianMiranda01.VISTA
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Registrado con existo");
+            ClsDRegistro cls = new ClsDRegistro();
+            //cls.SaveDatosUserList(txtNombre.Text, txtApellido.Text, Convert.ToInt32(txtEdad), Convert.ToInt32( txtPass));
+            Usuarios user = new Usuarios();
+            user.nombre = txtUsuario.Text;
+            user.clave = txtPassword.Text;
+
+            String comprobarPass = txtConfirmar.Text;
+            if (comprobarPass.Equals(txtPassword.Text))
+            {
+                cls.SaveDatosUser(user);
+
+                MessageBox.Show("Registrado con exito");
+                Form1 frm = new Form1();
+                this.Hide();
+                frm.Show();
+            }
+            else {
+                MessageBox.Show("Error al registrar");
+            }
         }
 
         int posX = 0;
