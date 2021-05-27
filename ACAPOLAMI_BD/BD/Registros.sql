@@ -19,7 +19,7 @@ go
 -------------------------------------------------------------------------------------------------
 go
 INSERT INTO Pagos 
-VALUES(2, 0, 0, getdate(), 0, 1, 1), (2, 0, 0, getdate(), 0, 2, 2), (2, 0, 0, getdate(), 0, 2, 3);
+VALUES(2, 0, 0, getdate(), 1, 1), (2, 0, 0, getdate(), 2, 2), (2, 0, 0, getdate(), 2, 3);
 go
 -------------------------------------------------------------------------------------------------
 go
@@ -27,8 +27,11 @@ INSERT INTO Usuarios VALUES ('Manuel', 'frifayer12', 'admin');
 go
 --SELECTs
 go
---SELECT * FROM Comunidades
---SELECT * FROM Consumidores
---SELECT * FROM Estados
---SELECT * FROM Pagos
---SELECT * FROM Usuarios
+SELECT * FROM Comunidades
+SELECT * FROM Consumidores
+SELECT * FROM Estados
+SELECT * FROM Pagos
+SELECT * FROM Usuarios
+SELECT * FROM Sucesos
+
+insert into Sucesos values(getdate(), 'insert', 'suceso de prueba')

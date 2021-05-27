@@ -19,5 +19,13 @@ namespace ACAPOLAMI.DAO
                 return db.sp_MostrarConsumidores().ToList();
             }
         }
+
+        public List<Consumidores> ConsultarConsumidores() {
+            var list = new List<Consumidores>();
+            using (ACAPOLAMIEntities db = new ACAPOLAMIEntities()) {
+                list = db.Consumidores.ToList();
+            }
+            return list;
+        }
     }
 }

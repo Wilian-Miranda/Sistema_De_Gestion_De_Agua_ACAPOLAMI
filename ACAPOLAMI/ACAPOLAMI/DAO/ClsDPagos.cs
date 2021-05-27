@@ -64,7 +64,6 @@ namespace ACAPOLAMI.DAO
                     int mod = pag.idPago;
                     Pagos pg = db.Pagos.Where(x => x.idPago == mod).Select(x => x).FirstOrDefault();
 
-                    pg.idPago = pag.idPago;
                     pg.Consumidores.nombresConsumidor = pag.Consumidores.nombresConsumidor;
                     pg.Consumidores.apellidosConsumidor = pag.Consumidores.apellidosConsumidor;
                     pg.monto = pag.monto;
@@ -84,7 +83,47 @@ namespace ACAPOLAMI.DAO
                 MessageBox.Show(ex.ToString());
             }
         }
+        public List<String> CargarAnio()
+        {
+            List<String> listFecha = new List<string>();
+            for (int i = 0; i <= 2; i++)
+            {
+                for (int j = 1; j <= 10; j++)
+                {
+                    String ultimaFecha = "";
+                    foreach (var k in listFecha)
+                    {
+                        ultimaFecha = k;
+                    }
 
+                    if (ultimaFecha == "2021")
+                    {
+                        break;
+
+                    }
+                    else
+                    {
+                        if (j == 10)
+                        {
+                            if (i == 1)
+                            {
+                                listFecha.Add("2" + (i - 1).ToString() + (j + 10).ToString());
+                            }
+                            else
+                            {
+                                listFecha.Add("2" + i.ToString() + j.ToString());
+                            }
+                        }
+
+                        else
+                        {
+                            listFecha.Add("20" + i.ToString() + j.ToString());
+                        }
+                    }
+                }
+            }
+            return listFecha;
+        }
     }
 
 }
