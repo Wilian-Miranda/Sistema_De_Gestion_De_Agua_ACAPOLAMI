@@ -9,7 +9,7 @@ BEGIN
 --Select para la tabla de pagos
 	SELECT a.idPago Id, b.nombresConsumidor Nombres, b.apellidosConsumidor Apellidos, 
 	a.monto as Monto, a.montoCancelado as Cancelado, a.montoPendiente as Pendiente, 
-	a.impuesto as Impuesto, c.nombreEstado as Estado, a.fechaPago as Fecha 
+	a.impuesto as Impuesto, a.montoTotal as [Total deuda], c.nombreEstado as Estado, a.fechaPago as Fecha 
 
 	FROM Pagos AS a
 
@@ -25,7 +25,7 @@ go
 -------------------------------------------------------------------------------------------------
 
 -- Procedimiento para Mostrar Pagos filtrados por Consumidor
-ALTER PROC sp_MostrarPagosId
+CREATE PROC sp_MostrarPagosId
 @idConsumidor int 
 
 AS
@@ -33,7 +33,7 @@ BEGIN
 	SET NOCOUNT ON;
 	SELECT a.idPago Id, b.nombresConsumidor Nombres, b.apellidosConsumidor Apellidos, 
 	a.monto as Monto, a.montoCancelado as Cancelado, a.montoPendiente as Pendiente, 
-	a.impuesto as Impuesto, c.nombreEstado as Estado, a.fechaPago as Fecha 
+	a.impuesto as Impuesto, a.montoTotal as [Total a deuda], c.nombreEstado as Estado, a.fechaPago as Fecha 
 
 	FROM Pagos AS a
 
@@ -54,8 +54,9 @@ CREATE PROC sp_InsertarPago
 @monto money,
 @montoCancelado money,
 @montoPendiente money,
-@fechaPago date,
 @impuesto money,
+@total money,
+@fechaPago date,
 @idEstado int,
 @idConsumidor int
 
@@ -63,13 +64,13 @@ AS
 BEGIN
 	SET NOCOUNT ON;
 	INSERT INTO Pagos
-	VALUES(@monto, @montoCancelado, @montoPendiente, @fechaPago, @impuesto, @idEstado, @idConsumidor);
+	VALUES(@monto, @montoCancelado, @montoPendiente, @impuesto, @total, @fechaPago, @idEstado, @idConsumidor);
 END
 go
 -------------------------------------------------------------------------------------------------
 
 --Prueba
-EXEC sp_InsertarPago 2, 2, 0, '2021-05-03', 0, 1, 3;
+EXEC sp_InsertarPago 2, 2, 0, 0, 0,'2021-05-03', 1, 3;
 go
 -------------------------------------------------------------------------------------------------
 
@@ -96,8 +97,9 @@ CREATE PROC sp_ActualizarPago
 @monto money,
 @montoCancelado money,
 @montoPendiente money,
-@fechaPago date,
 @impuesto money,
+@total money,
+@fechaPago date,
 @idEstado int,
 @idConsumidor int
 
@@ -107,10 +109,11 @@ BEGIN
 	UPDATE Pagos
 	SET 
 	monto = @monto,
-	@montoCancelado = @montoCancelado,
+	montoCancelado = @montoCancelado,
 	montoPendiente = @montoPendiente,
-	fechaPago = @fechaPago,
 	impuesto = @impuesto,
+	montoTotal = @total,
+	fechaPago = @fechaPago,
 	idEstado_FK = @idEstado,
 	idConsumidor_FK = @idConsumidor
 	WHERE idPago = @id
@@ -119,5 +122,5 @@ go
 -------------------------------------------------------------------------------------------------
 
 --Prueba
-EXEC sp_ActualizarConsumidor 7, 'Jose', 'tejada', '452435243-435', '8834129412',3,'manu@gmail.com';
+EXEC sp_ActualizarPago 4, 4, 2, 0, 0, 0,'2021-05-03', 1, 3;
 go

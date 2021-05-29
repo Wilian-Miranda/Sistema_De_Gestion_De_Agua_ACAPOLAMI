@@ -40,7 +40,9 @@ CREATE TABLE Pagos(
 	idPago int not null IDENTITY PRIMARY KEY,
 	monto money not null,
 	montoCancelado money,
+	montoPendiente money,
 	impuesto money,
+	montoTotal money,
 	fechaPago date not null,
 	idEstado_FK int REFERENCES Estados(idEstado),
 	idConsumidor_FK int REFERENCES Consumidores(idConsumidor)

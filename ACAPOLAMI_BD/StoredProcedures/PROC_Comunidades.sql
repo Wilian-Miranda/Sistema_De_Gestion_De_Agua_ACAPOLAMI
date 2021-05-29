@@ -1,5 +1,5 @@
 --======================================================================================
--- Procedimientos almacenados para Consumidores
+-- Procedimientos almacenados para Comunidades
 --======================================================================================
 
 -- Procedimiento para mostrar las comunidades
@@ -52,7 +52,7 @@ EXEC sp_EliminarComunidad 4
 go
 -------------------------------------------------------------------------------------------------
 
---Procedimiento de Actualizar los Consumidores
+--Procedimiento de Actualizar las comunidades
 CREATE PROC sp_ActualizarComunidad
 @id int,
 @nombreComunidad varchar(50)
@@ -73,7 +73,3 @@ EXEC sp_ActualizarComunidad 3, 'Agua Caliente';
 go
 
 ------------------------------------------------------------------------------------------------
-
---Prueba
-EXEC sp_MostrarComunidades
---Procedimiento para insertar comunidades

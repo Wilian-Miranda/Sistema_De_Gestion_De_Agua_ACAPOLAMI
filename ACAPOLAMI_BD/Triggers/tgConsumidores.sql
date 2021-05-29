@@ -22,14 +22,13 @@ BEGIN
 	FROM inserted i inner join Comunidades b
 	on i.idComunidad_FK = b.idComunidad;
 
-	INSERT INTO Sucesos VALUES('Se ha Insertado el registro con Id: ' +@id+ 
+	INSERT INTO Sucesos VALUES((SELECT CONVERT(VARCHAR(10), GETDATE(), 3)), 'Consumidores', 'Se ha Insertado el registro con Id: ' +@id+ 
 	', Nombres: ' + @nombres + 
 	', Apellidos: ' +@apellidos+
 	', DUI: '+@dui+
 	', Telefono: '+@tel+
 	', Correo: '+@correo+
-	' y Comunidad: '+@comunidad, 
-	(SELECT CONVERT(VARCHAR(10), GETDATE(), 3)), 'Consumidores');
+	' y Comunidad: '+@comunidad);
 END
 GO
 
@@ -53,14 +52,13 @@ BEGIN
 	FROM inserted i inner join Comunidades b
 	on i.idComunidad_FK = b.idComunidad;
 
-	INSERT INTO Sucesos VALUES('Se ha Actualizado el registro con Id: ' +@id+ 
+	INSERT INTO Sucesos VALUES((SELECT CONVERT(VARCHAR(10), GETDATE(), 3)), 'Consumidores', 'Se ha Actualizado el registro con Id: ' +@id+ 
 	', Nombres: ' + @nombres+
 	', Apellidos: ' +@apellidos+
 	', DUI: '+@dui+
 	', Telefono: '+@tel+
 	', Correo: '+@correo+
-	' y Comunidad: '+@comunidad, 
-	(SELECT CONVERT(VARCHAR(10), GETDATE(), 3)), 'Consumidores');
+	' y Comunidad: '+@comunidad);
 END
 GO
  
@@ -84,12 +82,11 @@ BEGIN
 	FROM deleted i inner join Comunidades b
 	on i.idComunidad_FK = b.idComunidad;
 
-	INSERT INTO Sucesos VALUES('Se ha Eliminado el registro con Id: ' +@id+ 
+	INSERT INTO Sucesos VALUES((SELECT CONVERT(VARCHAR(10), GETDATE(), 3)), 'Consumidores', 'Se ha Eliminado el registro con Id: ' +@id+ 
 	', Nombres: ' + @nombres+
 	', Apellidos: ' +@apellidos+
 	', DUI: '+@dui+
 	', Telefono: '+@tel+
 	', Correo: '+@correo+
-	' y Comunidad: '+@comunidad, 
-	(SELECT CONVERT(VARCHAR(10), GETDATE(), 3)), 'Consumidores');
+	' y Comunidad: '+@comunidad);
 END
