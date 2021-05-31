@@ -221,6 +221,12 @@
     <Compile Include="VISTA\FrmEliminarPago.Designer.cs">
       <DependentUpon>FrmEliminarPago.cs</DependentUpon>
     </Compile>
+    <Compile Include="VISTA\FrmGestionConsumidores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VISTA\FrmGestionConsumidores.Designer.cs">
+      <DependentUpon>FrmGestionConsumidores.cs</DependentUpon>
+    </Compile>
     <Compile Include="VISTA\FrmGPagosPorAnio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -315,6 +321,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VISTA\FrmEliminarPago.resx">
       <DependentUpon>FrmEliminarPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VISTA\FrmGestionConsumidores.resx">
+      <DependentUpon>FrmGestionConsumidores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VISTA\FrmGPagosPorAnio.resx">
       <DependentUpon>FrmGPagosPorAnio.cs</DependentUpon>

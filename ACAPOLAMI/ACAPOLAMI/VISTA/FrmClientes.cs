@@ -3,6 +3,7 @@ using ACAPOLAMI.DOMINIO;
 using ACAPOLAMI.MODELO;
 using ACAPOLAMI.MODELO.ViewModels;
 using ACAPOLAMI.NEGOCIO;
+using ACAPOLAMI.VISTA;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -47,25 +48,42 @@ namespace WilianMiranda01.VISTA
             dtgGestionDeConsumidores.DataSource = mostrarConsumidores.Consultar();
             btnCantidadDeClientes.Text = dtgGestionDeConsumidores.Rows.Count.ToString();
         }
-        
+
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            FrmAgregarClientes clientes = new FrmAgregarClientes();
-            clientes.ShowDialog();
+            FrmGestionConsumidores agregar = new FrmGestionConsumidores();
+
+            agregar.lblId.Visible = false;
+            agregar.txtCodigo.Visible = false;
+            agregar.btnEjecutar.Text = "Agregar consumidor";
+
+            agregar.ShowDialog();
+
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
             if (dtgGestionDeConsumidores.SelectedRows.Count > 0)
             {
-                FrmModificarCliente modificar = new FrmModificarCliente();
-                modificar.txtIdCliente.Text = dtgGestionDeConsumidores.CurrentRow.Cells[0].Value.ToString();
-                modificar.txtNombre.Text = dtgGestionDeConsumidores.CurrentRow.Cells[1].Value.ToString();
+                FrmGestionConsumidores modificar = new FrmGestionConsumidores();
+
+                modificar.txtCodigo.Text = dtgGestionDeConsumidores.CurrentRow.Cells[0].Value.ToString();
+                modificar.txtNombres.Text = dtgGestionDeConsumidores.CurrentRow.Cells[1].Value.ToString();
                 modificar.txtApellidos.Text = dtgGestionDeConsumidores.CurrentRow.Cells[2].Value.ToString();
                 modificar.txtDUI.Text = dtgGestionDeConsumidores.CurrentRow.Cells[3].Value.ToString();
-                modificar.txtEmail.Text = dtgGestionDeConsumidores.CurrentRow.Cells[4].Value.ToString();
-                modificar.txtTelefono.Text = dtgGestionDeConsumidores.CurrentRow.Cells[5].Value.ToString();           
+                modificar.txtCorreo.Text = dtgGestionDeConsumidores.CurrentRow.Cells[4].Value.ToString();
+                modificar.txtTelefono.Text = dtgGestionDeConsumidores.CurrentRow.Cells[5].Value.ToString();
+
+                ///*le decimos que la comunidad de debe aparecer seleccionada
+                //debe coincidir con la comunidad del registro del cliente*/
+                //esta informacion la carga el formulario a cargarse
                 modificar.comunidad = dtgGestionDeConsumidores.CurrentRow.Cells[6].Value.ToString();
+
+                //cambiando el texto del boton ejecutar
+                modificar.btnEjecutar.Text = "Modificar registro";
+
+                modificar.lblEncabezado.Text = "MODIFICAR REGISTRO";
+
 
                 modificar.ShowDialog();
             }
@@ -80,19 +98,29 @@ namespace WilianMiranda01.VISTA
         {
             if (dtgGestionDeConsumidores.SelectedRows.Count > 0)
             {
-                FrmEliminarCliente eliminar = new FrmEliminarCliente();
-
-                eliminar.txtIdCliente.Text = dtgGestionDeConsumidores.CurrentRow.Cells[0].Value.ToString();
-                eliminar.txtNombre.Text = dtgGestionDeConsumidores.CurrentRow.Cells[1].Value.ToString();
+                FrmGestionConsumidores eliminar = new FrmGestionConsumidores();
+                eliminar.txtCodigo.Text = dtgGestionDeConsumidores.CurrentRow.Cells[0].Value.ToString();
+                eliminar.txtNombres.Text = dtgGestionDeConsumidores.CurrentRow.Cells[1].Value.ToString();
                 eliminar.txtApellidos.Text = dtgGestionDeConsumidores.CurrentRow.Cells[2].Value.ToString();
                 eliminar.txtDUI.Text = dtgGestionDeConsumidores.CurrentRow.Cells[3].Value.ToString();
-                eliminar.txtEmail.Text = dtgGestionDeConsumidores.CurrentRow.Cells[4].Value.ToString();
+                eliminar.txtCorreo.Text = dtgGestionDeConsumidores.CurrentRow.Cells[4].Value.ToString();
                 eliminar.txtTelefono.Text = dtgGestionDeConsumidores.CurrentRow.Cells[5].Value.ToString();
-                eliminar.txtComunidad.Text= dtgGestionDeConsumidores.CurrentRow.Cells[6].Value.ToString();
+
+                ///*le decimos que la comunidad de debe aparecer seleccionada
+                //debe coincidir con la comunidad del registro del cliente*/
+                //esta informacion la carga el formulario a cargarse
+                eliminar.comunidad = dtgGestionDeConsumidores.CurrentRow.Cells[6].Value.ToString();
+
+                //cambiando el texto del boton ejecutar
+                eliminar.btnEjecutar.Text = "Eliminar registro";
+
+                eliminar.lblEncabezado.Text = "ELIMINAR REGISTRO";
+
+                eliminar.pnlDatosConsumidor.Enabled = false;
+
 
                 eliminar.ShowDialog();
             }
-
             else
             {
                 MessageBox.Show("Seleccione el registro que desea eliminar");
