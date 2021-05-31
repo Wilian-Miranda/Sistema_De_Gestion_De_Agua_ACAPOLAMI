@@ -11,7 +11,7 @@ namespace ACAPOLAMI.MODELO
 {
     using System;
     
-    public partial class sp_MostrarClientesId_Result
+    public partial class sp_MostrarConsumidoresId_Result
     {
         public int Id { get; set; }
         public string Nombres { get; set; }

@@ -16,12 +16,13 @@ namespace ACAPOLAMI.MODELO
     {
         public int idPago { get; set; }
         public decimal monto { get; set; }
-        public System.DateTime fechaPago { get; set; }
-        public Nullable<decimal> impuesto { get; set; }
-        public Nullable<int> idEstado_FK { get; set; }
-        public Nullable<int> idConsumidor_FK { get; set; }
         public Nullable<decimal> montoCancelado { get; set; }
         public Nullable<decimal> montoPendiente { get; set; }
+        public Nullable<decimal> impuesto { get; set; }
+        public Nullable<decimal> montoTotal { get; set; }
+        public System.DateTime fechaPago { get; set; }
+        public Nullable<int> idEstado_FK { get; set; }
+        public Nullable<int> idConsumidor_FK { get; set; }
     
         public virtual Consumidores Consumidores { get; set; }
         public virtual Estados Estados { get; set; }

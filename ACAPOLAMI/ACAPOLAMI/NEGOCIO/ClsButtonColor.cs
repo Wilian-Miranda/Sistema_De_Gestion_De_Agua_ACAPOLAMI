@@ -16,6 +16,10 @@ namespace ACAPOLAMI.NEGOCIO
         {
             btn.BotonAzulClaro.BackColor = Color.FromArgb(67, 194, 243);
         }
+        public void AzulMedio(ButtonColor btn)
+        {
+            btn.BotonAzulMedio.BackColor = Color.FromArgb(62, 133, 206);
+        }
         public void AzulOscuro(ButtonColor btn)
         {
             btn.BotonAzulOscuro.BackColor = Color.FromArgb(51, 124, 173);

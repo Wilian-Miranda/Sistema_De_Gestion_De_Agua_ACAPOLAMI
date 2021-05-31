@@ -11,6 +11,7 @@ namespace ACAPOLAMI.DOMINIO
     {
         //Parametros
         private Button botonAzulClaro;
+        private Button botonAzulMedio;
         private Button botonAzulOscuro;
         private Button botonRojo;
 
@@ -18,5 +19,6 @@ namespace ACAPOLAMI.DOMINIO
         public Button BotonAzulClaro { get => botonAzulClaro; set => botonAzulClaro = value; }
         public Button BotonAzulOscuro { get => botonAzulOscuro; set => botonAzulOscuro = value; }
         public Button BotonRojo { get => botonRojo; set => botonRojo = value; }
+        public Button BotonAzulMedio { get => botonAzulMedio; set => botonAzulMedio = value; }
     }
 }

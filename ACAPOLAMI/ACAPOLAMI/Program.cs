@@ -19,7 +19,7 @@ namespace ACAPOLAMI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmPagosPorAnioPorConsumidor());
+            Application.Run(new FmrPrincipal());
         }
     }
 }

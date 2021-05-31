@@ -97,7 +97,7 @@ namespace WilianMiranda01.VISTA
         private void btnCerrarAplicacion_MouseLeave(object sender, EventArgs e)
         {
             btn.BotonAzulOscuro = btnCerrarAplicacion;
-            button.Rojo(btn);
+            button.AzulOscuro(btn);
         }
 
         private void btnCerrarAplicacion_MouseMove(object sender, MouseEventArgs e)

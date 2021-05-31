@@ -32,7 +32,21 @@ namespace ACAPOLAMI.MODELO
         public virtual DbSet<Estados> Estados { get; set; }
         public virtual DbSet<Pagos> Pagos { get; set; }
         public virtual DbSet<Sucesos> Sucesos { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Usuarios> Usuarios { get; set; }
+    
+        public virtual int sp_ActualizarComunidad(Nullable<int> id, string nombreComunidad)
+        {
+            var idParameter = id.HasValue ?
+                new ObjectParameter("id", id) :
+                new ObjectParameter("id", typeof(int));
+    
+            var nombreComunidadParameter = nombreComunidad != null ?
+                new ObjectParameter("nombreComunidad", nombreComunidad) :
+                new ObjectParameter("nombreComunidad", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_ActualizarComunidad", idParameter, nombreComunidadParameter);
+        }
     
         public virtual int sp_ActualizarConsumidor(Nullable<int> id, string nombres, string apellidos, string dui, string telefono, Nullable<int> idComunidad, string correo)
         {
@@ -67,6 +81,137 @@ namespace ACAPOLAMI.MODELO
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_ActualizarConsumidor", idParameter, nombresParameter, apellidosParameter, duiParameter, telefonoParameter, idComunidadParameter, correoParameter);
         }
     
+        public virtual int sp_ActualizarPago(Nullable<int> id, Nullable<decimal> monto, Nullable<decimal> montoCancelado, Nullable<decimal> montoPendiente, Nullable<decimal> impuesto, Nullable<decimal> total, Nullable<System.DateTime> fechaPago, Nullable<int> idEstado, Nullable<int> idConsumidor)
+        {
+            var idParameter = id.HasValue ?
+                new ObjectParameter("id", id) :
+                new ObjectParameter("id", typeof(int));
+    
+            var montoParameter = monto.HasValue ?
+                new ObjectParameter("monto", monto) :
+                new ObjectParameter("monto", typeof(decimal));
+    
+            var montoCanceladoParameter = montoCancelado.HasValue ?
+                new ObjectParameter("montoCancelado", montoCancelado) :
+                new ObjectParameter("montoCancelado", typeof(decimal));
+    
+            var montoPendienteParameter = montoPendiente.HasValue ?
+                new ObjectParameter("montoPendiente", montoPendiente) :
+                new ObjectParameter("montoPendiente", typeof(decimal));
+    
+            var impuestoParameter = impuesto.HasValue ?
+                new ObjectParameter("impuesto", impuesto) :
+                new ObjectParameter("impuesto", typeof(decimal));
+    
+            var totalParameter = total.HasValue ?
+                new ObjectParameter("total", total) :
+                new ObjectParameter("total", typeof(decimal));
+    
+            var fechaPagoParameter = fechaPago.HasValue ?
+                new ObjectParameter("fechaPago", fechaPago) :
+                new ObjectParameter("fechaPago", typeof(System.DateTime));
+    
+            var idEstadoParameter = idEstado.HasValue ?
+                new ObjectParameter("idEstado", idEstado) :
+                new ObjectParameter("idEstado", typeof(int));
+    
+            var idConsumidorParameter = idConsumidor.HasValue ?
+                new ObjectParameter("idConsumidor", idConsumidor) :
+                new ObjectParameter("idConsumidor", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_ActualizarPago", idParameter, montoParameter, montoCanceladoParameter, montoPendienteParameter, impuestoParameter, totalParameter, fechaPagoParameter, idEstadoParameter, idConsumidorParameter);
+        }
+    
+        public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            var versionParameter = version.HasValue ?
+                new ObjectParameter("version", version) :
+                new ObjectParameter("version", typeof(int));
+    
+            var definitionParameter = definition != null ?
+                new ObjectParameter("definition", definition) :
+                new ObjectParameter("definition", typeof(byte[]));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_alterdiagram", diagramnameParameter, owner_idParameter, versionParameter, definitionParameter);
+        }
+    
+        public virtual int sp_CalcularPagos(Nullable<int> id, Nullable<decimal> monto, Nullable<decimal> pendiente, Nullable<decimal> cancelado)
+        {
+            var idParameter = id.HasValue ?
+                new ObjectParameter("id", id) :
+                new ObjectParameter("id", typeof(int));
+    
+            var montoParameter = monto.HasValue ?
+                new ObjectParameter("monto", monto) :
+                new ObjectParameter("monto", typeof(decimal));
+    
+            var pendienteParameter = pendiente.HasValue ?
+                new ObjectParameter("pendiente", pendiente) :
+                new ObjectParameter("pendiente", typeof(decimal));
+    
+            var canceladoParameter = cancelado.HasValue ?
+                new ObjectParameter("cancelado", cancelado) :
+                new ObjectParameter("cancelado", typeof(decimal));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_CalcularPagos", idParameter, montoParameter, pendienteParameter, canceladoParameter);
+        }
+    
+        public virtual ObjectResult<sp_ConsumidoresPorComunidad_Result> sp_ConsumidoresPorComunidad()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_ConsumidoresPorComunidad_Result>("sp_ConsumidoresPorComunidad");
+        }
+    
+        public virtual int sp_creatediagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            var versionParameter = version.HasValue ?
+                new ObjectParameter("version", version) :
+                new ObjectParameter("version", typeof(int));
+    
+            var definitionParameter = definition != null ?
+                new ObjectParameter("definition", definition) :
+                new ObjectParameter("definition", typeof(byte[]));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_creatediagram", diagramnameParameter, owner_idParameter, versionParameter, definitionParameter);
+        }
+    
+        public virtual int sp_dropdiagram(string diagramname, Nullable<int> owner_id)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_dropdiagram", diagramnameParameter, owner_idParameter);
+        }
+    
+        public virtual int sp_EliminarComunidad(Nullable<int> id)
+        {
+            var idParameter = id.HasValue ?
+                new ObjectParameter("id", id) :
+                new ObjectParameter("id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_EliminarComunidad", idParameter);
+        }
+    
         public virtual int sp_EliminarConsumidor(Nullable<int> id)
         {
             var idParameter = id.HasValue ?
@@ -76,7 +221,51 @@ namespace ACAPOLAMI.MODELO
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_EliminarConsumidor", idParameter);
         }
     
-        public virtual int sp_InsertarConsumidores(string nombres, string apellidos, string dui, string telefono, string correo, Nullable<int> idComunidad)
+        public virtual int sp_EliminarPago(Nullable<int> id)
+        {
+            var idParameter = id.HasValue ?
+                new ObjectParameter("id", id) :
+                new ObjectParameter("id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_EliminarPago", idParameter);
+        }
+    
+        public virtual ObjectResult<sp_helpdiagramdefinition_Result> sp_helpdiagramdefinition(string diagramname, Nullable<int> owner_id)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_helpdiagramdefinition_Result>("sp_helpdiagramdefinition", diagramnameParameter, owner_idParameter);
+        }
+    
+        public virtual ObjectResult<sp_helpdiagrams_Result> sp_helpdiagrams(string diagramname, Nullable<int> owner_id)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_helpdiagrams_Result>("sp_helpdiagrams", diagramnameParameter, owner_idParameter);
+        }
+    
+        public virtual int sp_InsertarComunidad(string nombreComunidad)
+        {
+            var nombreComunidadParameter = nombreComunidad != null ?
+                new ObjectParameter("nombreComunidad", nombreComunidad) :
+                new ObjectParameter("nombreComunidad", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_InsertarComunidad", nombreComunidadParameter);
+        }
+    
+        public virtual int sp_InsertarConsumidor(string nombres, string apellidos, string dui, string telefono, string correo, Nullable<int> idComunidad)
         {
             var nombresParameter = nombres != null ?
                 new ObjectParameter("nombres", nombres) :
@@ -102,21 +291,118 @@ namespace ACAPOLAMI.MODELO
                 new ObjectParameter("idComunidad", idComunidad) :
                 new ObjectParameter("idComunidad", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_InsertarConsumidores", nombresParameter, apellidosParameter, duiParameter, telefonoParameter, correoParameter, idComunidadParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_InsertarConsumidor", nombresParameter, apellidosParameter, duiParameter, telefonoParameter, correoParameter, idComunidadParameter);
         }
     
-        public virtual ObjectResult<sp_MostrarClientesId_Result> sp_MostrarClientesId(Nullable<int> idComunidad)
+        public virtual int sp_InsertarPago(Nullable<decimal> monto, Nullable<decimal> montoCancelado, Nullable<decimal> montoPendiente, Nullable<decimal> impuesto, Nullable<decimal> total, Nullable<System.DateTime> fechaPago, Nullable<int> idEstado, Nullable<int> idConsumidor)
         {
-            var idComunidadParameter = idComunidad.HasValue ?
-                new ObjectParameter("idComunidad", idComunidad) :
-                new ObjectParameter("idComunidad", typeof(int));
+            var montoParameter = monto.HasValue ?
+                new ObjectParameter("monto", monto) :
+                new ObjectParameter("monto", typeof(decimal));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_MostrarClientesId_Result>("sp_MostrarClientesId", idComunidadParameter);
+            var montoCanceladoParameter = montoCancelado.HasValue ?
+                new ObjectParameter("montoCancelado", montoCancelado) :
+                new ObjectParameter("montoCancelado", typeof(decimal));
+    
+            var montoPendienteParameter = montoPendiente.HasValue ?
+                new ObjectParameter("montoPendiente", montoPendiente) :
+                new ObjectParameter("montoPendiente", typeof(decimal));
+    
+            var impuestoParameter = impuesto.HasValue ?
+                new ObjectParameter("impuesto", impuesto) :
+                new ObjectParameter("impuesto", typeof(decimal));
+    
+            var totalParameter = total.HasValue ?
+                new ObjectParameter("total", total) :
+                new ObjectParameter("total", typeof(decimal));
+    
+            var fechaPagoParameter = fechaPago.HasValue ?
+                new ObjectParameter("fechaPago", fechaPago) :
+                new ObjectParameter("fechaPago", typeof(System.DateTime));
+    
+            var idEstadoParameter = idEstado.HasValue ?
+                new ObjectParameter("idEstado", idEstado) :
+                new ObjectParameter("idEstado", typeof(int));
+    
+            var idConsumidorParameter = idConsumidor.HasValue ?
+                new ObjectParameter("idConsumidor", idConsumidor) :
+                new ObjectParameter("idConsumidor", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_InsertarPago", montoParameter, montoCanceladoParameter, montoPendienteParameter, impuestoParameter, totalParameter, fechaPagoParameter, idEstadoParameter, idConsumidorParameter);
+        }
+    
+        public virtual ObjectResult<sp_MostrarComunidades_Result> sp_MostrarComunidades()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_MostrarComunidades_Result>("sp_MostrarComunidades");
         }
     
         public virtual ObjectResult<sp_MostrarConsumidores_Result> sp_MostrarConsumidores()
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_MostrarConsumidores_Result>("sp_MostrarConsumidores");
+        }
+    
+        public virtual ObjectResult<sp_MostrarConsumidoresId_Result> sp_MostrarConsumidoresId(Nullable<int> idComunidad)
+        {
+            var idComunidadParameter = idComunidad.HasValue ?
+                new ObjectParameter("idComunidad", idComunidad) :
+                new ObjectParameter("idComunidad", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_MostrarConsumidoresId_Result>("sp_MostrarConsumidoresId", idComunidadParameter);
+        }
+    
+        public virtual ObjectResult<sp_MostrarPagos_Result> sp_MostrarPagos()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_MostrarPagos_Result>("sp_MostrarPagos");
+        }
+    
+        public virtual ObjectResult<sp_MostrarPagosId_Result> sp_MostrarPagosId(Nullable<int> idConsumidor)
+        {
+            var idConsumidorParameter = idConsumidor.HasValue ?
+                new ObjectParameter("idConsumidor", idConsumidor) :
+                new ObjectParameter("idConsumidor", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_MostrarPagosId_Result>("sp_MostrarPagosId", idConsumidorParameter);
+        }
+    
+        public virtual ObjectResult<sp_obtenerMontoCanceladoMeses_Result> sp_obtenerMontoCanceladoMeses(string year)
+        {
+            var yearParameter = year != null ?
+                new ObjectParameter("year", year) :
+                new ObjectParameter("year", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_obtenerMontoCanceladoMeses_Result>("sp_obtenerMontoCanceladoMeses", yearParameter);
+        }
+    
+        public virtual int sp_renamediagram(string diagramname, Nullable<int> owner_id, string new_diagramname)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            var new_diagramnameParameter = new_diagramname != null ?
+                new ObjectParameter("new_diagramname", new_diagramname) :
+                new ObjectParameter("new_diagramname", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_renamediagram", diagramnameParameter, owner_idParameter, new_diagramnameParameter);
+        }
+    
+        public virtual ObjectResult<sp_UltimosConsumidores_Result> sp_UltimosConsumidores()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_UltimosConsumidores_Result>("sp_UltimosConsumidores");
+        }
+    
+        public virtual ObjectResult<sp_UltimosPagos_Result> sp_UltimosPagos()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_UltimosPagos_Result>("sp_UltimosPagos");
+        }
+    
+        public virtual int sp_upgraddiagrams()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_upgraddiagrams");
         }
     }
 }

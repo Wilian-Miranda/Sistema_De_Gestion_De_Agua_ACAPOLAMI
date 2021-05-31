@@ -1,5 +1,4 @@
 -- Procedimiento para Mostrar Consumidores por Comunidad
-
 Create PROC sp_ConsumidoresPorComunidad
 AS
 BEGIN

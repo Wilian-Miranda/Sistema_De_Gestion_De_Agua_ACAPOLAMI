@@ -223,7 +223,8 @@ namespace WilianMiranda01.VISTA
                 }
 
                 //Pasamos la lista de consultas al dataGridView
-                dtgPagos.DataSource = buscar.ToList();
+                    dtgPagos.DataSource = buscar.ToList();
+                
             }
         }
     }

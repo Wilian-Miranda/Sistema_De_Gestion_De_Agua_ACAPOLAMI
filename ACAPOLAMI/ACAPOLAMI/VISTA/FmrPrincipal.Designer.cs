@@ -32,16 +32,16 @@ namespace WilianMiranda01.VISTA
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FmrPrincipal));
             this.pnlMenu = new System.Windows.Forms.Panel();
-            this.btnCerrarSesión = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblNombreUSuario = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnAjustes = new FontAwesome.Sharp.IconButton();
-            this.btnNotificaciones = new FontAwesome.Sharp.IconButton();
-            this.btnClientes = new FontAwesome.Sharp.IconButton();
-            this.btnPagos = new FontAwesome.Sharp.IconButton();
-            this.btnReporte = new FontAwesome.Sharp.IconButton();
-            this.btnPrincipal = new FontAwesome.Sharp.IconButton();
+            this.btnAjustes = new System.Windows.Forms.Button();
+            this.btnNotificaciones = new System.Windows.Forms.Button();
+            this.btnClientes = new System.Windows.Forms.Button();
+            this.btnPagos = new System.Windows.Forms.Button();
+            this.btnReporte = new System.Windows.Forms.Button();
+            this.btnPrincipal = new System.Windows.Forms.Button();
+            this.btnCerrarSesión = new System.Windows.Forms.Button();
             this.pnlLogo = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.bntMinimizarMenu = new System.Windows.Forms.Button();
@@ -51,8 +51,9 @@ namespace WilianMiranda01.VISTA
             this.btnMinimizarAplicacion = new System.Windows.Forms.Button();
             this.btnCerrarAplicacion = new System.Windows.Forms.Button();
             this.pnlPanelPadre = new System.Windows.Forms.Panel();
-            this.lblFecha = new System.Windows.Forms.Label();
+            this.pnlHoraFecha = new System.Windows.Forms.Panel();
             this.lblHora = new System.Windows.Forms.Label();
+            this.lblFecha = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tmrTiempo = new System.Windows.Forms.Timer(this.components);
             this.pnlMenu.SuspendLayout();
@@ -64,6 +65,7 @@ namespace WilianMiranda01.VISTA
             this.pnlCabezaPrincipal.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pnlPanelPadre.SuspendLayout();
+            this.pnlHoraFecha.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,7 +73,6 @@ namespace WilianMiranda01.VISTA
             // 
             this.pnlMenu.AutoScroll = true;
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(133)))), ((int)(((byte)(206)))));
-            this.pnlMenu.Controls.Add(this.btnCerrarSesión);
             this.pnlMenu.Controls.Add(this.panel2);
             this.pnlMenu.Controls.Add(this.btnAjustes);
             this.pnlMenu.Controls.Add(this.btnNotificaciones);
@@ -79,28 +80,13 @@ namespace WilianMiranda01.VISTA
             this.pnlMenu.Controls.Add(this.btnPagos);
             this.pnlMenu.Controls.Add(this.btnReporte);
             this.pnlMenu.Controls.Add(this.btnPrincipal);
+            this.pnlMenu.Controls.Add(this.btnCerrarSesión);
             this.pnlMenu.Controls.Add(this.pnlLogo);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(200, 681);
             this.pnlMenu.TabIndex = 54;
-            // 
-            // btnCerrarSesión
-            // 
-            this.btnCerrarSesión.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
-            this.btnCerrarSesión.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnCerrarSesión.FlatAppearance.BorderSize = 0;
-            this.btnCerrarSesión.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarSesión.Location = new System.Drawing.Point(0, 658);
-            this.btnCerrarSesión.Name = "btnCerrarSesión";
-            this.btnCerrarSesión.Size = new System.Drawing.Size(200, 23);
-            this.btnCerrarSesión.TabIndex = 8;
-            this.btnCerrarSesión.Text = "Cerrar Sesión";
-            this.btnCerrarSesión.UseVisualStyleBackColor = false;
-            this.btnCerrarSesión.MouseLeave += new System.EventHandler(this.btnCerrarSesión_MouseLeave);
-            this.btnCerrarSesión.MouseHover += new System.EventHandler(this.btnCerrarSesión_MouseHover);
-            this.btnCerrarSesión.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnCerrarSesión_MouseMove);
             // 
             // panel2
             // 
@@ -109,25 +95,28 @@ namespace WilianMiranda01.VISTA
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 547);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 107);
-            this.panel2.TabIndex = 7;
+            this.panel2.Size = new System.Drawing.Size(200, 87);
+            this.panel2.TabIndex = 15;
             // 
             // lblNombreUSuario
             // 
             this.lblNombreUSuario.AutoSize = true;
-            this.lblNombreUSuario.Location = new System.Drawing.Point(66, 88);
+            this.lblNombreUSuario.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lblNombreUSuario.Location = new System.Drawing.Point(0, 68);
             this.lblNombreUSuario.Name = "lblNombreUSuario";
-            this.lblNombreUSuario.Size = new System.Drawing.Size(69, 19);
+            this.lblNombreUSuario.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.lblNombreUSuario.Size = new System.Drawing.Size(84, 19);
             this.lblNombreUSuario.TabIndex = 1;
             this.lblNombreUSuario.Text = "Usuario";
+            this.lblNombreUSuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(58, 6);
+            this.pictureBox2.Location = new System.Drawing.Point(55, 3);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(85, 79);
+            this.pictureBox2.Size = new System.Drawing.Size(80, 61);
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
@@ -136,16 +125,12 @@ namespace WilianMiranda01.VISTA
             this.btnAjustes.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAjustes.FlatAppearance.BorderSize = 0;
             this.btnAjustes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAjustes.IconChar = FontAwesome.Sharp.IconChar.Cogs;
-            this.btnAjustes.IconColor = System.Drawing.Color.White;
-            this.btnAjustes.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAjustes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAjustes.Image = global::ACAPOLAMI.Properties.Resources.ajustes;
             this.btnAjustes.Location = new System.Drawing.Point(0, 487);
             this.btnAjustes.Name = "btnAjustes";
             this.btnAjustes.Size = new System.Drawing.Size(200, 60);
-            this.btnAjustes.TabIndex = 6;
+            this.btnAjustes.TabIndex = 14;
             this.btnAjustes.Text = "Ajustes";
-            this.btnAjustes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAjustes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAjustes.UseVisualStyleBackColor = true;
             this.btnAjustes.Click += new System.EventHandler(this.btnAjustes_Click_1);
@@ -155,38 +140,29 @@ namespace WilianMiranda01.VISTA
             this.btnNotificaciones.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnNotificaciones.FlatAppearance.BorderSize = 0;
             this.btnNotificaciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNotificaciones.IconChar = FontAwesome.Sharp.IconChar.Bell;
-            this.btnNotificaciones.IconColor = System.Drawing.Color.White;
-            this.btnNotificaciones.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnNotificaciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNotificaciones.Image = global::ACAPOLAMI.Properties.Resources.notificacion;
             this.btnNotificaciones.Location = new System.Drawing.Point(0, 427);
             this.btnNotificaciones.Name = "btnNotificaciones";
             this.btnNotificaciones.Size = new System.Drawing.Size(200, 60);
-            this.btnNotificaciones.TabIndex = 5;
+            this.btnNotificaciones.TabIndex = 13;
             this.btnNotificaciones.Text = "Actividad";
-            this.btnNotificaciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNotificaciones.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNotificaciones.UseVisualStyleBackColor = true;
             this.btnNotificaciones.Click += new System.EventHandler(this.btnNotificaciones_Click_1);
             // 
             // btnClientes
             // 
-            this.btnClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(133)))), ((int)(((byte)(206)))));
             this.btnClientes.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnClientes.FlatAppearance.BorderSize = 0;
             this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClientes.IconChar = FontAwesome.Sharp.IconChar.AddressBook;
-            this.btnClientes.IconColor = System.Drawing.Color.White;
-            this.btnClientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClientes.Image = global::ACAPOLAMI.Properties.Resources.agenda;
             this.btnClientes.Location = new System.Drawing.Point(0, 367);
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Size = new System.Drawing.Size(200, 60);
-            this.btnClientes.TabIndex = 4;
+            this.btnClientes.TabIndex = 12;
             this.btnClientes.Text = "Clientes";
-            this.btnClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnClientes.UseVisualStyleBackColor = false;
+            this.btnClientes.UseVisualStyleBackColor = true;
             this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click_1);
             // 
             // btnPagos
@@ -194,16 +170,12 @@ namespace WilianMiranda01.VISTA
             this.btnPagos.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPagos.FlatAppearance.BorderSize = 0;
             this.btnPagos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPagos.IconChar = FontAwesome.Sharp.IconChar.MoneyBillWave;
-            this.btnPagos.IconColor = System.Drawing.Color.White;
-            this.btnPagos.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnPagos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPagos.Image = global::ACAPOLAMI.Properties.Resources.rupia;
             this.btnPagos.Location = new System.Drawing.Point(0, 307);
             this.btnPagos.Name = "btnPagos";
             this.btnPagos.Size = new System.Drawing.Size(200, 60);
-            this.btnPagos.TabIndex = 3;
+            this.btnPagos.TabIndex = 11;
             this.btnPagos.Text = "Pagos";
-            this.btnPagos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPagos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPagos.UseVisualStyleBackColor = true;
             this.btnPagos.Click += new System.EventHandler(this.btnPagos_Click);
@@ -213,16 +185,12 @@ namespace WilianMiranda01.VISTA
             this.btnReporte.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnReporte.FlatAppearance.BorderSize = 0;
             this.btnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReporte.IconChar = FontAwesome.Sharp.IconChar.ChartLine;
-            this.btnReporte.IconColor = System.Drawing.Color.White;
-            this.btnReporte.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnReporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReporte.Image = global::ACAPOLAMI.Properties.Resources.reportes;
             this.btnReporte.Location = new System.Drawing.Point(0, 247);
             this.btnReporte.Name = "btnReporte";
             this.btnReporte.Size = new System.Drawing.Size(200, 60);
-            this.btnReporte.TabIndex = 2;
-            this.btnReporte.Text = "Reporte";
-            this.btnReporte.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReporte.TabIndex = 10;
+            this.btnReporte.Text = "Reportes";
             this.btnReporte.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReporte.UseVisualStyleBackColor = true;
             this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click_1);
@@ -232,19 +200,34 @@ namespace WilianMiranda01.VISTA
             this.btnPrincipal.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPrincipal.FlatAppearance.BorderSize = 0;
             this.btnPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrincipal.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.btnPrincipal.IconColor = System.Drawing.Color.White;
-            this.btnPrincipal.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnPrincipal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrincipal.Image = global::ACAPOLAMI.Properties.Resources.casa;
             this.btnPrincipal.Location = new System.Drawing.Point(0, 187);
             this.btnPrincipal.Name = "btnPrincipal";
             this.btnPrincipal.Size = new System.Drawing.Size(200, 60);
-            this.btnPrincipal.TabIndex = 1;
+            this.btnPrincipal.TabIndex = 9;
             this.btnPrincipal.Text = "Dashboard";
-            this.btnPrincipal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPrincipal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPrincipal.UseVisualStyleBackColor = true;
             this.btnPrincipal.Click += new System.EventHandler(this.btnPrincipal_Click_1);
+            // 
+            // btnCerrarSesión
+            // 
+            this.btnCerrarSesión.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
+            this.btnCerrarSesión.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnCerrarSesión.FlatAppearance.BorderSize = 0;
+            this.btnCerrarSesión.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarSesión.Image = global::ACAPOLAMI.Properties.Resources.salida__1_;
+            this.btnCerrarSesión.Location = new System.Drawing.Point(0, 640);
+            this.btnCerrarSesión.Name = "btnCerrarSesión";
+            this.btnCerrarSesión.Size = new System.Drawing.Size(200, 41);
+            this.btnCerrarSesión.TabIndex = 8;
+            this.btnCerrarSesión.Text = "Cerrar Sesión";
+            this.btnCerrarSesión.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnCerrarSesión.UseVisualStyleBackColor = false;
+            this.btnCerrarSesión.Click += new System.EventHandler(this.btnCerrarSesión_Click);
+            this.btnCerrarSesión.MouseLeave += new System.EventHandler(this.btnCerrarSesión_MouseLeave);
+            this.btnCerrarSesión.MouseHover += new System.EventHandler(this.btnCerrarSesión_MouseHover);
+            this.btnCerrarSesión.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnCerrarSesión_MouseMove);
             // 
             // pnlLogo
             // 
@@ -269,8 +252,8 @@ namespace WilianMiranda01.VISTA
             // bntMinimizarMenu
             // 
             this.bntMinimizarMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(133)))), ((int)(((byte)(206)))));
-            this.bntMinimizarMenu.BackgroundImage = global::ACAPOLAMI.Properties.Resources._588a64e0d06f6719692a2d10;
-            this.bntMinimizarMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bntMinimizarMenu.BackgroundImage = global::ACAPOLAMI.Properties.Resources.mas;
+            this.bntMinimizarMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bntMinimizarMenu.Dock = System.Windows.Forms.DockStyle.Right;
             this.bntMinimizarMenu.FlatAppearance.BorderSize = 0;
             this.bntMinimizarMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -354,10 +337,9 @@ namespace WilianMiranda01.VISTA
             // 
             // pnlPanelPadre
             // 
-            this.pnlPanelPadre.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlPanelPadre.BackColor = System.Drawing.Color.White;
             this.pnlPanelPadre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pnlPanelPadre.Controls.Add(this.lblFecha);
-            this.pnlPanelPadre.Controls.Add(this.lblHora);
+            this.pnlPanelPadre.Controls.Add(this.pnlHoraFecha);
             this.pnlPanelPadre.Controls.Add(this.pictureBox1);
             this.pnlPanelPadre.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlPanelPadre.Location = new System.Drawing.Point(200, 29);
@@ -365,31 +347,42 @@ namespace WilianMiranda01.VISTA
             this.pnlPanelPadre.Size = new System.Drawing.Size(1064, 652);
             this.pnlPanelPadre.TabIndex = 55;
             // 
-            // lblFecha
+            // pnlHoraFecha
             // 
-            this.lblFecha.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblFecha.AutoSize = true;
-            this.lblFecha.Font = new System.Drawing.Font("Arial", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.ForeColor = System.Drawing.Color.DimGray;
-            this.lblFecha.Location = new System.Drawing.Point(179, 461);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(183, 63);
-            this.lblFecha.TabIndex = 2;
-            this.lblFecha.Text = "Fecha";
-            this.lblFecha.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pnlHoraFecha.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pnlHoraFecha.Controls.Add(this.lblHora);
+            this.pnlHoraFecha.Controls.Add(this.lblFecha);
+            this.pnlHoraFecha.Location = new System.Drawing.Point(395, 386);
+            this.pnlHoraFecha.Name = "pnlHoraFecha";
+            this.pnlHoraFecha.Size = new System.Drawing.Size(280, 146);
+            this.pnlHoraFecha.TabIndex = 3;
             // 
             // lblHora
             // 
-            this.lblHora.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblHora.AutoSize = true;
+            this.lblHora.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblHora.Font = new System.Drawing.Font("Arial", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHora.ForeColor = System.Drawing.Color.Black;
-            this.lblHora.Location = new System.Drawing.Point(261, 383);
+            this.lblHora.Location = new System.Drawing.Point(0, 0);
             this.lblHora.Name = "lblHora";
             this.lblHora.Size = new System.Drawing.Size(185, 78);
             this.lblHora.TabIndex = 1;
             this.lblHora.Text = "Hora";
             this.lblHora.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lblFecha.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.ForeColor = System.Drawing.Color.DimGray;
+            this.lblFecha.Location = new System.Drawing.Point(0, 114);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.lblFecha.Size = new System.Drawing.Size(104, 32);
+            this.lblFecha.TabIndex = 2;
+            this.lblFecha.Text = "Fecha";
+            this.lblFecha.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
             // 
@@ -434,7 +427,8 @@ namespace WilianMiranda01.VISTA
             this.pnlCabezaPrincipal.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.pnlPanelPadre.ResumeLayout(false);
-            this.pnlPanelPadre.PerformLayout();
+            this.pnlHoraFecha.ResumeLayout(false);
+            this.pnlHoraFecha.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -442,13 +436,7 @@ namespace WilianMiranda01.VISTA
 
         #endregion
         private System.Windows.Forms.Panel pnlMenu;
-        private FontAwesome.Sharp.IconButton btnAjustes;
-        private FontAwesome.Sharp.IconButton btnNotificaciones;
-        private FontAwesome.Sharp.IconButton btnPagos;
-        private FontAwesome.Sharp.IconButton btnReporte;
-        private FontAwesome.Sharp.IconButton btnPrincipal;
         private System.Windows.Forms.Panel pnlLogo;
-        public FontAwesome.Sharp.IconButton btnClientes;
         public System.Windows.Forms.PictureBox btnInicio;
         private System.Windows.Forms.Panel pnlCabezaPrincipal;
         private System.Windows.Forms.Panel panel3;
@@ -461,9 +449,16 @@ namespace WilianMiranda01.VISTA
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Timer tmrTiempo;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label lblNombreUSuario;
         private System.Windows.Forms.Button btnCerrarSesión;
+        private System.Windows.Forms.Panel pnlHoraFecha;
+        private System.Windows.Forms.Button btnPrincipal;
+        private System.Windows.Forms.Button btnPagos;
+        private System.Windows.Forms.Button btnReporte;
+        private System.Windows.Forms.Button btnNotificaciones;
+        private System.Windows.Forms.Button btnClientes;
+        private System.Windows.Forms.Button btnAjustes;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label lblNombreUSuario;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

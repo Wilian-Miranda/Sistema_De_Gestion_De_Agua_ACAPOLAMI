@@ -135,20 +135,20 @@ namespace WilianMiranda01
 
         private void btnRegistroUsuario_MouseHover(object sender, EventArgs e)
         {
-            btn.BotonAzulClaro = btnRegistroUsuario;
-            button.AzulClaro(btn);
-        }
-
-        private void btnRegistroUsuario_MouseLeave(object sender, EventArgs e)
-        {
             btn.BotonAzulOscuro = btnRegistroUsuario;
             button.AzulOscuro(btn);
         }
 
+        private void btnRegistroUsuario_MouseLeave(object sender, EventArgs e)
+        {
+            btn.BotonAzulMedio = btnRegistroUsuario;
+            button.AzulMedio(btn);
+        }
+
         private void btnRegistroUsuario_MouseMove(object sender, MouseEventArgs e)
         {
-            btn.BotonAzulClaro = btnRegistroUsuario;
-            button.AzulClaro(btn);
+            btn.BotonAzulOscuro = btnRegistroUsuario;
+            button.AzulOscuro(btn);
         }
 
         int posX = 0;
