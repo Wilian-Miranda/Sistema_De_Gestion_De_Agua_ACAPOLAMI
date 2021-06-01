@@ -63,6 +63,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
@@ -75,6 +76,9 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="Zeroit.Framework.ListView">
+      <HintPath>..\..\..\..\..\Desktop\Hotel_Vanilla\Hotel_Vanilla\packages\Zeroit.Framework.ListView.1.0.0\lib\Zeroit.Framework.ListView.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CDD\cddActividad.Designer.cs">
@@ -178,17 +182,17 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="VISTA\FrmActividades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VISTA\FrmActividades.Designer.cs">
+      <DependentUpon>FrmActividades.cs</DependentUpon>
+    </Compile>
     <Compile Include="VISTA\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="VISTA\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="VISTA\FrmActividad.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="VISTA\FrmActividad.Designer.cs">
-      <DependentUpon>FrmActividad.cs</DependentUpon>
     </Compile>
     <Compile Include="VISTA\FrmAgregarPago.cs">
       <SubType>Form</SubType>
@@ -268,11 +272,11 @@
     <Compile Include="VISTA\FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="VISTA\FrmClientes.cs">
+    <Compile Include="VISTA\FrmConsumidores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VISTA\FrmClientes.Designer.cs">
-      <DependentUpon>FrmClientes.cs</DependentUpon>
+    <Compile Include="VISTA\FrmConsumidores.Designer.cs">
+      <DependentUpon>FrmConsumidores.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -288,11 +292,11 @@
     <EmbeddedResource Include="REPORTES\ConsumidoresPorComunidad.rdlc" />
     <EmbeddedResource Include="REPORTES\GPagosPorAnio.rdlc" />
     <EmbeddedResource Include="REPORTES\PagosPorAnioPorConsumidor.rdlc" />
+    <EmbeddedResource Include="VISTA\FrmActividades.resx">
+      <DependentUpon>FrmActividades.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VISTA\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VISTA\FrmActividad.resx">
-      <DependentUpon>FrmActividad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VISTA\FrmAgregarPago.resx">
       <DependentUpon>FrmAgregarPago.cs</DependentUpon>
@@ -333,8 +337,8 @@
     <EmbeddedResource Include="VISTA\FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VISTA\FrmClientes.resx">
-      <DependentUpon>FrmClientes.cs</DependentUpon>
+    <EmbeddedResource Include="VISTA\FrmConsumidores.resx">
+      <DependentUpon>FrmConsumidores.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="CDD\cddActividad.xsc">
       <DependentUpon>cddActividad.xsd</DependentUpon>
@@ -449,6 +453,7 @@
     <None Include="Resources\cancelWhite.png" />
     <None Include="Resources\Sucesswhite.png" />
     <None Include="Resources\logoInvertido.png" />
+    <None Include="Resources\logoCerrado.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

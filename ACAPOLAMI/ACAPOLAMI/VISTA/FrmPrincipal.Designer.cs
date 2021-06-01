@@ -34,18 +34,6 @@ namespace WilianMiranda01.VISTA
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblNombreUSuario = new System.Windows.Forms.Label();
-            this.pnlLogo = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.pnlCabezaPrincipal = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.pnlPanelPadre = new System.Windows.Forms.Panel();
-            this.pnlHoraFecha = new System.Windows.Forms.Panel();
-            this.lblHora = new System.Windows.Forms.Label();
-            this.lblFecha = new System.Windows.Forms.Label();
-            this.tmrTiempo = new System.Windows.Forms.Timer(this.components);
-            this.btnMinimizarAplicacion = new System.Windows.Forms.Button();
-            this.btnCerrarAplicacion = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnAjustes = new System.Windows.Forms.Button();
             this.btnNotificaciones = new System.Windows.Forms.Button();
@@ -54,19 +42,31 @@ namespace WilianMiranda01.VISTA
             this.btnReporte = new System.Windows.Forms.Button();
             this.btnPrincipal = new System.Windows.Forms.Button();
             this.btnCerrarSesión = new System.Windows.Forms.Button();
+            this.pnlLogo = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.bntMinimizarMenu = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.PictureBox();
+            this.pnlCabezaPrincipal = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnMinimizarAplicacion = new System.Windows.Forms.Button();
+            this.btnCerrarAplicacion = new System.Windows.Forms.Button();
+            this.pnlPanelPadre = new System.Windows.Forms.Panel();
+            this.pnlHoraFecha = new System.Windows.Forms.Panel();
+            this.lblHora = new System.Windows.Forms.Label();
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tmrTiempo = new System.Windows.Forms.Timer(this.components);
             this.pnlMenu.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnlLogo.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnInicio)).BeginInit();
             this.pnlCabezaPrincipal.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pnlPanelPadre.SuspendLayout();
             this.pnlHoraFecha.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnInicio)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -110,6 +110,128 @@ namespace WilianMiranda01.VISTA
             this.lblNombreUSuario.Text = "Usuario";
             this.lblNombreUSuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox2.Location = new System.Drawing.Point(55, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(80, 61);
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // btnAjustes
+            // 
+            this.btnAjustes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAjustes.FlatAppearance.BorderSize = 0;
+            this.btnAjustes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAjustes.Image = global::ACAPOLAMI.Properties.Resources.ajustes;
+            this.btnAjustes.Location = new System.Drawing.Point(0, 487);
+            this.btnAjustes.Name = "btnAjustes";
+            this.btnAjustes.Size = new System.Drawing.Size(200, 60);
+            this.btnAjustes.TabIndex = 14;
+            this.btnAjustes.Text = "   Ajustes";
+            this.btnAjustes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAjustes.UseVisualStyleBackColor = true;
+            this.btnAjustes.Click += new System.EventHandler(this.btnAjustes_Click_1);
+            // 
+            // btnNotificaciones
+            // 
+            this.btnNotificaciones.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnNotificaciones.FlatAppearance.BorderSize = 0;
+            this.btnNotificaciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNotificaciones.Image = global::ACAPOLAMI.Properties.Resources.notificacion;
+            this.btnNotificaciones.Location = new System.Drawing.Point(0, 427);
+            this.btnNotificaciones.Name = "btnNotificaciones";
+            this.btnNotificaciones.Size = new System.Drawing.Size(200, 60);
+            this.btnNotificaciones.TabIndex = 13;
+            this.btnNotificaciones.Text = "   Actividad";
+            this.btnNotificaciones.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnNotificaciones.UseVisualStyleBackColor = true;
+            this.btnNotificaciones.Click += new System.EventHandler(this.btnNotificaciones_Click_1);
+            // 
+            // btnClientes
+            // 
+            this.btnClientes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnClientes.FlatAppearance.BorderSize = 0;
+            this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClientes.Image = global::ACAPOLAMI.Properties.Resources.agenda;
+            this.btnClientes.Location = new System.Drawing.Point(0, 367);
+            this.btnClientes.Name = "btnClientes";
+            this.btnClientes.Size = new System.Drawing.Size(200, 60);
+            this.btnClientes.TabIndex = 12;
+            this.btnClientes.Text = " Consumidores";
+            this.btnClientes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnClientes.UseVisualStyleBackColor = true;
+            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click_1);
+            // 
+            // btnPagos
+            // 
+            this.btnPagos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPagos.FlatAppearance.BorderSize = 0;
+            this.btnPagos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPagos.Image = global::ACAPOLAMI.Properties.Resources.rupia;
+            this.btnPagos.Location = new System.Drawing.Point(0, 307);
+            this.btnPagos.Name = "btnPagos";
+            this.btnPagos.Size = new System.Drawing.Size(200, 60);
+            this.btnPagos.TabIndex = 11;
+            this.btnPagos.Text = "   Pagos";
+            this.btnPagos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPagos.UseVisualStyleBackColor = true;
+            this.btnPagos.Click += new System.EventHandler(this.btnPagos_Click);
+            // 
+            // btnReporte
+            // 
+            this.btnReporte.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReporte.FlatAppearance.BorderSize = 0;
+            this.btnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReporte.Image = global::ACAPOLAMI.Properties.Resources.reportes;
+            this.btnReporte.Location = new System.Drawing.Point(0, 247);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(200, 60);
+            this.btnReporte.TabIndex = 10;
+            this.btnReporte.Text = "   Reportes";
+            this.btnReporte.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReporte.UseVisualStyleBackColor = true;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click_1);
+            // 
+            // btnPrincipal
+            // 
+            this.btnPrincipal.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPrincipal.FlatAppearance.BorderSize = 0;
+            this.btnPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrincipal.Image = global::ACAPOLAMI.Properties.Resources.casa;
+            this.btnPrincipal.Location = new System.Drawing.Point(0, 187);
+            this.btnPrincipal.Name = "btnPrincipal";
+            this.btnPrincipal.Size = new System.Drawing.Size(200, 60);
+            this.btnPrincipal.TabIndex = 9;
+            this.btnPrincipal.Text = "   Dashboard";
+            this.btnPrincipal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPrincipal.UseVisualStyleBackColor = true;
+            this.btnPrincipal.Click += new System.EventHandler(this.btnPrincipal_Click_1);
+            // 
+            // btnCerrarSesión
+            // 
+            this.btnCerrarSesión.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
+            this.btnCerrarSesión.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnCerrarSesión.FlatAppearance.BorderSize = 0;
+            this.btnCerrarSesión.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarSesión.Image = global::ACAPOLAMI.Properties.Resources.salida__1_;
+            this.btnCerrarSesión.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCerrarSesión.Location = new System.Drawing.Point(0, 640);
+            this.btnCerrarSesión.Name = "btnCerrarSesión";
+            this.btnCerrarSesión.Size = new System.Drawing.Size(200, 41);
+            this.btnCerrarSesión.TabIndex = 8;
+            this.btnCerrarSesión.Text = "     Cerrar Sesión";
+            this.btnCerrarSesión.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCerrarSesión.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCerrarSesión.UseVisualStyleBackColor = false;
+            this.btnCerrarSesión.Click += new System.EventHandler(this.btnCerrarSesión_Click);
+            this.btnCerrarSesión.MouseLeave += new System.EventHandler(this.btnCerrarSesión_MouseLeave);
+            this.btnCerrarSesión.MouseHover += new System.EventHandler(this.btnCerrarSesión_MouseHover);
+            this.btnCerrarSesión.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnCerrarSesión_MouseMove);
+            // 
             // pnlLogo
             // 
             this.pnlLogo.Controls.Add(this.panel4);
@@ -129,6 +251,34 @@ namespace WilianMiranda01.VISTA
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(200, 30);
             this.panel4.TabIndex = 2;
+            // 
+            // bntMinimizarMenu
+            // 
+            this.bntMinimizarMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(133)))), ((int)(((byte)(206)))));
+            this.bntMinimizarMenu.BackgroundImage = global::ACAPOLAMI.Properties.Resources.mas;
+            this.bntMinimizarMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bntMinimizarMenu.Dock = System.Windows.Forms.DockStyle.Right;
+            this.bntMinimizarMenu.FlatAppearance.BorderSize = 0;
+            this.bntMinimizarMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bntMinimizarMenu.Location = new System.Drawing.Point(150, 0);
+            this.bntMinimizarMenu.Name = "bntMinimizarMenu";
+            this.bntMinimizarMenu.Size = new System.Drawing.Size(50, 30);
+            this.bntMinimizarMenu.TabIndex = 1;
+            this.bntMinimizarMenu.UseVisualStyleBackColor = false;
+            this.bntMinimizarMenu.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnInicio
+            // 
+            this.btnInicio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.btnInicio.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnInicio.Image = global::ACAPOLAMI.Properties.Resources.gif2;
+            this.btnInicio.Location = new System.Drawing.Point(0, 29);
+            this.btnInicio.Name = "btnInicio";
+            this.btnInicio.Size = new System.Drawing.Size(200, 158);
+            this.btnInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnInicio.TabIndex = 0;
+            this.btnInicio.TabStop = false;
+            this.btnInicio.Click += new System.EventHandler(this.ptrLogo_Click);
             // 
             // pnlCabezaPrincipal
             // 
@@ -150,6 +300,43 @@ namespace WilianMiranda01.VISTA
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(59, 30);
             this.panel3.TabIndex = 14;
+            // 
+            // btnMinimizarAplicacion
+            // 
+            this.btnMinimizarAplicacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
+            this.btnMinimizarAplicacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMinimizarAplicacion.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMinimizarAplicacion.FlatAppearance.BorderSize = 0;
+            this.btnMinimizarAplicacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimizarAplicacion.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizarAplicacion.Image")));
+            this.btnMinimizarAplicacion.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnMinimizarAplicacion.Location = new System.Drawing.Point(3, 0);
+            this.btnMinimizarAplicacion.Name = "btnMinimizarAplicacion";
+            this.btnMinimizarAplicacion.Size = new System.Drawing.Size(26, 30);
+            this.btnMinimizarAplicacion.TabIndex = 2;
+            this.btnMinimizarAplicacion.UseVisualStyleBackColor = false;
+            this.btnMinimizarAplicacion.Click += new System.EventHandler(this.btnMinimizarAplicacion_Click);
+            this.btnMinimizarAplicacion.MouseLeave += new System.EventHandler(this.btnMinimizarAplicacion_MouseLeave);
+            this.btnMinimizarAplicacion.MouseHover += new System.EventHandler(this.btnMinimizarAplicacion_MouseHover);
+            this.btnMinimizarAplicacion.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnMinimizarAplicacion_MouseMove);
+            // 
+            // btnCerrarAplicacion
+            // 
+            this.btnCerrarAplicacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
+            this.btnCerrarAplicacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCerrarAplicacion.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnCerrarAplicacion.FlatAppearance.BorderSize = 0;
+            this.btnCerrarAplicacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarAplicacion.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarAplicacion.Image")));
+            this.btnCerrarAplicacion.Location = new System.Drawing.Point(29, 0);
+            this.btnCerrarAplicacion.Name = "btnCerrarAplicacion";
+            this.btnCerrarAplicacion.Size = new System.Drawing.Size(30, 30);
+            this.btnCerrarAplicacion.TabIndex = 0;
+            this.btnCerrarAplicacion.UseVisualStyleBackColor = false;
+            this.btnCerrarAplicacion.Click += new System.EventHandler(this.btnCerrarAplicacion_Click);
+            this.btnCerrarAplicacion.MouseLeave += new System.EventHandler(this.btnCerrarAplicacion_MouseLeave);
+            this.btnCerrarAplicacion.MouseHover += new System.EventHandler(this.btnCerrarAplicacion_MouseHover);
+            this.btnCerrarAplicacion.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnCerrarAplicacion_MouseMove);
             // 
             // pnlPanelPadre
             // 
@@ -200,48 +387,6 @@ namespace WilianMiranda01.VISTA
             this.lblFecha.Text = "Fecha";
             this.lblFecha.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // tmrTiempo
-            // 
-            this.tmrTiempo.Enabled = true;
-            this.tmrTiempo.Tick += new System.EventHandler(this.tmrTiempo_Tick);
-            // 
-            // btnMinimizarAplicacion
-            // 
-            this.btnMinimizarAplicacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
-            this.btnMinimizarAplicacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnMinimizarAplicacion.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnMinimizarAplicacion.FlatAppearance.BorderSize = 0;
-            this.btnMinimizarAplicacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimizarAplicacion.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizarAplicacion.Image")));
-            this.btnMinimizarAplicacion.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnMinimizarAplicacion.Location = new System.Drawing.Point(3, 0);
-            this.btnMinimizarAplicacion.Name = "btnMinimizarAplicacion";
-            this.btnMinimizarAplicacion.Size = new System.Drawing.Size(26, 30);
-            this.btnMinimizarAplicacion.TabIndex = 2;
-            this.btnMinimizarAplicacion.UseVisualStyleBackColor = false;
-            this.btnMinimizarAplicacion.Click += new System.EventHandler(this.btnMinimizarAplicacion_Click);
-            this.btnMinimizarAplicacion.MouseLeave += new System.EventHandler(this.btnMinimizarAplicacion_MouseLeave);
-            this.btnMinimizarAplicacion.MouseHover += new System.EventHandler(this.btnMinimizarAplicacion_MouseHover);
-            this.btnMinimizarAplicacion.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnMinimizarAplicacion_MouseMove);
-            // 
-            // btnCerrarAplicacion
-            // 
-            this.btnCerrarAplicacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
-            this.btnCerrarAplicacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCerrarAplicacion.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnCerrarAplicacion.FlatAppearance.BorderSize = 0;
-            this.btnCerrarAplicacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarAplicacion.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarAplicacion.Image")));
-            this.btnCerrarAplicacion.Location = new System.Drawing.Point(29, 0);
-            this.btnCerrarAplicacion.Name = "btnCerrarAplicacion";
-            this.btnCerrarAplicacion.Size = new System.Drawing.Size(30, 30);
-            this.btnCerrarAplicacion.TabIndex = 0;
-            this.btnCerrarAplicacion.UseVisualStyleBackColor = false;
-            this.btnCerrarAplicacion.Click += new System.EventHandler(this.btnCerrarAplicacion_Click);
-            this.btnCerrarAplicacion.MouseLeave += new System.EventHandler(this.btnCerrarAplicacion_MouseLeave);
-            this.btnCerrarAplicacion.MouseHover += new System.EventHandler(this.btnCerrarAplicacion_MouseHover);
-            this.btnCerrarAplicacion.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnCerrarAplicacion_MouseMove);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -253,154 +398,10 @@ namespace WilianMiranda01.VISTA
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBox2
+            // tmrTiempo
             // 
-            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(55, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(80, 61);
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
-            // btnAjustes
-            // 
-            this.btnAjustes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAjustes.FlatAppearance.BorderSize = 0;
-            this.btnAjustes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAjustes.Image = global::ACAPOLAMI.Properties.Resources.ajustes;
-            this.btnAjustes.Location = new System.Drawing.Point(0, 487);
-            this.btnAjustes.Name = "btnAjustes";
-            this.btnAjustes.Size = new System.Drawing.Size(200, 60);
-            this.btnAjustes.TabIndex = 14;
-            this.btnAjustes.Text = "Ajustes";
-            this.btnAjustes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAjustes.UseVisualStyleBackColor = true;
-            this.btnAjustes.Click += new System.EventHandler(this.btnAjustes_Click_1);
-            // 
-            // btnNotificaciones
-            // 
-            this.btnNotificaciones.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnNotificaciones.FlatAppearance.BorderSize = 0;
-            this.btnNotificaciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNotificaciones.Image = global::ACAPOLAMI.Properties.Resources.notificacion;
-            this.btnNotificaciones.Location = new System.Drawing.Point(0, 427);
-            this.btnNotificaciones.Name = "btnNotificaciones";
-            this.btnNotificaciones.Size = new System.Drawing.Size(200, 60);
-            this.btnNotificaciones.TabIndex = 13;
-            this.btnNotificaciones.Text = "Actividad";
-            this.btnNotificaciones.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnNotificaciones.UseVisualStyleBackColor = true;
-            this.btnNotificaciones.Click += new System.EventHandler(this.btnNotificaciones_Click_1);
-            // 
-            // btnClientes
-            // 
-            this.btnClientes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnClientes.FlatAppearance.BorderSize = 0;
-            this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClientes.Image = global::ACAPOLAMI.Properties.Resources.agenda;
-            this.btnClientes.Location = new System.Drawing.Point(0, 367);
-            this.btnClientes.Name = "btnClientes";
-            this.btnClientes.Size = new System.Drawing.Size(200, 60);
-            this.btnClientes.TabIndex = 12;
-            this.btnClientes.Text = "Clientes";
-            this.btnClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnClientes.UseVisualStyleBackColor = true;
-            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click_1);
-            // 
-            // btnPagos
-            // 
-            this.btnPagos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPagos.FlatAppearance.BorderSize = 0;
-            this.btnPagos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPagos.Image = global::ACAPOLAMI.Properties.Resources.rupia;
-            this.btnPagos.Location = new System.Drawing.Point(0, 307);
-            this.btnPagos.Name = "btnPagos";
-            this.btnPagos.Size = new System.Drawing.Size(200, 60);
-            this.btnPagos.TabIndex = 11;
-            this.btnPagos.Text = "Pagos";
-            this.btnPagos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPagos.UseVisualStyleBackColor = true;
-            this.btnPagos.Click += new System.EventHandler(this.btnPagos_Click);
-            // 
-            // btnReporte
-            // 
-            this.btnReporte.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnReporte.FlatAppearance.BorderSize = 0;
-            this.btnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReporte.Image = global::ACAPOLAMI.Properties.Resources.reportes;
-            this.btnReporte.Location = new System.Drawing.Point(0, 247);
-            this.btnReporte.Name = "btnReporte";
-            this.btnReporte.Size = new System.Drawing.Size(200, 60);
-            this.btnReporte.TabIndex = 10;
-            this.btnReporte.Text = "Reportes";
-            this.btnReporte.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnReporte.UseVisualStyleBackColor = true;
-            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click_1);
-            // 
-            // btnPrincipal
-            // 
-            this.btnPrincipal.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPrincipal.FlatAppearance.BorderSize = 0;
-            this.btnPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrincipal.Image = global::ACAPOLAMI.Properties.Resources.casa;
-            this.btnPrincipal.Location = new System.Drawing.Point(0, 187);
-            this.btnPrincipal.Name = "btnPrincipal";
-            this.btnPrincipal.Size = new System.Drawing.Size(200, 60);
-            this.btnPrincipal.TabIndex = 9;
-            this.btnPrincipal.Text = "Dashboard";
-            this.btnPrincipal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPrincipal.UseVisualStyleBackColor = true;
-            this.btnPrincipal.Click += new System.EventHandler(this.btnPrincipal_Click_1);
-            // 
-            // btnCerrarSesión
-            // 
-            this.btnCerrarSesión.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
-            this.btnCerrarSesión.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnCerrarSesión.FlatAppearance.BorderSize = 0;
-            this.btnCerrarSesión.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarSesión.Image = global::ACAPOLAMI.Properties.Resources.salida__1_;
-            this.btnCerrarSesión.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarSesión.Location = new System.Drawing.Point(0, 640);
-            this.btnCerrarSesión.Name = "btnCerrarSesión";
-            this.btnCerrarSesión.Size = new System.Drawing.Size(200, 41);
-            this.btnCerrarSesión.TabIndex = 8;
-            this.btnCerrarSesión.Text = "     Cerrar Sesión";
-            this.btnCerrarSesión.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCerrarSesión.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCerrarSesión.UseVisualStyleBackColor = false;
-            this.btnCerrarSesión.Click += new System.EventHandler(this.btnCerrarSesión_Click);
-            this.btnCerrarSesión.MouseLeave += new System.EventHandler(this.btnCerrarSesión_MouseLeave);
-            this.btnCerrarSesión.MouseHover += new System.EventHandler(this.btnCerrarSesión_MouseHover);
-            this.btnCerrarSesión.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnCerrarSesión_MouseMove);
-            // 
-            // bntMinimizarMenu
-            // 
-            this.bntMinimizarMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(133)))), ((int)(((byte)(206)))));
-            this.bntMinimizarMenu.BackgroundImage = global::ACAPOLAMI.Properties.Resources.mas;
-            this.bntMinimizarMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bntMinimizarMenu.Dock = System.Windows.Forms.DockStyle.Right;
-            this.bntMinimizarMenu.FlatAppearance.BorderSize = 0;
-            this.bntMinimizarMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bntMinimizarMenu.Location = new System.Drawing.Point(150, 0);
-            this.bntMinimizarMenu.Name = "bntMinimizarMenu";
-            this.bntMinimizarMenu.Size = new System.Drawing.Size(50, 30);
-            this.bntMinimizarMenu.TabIndex = 1;
-            this.bntMinimizarMenu.UseVisualStyleBackColor = false;
-            this.bntMinimizarMenu.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnInicio
-            // 
-            this.btnInicio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.btnInicio.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnInicio.Image = global::ACAPOLAMI.Properties.Resources.gif2;
-            this.btnInicio.Location = new System.Drawing.Point(0, 29);
-            this.btnInicio.Name = "btnInicio";
-            this.btnInicio.Size = new System.Drawing.Size(200, 158);
-            this.btnInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnInicio.TabIndex = 0;
-            this.btnInicio.TabStop = false;
-            this.btnInicio.Click += new System.EventHandler(this.ptrLogo_Click);
+            this.tmrTiempo.Enabled = true;
+            this.tmrTiempo.Tick += new System.EventHandler(this.tmrTiempo_Tick);
             // 
             // FmrPrincipal
             // 
@@ -424,16 +425,16 @@ namespace WilianMiranda01.VISTA
             this.pnlMenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnlLogo.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnInicio)).EndInit();
             this.pnlCabezaPrincipal.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.pnlPanelPadre.ResumeLayout(false);
             this.pnlHoraFecha.ResumeLayout(false);
             this.pnlHoraFecha.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnInicio)).EndInit();
             this.ResumeLayout(false);
 
         }

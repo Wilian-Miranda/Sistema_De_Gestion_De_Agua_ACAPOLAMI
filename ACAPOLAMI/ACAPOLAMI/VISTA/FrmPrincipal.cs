@@ -71,7 +71,7 @@ namespace WilianMiranda01.VISTA
         private void btnNotificaciones_Click_1(object sender, EventArgs e)
         {
             // Se pasa como parametro el objeto sender; el boton que es seleccionado, y un color.
-            AbrirFormEnPanel<FrmActividad>();
+            AbrirFormEnPanel<FrmActividades>();
             BotonActivo(sender, Color.White);
             this.Text = "ACAPOLAMI - Actividad";
         }
@@ -189,7 +189,6 @@ namespace WilianMiranda01.VISTA
             {
                 formulario.Close();
                 Reiniciar();
-                //MessageBox.Show("Le das click :v");
             }
         }
 
@@ -221,7 +220,7 @@ namespace WilianMiranda01.VISTA
         {
             if (pnlMenu.Width == 200)
             {
-                btnInicio.Image = ACAPOLAMI.Properties.Resources.logoInvertido;
+                btnInicio.Image = ACAPOLAMI.Properties.Resources.logoCerrado;
                 bntMinimizarMenu.Dock = DockStyle.Left;
                 pnlMenu.Width = 53;
                 BorrarTextoBotonPanelMenu();

@@ -302,7 +302,6 @@ C:\Users\kembe\OneDrive\Documentos\GitHub\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ACAP
 C:\Users\Manuel Perlera\Documents\GitHub\Sistema_De_Gestion_De_Agua_ACAPOLAMI\ACAPOLAMI\ACAPOLAMI\obj\Debug\ACAPOLAMI.csprojAssemblyReference.cache
 C:\Users\Manuel Perlera\Documents\GitHub\Sistema_De_Gestion_De_Agua_ACAPOLAMI\ACAPOLAMI\ACAPOLAMI\obj\Debug\ACAPOLAMI.Properties.Resources.resources
 C:\Users\Manuel Perlera\Documents\GitHub\Sistema_De_Gestion_De_Agua_ACAPOLAMI\ACAPOLAMI\ACAPOLAMI\obj\Debug\WilianMiranda01.Form1.resources
-C:\Users\Manuel Perlera\Documents\GitHub\Sistema_De_Gestion_De_Agua_ACAPOLAMI\ACAPOLAMI\ACAPOLAMI\obj\Debug\ACAPOLAMI.VISTA.FrmActividad.resources
 C:\Users\Manuel Perlera\Documents\GitHub\Sistema_De_Gestion_De_Agua_ACAPOLAMI\ACAPOLAMI\ACAPOLAMI\obj\Debug\ACAPOLAMI.VISTA.FrmAgregarPago.resources
 C:\Users\Manuel Perlera\Documents\GitHub\Sistema_De_Gestion_De_Agua_ACAPOLAMI\ACAPOLAMI\ACAPOLAMI\obj\Debug\ACAPOLAMI.VISTA.FrmAjustes.resources
 C:\Users\Manuel Perlera\Documents\GitHub\Sistema_De_Gestion_De_Agua_ACAPOLAMI\ACAPOLAMI\ACAPOLAMI\obj\Debug\ACAPOLAMI.VISTA.FrmConsumidoresPorComunidad.resources
@@ -388,3 +387,5 @@ C:\Users\Manuel Perlera\Documents\GitHub\Sistema_De_Gestion_De_Agua_ACAPOLAMI\AC
 C:\Users\Manuel Perlera\Documents\GitHub\Sistema_De_Gestion_De_Agua_ACAPOLAMI\ACAPOLAMI\ACAPOLAMI\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Manuel Perlera\Documents\GitHub\Sistema_De_Gestion_De_Agua_ACAPOLAMI\ACAPOLAMI\ACAPOLAMI\obj\Debug\ACAPOLAMI.csproj.CopyComplete
 C:\Users\Manuel Perlera\Documents\GitHub\Sistema_De_Gestion_De_Agua_ACAPOLAMI\ACAPOLAMI\ACAPOLAMI\obj\Debug\ACAPOLAMI.VISTA.FrmNotificaciones.resources
+C:\Users\Manuel Perlera\Documents\GitHub\Sistema_De_Gestion_De_Agua_ACAPOLAMI\ACAPOLAMI\ACAPOLAMI\bin\Debug\Zeroit.Framework.ListView.dll
+C:\Users\Manuel Perlera\Documents\GitHub\Sistema_De_Gestion_De_Agua_ACAPOLAMI\ACAPOLAMI\ACAPOLAMI\obj\Debug\ACAPOLAMI.VISTA.FrmActividades.resources
