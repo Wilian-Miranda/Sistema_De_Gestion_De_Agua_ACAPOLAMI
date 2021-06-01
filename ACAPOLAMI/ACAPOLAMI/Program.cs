@@ -19,7 +19,7 @@ namespace ACAPOLAMI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FmrPrincipal());
+            Application.Run(new Form1());
         }
     }
 }

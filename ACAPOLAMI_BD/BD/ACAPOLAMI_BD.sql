@@ -52,7 +52,7 @@ CREATE TABLE Pagos(
 
 CREATE TABLE Sucesos(
 	idSuceso int not null IDENTITY PRIMARY KEY,
-	fechaSuceso date,
+	fechaSuceso datetime,
 	tipoSuceso varchar(20),
 	descripcion varchar(300),
 );

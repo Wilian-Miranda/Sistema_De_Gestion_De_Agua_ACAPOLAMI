@@ -33,5 +33,17 @@ namespace ACAPOLAMI.DAO
                 return listaSucesos;
             }
         }
+
+        //Metodo para mostrar todos los sucesos
+        public List<Sucesos> CargarHistorial()
+        {
+            List<Sucesos> listaSucesos = new List<Sucesos>();
+            using (ACAPOLAMIEntities db = new ACAPOLAMIEntities())
+            {
+                listaSucesos = db.Sucesos.ToList();
+
+                return listaSucesos;
+            }
+        }
     }
 }

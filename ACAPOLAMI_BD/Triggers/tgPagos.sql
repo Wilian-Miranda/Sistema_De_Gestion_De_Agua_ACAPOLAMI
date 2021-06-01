@@ -27,7 +27,7 @@ BEGIN
 	inner join Estados c
 	on i.idEstado_FK = c.idEstado;
 
-	INSERT INTO Sucesos VALUES((SELECT CONVERT(VARCHAR(10), GETDATE(), 3)), 'Pagos', 'Se ha Insertado el registro con Id: ' +@id+ 
+	INSERT INTO Sucesos VALUES(GETDATE(), 'Pagos', 'Se ha Insertado el registro con Id: ' +@id+ 
 	', Monto: ' + cast(@monto as varchar)+ 
 	', Monto cancelado: ' +cast(@cancelado as varchar)+
 	', Monto pendiente: ' +cast(@pendiente as varchar)+
@@ -63,7 +63,7 @@ BEGIN
 	inner join Estados c
 	on i.idEstado_FK = c.idEstado;
 
-	INSERT INTO Sucesos VALUES((SELECT CONVERT(VARCHAR(10), GETDATE(), 3)), 'Pagos', 'Se ha Actualizado el registro con Id: ' +@id+ 
+	INSERT INTO Sucesos VALUES(GETDATE(), 'Pagos', 'Se ha Actualizado el registro con Id: ' +@id+ 
 	', Monto: ' + cast(@monto as varchar)+ 
 	', Monto cancelado: ' +cast(@cancelado as varchar)+
 	', Monto pendiente: ' +cast(@pendiente as varchar)+
@@ -99,7 +99,7 @@ BEGIN
 	inner join Estados c
 	on i.idEstado_FK = c.idEstado;
 
-	INSERT INTO Sucesos VALUES((SELECT CONVERT(VARCHAR(10), GETDATE(), 3)), 'Pagos', 'Se ha Eliminado el registro con Id: ' +@id+ 
+	INSERT INTO Sucesos VALUES(GETDATE(), 'Pagos', 'Se ha Eliminado el registro con Id: ' +@id+ 
 	', Monto: ' + cast(@monto as varchar)+ 
 	', Monto cancelado: ' +cast(@cancelado as varchar)+
 	', Monto pendiente: ' +cast(@pendiente as varchar)+

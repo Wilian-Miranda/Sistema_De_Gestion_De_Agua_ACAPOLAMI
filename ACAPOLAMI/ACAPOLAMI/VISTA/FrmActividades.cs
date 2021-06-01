@@ -31,9 +31,9 @@ namespace ACAPOLAMI.VISTA
             listaSucesos.HideSelection = false;
 
             listaSucesos.Columns.Add("Id", 0, HorizontalAlignment.Left);
-            listaSucesos.Columns.Add("Fecha", 150, HorizontalAlignment.Left);
+            listaSucesos.Columns.Add("Fecha", 100, HorizontalAlignment.Left);
             listaSucesos.Columns.Add("Tipo suceso", 150, HorizontalAlignment.Left);
-            listaSucesos.Columns.Add("Descripcion", 1250, HorizontalAlignment.Left);
+            listaSucesos.Columns.Add("Descripcion", 1200, HorizontalAlignment.Left);
         }
 
         private void CargarSucesos(string id, DateTime fecha, string tipo, string descripcion)
@@ -78,6 +78,31 @@ namespace ACAPOLAMI.VISTA
             {
                 CargarSucesos(suceso.idSuceso.ToString(), (DateTime)suceso.fechaSuceso, suceso.tipoSuceso, suceso.descripcion);
             }
+        }
+
+        private void FrmActividades_Load(object sender, EventArgs e)
+        {
+            ConfigurarListView();
+            CargarListaSucesos();
+        }
+
+        private void btnHistorial_Click(object sender, EventArgs e)
+        {
+            ConfigurarListView();
+            var listaSucesos = sucesos.CargarHistorial();
+            foreach (var suceso in listaSucesos)
+            {
+                CargarSucesos(suceso.idSuceso.ToString(), (DateTime)suceso.fechaSuceso, suceso.tipoSuceso, suceso.descripcion);
+            }
+
+            lblTexto.Text = "Todos los sucesos";
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            ConfigurarListView();
+            CargarListaSucesos();
+            lblTexto.Text = "Ultimos 20 sucesos";
         }
     }
 }

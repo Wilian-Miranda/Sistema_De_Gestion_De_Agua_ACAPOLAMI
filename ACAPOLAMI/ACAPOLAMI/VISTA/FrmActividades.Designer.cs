@@ -35,8 +35,9 @@ namespace ACAPOLAMI.VISTA
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.btnHistorial = new FontAwesome.Sharp.IconButton();
             this.btnActualizar = new FontAwesome.Sharp.IconButton();
+            this.lblTexto = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -45,21 +46,27 @@ namespace ACAPOLAMI.VISTA
             // 
             // panel4
             // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel4.Controls.Add(this.iconButton1);
+            this.panel4.Controls.Add(this.lblTexto);
+            this.panel4.Controls.Add(this.btnHistorial);
             this.panel4.Controls.Add(this.btnActualizar);
             this.panel4.Controls.Add(this.lstActividades);
             this.panel4.Controls.Add(this.dataGridView1);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel4.ForeColor = System.Drawing.Color.Black;
-            this.panel4.Location = new System.Drawing.Point(33, 107);
+            this.panel4.Location = new System.Drawing.Point(20, 116);
             this.panel4.Name = "panel4";
             this.panel4.Padding = new System.Windows.Forms.Padding(20);
-            this.panel4.Size = new System.Drawing.Size(998, 516);
+            this.panel4.Size = new System.Drawing.Size(1024, 516);
             this.panel4.TabIndex = 10;
             // 
             // lstActividades
             // 
+            this.lstActividades.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lstActividades.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lstActividades.CellBorderFocused = new Zeroit.Framework.ListView.Editors.PenPainter.PenPainter(System.Drawing.Color.White, 1F, System.Drawing.Drawing2D.DashStyle.Solid);
             this.lstActividades.CellBorderUnFocused = new Zeroit.Framework.ListView.Editors.PenPainter.PenPainter(System.Drawing.Color.White, 1F, System.Drawing.Drawing2D.DashStyle.Solid);
@@ -68,7 +75,7 @@ namespace ACAPOLAMI.VISTA
             this.lstActividades.FillFocused = new Zeroit.Framework.ListView.Editors.Brushes.BrushPainter();
             this.lstActividades.FillUnfocused = new Zeroit.Framework.ListView.Editors.Brushes.BrushPainter(System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255))))));
             this.lstActividades.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstActividades.ForeColor = System.Drawing.Color.DimGray;
+            this.lstActividades.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lstActividades.HeaderAlignment = Zeroit.Framework.ListView.ZeroitListView.headerAlignment.Center;
             this.lstActividades.HeaderBorder = new Zeroit.Framework.ListView.Editors.PenPainter.PenPainter(System.Drawing.Color.White, 1F, System.Drawing.Drawing2D.DashStyle.Solid);
             this.lstActividades.HeaderColor = System.Drawing.Color.White;
@@ -77,7 +84,7 @@ namespace ACAPOLAMI.VISTA
             this.lstActividades.HideSelection = false;
             this.lstActividades.LineColor = System.Drawing.Color.White;
             this.lstActividades.LineHeight = 1;
-            this.lstActividades.Location = new System.Drawing.Point(23, 21);
+            this.lstActividades.Location = new System.Drawing.Point(28, 29);
             this.lstActividades.Name = "lstActividades";
             this.lstActividades.NumberStyles = ((System.Globalization.NumberStyles)((((((((System.Globalization.NumberStyles.AllowLeadingWhite | System.Globalization.NumberStyles.AllowTrailingWhite) 
             | System.Globalization.NumberStyles.AllowLeadingSign) 
@@ -92,7 +99,7 @@ namespace ACAPOLAMI.VISTA
             this.lstActividades.ShowBorder = false;
             this.lstActividades.ShowCellBorder = false;
             this.lstActividades.ShowHeaderLine = false;
-            this.lstActividades.Size = new System.Drawing.Size(972, 414);
+            this.lstActividades.Size = new System.Drawing.Size(968, 406);
             this.lstActividades.Smoothing = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             this.lstActividades.SubTextColor = System.Drawing.Color.Red;
             this.lstActividades.SurrondBorder = false;
@@ -114,30 +121,30 @@ namespace ACAPOLAMI.VISTA
             this.dataGridView1.Location = new System.Drawing.Point(23, 23);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(952, 471);
+            this.dataGridView1.Size = new System.Drawing.Size(978, 471);
             this.dataGridView1.TabIndex = 0;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.MenuBar;
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(33, 29);
+            this.panel1.Location = new System.Drawing.Point(20, 29);
             this.panel1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(0, 20, 0, 0);
-            this.panel1.Size = new System.Drawing.Size(998, 89);
+            this.panel1.Size = new System.Drawing.Size(1024, 89);
             this.panel1.TabIndex = 9;
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 20);
             this.panel2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(998, 50);
+            this.panel2.Size = new System.Drawing.Size(1024, 50);
             this.panel2.TabIndex = 7;
             // 
             // label1
@@ -145,36 +152,61 @@ namespace ACAPOLAMI.VISTA
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(390, 14);
+            this.label1.Location = new System.Drawing.Point(403, 14);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(210, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "REGISTRO DE ACTIVIDAD";
             // 
-            // iconButton1
+            // btnHistorial
             // 
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.ListUl;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 35;
-            this.iconButton1.Location = new System.Drawing.Point(865, 441);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(110, 41);
-            this.iconButton1.TabIndex = 16;
-            this.iconButton1.UseVisualStyleBackColor = true;
+            this.btnHistorial.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHistorial.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnHistorial.FlatAppearance.BorderSize = 0;
+            this.btnHistorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHistorial.ForeColor = System.Drawing.Color.White;
+            this.btnHistorial.IconChar = FontAwesome.Sharp.IconChar.ListUl;
+            this.btnHistorial.IconColor = System.Drawing.Color.White;
+            this.btnHistorial.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnHistorial.IconSize = 35;
+            this.btnHistorial.Location = new System.Drawing.Point(868, 441);
+            this.btnHistorial.Name = "btnHistorial";
+            this.btnHistorial.Size = new System.Drawing.Size(127, 41);
+            this.btnHistorial.TabIndex = 16;
+            this.btnHistorial.UseVisualStyleBackColor = false;
+            this.btnHistorial.Click += new System.EventHandler(this.btnHistorial_Click);
             // 
             // btnActualizar
             // 
+            this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnActualizar.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnActualizar.FlatAppearance.BorderSize = 0;
+            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizar.ForeColor = System.Drawing.Color.White;
             this.btnActualizar.IconChar = FontAwesome.Sharp.IconChar.ListOl;
-            this.btnActualizar.IconColor = System.Drawing.Color.Black;
+            this.btnActualizar.IconColor = System.Drawing.Color.White;
             this.btnActualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnActualizar.IconSize = 40;
-            this.btnActualizar.Location = new System.Drawing.Point(708, 441);
+            this.btnActualizar.Location = new System.Drawing.Point(735, 441);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(127, 41);
             this.btnActualizar.TabIndex = 15;
-            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
+            // lblTexto
+            // 
+            this.lblTexto.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTexto.AutoSize = true;
+            this.lblTexto.BackColor = System.Drawing.Color.White;
+            this.lblTexto.ForeColor = System.Drawing.Color.Black;
+            this.lblTexto.Location = new System.Drawing.Point(40, 441);
+            this.lblTexto.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblTexto.Name = "lblTexto";
+            this.lblTexto.Size = new System.Drawing.Size(158, 19);
+            this.lblTexto.TabIndex = 1;
+            this.lblTexto.Text = "Ultimos 20 sucesos";
             // 
             // FrmActividades
             // 
@@ -188,8 +220,11 @@ namespace ACAPOLAMI.VISTA
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "FrmActividades";
             this.Padding = new System.Windows.Forms.Padding(33, 29, 33, 29);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmActividades";
+            this.Load += new System.EventHandler(this.FrmActividades_Load);
             this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -201,12 +236,13 @@ namespace ACAPOLAMI.VISTA
         #endregion
 
         private System.Windows.Forms.Panel panel4;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton btnHistorial;
         private FontAwesome.Sharp.IconButton btnActualizar;
         private Zeroit.Framework.ListView.ZeroitListView lstActividades;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTexto;
     }
 }

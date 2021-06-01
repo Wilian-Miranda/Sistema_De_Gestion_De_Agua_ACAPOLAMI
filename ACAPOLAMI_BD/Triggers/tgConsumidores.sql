@@ -22,7 +22,7 @@ BEGIN
 	FROM inserted i inner join Comunidades b
 	on i.idComunidad_FK = b.idComunidad;
 
-	INSERT INTO Sucesos VALUES((SELECT CONVERT(VARCHAR(10), GETDATE(), 3)), 'Consumidores', 'Se ha Insertado el registro con Id: ' +@id+ 
+	INSERT INTO Sucesos VALUES(GETDATE(), 'Consumidores', 'Se ha Insertado el registro con Id: ' +@id+ 
 	', Nombres: ' + @nombres + 
 	', Apellidos: ' +@apellidos+
 	', DUI: '+@dui+
@@ -52,7 +52,7 @@ BEGIN
 	FROM inserted i inner join Comunidades b
 	on i.idComunidad_FK = b.idComunidad;
 
-	INSERT INTO Sucesos VALUES((SELECT CONVERT(VARCHAR(10), GETDATE(), 3)), 'Consumidores', 'Se ha Actualizado el registro con Id: ' +@id+ 
+	INSERT INTO Sucesos VALUES(GETDATE(), 'Consumidores', 'Se ha Actualizado el registro con Id: ' +@id+ 
 	', Nombres: ' + @nombres+
 	', Apellidos: ' +@apellidos+
 	', DUI: '+@dui+
@@ -82,7 +82,7 @@ BEGIN
 	FROM deleted i inner join Comunidades b
 	on i.idComunidad_FK = b.idComunidad;
 
-	INSERT INTO Sucesos VALUES((SELECT CONVERT(VARCHAR(10), GETDATE(), 3)), 'Consumidores', 'Se ha Eliminado el registro con Id: ' +@id+ 
+	INSERT INTO Sucesos VALUES(GETDATE(), 'Consumidores', 'Se ha Eliminado el registro con Id: ' +@id+ 
 	', Nombres: ' + @nombres+
 	', Apellidos: ' +@apellidos+
 	', DUI: '+@dui+
