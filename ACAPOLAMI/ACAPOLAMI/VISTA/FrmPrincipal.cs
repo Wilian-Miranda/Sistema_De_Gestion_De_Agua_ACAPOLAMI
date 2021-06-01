@@ -50,6 +50,7 @@ namespace WilianMiranda01.VISTA
             // Se pasa como parametro el objeto sender; el boton que es seleccionado, y un color.
             BotonActivo(sender, Color.White);
             AbrirFormEnPanel<FrmPagos>();
+            this.Text = "ACAPOLAMI - Pagos";
 
         }
 
@@ -58,6 +59,7 @@ namespace WilianMiranda01.VISTA
             // Se pasa como parametro el objeto sender; el boton que es seleccionado, y un color.
             BotonActivo(sender, Color.White);
             AbrirFormEnPanel<FrmDashboard>();
+            this.Text = "ACAPOLAMI - Dashboard";
         }
 
         private void btnAjustes_Click_1(object sender, EventArgs e)
@@ -71,12 +73,14 @@ namespace WilianMiranda01.VISTA
             // Se pasa como parametro el objeto sender; el boton que es seleccionado, y un color.
             AbrirFormEnPanel<FrmActividad>();
             BotonActivo(sender, Color.White);
+            this.Text = "ACAPOLAMI - Actividad";
         }
 
         private void btnReporte_Click_1(object sender, EventArgs e)
         {
             // Se pasa como parametro el objeto sender; el boton que es seleccionado, y un color.
             BotonActivo(sender, Color.White);
+            this.Text = "ACAPOLAMI - Reportes";
         }
 
         private void btnClientes_Click_1(object sender, EventArgs e)
@@ -85,6 +89,7 @@ namespace WilianMiranda01.VISTA
             BotonActivo(sender, Color.White);
 
             AbrirFormEnPanel<FrmClientes>();
+            this.Text = "ACAPOLAMI - Consumidores";
         }
 
         public void DesactivarResaltado()
@@ -216,7 +221,7 @@ namespace WilianMiranda01.VISTA
         {
             if (pnlMenu.Width == 200)
             {
-                btnInicio.Image = ACAPOLAMI.Properties.Resources.gif;
+                btnInicio.Image = ACAPOLAMI.Properties.Resources.logoInvertido;
                 bntMinimizarMenu.Dock = DockStyle.Left;
                 pnlMenu.Width = 53;
                 BorrarTextoBotonPanelMenu();

@@ -34,6 +34,18 @@ namespace WilianMiranda01.VISTA
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblNombreUSuario = new System.Windows.Forms.Label();
+            this.pnlLogo = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.pnlCabezaPrincipal = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pnlPanelPadre = new System.Windows.Forms.Panel();
+            this.pnlHoraFecha = new System.Windows.Forms.Panel();
+            this.lblHora = new System.Windows.Forms.Label();
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.tmrTiempo = new System.Windows.Forms.Timer(this.components);
+            this.btnMinimizarAplicacion = new System.Windows.Forms.Button();
+            this.btnCerrarAplicacion = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnAjustes = new System.Windows.Forms.Button();
             this.btnNotificaciones = new System.Windows.Forms.Button();
@@ -42,31 +54,19 @@ namespace WilianMiranda01.VISTA
             this.btnReporte = new System.Windows.Forms.Button();
             this.btnPrincipal = new System.Windows.Forms.Button();
             this.btnCerrarSesión = new System.Windows.Forms.Button();
-            this.pnlLogo = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.bntMinimizarMenu = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.PictureBox();
-            this.pnlCabezaPrincipal = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnMinimizarAplicacion = new System.Windows.Forms.Button();
-            this.btnCerrarAplicacion = new System.Windows.Forms.Button();
-            this.pnlPanelPadre = new System.Windows.Forms.Panel();
-            this.pnlHoraFecha = new System.Windows.Forms.Panel();
-            this.lblHora = new System.Windows.Forms.Label();
-            this.lblFecha = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tmrTiempo = new System.Windows.Forms.Timer(this.components);
             this.pnlMenu.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnlLogo.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnInicio)).BeginInit();
             this.pnlCabezaPrincipal.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pnlPanelPadre.SuspendLayout();
             this.pnlHoraFecha.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnInicio)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -101,15 +101,157 @@ namespace WilianMiranda01.VISTA
             // lblNombreUSuario
             // 
             this.lblNombreUSuario.AutoSize = true;
-            this.lblNombreUSuario.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lblNombreUSuario.LiveSetting = System.Windows.Forms.Automation.AutomationLiveSetting.Polite;
-            this.lblNombreUSuario.Location = new System.Drawing.Point(0, 68);
+            this.lblNombreUSuario.Location = new System.Drawing.Point(46, 71);
             this.lblNombreUSuario.Name = "lblNombreUSuario";
             this.lblNombreUSuario.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.lblNombreUSuario.Size = new System.Drawing.Size(84, 19);
             this.lblNombreUSuario.TabIndex = 1;
             this.lblNombreUSuario.Text = "Usuario";
             this.lblNombreUSuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pnlLogo
+            // 
+            this.pnlLogo.Controls.Add(this.panel4);
+            this.pnlLogo.Controls.Add(this.btnInicio);
+            this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlLogo.Location = new System.Drawing.Point(0, 0);
+            this.pnlLogo.Name = "pnlLogo";
+            this.pnlLogo.Size = new System.Drawing.Size(200, 187);
+            this.pnlLogo.TabIndex = 0;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(133)))), ((int)(((byte)(206)))));
+            this.panel4.Controls.Add(this.bntMinimizarMenu);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(200, 30);
+            this.panel4.TabIndex = 2;
+            // 
+            // pnlCabezaPrincipal
+            // 
+            this.pnlCabezaPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
+            this.pnlCabezaPrincipal.Controls.Add(this.panel3);
+            this.pnlCabezaPrincipal.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlCabezaPrincipal.Location = new System.Drawing.Point(200, 0);
+            this.pnlCabezaPrincipal.Name = "pnlCabezaPrincipal";
+            this.pnlCabezaPrincipal.Size = new System.Drawing.Size(1064, 30);
+            this.pnlCabezaPrincipal.TabIndex = 56;
+            this.pnlCabezaPrincipal.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlCabezaPrincipal_MouseMove);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btnMinimizarAplicacion);
+            this.panel3.Controls.Add(this.btnCerrarAplicacion);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(1005, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(59, 30);
+            this.panel3.TabIndex = 14;
+            // 
+            // pnlPanelPadre
+            // 
+            this.pnlPanelPadre.BackColor = System.Drawing.Color.White;
+            this.pnlPanelPadre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pnlPanelPadre.Controls.Add(this.pnlHoraFecha);
+            this.pnlPanelPadre.Controls.Add(this.pictureBox1);
+            this.pnlPanelPadre.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlPanelPadre.Location = new System.Drawing.Point(200, 29);
+            this.pnlPanelPadre.Name = "pnlPanelPadre";
+            this.pnlPanelPadre.Size = new System.Drawing.Size(1064, 652);
+            this.pnlPanelPadre.TabIndex = 55;
+            // 
+            // pnlHoraFecha
+            // 
+            this.pnlHoraFecha.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pnlHoraFecha.Controls.Add(this.lblHora);
+            this.pnlHoraFecha.Controls.Add(this.lblFecha);
+            this.pnlHoraFecha.Location = new System.Drawing.Point(395, 386);
+            this.pnlHoraFecha.Name = "pnlHoraFecha";
+            this.pnlHoraFecha.Size = new System.Drawing.Size(280, 146);
+            this.pnlHoraFecha.TabIndex = 3;
+            // 
+            // lblHora
+            // 
+            this.lblHora.AutoSize = true;
+            this.lblHora.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblHora.Font = new System.Drawing.Font("Arial", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHora.ForeColor = System.Drawing.Color.Black;
+            this.lblHora.Location = new System.Drawing.Point(0, 0);
+            this.lblHora.Name = "lblHora";
+            this.lblHora.Size = new System.Drawing.Size(185, 78);
+            this.lblHora.TabIndex = 1;
+            this.lblHora.Text = "Hora";
+            this.lblHora.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lblFecha.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.ForeColor = System.Drawing.Color.DimGray;
+            this.lblFecha.Location = new System.Drawing.Point(0, 114);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.lblFecha.Size = new System.Drawing.Size(104, 32);
+            this.lblFecha.TabIndex = 2;
+            this.lblFecha.Text = "Fecha";
+            this.lblFecha.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tmrTiempo
+            // 
+            this.tmrTiempo.Enabled = true;
+            this.tmrTiempo.Tick += new System.EventHandler(this.tmrTiempo_Tick);
+            // 
+            // btnMinimizarAplicacion
+            // 
+            this.btnMinimizarAplicacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
+            this.btnMinimizarAplicacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMinimizarAplicacion.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMinimizarAplicacion.FlatAppearance.BorderSize = 0;
+            this.btnMinimizarAplicacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimizarAplicacion.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizarAplicacion.Image")));
+            this.btnMinimizarAplicacion.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnMinimizarAplicacion.Location = new System.Drawing.Point(3, 0);
+            this.btnMinimizarAplicacion.Name = "btnMinimizarAplicacion";
+            this.btnMinimizarAplicacion.Size = new System.Drawing.Size(26, 30);
+            this.btnMinimizarAplicacion.TabIndex = 2;
+            this.btnMinimizarAplicacion.UseVisualStyleBackColor = false;
+            this.btnMinimizarAplicacion.Click += new System.EventHandler(this.btnMinimizarAplicacion_Click);
+            this.btnMinimizarAplicacion.MouseLeave += new System.EventHandler(this.btnMinimizarAplicacion_MouseLeave);
+            this.btnMinimizarAplicacion.MouseHover += new System.EventHandler(this.btnMinimizarAplicacion_MouseHover);
+            this.btnMinimizarAplicacion.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnMinimizarAplicacion_MouseMove);
+            // 
+            // btnCerrarAplicacion
+            // 
+            this.btnCerrarAplicacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
+            this.btnCerrarAplicacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCerrarAplicacion.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnCerrarAplicacion.FlatAppearance.BorderSize = 0;
+            this.btnCerrarAplicacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarAplicacion.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarAplicacion.Image")));
+            this.btnCerrarAplicacion.Location = new System.Drawing.Point(29, 0);
+            this.btnCerrarAplicacion.Name = "btnCerrarAplicacion";
+            this.btnCerrarAplicacion.Size = new System.Drawing.Size(30, 30);
+            this.btnCerrarAplicacion.TabIndex = 0;
+            this.btnCerrarAplicacion.UseVisualStyleBackColor = false;
+            this.btnCerrarAplicacion.Click += new System.EventHandler(this.btnCerrarAplicacion_Click);
+            this.btnCerrarAplicacion.MouseLeave += new System.EventHandler(this.btnCerrarAplicacion_MouseLeave);
+            this.btnCerrarAplicacion.MouseHover += new System.EventHandler(this.btnCerrarAplicacion_MouseHover);
+            this.btnCerrarAplicacion.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnCerrarAplicacion_MouseMove);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Image = global::ACAPOLAMI.Properties.Resources.gif2;
+            this.pictureBox1.Location = new System.Drawing.Point(395, 117);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(280, 263);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -232,26 +374,6 @@ namespace WilianMiranda01.VISTA
             this.btnCerrarSesión.MouseHover += new System.EventHandler(this.btnCerrarSesión_MouseHover);
             this.btnCerrarSesión.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnCerrarSesión_MouseMove);
             // 
-            // pnlLogo
-            // 
-            this.pnlLogo.Controls.Add(this.panel4);
-            this.pnlLogo.Controls.Add(this.btnInicio);
-            this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlLogo.Location = new System.Drawing.Point(0, 0);
-            this.pnlLogo.Name = "pnlLogo";
-            this.pnlLogo.Size = new System.Drawing.Size(200, 187);
-            this.pnlLogo.TabIndex = 0;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(133)))), ((int)(((byte)(206)))));
-            this.panel4.Controls.Add(this.bntMinimizarMenu);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(200, 30);
-            this.panel4.TabIndex = 2;
-            // 
             // bntMinimizarMenu
             // 
             this.bntMinimizarMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(133)))), ((int)(((byte)(206)))));
@@ -280,129 +402,6 @@ namespace WilianMiranda01.VISTA
             this.btnInicio.TabStop = false;
             this.btnInicio.Click += new System.EventHandler(this.ptrLogo_Click);
             // 
-            // pnlCabezaPrincipal
-            // 
-            this.pnlCabezaPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
-            this.pnlCabezaPrincipal.Controls.Add(this.panel3);
-            this.pnlCabezaPrincipal.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlCabezaPrincipal.Location = new System.Drawing.Point(200, 0);
-            this.pnlCabezaPrincipal.Name = "pnlCabezaPrincipal";
-            this.pnlCabezaPrincipal.Size = new System.Drawing.Size(1064, 30);
-            this.pnlCabezaPrincipal.TabIndex = 56;
-            this.pnlCabezaPrincipal.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlCabezaPrincipal_MouseMove);
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.btnMinimizarAplicacion);
-            this.panel3.Controls.Add(this.btnCerrarAplicacion);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(1005, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(59, 30);
-            this.panel3.TabIndex = 14;
-            // 
-            // btnMinimizarAplicacion
-            // 
-            this.btnMinimizarAplicacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
-            this.btnMinimizarAplicacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnMinimizarAplicacion.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnMinimizarAplicacion.FlatAppearance.BorderSize = 0;
-            this.btnMinimizarAplicacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimizarAplicacion.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizarAplicacion.Image")));
-            this.btnMinimizarAplicacion.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnMinimizarAplicacion.Location = new System.Drawing.Point(3, 0);
-            this.btnMinimizarAplicacion.Name = "btnMinimizarAplicacion";
-            this.btnMinimizarAplicacion.Size = new System.Drawing.Size(26, 30);
-            this.btnMinimizarAplicacion.TabIndex = 2;
-            this.btnMinimizarAplicacion.UseVisualStyleBackColor = false;
-            this.btnMinimizarAplicacion.Click += new System.EventHandler(this.btnMinimizarAplicacion_Click);
-            this.btnMinimizarAplicacion.MouseLeave += new System.EventHandler(this.btnMinimizarAplicacion_MouseLeave);
-            this.btnMinimizarAplicacion.MouseHover += new System.EventHandler(this.btnMinimizarAplicacion_MouseHover);
-            this.btnMinimizarAplicacion.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnMinimizarAplicacion_MouseMove);
-            // 
-            // btnCerrarAplicacion
-            // 
-            this.btnCerrarAplicacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
-            this.btnCerrarAplicacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCerrarAplicacion.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnCerrarAplicacion.FlatAppearance.BorderSize = 0;
-            this.btnCerrarAplicacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarAplicacion.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarAplicacion.Image")));
-            this.btnCerrarAplicacion.Location = new System.Drawing.Point(29, 0);
-            this.btnCerrarAplicacion.Name = "btnCerrarAplicacion";
-            this.btnCerrarAplicacion.Size = new System.Drawing.Size(30, 30);
-            this.btnCerrarAplicacion.TabIndex = 0;
-            this.btnCerrarAplicacion.UseVisualStyleBackColor = false;
-            this.btnCerrarAplicacion.Click += new System.EventHandler(this.btnCerrarAplicacion_Click);
-            this.btnCerrarAplicacion.MouseLeave += new System.EventHandler(this.btnCerrarAplicacion_MouseLeave);
-            this.btnCerrarAplicacion.MouseHover += new System.EventHandler(this.btnCerrarAplicacion_MouseHover);
-            this.btnCerrarAplicacion.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnCerrarAplicacion_MouseMove);
-            // 
-            // pnlPanelPadre
-            // 
-            this.pnlPanelPadre.BackColor = System.Drawing.Color.White;
-            this.pnlPanelPadre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pnlPanelPadre.Controls.Add(this.pnlHoraFecha);
-            this.pnlPanelPadre.Controls.Add(this.pictureBox1);
-            this.pnlPanelPadre.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlPanelPadre.Location = new System.Drawing.Point(200, 29);
-            this.pnlPanelPadre.Name = "pnlPanelPadre";
-            this.pnlPanelPadre.Size = new System.Drawing.Size(1064, 652);
-            this.pnlPanelPadre.TabIndex = 55;
-            // 
-            // pnlHoraFecha
-            // 
-            this.pnlHoraFecha.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pnlHoraFecha.Controls.Add(this.lblHora);
-            this.pnlHoraFecha.Controls.Add(this.lblFecha);
-            this.pnlHoraFecha.Location = new System.Drawing.Point(395, 386);
-            this.pnlHoraFecha.Name = "pnlHoraFecha";
-            this.pnlHoraFecha.Size = new System.Drawing.Size(280, 146);
-            this.pnlHoraFecha.TabIndex = 3;
-            // 
-            // lblHora
-            // 
-            this.lblHora.AutoSize = true;
-            this.lblHora.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblHora.Font = new System.Drawing.Font("Arial", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHora.ForeColor = System.Drawing.Color.Black;
-            this.lblHora.Location = new System.Drawing.Point(0, 0);
-            this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(185, 78);
-            this.lblHora.TabIndex = 1;
-            this.lblHora.Text = "Hora";
-            this.lblHora.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblFecha
-            // 
-            this.lblFecha.AutoSize = true;
-            this.lblFecha.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lblFecha.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.ForeColor = System.Drawing.Color.DimGray;
-            this.lblFecha.Location = new System.Drawing.Point(0, 114);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.lblFecha.Size = new System.Drawing.Size(104, 32);
-            this.lblFecha.TabIndex = 2;
-            this.lblFecha.Text = "Fecha";
-            this.lblFecha.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = global::ACAPOLAMI.Properties.Resources.gif2;
-            this.pictureBox1.Location = new System.Drawing.Point(395, 117);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(280, 263);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // tmrTiempo
-            // 
-            this.tmrTiempo.Enabled = true;
-            this.tmrTiempo.Tick += new System.EventHandler(this.tmrTiempo_Tick);
-            // 
             // FmrPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
@@ -425,16 +424,16 @@ namespace WilianMiranda01.VISTA
             this.pnlMenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnlLogo.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnInicio)).EndInit();
             this.pnlCabezaPrincipal.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.pnlPanelPadre.ResumeLayout(false);
             this.pnlHoraFecha.ResumeLayout(false);
             this.pnlHoraFecha.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnInicio)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -16,13 +16,11 @@ namespace ACAPOLAMI.VISTA
 {
     public partial class FrmGestionConsumidores : Form
     {
+        ClsDSucesos sucesos = new ClsDSucesos();
         public FrmGestionConsumidores()
         {
             InitializeComponent();
             ListarComunidades();
-
-
-
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -266,7 +264,7 @@ namespace ACAPOLAMI.VISTA
             BorrarMensajesError();
             if(ValidarCajasTexto() && btnEjecutar.Text.Equals("Agregar consumidor"))
             {
-                //METODO PARA GUARDAR NUEVO CONSUMIDOR
+                //Metodo para guardar nuevo consumidor
                 ClsDConsumidores clsconsumidor = new ClsDConsumidores();
 
                 Consumidores consumidor = new Consumidores();
@@ -283,11 +281,15 @@ namespace ACAPOLAMI.VISTA
                 clsconsumidor.InsertarConsumidor(txtNombres.Text, txtApellidos.Text, txtDUI.Text, 
                     txtTelefono.Text, txtCorreo.Text, Convert.ToInt32(idComunidadSeleccionado));
 
+                FrmNotificaciones notificacion = new FrmNotificaciones(sucesos.CargarDatosSucesos().tipoSuceso,
+                            sucesos.CargarDatosSucesos().descripcion, FrmNotificaciones.TipoAlerta.Realizado);
+                notificacion.Show();
+
                 Limpiar();
             }
             else if (ValidarCajasTexto() && btnEjecutar.Text.Equals("Modificar registro"))
             {
-                //METODO PARA MODIFICAR RESGISTRO
+                //Metodo para guardar nuevo registro
                 try
                 {
                     ClsDConsumidores clsDconsumidores = new ClsDConsumidores();
@@ -295,6 +297,12 @@ namespace ACAPOLAMI.VISTA
                     clsDconsumidores.ActualizarConsumidor(Convert.ToInt32(txtCodigo.Text), txtNombres.Text,
                                                          txtApellidos.Text, txtDUI.Text, txtTelefono.Text,
                                                          Convert.ToInt32(cbComunidad.SelectedValue), txtCorreo.Text);
+
+                    FrmNotificaciones notificacion = new FrmNotificaciones(sucesos.CargarDatosSucesos().tipoSuceso,
+                            sucesos.CargarDatosSucesos().descripcion, FrmNotificaciones.TipoAlerta.Realizado);
+                    notificacion.Show();
+
+                    Limpiar();
                 }
 
                 catch (Exception ex)
@@ -306,7 +314,7 @@ namespace ACAPOLAMI.VISTA
             }
             else if (ValidarCajasTexto() && btnEjecutar.Text.Equals("Eliminar registro"))
             {
-                //METODO PARA ELIMINAR RESGISTRO
+                //Metodo para eliminar registro
                 try
                 {
                     using (ACAPOLAMIEntities db = new ACAPOLAMIEntities())
@@ -314,6 +322,10 @@ namespace ACAPOLAMI.VISTA
                         ClsDConsumidores clsDconsumidor = new ClsDConsumidores();
 
                         clsDconsumidor.EliminarConsumidor(Convert.ToInt32(txtCodigo.Text));
+
+                        FrmNotificaciones notificacion = new FrmNotificaciones(sucesos.CargarDatosSucesos().tipoSuceso,
+                            sucesos.CargarDatosSucesos().descripcion, FrmNotificaciones.TipoAlerta.Realizado);
+                        notificacion.Show();
 
                         this.Dispose();
                     }

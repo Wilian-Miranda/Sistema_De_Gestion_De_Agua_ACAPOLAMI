@@ -99,6 +99,7 @@
     </Compile>
     <Compile Include="DAO\ClsDComunidad.cs" />
     <Compile Include="DAO\ClsDConsumidores.cs" />
+    <Compile Include="DAO\ClsDSucesos.cs" />
     <Compile Include="DAO\ClsDUsuarios.cs" />
     <Compile Include="DAO\ClsDPagos.cs" />
     <Compile Include="DOMINIO\ButtonColor.cs" />
@@ -237,6 +238,12 @@
     <Compile Include="VISTA\FrmModificarPago.Designer.cs">
       <DependentUpon>FrmModificarPago.cs</DependentUpon>
     </Compile>
+    <Compile Include="VISTA\FrmNotificaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VISTA\FrmNotificaciones.Designer.cs">
+      <DependentUpon>FrmNotificaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="VISTA\FrmPagos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -310,6 +317,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VISTA\FrmModificarPago.resx">
       <DependentUpon>FrmModificarPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VISTA\FrmNotificaciones.resx">
+      <DependentUpon>FrmNotificaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VISTA\FrmPagos.resx">
       <DependentUpon>FrmPagos.cs</DependentUpon>
@@ -435,6 +445,10 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\WarnigWhite.png" />
+    <None Include="Resources\cancelWhite.png" />
+    <None Include="Resources\Sucesswhite.png" />
+    <None Include="Resources\logoInvertido.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

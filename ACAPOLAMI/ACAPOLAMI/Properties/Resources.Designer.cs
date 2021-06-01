@@ -133,6 +133,16 @@ namespace ACAPOLAMI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cancelWhite {
+            get {
+                object obj = ResourceManager.GetObject("cancelWhite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap casa {
             get {
                 object obj = ResourceManager.GetObject("casa", resourceCulture);
@@ -206,6 +216,16 @@ namespace ACAPOLAMI.Properties {
         internal static System.Drawing.Bitmap LOGO {
             get {
                 object obj = ResourceManager.GetObject("LOGO", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logoInvertido {
+            get {
+                object obj = ResourceManager.GetObject("logoInvertido", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -306,6 +326,26 @@ namespace ACAPOLAMI.Properties {
         internal static System.Drawing.Bitmap salida__1_ {
             get {
                 object obj = ResourceManager.GetObject("salida (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sucesswhite {
+            get {
+                object obj = ResourceManager.GetObject("Sucesswhite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WarnigWhite {
+            get {
+                object obj = ResourceManager.GetObject("WarnigWhite", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

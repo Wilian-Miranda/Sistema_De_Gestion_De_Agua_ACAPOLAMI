@@ -30,8 +30,11 @@ namespace ACAPOLAMI.VISTA
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGestionConsumidores));
             this.pnlEncabezado = new System.Windows.Forms.Panel();
             this.lblEncabezado = new System.Windows.Forms.Label();
+            this.btnCerrarGestionConsumidores = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pnlBorde = new System.Windows.Forms.Panel();
             this.pnlContenedorPrincipal = new System.Windows.Forms.Panel();
@@ -54,14 +57,12 @@ namespace ACAPOLAMI.VISTA
             this.lblId = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.ControlValidacion = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btnCerrarGestionConsumidores = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlEncabezado.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlBorde.SuspendLayout();
             this.pnlContenedorPrincipal.SuspendLayout();
             this.pnlDatosConsumidor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ControlValidacion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlEncabezado
@@ -88,6 +89,36 @@ namespace ACAPOLAMI.VISTA
             this.lblEncabezado.Size = new System.Drawing.Size(304, 33);
             this.lblEncabezado.TabIndex = 0;
             this.lblEncabezado.Text = "NUEVO CONSUMIDOR";
+            // 
+            // btnCerrarGestionConsumidores
+            // 
+            this.btnCerrarGestionConsumidores.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrarGestionConsumidores.BackgroundImage = global::ACAPOLAMI.Properties.Resources.window_close_icon_135015__1_;
+            this.btnCerrarGestionConsumidores.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCerrarGestionConsumidores.FlatAppearance.BorderSize = 0;
+            this.btnCerrarGestionConsumidores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarGestionConsumidores.Location = new System.Drawing.Point(595, 12);
+            this.btnCerrarGestionConsumidores.Name = "btnCerrarGestionConsumidores";
+            this.btnCerrarGestionConsumidores.Size = new System.Drawing.Size(43, 39);
+            this.btnCerrarGestionConsumidores.TabIndex = 0;
+            this.btnCerrarGestionConsumidores.UseVisualStyleBackColor = true;
+            this.btnCerrarGestionConsumidores.Click += new System.EventHandler(this.button1_Click);
+            this.btnCerrarGestionConsumidores.MouseLeave += new System.EventHandler(this.btnCerrarGestionConsumidores_MouseLeave);
+            this.btnCerrarGestionConsumidores.MouseHover += new System.EventHandler(this.btnCerrarGestionConsumidores_MouseHover);
+            this.btnCerrarGestionConsumidores.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnCerrarGestionConsumidores_MouseMove);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox1.Image = global::ACAPOLAMI.Properties.Resources.gif;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(53, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // panel3
             // 
@@ -359,36 +390,6 @@ namespace ACAPOLAMI.VISTA
             // 
             this.ControlValidacion.ContainerControl = this;
             // 
-            // btnCerrarGestionConsumidores
-            // 
-            this.btnCerrarGestionConsumidores.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCerrarGestionConsumidores.BackgroundImage = global::ACAPOLAMI.Properties.Resources.window_close_icon_135015__1_;
-            this.btnCerrarGestionConsumidores.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCerrarGestionConsumidores.FlatAppearance.BorderSize = 0;
-            this.btnCerrarGestionConsumidores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarGestionConsumidores.Location = new System.Drawing.Point(595, 12);
-            this.btnCerrarGestionConsumidores.Name = "btnCerrarGestionConsumidores";
-            this.btnCerrarGestionConsumidores.Size = new System.Drawing.Size(43, 39);
-            this.btnCerrarGestionConsumidores.TabIndex = 0;
-            this.btnCerrarGestionConsumidores.UseVisualStyleBackColor = true;
-            this.btnCerrarGestionConsumidores.Click += new System.EventHandler(this.button1_Click);
-            this.btnCerrarGestionConsumidores.MouseLeave += new System.EventHandler(this.btnCerrarGestionConsumidores_MouseLeave);
-            this.btnCerrarGestionConsumidores.MouseHover += new System.EventHandler(this.btnCerrarGestionConsumidores_MouseHover);
-            this.btnCerrarGestionConsumidores.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnCerrarGestionConsumidores_MouseMove);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox1.Image = global::ACAPOLAMI.Properties.Resources.gif;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(53, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // FrmGestionConsumidores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
@@ -400,19 +401,20 @@ namespace ACAPOLAMI.VISTA
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "FrmGestionConsumidores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmGestionConsumidores";
+            this.Text = "Gestion Consumidores";
             this.Load += new System.EventHandler(this.FrmGestionConsumidores_Load);
             this.pnlEncabezado.ResumeLayout(false);
             this.pnlEncabezado.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlBorde.ResumeLayout(false);
             this.pnlContenedorPrincipal.ResumeLayout(false);
             this.pnlDatosConsumidor.ResumeLayout(false);
             this.pnlDatosConsumidor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ControlValidacion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
