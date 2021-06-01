@@ -46,7 +46,7 @@ namespace WilianMiranda01.VISTA
                 consumidor.correo = txtEmail.Text;
                 consumidor.idComunidad_FK = Convert.ToInt32(idComunidad);
 
-                clsDconsumidores.ModificarCliente(consumidor);
+                //clsDconsumidores.ModificarConsumidor(consumidor);
                 
             }
 

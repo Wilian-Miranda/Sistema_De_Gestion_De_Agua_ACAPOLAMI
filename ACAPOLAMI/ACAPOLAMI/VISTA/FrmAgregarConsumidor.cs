@@ -60,7 +60,7 @@ namespace WilianMiranda01.VISTA
                         clientes.idComunidad_FK = Convert.ToInt32(idComunidadSeleccionado);
                     }
 
-                    cls.InsertarUsuario(clientes);
+                    //cls.InsertarConsumidor(clientes);
 
                     Limpiar();
                 }

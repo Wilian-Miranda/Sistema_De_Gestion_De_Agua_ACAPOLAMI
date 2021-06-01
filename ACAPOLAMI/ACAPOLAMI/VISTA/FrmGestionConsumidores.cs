@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ACAPOLAMI.DOMINIO;
 using ACAPOLAMI.NEGOCIO;
+using ACAPOLAMI.DAO;
 
 namespace ACAPOLAMI.VISTA
 {
@@ -266,19 +267,61 @@ namespace ACAPOLAMI.VISTA
             if(ValidarCajasTexto() && btnEjecutar.Text.Equals("Agregar consumidor"))
             {
                 //METODO PARA GUARDAR NUEVO CONSUMIDOR
-                MessageBox.Show("Estas agregando");
+                ClsDConsumidores clsconsumidor = new ClsDConsumidores();
+
+                Consumidores consumidor = new Consumidores();
+
+                if (cbComunidad.Text == "")
+                {
+                    consumidor.idComunidad_FK = null;
+                }
+                else
+                {
+                    consumidor.idComunidad_FK = Convert.ToInt32(idComunidadSeleccionado);
+                }
+
+                clsconsumidor.InsertarConsumidor(txtNombres.Text, txtApellidos.Text, txtDUI.Text, txtTelefono.Text, txtCorreo.Text, Convert.ToInt32(idComunidadSeleccionado));
+
                 Limpiar();
             }
             else if (ValidarCajasTexto() && btnEjecutar.Text.Equals("Modificar registro"))
             {
                 //METODO PARA MODIFICAR RESGISTRO
-                MessageBox.Show("Estas modificando");
+                try
+                {
+                    ClsDConsumidores clsDconsumidores = new ClsDConsumidores();
+
+                    clsDconsumidores.ModificarConsumidor(Convert.ToInt32(txtCodigo.Text), txtNombres.Text,
+                                                         txtApellidos.Text, txtDUI.Text, txtTelefono.Text,
+                                                         Convert.ToInt32(cbComunidad.SelectedValue), txtCorreo.Text);
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+
                 this.Close();
             }
             else if (ValidarCajasTexto() && btnEjecutar.Text.Equals("Eliminar registro"))
             {
                 //METODO PARA ELIMINAR RESGISTRO
-                MessageBox.Show("Estas eliminando");
+                try
+                {
+                    using (ACAPOLAMIEntities db = new ACAPOLAMIEntities())
+                    {
+                        ClsDConsumidores clsDconsumidor = new ClsDConsumidores();
+
+                        clsDconsumidor.EliminarConsumidor(Convert.ToInt32(txtCodigo.Text));
+
+                        this.Dispose();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+
                 this.Close();
             }
 
