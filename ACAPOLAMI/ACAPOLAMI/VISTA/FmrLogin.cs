@@ -20,7 +20,7 @@ namespace WilianMiranda01
         
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-            ClsDLogin cls = new ClsDLogin();
+            ClsDUsuarios cls = new ClsDUsuarios();
             Usuarios user = new Usuarios();
 
             user.nombre = txtUsuario.Text;

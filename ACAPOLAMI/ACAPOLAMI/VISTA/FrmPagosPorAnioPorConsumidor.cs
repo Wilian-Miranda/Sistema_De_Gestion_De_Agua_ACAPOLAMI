@@ -21,8 +21,8 @@ namespace ACAPOLAMI.VISTA
         
         void CargarConsumidor() {
             cbxConsumidores.Items.Clear();
-            ClsDMostrarConsumidores clsconsumidor = new ClsDMostrarConsumidores();
-            List<Consumidores> list = clsconsumidor.ConsultarConsumidores();
+            ClsDConsumidores consumidores = new ClsDConsumidores();
+            List<Consumidores> list = consumidores.ConsultarConsumidores();
             foreach (var i in list)
             {
                 cbxConsumidores.Items.Add(i.nombresConsumidor);

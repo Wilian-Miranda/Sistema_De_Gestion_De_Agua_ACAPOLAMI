@@ -50,16 +50,16 @@ namespace WilianMiranda01.VISTA
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-            ClsDRegistro cls = new ClsDRegistro();
+            ClsDUsuarios ClsUsuario = new ClsDUsuarios();
             //cls.SaveDatosUserList(txtNombre.Text, txtApellido.Text, Convert.ToInt32(txtEdad), Convert.ToInt32( txtPass));
-            Usuarios user = new Usuarios();
-            user.nombre = txtUsuario.Text;
-            user.clave = txtPassword.Text;
+            Usuarios usuario = new Usuarios();
+            usuario.nombre = txtUsuario.Text;
+            usuario.clave = txtPassword.Text;
 
             String comprobarPass = txtConfirmar.Text;
             if (comprobarPass.Equals(txtPassword.Text))
             {
-                cls.SaveDatosUser(user);
+                ClsUsuario.GuardarUsuario(usuario);
 
                 MessageBox.Show("Registrado con exito");
                 Form1 frm = new Form1();

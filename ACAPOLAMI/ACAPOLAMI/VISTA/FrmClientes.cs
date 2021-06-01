@@ -44,8 +44,8 @@ namespace WilianMiranda01.VISTA
         //Método utilizado para leer los datos del sp en el dtgGestionDeConsumidores
         private void ejecutar()
         {
-            ClsDMostrarConsumidores mostrarConsumidores = new ClsDMostrarConsumidores();
-            dtgGestionDeConsumidores.DataSource = mostrarConsumidores.Consultar();
+            ClsDConsumidores consumidores = new ClsDConsumidores();
+            dtgGestionDeConsumidores.DataSource = consumidores.Consultar();
             btnCantidadDeClientes.Text = dtgGestionDeConsumidores.Rows.Count.ToString();
         }
 

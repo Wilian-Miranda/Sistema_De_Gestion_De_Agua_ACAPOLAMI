@@ -280,7 +280,8 @@ namespace ACAPOLAMI.VISTA
                     consumidor.idComunidad_FK = Convert.ToInt32(idComunidadSeleccionado);
                 }
 
-                clsconsumidor.InsertarConsumidor(txtNombres.Text, txtApellidos.Text, txtDUI.Text, txtTelefono.Text, txtCorreo.Text, Convert.ToInt32(idComunidadSeleccionado));
+                clsconsumidor.InsertarConsumidor(txtNombres.Text, txtApellidos.Text, txtDUI.Text, 
+                    txtTelefono.Text, txtCorreo.Text, Convert.ToInt32(idComunidadSeleccionado));
 
                 Limpiar();
             }
@@ -291,7 +292,7 @@ namespace ACAPOLAMI.VISTA
                 {
                     ClsDConsumidores clsDconsumidores = new ClsDConsumidores();
 
-                    clsDconsumidores.ModificarConsumidor(Convert.ToInt32(txtCodigo.Text), txtNombres.Text,
+                    clsDconsumidores.ActualizarConsumidor(Convert.ToInt32(txtCodigo.Text), txtNombres.Text,
                                                          txtApellidos.Text, txtDUI.Text, txtTelefono.Text,
                                                          Convert.ToInt32(cbComunidad.SelectedValue), txtCorreo.Text);
                 }
