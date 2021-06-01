@@ -1,7 +1,7 @@
 --============================================================================================
 -- Triggers de la tabla Comunidades --
 --============================================================================================
-
+USE ACAPOLAMI;
 --Trigger para Insertar Comunidad
  
 CREATE TRIGGER tg_InsertarComunidad

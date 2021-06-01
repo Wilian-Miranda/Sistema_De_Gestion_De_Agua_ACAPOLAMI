@@ -107,20 +107,29 @@ namespace WilianMiranda01.VISTA
 
         private void btnModificarPago_Click(object sender, EventArgs e)
         {
-            FrmModificarPago modificarPago = new FrmModificarPago();
+            FrmGestionPagos modificarPago = new FrmGestionPagos();
 
             if (dtgPagos.SelectedRows.Count > 0)
             {
                 //cargando datos al formulario del modificar pago
-                modificarPago.txtIdPago.Text = dtgPagos.CurrentRow.Cells[0].Value.ToString();
-                modificarPago.txtNombres.Text = dtgPagos.CurrentRow.Cells[1].Value.ToString();
-                modificarPago.txtApellidos.Text = dtgPagos.CurrentRow.Cells[2].Value.ToString();
-                modificarPago.txtMonto.Text = dtgPagos.CurrentRow.Cells[3].Value.ToString();
+                String nombres = dtgPagos.CurrentRow.Cells[1].Value.ToString();
+                String apellidos = dtgPagos.CurrentRow.Cells[2].Value.ToString();
+                modificarPago.nombreNonsumidor = nombres + " " + apellidos;
+
+                modificarPago.txtMontoBase.Text = dtgPagos.CurrentRow.Cells[3].Value.ToString();
                 modificarPago.txtCancelado.Text = dtgPagos.CurrentRow.Cells[4].Value.ToString();
                 modificarPago.txtPendiente.Text = dtgPagos.CurrentRow.Cells[5].Value.ToString();
                 modificarPago.txtImpuesto.Text = dtgPagos.CurrentRow.Cells[6].Value.ToString();
-                modificarPago.cbEstado.Text = dtgPagos.CurrentRow.Cells[7].Value.ToString();
-                modificarPago.txtFechaDePago.Text = dtgPagos.CurrentRow.Cells[8].Value.ToString();
+                modificarPago.txtFechaPago.Text = dtgPagos.CurrentRow.Cells[9].Value.ToString();
+                modificarPago.txtDeudaAcumulada.Text = dtgPagos.CurrentRow.Cells[7].Value.ToString();
+
+                modificarPago.estado = dtgPagos.CurrentRow.Cells[8].Value.ToString();
+
+                modificarPago.pnlBuscador.Enabled = false;
+
+                modificarPago.btnEjecutar.Text = "Modificar registro";
+                modificarPago.lblEncabezado.Text = "ACTUALIZAR INFORMACIÓN";
+
 
                 modificarPago.ShowDialog();
             }
@@ -132,29 +141,42 @@ namespace WilianMiranda01.VISTA
 
         private void btnRegistrarPago_Click(object sender, EventArgs e)
         {
-            FrmAgregarPago nuevoPago = new FrmAgregarPago();
+            FrmGestionPagos nuevoPago = new FrmGestionPagos();
+            nuevoPago.btnEjecutar.Text = "Registrar pago";
             nuevoPago.ShowDialog();
 
         }
 
         private void btnEliminarPago_Click(object sender, EventArgs e)
         {
-            FrmEliminarPago eliminarPago = new FrmEliminarPago();
+            FrmGestionPagos eliminar = new FrmGestionPagos();
 
             if (dtgPagos.SelectedRows.Count > 0)
             {
-                //cargando datos al formulario del eliminar pago
-                eliminarPago.txtIdPago.Text = dtgPagos.CurrentRow.Cells[0].Value.ToString();
-                eliminarPago.txtNombres.Text = dtgPagos.CurrentRow.Cells[1].Value.ToString();
-                eliminarPago.txtApellidos.Text = dtgPagos.CurrentRow.Cells[2].Value.ToString();
-                eliminarPago.txtMonto.Text = dtgPagos.CurrentRow.Cells[3].Value.ToString();
-                eliminarPago.txtCancelado.Text = dtgPagos.CurrentRow.Cells[4].Value.ToString();
-                eliminarPago.txtPendiente.Text = dtgPagos.CurrentRow.Cells[5].ToString();
-                eliminarPago.txtImpuesto.Text = dtgPagos.CurrentRow.Cells[6].Value.ToString();
-                eliminarPago.txtEstado.Text = dtgPagos.CurrentRow.Cells[7].Value.ToString();
-                eliminarPago.txtFechaDePago.Text = dtgPagos.CurrentRow.Cells[8].Value.ToString();
+                //cargando datos al formulario del modificar pago
+                String nombres = dtgPagos.CurrentRow.Cells[1].Value.ToString();
+                String apellidos = dtgPagos.CurrentRow.Cells[2].Value.ToString();
+                eliminar.nombreNonsumidor = nombres + " " + apellidos;
 
-                eliminarPago.ShowDialog();
+                eliminar.txtMontoBase.Text = dtgPagos.CurrentRow.Cells[3].Value.ToString();
+                eliminar.txtCancelado.Text = dtgPagos.CurrentRow.Cells[4].Value.ToString();
+                eliminar.txtPendiente.Text = dtgPagos.CurrentRow.Cells[5].Value.ToString();
+                eliminar.txtImpuesto.Text = dtgPagos.CurrentRow.Cells[6].Value.ToString();
+                eliminar.txtFechaPago.Text = dtgPagos.CurrentRow.Cells[9].Value.ToString();
+                eliminar.txtDeudaAcumulada.Text = dtgPagos.CurrentRow.Cells[7].Value.ToString();
+
+                eliminar.estado = dtgPagos.CurrentRow.Cells[8].Value.ToString();
+
+                eliminar.btnEjecutar.Text = "Eliminar registro";
+                eliminar.lblEncabezado.Text = "ACTUALIZAR REGISTRO";
+
+                eliminar.pnlBuscador.Enabled = false;
+                eliminar.pnlDatosConsumidor.Enabled = false;
+                eliminar.pnlDatosPagos.Enabled = false;
+
+                //eliminar.btnEjecutar.Focus();
+
+                eliminar.ShowDialog();
             }
             else
             {

@@ -188,6 +188,12 @@
     <Compile Include="VISTA\FrmActividades.Designer.cs">
       <DependentUpon>FrmActividades.cs</DependentUpon>
     </Compile>
+    <Compile Include="VISTA\FrmGestionPagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VISTA\FrmGestionPagos.Designer.cs">
+      <DependentUpon>FrmGestionPagos.cs</DependentUpon>
+    </Compile>
     <Compile Include="VISTA\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
