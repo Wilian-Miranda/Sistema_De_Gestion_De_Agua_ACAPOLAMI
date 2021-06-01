@@ -27,6 +27,8 @@ namespace WilianMiranda01.VISTA
         private void btnCerrarAplicacion_Click(object sender, EventArgs e)
         {
             this.Dispose();
+            Form1 login = new Form1();
+            login.Show();
         }
 
         private void btnMinimizarAplicacion_Click(object sender, EventArgs e)
@@ -46,6 +48,8 @@ namespace WilianMiranda01.VISTA
         private void btnRegistroUsuario_Click(object sender, EventArgs e)
         {
             this.Dispose();
+            Form1 login = new Form1();
+            login.Show();
         }
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
@@ -61,13 +65,19 @@ namespace WilianMiranda01.VISTA
             {
                 ClsUsuario.GuardarUsuario(usuario);
 
-                MessageBox.Show("Registrado con exito");
+                MessageBox.Show("Registro de usuario exitoso", "Registrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Form1 frm = new Form1();
                 this.Hide();
                 frm.Show();
             }
+
+            else if (txtUsuario.Text == "" && txtPassword.Text == "" && txtConfirmar.Text == "")
+            {
+                MessageBox.Show("Por favor llene los campos", "Campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
             else {
-                MessageBox.Show("Error al registrar");
+                MessageBox.Show("Debe confirmar la contraseña", "No coinciden", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -142,9 +152,75 @@ namespace WilianMiranda01.VISTA
             button.AzulClaro(btn);
         }
 
-        private void FrmRegistroUsuario_Load(object sender, EventArgs e)
+        private void btnMinimizarAplicacion_Click_1(object sender, EventArgs e)
         {
+            if (WindowState == FormWindowState.Normal)
+            {
+                WindowState = FormWindowState.Minimized;
+            }
+            else if (WindowState == FormWindowState.Minimized)
+            {
+                WindowState = FormWindowState.Normal;
+            }
+        }
 
+        private void chkPass_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkPass.Checked)
+            {
+                txtPassword.UseSystemPasswordChar = false;
+                txtConfirmar.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtPassword.UseSystemPasswordChar = true;
+                txtConfirmar.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void txtConfirmar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13 && txtUsuario.Text != "" && txtPassword.Text != "" && txtConfirmar.Text != "")
+            {
+                e.Handled = true;
+                btnRegistrarUsuario.PerformClick();
+            }
+
+            else if(e.KeyChar == 27)
+            {
+                e.Handled = true;
+                btnCancelarRegistro.PerformClick();
+            }
+        }
+
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13 && txtUsuario.Text != "" && txtPassword.Text != "" && txtConfirmar.Text != "")
+            {
+                e.Handled = true;
+                btnRegistrarUsuario.PerformClick();
+            }
+
+            else if (e.KeyChar == 27)
+            {
+                e.Handled = true;
+                btnCancelarRegistro.PerformClick();
+            }
+        }
+
+        private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13 && txtUsuario.Text != "" && txtPassword.Text != "" && txtConfirmar.Text != "")
+            {
+                e.Handled = true;
+                btnRegistrarUsuario.PerformClick();
+            }
+
+            else if (e.KeyChar == 27)
+            {
+                e.Handled = true;
+                btnCancelarRegistro.PerformClick();
+            }
         }
     }
 }

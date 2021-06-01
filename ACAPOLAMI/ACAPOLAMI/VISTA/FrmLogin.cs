@@ -31,14 +31,22 @@ namespace WilianMiranda01
 
             if (comprobar == 1)
             {
-                MessageBox.Show("Bienvenido/a");
+                MessageBox.Show("Inicio de sesion exitoso", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 FmrPrincipal frmPrincipal = new FmrPrincipal();
                 this.Hide();
                 frmPrincipal.Show();
+                frmPrincipal.lblNombreUSuario.Text = txtUsuario.Text;
 
-            }else
+            }
+
+            else if (txtUsuario.Text == "" && txtPassword.Text == "")
             {
-                MessageBox.Show("Error en el nombre o contraseña");
+                MessageBox.Show("Por favor llene los campos", "Campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else
+            {
+                MessageBox.Show("Nombre o contraseña incorrecto", "No registrado", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -76,6 +84,7 @@ namespace WilianMiranda01
         private void button1_Click(object sender, EventArgs e)
         {
             FrmRegistroUsuario registro = new FrmRegistroUsuario();
+            Hide();
             registro.ShowDialog();
         }
 
@@ -167,9 +176,42 @@ namespace WilianMiranda01
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
+            if (chkPass.Checked)
+                txtPassword.UseSystemPasswordChar = false;
+            else
+                txtPassword.UseSystemPasswordChar = true;
+        }
 
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13  && txtUsuario.Text != "" && txtPassword.Text != "")
+            {
+                e.Handled = true;
+                btnIniciarSesion.PerformClick();
+            }
+
+            else if (e.KeyChar == 27)
+            {
+                e.Handled = true;
+                btnCerrarAplicacion.PerformClick();
+            }
+        }
+
+        private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13 && txtUsuario.Text != "" && txtPassword.Text != "")
+            {
+                e.Handled = true;
+                btnIniciarSesion.PerformClick();
+            }
+
+            else if (e.KeyChar == 27)
+            {
+                e.Handled = true;
+                btnCerrarAplicacion.PerformClick();
+            }
         }
     }
 }

@@ -102,6 +102,7 @@ namespace WilianMiranda01.VISTA
             // 
             this.lblNombreUSuario.AutoSize = true;
             this.lblNombreUSuario.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lblNombreUSuario.LiveSetting = System.Windows.Forms.Automation.AutomationLiveSetting.Polite;
             this.lblNombreUSuario.Location = new System.Drawing.Point(0, 68);
             this.lblNombreUSuario.Name = "lblNombreUSuario";
             this.lblNombreUSuario.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
@@ -217,12 +218,14 @@ namespace WilianMiranda01.VISTA
             this.btnCerrarSesión.FlatAppearance.BorderSize = 0;
             this.btnCerrarSesión.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarSesión.Image = global::ACAPOLAMI.Properties.Resources.salida__1_;
+            this.btnCerrarSesión.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCerrarSesión.Location = new System.Drawing.Point(0, 640);
             this.btnCerrarSesión.Name = "btnCerrarSesión";
             this.btnCerrarSesión.Size = new System.Drawing.Size(200, 41);
             this.btnCerrarSesión.TabIndex = 8;
-            this.btnCerrarSesión.Text = "Cerrar Sesión";
-            this.btnCerrarSesión.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnCerrarSesión.Text = "     Cerrar Sesión";
+            this.btnCerrarSesión.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCerrarSesión.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCerrarSesión.UseVisualStyleBackColor = false;
             this.btnCerrarSesión.Click += new System.EventHandler(this.btnCerrarSesión_Click);
             this.btnCerrarSesión.MouseLeave += new System.EventHandler(this.btnCerrarSesión_MouseLeave);
@@ -412,10 +415,12 @@ namespace WilianMiranda01.VISTA
             this.Controls.Add(this.pnlMenu);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "FmrPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "ACAPOLAMI";
             this.Load += new System.EventHandler(this.FmrPrincipal_Load);
             this.pnlMenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -458,7 +463,7 @@ namespace WilianMiranda01.VISTA
         private System.Windows.Forms.Button btnClientes;
         private System.Windows.Forms.Button btnAjustes;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lblNombreUSuario;
         private System.Windows.Forms.PictureBox pictureBox2;
+        public System.Windows.Forms.Label lblNombreUSuario;
     }
 }

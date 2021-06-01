@@ -316,8 +316,6 @@ C:\Users\Manuel Perlera\Documents\GitHub\Sistema_De_Gestion_De_Agua_ACAPOLAMI\AC
 C:\Users\Manuel Perlera\Documents\GitHub\Sistema_De_Gestion_De_Agua_ACAPOLAMI\ACAPOLAMI\ACAPOLAMI\obj\Debug\WilianMiranda01.VISTA.FrmRegistroUsuario.resources
 C:\Users\Manuel Perlera\Documents\GitHub\Sistema_De_Gestion_De_Agua_ACAPOLAMI\ACAPOLAMI\ACAPOLAMI\obj\Debug\WilianMiranda01.VISTA.FmrPrincipal.resources
 C:\Users\Manuel Perlera\Documents\GitHub\Sistema_De_Gestion_De_Agua_ACAPOLAMI\ACAPOLAMI\ACAPOLAMI\obj\Debug\WilianMiranda01.VISTA.FrmClientes.resources
-C:\Users\Manuel Perlera\Documents\GitHub\Sistema_De_Gestion_De_Agua_ACAPOLAMI\ACAPOLAMI\ACAPOLAMI\obj\Debug\WilianMiranda01.VISTA.FrmEliminarCliente.resources
-C:\Users\Manuel Perlera\Documents\GitHub\Sistema_De_Gestion_De_Agua_ACAPOLAMI\ACAPOLAMI\ACAPOLAMI\obj\Debug\WilianMiranda01.VISTA.FrmModificarCliente.resources
 C:\Users\Manuel Perlera\Documents\GitHub\Sistema_De_Gestion_De_Agua_ACAPOLAMI\ACAPOLAMI\ACAPOLAMI\obj\Debug\ACAPOLAMI.csproj.GenerateResource.cache
 C:\Users\Manuel Perlera\Documents\GitHub\Sistema_De_Gestion_De_Agua_ACAPOLAMI\ACAPOLAMI\ACAPOLAMI\obj\Debug\ACAPOLAMI.csproj.CoreCompileInputs.cache
 C:\Users\Manuel Perlera\Documents\GitHub\Sistema_De_Gestion_De_Agua_ACAPOLAMI\ACAPOLAMI\ACAPOLAMI\obj\Debug\ACAPOLAMI.exe

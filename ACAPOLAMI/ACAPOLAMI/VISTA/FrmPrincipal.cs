@@ -12,6 +12,7 @@ namespace WilianMiranda01.VISTA
 {
     public partial class FmrPrincipal : Form
     {
+        Form1 login = new Form1();
         FrmClientes data = new FrmClientes();
         //variable para almacenar el botón actual
         public Button btnEnUso;
