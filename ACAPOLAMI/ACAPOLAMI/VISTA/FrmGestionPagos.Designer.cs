@@ -44,6 +44,7 @@ namespace ACAPOLAMI.VISTA
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnEjecutar = new System.Windows.Forms.Button();
             this.pnlDatosPagos = new System.Windows.Forms.Panel();
+            this.dtpFechaPago = new System.Windows.Forms.DateTimePicker();
             this.txtPendiente = new System.Windows.Forms.TextBox();
             this.lblPendiente = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
@@ -69,7 +70,6 @@ namespace ACAPOLAMI.VISTA
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.ControlValidacion = new System.Windows.Forms.ErrorProvider(this.components);
-            this.dtpFechaPago = new System.Windows.Forms.DateTimePicker();
             this.pnlBorde.SuspendLayout();
             this.pnlContenedorPrincipal.SuspendLayout();
             this.pnlDatosConsumidor.SuspendLayout();
@@ -262,6 +262,14 @@ namespace ACAPOLAMI.VISTA
             this.pnlDatosPagos.Size = new System.Drawing.Size(626, 283);
             this.pnlDatosPagos.TabIndex = 1;
             // 
+            // dtpFechaPago
+            // 
+            this.dtpFechaPago.CalendarForeColor = System.Drawing.Color.Black;
+            this.dtpFechaPago.Location = new System.Drawing.Point(347, 154);
+            this.dtpFechaPago.Name = "dtpFechaPago";
+            this.dtpFechaPago.Size = new System.Drawing.Size(250, 26);
+            this.dtpFechaPago.TabIndex = 23;
+            // 
             // txtPendiente
             // 
             this.txtPendiente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -275,7 +283,7 @@ namespace ACAPOLAMI.VISTA
             this.txtPendiente.ShortcutsEnabled = false;
             this.txtPendiente.Size = new System.Drawing.Size(250, 26);
             this.txtPendiente.TabIndex = 21;
-            this.txtPendiente.Text = "Pendiente";
+            this.txtPendiente.Text = "0.0000";
             // 
             // lblPendiente
             // 
@@ -558,14 +566,6 @@ namespace ACAPOLAMI.VISTA
             // ControlValidacion
             // 
             this.ControlValidacion.ContainerControl = this;
-            // 
-            // dtpFechaPago
-            // 
-            this.dtpFechaPago.CalendarForeColor = System.Drawing.Color.Black;
-            this.dtpFechaPago.Location = new System.Drawing.Point(347, 154);
-            this.dtpFechaPago.Name = "dtpFechaPago";
-            this.dtpFechaPago.Size = new System.Drawing.Size(250, 26);
-            this.dtpFechaPago.TabIndex = 23;
             // 
             // FrmGestionPagos
             // 

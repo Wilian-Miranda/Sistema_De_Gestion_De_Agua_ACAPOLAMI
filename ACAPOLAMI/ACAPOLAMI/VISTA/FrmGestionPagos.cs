@@ -21,12 +21,13 @@ namespace ACAPOLAMI.VISTA
         public FrmGestionPagos()
         {
             InitializeComponent();
-            CargarEstados();
+
         }
 
         private void FrmGestioPagos_Load(object sender, EventArgs e)
         {
             DatosCBseleccionados();
+            CargarEstados();
         }
 
         public String estado;
@@ -56,8 +57,9 @@ namespace ACAPOLAMI.VISTA
                 using (ACAPOLAMIEntities db = new ACAPOLAMIEntities())
                 {
                     var consumidores = (from a in db.sp_MostrarConsumidores()
-                                        where a.Nombres.Contains(cbConsumidor.Text)
-                                        || a.Apellidos.Contains(cbConsumidor.Text)
+                                        where a.Nombres.ToLower().Contains(cbConsumidor.Text.ToLower())
+                                        || a.Apellidos.ToLower().Contains(cbConsumidor.Text.ToLower())
+                                        || (a.Nombres+" "+a.Apellidos).ToLower().Contains(cbConsumidor.Text.ToLower())
                                         select new
                                         {
                                             a.Id,
@@ -203,10 +205,13 @@ namespace ACAPOLAMI.VISTA
                 //CODIGO DE AGREGAR PAGO AQUI
                 ClsDPagos pago = new ClsDPagos();
 
-                pago.AgregarPago(Convert.ToDecimal(txtMontoBase.Text), Convert.ToDecimal(txtCancelado.Text), 
+                String id = cbConsumidor.SelectedValue.ToString();
+                int idconsumidor = Convert.ToInt32(id);
+
+                pago.AgregarPago(Convert.ToDecimal(txtMontoBase.Text), Convert.ToDecimal(txtCancelado.Text),
                     Convert.ToDecimal(txtPendiente.Text), Convert.ToDecimal(txtImpuesto.Text), Convert.ToDecimal(txtTotal.Text),
-                    Convert.ToDateTime(dtpFechaPago.Text), Convert.ToInt32(cbEstado.SelectedValue.ToString()), 
-                    Convert.ToInt32(cbConsumidor.SelectedValue.ToString()));
+                    Convert.ToDateTime(dtpFechaPago.Text), Convert.ToInt32(cbEstado.SelectedValue.ToString()),
+                    idconsumidor);
 
                 FrmNotificaciones notificacion = new FrmNotificaciones(sucesos.CargarDatosSucesos().tipoSuceso,
                             sucesos.CargarDatosSucesos().descripcion, FrmNotificaciones.TipoAlerta.Realizado);
@@ -386,9 +391,13 @@ namespace ACAPOLAMI.VISTA
                 var estados = (from a in db.Estados
                                select a).ToList();
 
-                cbEstado.DataSource = estados.ToList();
-                cbEstado.DisplayMember = "nombreEstado";
-                cbEstado.ValueMember = "idEstado";
+                if (estados.Count > 0)
+                {
+                    cbEstado.DataSource = estados.ToList();
+                    cbEstado.DisplayMember = "nombreEstado";
+                    cbEstado.ValueMember = "idEstado";
+                }
+
 
             }
         }
