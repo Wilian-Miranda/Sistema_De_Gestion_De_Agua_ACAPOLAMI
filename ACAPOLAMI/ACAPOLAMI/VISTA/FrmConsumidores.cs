@@ -241,8 +241,18 @@ namespace WilianMiranda01.VISTA
                 Buscador(cbBuscarCliente.Text.Trim());
             }
 
+            if (cbBuscarCliente.Items.Count > 9)
+                cbBuscarCliente.Items.RemoveAt(9);
+
+            if (cbBuscarCliente.FindString(cbBuscarCliente.Text) != -1)
+            {
+                int index = cbBuscarCliente.FindString(cbBuscarCliente.Text);
+                cbBuscarCliente.Items.RemoveAt(index);
+                cbBuscarCliente.Items.Insert(0, cbBuscarCliente.Text);
+            }
+
             //Agregar al historial de busqueda
-            if(cbBuscarCliente.SelectedIndex != 0)
+            else if(cbBuscarCliente.SelectedIndex != 0)
                 cbBuscarCliente.Items.Insert(0, cbBuscarCliente.Text);
         }
 

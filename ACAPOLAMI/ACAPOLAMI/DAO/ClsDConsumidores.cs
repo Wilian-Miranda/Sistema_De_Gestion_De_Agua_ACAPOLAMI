@@ -30,6 +30,7 @@ namespace ACAPOLAMI.DAO
             }
             return list;
         }
+
         //Manda los datos a DAO
         public void InsertarConsumidor(string nombres, string apellidos, string dui, string telefono, string correo, int idComunidad)
         {

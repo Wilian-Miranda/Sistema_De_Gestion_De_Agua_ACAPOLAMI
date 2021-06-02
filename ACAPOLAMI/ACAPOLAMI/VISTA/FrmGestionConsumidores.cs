@@ -295,6 +295,7 @@ namespace ACAPOLAMI.VISTA
 
                 Limpiar();
             }
+
             else if (ValidarCajasTexto() && btnEjecutar.Text.Equals("Modificar"))
             {
                 //Metodo actualizar consumidor
@@ -325,18 +326,15 @@ namespace ACAPOLAMI.VISTA
                 //Metodo para eliminar consumidor
                 try
                 {
-                    using (ACAPOLAMIEntities db = new ACAPOLAMIEntities())
-                    {
-                        ClsDConsumidores clsDconsumidor = new ClsDConsumidores();
+                    ClsDConsumidores clsDconsumidor = new ClsDConsumidores();
 
-                        clsDconsumidor.EliminarConsumidor(Convert.ToInt32(txtCodigo.Text));
+                    clsDconsumidor.EliminarConsumidor(Convert.ToInt32(txtCodigo.Text));
 
-                        FrmNotificaciones notificacion = new FrmNotificaciones(sucesos.CargarDatosSucesos().tipoSuceso,
-                            sucesos.CargarDatosSucesos().descripcion, FrmNotificaciones.TipoAlerta.Realizado);
-                        notificacion.Show();
+                    FrmNotificaciones notificacion = new FrmNotificaciones(sucesos.CargarDatosSucesos().tipoSuceso,
+                        sucesos.CargarDatosSucesos().descripcion, FrmNotificaciones.TipoAlerta.Realizado);
+                    notificacion.Show();
 
-                        this.Dispose();
-                    }
+                    this.Dispose();
                 }
                 catch (Exception ex)
                 {

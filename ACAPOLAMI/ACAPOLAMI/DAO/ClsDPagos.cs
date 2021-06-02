@@ -10,19 +10,24 @@ namespace ACAPOLAMI.DAO
 {
     class ClsDPagos
     {
-        public void AgregarPago(Pagos pagos)
+        public List<Pagos> MostrarPagos()
+        {
+            var listaPagos = new List<Pagos>();
+            using (ACAPOLAMIEntities db = new ACAPOLAMIEntities())
+            {
+                listaPagos = db.Pagos.ToList();
+            }
+            return listaPagos;
+        }
+
+        public void AgregarPago(decimal monto, decimal cancelado, decimal pendiente, decimal impuesto,
+            decimal total, DateTime fecha, int estado, int consumidor)
         {
             try
             {
                 using (ACAPOLAMIEntities db = new ACAPOLAMIEntities())
                 {
-                    Pagos pagos1 = new Pagos();
-                    pagos1.monto = pagos.monto;
-                    pagos1.montoCancelado = pagos.montoCancelado;
-                    pagos1.montoCancelado = pagos.montoCancelado;
-                    pagos1.impuesto = pagos.impuesto;
-                    pagos1.idConsumidor_FK = pagos.idConsumidor_FK;
-                    db.Pagos.Add(pagos1);
+                    db.sp_InsertarPago(monto, cancelado, pendiente, impuesto, total, fecha, estado, consumidor);
                     db.SaveChanges();
 
                     MessageBox.Show("Los datos se han agregado");
@@ -34,17 +39,13 @@ namespace ACAPOLAMI.DAO
             }
 
         }
-        public void EliminarPago(int ID)
+        public void EliminarPago(int id)
         {
             try
             {
                 using (ACAPOLAMIEntities db = new ACAPOLAMIEntities())
                 {
-                    int Eliminar = Convert.ToInt32(ID);
-                    Pagos pg = db.Pagos.Where(x => x.idPago == Eliminar).Select(x => x).FirstOrDefault();
-                    pg = db.Pagos.Find(Eliminar);
-                    db.Pagos.Remove(pg);
-                    db.SaveChanges();
+                    db.sp_EliminarPago(id);
 
                     MessageBox.Show("Los datos  se han eliminado");
                 }
@@ -55,23 +56,14 @@ namespace ACAPOLAMI.DAO
             }
         }
 
-        public void Modificarpago(Pagos pag)
+        public void Modificarpago(int id, decimal monto, decimal cancelado, decimal pendiente, decimal impuesto,
+            decimal total, DateTime fecha, int estado, int consumidor)
         {
             try
             {
                 using (ACAPOLAMIEntities db = new ACAPOLAMIEntities())
                 {
-                    int mod = pag.idPago;
-                    Pagos pg = db.Pagos.Where(x => x.idPago == mod).Select(x => x).FirstOrDefault();
-
-                    pg.Consumidores.nombresConsumidor = pag.Consumidores.nombresConsumidor;
-                    pg.Consumidores.apellidosConsumidor = pag.Consumidores.apellidosConsumidor;
-                    pg.monto = pag.monto;
-                    pg.montoCancelado = pag.montoCancelado;
-                    pg.montoPendiente = pag.montoPendiente;
-                    pg.impuesto = pag.impuesto;
-                    pg.idEstado_FK = pag.idEstado_FK;
-                    pg.fechaPago = pag.fechaPago;
+                    db.sp_ActualizarPago(id, monto, cancelado, pendiente, impuesto, total, fecha, estado, consumidor);
 
                     db.SaveChanges();
                     MessageBox.Show("Los Datos se Actualizaron ");

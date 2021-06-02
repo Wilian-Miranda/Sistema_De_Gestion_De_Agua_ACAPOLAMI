@@ -46,12 +46,11 @@ namespace ACAPOLAMI.VISTA
             this.pnlDatosPagos = new System.Windows.Forms.Panel();
             this.txtPendiente = new System.Windows.Forms.TextBox();
             this.lblPendiente = new System.Windows.Forms.Label();
-            this.txtFechaPago = new System.Windows.Forms.TextBox();
             this.lblFecha = new System.Windows.Forms.Label();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.cbEstado = new System.Windows.Forms.ComboBox();
             this.lblEstado = new System.Windows.Forms.Label();
-            this.txtDeudaAcumulada = new System.Windows.Forms.TextBox();
+            this.txtTotal = new System.Windows.Forms.TextBox();
             this.lblDeudaAcumulada = new System.Windows.Forms.Label();
             this.txtImpuesto = new System.Windows.Forms.TextBox();
             this.lblImpuesto = new System.Windows.Forms.Label();
@@ -70,6 +69,7 @@ namespace ACAPOLAMI.VISTA
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.ControlValidacion = new System.Windows.Forms.ErrorProvider(this.components);
+            this.dtpFechaPago = new System.Windows.Forms.DateTimePicker();
             this.pnlBorde.SuspendLayout();
             this.pnlContenedorPrincipal.SuspendLayout();
             this.pnlDatosConsumidor.SuspendLayout();
@@ -242,14 +242,14 @@ namespace ACAPOLAMI.VISTA
             // pnlDatosPagos
             // 
             this.pnlDatosPagos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlDatosPagos.Controls.Add(this.dtpFechaPago);
             this.pnlDatosPagos.Controls.Add(this.txtPendiente);
             this.pnlDatosPagos.Controls.Add(this.lblPendiente);
-            this.pnlDatosPagos.Controls.Add(this.txtFechaPago);
             this.pnlDatosPagos.Controls.Add(this.lblFecha);
             this.pnlDatosPagos.Controls.Add(this.btnLimpiar);
             this.pnlDatosPagos.Controls.Add(this.cbEstado);
             this.pnlDatosPagos.Controls.Add(this.lblEstado);
-            this.pnlDatosPagos.Controls.Add(this.txtDeudaAcumulada);
+            this.pnlDatosPagos.Controls.Add(this.txtTotal);
             this.pnlDatosPagos.Controls.Add(this.lblDeudaAcumulada);
             this.pnlDatosPagos.Controls.Add(this.txtImpuesto);
             this.pnlDatosPagos.Controls.Add(this.lblImpuesto);
@@ -285,21 +285,6 @@ namespace ACAPOLAMI.VISTA
             this.lblPendiente.Size = new System.Drawing.Size(92, 19);
             this.lblPendiente.TabIndex = 22;
             this.lblPendiente.Text = "Pendiente:";
-            // 
-            // txtFechaPago
-            // 
-            this.txtFechaPago.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtFechaPago.BackColor = System.Drawing.Color.White;
-            this.txtFechaPago.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtFechaPago.ForeColor = System.Drawing.Color.Gray;
-            this.txtFechaPago.Location = new System.Drawing.Point(347, 154);
-            this.txtFechaPago.Margin = new System.Windows.Forms.Padding(3, 3, 3, 24);
-            this.txtFechaPago.Name = "txtFechaPago";
-            this.txtFechaPago.ReadOnly = true;
-            this.txtFechaPago.ShortcutsEnabled = false;
-            this.txtFechaPago.Size = new System.Drawing.Size(250, 26);
-            this.txtFechaPago.TabIndex = 19;
-            this.txtFechaPago.Text = "Fecha de pago";
             // 
             // lblFecha
             // 
@@ -350,20 +335,20 @@ namespace ACAPOLAMI.VISTA
             this.lblEstado.TabIndex = 18;
             this.lblEstado.Text = "Estado:";
             // 
-            // txtDeudaAcumulada
+            // txtTotal
             // 
-            this.txtDeudaAcumulada.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDeudaAcumulada.BackColor = System.Drawing.Color.White;
-            this.txtDeudaAcumulada.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDeudaAcumulada.ForeColor = System.Drawing.Color.Gray;
-            this.txtDeudaAcumulada.Location = new System.Drawing.Point(347, 95);
-            this.txtDeudaAcumulada.Margin = new System.Windows.Forms.Padding(3, 3, 3, 24);
-            this.txtDeudaAcumulada.Name = "txtDeudaAcumulada";
-            this.txtDeudaAcumulada.ReadOnly = true;
-            this.txtDeudaAcumulada.ShortcutsEnabled = false;
-            this.txtDeudaAcumulada.Size = new System.Drawing.Size(250, 26);
-            this.txtDeudaAcumulada.TabIndex = 15;
-            this.txtDeudaAcumulada.Text = "Deuda global acumulada";
+            this.txtTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTotal.BackColor = System.Drawing.Color.White;
+            this.txtTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTotal.ForeColor = System.Drawing.Color.Gray;
+            this.txtTotal.Location = new System.Drawing.Point(347, 95);
+            this.txtTotal.Margin = new System.Windows.Forms.Padding(3, 3, 3, 24);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.ReadOnly = true;
+            this.txtTotal.ShortcutsEnabled = false;
+            this.txtTotal.Size = new System.Drawing.Size(250, 26);
+            this.txtTotal.TabIndex = 15;
+            this.txtTotal.Text = "Deuda global acumulada";
             // 
             // lblDeudaAcumulada
             // 
@@ -574,6 +559,14 @@ namespace ACAPOLAMI.VISTA
             // 
             this.ControlValidacion.ContainerControl = this;
             // 
+            // dtpFechaPago
+            // 
+            this.dtpFechaPago.CalendarForeColor = System.Drawing.Color.Black;
+            this.dtpFechaPago.Location = new System.Drawing.Point(347, 154);
+            this.dtpFechaPago.Name = "dtpFechaPago";
+            this.dtpFechaPago.Size = new System.Drawing.Size(250, 26);
+            this.dtpFechaPago.TabIndex = 23;
+            // 
             // FrmGestionPagos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
@@ -631,14 +624,13 @@ namespace ACAPOLAMI.VISTA
         private System.Windows.Forms.Label lblNombres;
         public System.Windows.Forms.Label lblId;
         private System.Windows.Forms.Label lblEstado;
-        public System.Windows.Forms.TextBox txtDeudaAcumulada;
+        public System.Windows.Forms.TextBox txtTotal;
         public System.Windows.Forms.ComboBox cbEstado;
         public System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.ErrorProvider ControlValidacion;
         public System.Windows.Forms.Button btnBuscarConsumidor;
-        public System.Windows.Forms.TextBox txtFechaPago;
         private System.Windows.Forms.Label lblFecha;
         public System.Windows.Forms.TextBox txtPendiente;
         private System.Windows.Forms.Label lblPendiente;
@@ -648,5 +640,6 @@ namespace ACAPOLAMI.VISTA
         public System.Windows.Forms.Panel pnlDatosConsumidor;
         public System.Windows.Forms.Panel pnlBuscador;
         private System.Windows.Forms.ComboBox cbConsumidor;
+        public System.Windows.Forms.DateTimePicker dtpFechaPago;
     }
 }

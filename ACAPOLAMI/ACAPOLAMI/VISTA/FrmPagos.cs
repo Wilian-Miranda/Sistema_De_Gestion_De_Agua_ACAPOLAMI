@@ -12,11 +12,13 @@ using ACAPOLAMI.MODELO;
 using ACAPOLAMI.NEGOCIO;
 using ACAPOLAMI.DOMINIO;
 using ACAPOLAMI.MODELO.ViewModels;
+using ACAPOLAMI.DAO;
 
 namespace WilianMiranda01.VISTA
 {
     public partial class FrmPagos : Form
     {
+        ClsDPagos pagos = new ClsDPagos();
         public FrmPagos()
         {
             InitializeComponent();
@@ -112,6 +114,7 @@ namespace WilianMiranda01.VISTA
             if (dtgPagos.SelectedRows.Count > 0)
             {
                 //cargando datos al formulario del modificar pago
+                modificarPago.Id = dtgPagos.CurrentRow.Cells[0].Value.ToString();
                 String nombres = dtgPagos.CurrentRow.Cells[1].Value.ToString();
                 String apellidos = dtgPagos.CurrentRow.Cells[2].Value.ToString();
                 modificarPago.nombreNonsumidor = nombres + " " + apellidos;
@@ -120,15 +123,15 @@ namespace WilianMiranda01.VISTA
                 modificarPago.txtCancelado.Text = dtgPagos.CurrentRow.Cells[4].Value.ToString();
                 modificarPago.txtPendiente.Text = dtgPagos.CurrentRow.Cells[5].Value.ToString();
                 modificarPago.txtImpuesto.Text = dtgPagos.CurrentRow.Cells[6].Value.ToString();
-                modificarPago.txtFechaPago.Text = dtgPagos.CurrentRow.Cells[9].Value.ToString();
-                modificarPago.txtDeudaAcumulada.Text = dtgPagos.CurrentRow.Cells[7].Value.ToString();
+                modificarPago.dtpFechaPago.Text = dtgPagos.CurrentRow.Cells[8].Value.ToString();
+                modificarPago.txtTotal.Text = dtgPagos.CurrentRow.Cells[7].Value.ToString();
 
                 modificarPago.estado = dtgPagos.CurrentRow.Cells[8].Value.ToString();
 
                 modificarPago.pnlBuscador.Enabled = false;
 
-                modificarPago.btnEjecutar.Text = "Modificar registro";
-                modificarPago.lblEncabezado.Text = "ACTUALIZAR INFORMACIÓN";
+                modificarPago.btnEjecutar.Text = "Actualizar";
+                modificarPago.lblEncabezado.Text = "ACTUALIZAR PAGO";
 
 
                 modificarPago.ShowDialog();
@@ -142,7 +145,7 @@ namespace WilianMiranda01.VISTA
         private void btnRegistrarPago_Click(object sender, EventArgs e)
         {
             FrmGestionPagos nuevoPago = new FrmGestionPagos();
-            nuevoPago.btnEjecutar.Text = "Registrar pago";
+            nuevoPago.btnEjecutar.Text = "Insertar";
             nuevoPago.ShowDialog();
 
         }
@@ -162,13 +165,13 @@ namespace WilianMiranda01.VISTA
                 eliminar.txtCancelado.Text = dtgPagos.CurrentRow.Cells[4].Value.ToString();
                 eliminar.txtPendiente.Text = dtgPagos.CurrentRow.Cells[5].Value.ToString();
                 eliminar.txtImpuesto.Text = dtgPagos.CurrentRow.Cells[6].Value.ToString();
-                eliminar.txtFechaPago.Text = dtgPagos.CurrentRow.Cells[9].Value.ToString();
-                eliminar.txtDeudaAcumulada.Text = dtgPagos.CurrentRow.Cells[7].Value.ToString();
+                eliminar.dtpFechaPago.Text = dtgPagos.CurrentRow.Cells[8].Value.ToString();
+                eliminar.txtTotal.Text = dtgPagos.CurrentRow.Cells[7].Value.ToString();
 
                 eliminar.estado = dtgPagos.CurrentRow.Cells[8].Value.ToString();
 
-                eliminar.btnEjecutar.Text = "Eliminar registro";
-                eliminar.lblEncabezado.Text = "ACTUALIZAR REGISTRO";
+                eliminar.btnEjecutar.Text = "Eliminar";
+                eliminar.lblEncabezado.Text = "ELIMINAR PAGO";
 
                 eliminar.pnlBuscador.Enabled = false;
                 eliminar.pnlDatosConsumidor.Enabled = false;
@@ -206,10 +209,24 @@ namespace WilianMiranda01.VISTA
 
         private void btnBuscarConsumidor_Click(object sender, EventArgs e)
         {
-            Buscador(cbBuscarConsumidor.Text.Trim());
+            if (cbBuscarConsumidor.Text != "")
+            {
+                Buscador(cbBuscarConsumidor.Text.Trim());
+            }
+
+            if (cbBuscarConsumidor.Items.Count > 9)
+                cbBuscarConsumidor.Items.RemoveAt(9);
+
+            if (cbBuscarConsumidor.FindString(cbBuscarConsumidor.Text) != -1)
+            {
+                int index = cbBuscarConsumidor.FindString(cbBuscarConsumidor.Text);
+                cbBuscarConsumidor.Items.RemoveAt(index);
+                cbBuscarConsumidor.Items.Insert(0, cbBuscarConsumidor.Text);
+            }
 
             //Agregar al historial de busqueda
-            cbBuscarConsumidor.Items.Add(cbBuscarConsumidor.Text);
+            else if (cbBuscarConsumidor.SelectedIndex != 0)
+                cbBuscarConsumidor.Items.Insert(0, cbBuscarConsumidor.Text);
         }
 
         private void Buscador(string busqueda = null)
@@ -233,6 +250,8 @@ namespace WilianMiranda01.VISTA
                         Cancelado = pagos.montoCancelado,
                         Pendiente = pagos.montoPendiente,
                         Impuesto = pagos.impuesto,
+                        Total = pagos.montoTotal,
+                        Fecha = pagos.fechaPago,
                         Estado = estado.nombreEstado
                     });
 
@@ -245,9 +264,33 @@ namespace WilianMiranda01.VISTA
                 }
 
                 //Pasamos la lista de consultas al dataGridView
-                    dtgPagos.DataSource = buscar.ToList();
+
+                dtgPagos.DataSource = buscar.ToList();
                 
             }
+        }
+        private void FrmPagos_Load(object sender, EventArgs e)
+        {
+            Buscador();
+        }
+
+        private void btnRefrescar_Click(object sender, EventArgs e)
+        {
+            Buscador();
+        }
+
+        private void cbBuscarConsumidor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13 && cbBuscarConsumidor.Text != "")
+            {
+                e.Handled = true;
+                btnBuscarConsumidor.PerformClick();
+            }
+        }
+
+        private void cbBuscarConsumidor_Enter(object sender, EventArgs e)
+        {
+            cbBuscarConsumidor.SelectAll();
         }
     }
 }

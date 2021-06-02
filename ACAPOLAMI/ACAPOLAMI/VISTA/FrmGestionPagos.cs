@@ -10,22 +10,23 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ACAPOLAMI.DOMINIO;
 using ACAPOLAMI.NEGOCIO;
+using ACAPOLAMI.DAO;
 
 namespace ACAPOLAMI.VISTA
 {
     public partial class FrmGestionPagos : Form
     {
+        ClsDSucesos sucesos = new ClsDSucesos();
+        public string Id;
         public FrmGestionPagos()
         {
             InitializeComponent();
             CargarEstados();
         }
 
-
         private void FrmGestioPagos_Load(object sender, EventArgs e)
         {
             DatosCBseleccionados();
-
         }
 
         public String estado;
@@ -66,13 +67,8 @@ namespace ACAPOLAMI.VISTA
                     cbConsumidor.DataSource = consumidores.ToList();
                     cbConsumidor.DisplayMember = "nombres";
                     cbConsumidor.ValueMember = "Id";
-
                 }
-
             }
-
-
-
         }
         private void ConsumidorCBSeleccionado()
         {
@@ -100,11 +96,10 @@ namespace ACAPOLAMI.VISTA
                     var deuda = (from a in db.Pagos
                                  where a.idConsumidor_FK.ToString() == id
                                  select a.montoTotal).ToList();
-                    txtDeudaAcumulada.Text = deuda.Sum().ToString();
+                    txtTotal.Text = deuda.Sum().ToString();
                 }
             }
         }
-
 
         private void txtImpuesto_Enter(object sender, EventArgs e)
         {
@@ -203,23 +198,59 @@ namespace ACAPOLAMI.VISTA
         private void btnEjecutar_Click(object sender, EventArgs e)
         {
             DesactivarValidacion();
-            if (ValidacionCajasTexto()&&btnEjecutar.Text.Equals("Registrar pago"))
+            if (ValidacionCajasTexto()&&btnEjecutar.Text.Equals("Insertar"))
             {
                 //CODIGO DE AGREGAR PAGO AQUI
-                MessageBox.Show("agregando");
+                ClsDPagos pago = new ClsDPagos();
+
+                pago.AgregarPago(Convert.ToDecimal(txtMontoBase.Text), Convert.ToDecimal(txtCancelado.Text), 
+                    Convert.ToDecimal(txtPendiente.Text), Convert.ToDecimal(txtImpuesto.Text), Convert.ToDecimal(txtTotal.Text),
+                    Convert.ToDateTime(dtpFechaPago.Text), Convert.ToInt32(cbEstado.SelectedValue.ToString()), 
+                    Convert.ToInt32(cbConsumidor.SelectedValue.ToString()));
+
+                FrmNotificaciones notificacion = new FrmNotificaciones(sucesos.CargarDatosSucesos().tipoSuceso,
+                            sucesos.CargarDatosSucesos().descripcion, FrmNotificaciones.TipoAlerta.Realizado);
+                notificacion.Show();
+
+                Limpiar();
+
+                MessageBox.Show("Se inserto correctamente");
                 btnLimpiar.PerformClick();
             }
-            else if (ValidacionCajasTexto()&&btnEjecutar.Text.Equals("Modificar registro"))
+            else if (ValidacionCajasTexto()&&btnEjecutar.Text.Equals("Actualizar"))
             {
                 //CODIGO DE MOFIFICAR PAGO AQUI
-                MessageBox.Show("modificando");
+                ClsDPagos pago = new ClsDPagos();
+
+                pago.Modificarpago(Convert.ToInt32(Id),Convert.ToDecimal(txtMontoBase.Text), Convert.ToDecimal(txtCancelado.Text),
+                    Convert.ToDecimal(txtPendiente.Text), Convert.ToDecimal(txtImpuesto.Text), Convert.ToDecimal(txtTotal.Text),
+                    Convert.ToDateTime(dtpFechaPago.Text), Convert.ToInt32(cbEstado.SelectedValue.ToString()),
+                    Convert.ToInt32(txtCodigo.Text));
+
+                FrmNotificaciones notificacion = new FrmNotificaciones(sucesos.CargarDatosSucesos().tipoSuceso,
+                            sucesos.CargarDatosSucesos().descripcion, FrmNotificaciones.TipoAlerta.Realizado);
+                notificacion.Show();
+
+                Limpiar();
+
+
+                MessageBox.Show("Se actualizo correctamente");
                 this.Close();
             }
-            else if (ValidacionCajasTexto() && btnEjecutar.Text.Equals("Eliminar registro"))
+            else if (ValidacionCajasTexto() && btnEjecutar.Text.Equals("Eliminar"))
             {
                 //CODIGO DE ELIMINAR PAGO AQUI
-                MessageBox.Show("eliminando");
-                this.Close();
+                ClsDPagos pago = new ClsDPagos();
+
+                pago.EliminarPago(Convert.ToInt32(txtCodigo.Text));
+
+                FrmNotificaciones notificacion = new FrmNotificaciones(sucesos.CargarDatosSucesos().tipoSuceso,
+                        sucesos.CargarDatosSucesos().descripcion, FrmNotificaciones.TipoAlerta.Realizado);
+                notificacion.Show();
+
+                MessageBox.Show("Se elimino correctamente");
+
+                this.Dispose();
             }
         }
 
@@ -333,13 +364,18 @@ namespace ACAPOLAMI.VISTA
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
+            Limpiar();
+        }
+
+        private void Limpiar()
+        {
             txtCodigo.Text = "Codigo";
             txtNombres.Text = "Introduzca los nombres";
             txtApellidos.Text = "Introduzca los apellidos";
-            txtMontoBase.Text= "Pago base por mes a pagar";
+            txtMontoBase.Text = "Pago base por mes a pagar";
             txtCancelado.Text = "Pago recibido";
             txtImpuesto.Text = "Impuesto/mora/multa a cobrar";
-            txtDeudaAcumulada.Text = "Deuda global acumulada";
+            txtTotal.Text = "Deuda global acumulada";
         }
 
         //metodo para cargar el los estados
