@@ -51,9 +51,10 @@ namespace ACAPOLAMI.VISTA
 
         private void txtNombres_Enter(object sender, EventArgs e)
         {
-            if (txtNombres.Text.Equals("Introduzca los nombres"))
+            if (txtNombres.Text.Equals("Primero Segundo"))
             {
                 txtNombres.Text = "";
+                txtNombres.ForeColor = Color.RoyalBlue;
             }
 
         }
@@ -62,15 +63,17 @@ namespace ACAPOLAMI.VISTA
         {
             if (txtNombres.Text.Equals(""))
             {
-                txtNombres.Text = "Introduzca los nombres";
+                txtNombres.Text = "Primero Segundo";
+                txtNombres.ForeColor = Color.Gray;
             }
         }
 
         private void txtDUI_Enter(object sender, EventArgs e)
         {
-            if (txtDUI.Text.Equals("Introduzca el número de DUI"))
+            if (txtDUI.Text.Equals("00000000-0"))
             {
                 txtDUI.Text = "";
+                txtDUI.ForeColor = Color.RoyalBlue;
             }
         }
 
@@ -78,15 +81,17 @@ namespace ACAPOLAMI.VISTA
         {
             if (txtDUI.Text.Equals(""))
             {
-                txtDUI.Text = "Introduzca el número de DUI";
+                txtDUI.Text = "00000000-0";
+                txtDUI.ForeColor = Color.Gray;
             }
         }
 
         private void txtApellidos_Enter(object sender, EventArgs e)
         {
-            if (txtApellidos.Text.Equals("Introduzca los apellidos"))
+            if (txtApellidos.Text.Equals("Primero Segundo"))
             {
                 txtApellidos.Text = "";
+                txtApellidos.ForeColor = Color.RoyalBlue;
             }
         }
 
@@ -94,7 +99,8 @@ namespace ACAPOLAMI.VISTA
         {
             if (txtApellidos.Text.Equals(""))
             {
-                txtApellidos.Text = "Introduzca los apellidos";
+                txtApellidos.Text = "Primero Segundo";
+                txtApellidos.ForeColor = Color.Gray;
             }
         }
 
@@ -103,6 +109,7 @@ namespace ACAPOLAMI.VISTA
             if (txtTelefono.Text.Equals("0000-0000"))
             {
                 txtTelefono.Text = "";
+                txtTelefono.ForeColor = Color.RoyalBlue;
             }
         }
 
@@ -111,14 +118,16 @@ namespace ACAPOLAMI.VISTA
             if (txtTelefono.Text.Equals(""))
             {
                 txtTelefono.Text = "0000-0000";
+                txtTelefono.ForeColor = Color.Gray;
             }
         }
 
         private void txtCorreo_Enter(object sender, EventArgs e)
         {
-            if (txtCorreo.Text.Equals("ejemplo@gmail.com"))
+            if (txtCorreo.Text.Equals("ejemplo@correo.com"))
             {
                 txtCorreo.Text = "";
+                txtCorreo.ForeColor = Color.RoyalBlue;
             }
         }
 
@@ -126,7 +135,8 @@ namespace ACAPOLAMI.VISTA
         {
             if (txtCorreo.Text.Equals(""))
             {
-                txtCorreo.Text = "ejemplo@gmail.com";
+                txtCorreo.Text = "ejemplo@correo.com";
+                txtCorreo.ForeColor = Color.Gray;
             }
         }
 
@@ -137,7 +147,7 @@ namespace ACAPOLAMI.VISTA
                 txtApellidos.Text = "Introduzca los apellidos";
                 txtDUI.Text= "Introduzca el número de DUI";
                 txtTelefono.Text= "0000-0000";
-                txtCorreo.Text = "ejemplo@gmail.com";
+                txtCorreo.Text = "ejemplo@correo.com";
                 ListarComunidades();
         }
 
@@ -165,7 +175,8 @@ namespace ACAPOLAMI.VISTA
                     cbComunidad.DisplayMember = "nombreComunidad";
                     cbComunidad.ValueMember = "idComunidad";
 
-
+                    cbComunidad.Items.Insert(0, "Selecciona una opcion:");
+                    cbComunidad.SelectedIndex = 0;
                 }
             }
 
@@ -176,7 +187,7 @@ namespace ACAPOLAMI.VISTA
         //este seleccionado el radiobutton de agregar
         private void CargarComunidad()
         {
-            if (btnEjecutar.Text.Equals("Modificar registro")||btnEjecutar.Text.Equals("Eliminar registro"))
+            if (btnEjecutar.Text.Equals("Modificar")||btnEjecutar.Text.Equals("Eliminar"))
             {
                 cbComunidad.Text = comunidad;
             }
@@ -262,7 +273,7 @@ namespace ACAPOLAMI.VISTA
         private void btnEjecutar_Click(object sender, EventArgs e)
         {
             BorrarMensajesError();
-            if(ValidarCajasTexto() && btnEjecutar.Text.Equals("Agregar consumidor"))
+            if(ValidarCajasTexto() && btnEjecutar.Text.Equals("Agregar"))
             {
                 //Metodo para guardar nuevo consumidor
                 ClsDConsumidores clsconsumidor = new ClsDConsumidores();
@@ -287,16 +298,16 @@ namespace ACAPOLAMI.VISTA
 
                 Limpiar();
             }
-            else if (ValidarCajasTexto() && btnEjecutar.Text.Equals("Modificar registro"))
+            else if (ValidarCajasTexto() && btnEjecutar.Text.Equals("Modificar"))
             {
-                //Metodo para guardar nuevo registro
+                //Metodo actualizar consumidor
                 try
                 {
                     ClsDConsumidores clsDconsumidores = new ClsDConsumidores();
 
                     clsDconsumidores.ActualizarConsumidor(Convert.ToInt32(txtCodigo.Text), txtNombres.Text,
                                                          txtApellidos.Text, txtDUI.Text, txtTelefono.Text,
-                                                         Convert.ToInt32(cbComunidad.SelectedValue), txtCorreo.Text);
+                                                         Convert.ToInt32(cbComunidad.SelectedValue.ToString()), txtCorreo.Text);
 
                     FrmNotificaciones notificacion = new FrmNotificaciones(sucesos.CargarDatosSucesos().tipoSuceso,
                             sucesos.CargarDatosSucesos().descripcion, FrmNotificaciones.TipoAlerta.Realizado);
@@ -312,9 +323,9 @@ namespace ACAPOLAMI.VISTA
 
                 this.Close();
             }
-            else if (ValidarCajasTexto() && btnEjecutar.Text.Equals("Eliminar registro"))
+            else if (ValidarCajasTexto() && btnEjecutar.Text.Equals("Eliminar"))
             {
-                //Metodo para eliminar registro
+                //Metodo para eliminar consumidor
                 try
                 {
                     using (ACAPOLAMIEntities db = new ACAPOLAMIEntities())

@@ -32,7 +32,7 @@ namespace WilianMiranda01.VISTA
         private void FrmClientes_Load(object sender, EventArgs e)
         {
             //Llamada al método 
-            ejecutar();
+            MostrarConsumidores();
             dtgGestionDeConsumidores.Columns[0].Width = 70;
             dtgGestionDeConsumidores.Columns[1].Width = 180;
             dtgGestionDeConsumidores.Columns[2].Width = 180;
@@ -42,10 +42,10 @@ namespace WilianMiranda01.VISTA
         }
         
         //Método utilizado para leer los datos del sp en el dtgGestionDeConsumidores
-        private void ejecutar()
+        private void MostrarConsumidores()
         {
             ClsDConsumidores consumidores = new ClsDConsumidores();
-            dtgGestionDeConsumidores.DataSource = consumidores.Consultar();
+            dtgGestionDeConsumidores.DataSource = consumidores.MostrarConsumidores();
             btnCantidadDeClientes.Text = dtgGestionDeConsumidores.Rows.Count.ToString();
         }
 
@@ -55,7 +55,7 @@ namespace WilianMiranda01.VISTA
 
             agregar.lblId.Visible = false;
             agregar.txtCodigo.Visible = false;
-            agregar.btnEjecutar.Text = "Agregar consumidor";
+            agregar.btnEjecutar.Text = "Agregar";
 
             agregar.ShowDialog();
 
@@ -80,9 +80,9 @@ namespace WilianMiranda01.VISTA
                 modificar.comunidad = dtgGestionDeConsumidores.CurrentRow.Cells[6].Value.ToString();
 
                 //cambiando el texto del boton ejecutar
-                modificar.btnEjecutar.Text = "Modificar registro";
+                modificar.btnEjecutar.Text = "Modificar";
 
-                modificar.lblEncabezado.Text = "MODIFICAR REGISTRO";
+                modificar.lblEncabezado.Text = "MODIFICAR CONSUMI";
 
 
                 modificar.ShowDialog();
@@ -112,9 +112,9 @@ namespace WilianMiranda01.VISTA
                 eliminar.comunidad = dtgGestionDeConsumidores.CurrentRow.Cells[6].Value.ToString();
 
                 //cambiando el texto del boton ejecutar
-                eliminar.btnEjecutar.Text = "Eliminar registro";
+                eliminar.btnEjecutar.Text = "Eliminar";
 
-                eliminar.lblEncabezado.Text = "ELIMINAR REGISTRO";
+                eliminar.lblEncabezado.Text = "ELIMINAR CONSUMIDOR";
 
                 eliminar.pnlDatosConsumidor.Enabled = false;
 
@@ -210,7 +210,7 @@ namespace WilianMiranda01.VISTA
         #endregion
         public void btnRefrescar_Click(object sender, EventArgs e)
         {
-            ejecutar();
+            MostrarConsumidores();
         }
 
         private void btnRefrescar_MouseHover(object sender, EventArgs e)

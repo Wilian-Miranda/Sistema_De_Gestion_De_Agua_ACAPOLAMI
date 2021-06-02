@@ -11,7 +11,7 @@ namespace ACAPOLAMI.DAO
     class ClsDConsumidores
     {
         //método que devolvera un listado de tipo sp_MostrarConsumidores_Result
-        public List<sp_MostrarConsumidores_Result> Consultar()
+        public List<sp_MostrarConsumidores_Result> MostrarConsumidores()
         {
             //Contexto de datos
             using (ACAPOLAMIEntities db = new ACAPOLAMIEntities())
@@ -30,7 +30,7 @@ namespace ACAPOLAMI.DAO
             }
             return list;
         }
-
+        //Manda los datos a DAO
         public void InsertarConsumidor(string nombres, string apellidos, string dui, string telefono, string correo, int idComunidad)
         {
             try
@@ -70,6 +70,8 @@ namespace ACAPOLAMI.DAO
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        //Manda los datos a DAO
         public void ActualizarConsumidor(int id, string nombres, string apellidos, string dui, string telefono, int idComunidad, string correo)
         {
             try
@@ -79,7 +81,7 @@ namespace ACAPOLAMI.DAO
                     db.sp_ActualizarConsumidor(id, nombres, apellidos, dui, telefono, idComunidad, correo);
                     db.SaveChanges();
 
-                    MessageBox.Show("Los datos se actualizaron exitosamnete");
+                    MessageBox.Show("Los datos se actualizaron exitosamente");
                 }
 
             }

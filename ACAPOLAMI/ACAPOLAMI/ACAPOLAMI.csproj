@@ -200,12 +200,6 @@
     <Compile Include="VISTA\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="VISTA\FrmAgregarPago.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="VISTA\FrmAgregarPago.Designer.cs">
-      <DependentUpon>FrmAgregarPago.cs</DependentUpon>
-    </Compile>
     <Compile Include="VISTA\FrmAjustes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -224,12 +218,6 @@
     <Compile Include="VISTA\FrmDashboard.Designer.cs">
       <DependentUpon>FrmDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="VISTA\FrmEliminarPago.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="VISTA\FrmEliminarPago.Designer.cs">
-      <DependentUpon>FrmEliminarPago.cs</DependentUpon>
-    </Compile>
     <Compile Include="VISTA\FrmGestionConsumidores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -241,12 +229,6 @@
     </Compile>
     <Compile Include="VISTA\FrmGPagosPorAnio.Designer.cs">
       <DependentUpon>FrmGPagosPorAnio.cs</DependentUpon>
-    </Compile>
-    <Compile Include="VISTA\FrmModificarPago.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="VISTA\FrmModificarPago.Designer.cs">
-      <DependentUpon>FrmModificarPago.cs</DependentUpon>
     </Compile>
     <Compile Include="VISTA\FrmNotificaciones.cs">
       <SubType>Form</SubType>
@@ -301,11 +283,11 @@
     <EmbeddedResource Include="VISTA\FrmActividades.resx">
       <DependentUpon>FrmActividades.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VISTA\FrmGestionPagos.resx">
+      <DependentUpon>FrmGestionPagos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VISTA\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VISTA\FrmAgregarPago.resx">
-      <DependentUpon>FrmAgregarPago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VISTA\FrmAjustes.resx">
       <DependentUpon>FrmAjustes.cs</DependentUpon>
@@ -316,17 +298,11 @@
     <EmbeddedResource Include="VISTA\FrmDashboard.resx">
       <DependentUpon>FrmDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VISTA\FrmEliminarPago.resx">
-      <DependentUpon>FrmEliminarPago.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="VISTA\FrmGestionConsumidores.resx">
       <DependentUpon>FrmGestionConsumidores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VISTA\FrmGPagosPorAnio.resx">
       <DependentUpon>FrmGPagosPorAnio.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VISTA\FrmModificarPago.resx">
-      <DependentUpon>FrmModificarPago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VISTA\FrmNotificaciones.resx">
       <DependentUpon>FrmNotificaciones.cs</DependentUpon>

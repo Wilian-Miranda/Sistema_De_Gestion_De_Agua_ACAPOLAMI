@@ -355,7 +355,7 @@ namespace WilianMiranda01.VISTA
             this.pnlHoraFecha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlHoraFecha.Controls.Add(this.lblHora);
             this.pnlHoraFecha.Controls.Add(this.lblFecha);
-            this.pnlHoraFecha.Location = new System.Drawing.Point(395, 386);
+            this.pnlHoraFecha.Location = new System.Drawing.Point(295, 386);
             this.pnlHoraFecha.Name = "pnlHoraFecha";
             this.pnlHoraFecha.Size = new System.Drawing.Size(280, 146);
             this.pnlHoraFecha.TabIndex = 3;
@@ -391,7 +391,7 @@ namespace WilianMiranda01.VISTA
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = global::ACAPOLAMI.Properties.Resources.gif2;
-            this.pictureBox1.Location = new System.Drawing.Point(395, 117);
+            this.pictureBox1.Location = new System.Drawing.Point(295, 117);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(280, 263);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

@@ -30,6 +30,7 @@ namespace ACAPOLAMI.VISTA
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGestionPagos));
             this.pnlBorde = new System.Windows.Forms.Panel();
             this.pnlContenedorPrincipal = new System.Windows.Forms.Panel();
             this.pnlDatosConsumidor = new System.Windows.Forms.Panel();
@@ -554,7 +555,7 @@ namespace ACAPOLAMI.VISTA
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = global::ACAPOLAMI.Properties.Resources.gif;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(3, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(53, 60);
