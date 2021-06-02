@@ -174,9 +174,6 @@ namespace ACAPOLAMI.VISTA
                     cbComunidad.DataSource = lista;
                     cbComunidad.DisplayMember = "nombreComunidad";
                     cbComunidad.ValueMember = "idComunidad";
-
-                    cbComunidad.Items.Insert(0, "Selecciona una opcion:");
-                    cbComunidad.SelectedIndex = 0;
                 }
             }
 

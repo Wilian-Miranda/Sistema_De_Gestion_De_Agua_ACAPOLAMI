@@ -19,8 +19,6 @@ namespace WilianMiranda01.VISTA
 {
     public partial class FrmClientes : Form
     {
-        //FmrPrincipal p = new FmrPrincipal();
-        //CCClientes cliente = new CCClientes();
         public FrmClientes()
         {
             InitializeComponent();
@@ -82,7 +80,12 @@ namespace WilianMiranda01.VISTA
                 //cambiando el texto del boton ejecutar
                 modificar.btnEjecutar.Text = "Modificar";
 
-                modificar.lblEncabezado.Text = "MODIFICAR CONSUMI";
+                modificar.lblEncabezado.ForeColor = Color.RoyalBlue;
+                modificar.txtNombres.ForeColor = Color.RoyalBlue;
+                modificar.txtApellidos.ForeColor = Color.RoyalBlue;
+                modificar.txtDUI.ForeColor = Color.RoyalBlue;
+                modificar.txtTelefono.ForeColor = Color.RoyalBlue;
+                modificar.txtCorreo.ForeColor = Color.RoyalBlue;
 
 
                 modificar.ShowDialog();
@@ -113,11 +116,8 @@ namespace WilianMiranda01.VISTA
 
                 //cambiando el texto del boton ejecutar
                 eliminar.btnEjecutar.Text = "Eliminar";
-
                 eliminar.lblEncabezado.Text = "ELIMINAR CONSUMIDOR";
-
                 eliminar.pnlDatosConsumidor.Enabled = false;
-
 
                 eliminar.ShowDialog();
             }
@@ -236,10 +236,14 @@ namespace WilianMiranda01.VISTA
         //Evento click para buscar Consumidores
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            Buscador(cbBuscarCliente.Text.Trim());
+            if(cbBuscarCliente.Text != "")
+            {
+                Buscador(cbBuscarCliente.Text.Trim());
+            }
 
             //Agregar al historial de busqueda
-            cbBuscarCliente.Items.Add(cbBuscarCliente.Text);
+            if(cbBuscarCliente.SelectedIndex != 0)
+                cbBuscarCliente.Items.Insert(0, cbBuscarCliente.Text);
         }
 
         private void Buscador(string busqueda = null)
@@ -274,6 +278,20 @@ namespace WilianMiranda01.VISTA
                 //Pasamos la lista de consultas al dataGridView
                 dtgGestionDeConsumidores.DataSource = buscar.ToList();
             }
+        }
+
+        private void cbBuscarCliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == 13 && cbBuscarCliente.Text != "")
+            {
+                e.Handled = true;
+                btnBuscar.PerformClick();
+            }
+        }
+
+        private void cbBuscarCliente_Enter(object sender, EventArgs e)
+        {
+            cbBuscarCliente.SelectAll();
         }
     }
 }
