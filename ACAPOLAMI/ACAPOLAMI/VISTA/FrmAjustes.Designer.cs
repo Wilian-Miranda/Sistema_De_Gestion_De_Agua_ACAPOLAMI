@@ -153,12 +153,13 @@ namespace ACAPOLAMI.VISTA
             // panelOtrosAjustes
             // 
             this.panelOtrosAjustes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelOtrosAjustes.AutoSize = true;
             this.panelOtrosAjustes.BackColor = System.Drawing.Color.White;
             this.panelOtrosAjustes.Controls.Add(this.btnEstablecerPagoBase);
             this.panelOtrosAjustes.Controls.Add(this.txtPagoBase);
             this.panelOtrosAjustes.Controls.Add(this.lblPagoBase);
             this.panelOtrosAjustes.Controls.Add(this.lblOtrosAjustes);
-            this.panelOtrosAjustes.Location = new System.Drawing.Point(825, 261);
+            this.panelOtrosAjustes.Location = new System.Drawing.Point(825, 259);
             this.panelOtrosAjustes.Name = "panelOtrosAjustes";
             this.panelOtrosAjustes.Size = new System.Drawing.Size(189, 231);
             this.panelOtrosAjustes.TabIndex = 6;
@@ -208,6 +209,7 @@ namespace ACAPOLAMI.VISTA
             // panelControlUsuario
             // 
             this.panelControlUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.panelControlUsuario.AutoSize = true;
             this.panelControlUsuario.BackColor = System.Drawing.Color.White;
             this.panelControlUsuario.Controls.Add(this.label2);
             this.panelControlUsuario.Controls.Add(this.label1);
@@ -346,6 +348,7 @@ namespace ACAPOLAMI.VISTA
             // panelEstadoPagos
             // 
             this.panelEstadoPagos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelEstadoPagos.AutoSize = true;
             this.panelEstadoPagos.BackColor = System.Drawing.Color.White;
             this.panelEstadoPagos.Controls.Add(this.lblEstado);
             this.panelEstadoPagos.Controls.Add(this.btnEliminarEstado);
@@ -434,6 +437,7 @@ namespace ACAPOLAMI.VISTA
             // 
             // pnlComunidades
             // 
+            this.pnlComunidades.AutoSize = true;
             this.pnlComunidades.BackColor = System.Drawing.Color.White;
             this.pnlComunidades.Controls.Add(this.btnGuardarComunidad);
             this.pnlComunidades.Controls.Add(this.lblComunidad);
@@ -574,6 +578,7 @@ namespace ACAPOLAMI.VISTA
             this.panel2.PerformLayout();
             this.panelContenedor.ResumeLayout(false);
             this.panelControles.ResumeLayout(false);
+            this.panelControles.PerformLayout();
             this.panelOtrosAjustes.ResumeLayout(false);
             this.panelOtrosAjustes.PerformLayout();
             this.panelControlUsuario.ResumeLayout(false);

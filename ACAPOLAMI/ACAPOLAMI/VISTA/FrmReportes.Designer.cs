@@ -30,22 +30,21 @@ namespace ACAPOLAMI.VISTA
         private void InitializeComponent()
         {
             this.pnlBorde = new System.Windows.Forms.Panel();
-            this.pnlEncabezado = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.pnlContenedorReportes = new System.Windows.Forms.Panel();
             this.pnlActividad = new System.Windows.Forms.Panel();
             this.btnReporteActividad = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pnlPagos = new System.Windows.Forms.Panel();
-            this.btnReportePagos = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pnlConsumidor = new System.Windows.Forms.Panel();
             this.btnReporteConsumidor = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnReportePagos = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelSuperior = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.pnlBorde.SuspendLayout();
-            this.pnlEncabezado.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlContenedorReportes.SuspendLayout();
             this.pnlActividad.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -53,6 +52,9 @@ namespace ACAPOLAMI.VISTA
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.pnlConsumidor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panelSuperior.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlBorde
@@ -61,7 +63,6 @@ namespace ACAPOLAMI.VISTA
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlBorde.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
-            this.pnlBorde.Controls.Add(this.pnlEncabezado);
             this.pnlBorde.Controls.Add(this.pnlContenedorReportes);
             this.pnlBorde.Location = new System.Drawing.Point(-3, 0);
             this.pnlBorde.Name = "pnlBorde";
@@ -69,45 +70,11 @@ namespace ACAPOLAMI.VISTA
             this.pnlBorde.Size = new System.Drawing.Size(1068, 654);
             this.pnlBorde.TabIndex = 0;
             // 
-            // pnlEncabezado
-            // 
-            this.pnlEncabezado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
-            this.pnlEncabezado.Controls.Add(this.pictureBox1);
-            this.pnlEncabezado.Controls.Add(this.label1);
-            this.pnlEncabezado.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlEncabezado.Location = new System.Drawing.Point(3, 0);
-            this.pnlEncabezado.Name = "pnlEncabezado";
-            this.pnlEncabezado.Size = new System.Drawing.Size(1062, 60);
-            this.pnlEncabezado.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ACAPOLAMI.Properties.Resources.reportes;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(80, 54);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(428, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(198, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "GENERAR REPORTES";
-            // 
             // pnlContenedorReportes
             // 
-            this.pnlContenedorReportes.BackColor = System.Drawing.Color.White;
-            this.pnlContenedorReportes.Controls.Add(this.pnlActividad);
-            this.pnlContenedorReportes.Controls.Add(this.pnlPagos);
-            this.pnlContenedorReportes.Controls.Add(this.pnlConsumidor);
+            this.pnlContenedorReportes.BackColor = System.Drawing.Color.Gainsboro;
+            this.pnlContenedorReportes.Controls.Add(this.panelSuperior);
+            this.pnlContenedorReportes.Controls.Add(this.panel1);
             this.pnlContenedorReportes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenedorReportes.Location = new System.Drawing.Point(3, 0);
             this.pnlContenedorReportes.Name = "pnlContenedorReportes";
@@ -122,9 +89,9 @@ namespace ACAPOLAMI.VISTA
             this.pnlActividad.Controls.Add(this.btnReporteActividad);
             this.pnlActividad.Controls.Add(this.pictureBox4);
             this.pnlActividad.ForeColor = System.Drawing.Color.Black;
-            this.pnlActividad.Location = new System.Drawing.Point(19, 425);
+            this.pnlActividad.Location = new System.Drawing.Point(19, 323);
             this.pnlActividad.Name = "pnlActividad";
-            this.pnlActividad.Size = new System.Drawing.Size(1022, 123);
+            this.pnlActividad.Size = new System.Drawing.Size(980, 123);
             this.pnlActividad.TabIndex = 2;
             // 
             // btnReporteActividad
@@ -137,7 +104,7 @@ namespace ACAPOLAMI.VISTA
             this.btnReporteActividad.ForeColor = System.Drawing.Color.Black;
             this.btnReporteActividad.Location = new System.Drawing.Point(250, 0);
             this.btnReporteActividad.Name = "btnReporteActividad";
-            this.btnReporteActividad.Size = new System.Drawing.Size(772, 121);
+            this.btnReporteActividad.Size = new System.Drawing.Size(729, 121);
             this.btnReporteActividad.TabIndex = 1;
             this.btnReporteActividad.Text = "REPORTE DE ACTIVIDAD";
             this.btnReporteActividad.UseVisualStyleBackColor = false;
@@ -163,28 +130,10 @@ namespace ACAPOLAMI.VISTA
             this.pnlPagos.Controls.Add(this.btnReportePagos);
             this.pnlPagos.Controls.Add(this.pictureBox3);
             this.pnlPagos.ForeColor = System.Drawing.Color.Black;
-            this.pnlPagos.Location = new System.Drawing.Point(20, 296);
+            this.pnlPagos.Location = new System.Drawing.Point(20, 194);
             this.pnlPagos.Name = "pnlPagos";
-            this.pnlPagos.Size = new System.Drawing.Size(1022, 123);
+            this.pnlPagos.Size = new System.Drawing.Size(979, 123);
             this.pnlPagos.TabIndex = 1;
-            // 
-            // btnReportePagos
-            // 
-            this.btnReportePagos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnReportePagos.BackColor = System.Drawing.Color.Linen;
-            this.btnReportePagos.FlatAppearance.BorderSize = 0;
-            this.btnReportePagos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportePagos.ForeColor = System.Drawing.Color.Black;
-            this.btnReportePagos.Location = new System.Drawing.Point(250, 1);
-            this.btnReportePagos.Name = "btnReportePagos";
-            this.btnReportePagos.Size = new System.Drawing.Size(771, 121);
-            this.btnReportePagos.TabIndex = 1;
-            this.btnReportePagos.Text = "REPORTE DE PAGOS";
-            this.btnReportePagos.UseVisualStyleBackColor = false;
-            this.btnReportePagos.MouseLeave += new System.EventHandler(this.btnReportePagos_MouseLeave);
-            this.btnReportePagos.MouseHover += new System.EventHandler(this.btnReportePagos_MouseHover);
-            this.btnReportePagos.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnReportePagos_MouseMove);
             // 
             // pictureBox3
             // 
@@ -204,9 +153,9 @@ namespace ACAPOLAMI.VISTA
             this.pnlConsumidor.Controls.Add(this.btnReporteConsumidor);
             this.pnlConsumidor.Controls.Add(this.pictureBox2);
             this.pnlConsumidor.ForeColor = System.Drawing.Color.Gray;
-            this.pnlConsumidor.Location = new System.Drawing.Point(20, 167);
+            this.pnlConsumidor.Location = new System.Drawing.Point(20, 65);
             this.pnlConsumidor.Name = "pnlConsumidor";
-            this.pnlConsumidor.Size = new System.Drawing.Size(1022, 123);
+            this.pnlConsumidor.Size = new System.Drawing.Size(979, 123);
             this.pnlConsumidor.TabIndex = 0;
             // 
             // btnReporteConsumidor
@@ -219,7 +168,7 @@ namespace ACAPOLAMI.VISTA
             this.btnReporteConsumidor.ForeColor = System.Drawing.Color.Black;
             this.btnReporteConsumidor.Location = new System.Drawing.Point(250, 0);
             this.btnReporteConsumidor.Name = "btnReporteConsumidor";
-            this.btnReporteConsumidor.Size = new System.Drawing.Size(771, 121);
+            this.btnReporteConsumidor.Size = new System.Drawing.Size(728, 121);
             this.btnReporteConsumidor.TabIndex = 1;
             this.btnReporteConsumidor.Text = "REPORTE DE CLIENTES";
             this.btnReporteConsumidor.UseVisualStyleBackColor = false;
@@ -238,6 +187,75 @@ namespace ACAPOLAMI.VISTA
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
+            // btnReportePagos
+            // 
+            this.btnReportePagos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnReportePagos.BackColor = System.Drawing.Color.Linen;
+            this.btnReportePagos.FlatAppearance.BorderSize = 0;
+            this.btnReportePagos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReportePagos.ForeColor = System.Drawing.Color.Black;
+            this.btnReportePagos.Location = new System.Drawing.Point(250, 1);
+            this.btnReportePagos.Name = "btnReportePagos";
+            this.btnReportePagos.Size = new System.Drawing.Size(728, 121);
+            this.btnReportePagos.TabIndex = 1;
+            this.btnReportePagos.Text = "REPORTE DE PAGOS";
+            this.btnReportePagos.UseVisualStyleBackColor = false;
+            this.btnReportePagos.MouseLeave += new System.EventHandler(this.btnReportePagos_MouseLeave);
+            this.btnReportePagos.MouseHover += new System.EventHandler(this.btnReportePagos_MouseHover);
+            this.btnReportePagos.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnReportePagos_MouseMove);
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.pnlActividad);
+            this.panel1.Controls.Add(this.pnlConsumidor);
+            this.panel1.Controls.Add(this.pnlPagos);
+            this.panel1.Location = new System.Drawing.Point(23, 119);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1019, 509);
+            this.panel1.TabIndex = 3;
+            // 
+            // panelSuperior
+            // 
+            this.panelSuperior.AutoSize = true;
+            this.panelSuperior.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.panelSuperior.Controls.Add(this.panel2);
+            this.panelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSuperior.Location = new System.Drawing.Point(20, 23);
+            this.panelSuperior.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.panelSuperior.Name = "panelSuperior";
+            this.panelSuperior.Padding = new System.Windows.Forms.Padding(0, 20, 0, 0);
+            this.panelSuperior.Size = new System.Drawing.Size(1022, 74);
+            this.panelSuperior.TabIndex = 11;
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Location = new System.Drawing.Point(0, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1022, 66);
+            this.panel2.TabIndex = 7;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(406, 22);
+            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(211, 19);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "REPORTES DEL SISTEMA";
+            // 
             // FrmReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
@@ -253,16 +271,18 @@ namespace ACAPOLAMI.VISTA
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmReportes";
             this.pnlBorde.ResumeLayout(false);
-            this.pnlEncabezado.ResumeLayout(false);
-            this.pnlEncabezado.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlContenedorReportes.ResumeLayout(false);
+            this.pnlContenedorReportes.PerformLayout();
             this.pnlActividad.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.pnlPagos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.pnlConsumidor.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panelSuperior.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -270,18 +290,19 @@ namespace ACAPOLAMI.VISTA
         #endregion
 
         private System.Windows.Forms.Panel pnlBorde;
-        private System.Windows.Forms.Panel pnlEncabezado;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnlContenedorReportes;
         private System.Windows.Forms.Panel pnlConsumidor;
         private System.Windows.Forms.Button btnReporteConsumidor;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel pnlPagos;
-        private System.Windows.Forms.Button btnReportePagos;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel pnlActividad;
         private System.Windows.Forms.Button btnReporteActividad;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Button btnReportePagos;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelSuperior;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label3;
     }
 }
