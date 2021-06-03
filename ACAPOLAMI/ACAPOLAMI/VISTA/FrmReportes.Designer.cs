@@ -71,10 +71,10 @@ namespace ACAPOLAMI.VISTA
             // 
             // pnlEncabezado
             // 
-            this.pnlEncabezado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlEncabezado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
             this.pnlEncabezado.Controls.Add(this.pictureBox1);
             this.pnlEncabezado.Controls.Add(this.label1);
+            this.pnlEncabezado.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlEncabezado.Location = new System.Drawing.Point(3, 0);
             this.pnlEncabezado.Name = "pnlEncabezado";
             this.pnlEncabezado.Size = new System.Drawing.Size(1062, 60);
@@ -82,8 +82,6 @@ namespace ACAPOLAMI.VISTA
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::ACAPOLAMI.Properties.Resources.reportes;
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
@@ -94,8 +92,7 @@ namespace ACAPOLAMI.VISTA
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
@@ -107,13 +104,11 @@ namespace ACAPOLAMI.VISTA
             // 
             // pnlContenedorReportes
             // 
-            this.pnlContenedorReportes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlContenedorReportes.BackColor = System.Drawing.Color.White;
             this.pnlContenedorReportes.Controls.Add(this.pnlActividad);
             this.pnlContenedorReportes.Controls.Add(this.pnlPagos);
             this.pnlContenedorReportes.Controls.Add(this.pnlConsumidor);
+            this.pnlContenedorReportes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenedorReportes.Location = new System.Drawing.Point(3, 0);
             this.pnlContenedorReportes.Name = "pnlContenedorReportes";
             this.pnlContenedorReportes.Padding = new System.Windows.Forms.Padding(20, 23, 20, 20);

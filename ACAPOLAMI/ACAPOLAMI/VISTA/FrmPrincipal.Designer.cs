@@ -52,14 +52,13 @@ namespace WilianMiranda01.VISTA
             this.btnMaximizar = new System.Windows.Forms.Button();
             this.btnRestaurar = new System.Windows.Forms.Button();
             this.btnCerrarAplicacion = new System.Windows.Forms.Button();
-            this.pnlPanelPadre = new System.Windows.Forms.Panel();
+            this.panelPadre = new System.Windows.Forms.Panel();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.pnlHoraFecha = new System.Windows.Forms.Panel();
             this.lblHora = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tmrTiempo = new System.Windows.Forms.Timer(this.components);
-            this.panelSize = new System.Windows.Forms.Panel();
             this.pnlMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -68,7 +67,7 @@ namespace WilianMiranda01.VISTA
             ((System.ComponentModel.ISupportInitialize)(this.btnInicio)).BeginInit();
             this.pnlCabezaPrincipal.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.pnlPanelPadre.SuspendLayout();
+            this.panelPadre.SuspendLayout();
             this.panelContenedor.SuspendLayout();
             this.pnlHoraFecha.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -375,22 +374,23 @@ namespace WilianMiranda01.VISTA
             this.btnCerrarAplicacion.MouseHover += new System.EventHandler(this.btnCerrarAplicacion_MouseHover);
             this.btnCerrarAplicacion.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnCerrarAplicacion_MouseMove);
             // 
-            // pnlPanelPadre
+            // panelPadre
             // 
-            this.pnlPanelPadre.BackColor = System.Drawing.Color.White;
-            this.pnlPanelPadre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pnlPanelPadre.Controls.Add(this.panelContenedor);
-            this.pnlPanelPadre.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlPanelPadre.Location = new System.Drawing.Point(200, 30);
-            this.pnlPanelPadre.Name = "pnlPanelPadre";
-            this.pnlPanelPadre.Size = new System.Drawing.Size(872, 651);
-            this.pnlPanelPadre.TabIndex = 55;
+            this.panelPadre.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelPadre.BackColor = System.Drawing.Color.White;
+            this.panelPadre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panelPadre.Controls.Add(this.panelContenedor);
+            this.panelPadre.Location = new System.Drawing.Point(200, 30);
+            this.panelPadre.Name = "panelPadre";
+            this.panelPadre.Size = new System.Drawing.Size(872, 651);
+            this.panelPadre.TabIndex = 55;
             // 
             // panelContenedor
             // 
             this.panelContenedor.Controls.Add(this.pnlHoraFecha);
             this.panelContenedor.Controls.Add(this.pictureBox1);
-            this.panelContenedor.Controls.Add(this.panelSize);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(0, 0);
             this.panelContenedor.Name = "panelContenedor";
@@ -450,14 +450,6 @@ namespace WilianMiranda01.VISTA
             this.tmrTiempo.Enabled = true;
             this.tmrTiempo.Tick += new System.EventHandler(this.tmrTiempo_Tick);
             // 
-            // panelSize
-            // 
-            this.panelSize.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelSize.Location = new System.Drawing.Point(0, 0);
-            this.panelSize.Name = "panelSize";
-            this.panelSize.Size = new System.Drawing.Size(872, 651);
-            this.panelSize.TabIndex = 4;
-            // 
             // FmrPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
@@ -465,7 +457,7 @@ namespace WilianMiranda01.VISTA
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1072, 681);
             this.ControlBox = false;
-            this.Controls.Add(this.pnlPanelPadre);
+            this.Controls.Add(this.panelPadre);
             this.Controls.Add(this.pnlCabezaPrincipal);
             this.Controls.Add(this.pnlMenu);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -473,6 +465,7 @@ namespace WilianMiranda01.VISTA
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.MinimumSize = new System.Drawing.Size(736, 681);
             this.Name = "FmrPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ACAPOLAMI";
@@ -486,7 +479,7 @@ namespace WilianMiranda01.VISTA
             ((System.ComponentModel.ISupportInitialize)(this.btnInicio)).EndInit();
             this.pnlCabezaPrincipal.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.pnlPanelPadre.ResumeLayout(false);
+            this.panelPadre.ResumeLayout(false);
             this.panelContenedor.ResumeLayout(false);
             this.pnlHoraFecha.ResumeLayout(false);
             this.pnlHoraFecha.PerformLayout();
@@ -505,7 +498,7 @@ namespace WilianMiranda01.VISTA
         private System.Windows.Forms.Button btnCerrarAplicacion;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button bntMinimizarMenu;
-        private System.Windows.Forms.Panel pnlPanelPadre;
+        private System.Windows.Forms.Panel panelPadre;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label lblHora;
@@ -524,6 +517,5 @@ namespace WilianMiranda01.VISTA
         private System.Windows.Forms.Button btnRestaurar;
         private System.Windows.Forms.Button btnMaximizar;
         private System.Windows.Forms.Panel panelContenedor;
-        private System.Windows.Forms.Panel panelSize;
     }
 }

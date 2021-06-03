@@ -57,7 +57,7 @@ namespace WilianMiranda01.VISTA
             //Excluimos tamanio del formulario
             region.Exclude(rectanguloGrid);
             //Indicamos el panel principal
-            panelSize.Region = region;
+            panelPadre.Region = region;
             Invalidate();
         }
 
@@ -227,15 +227,15 @@ namespace WilianMiranda01.VISTA
                 formulario.Close();
             }
             
-            formulario = pnlPanelPadre.Controls.OfType<Miform>().FirstOrDefault();
+            formulario = panelPadre.Controls.OfType<Miform>().FirstOrDefault();
 
             if(formulario == null)
             {
                 formulario = new Miform();
                 formulario.TopLevel = false;
                 formulario.Dock = DockStyle.Fill;
-                pnlPanelPadre.Controls.Add(formulario);
-                pnlPanelPadre.Tag = formulario;
+                panelPadre.Controls.Add(formulario);
+                panelPadre.Tag = formulario;
                 formulario.Show();
                 formulario.BringToFront();
             }
