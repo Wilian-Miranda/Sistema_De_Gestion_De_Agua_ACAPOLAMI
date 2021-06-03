@@ -64,7 +64,7 @@ namespace ACAPOLAMI.VISTA
             // 
             // lblTexto
             // 
-            this.lblTexto.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTexto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblTexto.AutoSize = true;
             this.lblTexto.BackColor = System.Drawing.Color.White;
             this.lblTexto.ForeColor = System.Drawing.Color.Black;
@@ -77,7 +77,7 @@ namespace ACAPOLAMI.VISTA
             // 
             // btnHistorial
             // 
-            this.btnHistorial.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHistorial.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnHistorial.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnHistorial.FlatAppearance.BorderSize = 0;
             this.btnHistorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -95,7 +95,7 @@ namespace ACAPOLAMI.VISTA
             // 
             // btnActualizar
             // 
-            this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnActualizar.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnActualizar.FlatAppearance.BorderSize = 0;
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

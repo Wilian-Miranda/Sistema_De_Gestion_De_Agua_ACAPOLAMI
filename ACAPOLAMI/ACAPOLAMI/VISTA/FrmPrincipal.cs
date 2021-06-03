@@ -57,7 +57,7 @@ namespace WilianMiranda01.VISTA
             //Excluimos tamanio del formulario
             region.Exclude(rectanguloGrid);
             //Indicamos el panel principal
-            panelContenedor.Region = region;
+            panelSize.Region = region;
             Invalidate();
         }
 

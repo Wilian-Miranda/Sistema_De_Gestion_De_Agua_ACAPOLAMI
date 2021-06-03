@@ -154,7 +154,7 @@ namespace WilianMiranda01.VISTA
             // 
             // btnRefrescar
             // 
-            this.btnRefrescar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnRefrescar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRefrescar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRefrescar.ForeColor = System.Drawing.Color.Black;
             this.btnRefrescar.Image = ((System.Drawing.Image)(resources.GetObject("btnRefrescar.Image")));
@@ -170,6 +170,8 @@ namespace WilianMiranda01.VISTA
             // 
             // cbBuscarConsumidor
             // 
+            this.cbBuscarConsumidor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cbBuscarConsumidor.FormattingEnabled = true;
             this.cbBuscarConsumidor.Location = new System.Drawing.Point(166, 10);
             this.cbBuscarConsumidor.Name = "cbBuscarConsumidor";
@@ -180,7 +182,6 @@ namespace WilianMiranda01.VISTA
             // 
             // btnBuscarConsumidor
             // 
-            this.btnBuscarConsumidor.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnBuscarConsumidor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarConsumidor.ForeColor = System.Drawing.Color.Black;
             this.btnBuscarConsumidor.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarConsumidor.Image")));
@@ -198,7 +199,7 @@ namespace WilianMiranda01.VISTA
             // 
             // btnRegistrarPago
             // 
-            this.btnRegistrarPago.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnRegistrarPago.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRegistrarPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrarPago.ForeColor = System.Drawing.Color.Black;
             this.btnRegistrarPago.Image = ((System.Drawing.Image)(resources.GetObject("btnRegistrarPago.Image")));
@@ -216,7 +217,7 @@ namespace WilianMiranda01.VISTA
             // 
             // btnModificarPago
             // 
-            this.btnModificarPago.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnModificarPago.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnModificarPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificarPago.ForeColor = System.Drawing.Color.Black;
             this.btnModificarPago.Image = ((System.Drawing.Image)(resources.GetObject("btnModificarPago.Image")));
@@ -234,7 +235,7 @@ namespace WilianMiranda01.VISTA
             // 
             // btnEliminarPago
             // 
-            this.btnEliminarPago.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnEliminarPago.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEliminarPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminarPago.ForeColor = System.Drawing.Color.Black;
             this.btnEliminarPago.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminarPago.Image")));
