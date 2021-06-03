@@ -24,15 +24,6 @@ namespace ACAPOLAMI.VISTA
 
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void ptbIconoAjustes_Click(object sender, EventArgs e)
-        {
-
-        }
         #region EVENTOS PLACEHOLDER DE LAS CAJAS DE TEXTO
         private void txtComunidad_Enter(object sender, EventArgs e)
         {
@@ -181,56 +172,6 @@ namespace ACAPOLAMI.VISTA
 
         #endregion
 
-        private void btnGuardarComunidad_Click(object sender, EventArgs e)
-        {
-            if (txtComunidad.Text.Equals("@nombre comunidad"))
-            {
-                controlValidaciones.SetError(txtComunidad, "Este campo es obligatorio,\npara ejecutar esta acción");
-            }
-            else
-            {
-                controlValidaciones.SetError(txtComunidad, "");
-            }
-        }
-
-        private void btnGuardarEstado_Click(object sender, EventArgs e)
-        {
-            if (txtEstado.Text.Equals("@nombre estado"))
-            {
-                controlValidaciones.SetError(txtEstado, "Este campo es obligatorio,\npara ejecutar esta acción");
-            }
-            else
-            {
-                controlValidaciones.SetError(txtEstado, "");
-            }
-        }
-
-        private void btnGuardarUsuario_Click(object sender, EventArgs e)
-        {
-            if (txtUsuario.Text.Equals("ejemplo@gmail.com")
-                || txtPassAntigua.Text.Equals("@antigua"))
-            {
-                controlValidaciones.SetError(txtUsuario, "Este campo es obligatorio,\npara ejecutar esta acción");
-                controlValidaciones.SetError(txtPassAntigua, "Para modificar su usuario y/o contraseña,\ndebe ingresar su antigua contraseña");
-            }
-            else
-            {
-                controlValidaciones.SetError(txtUsuario, "");
-                controlValidaciones.SetError(txtPassAntigua, "");
-            }
-        }
-
-        private void btnEstablecerPagoBase_Click(object sender, EventArgs e)
-        {
-            if (txtPagoBase.Text.Equals("0.0000"))
-            {
-                controlValidaciones.SetError(txtPagoBase, "Este campo es obligatorio,\npara ejecutar esta acción");
-            }
-            else
-            {
-                controlValidaciones.SetError(txtPagoBase, "");
-            }
-        }
         #region EVENTOS DEL CAMBIO DE COLORES DE LOS BOTONES
         ButtonColor boton = new ButtonColor();
         ClsButtonColor color = new ClsButtonColor();
@@ -366,5 +307,164 @@ namespace ACAPOLAMI.VISTA
             color.AzulClaro(boton);
         }
         #endregion
+
+        private void btnGuardarComunidad_Click_1(object sender, EventArgs e)
+        {
+            if (txtComunidad.Text.Equals("@nombre comunidad"))
+            {
+                controlValidaciones.SetError(txtComunidad, "Este campo es obligatorio,\npara ejecutar esta acción");
+            }
+            else
+            {
+                controlValidaciones.SetError(txtComunidad, "");
+            }
+        }
+
+        private void btnGuardarEstado_Click_1(object sender, EventArgs e)
+        {
+            if (txtEstado.Text.Equals("@nombre estado"))
+            {
+                controlValidaciones.SetError(txtEstado, "Este campo es obligatorio,\npara ejecutar esta acción");
+            }
+            else
+            {
+                controlValidaciones.SetError(txtEstado, "");
+            }
+        }
+
+        private void btnGuardarUsuario_Click_1(object sender, EventArgs e)
+        {
+            if (txtUsuario.Text.Equals("ejemplo@gmail.com")
+                || txtPassAntigua.Text.Equals("@antigua"))
+            {
+                controlValidaciones.SetError(txtUsuario, "Este campo es obligatorio,\npara ejecutar esta acción");
+                controlValidaciones.SetError(txtPassAntigua, "Para modificar su usuario y/o contraseña,\ndebe ingresar su antigua contraseña");
+            }
+            else
+            {
+                controlValidaciones.SetError(txtUsuario, "");
+                controlValidaciones.SetError(txtPassAntigua, "");
+            }
+        }
+
+        private void btnEstablecerPagoBase_Click_1(object sender, EventArgs e)
+        {
+            if (txtPagoBase.Text.Equals("0.0000"))
+            {
+                controlValidaciones.SetError(txtPagoBase, "Este campo es obligatorio,\npara ejecutar esta acción");
+            }
+            else
+            {
+                controlValidaciones.SetError(txtPagoBase, "");
+            }
+        }
+
+        private void txtComunidad_Enter_1(object sender, EventArgs e)
+        {
+            if (txtComunidad.Text.Contains("@nombre comunidad"))
+            {
+                txtComunidad.Text = "";
+                txtComunidad.ForeColor = Color.RoyalBlue;
+            }
+        }
+
+        private void txtComunidad_Leave_1(object sender, EventArgs e)
+        {
+            if (txtComunidad.Text == "")
+            {
+                txtComunidad.Text = "@nombre comunidad";
+                txtComunidad.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txtEstado_Enter_1(object sender, EventArgs e)
+        {
+            if (txtEstado.Text.Contains("@nombre estado"))
+            {
+                txtEstado.Text = "";
+                txtEstado.ForeColor = Color.RoyalBlue;
+            }
+        }
+
+        private void txtEstado_Leave_1(object sender, EventArgs e)
+        {
+            if (txtEstado.Text == "")
+            {
+                txtEstado.Text = "@nombre estado";
+                txtEstado.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txtUsuario_Enter_1(object sender, EventArgs e)
+        {
+            if (txtUsuario.Text.Contains("ejemplo@correo.com"))
+            {
+                txtUsuario.Text = "";
+                txtUsuario.ForeColor = Color.RoyalBlue;
+            }
+        }
+
+        private void txtUsuario_Leave_1(object sender, EventArgs e)
+        {
+            if (txtUsuario.Text == "")
+            {
+                txtUsuario.Text = "ejemplo@correo.com";
+                txtUsuario.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txtPass_Enter_1(object sender, EventArgs e)
+        {
+            if (txtPass.Text.Contains("@nueva"))
+            {
+                txtPass.Text = "";
+                txtPass.ForeColor = Color.RoyalBlue;
+            }
+        }
+
+        private void txtPass_Leave_1(object sender, EventArgs e)
+        {
+            if (txtPass.Text == "")
+            {
+                txtPass.Text = "@nueva";
+                txtPass.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txtPassAntigua_Enter_1(object sender, EventArgs e)
+        {
+            if (txtPassAntigua.Text.Contains("@antigua"))
+            {
+                txtPassAntigua.Text = "";
+                txtPassAntigua.ForeColor = Color.RoyalBlue;
+            }
+        }
+
+        private void txtPassAntigua_Leave_1(object sender, EventArgs e)
+        {
+            if (txtPassAntigua.Text == "")
+            {
+                txtPassAntigua.Text = "@antigua";
+                txtPassAntigua.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txtPagoBase_Enter_1(object sender, EventArgs e)
+        {
+            if (txtPagoBase.Text.Contains("0.0000"))
+            {
+                txtPagoBase.Text = "";
+                txtPagoBase.ForeColor = Color.RoyalBlue;
+            }
+        }
+
+        private void txtPagoBase_Leave_1(object sender, EventArgs e)
+        {
+            if (txtPagoBase.Text == "")
+            {
+                txtPagoBase.Text = "0.0000";
+                txtPagoBase.ForeColor = Color.Gray;
+            }
+        }
     }
 }

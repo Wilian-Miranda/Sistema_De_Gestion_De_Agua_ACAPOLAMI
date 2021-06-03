@@ -175,6 +175,7 @@ namespace ACAPOLAMI.VISTA
             this.btnEstablecerPagoBase.TabIndex = 10;
             this.btnEstablecerPagoBase.Text = "Guardar";
             this.btnEstablecerPagoBase.UseVisualStyleBackColor = false;
+            this.btnEstablecerPagoBase.Click += new System.EventHandler(this.btnEstablecerPagoBase_Click_1);
             // 
             // txtPagoBase
             // 
@@ -184,6 +185,8 @@ namespace ACAPOLAMI.VISTA
             this.txtPagoBase.Size = new System.Drawing.Size(176, 26);
             this.txtPagoBase.TabIndex = 8;
             this.txtPagoBase.Text = "0.0000";
+            this.txtPagoBase.Enter += new System.EventHandler(this.txtPagoBase_Enter_1);
+            this.txtPagoBase.Leave += new System.EventHandler(this.txtPagoBase_Leave_1);
             // 
             // lblPagoBase
             // 
@@ -215,8 +218,8 @@ namespace ACAPOLAMI.VISTA
             this.panelControlUsuario.Controls.Add(this.label1);
             this.panelControlUsuario.Controls.Add(this.lblCorreo);
             this.panelControlUsuario.Controls.Add(this.btnEliminarUsuario);
-            this.panelControlUsuario.Controls.Add(this.btnGuardarUsuario);
             this.panelControlUsuario.Controls.Add(this.txtPassAntigua);
+            this.panelControlUsuario.Controls.Add(this.btnGuardarUsuario);
             this.panelControlUsuario.Controls.Add(this.txtPass);
             this.panelControlUsuario.Controls.Add(this.txtUsuario);
             this.panelControlUsuario.Controls.Add(this.dataGridView3);
@@ -279,26 +282,31 @@ namespace ACAPOLAMI.VISTA
             this.btnGuardarUsuario.TabIndex = 6;
             this.btnGuardarUsuario.Text = "Guardar";
             this.btnGuardarUsuario.UseVisualStyleBackColor = false;
+            this.btnGuardarUsuario.Click += new System.EventHandler(this.btnGuardarUsuario_Click_1);
             // 
             // txtPassAntigua
             // 
             this.txtPassAntigua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPassAntigua.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtPassAntigua.Location = new System.Drawing.Point(424, 130);
+            this.txtPassAntigua.Location = new System.Drawing.Point(247, 141);
             this.txtPassAntigua.Name = "txtPassAntigua";
             this.txtPassAntigua.Size = new System.Drawing.Size(154, 26);
             this.txtPassAntigua.TabIndex = 5;
             this.txtPassAntigua.Text = "@antigua";
+            this.txtPassAntigua.Enter += new System.EventHandler(this.txtPassAntigua_Enter_1);
+            this.txtPassAntigua.Leave += new System.EventHandler(this.txtPassAntigua_Leave_1);
             // 
             // txtPass
             // 
             this.txtPass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPass.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtPass.Location = new System.Drawing.Point(248, 130);
+            this.txtPass.Location = new System.Drawing.Point(424, 141);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(154, 26);
             this.txtPass.TabIndex = 4;
             this.txtPass.Text = "@nueva";
+            this.txtPass.Enter += new System.EventHandler(this.txtPass_Enter_1);
+            this.txtPass.Leave += new System.EventHandler(this.txtPass_Leave_1);
             // 
             // txtUsuario
             // 
@@ -308,7 +316,9 @@ namespace ACAPOLAMI.VISTA
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(330, 26);
             this.txtUsuario.TabIndex = 3;
-            this.txtUsuario.Text = "ejemplo@gmail.com";
+            this.txtUsuario.Text = "ejemplo@correo.com";
+            this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter_1);
+            this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave_1);
             // 
             // dataGridView3
             // 
@@ -394,6 +404,7 @@ namespace ACAPOLAMI.VISTA
             this.btnGuardarEstado.TabIndex = 4;
             this.btnGuardarEstado.Text = "Guardar";
             this.btnGuardarEstado.UseVisualStyleBackColor = false;
+            this.btnGuardarEstado.Click += new System.EventHandler(this.btnGuardarEstado_Click_1);
             // 
             // txtEstado
             // 
@@ -404,6 +415,8 @@ namespace ACAPOLAMI.VISTA
             this.txtEstado.Size = new System.Drawing.Size(171, 26);
             this.txtEstado.TabIndex = 3;
             this.txtEstado.Text = "@nombre estado";
+            this.txtEstado.Enter += new System.EventHandler(this.txtEstado_Enter_1);
+            this.txtEstado.Leave += new System.EventHandler(this.txtEstado_Leave_1);
             // 
             // dataGridView2
             // 
@@ -476,6 +489,7 @@ namespace ACAPOLAMI.VISTA
             this.btnGuardarComunidad.TabIndex = 7;
             this.btnGuardarComunidad.Text = "Guardar";
             this.btnGuardarComunidad.UseVisualStyleBackColor = false;
+            this.btnGuardarComunidad.Click += new System.EventHandler(this.btnGuardarComunidad_Click_1);
             // 
             // lblComunidad
             // 
@@ -509,6 +523,8 @@ namespace ACAPOLAMI.VISTA
             this.txtComunidad.Size = new System.Drawing.Size(171, 26);
             this.txtComunidad.TabIndex = 2;
             this.txtComunidad.Text = "@nombre comunidad";
+            this.txtComunidad.Enter += new System.EventHandler(this.txtComunidad_Enter_1);
+            this.txtComunidad.Leave += new System.EventHandler(this.txtComunidad_Leave_1);
             // 
             // dataGridView1
             // 
