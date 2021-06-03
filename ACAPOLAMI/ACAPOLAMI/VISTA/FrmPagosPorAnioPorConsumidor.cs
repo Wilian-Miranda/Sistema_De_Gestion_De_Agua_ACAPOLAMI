@@ -18,8 +18,8 @@ namespace ACAPOLAMI.VISTA
         {
             InitializeComponent();
         }
-        
-        void CargarConsumidor() {
+        void CargarConsumidor()
+        {
             cbxConsumidores.Items.Clear();
             ClsDConsumidores consumidores = new ClsDConsumidores();
             List<Consumidores> list = consumidores.ConsultarConsumidores();
@@ -28,17 +28,21 @@ namespace ACAPOLAMI.VISTA
                 cbxConsumidores.Items.Add(i.nombresConsumidor);
             }
         }
-        void CargarAnio() {
+        void CargarAnio()
+        {
             cbxAnio.Items.Clear();
             List<String> fechas = new ClsDPagos().CargarAnio();
-            foreach (var i in fechas) {
+            foreach (var i in fechas)
+            {
                 cbxAnio.Items.Add(i.ToString());
             }
         }
+
         private void FrmPagosPorAnioPorConsumidor_Load(object sender, EventArgs e)
         {
             CargarConsumidor();
             CargarAnio();
+
         }
 
         private void btnGenerar_Click(object sender, EventArgs e)
@@ -48,9 +52,9 @@ namespace ACAPOLAMI.VISTA
             //Los primeros 3 valores son anio, mes, dia
             //los ultimos 3 son hora, minuto y segundo
             DateTime fechaD = new DateTime(Convert.ToInt32(fecha), 4, 3, 2, 3, 2);
-            
-            
-            dataTable1TableAdapter.Fill(cddPagosPorAnioPorConsumidor.DataTable1, fechaD, consumidor);
+
+
+            pagosTableAdapter.Fill(cddPagosPorAnioPorConsumidor.Pagos, fechaD, consumidor);
             reportViewer1.RefreshReport();
         }
     }

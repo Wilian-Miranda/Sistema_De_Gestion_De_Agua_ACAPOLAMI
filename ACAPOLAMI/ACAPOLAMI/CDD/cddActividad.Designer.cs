@@ -279,13 +279,13 @@ namespace ACAPOLAMI.CDD {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class SucesosDataTable : global::System.Data.TypedTableBase<SucesosRow> {
             
-            private global::System.Data.DataColumn columnTipo;
+            private global::System.Data.DataColumn columnCodigo;
             
             private global::System.Data.DataColumn columnDescripcion;
             
-            private global::System.Data.DataColumn columnFecha;
+            private global::System.Data.DataColumn columnTipo;
             
-            private global::System.Data.DataColumn columnidSuceso;
+            private global::System.Data.DataColumn columnFecha;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -322,9 +322,9 @@ namespace ACAPOLAMI.CDD {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn TipoColumn {
+            public global::System.Data.DataColumn CodigoColumn {
                 get {
-                    return this.columnTipo;
+                    return this.columnCodigo;
                 }
             }
             
@@ -338,17 +338,17 @@ namespace ACAPOLAMI.CDD {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn FechaColumn {
+            public global::System.Data.DataColumn TipoColumn {
                 get {
-                    return this.columnFecha;
+                    return this.columnTipo;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn idSucesoColumn {
+            public global::System.Data.DataColumn FechaColumn {
                 get {
-                    return this.columnidSuceso;
+                    return this.columnFecha;
                 }
             }
             
@@ -389,13 +389,13 @@ namespace ACAPOLAMI.CDD {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SucesosRow AddSucesosRow(string Tipo, string Descripcion, System.DateTime Fecha) {
+            public SucesosRow AddSucesosRow(string Descripcion, string Tipo, System.DateTime Fecha) {
                 SucesosRow rowSucesosRow = ((SucesosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Tipo,
+                        null,
                         Descripcion,
-                        Fecha,
-                        null};
+                        Tipo,
+                        Fecha};
                 rowSucesosRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowSucesosRow);
                 return rowSucesosRow;
@@ -403,9 +403,9 @@ namespace ACAPOLAMI.CDD {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SucesosRow FindByidSuceso(int idSuceso) {
+            public SucesosRow FindByCodigo(int Codigo) {
                 return ((SucesosRow)(this.Rows.Find(new object[] {
-                            idSuceso})));
+                            Codigo})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -425,33 +425,33 @@ namespace ACAPOLAMI.CDD {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnTipo = base.Columns["Tipo"];
+                this.columnCodigo = base.Columns["Codigo"];
                 this.columnDescripcion = base.Columns["Descripcion"];
+                this.columnTipo = base.Columns["Tipo"];
                 this.columnFecha = base.Columns["Fecha"];
-                this.columnidSuceso = base.Columns["idSuceso"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnTipo = new global::System.Data.DataColumn("Tipo", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTipo);
+                this.columnCodigo = new global::System.Data.DataColumn("Codigo", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCodigo);
                 this.columnDescripcion = new global::System.Data.DataColumn("Descripcion", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDescripcion);
+                this.columnTipo = new global::System.Data.DataColumn("Tipo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTipo);
                 this.columnFecha = new global::System.Data.DataColumn("Fecha", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFecha);
-                this.columnidSuceso = new global::System.Data.DataColumn("idSuceso", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnidSuceso);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnidSuceso}, true));
-                this.columnTipo.MaxLength = 20;
+                                this.columnCodigo}, true));
+                this.columnCodigo.AutoIncrement = true;
+                this.columnCodigo.AutoIncrementSeed = -1;
+                this.columnCodigo.AutoIncrementStep = -1;
+                this.columnCodigo.AllowDBNull = false;
+                this.columnCodigo.ReadOnly = true;
+                this.columnCodigo.Unique = true;
                 this.columnDescripcion.MaxLength = 300;
-                this.columnidSuceso.AutoIncrement = true;
-                this.columnidSuceso.AutoIncrementSeed = -1;
-                this.columnidSuceso.AutoIncrementStep = -1;
-                this.columnidSuceso.AllowDBNull = false;
-                this.columnidSuceso.ReadOnly = true;
-                this.columnidSuceso.Unique = true;
+                this.columnTipo.MaxLength = 20;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -594,17 +594,12 @@ namespace ACAPOLAMI.CDD {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Tipo {
+            public int Codigo {
                 get {
-                    try {
-                        return ((string)(this[this.tableSucesos.TipoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Tipo\' de la tabla \'Sucesos\' es DBNull.", e);
-                    }
+                    return ((int)(this[this.tableSucesos.CodigoColumn]));
                 }
                 set {
-                    this[this.tableSucesos.TipoColumn] = value;
+                    this[this.tableSucesos.CodigoColumn] = value;
                 }
             }
             
@@ -626,6 +621,22 @@ namespace ACAPOLAMI.CDD {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Tipo {
+                get {
+                    try {
+                        return ((string)(this[this.tableSucesos.TipoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Tipo\' de la tabla \'Sucesos\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSucesos.TipoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public System.DateTime Fecha {
                 get {
                     try {
@@ -642,13 +653,14 @@ namespace ACAPOLAMI.CDD {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int idSuceso {
-                get {
-                    return ((int)(this[this.tableSucesos.idSucesoColumn]));
-                }
-                set {
-                    this[this.tableSucesos.idSucesoColumn] = value;
-                }
+            public bool IsDescripcionNull() {
+                return this.IsNull(this.tableSucesos.DescripcionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetDescripcionNull() {
+                this[this.tableSucesos.DescripcionColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -661,18 +673,6 @@ namespace ACAPOLAMI.CDD {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetTipoNull() {
                 this[this.tableSucesos.TipoColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsDescripcionNull() {
-                return this.IsNull(this.tableSucesos.DescripcionColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetDescripcionNull() {
-                this[this.tableSucesos.DescripcionColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -847,47 +847,48 @@ namespace ACAPOLAMI.CDD.cddActividadTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Sucesos";
-            tableMapping.ColumnMappings.Add("Tipo", "Tipo");
+            tableMapping.ColumnMappings.Add("Codigo", "Codigo");
             tableMapping.ColumnMappings.Add("Descripcion", "Descripcion");
+            tableMapping.ColumnMappings.Add("Tipo", "Tipo");
             tableMapping.ColumnMappings.Add("Fecha", "Fecha");
-            tableMapping.ColumnMappings.Add("idSuceso", "idSuceso");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Sucesos] WHERE (((@IsNull_Tipo = 1 AND [tipoSuceso] IS NULL) OR ([tipoSuceso] = @Original_Tipo)) AND ((@IsNull_Descripcion = 1 AND [Descripcion] IS NULL) OR ([Descripcion] = @Original_Descripcion)) AND ((@IsNull_Fecha = 1 AND [fechaSuceso] IS NULL) OR ([fechaSuceso] = @Original_Fecha)) AND ([idSuceso] = @Original_idSuceso))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Sucesos] WHERE (([idSuceso] = @Original_Codigo) AND ((@IsNull_Descripcion = 1 AND [Descripcion] IS NULL) OR ([Descripcion] = @Original_Descripcion)) AND ((@IsNull_Tipo = 1 AND [tipoSuceso] IS NULL) OR ([tipoSuceso] = @Original_Tipo)) AND ((@IsNull_Fecha = 1 AND [fechaSuceso] IS NULL) OR ([fechaSuceso] = @Original_Fecha)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Tipo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tipo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Tipo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tipo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Codigo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Codigo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Descripcion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Descripcion", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Descripcion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Descripcion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Tipo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tipo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Tipo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tipo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Fecha", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Fecha", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idSuceso", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idSuceso", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Fecha", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [Sucesos] ([tipoSuceso], [Descripcion], [fechaSuceso]) VALUES (@Tipo," +
-                " @Descripcion, @Fecha);\r\nSELECT tipoSuceso AS Tipo, descripcion AS Descripcion, " +
-                "fechaSuceso AS Fecha, idSuceso FROM Sucesos WHERE (idSuceso = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [Sucesos] ([Descripcion], [tipoSuceso], [fechaSuceso]) VALUES (@Descr" +
+                "ipcion, @Tipo, @Fecha);\r\nSELECT idSuceso AS Codigo, descripcion AS Descripcion, " +
+                "tipoSuceso AS Tipo, fechaSuceso AS Fecha FROM Sucesos WHERE (idSuceso = SCOPE_ID" +
+                "ENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Tipo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tipo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Descripcion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Descripcion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fecha", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Tipo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tipo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fecha", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [Sucesos] SET [tipoSuceso] = @Tipo, [Descripcion] = @Descripcion, [fechaSuceso] = @Fecha WHERE (((@IsNull_Tipo = 1 AND [tipoSuceso] IS NULL) OR ([tipoSuceso] = @Original_Tipo)) AND ((@IsNull_Descripcion = 1 AND [Descripcion] IS NULL) OR ([Descripcion] = @Original_Descripcion)) AND ((@IsNull_Fecha = 1 AND [fechaSuceso] IS NULL) OR ([fechaSuceso] = @Original_Fecha)) AND ([idSuceso] = @Original_idSuceso));
-SELECT tipoSuceso AS Tipo, descripcion AS Descripcion, fechaSuceso AS Fecha, idSuceso FROM Sucesos WHERE (idSuceso = @idSuceso)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Sucesos] SET [Descripcion] = @Descripcion, [tipoSuceso] = @Tipo, [fechaSuceso] = @Fecha WHERE (([idSuceso] = @Original_Codigo) AND ((@IsNull_Descripcion = 1 AND [Descripcion] IS NULL) OR ([Descripcion] = @Original_Descripcion)) AND ((@IsNull_Tipo = 1 AND [tipoSuceso] IS NULL) OR ([tipoSuceso] = @Original_Tipo)) AND ((@IsNull_Fecha = 1 AND [fechaSuceso] IS NULL) OR ([fechaSuceso] = @Original_Fecha)));
+SELECT idSuceso AS Codigo, descripcion AS Descripcion, tipoSuceso AS Tipo, fechaSuceso AS Fecha FROM Sucesos WHERE (idSuceso = @idSuceso)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Tipo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tipo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Descripcion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Descripcion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fecha", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Tipo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tipo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Tipo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tipo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Tipo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tipo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fecha", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Codigo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Codigo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Descripcion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Descripcion", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Descripcion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Descripcion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Tipo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tipo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Tipo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tipo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Fecha", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Fecha", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idSuceso", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idSuceso", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idSuceso", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "idSuceso", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Fecha", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idSuceso", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Codigo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -903,8 +904,8 @@ SELECT tipoSuceso AS Tipo, descripcion AS Descripcion, fechaSuceso AS Fecha, idS
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT tipoSuceso AS Tipo, descripcion AS Descripcion, fechaSuceso AS Fecha, idSu" +
-                "ceso FROM Sucesos";
+            this._commandCollection[0].CommandText = "SELECT idSuceso AS Codigo, descripcion AS Descripcion, tipoSuceso AS Tipo, fechaS" +
+                "uceso AS Fecha\r\nFROM   Sucesos";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -965,24 +966,24 @@ SELECT tipoSuceso AS Tipo, descripcion AS Descripcion, fechaSuceso AS Fecha, idS
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_Tipo, string Original_Descripcion, System.DateTime Original_Fecha, int Original_idSuceso) {
-            if ((Original_Tipo == null)) {
-                throw new global::System.ArgumentNullException("Original_Tipo");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[0].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Tipo));
-            }
+        public virtual int Delete(int Original_Codigo, string Original_Descripcion, string Original_Tipo, System.DateTime Original_Fecha) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Codigo));
             if ((Original_Descripcion == null)) {
                 throw new global::System.ArgumentNullException("Original_Descripcion");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Descripcion));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Descripcion));
             }
-            this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
-            this.Adapter.DeleteCommand.Parameters[5].Value = ((System.DateTime)(Original_Fecha));
-            this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_idSuceso));
+            if ((Original_Tipo == null)) {
+                throw new global::System.ArgumentNullException("Original_Tipo");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Tipo));
+            }
+            this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+            this.Adapter.DeleteCommand.Parameters[6].Value = ((System.DateTime)(Original_Fecha));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1003,18 +1004,18 @@ SELECT tipoSuceso AS Tipo, descripcion AS Descripcion, fechaSuceso AS Fecha, idS
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Tipo, string Descripcion, System.DateTime Fecha) {
-            if ((Tipo == null)) {
-                throw new global::System.ArgumentNullException("Tipo");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Tipo));
-            }
+        public virtual int Insert(string Descripcion, string Tipo, System.DateTime Fecha) {
             if ((Descripcion == null)) {
                 throw new global::System.ArgumentNullException("Descripcion");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Descripcion));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Descripcion));
+            }
+            if ((Tipo == null)) {
+                throw new global::System.ArgumentNullException("Tipo");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Tipo));
             }
             this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(Fecha));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
@@ -1037,37 +1038,37 @@ SELECT tipoSuceso AS Tipo, descripcion AS Descripcion, fechaSuceso AS Fecha, idS
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Tipo, string Descripcion, System.DateTime Fecha, string Original_Tipo, string Original_Descripcion, System.DateTime Original_Fecha, int Original_idSuceso, int idSuceso) {
-            if ((Tipo == null)) {
-                throw new global::System.ArgumentNullException("Tipo");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Tipo));
-            }
+        public virtual int Update(string Descripcion, string Tipo, System.DateTime Fecha, int Original_Codigo, string Original_Descripcion, string Original_Tipo, System.DateTime Original_Fecha, int idSuceso) {
             if ((Descripcion == null)) {
                 throw new global::System.ArgumentNullException("Descripcion");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Descripcion));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Descripcion));
             }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(Fecha));
-            if ((Original_Tipo == null)) {
-                throw new global::System.ArgumentNullException("Original_Tipo");
+            if ((Tipo == null)) {
+                throw new global::System.ArgumentNullException("Tipo");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_Tipo));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Tipo));
             }
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(Fecha));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_Codigo));
             if ((Original_Descripcion == null)) {
                 throw new global::System.ArgumentNullException("Original_Descripcion");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_Descripcion));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_Descripcion));
             }
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((System.DateTime)(Original_Fecha));
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_idSuceso));
+            if ((Original_Tipo == null)) {
+                throw new global::System.ArgumentNullException("Original_Tipo");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_Tipo));
+            }
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(Original_Fecha));
             this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(idSuceso));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1089,8 +1090,8 @@ SELECT tipoSuceso AS Tipo, descripcion AS Descripcion, fechaSuceso AS Fecha, idS
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Tipo, string Descripcion, System.DateTime Fecha, string Original_Tipo, string Original_Descripcion, System.DateTime Original_Fecha, int Original_idSuceso) {
-            return this.Update(Tipo, Descripcion, Fecha, Original_Tipo, Original_Descripcion, Original_Fecha, Original_idSuceso, Original_idSuceso);
+        public virtual int Update(string Descripcion, string Tipo, System.DateTime Fecha, int Original_Codigo, string Original_Descripcion, string Original_Tipo, System.DateTime Original_Fecha) {
+            return this.Update(Descripcion, Tipo, Fecha, Original_Codigo, Original_Descripcion, Original_Tipo, Original_Fecha, Original_Codigo);
         }
     }
     

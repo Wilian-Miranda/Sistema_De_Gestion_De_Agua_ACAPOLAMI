@@ -279,15 +279,13 @@ namespace ACAPOLAMI.CDD {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class DataTable1DataTable : global::System.Data.TypedTableBase<DataTable1Row> {
             
-            private global::System.Data.DataColumn columnNombres_del_consumidor;
+            private global::System.Data.DataColumn columnCodigo;
             
-            private global::System.Data.DataColumn columnApellidos_del_consumidor;
-            
-            private global::System.Data.DataColumn columnN_Documento;
-            
-            private global::System.Data.DataColumn columnTelefono;
+            private global::System.Data.DataColumn columnNombre_completo;
             
             private global::System.Data.DataColumn columnCorreo;
+            
+            private global::System.Data.DataColumn columnN_Documento;
             
             private global::System.Data.DataColumn columnComunidad;
             
@@ -326,33 +324,17 @@ namespace ACAPOLAMI.CDD {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Nombres_del_consumidorColumn {
+            public global::System.Data.DataColumn CodigoColumn {
                 get {
-                    return this.columnNombres_del_consumidor;
+                    return this.columnCodigo;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Apellidos_del_consumidorColumn {
+            public global::System.Data.DataColumn Nombre_completoColumn {
                 get {
-                    return this.columnApellidos_del_consumidor;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn N_DocumentoColumn {
-                get {
-                    return this.columnN_Documento;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn TelefonoColumn {
-                get {
-                    return this.columnTelefono;
+                    return this.columnNombre_completo;
                 }
             }
             
@@ -361,6 +343,14 @@ namespace ACAPOLAMI.CDD {
             public global::System.Data.DataColumn CorreoColumn {
                 get {
                     return this.columnCorreo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn N_DocumentoColumn {
+                get {
+                    return this.columnN_Documento;
                 }
             }
             
@@ -409,18 +399,24 @@ namespace ACAPOLAMI.CDD {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public DataTable1Row AddDataTable1Row(string Nombres_del_consumidor, string Apellidos_del_consumidor, string N_Documento, string Telefono, string Correo, string Comunidad) {
+            public DataTable1Row AddDataTable1Row(string Nombre_completo, string Correo, string N_Documento, string Comunidad) {
                 DataTable1Row rowDataTable1Row = ((DataTable1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Nombres_del_consumidor,
-                        Apellidos_del_consumidor,
-                        N_Documento,
-                        Telefono,
+                        null,
+                        Nombre_completo,
                         Correo,
+                        N_Documento,
                         Comunidad};
                 rowDataTable1Row.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDataTable1Row);
                 return rowDataTable1Row;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public DataTable1Row FindByCodigo(int Codigo) {
+                return ((DataTable1Row)(this.Rows.Find(new object[] {
+                            Codigo})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -440,37 +436,39 @@ namespace ACAPOLAMI.CDD {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnNombres_del_consumidor = base.Columns["Nombres_del_consumidor"];
-                this.columnApellidos_del_consumidor = base.Columns["Apellidos_del_consumidor"];
-                this.columnN_Documento = base.Columns["N_Documento"];
-                this.columnTelefono = base.Columns["Telefono"];
+                this.columnCodigo = base.Columns["Codigo"];
+                this.columnNombre_completo = base.Columns["Nombre_completo"];
                 this.columnCorreo = base.Columns["Correo"];
+                this.columnN_Documento = base.Columns["N_Documento"];
                 this.columnComunidad = base.Columns["Comunidad"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnNombres_del_consumidor = new global::System.Data.DataColumn("Nombres_del_consumidor", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNombres_del_consumidor);
-                this.columnApellidos_del_consumidor = new global::System.Data.DataColumn("Apellidos_del_consumidor", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnApellidos_del_consumidor);
-                this.columnN_Documento = new global::System.Data.DataColumn("N_Documento", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnN_Documento);
-                this.columnTelefono = new global::System.Data.DataColumn("Telefono", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTelefono);
+                this.columnCodigo = new global::System.Data.DataColumn("Codigo", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCodigo);
+                this.columnNombre_completo = new global::System.Data.DataColumn("Nombre_completo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNombre_completo);
                 this.columnCorreo = new global::System.Data.DataColumn("Correo", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCorreo);
+                this.columnN_Documento = new global::System.Data.DataColumn("N_Documento", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnN_Documento);
                 this.columnComunidad = new global::System.Data.DataColumn("Comunidad", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnComunidad);
-                this.columnNombres_del_consumidor.AllowDBNull = false;
-                this.columnNombres_del_consumidor.MaxLength = 50;
-                this.columnApellidos_del_consumidor.AllowDBNull = false;
-                this.columnApellidos_del_consumidor.MaxLength = 50;
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnCodigo}, true));
+                this.columnCodigo.AutoIncrement = true;
+                this.columnCodigo.AutoIncrementSeed = -1;
+                this.columnCodigo.AutoIncrementStep = -1;
+                this.columnCodigo.AllowDBNull = false;
+                this.columnCodigo.ReadOnly = true;
+                this.columnCodigo.Unique = true;
+                this.columnNombre_completo.ReadOnly = true;
+                this.columnNombre_completo.MaxLength = 101;
+                this.columnCorreo.MaxLength = 50;
                 this.columnN_Documento.AllowDBNull = false;
                 this.columnN_Documento.MaxLength = 20;
-                this.columnTelefono.MaxLength = 20;
-                this.columnCorreo.MaxLength = 50;
                 this.columnComunidad.AllowDBNull = false;
                 this.columnComunidad.MaxLength = 50;
             }
@@ -615,50 +613,28 @@ namespace ACAPOLAMI.CDD {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Nombres_del_consumidor {
+            public int Codigo {
                 get {
-                    return ((string)(this[this.tableDataTable1.Nombres_del_consumidorColumn]));
+                    return ((int)(this[this.tableDataTable1.CodigoColumn]));
                 }
                 set {
-                    this[this.tableDataTable1.Nombres_del_consumidorColumn] = value;
+                    this[this.tableDataTable1.CodigoColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Apellidos_del_consumidor {
-                get {
-                    return ((string)(this[this.tableDataTable1.Apellidos_del_consumidorColumn]));
-                }
-                set {
-                    this[this.tableDataTable1.Apellidos_del_consumidorColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string N_Documento {
-                get {
-                    return ((string)(this[this.tableDataTable1.N_DocumentoColumn]));
-                }
-                set {
-                    this[this.tableDataTable1.N_DocumentoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Telefono {
+            public string Nombre_completo {
                 get {
                     try {
-                        return ((string)(this[this.tableDataTable1.TelefonoColumn]));
+                        return ((string)(this[this.tableDataTable1.Nombre_completoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Telefono\' de la tabla \'DataTable1\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Nombre_completo\' de la tabla \'DataTable1\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable1.TelefonoColumn] = value;
+                    this[this.tableDataTable1.Nombre_completoColumn] = value;
                 }
             }
             
@@ -680,6 +656,17 @@ namespace ACAPOLAMI.CDD {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string N_Documento {
+                get {
+                    return ((string)(this[this.tableDataTable1.N_DocumentoColumn]));
+                }
+                set {
+                    this[this.tableDataTable1.N_DocumentoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Comunidad {
                 get {
                     return ((string)(this[this.tableDataTable1.ComunidadColumn]));
@@ -691,14 +678,14 @@ namespace ACAPOLAMI.CDD {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsTelefonoNull() {
-                return this.IsNull(this.tableDataTable1.TelefonoColumn);
+            public bool IsNombre_completoNull() {
+                return this.IsNull(this.tableDataTable1.Nombre_completoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetTelefonoNull() {
-                this[this.tableDataTable1.TelefonoColumn] = global::System.Convert.DBNull;
+            public void SetNombre_completoNull() {
+                this[this.tableDataTable1.Nombre_completoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -873,11 +860,10 @@ namespace ACAPOLAMI.CDD.cddConsumidoresPorComunidadTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "DataTable1";
-            tableMapping.ColumnMappings.Add("Nombres_del_consumidor", "Nombres_del_consumidor");
-            tableMapping.ColumnMappings.Add("Apellidos_del_consumidor", "Apellidos_del_consumidor");
-            tableMapping.ColumnMappings.Add("N_Documento", "N_Documento");
-            tableMapping.ColumnMappings.Add("Telefono", "Telefono");
+            tableMapping.ColumnMappings.Add("Codigo", "Codigo");
+            tableMapping.ColumnMappings.Add("Nombre_completo", "Nombre_completo");
             tableMapping.ColumnMappings.Add("Correo", "Correo");
+            tableMapping.ColumnMappings.Add("N_Documento", "N_Documento");
             tableMapping.ColumnMappings.Add("Comunidad", "Comunidad");
             this._adapter.TableMappings.Add(tableMapping);
         }
@@ -895,7 +881,7 @@ namespace ACAPOLAMI.CDD.cddConsumidoresPorComunidadTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT a.nombresConsumidor AS Nombres_del_consumidor, a.apellidosConsumidor AS Apellidos_del_consumidor, a.numeroDocumento AS N_Documento, a.telefono AS Telefono, a.correo AS Correo, b.nombreComunidad AS Comunidad
+            this._commandCollection[0].CommandText = @"SELECT a.idConsumidor AS Codigo, CONCAT_WS(' ', a.nombresConsumidor, a.apellidosConsumidor) AS 'Nombre_completo', a.correo AS Correo, a.numeroDocumento AS N_Documento, b.nombreComunidad AS Comunidad
 FROM   Consumidores AS a INNER JOIN
              Comunidades AS b ON a.idComunidad_FK = b.idComunidad
 WHERE (b.nombreComunidad = @nombreComunidad)";

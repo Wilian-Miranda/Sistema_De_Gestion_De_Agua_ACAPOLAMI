@@ -12,7 +12,7 @@
               <DbSource ConnectionRef="ACAPOLAMIConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT a.nombresConsumidor AS Nombres_del_consumidor, a.apellidosConsumidor AS Apellidos_del_consumidor, a.numeroDocumento AS N_Documento, a.telefono AS Telefono, a.correo AS Correo, b.nombreComunidad AS Comunidad
+                    <CommandText>SELECT a.idConsumidor AS Codigo, CONCAT_WS(' ', a.nombresConsumidor, a.apellidosConsumidor) AS 'Nombre_completo', a.correo AS Correo, a.numeroDocumento AS N_Documento, b.nombreComunidad AS Comunidad
 FROM   Consumidores AS a INNER JOIN
              Comunidades AS b ON a.idComunidad_FK = b.idComunidad
 WHERE (b.nombreComunidad = @nombreComunidad)</CommandText>
@@ -24,11 +24,10 @@ WHERE (b.nombreComunidad = @nombreComunidad)</CommandText>
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="Nombres_del_consumidor" DataSetColumn="Nombres_del_consumidor" />
-              <Mapping SourceColumn="Apellidos_del_consumidor" DataSetColumn="Apellidos_del_consumidor" />
-              <Mapping SourceColumn="N_Documento" DataSetColumn="N_Documento" />
-              <Mapping SourceColumn="Telefono" DataSetColumn="Telefono" />
+              <Mapping SourceColumn="Codigo" DataSetColumn="Codigo" />
+              <Mapping SourceColumn="Nombre_completo" DataSetColumn="Nombre_completo" />
               <Mapping SourceColumn="Correo" DataSetColumn="Correo" />
+              <Mapping SourceColumn="N_Documento" DataSetColumn="N_Documento" />
               <Mapping SourceColumn="Comunidad" DataSetColumn="Comunidad" />
             </Mappings>
             <Sources />
@@ -44,14 +43,15 @@ WHERE (b.nombreComunidad = @nombreComunidad)</CommandText>
         <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Nombres_del_consumidor" msprop:Generator_ColumnVarNameInTable="columnNombres_del_consumidor" msprop:Generator_ColumnPropNameInRow="Nombres_del_consumidor" msprop:Generator_ColumnPropNameInTable="Nombres_del_consumidorColumn" msprop:Generator_UserColumnName="Nombres_del_consumidor">
+              <xs:element name="Codigo" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCodigo" msprop:Generator_ColumnPropNameInRow="Codigo" msprop:Generator_ColumnPropNameInTable="CodigoColumn" msprop:Generator_UserColumnName="Codigo" type="xs:int" />
+              <xs:element name="Nombre_completo" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNombre_completo" msprop:Generator_ColumnPropNameInRow="Nombre_completo" msprop:Generator_ColumnPropNameInTable="Nombre_completoColumn" msprop:Generator_UserColumnName="Nombre_completo" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
+                    <xs:maxLength value="101" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Apellidos_del_consumidor" msprop:Generator_ColumnVarNameInTable="columnApellidos_del_consumidor" msprop:Generator_ColumnPropNameInRow="Apellidos_del_consumidor" msprop:Generator_ColumnPropNameInTable="Apellidos_del_consumidorColumn" msprop:Generator_UserColumnName="Apellidos_del_consumidor">
+              <xs:element name="Correo" msprop:Generator_ColumnVarNameInTable="columnCorreo" msprop:Generator_ColumnPropNameInRow="Correo" msprop:Generator_ColumnPropNameInTable="CorreoColumn" msprop:Generator_UserColumnName="Correo" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
@@ -62,20 +62,6 @@ WHERE (b.nombreComunidad = @nombreComunidad)</CommandText>
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="20" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="Telefono" msprop:Generator_ColumnVarNameInTable="columnTelefono" msprop:Generator_ColumnPropNameInRow="Telefono" msprop:Generator_ColumnPropNameInTable="TelefonoColumn" msprop:Generator_UserColumnName="Telefono" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="20" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="Correo" msprop:Generator_ColumnVarNameInTable="columnCorreo" msprop:Generator_ColumnPropNameInRow="Correo" msprop:Generator_ColumnPropNameInTable="CorreoColumn" msprop:Generator_UserColumnName="Correo" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
@@ -91,5 +77,9 @@ WHERE (b.nombreComunidad = @nombreComunidad)</CommandText>
         </xs:element>
       </xs:choice>
     </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DataTable1" />
+      <xs:field xpath="mstns:Codigo" />
+    </xs:unique>
   </xs:element>
 </xs:schema>

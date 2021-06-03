@@ -69,6 +69,7 @@ namespace WilianMiranda01.VISTA
         private void btnAjustes_Click_1(object sender, EventArgs e)
         {
             // Se pasa como parametro el objeto sender; el boton que es seleccionado, y un color.
+            AbrirFormEnPanel<FrmAjustes>();
             BotonActivo(sender, Color.White);
         }
 
@@ -84,6 +85,7 @@ namespace WilianMiranda01.VISTA
         {
             // Se pasa como parametro el objeto sender; el boton que es seleccionado, y un color.
             BotonActivo(sender, Color.White);
+            AbrirFormEnPanel<FrmReportes>();
             this.Text = "ACAPOLAMI - Reportes";
         }
 
