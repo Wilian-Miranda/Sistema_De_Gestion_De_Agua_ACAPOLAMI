@@ -59,6 +59,8 @@ namespace ACAPOLAMI.VISTA
             this.btnGuardarEstado = new System.Windows.Forms.Button();
             this.txtEstado = new System.Windows.Forms.TextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblEstadosPagos = new System.Windows.Forms.Label();
             this.pnlComunidades = new System.Windows.Forms.Panel();
             this.btnGuardarComunidad = new System.Windows.Forms.Button();
@@ -66,11 +68,9 @@ namespace ACAPOLAMI.VISTA
             this.btnEliminarComunidad = new System.Windows.Forms.Button();
             this.txtComunidad = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lblControlComunidades = new System.Windows.Forms.Label();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblControlComunidades = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.controlValidaciones)).BeginInit();
             this.panelSuperior.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -423,6 +423,20 @@ namespace ACAPOLAMI.VISTA
             this.dataGridView2.Size = new System.Drawing.Size(168, 149);
             this.dataGridView2.TabIndex = 2;
             // 
+            // Column2
+            // 
+            this.Column2.FillWeight = 38.07107F;
+            this.Column2.HeaderText = "Id";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.FillWeight = 111.9289F;
+            this.Column3.HeaderText = "Nombre";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
             // lblEstadosPagos
             // 
             this.lblEstadosPagos.AutoSize = true;
@@ -514,18 +528,6 @@ namespace ACAPOLAMI.VISTA
             this.dataGridView1.Size = new System.Drawing.Size(222, 150);
             this.dataGridView1.TabIndex = 1;
             // 
-            // lblControlComunidades
-            // 
-            this.lblControlComunidades.AutoSize = true;
-            this.lblControlComunidades.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblControlComunidades.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblControlComunidades.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblControlComunidades.Location = new System.Drawing.Point(0, 0);
-            this.lblControlComunidades.Name = "lblControlComunidades";
-            this.lblControlComunidades.Size = new System.Drawing.Size(226, 23);
-            this.lblControlComunidades.TabIndex = 0;
-            this.lblControlComunidades.Text = "Control de Comunidades";
-            // 
             // Column4
             // 
             this.Column4.FillWeight = 53.1449F;
@@ -540,19 +542,17 @@ namespace ACAPOLAMI.VISTA
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             // 
-            // Column2
+            // lblControlComunidades
             // 
-            this.Column2.FillWeight = 38.07107F;
-            this.Column2.HeaderText = "Id";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.FillWeight = 111.9289F;
-            this.Column3.HeaderText = "Nombre";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
+            this.lblControlComunidades.AutoSize = true;
+            this.lblControlComunidades.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblControlComunidades.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblControlComunidades.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblControlComunidades.Location = new System.Drawing.Point(0, 0);
+            this.lblControlComunidades.Name = "lblControlComunidades";
+            this.lblControlComunidades.Size = new System.Drawing.Size(226, 23);
+            this.lblControlComunidades.TabIndex = 0;
+            this.lblControlComunidades.Text = "Control de Comunidades";
             // 
             // FrmAjustes
             // 

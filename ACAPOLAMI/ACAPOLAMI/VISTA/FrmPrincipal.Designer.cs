@@ -376,12 +376,10 @@ namespace WilianMiranda01.VISTA
             // 
             // panelPadre
             // 
-            this.panelPadre.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelPadre.BackColor = System.Drawing.Color.White;
             this.panelPadre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panelPadre.Controls.Add(this.panelContenedor);
+            this.panelPadre.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelPadre.Location = new System.Drawing.Point(200, 30);
             this.panelPadre.Name = "panelPadre";
             this.panelPadre.Size = new System.Drawing.Size(872, 651);
