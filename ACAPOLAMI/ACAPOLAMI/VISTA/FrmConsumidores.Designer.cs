@@ -253,7 +253,8 @@ namespace WilianMiranda01.VISTA
             this.dtgGestionDeConsumidores.AllowUserToDeleteRows = false;
             this.dtgGestionDeConsumidores.AllowUserToOrderColumns = true;
             this.dtgGestionDeConsumidores.AllowUserToResizeRows = false;
-            this.dtgGestionDeConsumidores.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dtgGestionDeConsumidores.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtgGestionDeConsumidores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgGestionDeConsumidores.BackgroundColor = System.Drawing.Color.FloralWhite;
