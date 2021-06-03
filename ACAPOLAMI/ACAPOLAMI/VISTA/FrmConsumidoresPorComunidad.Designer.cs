@@ -31,28 +31,18 @@ namespace ACAPOLAMI.VISTA
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cddConsumidoresPorComunidad = new ACAPOLAMI.CDD.cddConsumidoresPorComunidad();
             this.cbxComunidades = new System.Windows.Forms.ComboBox();
             this.btnGenerar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.cddConsumidoresPorComunidad = new ACAPOLAMI.CDD.cddConsumidoresPorComunidad();
+            this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataTable1TableAdapter = new ACAPOLAMI.CDD.cddConsumidoresPorComunidadTableAdapters.DataTable1TableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cddConsumidoresPorComunidad)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cddConsumidoresPorComunidad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataTable1BindingSource
-            // 
-            this.dataTable1BindingSource.DataMember = "DataTable1";
-            this.dataTable1BindingSource.DataSource = this.cddConsumidoresPorComunidad;
-            // 
-            // cddConsumidoresPorComunidad
-            // 
-            this.cddConsumidoresPorComunidad.DataSetName = "cddConsumidoresPorComunidad";
-            this.cddConsumidoresPorComunidad.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cbxComunidades
             // 
@@ -102,6 +92,16 @@ namespace ACAPOLAMI.VISTA
             this.reportViewer1.Size = new System.Drawing.Size(1508, 609);
             this.reportViewer1.TabIndex = 0;
             // 
+            // cddConsumidoresPorComunidad
+            // 
+            this.cddConsumidoresPorComunidad.DataSetName = "cddConsumidoresPorComunidad";
+            this.cddConsumidoresPorComunidad.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dataTable1BindingSource
+            // 
+            this.dataTable1BindingSource.DataMember = "DataTable1";
+            this.dataTable1BindingSource.DataSource = this.cddConsumidoresPorComunidad;
+            // 
             // dataTable1TableAdapter
             // 
             this.dataTable1TableAdapter.ClearBeforeFill = true;
@@ -120,9 +120,9 @@ namespace ACAPOLAMI.VISTA
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmConsumidoresPorComunidad";
             this.Load += new System.EventHandler(this.FrmConsumidoresPorComunidad_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cddConsumidoresPorComunidad)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cddConsumidoresPorComunidad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

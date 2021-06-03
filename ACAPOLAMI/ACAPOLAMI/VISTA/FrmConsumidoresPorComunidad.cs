@@ -34,12 +34,15 @@ namespace ACAPOLAMI.VISTA
             String comunidad = cbxComunidades.SelectedItem.ToString();
             this.dataTable1TableAdapter.Fill(this.cddConsumidoresPorComunidad.DataTable1, comunidad);
             reportViewer1.RefreshReport();
+            
         }
 
         private void FrmConsumidoresPorComunidad_Load(object sender, EventArgs e)
         {
-
+            // TODO: esta línea de código carga datos en la tabla 'cddConsumidoresPorComunidad.DataTable1' Puede moverla o quitarla según sea necesario.
             
+
+
         }
     }
 }
