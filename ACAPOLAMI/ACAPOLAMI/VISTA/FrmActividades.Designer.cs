@@ -29,10 +29,6 @@ namespace ACAPOLAMI.VISTA
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.sucesosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cddActividad = new ACAPOLAMI.CDD.cddActividad();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblTexto = new System.Windows.Forms.Label();
             this.btnHistorial = new FontAwesome.Sharp.IconButton();
@@ -42,40 +38,28 @@ namespace ACAPOLAMI.VISTA
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.sucesosTableAdapter = new ACAPOLAMI.CDD.cddActividadTableAdapters.SucesosTableAdapter();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            ((System.ComponentModel.ISupportInitialize)(this.sucesosBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cddActividad)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // sucesosBindingSource
-            // 
-            this.sucesosBindingSource.DataMember = "Sucesos";
-            this.sucesosBindingSource.DataSource = this.cddActividad;
-            // 
-            // cddActividad
-            // 
-            this.cddActividad.DataSetName = "cddActividad";
-            this.cddActividad.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // panel4
             // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel4.Controls.Add(this.reportViewer1);
             this.panel4.Controls.Add(this.lblTexto);
             this.panel4.Controls.Add(this.btnHistorial);
             this.panel4.Controls.Add(this.btnActualizar);
             this.panel4.Controls.Add(this.lstActividades);
             this.panel4.Controls.Add(this.dataGridView1);
             this.panel4.ForeColor = System.Drawing.Color.Black;
-            this.panel4.Location = new System.Drawing.Point(20, 116);
+            this.panel4.Location = new System.Drawing.Point(24, 89);
             this.panel4.Name = "panel4";
             this.panel4.Padding = new System.Windows.Forms.Padding(20);
-            this.panel4.Size = new System.Drawing.Size(1290, 588);
+            this.panel4.Size = new System.Drawing.Size(1018, 542);
             this.panel4.TabIndex = 10;
             // 
             // lblTexto
@@ -84,10 +68,10 @@ namespace ACAPOLAMI.VISTA
             this.lblTexto.AutoSize = true;
             this.lblTexto.BackColor = System.Drawing.Color.White;
             this.lblTexto.ForeColor = System.Drawing.Color.Black;
-            this.lblTexto.Location = new System.Drawing.Point(153, 493);
+            this.lblTexto.Location = new System.Drawing.Point(25, 470);
             this.lblTexto.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblTexto.Name = "lblTexto";
-            this.lblTexto.Size = new System.Drawing.Size(236, 29);
+            this.lblTexto.Size = new System.Drawing.Size(158, 19);
             this.lblTexto.TabIndex = 1;
             this.lblTexto.Text = "Ultimos 20 sucesos";
             // 
@@ -102,7 +86,7 @@ namespace ACAPOLAMI.VISTA
             this.btnHistorial.IconColor = System.Drawing.Color.White;
             this.btnHistorial.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnHistorial.IconSize = 35;
-            this.btnHistorial.Location = new System.Drawing.Point(1126, 493);
+            this.btnHistorial.Location = new System.Drawing.Point(863, 468);
             this.btnHistorial.Name = "btnHistorial";
             this.btnHistorial.Size = new System.Drawing.Size(127, 41);
             this.btnHistorial.TabIndex = 16;
@@ -120,7 +104,7 @@ namespace ACAPOLAMI.VISTA
             this.btnActualizar.IconColor = System.Drawing.Color.White;
             this.btnActualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnActualizar.IconSize = 40;
-            this.btnActualizar.Location = new System.Drawing.Point(993, 493);
+            this.btnActualizar.Location = new System.Drawing.Point(730, 468);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(127, 41);
             this.btnActualizar.TabIndex = 15;
@@ -164,7 +148,7 @@ namespace ACAPOLAMI.VISTA
             this.lstActividades.ShowBorder = false;
             this.lstActividades.ShowCellBorder = false;
             this.lstActividades.ShowHeaderLine = false;
-            this.lstActividades.Size = new System.Drawing.Size(1234, 478);
+            this.lstActividades.Size = new System.Drawing.Size(962, 425);
             this.lstActividades.Smoothing = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             this.lstActividades.SubTextColor = System.Drawing.Color.Red;
             this.lstActividades.SurrondBorder = false;
@@ -187,18 +171,20 @@ namespace ACAPOLAMI.VISTA
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.Size = new System.Drawing.Size(1244, 543);
+            this.dataGridView1.Size = new System.Drawing.Size(972, 497);
             this.dataGridView1.TabIndex = 0;
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.MenuBar;
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(159, 20);
+            this.panel1.Location = new System.Drawing.Point(24, 2);
             this.panel1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(0, 20, 0, 0);
-            this.panel1.Size = new System.Drawing.Size(1024, 89);
+            this.panel1.Size = new System.Drawing.Size(1018, 89);
             this.panel1.TabIndex = 9;
             // 
             // panel2
@@ -210,7 +196,7 @@ namespace ACAPOLAMI.VISTA
             this.panel2.Location = new System.Drawing.Point(0, 20);
             this.panel2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1024, 50);
+            this.panel2.Size = new System.Drawing.Size(1018, 50);
             this.panel2.TabIndex = 7;
             // 
             // label1
@@ -218,34 +204,18 @@ namespace ACAPOLAMI.VISTA
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(403, 14);
+            this.label1.Location = new System.Drawing.Point(400, 14);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(314, 29);
+            this.label1.Size = new System.Drawing.Size(210, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "REGISTRO DE ACTIVIDAD";
             // 
-            // sucesosTableAdapter
-            // 
-            this.sucesosTableAdapter.ClearBeforeFill = true;
-            // 
-            // reportViewer1
-            // 
-            reportDataSource2.Name = "DataSet1";
-            reportDataSource2.Value = this.sucesosBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "ACAPOLAMI.REPORTES.Actividad.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(28, 29);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1233, 406);
-            this.reportViewer1.TabIndex = 17;
-            // 
             // FrmActividades
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1336, 716);
+            this.ClientSize = new System.Drawing.Size(1064, 652);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -256,8 +226,6 @@ namespace ACAPOLAMI.VISTA
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmActividades";
             this.Load += new System.EventHandler(this.FrmActividades_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.sucesosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cddActividad)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -279,9 +247,5 @@ namespace ACAPOLAMI.VISTA
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblTexto;
-        private CDD.cddActividad cddActividad;
-        private System.Windows.Forms.BindingSource sucesosBindingSource;
-        private CDD.cddActividadTableAdapters.SucesosTableAdapter sucesosTableAdapter;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     }
 }

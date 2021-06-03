@@ -83,10 +83,8 @@ namespace ACAPOLAMI.VISTA
         private void FrmActividades_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'cddActividad.Sucesos' Puede moverla o quitarla según sea necesario.
-            this.sucesosTableAdapter.Fill(this.cddActividad.Sucesos);
             ConfigurarListView();
             CargarListaSucesos();
-            this.reportViewer1.RefreshReport();
         }
 
         private void btnHistorial_Click(object sender, EventArgs e)
