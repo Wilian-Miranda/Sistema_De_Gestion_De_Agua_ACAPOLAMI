@@ -34,7 +34,7 @@ namespace ACAPOLAMI.VISTA
             this.pnlBorde = new System.Windows.Forms.Panel();
             this.pnlContenedorPrincipal = new System.Windows.Forms.Panel();
             this.pnlDatosConsumidor = new System.Windows.Forms.Panel();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.txtIdConsumidor = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtApellidos = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -110,7 +110,7 @@ namespace ACAPOLAMI.VISTA
             // pnlDatosConsumidor
             // 
             this.pnlDatosConsumidor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlDatosConsumidor.Controls.Add(this.txtCodigo);
+            this.pnlDatosConsumidor.Controls.Add(this.txtIdConsumidor);
             this.pnlDatosConsumidor.Controls.Add(this.label1);
             this.pnlDatosConsumidor.Controls.Add(this.txtApellidos);
             this.pnlDatosConsumidor.Controls.Add(this.label4);
@@ -122,26 +122,27 @@ namespace ACAPOLAMI.VISTA
             this.pnlDatosConsumidor.Size = new System.Drawing.Size(625, 119);
             this.pnlDatosConsumidor.TabIndex = 12;
             // 
-            // txtCodigo
+            // txtIdConsumidor
             // 
-            this.txtCodigo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCodigo.BackColor = System.Drawing.Color.White;
-            this.txtCodigo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCodigo.ForeColor = System.Drawing.Color.Gray;
-            this.txtCodigo.Location = new System.Drawing.Point(347, 8);
-            this.txtCodigo.Margin = new System.Windows.Forms.Padding(3, 3, 3, 24);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.ReadOnly = true;
-            this.txtCodigo.ShortcutsEnabled = false;
-            this.txtCodigo.Size = new System.Drawing.Size(250, 26);
-            this.txtCodigo.TabIndex = 15;
-            this.txtCodigo.Tag = "";
-            this.txtCodigo.Text = "Codigo";
+            this.txtIdConsumidor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtIdConsumidor.BackColor = System.Drawing.Color.White;
+            this.txtIdConsumidor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtIdConsumidor.ForeColor = System.Drawing.Color.Gray;
+            this.txtIdConsumidor.Location = new System.Drawing.Point(347, 8);
+            this.txtIdConsumidor.Margin = new System.Windows.Forms.Padding(3, 3, 3, 24);
+            this.txtIdConsumidor.Name = "txtIdConsumidor";
+            this.txtIdConsumidor.ReadOnly = true;
+            this.txtIdConsumidor.ShortcutsEnabled = false;
+            this.txtIdConsumidor.Size = new System.Drawing.Size(250, 26);
+            this.txtIdConsumidor.TabIndex = 15;
+            this.txtIdConsumidor.Tag = "";
+            this.txtIdConsumidor.Text = "Codigo";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label1.Location = new System.Drawing.Point(25, 4);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(208, 23);
@@ -162,7 +163,7 @@ namespace ACAPOLAMI.VISTA
             this.txtApellidos.Size = new System.Drawing.Size(250, 26);
             this.txtApellidos.TabIndex = 15;
             this.txtApellidos.Tag = "";
-            this.txtApellidos.Text = "Introduzca los apellidos";
+            this.txtApellidos.Text = "Primero Segundo";
             // 
             // label4
             // 
@@ -188,7 +189,7 @@ namespace ACAPOLAMI.VISTA
             this.txtNombres.ShortcutsEnabled = false;
             this.txtNombres.Size = new System.Drawing.Size(250, 26);
             this.txtNombres.TabIndex = 15;
-            this.txtNombres.Text = "Introduzca los nombres";
+            this.txtNombres.Text = "Primero Segundo";
             // 
             // lblNombres
             // 
@@ -265,6 +266,8 @@ namespace ACAPOLAMI.VISTA
             // dtpFechaPago
             // 
             this.dtpFechaPago.CalendarForeColor = System.Drawing.Color.Black;
+            this.dtpFechaPago.CustomFormat = "dd/MM/yyyyy";
+            this.dtpFechaPago.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpFechaPago.Location = new System.Drawing.Point(347, 154);
             this.dtpFechaPago.Name = "dtpFechaPago";
             this.dtpFechaPago.Size = new System.Drawing.Size(250, 26);
@@ -356,7 +359,7 @@ namespace ACAPOLAMI.VISTA
             this.txtTotal.ShortcutsEnabled = false;
             this.txtTotal.Size = new System.Drawing.Size(250, 26);
             this.txtTotal.TabIndex = 15;
-            this.txtTotal.Text = "Deuda global acumulada";
+            this.txtTotal.Text = "0.0000";
             // 
             // lblDeudaAcumulada
             // 
@@ -379,7 +382,7 @@ namespace ACAPOLAMI.VISTA
             this.txtImpuesto.ShortcutsEnabled = false;
             this.txtImpuesto.Size = new System.Drawing.Size(250, 26);
             this.txtImpuesto.TabIndex = 3;
-            this.txtImpuesto.Text = "Impuesto/mora/multa a cobrar";
+            this.txtImpuesto.Text = "0.0000";
             this.txtImpuesto.Enter += new System.EventHandler(this.txtImpuesto_Enter);
             this.txtImpuesto.Leave += new System.EventHandler(this.txtImpuesto_Leave);
             // 
@@ -404,8 +407,10 @@ namespace ACAPOLAMI.VISTA
             this.txtCancelado.ShortcutsEnabled = false;
             this.txtCancelado.Size = new System.Drawing.Size(250, 26);
             this.txtCancelado.TabIndex = 2;
-            this.txtCancelado.Text = "Pago recibido";
+            this.txtCancelado.Text = "0.0000";
+            this.txtCancelado.TextChanged += new System.EventHandler(this.txtCancelado_TextChanged);
             this.txtCancelado.Enter += new System.EventHandler(this.txtCancelado_Enter);
+            this.txtCancelado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCancelado_KeyPress);
             this.txtCancelado.Leave += new System.EventHandler(this.txtCancelado_Leave);
             // 
             // lblCancelado
@@ -429,8 +434,9 @@ namespace ACAPOLAMI.VISTA
             this.txtMontoBase.ShortcutsEnabled = false;
             this.txtMontoBase.Size = new System.Drawing.Size(250, 26);
             this.txtMontoBase.TabIndex = 1;
-            this.txtMontoBase.Text = "Pago base por mes a pagar";
+            this.txtMontoBase.Text = "0.0000";
             this.txtMontoBase.Enter += new System.EventHandler(this.txtMontoBase_Enter);
+            this.txtMontoBase.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMontoBase_KeyPress);
             this.txtMontoBase.Leave += new System.EventHandler(this.txtMontoBase_Leave);
             // 
             // lblMontoBase
@@ -463,6 +469,8 @@ namespace ACAPOLAMI.VISTA
             this.cbConsumidor.Size = new System.Drawing.Size(425, 27);
             this.cbConsumidor.TabIndex = 20;
             this.cbConsumidor.SelectedIndexChanged += new System.EventHandler(this.cbConsumidor_SelectedIndexChanged);
+            this.cbConsumidor.Enter += new System.EventHandler(this.cbConsumidor_Enter);
+            this.cbConsumidor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbConsumidor_KeyPress);
             // 
             // btnBuscarConsumidor
             // 
@@ -566,6 +574,7 @@ namespace ACAPOLAMI.VISTA
             // ControlValidacion
             // 
             this.ControlValidacion.ContainerControl = this;
+            this.ControlValidacion.RightToLeftChanged += new System.EventHandler(this.txtCancelado_Leave);
             // 
             // FrmGestionPagos
             // 
@@ -626,7 +635,7 @@ namespace ACAPOLAMI.VISTA
         private System.Windows.Forms.Label lblEstado;
         public System.Windows.Forms.TextBox txtTotal;
         public System.Windows.Forms.ComboBox cbEstado;
-        public System.Windows.Forms.TextBox txtCodigo;
+        public System.Windows.Forms.TextBox txtIdConsumidor;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.ErrorProvider ControlValidacion;

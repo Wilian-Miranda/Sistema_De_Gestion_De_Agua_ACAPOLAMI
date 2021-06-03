@@ -106,20 +106,12 @@ namespace ACAPOLAMI.VISTA
 
         private void txtTelefono_Enter(object sender, EventArgs e)
         {
-            if (txtTelefono.Text.Equals("0000-0000"))
-            {
-                txtTelefono.Text = "";
-                txtTelefono.ForeColor = Color.RoyalBlue;
-            }
+
         }
 
         private void txtTelefono_Leave(object sender, EventArgs e)
         {
-            if (txtTelefono.Text.Equals(""))
-            {
-                txtTelefono.Text = "0000-0000";
-                txtTelefono.ForeColor = Color.Gray;
-            }
+
         }
 
         private void txtCorreo_Enter(object sender, EventArgs e)
@@ -283,17 +275,34 @@ namespace ACAPOLAMI.VISTA
                 }
                 else
                 {
+                    try
+                    {
+
                     consumidor.idComunidad_FK = Convert.ToInt32(idComunidadSeleccionado);
+                    }
+                    catch(Exception ex)
+                    {
+                        MessageBox.Show("Seleccione la comunidad");
+                    }
                 }
 
-                clsconsumidor.InsertarConsumidor(txtNombres.Text, txtApellidos.Text, txtDUI.Text, 
+                try
+                {
+                    clsconsumidor.InsertarConsumidor(txtNombres.Text, txtApellidos.Text, txtDUI.Text,
                     txtTelefono.Text, txtCorreo.Text, Convert.ToInt32(idComunidadSeleccionado));
-
                 FrmNotificaciones notificacion = new FrmNotificaciones(sucesos.CargarDatosSucesos().tipoSuceso,
                             sucesos.CargarDatosSucesos().descripcion, FrmNotificaciones.TipoAlerta.Realizado);
                 notificacion.Show();
 
                 Limpiar();
+
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+
             }
 
             else if (ValidarCajasTexto() && btnEjecutar.Text.Equals("Modificar"))
@@ -316,7 +325,7 @@ namespace ACAPOLAMI.VISTA
 
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.ToString());
+                    MessageBox.Show("Error: "+ ex.Message);
                 }
 
                 this.Close();
@@ -338,7 +347,7 @@ namespace ACAPOLAMI.VISTA
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.ToString());
+                    MessageBox.Show("Error :" + ex.Message);
                 }
 
                 this.Close();
@@ -381,6 +390,41 @@ namespace ACAPOLAMI.VISTA
         private void FrmGestionConsumidores_Load(object sender, EventArgs e)
         {
             CargarComunidad();
+        }
+
+        private void txtTelefono_Enter_1(object sender, EventArgs e)
+        {
+
+            txtTelefono.Select(0,0);
+            txtTelefono.ForeColor = Color.RoyalBlue;
+        }
+
+        private void txtTelefono_Leave_1(object sender, EventArgs e)
+        {
+            if(txtTelefono.Text == "")
+                txtTelefono.ForeColor = Color.Gray;
+        }
+
+        private void TxtDUI_Leave_1(object sender, EventArgs e)
+        {
+            if (txtDUI.Text == "")
+                txtDUI.ForeColor = Color.Gray;
+        }
+
+        private void TxtDUI_Enter_1(object sender, EventArgs e)
+        {
+            txtDUI.Select(0,0);
+            txtDUI.ForeColor = Color.RoyalBlue;
+        }
+
+        private void txtDUI_Click(object sender, EventArgs e)
+        {
+            txtDUI.Select(0, 0);
+        }
+
+        private void txtTelefono_Click(object sender, EventArgs e)
+        {
+            txtTelefono.Select(0, 0);
         }
     }
 }

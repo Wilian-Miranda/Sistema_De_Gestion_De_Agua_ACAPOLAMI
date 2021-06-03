@@ -56,6 +56,7 @@ namespace WilianMiranda01.VISTA
             this.lblFecha = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tmrTiempo = new System.Windows.Forms.Timer(this.components);
+            this.panelPrincipal = new System.Windows.Forms.Panel();
             this.pnlMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -344,6 +345,7 @@ namespace WilianMiranda01.VISTA
             this.pnlPanelPadre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pnlPanelPadre.Controls.Add(this.pnlHoraFecha);
             this.pnlPanelPadre.Controls.Add(this.pictureBox1);
+            this.pnlPanelPadre.Controls.Add(this.panelPrincipal);
             this.pnlPanelPadre.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlPanelPadre.Location = new System.Drawing.Point(200, 29);
             this.pnlPanelPadre.Name = "pnlPanelPadre";
@@ -402,6 +404,14 @@ namespace WilianMiranda01.VISTA
             // 
             this.tmrTiempo.Enabled = true;
             this.tmrTiempo.Tick += new System.EventHandler(this.tmrTiempo_Tick);
+            // 
+            // panelPrincipal
+            // 
+            this.panelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelPrincipal.Location = new System.Drawing.Point(0, 0);
+            this.panelPrincipal.Name = "panelPrincipal";
+            this.panelPrincipal.Size = new System.Drawing.Size(1064, 652);
+            this.panelPrincipal.TabIndex = 4;
             // 
             // FmrPrincipal
             // 
@@ -465,5 +475,6 @@ namespace WilianMiranda01.VISTA
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox2;
         public System.Windows.Forms.Label lblNombreUSuario;
+        private System.Windows.Forms.Panel panelPrincipal;
     }
 }

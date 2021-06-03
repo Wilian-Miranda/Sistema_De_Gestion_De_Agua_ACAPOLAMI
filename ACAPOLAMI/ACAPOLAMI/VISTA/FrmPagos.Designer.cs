@@ -126,6 +126,7 @@ namespace WilianMiranda01.VISTA
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.RoyalBlue;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             this.dtgPagos.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgPagos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgPagos.Size = new System.Drawing.Size(978, 340);
             this.dtgPagos.TabIndex = 0;
             // 

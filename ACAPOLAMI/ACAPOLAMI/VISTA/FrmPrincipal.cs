@@ -41,6 +41,10 @@ namespace WilianMiranda01.VISTA
         ClsButtonColor button = new ClsButtonColor();
         ButtonColor btn = new ButtonColor();
 
+        //Maximizar y minimizar
+        int lx, ly;
+        int sw, sh;
+
         private void FmrPrincipal_Load(object sender, EventArgs e)
         {
         }

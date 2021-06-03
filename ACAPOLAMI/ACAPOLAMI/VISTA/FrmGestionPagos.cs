@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using ACAPOLAMI.DOMINIO;
 using ACAPOLAMI.NEGOCIO;
 using ACAPOLAMI.DAO;
+using System.Collections;
 
 namespace ACAPOLAMI.VISTA
 {
@@ -21,13 +22,16 @@ namespace ACAPOLAMI.VISTA
         public FrmGestionPagos()
         {
             InitializeComponent();
-
+            CargarConsumidor();
         }
 
         private void FrmGestioPagos_Load(object sender, EventArgs e)
         {
             DatosCBseleccionados();
             CargarEstados();
+
+            if (cbConsumidor.Items.Count > 9)
+                cbConsumidor.Items.RemoveAt(9);
         }
 
         public String estado;
@@ -43,71 +47,89 @@ namespace ACAPOLAMI.VISTA
                                    select a).ToList();
                 foreach (var i in cargarDatos)
                 {
-                    txtCodigo.Text = i.Id.ToString();
+                    txtIdConsumidor.Text = i.Id.ToString();
                     txtNombres.Text = i.Nombres;
                     txtApellidos.Text = i.Apellidos;
                 }
             }
         }
 
-        private void btnBuscarConsumidor_Click(object sender, EventArgs e)
+        private void BuscarConsumidor()
         {
             if (!cbConsumidor.Text.Equals(""))
             {
-                using (ACAPOLAMIEntities db = new ACAPOLAMIEntities())
-                {
-                    var consumidores = (from a in db.sp_MostrarConsumidores()
-                                        where a.Nombres.ToLower().Contains(cbConsumidor.Text.ToLower())
-                                        || a.Apellidos.ToLower().Contains(cbConsumidor.Text.ToLower())
-                                        || (a.Nombres+" "+a.Apellidos).ToLower().Contains(cbConsumidor.Text.ToLower())
-                                        select new
-                                        {
-                                            a.Id,
-                                            nombres = a.Nombres + " " + a.Apellidos,
-                                        }).ToList();
-
-                    cbConsumidor.DataSource = consumidores.ToList();
-                    cbConsumidor.DisplayMember = "nombres";
-                    cbConsumidor.ValueMember = "Id";
-                }
+                CargarConsumidor();
             }
+        }
+
+        private void btnBuscarConsumidor_Click(object sender, EventArgs e)
+        {
+            BuscarConsumidor();
+            ConsumidorCBSeleccionado();
+            txtMontoBase.Focus();
         }
         private void ConsumidorCBSeleccionado()
         {
             if (cbConsumidor.SelectedIndex != -1)
             {
-                String id= cbConsumidor.SelectedValue.ToString();
+                DatosConsumidor();
+            }
+        }
 
-                using (ACAPOLAMIEntities db = new ACAPOLAMIEntities())
+        private void DatosConsumidor()
+        {
+            String id = cbConsumidor.SelectedValue.ToString();
+
+            using (ACAPOLAMIEntities db = new ACAPOLAMIEntities())
+            {
+                var agregarDatos = (from a in db.sp_MostrarConsumidores()
+                                    where a.Id.ToString() == id
+                                    select new
+                                    {
+                                        a.Id,
+                                        a.Nombres,
+                                        a.Apellidos
+                                    }).ToList();
+                foreach (var i in agregarDatos)
                 {
-                    var agregarDatos = (from a in db.sp_MostrarConsumidores()
-                                        where a.Id.ToString() == id
-                                        select new
-                                        {
-                                            a.Id,
-                                            a.Nombres,
-                                            a.Apellidos
-                                        }).ToList();
-                    foreach (var i in agregarDatos)
-                    {
-                        txtCodigo.Text = i.Id.ToString();
-                        txtNombres.Text = i.Nombres;
-                        txtApellidos.Text = i.Apellidos;
-                    }
-
-                    var deuda = (from a in db.Pagos
-                                 where a.idConsumidor_FK.ToString() == id
-                                 select a.montoTotal).ToList();
-                    txtTotal.Text = deuda.Sum().ToString();
+                    txtIdConsumidor.Text = i.Id.ToString();
+                    txtNombres.Text = i.Nombres;
+                    txtApellidos.Text = i.Apellidos;
                 }
+
+                var deuda = (from a in db.Pagos
+                             where a.idConsumidor_FK.ToString() == id
+                             select a.montoTotal).ToList();
+                txtTotal.Text = deuda.Sum().ToString();
+            }
+        }
+
+        private void CargarConsumidor()
+        {
+            using (ACAPOLAMIEntities db = new ACAPOLAMIEntities())
+            {
+                var consumidores = (from a in db.sp_MostrarConsumidores()
+                                    where a.Nombres.ToLower().Contains(cbConsumidor.Text.ToLower())
+                                    || a.Apellidos.ToLower().Contains(cbConsumidor.Text.ToLower())
+                                    || (a.Nombres + " " + a.Apellidos).ToLower().Contains(cbConsumidor.Text.ToLower())
+                                    select new
+                                    {
+                                        a.Id,
+                                        nombres = a.Nombres + " " + a.Apellidos,
+                                    }).ToList();
+
+                cbConsumidor.DataSource = consumidores.ToList();
+                cbConsumidor.DisplayMember = "nombres";
+                cbConsumidor.ValueMember = "Id";
             }
         }
 
         private void txtImpuesto_Enter(object sender, EventArgs e)
         {
-            if (txtImpuesto.Text.Equals("Impuesto/mora/multa a cobrar"))
+            if (txtImpuesto.Text.Equals("0.0000"))
             {
                 txtImpuesto.Text = "";
+                txtImpuesto.ForeColor = Color.RoyalBlue;
             }
         }
 
@@ -115,15 +137,17 @@ namespace ACAPOLAMI.VISTA
         {
             if (txtImpuesto.Text.Equals(""))
             {
-                txtImpuesto.Text = "Impuesto/mora/multa a cobrar";
+                txtImpuesto.Text = "0.0000";
+                txtImpuesto.ForeColor = Color.Gray;
             }
         }
 
         private void txtMontoBase_Enter(object sender, EventArgs e)
         {
-            if (txtMontoBase.Text.Equals("Pago base por mes a pagar"))
+            if (txtMontoBase.Text.Equals("0.0000"))
             {
                 txtMontoBase.Text = "";
+                txtMontoBase.ForeColor = Color.RoyalBlue;
             }
         }
 
@@ -131,15 +155,17 @@ namespace ACAPOLAMI.VISTA
         {
             if (txtMontoBase.Text.Equals(""))
             {
-                txtMontoBase.Text = "Pago base por mes a pagar";
+                txtMontoBase.Text = "0.0000";
+                txtMontoBase.ForeColor = Color.Gray;
             }
         }
 
         private void txtCancelado_Enter(object sender, EventArgs e)
         {
-            if (txtCancelado.Text.Equals("Pago recibido"))
+            if (txtCancelado.Text.Equals("0.0000"))
             {
                 txtCancelado.Text = "";
+                txtCancelado.ForeColor = Color.RoyalBlue;
             }
         }
 
@@ -147,39 +173,26 @@ namespace ACAPOLAMI.VISTA
         {
             if (txtCancelado.Text.Equals(""))
             {
-                txtCancelado.Text = "Pago recibido";
+                txtCancelado.Text = "0.0000";
+                txtCancelado.ForeColor = Color.Gray;
             }
         }
 
         private Boolean ValidacionCajasTexto()
         {
             Boolean permitir = true;
-            if (txtMontoBase.Text.Equals("Pago base por mes a pagar"))
+
+            if (txtIdConsumidor.Text.Equals("Codigo"))
             {
-                ControlValidacion.SetError(txtMontoBase, "Este campo es obligatorio");
+                ControlValidacion.SetError(txtIdConsumidor, "Este campo es obligatorio");
                 permitir = false;
             }
-            if (txtCancelado.Text.Equals("Pago recibido"))
-            {
-                ControlValidacion.SetError(txtCancelado, "Este campo es obligatorio");
-                permitir = false;
-            }
-            if (txtImpuesto.Text.Equals("Impuesto/mora/multa a cobrar"))
-            {
-                ControlValidacion.SetError(txtImpuesto, "Este campo es obligatorio");
-                permitir = false;
-            }
-            if (txtCodigo.Text.Equals("Codigo"))
-            {
-                ControlValidacion.SetError(txtCodigo, "Este campo es obligatorio");
-                permitir = false;
-            }
-            if (txtNombres.Text.Equals("Introduzca los nombres"))
+            if (txtNombres.Text.Equals("Primero Segundo"))
             {
                 ControlValidacion.SetError(txtNombres, "Este campo es obligatorio");
                 permitir = false;
             }
-            if (txtApellidos.Text.Equals("Introduzca los apellidos"))
+            if (txtApellidos.Text.Equals("Primero Segundo"))
             {
                 ControlValidacion.SetError(txtApellidos, "Este campo es obligatorio");
                 permitir = false;
@@ -189,7 +202,7 @@ namespace ACAPOLAMI.VISTA
 
         private void DesactivarValidacion()
         {
-            ControlValidacion.SetError(txtCodigo, "");
+            ControlValidacion.SetError(txtIdConsumidor, "");
             ControlValidacion.SetError(txtNombres, "");
             ControlValidacion.SetError(txtApellidos, "");
             ControlValidacion.SetError(txtMontoBase, "");
@@ -220,7 +233,6 @@ namespace ACAPOLAMI.VISTA
                 Limpiar();
 
                 MessageBox.Show("Se inserto correctamente");
-                btnLimpiar.PerformClick();
             }
             else if (ValidacionCajasTexto()&&btnEjecutar.Text.Equals("Actualizar"))
             {
@@ -230,7 +242,7 @@ namespace ACAPOLAMI.VISTA
                 pago.Modificarpago(Convert.ToInt32(Id),Convert.ToDecimal(txtMontoBase.Text), Convert.ToDecimal(txtCancelado.Text),
                     Convert.ToDecimal(txtPendiente.Text), Convert.ToDecimal(txtImpuesto.Text), Convert.ToDecimal(txtTotal.Text),
                     Convert.ToDateTime(dtpFechaPago.Text), Convert.ToInt32(cbEstado.SelectedValue.ToString()),
-                    Convert.ToInt32(txtCodigo.Text));
+                    Convert.ToInt32(txtIdConsumidor.Text));
 
                 FrmNotificaciones notificacion = new FrmNotificaciones(sucesos.CargarDatosSucesos().tipoSuceso,
                             sucesos.CargarDatosSucesos().descripcion, FrmNotificaciones.TipoAlerta.Realizado);
@@ -247,7 +259,7 @@ namespace ACAPOLAMI.VISTA
                 //CODIGO DE ELIMINAR PAGO AQUI
                 ClsDPagos pago = new ClsDPagos();
 
-                pago.EliminarPago(Convert.ToInt32(txtCodigo.Text));
+                pago.EliminarPago(Convert.ToInt32(txtIdConsumidor.Text));
 
                 FrmNotificaciones notificacion = new FrmNotificaciones(sucesos.CargarDatosSucesos().tipoSuceso,
                         sucesos.CargarDatosSucesos().descripcion, FrmNotificaciones.TipoAlerta.Realizado);
@@ -255,7 +267,7 @@ namespace ACAPOLAMI.VISTA
 
                 MessageBox.Show("Se elimino correctamente");
 
-                this.Dispose();
+                this.Close();
             }
         }
 
@@ -374,13 +386,13 @@ namespace ACAPOLAMI.VISTA
 
         private void Limpiar()
         {
-            txtCodigo.Text = "Codigo";
-            txtNombres.Text = "Introduzca los nombres";
-            txtApellidos.Text = "Introduzca los apellidos";
-            txtMontoBase.Text = "Pago base por mes a pagar";
-            txtCancelado.Text = "Pago recibido";
-            txtImpuesto.Text = "Impuesto/mora/multa a cobrar";
-            txtTotal.Text = "Deuda global acumulada";
+            txtIdConsumidor.Text = "Codigo";
+            txtNombres.Text = "Primero Segundo";
+            txtApellidos.Text = "Primero Segundo";
+            txtMontoBase.Text = "0.0000";
+            txtCancelado.Text = "0.0000";
+            txtImpuesto.Text = "0.0000";
+            txtTotal.Text = "0.0000";
         }
 
         //metodo para cargar el los estados
@@ -397,8 +409,6 @@ namespace ACAPOLAMI.VISTA
                     cbEstado.DisplayMember = "nombreEstado";
                     cbEstado.ValueMember = "idEstado";
                 }
-
-
             }
         }
         //Evento para mover el formulario
@@ -435,6 +445,135 @@ namespace ACAPOLAMI.VISTA
         private void cbConsumidor_SelectedIndexChanged(object sender, EventArgs e)
         {
             ConsumidorCBSeleccionado();
+        }
+
+        private void cbConsumidor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13 && cbConsumidor.Text != "")
+            {
+                e.Handled = true;
+                btnBuscarConsumidor.PerformClick();
+            }
+        }
+
+        private void cbConsumidor_Enter(object sender, EventArgs e)
+        {
+            cbConsumidor.SelectAll();
+        }
+
+        private void pnlDatosPagos_Paint(object sender, PaintEventArgs e)
+        {
+            BuscarConsumidor();
+        }
+
+        private void txtCancelado_TextChanged(object sender, EventArgs e)
+        {
+            if(txtCancelado.Text != "" )
+            {
+                if (txtTotal.Text == "0")
+                {
+                    txtPendiente.Text = CalcularPendiente(0).ToString();
+
+                    if(txtPendiente.Text == "0")
+                    {
+                        txtTotal.Text = "0";
+                        cbEstado.Text = "Cancelado";
+                    }
+
+                    else
+                    {
+                        cbEstado.Text = "Pendiente";
+                        txtImpuesto.Text = CalcularImpuesto().ToString();
+                        txtTotal.Text = CalcularTotal(CalcularImpuesto()).ToString();
+                    }
+                }
+
+                else
+                {
+                    txtPendiente.Text = CalcularPendiente(Convert.ToDouble(txtTotal.Text)).ToString();
+
+                    if (txtPendiente.Text == "0")
+                    {
+                        txtTotal.Text = "0";
+                        cbEstado.Text = "Cancelado";
+                    }
+
+                    else
+                    {
+                        cbEstado.Text = "Pendiente";
+                        txtImpuesto.Text = CalcularImpuesto().ToString();
+                        txtTotal.Text = CalcularTotal(CalcularImpuesto()).ToString();
+                    }
+                }
+
+            }
+        }
+
+        private double CalcularImpuesto()
+        {
+            double pendiente = Convert.ToDouble(txtPendiente.Text);
+            return pendiente * 0.1;
+        }
+
+        private double CalcularPendiente(double total)
+        {
+            double monto = Convert.ToDouble(txtMontoBase.Text);
+            double cancelado = Convert.ToDouble(txtCancelado.Text);
+            double pendiente = total + monto - cancelado;
+
+            return pendiente;
+        }
+
+        private double CalcularTotal(double impuesto)
+        {
+            return CalcularPendiente(Convert.ToDouble(txtTotal.Text)) + impuesto;
+        }
+
+        //Solo numeros en los texbox
+        private void SoloNumeros(KeyPressEventArgs k)
+        {
+            if (char.IsDigit(k.KeyChar))
+            {
+                k.Handled = false;
+            }
+
+            else if (char.IsSeparator(k.KeyChar))
+            {
+                k.Handled = false;
+            }
+
+            else if (char.IsControl(k.KeyChar))
+            {
+                k.Handled = false;
+            }
+
+            else if (k.KeyChar.ToString().Equals(","))
+            {
+                k.Handled = false;
+            }
+
+            else
+                k.Handled = true;
+        }
+
+        private void txtCancelado_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNumeros(e);
+        }
+
+        private void txtMontoBase_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNumeros(e);
+        }
+
+        private void txtTotal_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTotal_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -1,6 +1,6 @@
 --**********************************************************
 -- Trigger para hacer calculos
-CREATE TRIGGER tg_CalculoPagos
+alter TRIGGER tg_CalculoPagos
    ON  Pagos
    AFTER INSERT
 AS 
@@ -37,6 +37,7 @@ BEGIN
 
 	else
 	BEGIN
+		Select @pendiente = 0;
 		EXEC sp_CalcularPagos @id, @monto, @pendiente, @cancelado
 	END
 END
