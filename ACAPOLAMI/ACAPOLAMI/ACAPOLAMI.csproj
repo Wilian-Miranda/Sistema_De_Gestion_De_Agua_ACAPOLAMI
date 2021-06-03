@@ -266,6 +266,12 @@
     <Compile Include="VISTA\FrmConsumidores.Designer.cs">
       <DependentUpon>FrmConsumidores.cs</DependentUpon>
     </Compile>
+    <Compile Include="VISTA\FrmReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VISTA\FrmReportes.Designer.cs">
+      <DependentUpon>FrmReportes.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -321,6 +327,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VISTA\FrmConsumidores.resx">
       <DependentUpon>FrmConsumidores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VISTA\FrmReportes.resx">
+      <DependentUpon>FrmReportes.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="CDD\cddActividad.xsc">
       <DependentUpon>cddActividad.xsd</DependentUpon>
@@ -436,6 +445,9 @@
     <None Include="Resources\Sucesswhite.png" />
     <None Include="Resources\logoInvertido.png" />
     <None Include="Resources\logoCerrado.png" />
+    <None Include="Resources\2.png" />
+    <None Include="Resources\1.png" />
+    <None Include="Resources\3.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -451,7 +463,6 @@
     </Content>
     <None Include="Resources\gif.gif" />
     <None Include="Resources\gif2.gif" />
-    <None Include="Resources\1.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
