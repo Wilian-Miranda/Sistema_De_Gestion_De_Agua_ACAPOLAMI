@@ -60,8 +60,9 @@ namespace WilianMiranda01.VISTA
             // 
             // panel3
             // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(22, 587);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1020, 44);
@@ -69,6 +70,8 @@ namespace WilianMiranda01.VISTA
             // 
             // pnlControlesCRUD
             // 
+            this.pnlControlesCRUD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlControlesCRUD.BackColor = System.Drawing.SystemColors.MenuBar;
             this.pnlControlesCRUD.Controls.Add(this.btnRefrescar);
             this.pnlControlesCRUD.Controls.Add(this.cbBuscarCliente);
@@ -76,7 +79,6 @@ namespace WilianMiranda01.VISTA
             this.pnlControlesCRUD.Controls.Add(this.btnAgregar);
             this.pnlControlesCRUD.Controls.Add(this.btnModificar);
             this.pnlControlesCRUD.Controls.Add(this.btnEliminar);
-            this.pnlControlesCRUD.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlControlesCRUD.Location = new System.Drawing.Point(22, 118);
             this.pnlControlesCRUD.Name = "pnlControlesCRUD";
             this.pnlControlesCRUD.Padding = new System.Windows.Forms.Padding(6, 5, 6, 5);
@@ -201,7 +203,7 @@ namespace WilianMiranda01.VISTA
             this.panel4.Controls.Add(this.btnCantidadDeClientes);
             this.panel4.Controls.Add(this.label1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(22, 556);
+            this.panel4.Location = new System.Drawing.Point(22, 600);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1020, 31);
             this.panel4.TabIndex = 7;
@@ -234,9 +236,11 @@ namespace WilianMiranda01.VISTA
             // 
             // pnlContenedorDataGrid
             // 
+            this.pnlContenedorDataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlContenedorDataGrid.BackColor = System.Drawing.Color.Gainsboro;
             this.pnlContenedorDataGrid.Controls.Add(this.dtgGestionDeConsumidores);
-            this.pnlContenedorDataGrid.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlContenedorDataGrid.Location = new System.Drawing.Point(22, 172);
             this.pnlContenedorDataGrid.Name = "pnlContenedorDataGrid";
             this.pnlContenedorDataGrid.Padding = new System.Windows.Forms.Padding(22, 21, 22, 21);
@@ -249,8 +253,7 @@ namespace WilianMiranda01.VISTA
             this.dtgGestionDeConsumidores.AllowUserToDeleteRows = false;
             this.dtgGestionDeConsumidores.AllowUserToOrderColumns = true;
             this.dtgGestionDeConsumidores.AllowUserToResizeRows = false;
-            this.dtgGestionDeConsumidores.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.dtgGestionDeConsumidores.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtgGestionDeConsumidores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgGestionDeConsumidores.BackgroundColor = System.Drawing.Color.FloralWhite;
@@ -300,9 +303,10 @@ namespace WilianMiranda01.VISTA
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.MenuBar;
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(22, 21);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
@@ -312,9 +316,10 @@ namespace WilianMiranda01.VISTA
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 30);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";

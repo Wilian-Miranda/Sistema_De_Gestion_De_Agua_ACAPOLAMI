@@ -31,13 +31,13 @@ namespace ACAPOLAMI.VISTA
         {
             this.components = new System.ComponentModel.Container();
             this.pnlBorde = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.panelPrimario = new System.Windows.Forms.Panel();
+            this.panelOtrosAjustes = new System.Windows.Forms.Panel();
             this.btnEstablecerPagoBase = new System.Windows.Forms.Button();
             this.txtPagoBase = new System.Windows.Forms.TextBox();
             this.lblPagoBase = new System.Windows.Forms.Label();
             this.lblOtrosAjustes = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panelControlUsuario = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblCorreo = new System.Windows.Forms.Label();
@@ -49,7 +49,7 @@ namespace ACAPOLAMI.VISTA
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblControUsuarios = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelEstadoPagos = new System.Windows.Forms.Panel();
             this.lblEstado = new System.Windows.Forms.Label();
             this.btnEliminarEstado = new System.Windows.Forms.Button();
             this.btnGuardarEstado = new System.Windows.Forms.Button();
@@ -71,12 +71,13 @@ namespace ACAPOLAMI.VISTA
             this.ptbIconoAjustes = new System.Windows.Forms.PictureBox();
             this.lblEncabezado = new System.Windows.Forms.Label();
             this.controlValidaciones = new System.Windows.Forms.ErrorProvider(this.components);
+            this.panel5 = new System.Windows.Forms.Panel();
             this.pnlBorde.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.panelPrimario.SuspendLayout();
+            this.panelOtrosAjustes.SuspendLayout();
+            this.panelControlUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.panelEstadoPagos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.pnlComunidades.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -87,50 +88,54 @@ namespace ACAPOLAMI.VISTA
             // 
             // pnlBorde
             // 
+            this.pnlBorde.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlBorde.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
-            this.pnlBorde.Controls.Add(this.panel1);
+            this.pnlBorde.Controls.Add(this.panelPrimario);
             this.pnlBorde.Controls.Add(this.pnlEncabezado);
-            this.pnlBorde.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBorde.Location = new System.Drawing.Point(20, 20);
+            this.pnlBorde.Location = new System.Drawing.Point(-4, -3);
             this.pnlBorde.Name = "pnlBorde";
             this.pnlBorde.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.pnlBorde.Size = new System.Drawing.Size(1024, 612);
+            this.pnlBorde.Size = new System.Drawing.Size(1069, 635);
             this.pnlBorde.TabIndex = 0;
             // 
-            // panel1
+            // panelPrimario
             // 
-            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.pnlComunidades);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 60);
-            this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(20, 40, 20, 20);
-            this.panel1.Size = new System.Drawing.Size(1018, 549);
-            this.panel1.TabIndex = 1;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panelPrimario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelPrimario.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panelPrimario.Controls.Add(this.panelOtrosAjustes);
+            this.panelPrimario.Controls.Add(this.panelControlUsuario);
+            this.panelPrimario.Controls.Add(this.panelEstadoPagos);
+            this.panelPrimario.Controls.Add(this.pnlComunidades);
+            this.panelPrimario.Location = new System.Drawing.Point(3, 60);
+            this.panelPrimario.Name = "panelPrimario";
+            this.panelPrimario.Padding = new System.Windows.Forms.Padding(20, 40, 20, 20);
+            this.panelPrimario.Size = new System.Drawing.Size(1084, 596);
+            this.panelPrimario.TabIndex = 1;
+            this.panelPrimario.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // panel4
+            // panelOtrosAjustes
             // 
-            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.btnEstablecerPagoBase);
-            this.panel4.Controls.Add(this.txtPagoBase);
-            this.panel4.Controls.Add(this.lblPagoBase);
-            this.panel4.Controls.Add(this.lblOtrosAjustes);
-            this.panel4.Location = new System.Drawing.Point(746, 271);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(249, 255);
-            this.panel4.TabIndex = 2;
+            this.panelOtrosAjustes.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelOtrosAjustes.BackColor = System.Drawing.Color.White;
+            this.panelOtrosAjustes.Controls.Add(this.btnEstablecerPagoBase);
+            this.panelOtrosAjustes.Controls.Add(this.txtPagoBase);
+            this.panelOtrosAjustes.Controls.Add(this.lblPagoBase);
+            this.panelOtrosAjustes.Controls.Add(this.lblOtrosAjustes);
+            this.panelOtrosAjustes.Location = new System.Drawing.Point(770, 284);
+            this.panelOtrosAjustes.Name = "panelOtrosAjustes";
+            this.panelOtrosAjustes.Size = new System.Drawing.Size(249, 255);
+            this.panelOtrosAjustes.TabIndex = 2;
             // 
             // btnEstablecerPagoBase
             // 
             this.btnEstablecerPagoBase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
             this.btnEstablecerPagoBase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEstablecerPagoBase.ForeColor = System.Drawing.Color.White;
-            this.btnEstablecerPagoBase.Location = new System.Drawing.Point(17, 99);
+            this.btnEstablecerPagoBase.Location = new System.Drawing.Point(8, 88);
             this.btnEstablecerPagoBase.Name = "btnEstablecerPagoBase";
             this.btnEstablecerPagoBase.Size = new System.Drawing.Size(213, 30);
             this.btnEstablecerPagoBase.TabIndex = 10;
@@ -166,30 +171,31 @@ namespace ACAPOLAMI.VISTA
             this.lblOtrosAjustes.AutoSize = true;
             this.lblOtrosAjustes.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblOtrosAjustes.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOtrosAjustes.ForeColor = System.Drawing.Color.RoyalBlue;
             this.lblOtrosAjustes.Location = new System.Drawing.Point(0, 0);
             this.lblOtrosAjustes.Name = "lblOtrosAjustes";
             this.lblOtrosAjustes.Size = new System.Drawing.Size(129, 23);
             this.lblOtrosAjustes.TabIndex = 1;
             this.lblOtrosAjustes.Text = "Otros Ajustes";
             // 
-            // panel3
+            // panelControlUsuario
             // 
-            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.lblCorreo);
-            this.panel3.Controls.Add(this.btnEliminarUsuario);
-            this.panel3.Controls.Add(this.btnGuardarUsuario);
-            this.panel3.Controls.Add(this.txtPassAntigua);
-            this.panel3.Controls.Add(this.txtPass);
-            this.panel3.Controls.Add(this.txtUsuario);
-            this.panel3.Controls.Add(this.dataGridView3);
-            this.panel3.Controls.Add(this.lblControUsuarios);
-            this.panel3.Location = new System.Drawing.Point(23, 271);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(717, 255);
-            this.panel3.TabIndex = 1;
+            this.panelControlUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelControlUsuario.BackColor = System.Drawing.Color.White;
+            this.panelControlUsuario.Controls.Add(this.label2);
+            this.panelControlUsuario.Controls.Add(this.label1);
+            this.panelControlUsuario.Controls.Add(this.lblCorreo);
+            this.panelControlUsuario.Controls.Add(this.btnEliminarUsuario);
+            this.panelControlUsuario.Controls.Add(this.btnGuardarUsuario);
+            this.panelControlUsuario.Controls.Add(this.txtPassAntigua);
+            this.panelControlUsuario.Controls.Add(this.txtPass);
+            this.panelControlUsuario.Controls.Add(this.txtUsuario);
+            this.panelControlUsuario.Controls.Add(this.dataGridView3);
+            this.panelControlUsuario.Controls.Add(this.lblControUsuarios);
+            this.panelControlUsuario.Location = new System.Drawing.Point(47, 284);
+            this.panelControlUsuario.Name = "panelControlUsuario";
+            this.panelControlUsuario.Size = new System.Drawing.Size(717, 255);
+            this.panelControlUsuario.TabIndex = 1;
             // 
             // label2
             // 
@@ -289,7 +295,7 @@ namespace ACAPOLAMI.VISTA
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1});
-            this.dataGridView3.Location = new System.Drawing.Point(4, 26);
+            this.dataGridView3.Location = new System.Drawing.Point(0, 29);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
             this.dataGridView3.RowHeadersVisible = false;
@@ -307,26 +313,27 @@ namespace ACAPOLAMI.VISTA
             this.lblControUsuarios.AutoSize = true;
             this.lblControUsuarios.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblControUsuarios.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblControUsuarios.ForeColor = System.Drawing.Color.RoyalBlue;
             this.lblControUsuarios.Location = new System.Drawing.Point(0, 0);
             this.lblControUsuarios.Name = "lblControUsuarios";
             this.lblControUsuarios.Size = new System.Drawing.Size(182, 23);
             this.lblControUsuarios.TabIndex = 1;
             this.lblControUsuarios.Text = "Control de usuarios";
             // 
-            // panel2
+            // panelEstadoPagos
             // 
-            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.lblEstado);
-            this.panel2.Controls.Add(this.btnEliminarEstado);
-            this.panel2.Controls.Add(this.btnGuardarEstado);
-            this.panel2.Controls.Add(this.txtEstado);
-            this.panel2.Controls.Add(this.dataGridView2);
-            this.panel2.Controls.Add(this.lblEstadosPagos);
-            this.panel2.Location = new System.Drawing.Point(515, 43);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(480, 190);
-            this.panel2.TabIndex = 1;
+            this.panelEstadoPagos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelEstadoPagos.BackColor = System.Drawing.Color.White;
+            this.panelEstadoPagos.Controls.Add(this.lblEstado);
+            this.panelEstadoPagos.Controls.Add(this.btnEliminarEstado);
+            this.panelEstadoPagos.Controls.Add(this.btnGuardarEstado);
+            this.panelEstadoPagos.Controls.Add(this.txtEstado);
+            this.panelEstadoPagos.Controls.Add(this.dataGridView2);
+            this.panelEstadoPagos.Controls.Add(this.lblEstadosPagos);
+            this.panelEstadoPagos.Location = new System.Drawing.Point(539, 56);
+            this.panelEstadoPagos.Name = "panelEstadoPagos";
+            this.panelEstadoPagos.Size = new System.Drawing.Size(480, 190);
+            this.panelEstadoPagos.TabIndex = 1;
             // 
             // lblEstado
             // 
@@ -412,6 +419,7 @@ namespace ACAPOLAMI.VISTA
             this.lblEstadosPagos.AutoSize = true;
             this.lblEstadosPagos.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblEstadosPagos.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstadosPagos.ForeColor = System.Drawing.Color.RoyalBlue;
             this.lblEstadosPagos.Location = new System.Drawing.Point(0, 0);
             this.lblEstadosPagos.Name = "lblEstadosPagos";
             this.lblEstadosPagos.Size = new System.Drawing.Size(264, 23);
@@ -428,7 +436,7 @@ namespace ACAPOLAMI.VISTA
             this.pnlComunidades.Controls.Add(this.txtComunidad);
             this.pnlComunidades.Controls.Add(this.dataGridView1);
             this.pnlComunidades.Controls.Add(this.lblControlComunidades);
-            this.pnlComunidades.Location = new System.Drawing.Point(23, 43);
+            this.pnlComunidades.Location = new System.Drawing.Point(47, 56);
             this.pnlComunidades.Name = "pnlComunidades";
             this.pnlComunidades.Size = new System.Drawing.Size(486, 190);
             this.pnlComunidades.TabIndex = 0;
@@ -520,6 +528,7 @@ namespace ACAPOLAMI.VISTA
             this.lblControlComunidades.AutoSize = true;
             this.lblControlComunidades.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblControlComunidades.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblControlComunidades.ForeColor = System.Drawing.Color.RoyalBlue;
             this.lblControlComunidades.Location = new System.Drawing.Point(0, 0);
             this.lblControlComunidades.Name = "lblControlComunidades";
             this.lblControlComunidades.Size = new System.Drawing.Size(226, 23);
@@ -528,20 +537,20 @@ namespace ACAPOLAMI.VISTA
             // 
             // pnlEncabezado
             // 
+            this.pnlEncabezado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlEncabezado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
             this.pnlEncabezado.Controls.Add(this.ptbIconoAjustes);
             this.pnlEncabezado.Controls.Add(this.lblEncabezado);
-            this.pnlEncabezado.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlEncabezado.Location = new System.Drawing.Point(3, 0);
             this.pnlEncabezado.Name = "pnlEncabezado";
-            this.pnlEncabezado.Size = new System.Drawing.Size(1018, 60);
+            this.pnlEncabezado.Size = new System.Drawing.Size(1066, 60);
             this.pnlEncabezado.TabIndex = 0;
             // 
             // ptbIconoAjustes
             // 
             this.ptbIconoAjustes.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ptbIconoAjustes.Image = global::ACAPOLAMI.Properties.Resources.ajustes;
-            this.ptbIconoAjustes.Location = new System.Drawing.Point(316, 3);
+            this.ptbIconoAjustes.Location = new System.Drawing.Point(27, 6);
             this.ptbIconoAjustes.Name = "ptbIconoAjustes";
             this.ptbIconoAjustes.Size = new System.Drawing.Size(80, 51);
             this.ptbIconoAjustes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -555,7 +564,7 @@ namespace ACAPOLAMI.VISTA
             this.lblEncabezado.AutoSize = true;
             this.lblEncabezado.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEncabezado.ForeColor = System.Drawing.Color.White;
-            this.lblEncabezado.Location = new System.Drawing.Point(402, 18);
+            this.lblEncabezado.Location = new System.Drawing.Point(426, 18);
             this.lblEncabezado.Name = "lblEncabezado";
             this.lblEncabezado.Size = new System.Drawing.Size(220, 23);
             this.lblEncabezado.TabIndex = 0;
@@ -565,6 +574,14 @@ namespace ACAPOLAMI.VISTA
             // 
             this.controlValidaciones.ContainerControl = this;
             // 
+            // panel5
+            // 
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(20, 20);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1024, 612);
+            this.panel5.TabIndex = 1;
+            // 
             // FrmAjustes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
@@ -572,6 +589,7 @@ namespace ACAPOLAMI.VISTA
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1064, 652);
             this.Controls.Add(this.pnlBorde);
+            this.Controls.Add(this.panel5);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -582,14 +600,14 @@ namespace ACAPOLAMI.VISTA
             this.Text = "FrmAjustes";
             this.Load += new System.EventHandler(this.FrmAjustes_Load);
             this.pnlBorde.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.panelPrimario.ResumeLayout(false);
+            this.panelOtrosAjustes.ResumeLayout(false);
+            this.panelOtrosAjustes.PerformLayout();
+            this.panelControlUsuario.ResumeLayout(false);
+            this.panelControlUsuario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panelEstadoPagos.ResumeLayout(false);
+            this.panelEstadoPagos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.pnlComunidades.ResumeLayout(false);
             this.pnlComunidades.PerformLayout();
@@ -605,14 +623,14 @@ namespace ACAPOLAMI.VISTA
         #endregion
 
         private System.Windows.Forms.Panel pnlBorde;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelPrimario;
         private System.Windows.Forms.Panel pnlEncabezado;
         private System.Windows.Forms.PictureBox ptbIconoAjustes;
         private System.Windows.Forms.Label lblEncabezado;
         private System.Windows.Forms.Panel pnlComunidades;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panelOtrosAjustes;
+        private System.Windows.Forms.Panel panelControlUsuario;
+        private System.Windows.Forms.Panel panelEstadoPagos;
         private System.Windows.Forms.Label lblOtrosAjustes;
         private System.Windows.Forms.Label lblControUsuarios;
         private System.Windows.Forms.Label lblEstadosPagos;
@@ -645,5 +663,6 @@ namespace ACAPOLAMI.VISTA
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.Panel panel5;
     }
 }

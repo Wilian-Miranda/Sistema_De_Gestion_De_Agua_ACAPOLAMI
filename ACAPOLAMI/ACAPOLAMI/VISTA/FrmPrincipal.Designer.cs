@@ -57,6 +57,8 @@ namespace WilianMiranda01.VISTA
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelPrincipal = new System.Windows.Forms.Panel();
             this.tmrTiempo = new System.Windows.Forms.Timer(this.components);
+            this.btnMaximizar = new System.Windows.Forms.Button();
+            this.btnRestaurar = new System.Windows.Forms.Button();
             this.pnlMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -91,9 +93,9 @@ namespace WilianMiranda01.VISTA
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.panel2.Controls.Add(this.lblNombreUSuario);
             this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 547);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 87);
@@ -284,6 +286,7 @@ namespace WilianMiranda01.VISTA
             // pnlCabezaPrincipal
             // 
             this.pnlCabezaPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
+            this.pnlCabezaPrincipal.Controls.Add(this.btnMinimizarAplicacion);
             this.pnlCabezaPrincipal.Controls.Add(this.panel3);
             this.pnlCabezaPrincipal.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlCabezaPrincipal.Location = new System.Drawing.Point(200, 0);
@@ -294,9 +297,10 @@ namespace WilianMiranda01.VISTA
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.btnMinimizarAplicacion);
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.Controls.Add(this.btnMaximizar);
+            this.panel3.Controls.Add(this.btnRestaurar);
             this.panel3.Controls.Add(this.btnCerrarAplicacion);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.Location = new System.Drawing.Point(1005, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(59, 30);
@@ -304,14 +308,14 @@ namespace WilianMiranda01.VISTA
             // 
             // btnMinimizarAplicacion
             // 
+            this.btnMinimizarAplicacion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMinimizarAplicacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
             this.btnMinimizarAplicacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnMinimizarAplicacion.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnMinimizarAplicacion.FlatAppearance.BorderSize = 0;
             this.btnMinimizarAplicacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimizarAplicacion.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizarAplicacion.Image")));
             this.btnMinimizarAplicacion.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnMinimizarAplicacion.Location = new System.Drawing.Point(3, 0);
+            this.btnMinimizarAplicacion.Location = new System.Drawing.Point(976, 0);
             this.btnMinimizarAplicacion.Name = "btnMinimizarAplicacion";
             this.btnMinimizarAplicacion.Size = new System.Drawing.Size(26, 30);
             this.btnMinimizarAplicacion.TabIndex = 2;
@@ -325,7 +329,6 @@ namespace WilianMiranda01.VISTA
             // 
             this.btnCerrarAplicacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
             this.btnCerrarAplicacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCerrarAplicacion.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnCerrarAplicacion.FlatAppearance.BorderSize = 0;
             this.btnCerrarAplicacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarAplicacion.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarAplicacion.Image")));
@@ -341,12 +344,14 @@ namespace WilianMiranda01.VISTA
             // 
             // pnlPanelPadre
             // 
+            this.pnlPanelPadre.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlPanelPadre.BackColor = System.Drawing.Color.White;
             this.pnlPanelPadre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pnlPanelPadre.Controls.Add(this.pnlHoraFecha);
             this.pnlPanelPadre.Controls.Add(this.pictureBox1);
             this.pnlPanelPadre.Controls.Add(this.panelPrincipal);
-            this.pnlPanelPadre.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlPanelPadre.Location = new System.Drawing.Point(200, 29);
             this.pnlPanelPadre.Name = "pnlPanelPadre";
             this.pnlPanelPadre.Size = new System.Drawing.Size(1064, 652);
@@ -413,6 +418,38 @@ namespace WilianMiranda01.VISTA
             this.tmrTiempo.Enabled = true;
             this.tmrTiempo.Tick += new System.EventHandler(this.tmrTiempo_Tick);
             // 
+            // btnMaximizar
+            // 
+            this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMaximizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
+            this.btnMaximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMaximizar.FlatAppearance.BorderSize = 0;
+            this.btnMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMaximizar.Image")));
+            this.btnMaximizar.Location = new System.Drawing.Point(3, -6);
+            this.btnMaximizar.Name = "btnMaximizar";
+            this.btnMaximizar.Size = new System.Drawing.Size(26, 36);
+            this.btnMaximizar.TabIndex = 15;
+            this.btnMaximizar.UseVisualStyleBackColor = false;
+            this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
+            // 
+            // btnRestaurar
+            // 
+            this.btnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRestaurar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
+            this.btnRestaurar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRestaurar.FlatAppearance.BorderSize = 0;
+            this.btnRestaurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("btnRestaurar.Image")));
+            this.btnRestaurar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnRestaurar.Location = new System.Drawing.Point(3, 0);
+            this.btnRestaurar.Name = "btnRestaurar";
+            this.btnRestaurar.Size = new System.Drawing.Size(26, 33);
+            this.btnRestaurar.TabIndex = 16;
+            this.btnRestaurar.UseVisualStyleBackColor = false;
+            this.btnRestaurar.Visible = false;
+            this.btnRestaurar.Click += new System.EventHandler(this.btnRestaurar_Click);
+            // 
             // FmrPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
@@ -476,5 +513,7 @@ namespace WilianMiranda01.VISTA
         private System.Windows.Forms.PictureBox pictureBox2;
         public System.Windows.Forms.Label lblNombreUSuario;
         private System.Windows.Forms.Panel panelPrincipal;
+        private System.Windows.Forms.Button btnRestaurar;
+        private System.Windows.Forms.Button btnMaximizar;
     }
 }

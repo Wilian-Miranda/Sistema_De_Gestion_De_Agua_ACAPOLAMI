@@ -386,6 +386,31 @@ namespace WilianMiranda01.VISTA
             button.AzulOscuro(btn);
         }
 
+        private void btnMaximizar_Click(object sender, EventArgs e)
+        {
+            //Guarda la posicion actual
+            lx = Location.X;
+            ly = Location.Y;
+            sw = Size.Width;
+            sh = Size.Height;
+
+            //ocupar toda la pantalla
+            Size = Screen.PrimaryScreen.WorkingArea.Size;
+            Location = Screen.PrimaryScreen.WorkingArea.Location;
+
+            btnMaximizar.Visible = false;
+            btnRestaurar.Visible = true;
+        }
+
+        private void btnRestaurar_Click(object sender, EventArgs e)
+        {
+            Size = new Size(sw, sh);
+            Location = new Point(lx, ly);
+
+            btnRestaurar.Visible = false;
+            btnMaximizar.Visible = true;
+        }
+
         private void btnCerrarSesión_MouseMove(object sender, MouseEventArgs e)
         {
             btn.BotonRojo = btnCerrarSesión;
