@@ -300,7 +300,7 @@ namespace ACAPOLAMI.VISTA
 
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error: " + ex.Message);
+                    MessageBox.Show("Ha ocurrido el siguiente error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }
@@ -325,7 +325,7 @@ namespace ACAPOLAMI.VISTA
 
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error: "+ ex.Message);
+                    MessageBox.Show("Ha ocurrido el siguiente error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
                 this.Close();
@@ -347,7 +347,7 @@ namespace ACAPOLAMI.VISTA
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error :" + ex.Message);
+                    MessageBox.Show("Ha ocurrido el siguiente error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
                 this.Close();

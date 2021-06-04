@@ -46,8 +46,8 @@ namespace ACAPOLAMI.VISTA
             this.label1 = new System.Windows.Forms.Label();
             this.lblCorreo = new System.Windows.Forms.Label();
             this.btnEliminarUsuario = new System.Windows.Forms.Button();
-            this.btnGuardarUsuario = new System.Windows.Forms.Button();
             this.txtPassAntigua = new System.Windows.Forms.TextBox();
+            this.btnGuardarUsuario = new System.Windows.Forms.Button();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
@@ -271,6 +271,18 @@ namespace ACAPOLAMI.VISTA
             this.btnEliminarUsuario.Text = "Eliminar";
             this.btnEliminarUsuario.UseVisualStyleBackColor = true;
             // 
+            // txtPassAntigua
+            // 
+            this.txtPassAntigua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPassAntigua.ForeColor = System.Drawing.Color.DarkGray;
+            this.txtPassAntigua.Location = new System.Drawing.Point(247, 141);
+            this.txtPassAntigua.Name = "txtPassAntigua";
+            this.txtPassAntigua.Size = new System.Drawing.Size(154, 26);
+            this.txtPassAntigua.TabIndex = 5;
+            this.txtPassAntigua.Text = "@antigua";
+            this.txtPassAntigua.Enter += new System.EventHandler(this.txtPassAntigua_Enter_1);
+            this.txtPassAntigua.Leave += new System.EventHandler(this.txtPassAntigua_Leave_1);
+            // 
             // btnGuardarUsuario
             // 
             this.btnGuardarUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -284,18 +296,6 @@ namespace ACAPOLAMI.VISTA
             this.btnGuardarUsuario.Text = "Guardar";
             this.btnGuardarUsuario.UseVisualStyleBackColor = false;
             this.btnGuardarUsuario.Click += new System.EventHandler(this.btnGuardarUsuario_Click_1);
-            // 
-            // txtPassAntigua
-            // 
-            this.txtPassAntigua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPassAntigua.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtPassAntigua.Location = new System.Drawing.Point(247, 141);
-            this.txtPassAntigua.Name = "txtPassAntigua";
-            this.txtPassAntigua.Size = new System.Drawing.Size(154, 26);
-            this.txtPassAntigua.TabIndex = 5;
-            this.txtPassAntigua.Text = "@antigua";
-            this.txtPassAntigua.Enter += new System.EventHandler(this.txtPassAntigua_Enter_1);
-            this.txtPassAntigua.Leave += new System.EventHandler(this.txtPassAntigua_Leave_1);
             // 
             // txtPass
             // 
