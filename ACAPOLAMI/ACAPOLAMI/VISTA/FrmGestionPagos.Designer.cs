@@ -131,10 +131,9 @@ namespace ACAPOLAMI.VISTA
             this.txtIdConsumidor.Location = new System.Drawing.Point(347, 8);
             this.txtIdConsumidor.Margin = new System.Windows.Forms.Padding(3, 3, 3, 24);
             this.txtIdConsumidor.Name = "txtIdConsumidor";
-            this.txtIdConsumidor.ReadOnly = true;
             this.txtIdConsumidor.ShortcutsEnabled = false;
             this.txtIdConsumidor.Size = new System.Drawing.Size(250, 26);
-            this.txtIdConsumidor.TabIndex = 15;
+            this.txtIdConsumidor.TabIndex = 1;
             this.txtIdConsumidor.Tag = "";
             this.txtIdConsumidor.Text = "Codigo";
             // 
@@ -286,7 +285,7 @@ namespace ACAPOLAMI.VISTA
             this.txtPendiente.ShortcutsEnabled = false;
             this.txtPendiente.Size = new System.Drawing.Size(250, 26);
             this.txtPendiente.TabIndex = 21;
-            this.txtPendiente.Text = "0.0000";
+            this.txtPendiente.Text = "0,0000";
             // 
             // lblPendiente
             // 
@@ -359,7 +358,7 @@ namespace ACAPOLAMI.VISTA
             this.txtTotal.ShortcutsEnabled = false;
             this.txtTotal.Size = new System.Drawing.Size(250, 26);
             this.txtTotal.TabIndex = 15;
-            this.txtTotal.Text = "0.0000";
+            this.txtTotal.Text = "0,0000";
             // 
             // lblDeudaAcumulada
             // 
@@ -382,8 +381,10 @@ namespace ACAPOLAMI.VISTA
             this.txtImpuesto.ShortcutsEnabled = false;
             this.txtImpuesto.Size = new System.Drawing.Size(250, 26);
             this.txtImpuesto.TabIndex = 3;
-            this.txtImpuesto.Text = "0.0000";
+            this.txtImpuesto.Text = "0,0000";
             this.txtImpuesto.Enter += new System.EventHandler(this.txtImpuesto_Enter);
+            this.txtImpuesto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtImpuesto_KeyPress);
+            this.txtImpuesto.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtImpuesto_KeyUp);
             this.txtImpuesto.Leave += new System.EventHandler(this.txtImpuesto_Leave);
             // 
             // lblImpuesto
@@ -407,9 +408,9 @@ namespace ACAPOLAMI.VISTA
             this.txtCancelado.ShortcutsEnabled = false;
             this.txtCancelado.Size = new System.Drawing.Size(250, 26);
             this.txtCancelado.TabIndex = 2;
-            this.txtCancelado.Text = "0.0000";
-            this.txtCancelado.TextChanged += new System.EventHandler(this.txtCancelado_TextChanged);
+            this.txtCancelado.Text = "0,0000";
             this.txtCancelado.Enter += new System.EventHandler(this.txtCancelado_Enter);
+            this.txtCancelado.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCancelado_KeyDown);
             this.txtCancelado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCancelado_KeyPress);
             this.txtCancelado.Leave += new System.EventHandler(this.txtCancelado_Leave);
             // 
@@ -427,13 +428,15 @@ namespace ACAPOLAMI.VISTA
             this.txtMontoBase.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMontoBase.BackColor = System.Drawing.Color.White;
             this.txtMontoBase.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMontoBase.Enabled = false;
             this.txtMontoBase.ForeColor = System.Drawing.Color.Gray;
             this.txtMontoBase.Location = new System.Drawing.Point(27, 32);
             this.txtMontoBase.Margin = new System.Windows.Forms.Padding(3, 3, 3, 24);
             this.txtMontoBase.Name = "txtMontoBase";
+            this.txtMontoBase.ReadOnly = true;
             this.txtMontoBase.ShortcutsEnabled = false;
             this.txtMontoBase.Size = new System.Drawing.Size(250, 26);
-            this.txtMontoBase.TabIndex = 1;
+            this.txtMontoBase.TabIndex = 10;
             this.txtMontoBase.Text = "0.0000";
             this.txtMontoBase.Enter += new System.EventHandler(this.txtMontoBase_Enter);
             this.txtMontoBase.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMontoBase_KeyPress);
@@ -464,10 +467,11 @@ namespace ACAPOLAMI.VISTA
             this.cbConsumidor.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.cbConsumidor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbConsumidor.FormattingEnabled = true;
-            this.cbConsumidor.Location = new System.Drawing.Point(131, 18);
+            this.cbConsumidor.Location = new System.Drawing.Point(130, 12);
             this.cbConsumidor.Name = "cbConsumidor";
             this.cbConsumidor.Size = new System.Drawing.Size(425, 27);
-            this.cbConsumidor.TabIndex = 20;
+            this.cbConsumidor.Sorted = true;
+            this.cbConsumidor.TabIndex = 1;
             this.cbConsumidor.SelectedIndexChanged += new System.EventHandler(this.cbConsumidor_SelectedIndexChanged);
             this.cbConsumidor.Enter += new System.EventHandler(this.cbConsumidor_Enter);
             this.cbConsumidor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbConsumidor_KeyPress);

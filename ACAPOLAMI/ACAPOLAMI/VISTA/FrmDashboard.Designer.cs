@@ -29,24 +29,24 @@ namespace ProyectoCiclo3.VISTA
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea37 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend37 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series37 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title37 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea38 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend38 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series38 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title38 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle127 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle128 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle129 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle130 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle131 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle132 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle133 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.graficoComunidadXconsumidor = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.graficoPagosMesesPorYear = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.graficoComunidadXconsumidor = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.pnlFiltroPagosPorYear = new System.Windows.Forms.Panel();
             this.btnActivarFiltro = new System.Windows.Forms.Button();
             this.pnlFiltroPagos = new System.Windows.Forms.Panel();
@@ -99,8 +99,8 @@ namespace ProyectoCiclo3.VISTA
             this.label5 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.graficoComunidadXconsumidor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.graficoPagosMesesPorYear)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.graficoComunidadXconsumidor)).BeginInit();
             this.pnlFiltroPagosPorYear.SuspendLayout();
             this.pnlFiltroPagos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgUltimosPagos)).BeginInit();
@@ -119,13 +119,13 @@ namespace ProyectoCiclo3.VISTA
             this.panel7.SuspendLayout();
             this.pnlFiltroFinanzasGlobales.SuspendLayout();
             this.pnlContenedorFiltros.SuspendLayout();
-            this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel5
             // 
             this.panel5.AutoScroll = true;
             this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Controls.Add(this.graficoPagosMesesPorYear);
             this.panel5.Controls.Add(this.graficoComunidadXconsumidor);
             this.panel5.Controls.Add(this.pnlFiltroPagosPorYear);
             this.panel5.Controls.Add(this.label9);
@@ -144,48 +144,20 @@ namespace ProyectoCiclo3.VISTA
             this.panel5.TabIndex = 8;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
-            // graficoComunidadXconsumidor
-            // 
-            this.graficoComunidadXconsumidor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.graficoComunidadXconsumidor.BorderSkin.SkinStyle = System.Windows.Forms.DataVisualization.Charting.BorderSkinStyle.Sunken;
-            chartArea37.Name = "ChartArea1";
-            this.graficoComunidadXconsumidor.ChartAreas.Add(chartArea37);
-            legend37.Name = "Legend1";
-            this.graficoComunidadXconsumidor.Legends.Add(legend37);
-            this.graficoComunidadXconsumidor.Location = new System.Drawing.Point(578, 532);
-            this.graficoComunidadXconsumidor.Name = "graficoComunidadXconsumidor";
-            this.graficoComunidadXconsumidor.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SemiTransparent;
-            series37.ChartArea = "ChartArea1";
-            series37.Legend = "Legend1";
-            series37.Name = "Comunidades";
-            series37.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SemiTransparent;
-            this.graficoComunidadXconsumidor.Series.Add(series37);
-            this.graficoComunidadXconsumidor.Size = new System.Drawing.Size(446, 384);
-            this.graficoComunidadXconsumidor.TabIndex = 21;
-            this.graficoComunidadXconsumidor.Text = "chart2";
-            title37.Name = "Clientes por comunidad";
-            title37.Text = "CLIENTES POR COMUNIDAD";
-            this.graficoComunidadXconsumidor.Titles.Add(title37);
-            this.graficoComunidadXconsumidor.MouseLeave += new System.EventHandler(this.graficoComunidadXconsumidor_MouseLeave);
-            this.graficoComunidadXconsumidor.MouseHover += new System.EventHandler(this.graficoComunidadXconsumidor_MouseHover);
-            this.graficoComunidadXconsumidor.MouseMove += new System.Windows.Forms.MouseEventHandler(this.graficoComunidadXconsumidor_MouseMove);
-            // 
             // graficoPagosMesesPorYear
             // 
-            this.graficoPagosMesesPorYear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.graficoPagosMesesPorYear.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.graficoPagosMesesPorYear.BackSecondaryColor = System.Drawing.Color.White;
             this.graficoPagosMesesPorYear.BorderlineColor = System.Drawing.Color.Gray;
             this.graficoPagosMesesPorYear.BorderSkin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.graficoPagosMesesPorYear.BorderSkin.SkinStyle = System.Windows.Forms.DataVisualization.Charting.BorderSkinStyle.Sunken;
-            chartArea38.AxisY.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
-            chartArea38.BackColor = System.Drawing.Color.White;
-            chartArea38.Name = "ChartArea1";
-            this.graficoPagosMesesPorYear.ChartAreas.Add(chartArea38);
-            legend38.Name = "Legend1";
-            this.graficoPagosMesesPorYear.Legends.Add(legend38);
-            this.graficoPagosMesesPorYear.Location = new System.Drawing.Point(0, 0);
+            chartArea1.AxisY.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea1.BackColor = System.Drawing.Color.White;
+            chartArea1.Name = "ChartArea1";
+            this.graficoPagosMesesPorYear.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.graficoPagosMesesPorYear.Legends.Add(legend1);
+            this.graficoPagosMesesPorYear.Location = new System.Drawing.Point(23, 532);
             this.graficoPagosMesesPorYear.Name = "graficoPagosMesesPorYear";
             this.graficoPagosMesesPorYear.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
             this.graficoPagosMesesPorYear.PaletteCustomColors = new System.Drawing.Color[] {
@@ -193,21 +165,48 @@ namespace ProyectoCiclo3.VISTA
         System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))))};
             this.graficoPagosMesesPorYear.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            series38.ChartArea = "ChartArea1";
-            series38.Color = System.Drawing.Color.Orchid;
-            series38.Legend = "Legend1";
-            series38.Name = "Pagos";
-            series38.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
-            this.graficoPagosMesesPorYear.Series.Add(series38);
-            this.graficoPagosMesesPorYear.Size = new System.Drawing.Size(519, 384);
+            series1.ChartArea = "ChartArea1";
+            series1.Color = System.Drawing.Color.Orchid;
+            series1.Legend = "Legend1";
+            series1.Name = "Pagos";
+            series1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
+            this.graficoPagosMesesPorYear.Series.Add(series1);
+            this.graficoPagosMesesPorYear.Size = new System.Drawing.Size(439, 370);
             this.graficoPagosMesesPorYear.TabIndex = 20;
             this.graficoPagosMesesPorYear.Text = "chart1";
-            title38.Name = "Title1";
-            title38.Text = "PAGOS POR MES DURANTE UN AÑO";
-            this.graficoPagosMesesPorYear.Titles.Add(title38);
+            title1.Name = "Title1";
+            title1.Text = "PAGOS POR MES DURANTE UN AÑO";
+            this.graficoPagosMesesPorYear.Titles.Add(title1);
             this.graficoPagosMesesPorYear.MouseLeave += new System.EventHandler(this.graficoPagosMesesPorYear_MouseLeave);
             this.graficoPagosMesesPorYear.MouseHover += new System.EventHandler(this.graficoPagosMesesPorYear_MouseHover);
             this.graficoPagosMesesPorYear.MouseMove += new System.Windows.Forms.MouseEventHandler(this.graficoPagosMesesPorYear_MouseMove);
+            // 
+            // graficoComunidadXconsumidor
+            // 
+            this.graficoComunidadXconsumidor.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.graficoComunidadXconsumidor.BorderSkin.SkinStyle = System.Windows.Forms.DataVisualization.Charting.BorderSkinStyle.Sunken;
+            chartArea2.Name = "ChartArea1";
+            this.graficoComunidadXconsumidor.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.graficoComunidadXconsumidor.Legends.Add(legend2);
+            this.graficoComunidadXconsumidor.Location = new System.Drawing.Point(577, 532);
+            this.graficoComunidadXconsumidor.MaximumSize = new System.Drawing.Size(503, 384);
+            this.graficoComunidadXconsumidor.Name = "graficoComunidadXconsumidor";
+            this.graficoComunidadXconsumidor.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SemiTransparent;
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Comunidades";
+            series2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SemiTransparent;
+            this.graficoComunidadXconsumidor.Series.Add(series2);
+            this.graficoComunidadXconsumidor.Size = new System.Drawing.Size(447, 366);
+            this.graficoComunidadXconsumidor.TabIndex = 21;
+            this.graficoComunidadXconsumidor.Text = "chart2";
+            title2.Name = "Clientes por comunidad";
+            title2.Text = "CLIENTES POR COMUNIDAD";
+            this.graficoComunidadXconsumidor.Titles.Add(title2);
+            this.graficoComunidadXconsumidor.MouseLeave += new System.EventHandler(this.graficoComunidadXconsumidor_MouseLeave);
+            this.graficoComunidadXconsumidor.MouseHover += new System.EventHandler(this.graficoComunidadXconsumidor_MouseHover);
+            this.graficoComunidadXconsumidor.MouseMove += new System.Windows.Forms.MouseEventHandler(this.graficoComunidadXconsumidor_MouseMove);
             // 
             // pnlFiltroPagosPorYear
             // 
@@ -324,14 +323,14 @@ namespace ProyectoCiclo3.VISTA
             this.dtgUltimosPagos.BackgroundColor = System.Drawing.Color.White;
             this.dtgUltimosPagos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dtgUltimosPagos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle127.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle127.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle127.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle127.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle127.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle127.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle127.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgUltimosPagos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle127;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgUltimosPagos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgUltimosPagos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgUltimosPagos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -339,14 +338,14 @@ namespace ProyectoCiclo3.VISTA
             this.Column2,
             this.Column4});
             this.dtgUltimosPagos.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle128.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle128.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle128.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle128.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle128.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle128.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle128.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgUltimosPagos.DefaultCellStyle = dataGridViewCellStyle128;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgUltimosPagos.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtgUltimosPagos.EnableHeadersVisualStyles = false;
             this.dtgUltimosPagos.GridColor = System.Drawing.Color.Gainsboro;
             this.dtgUltimosPagos.Location = new System.Drawing.Point(23, 267);
@@ -354,22 +353,22 @@ namespace ProyectoCiclo3.VISTA
             this.dtgUltimosPagos.Name = "dtgUltimosPagos";
             this.dtgUltimosPagos.ReadOnly = true;
             this.dtgUltimosPagos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle129.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle129.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle129.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle129.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle129.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle129.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle129.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgUltimosPagos.RowHeadersDefaultCellStyle = dataGridViewCellStyle129;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgUltimosPagos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgUltimosPagos.RowHeadersVisible = false;
-            dataGridViewCellStyle130.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle130.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle130.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle130.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle130.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle130.SelectionForeColor = System.Drawing.Color.Black;
-            this.dtgUltimosPagos.RowsDefaultCellStyle = dataGridViewCellStyle130;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.dtgUltimosPagos.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dtgUltimosPagos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgUltimosPagos.Size = new System.Drawing.Size(520, 188);
             this.dtgUltimosPagos.TabIndex = 13;
@@ -415,39 +414,39 @@ namespace ProyectoCiclo3.VISTA
             this.dtgUltimosConumidores.BackgroundColor = System.Drawing.Color.White;
             this.dtgUltimosConumidores.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dtgUltimosConumidores.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle131.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle131.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle131.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle131.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle131.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle131.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle131.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgUltimosConumidores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle131;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgUltimosConumidores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dtgUltimosConumidores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgUltimosConumidores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column3});
-            dataGridViewCellStyle132.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle132.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle132.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle132.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle132.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle132.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle132.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgUltimosConumidores.DefaultCellStyle = dataGridViewCellStyle132;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgUltimosConumidores.DefaultCellStyle = dataGridViewCellStyle6;
             this.dtgUltimosConumidores.EnableHeadersVisualStyles = false;
             this.dtgUltimosConumidores.GridColor = System.Drawing.Color.Gainsboro;
             this.dtgUltimosConumidores.Location = new System.Drawing.Point(577, 268);
             this.dtgUltimosConumidores.Name = "dtgUltimosConumidores";
             this.dtgUltimosConumidores.ReadOnly = true;
             this.dtgUltimosConumidores.RowHeadersVisible = false;
-            dataGridViewCellStyle133.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle133.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle133.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle133.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle133.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle133.SelectionForeColor = System.Drawing.Color.Black;
-            this.dtgUltimosConumidores.RowsDefaultCellStyle = dataGridViewCellStyle133;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            this.dtgUltimosConumidores.RowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dtgUltimosConumidores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgUltimosConumidores.Size = new System.Drawing.Size(446, 141);
             this.dtgUltimosConumidores.TabIndex = 12;
@@ -572,16 +571,15 @@ namespace ProyectoCiclo3.VISTA
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(194)))), ((int)(((byte)(243)))));
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.lblTotaPagar);
-            this.panel1.Location = new System.Drawing.Point(24, 52);
+            this.panel1.Location = new System.Drawing.Point(14, 52);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(259, 100);
+            this.panel1.Size = new System.Drawing.Size(248, 100);
             this.panel1.TabIndex = 3;
             // 
             // pictureBox1
@@ -600,7 +598,7 @@ namespace ProyectoCiclo3.VISTA
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(124, 17);
+            this.label2.Location = new System.Drawing.Point(120, 17);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(108, 19);
             this.label2.TabIndex = 4;
@@ -610,7 +608,7 @@ namespace ProyectoCiclo3.VISTA
             // 
             this.lblTotaPagar.AutoSize = true;
             this.lblTotaPagar.ForeColor = System.Drawing.Color.Black;
-            this.lblTotaPagar.Location = new System.Drawing.Point(144, 49);
+            this.lblTotaPagar.Location = new System.Drawing.Point(142, 49);
             this.lblTotaPagar.Name = "lblTotaPagar";
             this.lblTotaPagar.Size = new System.Drawing.Size(58, 19);
             this.lblTotaPagar.TabIndex = 3;
@@ -619,16 +617,15 @@ namespace ProyectoCiclo3.VISTA
             // 
             // panel3
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.panel3.AutoSize = true;
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.panel3.Controls.Add(this.pictureBox3);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.lblTotalPendiente);
-            this.panel3.Location = new System.Drawing.Point(717, 52);
+            this.panel3.Location = new System.Drawing.Point(738, 52);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(255, 100);
+            this.panel3.Size = new System.Drawing.Size(245, 100);
             this.panel3.TabIndex = 6;
             // 
             // pictureBox3
@@ -647,7 +644,7 @@ namespace ProyectoCiclo3.VISTA
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(113, 17);
+            this.label4.Location = new System.Drawing.Point(110, 17);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(127, 19);
             this.label4.TabIndex = 4;
@@ -657,7 +654,7 @@ namespace ProyectoCiclo3.VISTA
             // 
             this.lblTotalPendiente.AutoSize = true;
             this.lblTotalPendiente.ForeColor = System.Drawing.Color.Black;
-            this.lblTotalPendiente.Location = new System.Drawing.Point(148, 49);
+            this.lblTotalPendiente.Location = new System.Drawing.Point(145, 49);
             this.lblTotalPendiente.Name = "lblTotalPendiente";
             this.lblTotalPendiente.Size = new System.Drawing.Size(58, 19);
             this.lblTotalPendiente.TabIndex = 3;
@@ -665,16 +662,15 @@ namespace ProyectoCiclo3.VISTA
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.panel2.AutoSize = true;
             this.panel2.BackColor = System.Drawing.Color.LightGreen;
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.lblTotalPagado);
-            this.panel2.Location = new System.Drawing.Point(397, 52);
+            this.panel2.Location = new System.Drawing.Point(374, 52);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(256, 100);
+            this.panel2.Size = new System.Drawing.Size(248, 100);
             this.panel2.TabIndex = 5;
             // 
             // pictureBox2
@@ -693,7 +689,7 @@ namespace ProyectoCiclo3.VISTA
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(122, 17);
+            this.label1.Location = new System.Drawing.Point(119, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(109, 19);
             this.label1.TabIndex = 4;
@@ -703,7 +699,7 @@ namespace ProyectoCiclo3.VISTA
             // 
             this.lblTotalPagado.AutoSize = true;
             this.lblTotalPagado.ForeColor = System.Drawing.Color.Black;
-            this.lblTotalPagado.Location = new System.Drawing.Point(144, 49);
+            this.lblTotalPagado.Location = new System.Drawing.Point(142, 49);
             this.lblTotalPagado.Name = "lblTotalPagado";
             this.lblTotalPagado.Size = new System.Drawing.Size(58, 19);
             this.lblTotalPagado.TabIndex = 3;
@@ -880,11 +876,12 @@ namespace ProyectoCiclo3.VISTA
             // 
             // panel8
             // 
-            this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel8.Controls.Add(this.graficoPagosMesesPorYear);
-            this.panel8.Location = new System.Drawing.Point(24, 518);
+            this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel8.AutoSize = true;
+            this.panel8.Location = new System.Drawing.Point(26, 536);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(519, 384);
+            this.panel8.Size = new System.Drawing.Size(997, 365);
             this.panel8.TabIndex = 22;
             // 
             // FrmDashboard
@@ -902,8 +899,8 @@ namespace ProyectoCiclo3.VISTA
             this.Load += new System.EventHandler(this.FrmDashboard_Load);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.graficoComunidadXconsumidor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.graficoPagosMesesPorYear)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.graficoComunidadXconsumidor)).EndInit();
             this.pnlFiltroPagosPorYear.ResumeLayout(false);
             this.pnlFiltroPagos.ResumeLayout(false);
             this.pnlFiltroPagos.PerformLayout();
@@ -931,7 +928,6 @@ namespace ProyectoCiclo3.VISTA
             this.pnlFiltroFinanzasGlobales.ResumeLayout(false);
             this.pnlContenedorFiltros.ResumeLayout(false);
             this.pnlContenedorFiltros.PerformLayout();
-            this.panel8.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -12,6 +12,8 @@ namespace WilianMiranda01.VISTA
 {
     public partial class FmrPrincipal : Form
     {
+        public static string pagoBase = "2,00";
+
         Form1 login = new Form1();
         FrmClientes data = new FrmClientes();
         //variable para almacenar el botón actual
@@ -40,63 +42,6 @@ namespace WilianMiranda01.VISTA
 
         ClsButtonColor button = new ClsButtonColor();
         ButtonColor btn = new ButtonColor();
-
-        private const int tamanioGrid = 10;
-        private const int areamouse = 132;
-        private const int botonizquierdo = 17;
-        private Rectangle rectanguloGrid;
-
-        //Metodo para cambiar tamanio
-        protected override void OnSizeChanged(EventArgs e)
-        {
-            base.OnSizeChanged(e);
-            //Area cliente del control
-            var region = new Region(new Rectangle(0, 0, ClientRectangle.Width, ClientRectangle.Height));
-            //creacion del rectangulo
-            rectanguloGrid = new Rectangle(ClientRectangle.Width - tamanioGrid, ClientRectangle.Height - tamanioGrid, tamanioGrid, tamanioGrid);
-            //Excluimos tamanio del formulario
-            region.Exclude(rectanguloGrid);
-            //Indicamos el panel principal
-            panelPadre.Region = region;
-            Invalidate();
-        }
-
-        //Metodo para cambiar tamanio
-        protected override void WndProc(ref Message sms)
-        {
-            switch (sms.Msg)
-            {
-                case areamouse:
-                    base.WndProc(ref sms);
-                    //Establecemos el punto cliente para el area que se va minimizar
-                    var RefPoint = PointToClient(new Point(sms.LParam.ToInt32() & 0xffff, sms.LParam.ToInt32() >> 16));
-                    //Determinamos si se encuentra el punto en el area
-                    if (!rectanguloGrid.Contains(RefPoint))
-                    {
-                        break;
-                    }
-
-                    //iniciamos instancia usando el puntero
-                    sms.Result = new IntPtr(botonizquierdo);
-                    break;
-                default:
-                    base.WndProc(ref sms);
-                    break;
-            }
-        }
-
-        //Estilos del rectangulo
-        protected override void OnPaint(PaintEventArgs e)
-        {
-            //Establecemos color
-            SolidBrush solid = new SolidBrush(Color.Gold);
-            e.Graphics.FillRectangle(solid, rectanguloGrid);
-
-            //enviamos el color a la base
-            base.OnPaint(e);
-
-            ControlPaint.DrawSizeGrip(e.Graphics, Color.Gold, rectanguloGrid);
-        }
 
         //Maximizar y minimizar
         int lx, ly;

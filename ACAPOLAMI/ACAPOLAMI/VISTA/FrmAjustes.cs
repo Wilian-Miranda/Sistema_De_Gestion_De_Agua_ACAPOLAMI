@@ -9,11 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ACAPOLAMI.DOMINIO;
 using ACAPOLAMI.NEGOCIO;
+using WilianMiranda01.VISTA;
 
 namespace ACAPOLAMI.VISTA
 {
     public partial class FrmAjustes : Form
     {
+        public string montoBase;
         public FrmAjustes()
         {
             InitializeComponent();
@@ -357,6 +359,12 @@ namespace ACAPOLAMI.VISTA
             {
                 controlValidaciones.SetError(txtPagoBase, "");
             }
+
+            if(txtPagoBase.Text != "0.0000")
+            {
+                FmrPrincipal.pagoBase = txtPagoBase.Text;
+                MessageBox.Show("Se ha modificado el pago base");
+            }
         }
 
         private void txtComunidad_Enter_1(object sender, EventArgs e)
@@ -465,6 +473,42 @@ namespace ACAPOLAMI.VISTA
                 txtPagoBase.Text = "0.0000";
                 txtPagoBase.ForeColor = Color.Gray;
             }
+        }
+
+        private void txtPagoBase_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNumeros(e);
+            if (e.KeyChar == 13 && txtUsuario.Text != "")
+            {
+                e.Handled = true;
+                btnEstablecerPagoBase.PerformClick();
+            }
+        }
+
+        private void SoloNumeros(KeyPressEventArgs k)
+        {
+            if (char.IsDigit(k.KeyChar))
+            {
+                k.Handled = false;
+            }
+
+            else if (char.IsSeparator(k.KeyChar))
+            {
+                k.Handled = false;
+            }
+
+            else if (char.IsControl(k.KeyChar))
+            {
+                k.Handled = false;
+            }
+
+            else if (k.KeyChar.ToString().Equals(","))
+            {
+                k.Handled = false;
+            }
+
+            else
+                k.Handled = true;
         }
     }
 }

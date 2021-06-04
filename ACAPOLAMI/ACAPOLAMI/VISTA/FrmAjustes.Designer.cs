@@ -186,6 +186,7 @@ namespace ACAPOLAMI.VISTA
             this.txtPagoBase.TabIndex = 8;
             this.txtPagoBase.Text = "0.0000";
             this.txtPagoBase.Enter += new System.EventHandler(this.txtPagoBase_Enter_1);
+            this.txtPagoBase.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPagoBase_KeyPress);
             this.txtPagoBase.Leave += new System.EventHandler(this.txtPagoBase_Leave_1);
             // 
             // lblPagoBase
