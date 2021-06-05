@@ -146,7 +146,9 @@ namespace ProyectoCiclo3.VISTA
             // 
             // graficoPagosMesesPorYear
             // 
-            this.graficoPagosMesesPorYear.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.graficoPagosMesesPorYear.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.graficoPagosMesesPorYear.BackSecondaryColor = System.Drawing.Color.White;
             this.graficoPagosMesesPorYear.BorderlineColor = System.Drawing.Color.Gray;
             this.graficoPagosMesesPorYear.BorderSkin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -171,7 +173,7 @@ namespace ProyectoCiclo3.VISTA
             series1.Name = "Pagos";
             series1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
             this.graficoPagosMesesPorYear.Series.Add(series1);
-            this.graficoPagosMesesPorYear.Size = new System.Drawing.Size(439, 370);
+            this.graficoPagosMesesPorYear.Size = new System.Drawing.Size(520, 370);
             this.graficoPagosMesesPorYear.TabIndex = 20;
             this.graficoPagosMesesPorYear.Text = "chart1";
             title1.Name = "Title1";
@@ -183,7 +185,8 @@ namespace ProyectoCiclo3.VISTA
             // 
             // graficoComunidadXconsumidor
             // 
-            this.graficoComunidadXconsumidor.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.graficoComunidadXconsumidor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.graficoComunidadXconsumidor.BorderSkin.SkinStyle = System.Windows.Forms.DataVisualization.Charting.BorderSkinStyle.Sunken;
             chartArea2.Name = "ChartArea1";
             this.graficoComunidadXconsumidor.ChartAreas.Add(chartArea2);
@@ -212,7 +215,7 @@ namespace ProyectoCiclo3.VISTA
             // 
             this.pnlFiltroPagosPorYear.Controls.Add(this.btnActivarFiltro);
             this.pnlFiltroPagosPorYear.Controls.Add(this.pnlFiltroPagos);
-            this.pnlFiltroPagosPorYear.Location = new System.Drawing.Point(23, 462);
+            this.pnlFiltroPagosPorYear.Location = new System.Drawing.Point(26, 494);
             this.pnlFiltroPagosPorYear.Name = "pnlFiltroPagosPorYear";
             this.pnlFiltroPagosPorYear.Size = new System.Drawing.Size(242, 32);
             this.pnlFiltroPagosPorYear.TabIndex = 19;
@@ -475,6 +478,7 @@ namespace ProyectoCiclo3.VISTA
             this.panel6.Controls.Add(this.pictureBox5);
             this.panel6.Controls.Add(this.label6);
             this.panel6.Controls.Add(this.lblTotalConsumidores);
+            this.panel6.ForeColor = System.Drawing.Color.Black;
             this.panel6.Location = new System.Drawing.Point(577, 415);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(220, 88);
@@ -517,6 +521,7 @@ namespace ProyectoCiclo3.VISTA
             this.panel4.Controls.Add(this.pictureBox4);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.lblTotalComunidades);
+            this.panel4.ForeColor = System.Drawing.Color.Black;
             this.panel4.Location = new System.Drawing.Point(804, 415);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(220, 88);
