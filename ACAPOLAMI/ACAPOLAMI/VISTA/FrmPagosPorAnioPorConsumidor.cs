@@ -54,7 +54,7 @@ namespace ACAPOLAMI.VISTA
             DateTime fechaD = new DateTime(Convert.ToInt32(fecha), 4, 3, 2, 3, 2);
 
 
-            pagosTableAdapter.Fill(cddPagosPorAnioPorConsumidor.Pagos, fechaD, consumidor);
+            pagosAnioConsTableAdapter.Fill(cddPagosPorAnioPorConsumidor.PagosAnioCons, fechaD, consumidor);
             reportViewer1.RefreshReport();
         }
     }

@@ -32,18 +32,18 @@ namespace ACAPOLAMI.VISTA
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.label1 = new System.Windows.Forms.Label();
             this.btnGenerar = new System.Windows.Forms.Button();
             this.cbxAnio = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cbxConsumidores = new System.Windows.Forms.ComboBox();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.cddPagosPorAnioPorConsumidor = new ACAPOLAMI.CDD.cddPagosPorAnioPorConsumidor();
-            this.pagosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pagosTableAdapter = new ACAPOLAMI.CDD.cddPagosPorAnioPorConsumidorTableAdapters.PagosTableAdapter();
+            this.pagosAnioConsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pagosAnioConsTableAdapter = new ACAPOLAMI.CDD.cddPagosPorAnioPorConsumidorTableAdapters.PagosAnioConsTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cddPagosPorAnioPorConsumidor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pagosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pagosAnioConsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -53,6 +53,19 @@ namespace ACAPOLAMI.VISTA
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1314, 585);
             this.panel1.TabIndex = 0;
+            // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.pagosAnioConsBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "ACAPOLAMI.REPORTES.PagosPorAnioPorConsumidor.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(1314, 585);
+            this.reportViewer1.TabIndex = 0;
             // 
             // label1
             // 
@@ -98,32 +111,19 @@ namespace ACAPOLAMI.VISTA
             this.cbxConsumidores.Size = new System.Drawing.Size(252, 28);
             this.cbxConsumidores.TabIndex = 5;
             // 
-            // reportViewer1
-            // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.pagosBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "ACAPOLAMI.REPORTES.PagosPorAnioPorConsumidor.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1314, 585);
-            this.reportViewer1.TabIndex = 0;
-            // 
             // cddPagosPorAnioPorConsumidor
             // 
             this.cddPagosPorAnioPorConsumidor.DataSetName = "cddPagosPorAnioPorConsumidor";
             this.cddPagosPorAnioPorConsumidor.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // pagosBindingSource
+            // pagosAnioConsBindingSource
             // 
-            this.pagosBindingSource.DataMember = "Pagos";
-            this.pagosBindingSource.DataSource = this.cddPagosPorAnioPorConsumidor;
+            this.pagosAnioConsBindingSource.DataMember = "PagosAnioCons";
+            this.pagosAnioConsBindingSource.DataSource = this.cddPagosPorAnioPorConsumidor;
             // 
-            // pagosTableAdapter
+            // pagosAnioConsTableAdapter
             // 
-            this.pagosTableAdapter.ClearBeforeFill = true;
+            this.pagosAnioConsTableAdapter.ClearBeforeFill = true;
             // 
             // FrmPagosPorAnioPorConsumidor
             // 
@@ -143,7 +143,7 @@ namespace ACAPOLAMI.VISTA
             this.Load += new System.EventHandler(this.FrmPagosPorAnioPorConsumidor_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cddPagosPorAnioPorConsumidor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pagosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pagosAnioConsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -158,8 +158,8 @@ namespace ACAPOLAMI.VISTA
         private System.Windows.Forms.ComboBox cbxAnio;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbxConsumidores;
-        private System.Windows.Forms.BindingSource pagosBindingSource;
+        private System.Windows.Forms.BindingSource pagosAnioConsBindingSource;
         private CDD.cddPagosPorAnioPorConsumidor cddPagosPorAnioPorConsumidor;
-        private CDD.cddPagosPorAnioPorConsumidorTableAdapters.PagosTableAdapter pagosTableAdapter;
+        private CDD.cddPagosPorAnioPorConsumidorTableAdapters.PagosAnioConsTableAdapter pagosAnioConsTableAdapter;
     }
 }

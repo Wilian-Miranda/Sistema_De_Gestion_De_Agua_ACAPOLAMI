@@ -37,11 +37,11 @@ namespace ACAPOLAMI.VISTA
             this.panel1 = new System.Windows.Forms.Panel();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.cddGPagosPorAnio = new ACAPOLAMI.CDD.cddGPagosPorAnio();
-            this.pagosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pagosTableAdapter = new ACAPOLAMI.CDD.cddGPagosPorAnioTableAdapters.PagosTableAdapter();
+            this.gPagosAnioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gPagosAnioTableAdapter = new ACAPOLAMI.CDD.cddGPagosPorAnioTableAdapters.GPagosAnioTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cddGPagosPorAnio)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pagosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gPagosAnioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnGenerar
@@ -84,7 +84,7 @@ namespace ACAPOLAMI.VISTA
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.pagosBindingSource;
+            reportDataSource1.Value = this.gPagosAnioBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "ACAPOLAMI.REPORTES.GPagosPorAnio.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
@@ -98,14 +98,14 @@ namespace ACAPOLAMI.VISTA
             this.cddGPagosPorAnio.DataSetName = "cddGPagosPorAnio";
             this.cddGPagosPorAnio.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // pagosBindingSource
+            // gPagosAnioBindingSource
             // 
-            this.pagosBindingSource.DataMember = "Pagos";
-            this.pagosBindingSource.DataSource = this.cddGPagosPorAnio;
+            this.gPagosAnioBindingSource.DataMember = "GPagosAnio";
+            this.gPagosAnioBindingSource.DataSource = this.cddGPagosPorAnio;
             // 
-            // pagosTableAdapter
+            // gPagosAnioTableAdapter
             // 
-            this.pagosTableAdapter.ClearBeforeFill = true;
+            this.gPagosAnioTableAdapter.ClearBeforeFill = true;
             // 
             // FrmGPagosPorAnio
             // 
@@ -123,7 +123,7 @@ namespace ACAPOLAMI.VISTA
             this.Load += new System.EventHandler(this.FrmGPagosPorAnio_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cddGPagosPorAnio)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pagosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gPagosAnioBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,8 +136,8 @@ namespace ACAPOLAMI.VISTA
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private System.Windows.Forms.BindingSource pagosBindingSource;
+        private System.Windows.Forms.BindingSource gPagosAnioBindingSource;
         private CDD.cddGPagosPorAnio cddGPagosPorAnio;
-        private CDD.cddGPagosPorAnioTableAdapters.PagosTableAdapter pagosTableAdapter;
+        private CDD.cddGPagosPorAnioTableAdapters.GPagosAnioTableAdapter gPagosAnioTableAdapter;
     }
 }

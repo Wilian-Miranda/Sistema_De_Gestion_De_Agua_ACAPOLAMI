@@ -7,7 +7,7 @@
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ACAPOLAMIConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ACAPOLAMIConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ACAPOLAMI.Properties.Settings.GlobalReference.Default.ACAPOLAMIConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PagosTableAdapter" GeneratorDataComponentClassName="PagosTableAdapter" Name="Pagos" UserDataComponentName="PagosTableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="GPagosAnioTableAdapter" GeneratorDataComponentClassName="GPagosAnioTableAdapter" Name="GPagosAnio" UserDataComponentName="GPagosAnioTableAdapter">
             <MainSource>
               <DbSource ConnectionRef="ACAPOLAMIConnectionString (Settings)" DbObjectName="ACAPOLAMI.dbo.Pagos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
@@ -44,7 +44,7 @@ where year(c.fechaPago) = year(@fechaPago)</CommandText>
   <xs:element name="cddGPagosPorAnio" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="cddGPagosPorAnio" msprop:Generator_UserDSName="cddGPagosPorAnio">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Pagos" msprop:Generator_TableClassName="PagosDataTable" msprop:Generator_TableVarName="tablePagos" msprop:Generator_TablePropName="Pagos" msprop:Generator_RowDeletingName="PagosRowDeleting" msprop:Generator_RowChangingName="PagosRowChanging" msprop:Generator_RowEvHandlerName="PagosRowChangeEventHandler" msprop:Generator_RowDeletedName="PagosRowDeleted" msprop:Generator_UserTableName="Pagos" msprop:Generator_RowChangedName="PagosRowChanged" msprop:Generator_RowEvArgName="PagosRowChangeEvent" msprop:Generator_RowClassName="PagosRow">
+        <xs:element name="GPagosAnio" msprop:Generator_TableClassName="GPagosAnioDataTable" msprop:Generator_TableVarName="tableGPagosAnio" msprop:Generator_RowChangedName="GPagosAnioRowChanged" msprop:Generator_TablePropName="GPagosAnio" msprop:Generator_RowDeletingName="GPagosAnioRowDeleting" msprop:Generator_RowChangingName="GPagosAnioRowChanging" msprop:Generator_RowEvHandlerName="GPagosAnioRowChangeEventHandler" msprop:Generator_RowDeletedName="GPagosAnioRowDeleted" msprop:Generator_RowClassName="GPagosAnioRow" msprop:Generator_UserTableName="GPagosAnio" msprop:Generator_RowEvArgName="GPagosAnioRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Codigo" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCodigo" msprop:Generator_ColumnPropNameInRow="Codigo" msprop:Generator_ColumnPropNameInTable="CodigoColumn" msprop:Generator_UserColumnName="Codigo" type="xs:int" />
@@ -65,7 +65,7 @@ where year(c.fechaPago) = year(@fechaPago)</CommandText>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:Pagos" />
+      <xs:selector xpath=".//mstns:GPagosAnio" />
       <xs:field xpath="mstns:Codigo" />
     </xs:unique>
   </xs:element>

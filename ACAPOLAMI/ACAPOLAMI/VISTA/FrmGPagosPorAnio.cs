@@ -39,7 +39,7 @@ namespace ACAPOLAMI.VISTA
             //los ultimos 3 son hora, minuto y segundo
             DateTime fechaD = new DateTime(Convert.ToInt32(fecha), 1, 1, 1, 1, 1);
 
-            pagosTableAdapter.Fill(cddGPagosPorAnio.Pagos, fechaD);
+            gPagosAnioTableAdapter.Fill(cddGPagosPorAnio.GPagosAnio, fechaD);
             reportViewer1.RefreshReport();
             //try {
             //    

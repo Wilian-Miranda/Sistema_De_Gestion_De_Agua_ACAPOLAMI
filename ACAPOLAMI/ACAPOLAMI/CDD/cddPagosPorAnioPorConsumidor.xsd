@@ -7,7 +7,7 @@
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ACAPOLAMIConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ACAPOLAMIConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ACAPOLAMI.Properties.Settings.GlobalReference.Default.ACAPOLAMIConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PagosTableAdapter" GeneratorDataComponentClassName="PagosTableAdapter" Name="Pagos" UserDataComponentName="PagosTableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PagosAnioConsTableAdapter" GeneratorDataComponentClassName="PagosAnioConsTableAdapter" Name="PagosAnioCons" UserDataComponentName="PagosAnioConsTableAdapter">
             <MainSource>
               <DbSource ConnectionRef="ACAPOLAMIConnectionString (Settings)" DbObjectName="ACAPOLAMI.dbo.Pagos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
@@ -44,7 +44,7 @@ WHERE (YEAR(c.fechaPago) = YEAR(@fechaPago)) AND (a.nombresConsumidor = @nombreC
   <xs:element name="cddPagosPorAnioPorConsumidor" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="cddPagosPorAnioPorConsumidor" msprop:Generator_UserDSName="cddPagosPorAnioPorConsumidor">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Pagos" msprop:Generator_TableClassName="PagosDataTable" msprop:Generator_TableVarName="tablePagos" msprop:Generator_TablePropName="Pagos" msprop:Generator_RowDeletingName="PagosRowDeleting" msprop:Generator_RowChangingName="PagosRowChanging" msprop:Generator_RowEvHandlerName="PagosRowChangeEventHandler" msprop:Generator_RowDeletedName="PagosRowDeleted" msprop:Generator_UserTableName="Pagos" msprop:Generator_RowChangedName="PagosRowChanged" msprop:Generator_RowEvArgName="PagosRowChangeEvent" msprop:Generator_RowClassName="PagosRow">
+        <xs:element name="PagosAnioCons" msprop:Generator_TableClassName="PagosAnioConsDataTable" msprop:Generator_TableVarName="tablePagosAnioCons" msprop:Generator_RowChangedName="PagosAnioConsRowChanged" msprop:Generator_TablePropName="PagosAnioCons" msprop:Generator_RowDeletingName="PagosAnioConsRowDeleting" msprop:Generator_RowChangingName="PagosAnioConsRowChanging" msprop:Generator_RowEvHandlerName="PagosAnioConsRowChangeEventHandler" msprop:Generator_RowDeletedName="PagosAnioConsRowDeleted" msprop:Generator_RowClassName="PagosAnioConsRow" msprop:Generator_UserTableName="PagosAnioCons" msprop:Generator_RowEvArgName="PagosAnioConsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Codigo" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCodigo" msprop:Generator_ColumnPropNameInRow="Codigo" msprop:Generator_ColumnPropNameInTable="CodigoColumn" msprop:Generator_UserColumnName="Codigo" type="xs:int" />
@@ -65,7 +65,7 @@ WHERE (YEAR(c.fechaPago) = YEAR(@fechaPago)) AND (a.nombresConsumidor = @nombreC
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:Pagos" />
+      <xs:selector xpath=".//mstns:PagosAnioCons" />
       <xs:field xpath="mstns:Codigo" />
     </xs:unique>
   </xs:element>

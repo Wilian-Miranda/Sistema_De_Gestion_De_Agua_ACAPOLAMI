@@ -24,7 +24,7 @@ namespace ACAPOLAMI.CDD {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class cddGPagosPorAnio : global::System.Data.DataSet {
         
-        private PagosDataTable tablePagos;
+        private GPagosAnioDataTable tableGPagosAnio;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -54,8 +54,8 @@ namespace ACAPOLAMI.CDD {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Pagos"] != null)) {
-                    base.Tables.Add(new PagosDataTable(ds.Tables["Pagos"]));
+                if ((ds.Tables["GPagosAnio"] != null)) {
+                    base.Tables.Add(new GPagosAnioDataTable(ds.Tables["GPagosAnio"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace ACAPOLAMI.CDD {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public PagosDataTable Pagos {
+        public GPagosAnioDataTable GPagosAnio {
             get {
-                return this.tablePagos;
+                return this.tableGPagosAnio;
             }
         }
         
@@ -152,8 +152,8 @@ namespace ACAPOLAMI.CDD {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Pagos"] != null)) {
-                    base.Tables.Add(new PagosDataTable(ds.Tables["Pagos"]));
+                if ((ds.Tables["GPagosAnio"] != null)) {
+                    base.Tables.Add(new GPagosAnioDataTable(ds.Tables["GPagosAnio"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace ACAPOLAMI.CDD {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tablePagos = ((PagosDataTable)(base.Tables["Pagos"]));
+            this.tableGPagosAnio = ((GPagosAnioDataTable)(base.Tables["GPagosAnio"]));
             if ((initTable == true)) {
-                if ((this.tablePagos != null)) {
-                    this.tablePagos.InitVars();
+                if ((this.tableGPagosAnio != null)) {
+                    this.tableGPagosAnio.InitVars();
                 }
             }
         }
@@ -204,13 +204,13 @@ namespace ACAPOLAMI.CDD {
             this.Namespace = "http://tempuri.org/cddGPagosPorAnio.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tablePagos = new PagosDataTable();
-            base.Tables.Add(this.tablePagos);
+            this.tableGPagosAnio = new GPagosAnioDataTable();
+            base.Tables.Add(this.tableGPagosAnio);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializePagos() {
+        private bool ShouldSerializeGPagosAnio() {
             return false;
         }
         
@@ -270,14 +270,14 @@ namespace ACAPOLAMI.CDD {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void PagosRowChangeEventHandler(object sender, PagosRowChangeEvent e);
+        public delegate void GPagosAnioRowChangeEventHandler(object sender, GPagosAnioRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class PagosDataTable : global::System.Data.TypedTableBase<PagosRow> {
+        public partial class GPagosAnioDataTable : global::System.Data.TypedTableBase<GPagosAnioRow> {
             
             private global::System.Data.DataColumn columnCodigo;
             
@@ -293,8 +293,8 @@ namespace ACAPOLAMI.CDD {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public PagosDataTable() {
-                this.TableName = "Pagos";
+            public GPagosAnioDataTable() {
+                this.TableName = "GPagosAnio";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -302,7 +302,7 @@ namespace ACAPOLAMI.CDD {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal PagosDataTable(global::System.Data.DataTable table) {
+            internal GPagosAnioDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -319,7 +319,7 @@ namespace ACAPOLAMI.CDD {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected PagosDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected GPagosAnioDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -383,34 +383,34 @@ namespace ACAPOLAMI.CDD {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public PagosRow this[int index] {
+            public GPagosAnioRow this[int index] {
                 get {
-                    return ((PagosRow)(this.Rows[index]));
+                    return ((GPagosAnioRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event PagosRowChangeEventHandler PagosRowChanging;
+            public event GPagosAnioRowChangeEventHandler GPagosAnioRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event PagosRowChangeEventHandler PagosRowChanged;
+            public event GPagosAnioRowChangeEventHandler GPagosAnioRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event PagosRowChangeEventHandler PagosRowDeleting;
+            public event GPagosAnioRowChangeEventHandler GPagosAnioRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event PagosRowChangeEventHandler PagosRowDeleted;
+            public event GPagosAnioRowChangeEventHandler GPagosAnioRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddPagosRow(PagosRow row) {
+            public void AddGPagosAnioRow(GPagosAnioRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public PagosRow AddPagosRow(string Nombre_Completo, decimal Monto_Base, decimal Cancelado, decimal Pendiente, decimal Deuda_acumulada) {
-                PagosRow rowPagosRow = ((PagosRow)(this.NewRow()));
+            public GPagosAnioRow AddGPagosAnioRow(string Nombre_Completo, decimal Monto_Base, decimal Cancelado, decimal Pendiente, decimal Deuda_acumulada) {
+                GPagosAnioRow rowGPagosAnioRow = ((GPagosAnioRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Nombre_Completo,
@@ -418,22 +418,22 @@ namespace ACAPOLAMI.CDD {
                         Cancelado,
                         Pendiente,
                         Deuda_acumulada};
-                rowPagosRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowPagosRow);
-                return rowPagosRow;
+                rowGPagosAnioRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowGPagosAnioRow);
+                return rowGPagosAnioRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public PagosRow FindByCodigo(int Codigo) {
-                return ((PagosRow)(this.Rows.Find(new object[] {
+            public GPagosAnioRow FindByCodigo(int Codigo) {
+                return ((GPagosAnioRow)(this.Rows.Find(new object[] {
                             Codigo})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                PagosDataTable cln = ((PagosDataTable)(base.Clone()));
+                GPagosAnioDataTable cln = ((GPagosAnioDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -441,7 +441,7 @@ namespace ACAPOLAMI.CDD {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new PagosDataTable();
+                return new GPagosAnioDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -485,28 +485,28 @@ namespace ACAPOLAMI.CDD {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public PagosRow NewPagosRow() {
-                return ((PagosRow)(this.NewRow()));
+            public GPagosAnioRow NewGPagosAnioRow() {
+                return ((GPagosAnioRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new PagosRow(builder);
+                return new GPagosAnioRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(PagosRow);
+                return typeof(GPagosAnioRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.PagosRowChanged != null)) {
-                    this.PagosRowChanged(this, new PagosRowChangeEvent(((PagosRow)(e.Row)), e.Action));
+                if ((this.GPagosAnioRowChanged != null)) {
+                    this.GPagosAnioRowChanged(this, new GPagosAnioRowChangeEvent(((GPagosAnioRow)(e.Row)), e.Action));
                 }
             }
             
@@ -514,8 +514,8 @@ namespace ACAPOLAMI.CDD {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.PagosRowChanging != null)) {
-                    this.PagosRowChanging(this, new PagosRowChangeEvent(((PagosRow)(e.Row)), e.Action));
+                if ((this.GPagosAnioRowChanging != null)) {
+                    this.GPagosAnioRowChanging(this, new GPagosAnioRowChangeEvent(((GPagosAnioRow)(e.Row)), e.Action));
                 }
             }
             
@@ -523,8 +523,8 @@ namespace ACAPOLAMI.CDD {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.PagosRowDeleted != null)) {
-                    this.PagosRowDeleted(this, new PagosRowChangeEvent(((PagosRow)(e.Row)), e.Action));
+                if ((this.GPagosAnioRowDeleted != null)) {
+                    this.GPagosAnioRowDeleted(this, new GPagosAnioRowChangeEvent(((GPagosAnioRow)(e.Row)), e.Action));
                 }
             }
             
@@ -532,14 +532,14 @@ namespace ACAPOLAMI.CDD {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.PagosRowDeleting != null)) {
-                    this.PagosRowDeleting(this, new PagosRowChangeEvent(((PagosRow)(e.Row)), e.Action));
+                if ((this.GPagosAnioRowDeleting != null)) {
+                    this.GPagosAnioRowDeleting(this, new GPagosAnioRowChangeEvent(((GPagosAnioRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemovePagosRow(PagosRow row) {
+            public void RemoveGPagosAnioRow(GPagosAnioRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -566,7 +566,7 @@ namespace ACAPOLAMI.CDD {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "PagosDataTable";
+                attribute2.FixedValue = "GPagosAnioDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -610,25 +610,25 @@ namespace ACAPOLAMI.CDD {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class PagosRow : global::System.Data.DataRow {
+        public partial class GPagosAnioRow : global::System.Data.DataRow {
             
-            private PagosDataTable tablePagos;
+            private GPagosAnioDataTable tableGPagosAnio;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal PagosRow(global::System.Data.DataRowBuilder rb) : 
+            internal GPagosAnioRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablePagos = ((PagosDataTable)(this.Table));
+                this.tableGPagosAnio = ((GPagosAnioDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int Codigo {
                 get {
-                    return ((int)(this[this.tablePagos.CodigoColumn]));
+                    return ((int)(this[this.tableGPagosAnio.CodigoColumn]));
                 }
                 set {
-                    this[this.tablePagos.CodigoColumn] = value;
+                    this[this.tableGPagosAnio.CodigoColumn] = value;
                 }
             }
             
@@ -637,14 +637,14 @@ namespace ACAPOLAMI.CDD {
             public string Nombre_Completo {
                 get {
                     try {
-                        return ((string)(this[this.tablePagos.Nombre_CompletoColumn]));
+                        return ((string)(this[this.tableGPagosAnio.Nombre_CompletoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Nombre_Completo\' de la tabla \'Pagos\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Nombre_Completo\' de la tabla \'GPagosAnio\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePagos.Nombre_CompletoColumn] = value;
+                    this[this.tableGPagosAnio.Nombre_CompletoColumn] = value;
                 }
             }
             
@@ -652,10 +652,10 @@ namespace ACAPOLAMI.CDD {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public decimal Monto_Base {
                 get {
-                    return ((decimal)(this[this.tablePagos.Monto_BaseColumn]));
+                    return ((decimal)(this[this.tableGPagosAnio.Monto_BaseColumn]));
                 }
                 set {
-                    this[this.tablePagos.Monto_BaseColumn] = value;
+                    this[this.tableGPagosAnio.Monto_BaseColumn] = value;
                 }
             }
             
@@ -664,14 +664,14 @@ namespace ACAPOLAMI.CDD {
             public decimal Cancelado {
                 get {
                     try {
-                        return ((decimal)(this[this.tablePagos.CanceladoColumn]));
+                        return ((decimal)(this[this.tableGPagosAnio.CanceladoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Cancelado\' de la tabla \'Pagos\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Cancelado\' de la tabla \'GPagosAnio\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePagos.CanceladoColumn] = value;
+                    this[this.tableGPagosAnio.CanceladoColumn] = value;
                 }
             }
             
@@ -680,14 +680,14 @@ namespace ACAPOLAMI.CDD {
             public decimal Pendiente {
                 get {
                     try {
-                        return ((decimal)(this[this.tablePagos.PendienteColumn]));
+                        return ((decimal)(this[this.tableGPagosAnio.PendienteColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Pendiente\' de la tabla \'Pagos\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Pendiente\' de la tabla \'GPagosAnio\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePagos.PendienteColumn] = value;
+                    this[this.tableGPagosAnio.PendienteColumn] = value;
                 }
             }
             
@@ -696,63 +696,63 @@ namespace ACAPOLAMI.CDD {
             public decimal Deuda_acumulada {
                 get {
                     try {
-                        return ((decimal)(this[this.tablePagos.Deuda_acumuladaColumn]));
+                        return ((decimal)(this[this.tableGPagosAnio.Deuda_acumuladaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Deuda_acumulada\' de la tabla \'Pagos\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Deuda_acumulada\' de la tabla \'GPagosAnio\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePagos.Deuda_acumuladaColumn] = value;
+                    this[this.tableGPagosAnio.Deuda_acumuladaColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsNombre_CompletoNull() {
-                return this.IsNull(this.tablePagos.Nombre_CompletoColumn);
+                return this.IsNull(this.tableGPagosAnio.Nombre_CompletoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetNombre_CompletoNull() {
-                this[this.tablePagos.Nombre_CompletoColumn] = global::System.Convert.DBNull;
+                this[this.tableGPagosAnio.Nombre_CompletoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsCanceladoNull() {
-                return this.IsNull(this.tablePagos.CanceladoColumn);
+                return this.IsNull(this.tableGPagosAnio.CanceladoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetCanceladoNull() {
-                this[this.tablePagos.CanceladoColumn] = global::System.Convert.DBNull;
+                this[this.tableGPagosAnio.CanceladoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsPendienteNull() {
-                return this.IsNull(this.tablePagos.PendienteColumn);
+                return this.IsNull(this.tableGPagosAnio.PendienteColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetPendienteNull() {
-                this[this.tablePagos.PendienteColumn] = global::System.Convert.DBNull;
+                this[this.tableGPagosAnio.PendienteColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsDeuda_acumuladaNull() {
-                return this.IsNull(this.tablePagos.Deuda_acumuladaColumn);
+                return this.IsNull(this.tableGPagosAnio.Deuda_acumuladaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetDeuda_acumuladaNull() {
-                this[this.tablePagos.Deuda_acumuladaColumn] = global::System.Convert.DBNull;
+                this[this.tableGPagosAnio.Deuda_acumuladaColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -760,22 +760,22 @@ namespace ACAPOLAMI.CDD {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class PagosRowChangeEvent : global::System.EventArgs {
+        public class GPagosAnioRowChangeEvent : global::System.EventArgs {
             
-            private PagosRow eventRow;
+            private GPagosAnioRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public PagosRowChangeEvent(PagosRow row, global::System.Data.DataRowAction action) {
+            public GPagosAnioRowChangeEvent(GPagosAnioRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public PagosRow Row {
+            public GPagosAnioRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -803,7 +803,7 @@ namespace ACAPOLAMI.CDD.cddGPagosPorAnioTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class PagosTableAdapter : global::System.ComponentModel.Component {
+    public partial class GPagosAnioTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -817,7 +817,7 @@ namespace ACAPOLAMI.CDD.cddGPagosPorAnioTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public PagosTableAdapter() {
+        public GPagosAnioTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -914,7 +914,7 @@ namespace ACAPOLAMI.CDD.cddGPagosPorAnioTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Pagos";
+            tableMapping.DataSetTable = "GPagosAnio";
             tableMapping.ColumnMappings.Add("Codigo", "Codigo");
             tableMapping.ColumnMappings.Add("Nombre_Completo", "Nombre_Completo");
             tableMapping.ColumnMappings.Add("Monto_Base", "Monto_Base");
@@ -952,7 +952,7 @@ where year(c.fechaPago) = year(@fechaPago)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(cddGPagosPorAnio.PagosDataTable dataTable, System.DateTime fechaPago) {
+        public virtual int Fill(cddGPagosPorAnio.GPagosAnioDataTable dataTable, System.DateTime fechaPago) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(fechaPago));
             if ((this.ClearBeforeFill == true)) {
@@ -966,10 +966,10 @@ where year(c.fechaPago) = year(@fechaPago)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual cddGPagosPorAnio.PagosDataTable GetData(System.DateTime fechaPago) {
+        public virtual cddGPagosPorAnio.GPagosAnioDataTable GetData(System.DateTime fechaPago) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(fechaPago));
-            cddGPagosPorAnio.PagosDataTable dataTable = new cddGPagosPorAnio.PagosDataTable();
+            cddGPagosPorAnio.GPagosAnioDataTable dataTable = new cddGPagosPorAnio.GPagosAnioDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
