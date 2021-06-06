@@ -282,7 +282,7 @@ namespace ACAPOLAMI.VISTA
                     }
                     catch(Exception ex)
                     {
-                        MessageBox.Show("Seleccione la comunidad");
+                        FrmDialogoError.Error("Seleccione la comunidad");
                     }
                 }
 
@@ -300,7 +300,7 @@ namespace ACAPOLAMI.VISTA
 
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Ha ocurrido el siguiente error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    FrmDialogoError.Error("Ha ocurrido el siguiente error: " + ex.Message);
                 }
 
             }
@@ -325,7 +325,7 @@ namespace ACAPOLAMI.VISTA
 
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Ha ocurrido el siguiente error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    FrmDialogoError.Error("Ha ocurrido el siguiente error: " + ex.Message);
                 }
 
                 this.Close();
@@ -347,7 +347,7 @@ namespace ACAPOLAMI.VISTA
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Ha ocurrido el siguiente error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    FrmDialogoError.Error("Ha ocurrido el siguiente error: " + ex.Message);
                 }
 
                 this.Close();

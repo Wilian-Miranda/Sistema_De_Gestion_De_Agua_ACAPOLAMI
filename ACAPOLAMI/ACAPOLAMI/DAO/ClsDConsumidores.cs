@@ -1,4 +1,5 @@
 ﻿using ACAPOLAMI.MODELO;
+using ACAPOLAMI.VISTA;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,16 +39,15 @@ namespace ACAPOLAMI.DAO
             {
                 using (ACAPOLAMIEntities db = new ACAPOLAMIEntities())
                 {
+                    FrmDialogoExito.Confirmar("Se han ingresado correctamente");
                     db.sp_InsertarConsumidor(nombres, apellidos, dui, telefono, correo, idComunidad);
                     db.SaveChanges();
-
-                    MessageBox.Show("Los datos se agregaron exitosamente");
                 }
             }
 
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                FrmDialogoError.Error("Ha ocurrido el siguiente error: "+ ex.Message.ToString());
             }
 
         }
@@ -59,16 +59,14 @@ namespace ACAPOLAMI.DAO
             {
                 using (ACAPOLAMIEntities db = new ACAPOLAMIEntities())
                 {
-
+                    FrmDialogoExito.Confirmar("Se han eliminado correctamente");
                     db.sp_EliminarConsumidor(iD);
                     db.SaveChanges();
-
-                    MessageBox.Show("Los datos han sido eliminados exitosamente");
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                FrmDialogoError.Error("Ha ocurrido el siguiente error: "+ ex.Message);
             }
         }
 
@@ -79,16 +77,16 @@ namespace ACAPOLAMI.DAO
             {
                 using (ACAPOLAMIEntities db = new ACAPOLAMIEntities())
                 {
+                    FrmDialogoExito.Confirmar("Se han actualizado correctamente");
                     db.sp_ActualizarConsumidor(id, nombres, apellidos, dui, telefono, idComunidad, correo);
                     db.SaveChanges();
 
-                    MessageBox.Show("Los datos se actualizaron exitosamente");
                 }
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                FrmDialogoError.Error("Ha ocurrido el siguiente error: " + ex.Message.ToString());
             }
         }
     }

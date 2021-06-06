@@ -270,7 +270,7 @@ namespace ACAPOLAMI.VISTA
 
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Ha ocurrido el siguiente error: "+ ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    FrmDialogoError.Error("Ha ocurrido el siguiente error: " + ex.Message);
                 }
 
                 FrmNotificaciones notificacion = new FrmNotificaciones(sucesos.CargarDatosSucesos().tipoSuceso,
@@ -297,7 +297,7 @@ namespace ACAPOLAMI.VISTA
 
                 catch(Exception ex)
                 {
-                    MessageBox.Show("Ha ocurrido el siguiente error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    FrmDialogoError.Error("Ha ocurrido el siguiente error: " + ex.Message);
                 }
 
                 FrmNotificaciones notificacion = new FrmNotificaciones(sucesos.CargarDatosSucesos().tipoSuceso,
@@ -320,7 +320,7 @@ namespace ACAPOLAMI.VISTA
 
                 catch(Exception ex)
                 {
-                    MessageBox.Show("Ha ocurrido el siguiente error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    FrmDialogoError.Error("Ha ocurrido el siguiente error: " + ex.Message);
                 }
 
                 FrmNotificaciones notificacion = new FrmNotificaciones(sucesos.CargarDatosSucesos().tipoSuceso,

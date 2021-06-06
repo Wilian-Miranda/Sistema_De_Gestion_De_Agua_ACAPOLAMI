@@ -138,7 +138,7 @@ namespace WilianMiranda01.VISTA
             }
             else
             {
-                MessageBox.Show("Primero debe seleccionar el registro que desea modificar");
+                FrmDialogoError.Error("Primero debe seleccionar el registro que desea modificar");
             }
         }
 
@@ -183,7 +183,7 @@ namespace WilianMiranda01.VISTA
             }
             else
             {
-                MessageBox.Show("Primero debe seleccionar el registro que desea eliminar");
+                FrmDialogoError.Error("Primero debe seleccionar el registro que desea eliminar");
             }
         }
 

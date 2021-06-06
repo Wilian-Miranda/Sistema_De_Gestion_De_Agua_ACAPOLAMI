@@ -93,7 +93,7 @@ namespace WilianMiranda01.VISTA
 
             else
             {
-                MessageBox.Show("Seleccione un registro que desea modificar");
+                FrmDialogoError.Error("Primero debe seleccionar el registro que desea modificar");
             }
         }
 
@@ -123,7 +123,7 @@ namespace WilianMiranda01.VISTA
             }
             else
             {
-                MessageBox.Show("Seleccione el registro que desea eliminar");
+                FrmDialogoError.Error("Primero debe seleccionar el registro que desea eliminar");
             }
         }
         #region Eventos del Mouse de los botones en el formulario

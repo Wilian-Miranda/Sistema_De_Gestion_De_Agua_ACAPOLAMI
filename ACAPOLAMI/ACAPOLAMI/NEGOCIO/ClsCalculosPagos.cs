@@ -69,7 +69,7 @@ namespace ACAPOLAMI.NEGOCIO
                     impuesto = CalcularImpuesto(pendiente);
                     total = CalcularTotal(monto, cancelado, impuesto);
                     Total = total;
-                    Estado = "Retrasao";
+                    Estado = "Retrasado";
                 }
             }
         }

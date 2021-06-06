@@ -208,7 +208,14 @@ namespace WilianMiranda01.VISTA
 
         private void btnCerrarAplicacion_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult resultado = new DialogResult();
+            FrmDialogoAdvertencia advertencia = new FrmDialogoAdvertencia("¿Estas seguro de cerrar el Programa?");
+            resultado = advertencia.ShowDialog();
+
+            if (resultado == DialogResult.OK)
+            {
+                Application.Exit();
+            }
         }
 
         private void btnMinimizarAplicacion_Click(object sender, EventArgs e)
@@ -421,10 +428,17 @@ namespace WilianMiranda01.VISTA
 
         private void btnCerrarSesión_Click(object sender, EventArgs e)
         {
-            Form1 login = new Form1();
-            this.ptrLogo_Click(sender,e);
-            this.Hide();
-            login.Show();
+            DialogResult resultado = new DialogResult();
+            FrmDialogoAdvertencia advertencia = new FrmDialogoAdvertencia("¿Estas seguro que quieres cerrar sesion?");
+            resultado = advertencia.ShowDialog();
+
+            if (resultado == DialogResult.OK)
+            {
+                Form1 login = new Form1();
+                this.ptrLogo_Click(sender, e);
+                this.Hide();
+                login.Show();
+            }
         }
     }
 }

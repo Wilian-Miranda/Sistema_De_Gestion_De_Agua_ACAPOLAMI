@@ -2,6 +2,7 @@
 using ACAPOLAMI.DOMINIO;
 using ACAPOLAMI.MODELO;
 using ACAPOLAMI.NEGOCIO;
+using ACAPOLAMI.VISTA;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -55,7 +56,6 @@ namespace WilianMiranda01.VISTA
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
             ClsDUsuarios ClsUsuario = new ClsDUsuarios();
-            //cls.SaveDatosUserList(txtNombre.Text, txtApellido.Text, Convert.ToInt32(txtEdad), Convert.ToInt32( txtPass));
             Usuarios usuario = new Usuarios();
             usuario.nombre = txtUsuario.Text;
             usuario.clave = txtPassword.Text;
@@ -65,7 +65,7 @@ namespace WilianMiranda01.VISTA
             {
                 ClsUsuario.GuardarUsuario(usuario);
 
-                MessageBox.Show("Registro de usuario exitoso", "Registrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                FrmDialogoExito.Confirmar("Registro de usuario exitoso");
                 Form1 frm = new Form1();
                 this.Hide();
                 frm.Show();
@@ -73,11 +73,11 @@ namespace WilianMiranda01.VISTA
 
             else if (txtUsuario.Text == "" && txtPassword.Text == "" && txtConfirmar.Text == "")
             {
-                MessageBox.Show("Por favor llene los campos", "Campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                FrmDialogoError.Error("Por favor llene los campos");
             }
 
             else {
-                MessageBox.Show("Debe confirmar la contraseña", "No coinciden", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                FrmDialogoError.Error("Debe confirmar la contraseña");
             }
         }
 

@@ -2,6 +2,7 @@
 using ACAPOLAMI.DOMINIO;
 using ACAPOLAMI.MODELO;
 using ACAPOLAMI.NEGOCIO;
+using ACAPOLAMI.VISTA;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -31,7 +32,7 @@ namespace WilianMiranda01
 
             if (comprobar == 1)
             {
-                MessageBox.Show("Inicio de sesion exitoso", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                FrmDialogoExito.Confirmar("Inicio de sesion exitoso");
                 FmrPrincipal frmPrincipal = new FmrPrincipal();
                 this.Hide();
                 frmPrincipal.Show();
@@ -41,12 +42,12 @@ namespace WilianMiranda01
 
             else if (txtUsuario.Text == "" && txtPassword.Text == "")
             {
-                MessageBox.Show("Por favor llene los campos", "Campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                FrmDialogoError.Error("Por favor llene los campos");
             }
 
             else
             {
-                MessageBox.Show("Nombre o contraseña incorrecto", "No registrado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                FrmDialogoError.Error("Nombre o contraseña incorrecto");
             }
         }
 
@@ -77,7 +78,14 @@ namespace WilianMiranda01
 
         private void btnCerrarVentana(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult resultado = new DialogResult();
+            FrmDialogoAdvertencia advertencia = new FrmDialogoAdvertencia("¿Estas seguro de cerrar el Programa?");
+            resultado = advertencia.ShowDialog();
+
+            if (resultado == DialogResult.OK)
+            {
+                Application.Exit();
+            }
         }
 
         
