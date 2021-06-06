@@ -39,7 +39,7 @@ namespace ACAPOLAMI.DAO
             {
                 using (ACAPOLAMIEntities db = new ACAPOLAMIEntities())
                 {
-                    FrmDialogoExito.Confirmar("Se han ingresado correctamente");
+                    FrmDialogoExito.Confirmar("Se ha ingresado correctamente");
                     db.sp_InsertarConsumidor(nombres, apellidos, dui, telefono, correo, idComunidad);
                     db.SaveChanges();
                 }
@@ -59,7 +59,7 @@ namespace ACAPOLAMI.DAO
             {
                 using (ACAPOLAMIEntities db = new ACAPOLAMIEntities())
                 {
-                    FrmDialogoExito.Confirmar("Se han eliminado correctamente");
+                    FrmDialogoExito.Confirmar("Se ha eliminado correctamente");
                     db.sp_EliminarConsumidor(iD);
                     db.SaveChanges();
                 }
@@ -77,7 +77,7 @@ namespace ACAPOLAMI.DAO
             {
                 using (ACAPOLAMIEntities db = new ACAPOLAMIEntities())
                 {
-                    FrmDialogoExito.Confirmar("Se han actualizado correctamente");
+                    FrmDialogoExito.Confirmar("Se ha actualizado correctamente");
                     db.sp_ActualizarConsumidor(id, nombres, apellidos, dui, telefono, idComunidad, correo);
                     db.SaveChanges();
 

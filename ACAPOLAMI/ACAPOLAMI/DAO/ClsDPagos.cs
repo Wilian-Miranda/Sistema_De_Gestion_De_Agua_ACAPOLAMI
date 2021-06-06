@@ -1,4 +1,5 @@
 ﻿using ACAPOLAMI.MODELO;
+using ACAPOLAMI.VISTA;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,12 +31,12 @@ namespace ACAPOLAMI.DAO
                     db.sp_InsertarPago(monto, cancelado, pendiente, impuesto, total, fecha, estado, consumidor);
                     db.SaveChanges();
 
-                    MessageBox.Show("Los datos se han agregado");
+                    FrmDialogoExito.Confirmar("Se ha ingresado correctamente ");
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                FrmDialogoError.Error("Ha ocurrido el siguiente error: " + ex.Message.ToString());
             }
 
         }
@@ -47,12 +48,12 @@ namespace ACAPOLAMI.DAO
                 {
                     db.sp_EliminarPago(id);
 
-                    MessageBox.Show("Los datos  se han eliminado");
+                    FrmDialogoExito.Confirmar("Se ha eliminado correctamente ");
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                FrmDialogoError.Error("Ha ocurrido el siguiente error: " + ex.Message.ToString());
             }
         }
 
@@ -66,13 +67,13 @@ namespace ACAPOLAMI.DAO
                     db.sp_ActualizarPago(id, monto, cancelado, pendiente, impuesto, total, fecha, estado, consumidor);
 
                     db.SaveChanges();
-                    MessageBox.Show("Los Datos se Actualizaron ");
+                    FrmDialogoExito.Confirmar("Se ha actualizado correctamente ");
                 }
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                FrmDialogoError.Error("Ha ocurrido el siguiente error: " + ex.Message.ToString());
             }
         }
         public List<String> CargarAnio()
