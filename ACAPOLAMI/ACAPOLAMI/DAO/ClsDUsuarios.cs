@@ -1,6 +1,8 @@
 ﻿using ACAPOLAMI.MODELO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Windows.Forms;
 
 namespace ACAPOLAMI.DAO
 {
@@ -50,6 +52,48 @@ namespace ACAPOLAMI.DAO
 
                 db.Usuarios.Add(usuarioDB);
                 db.SaveChanges();
+            }
+        }
+
+        public void EliminarUsuario(int id)
+        {
+            try
+            {
+                using (ACAPOLAMIEntities db = new ACAPOLAMIEntities())
+                {
+                    int eliminar = Convert.ToInt32(id);
+                    Usuarios user = db.Usuarios.Where(x => x.idUsuarios == eliminar).Select(x => x).FirstOrDefault();
+
+                    db.Usuarios.Remove(user);
+                    db.SaveChanges();
+
+                    MessageBox.Show("El usuario se eliminó exitosamente");
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        public void CambiarPass(Usuarios user, String newPass)
+        {
+            List<Usuarios> listaUsuario = CargarUsuario();
+
+            using (ACAPOLAMIEntities db = new ACAPOLAMIEntities())
+            {
+                foreach (var listUsu in listaUsuario)
+                {
+                    if (listUsu.nombre.Equals(user.nombre) && listUsu.clave.Equals(user.clave))
+                    {
+                        int update = user.idUsuarios;
+                        Usuarios usu = db.Usuarios.Where(x => x.idUsuarios == update).Select(x => x).FirstOrDefault();
+                        usu.clave = newPass;
+                        db.SaveChanges();
+                        MessageBox.Show("Clave modificada");
+                    }
+                }
             }
         }
     }
