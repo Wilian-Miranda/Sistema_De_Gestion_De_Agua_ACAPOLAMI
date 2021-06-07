@@ -50,24 +50,25 @@ namespace ACAPOLAMI.VISTA
             this.btnGuardarUsuario = new System.Windows.Forms.Button();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dtgvUsuarios = new System.Windows.Forms.DataGridView();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblControUsuarios = new System.Windows.Forms.Label();
             this.panelEstadoPagos = new System.Windows.Forms.Panel();
             this.lblEstado = new System.Windows.Forms.Label();
             this.btnEliminarEstado = new System.Windows.Forms.Button();
             this.btnGuardarEstado = new System.Windows.Forms.Button();
             this.txtEstado = new System.Windows.Forms.TextBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dtgvEstadosPago = new System.Windows.Forms.DataGridView();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblEstadosPagos = new System.Windows.Forms.Label();
             this.pnlComunidades = new System.Windows.Forms.Panel();
             this.btnGuardarComunidad = new System.Windows.Forms.Button();
             this.lblComunidad = new System.Windows.Forms.Label();
-            this.btnEliminarComunidad = new System.Windows.Forms.Button();
             this.txtComunidad = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtgvComunidades = new System.Windows.Forms.DataGridView();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblControlComunidades = new System.Windows.Forms.Label();
@@ -78,11 +79,11 @@ namespace ACAPOLAMI.VISTA
             this.panelControles.SuspendLayout();
             this.panelOtrosAjustes.SuspendLayout();
             this.panelControlUsuario.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvUsuarios)).BeginInit();
             this.panelEstadoPagos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvEstadosPago)).BeginInit();
             this.pnlComunidades.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvComunidades)).BeginInit();
             this.SuspendLayout();
             // 
             // controlValidaciones
@@ -122,7 +123,7 @@ namespace ACAPOLAMI.VISTA
             this.label3.Location = new System.Drawing.Point(403, 22);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(196, 19);
+            this.label3.Size = new System.Drawing.Size(293, 29);
             this.label3.TabIndex = 0;
             this.label3.Text = "AJUSTES DEL SISTEMA";
             // 
@@ -159,9 +160,9 @@ namespace ACAPOLAMI.VISTA
             this.panelOtrosAjustes.Controls.Add(this.txtPagoBase);
             this.panelOtrosAjustes.Controls.Add(this.lblPagoBase);
             this.panelOtrosAjustes.Controls.Add(this.lblOtrosAjustes);
-            this.panelOtrosAjustes.Location = new System.Drawing.Point(825, 259);
+            this.panelOtrosAjustes.Location = new System.Drawing.Point(743, 259);
             this.panelOtrosAjustes.Name = "panelOtrosAjustes";
-            this.panelOtrosAjustes.Size = new System.Drawing.Size(189, 231);
+            this.panelOtrosAjustes.Size = new System.Drawing.Size(271, 231);
             this.panelOtrosAjustes.TabIndex = 6;
             // 
             // btnEstablecerPagoBase
@@ -182,7 +183,7 @@ namespace ACAPOLAMI.VISTA
             this.txtPagoBase.ForeColor = System.Drawing.Color.DarkGray;
             this.txtPagoBase.Location = new System.Drawing.Point(6, 67);
             this.txtPagoBase.Name = "txtPagoBase";
-            this.txtPagoBase.Size = new System.Drawing.Size(176, 26);
+            this.txtPagoBase.Size = new System.Drawing.Size(176, 35);
             this.txtPagoBase.TabIndex = 8;
             this.txtPagoBase.Text = "0.0000";
             this.txtPagoBase.Enter += new System.EventHandler(this.txtPagoBase_Enter_1);
@@ -194,7 +195,7 @@ namespace ACAPOLAMI.VISTA
             this.lblPagoBase.AutoSize = true;
             this.lblPagoBase.Location = new System.Drawing.Point(2, 45);
             this.lblPagoBase.Name = "lblPagoBase";
-            this.lblPagoBase.Size = new System.Drawing.Size(180, 19);
+            this.lblPagoBase.Size = new System.Drawing.Size(266, 29);
             this.lblPagoBase.TabIndex = 2;
             this.lblPagoBase.Text = "Establecer pago base:";
             // 
@@ -206,7 +207,7 @@ namespace ACAPOLAMI.VISTA
             this.lblOtrosAjustes.ForeColor = System.Drawing.Color.RoyalBlue;
             this.lblOtrosAjustes.Location = new System.Drawing.Point(0, 0);
             this.lblOtrosAjustes.Name = "lblOtrosAjustes";
-            this.lblOtrosAjustes.Size = new System.Drawing.Size(129, 23);
+            this.lblOtrosAjustes.Size = new System.Drawing.Size(196, 33);
             this.lblOtrosAjustes.TabIndex = 1;
             this.lblOtrosAjustes.Text = "Otros Ajustes";
             // 
@@ -223,7 +224,7 @@ namespace ACAPOLAMI.VISTA
             this.panelControlUsuario.Controls.Add(this.btnGuardarUsuario);
             this.panelControlUsuario.Controls.Add(this.txtPass);
             this.panelControlUsuario.Controls.Add(this.txtUsuario);
-            this.panelControlUsuario.Controls.Add(this.dataGridView3);
+            this.panelControlUsuario.Controls.Add(this.dtgvUsuarios);
             this.panelControlUsuario.Controls.Add(this.lblControUsuarios);
             this.panelControlUsuario.Location = new System.Drawing.Point(11, 259);
             this.panelControlUsuario.Name = "panelControlUsuario";
@@ -236,7 +237,7 @@ namespace ACAPOLAMI.VISTA
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(420, 108);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 19);
+            this.label2.Size = new System.Drawing.Size(151, 29);
             this.label2.TabIndex = 9;
             this.label2.Text = "Contraseña:";
             // 
@@ -246,7 +247,7 @@ namespace ACAPOLAMI.VISTA
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(244, 108);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 19);
+            this.label1.Size = new System.Drawing.Size(151, 29);
             this.label1.TabIndex = 8;
             this.label1.Text = "Contraseña:";
             // 
@@ -256,7 +257,7 @@ namespace ACAPOLAMI.VISTA
             this.lblCorreo.AutoSize = true;
             this.lblCorreo.Location = new System.Drawing.Point(244, 45);
             this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(75, 19);
+            this.lblCorreo.Size = new System.Drawing.Size(109, 29);
             this.lblCorreo.TabIndex = 7;
             this.lblCorreo.Text = "Usuario:";
             // 
@@ -270,6 +271,7 @@ namespace ACAPOLAMI.VISTA
             this.btnEliminarUsuario.TabIndex = 7;
             this.btnEliminarUsuario.Text = "Eliminar";
             this.btnEliminarUsuario.UseVisualStyleBackColor = true;
+            this.btnEliminarUsuario.Click += new System.EventHandler(this.btnEliminarUsuario_Click);
             // 
             // txtPassAntigua
             // 
@@ -277,7 +279,7 @@ namespace ACAPOLAMI.VISTA
             this.txtPassAntigua.ForeColor = System.Drawing.Color.DarkGray;
             this.txtPassAntigua.Location = new System.Drawing.Point(247, 141);
             this.txtPassAntigua.Name = "txtPassAntigua";
-            this.txtPassAntigua.Size = new System.Drawing.Size(154, 26);
+            this.txtPassAntigua.Size = new System.Drawing.Size(154, 35);
             this.txtPassAntigua.TabIndex = 5;
             this.txtPassAntigua.Text = "@antigua";
             this.txtPassAntigua.Enter += new System.EventHandler(this.txtPassAntigua_Enter_1);
@@ -303,7 +305,7 @@ namespace ACAPOLAMI.VISTA
             this.txtPass.ForeColor = System.Drawing.Color.DarkGray;
             this.txtPass.Location = new System.Drawing.Point(424, 141);
             this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(154, 26);
+            this.txtPass.Size = new System.Drawing.Size(154, 35);
             this.txtPass.TabIndex = 4;
             this.txtPass.Text = "@nueva";
             this.txtPass.Enter += new System.EventHandler(this.txtPass_Enter_1);
@@ -315,33 +317,53 @@ namespace ACAPOLAMI.VISTA
             this.txtUsuario.ForeColor = System.Drawing.Color.DarkGray;
             this.txtUsuario.Location = new System.Drawing.Point(248, 67);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(330, 26);
+            this.txtUsuario.Size = new System.Drawing.Size(330, 35);
             this.txtUsuario.TabIndex = 3;
             this.txtUsuario.Text = "ejemplo@correo.com";
             this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter_1);
             this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave_1);
             // 
-            // dataGridView3
+            // dtgvUsuarios
             // 
-            this.dataGridView3.AllowUserToAddRows = false;
-            this.dataGridView3.AllowUserToDeleteRows = false;
-            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView3.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1});
-            this.dataGridView3.Location = new System.Drawing.Point(7, 29);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.ReadOnly = true;
-            this.dataGridView3.RowHeadersVisible = false;
-            this.dataGridView3.Size = new System.Drawing.Size(220, 186);
-            this.dataGridView3.TabIndex = 2;
+            this.dtgvUsuarios.AllowUserToAddRows = false;
+            this.dtgvUsuarios.AllowUserToDeleteRows = false;
+            this.dtgvUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgvUsuarios.BackgroundColor = System.Drawing.Color.White;
+            this.dtgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column6,
+            this.Column1,
+            this.Column7});
+            this.dtgvUsuarios.Location = new System.Drawing.Point(7, 29);
+            this.dtgvUsuarios.Name = "dtgvUsuarios";
+            this.dtgvUsuarios.ReadOnly = true;
+            this.dtgvUsuarios.RowHeadersVisible = false;
+            this.dtgvUsuarios.RowHeadersWidth = 62;
+            this.dtgvUsuarios.Size = new System.Drawing.Size(220, 186);
+            this.dtgvUsuarios.TabIndex = 2;
+            this.dtgvUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvUsuarios_CellClick);
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "IdUsuario";
+            this.Column6.MinimumWidth = 8;
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Visible = false;
             // 
             // Column1
             // 
             this.Column1.HeaderText = "Nombre de usuario";
+            this.Column1.MinimumWidth = 8;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Password";
+            this.Column7.MinimumWidth = 8;
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
             // 
             // lblControUsuarios
             // 
@@ -352,7 +374,7 @@ namespace ACAPOLAMI.VISTA
             this.lblControUsuarios.ForeColor = System.Drawing.Color.RoyalBlue;
             this.lblControUsuarios.Location = new System.Drawing.Point(0, 0);
             this.lblControUsuarios.Name = "lblControUsuarios";
-            this.lblControUsuarios.Size = new System.Drawing.Size(182, 23);
+            this.lblControUsuarios.Size = new System.Drawing.Size(273, 33);
             this.lblControUsuarios.TabIndex = 1;
             this.lblControUsuarios.Text = "Control de usuarios";
             // 
@@ -365,7 +387,7 @@ namespace ACAPOLAMI.VISTA
             this.panelEstadoPagos.Controls.Add(this.btnEliminarEstado);
             this.panelEstadoPagos.Controls.Add(this.btnGuardarEstado);
             this.panelEstadoPagos.Controls.Add(this.txtEstado);
-            this.panelEstadoPagos.Controls.Add(this.dataGridView2);
+            this.panelEstadoPagos.Controls.Add(this.dtgvEstadosPago);
             this.panelEstadoPagos.Controls.Add(this.lblEstadosPagos);
             this.panelEstadoPagos.Location = new System.Drawing.Point(644, 26);
             this.panelEstadoPagos.Name = "panelEstadoPagos";
@@ -378,7 +400,7 @@ namespace ACAPOLAMI.VISTA
             this.lblEstado.AutoSize = true;
             this.lblEstado.Location = new System.Drawing.Point(188, 42);
             this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(69, 19);
+            this.lblEstado.Size = new System.Drawing.Size(100, 29);
             this.lblEstado.TabIndex = 6;
             this.lblEstado.Text = "Estado:";
             // 
@@ -392,6 +414,7 @@ namespace ACAPOLAMI.VISTA
             this.btnEliminarEstado.TabIndex = 5;
             this.btnEliminarEstado.Text = "Eliminar";
             this.btnEliminarEstado.UseVisualStyleBackColor = true;
+            this.btnEliminarEstado.Click += new System.EventHandler(this.btnEliminarEstado_Click);
             // 
             // btnGuardarEstado
             // 
@@ -413,34 +436,37 @@ namespace ACAPOLAMI.VISTA
             this.txtEstado.ForeColor = System.Drawing.Color.DarkGray;
             this.txtEstado.Location = new System.Drawing.Point(192, 64);
             this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(171, 26);
+            this.txtEstado.Size = new System.Drawing.Size(171, 35);
             this.txtEstado.TabIndex = 3;
             this.txtEstado.Text = "@nombre estado";
             this.txtEstado.Enter += new System.EventHandler(this.txtEstado_Enter_1);
             this.txtEstado.Leave += new System.EventHandler(this.txtEstado_Leave_1);
             // 
-            // dataGridView2
+            // dtgvEstadosPago
             // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dtgvEstadosPago.AllowUserToAddRows = false;
+            this.dtgvEstadosPago.AllowUserToDeleteRows = false;
+            this.dtgvEstadosPago.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.dtgvEstadosPago.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgvEstadosPago.BackgroundColor = System.Drawing.Color.White;
+            this.dtgvEstadosPago.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvEstadosPago.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column2,
             this.Column3});
-            this.dataGridView2.Location = new System.Drawing.Point(4, 27);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.RowHeadersVisible = false;
-            this.dataGridView2.Size = new System.Drawing.Size(168, 149);
-            this.dataGridView2.TabIndex = 2;
+            this.dtgvEstadosPago.Location = new System.Drawing.Point(4, 27);
+            this.dtgvEstadosPago.Name = "dtgvEstadosPago";
+            this.dtgvEstadosPago.ReadOnly = true;
+            this.dtgvEstadosPago.RowHeadersVisible = false;
+            this.dtgvEstadosPago.RowHeadersWidth = 62;
+            this.dtgvEstadosPago.Size = new System.Drawing.Size(168, 149);
+            this.dtgvEstadosPago.TabIndex = 2;
+            this.dtgvEstadosPago.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvEstadosPago_CellClick);
             // 
             // Column2
             // 
             this.Column2.FillWeight = 38.07107F;
             this.Column2.HeaderText = "Id";
+            this.Column2.MinimumWidth = 8;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
@@ -448,6 +474,7 @@ namespace ACAPOLAMI.VISTA
             // 
             this.Column3.FillWeight = 111.9289F;
             this.Column3.HeaderText = "Nombre";
+            this.Column3.MinimumWidth = 8;
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
@@ -459,7 +486,7 @@ namespace ACAPOLAMI.VISTA
             this.lblEstadosPagos.ForeColor = System.Drawing.Color.RoyalBlue;
             this.lblEstadosPagos.Location = new System.Drawing.Point(0, 0);
             this.lblEstadosPagos.Name = "lblEstadosPagos";
-            this.lblEstadosPagos.Size = new System.Drawing.Size(264, 23);
+            this.lblEstadosPagos.Size = new System.Drawing.Size(393, 33);
             this.lblEstadosPagos.TabIndex = 1;
             this.lblEstadosPagos.Text = "Control de Estados de pagos";
             // 
@@ -469,9 +496,8 @@ namespace ACAPOLAMI.VISTA
             this.pnlComunidades.BackColor = System.Drawing.Color.White;
             this.pnlComunidades.Controls.Add(this.btnGuardarComunidad);
             this.pnlComunidades.Controls.Add(this.lblComunidad);
-            this.pnlComunidades.Controls.Add(this.btnEliminarComunidad);
             this.pnlComunidades.Controls.Add(this.txtComunidad);
-            this.pnlComunidades.Controls.Add(this.dataGridView1);
+            this.pnlComunidades.Controls.Add(this.dtgvComunidades);
             this.pnlComunidades.Controls.Add(this.lblControlComunidades);
             this.pnlComunidades.Location = new System.Drawing.Point(12, 26);
             this.pnlComunidades.Name = "pnlComunidades";
@@ -498,21 +524,9 @@ namespace ACAPOLAMI.VISTA
             this.lblComunidad.AutoSize = true;
             this.lblComunidad.Location = new System.Drawing.Point(243, 41);
             this.lblComunidad.Name = "lblComunidad";
-            this.lblComunidad.Size = new System.Drawing.Size(104, 19);
+            this.lblComunidad.Size = new System.Drawing.Size(153, 29);
             this.lblComunidad.TabIndex = 5;
             this.lblComunidad.Text = "Comunidad:";
-            // 
-            // btnEliminarComunidad
-            // 
-            this.btnEliminarComunidad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEliminarComunidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarComunidad.ForeColor = System.Drawing.Color.Black;
-            this.btnEliminarComunidad.Location = new System.Drawing.Point(333, 96);
-            this.btnEliminarComunidad.Name = "btnEliminarComunidad";
-            this.btnEliminarComunidad.Size = new System.Drawing.Size(85, 30);
-            this.btnEliminarComunidad.TabIndex = 4;
-            this.btnEliminarComunidad.Text = "Eliminar";
-            this.btnEliminarComunidad.UseVisualStyleBackColor = true;
             // 
             // txtComunidad
             // 
@@ -521,34 +535,37 @@ namespace ACAPOLAMI.VISTA
             this.txtComunidad.ForeColor = System.Drawing.Color.DarkGray;
             this.txtComunidad.Location = new System.Drawing.Point(247, 63);
             this.txtComunidad.Name = "txtComunidad";
-            this.txtComunidad.Size = new System.Drawing.Size(171, 26);
+            this.txtComunidad.Size = new System.Drawing.Size(171, 35);
             this.txtComunidad.TabIndex = 2;
             this.txtComunidad.Text = "@nombre comunidad";
             this.txtComunidad.Enter += new System.EventHandler(this.txtComunidad_Enter_1);
             this.txtComunidad.Leave += new System.EventHandler(this.txtComunidad_Leave_1);
             // 
-            // dataGridView1
+            // dtgvComunidades
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dtgvComunidades.AllowUserToAddRows = false;
+            this.dtgvComunidades.AllowUserToDeleteRows = false;
+            this.dtgvComunidades.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.dtgvComunidades.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgvComunidades.BackgroundColor = System.Drawing.Color.White;
+            this.dtgvComunidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvComunidades.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column4,
             this.Column5});
-            this.dataGridView1.Location = new System.Drawing.Point(4, 27);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(222, 150);
-            this.dataGridView1.TabIndex = 1;
+            this.dtgvComunidades.Location = new System.Drawing.Point(4, 27);
+            this.dtgvComunidades.Name = "dtgvComunidades";
+            this.dtgvComunidades.ReadOnly = true;
+            this.dtgvComunidades.RowHeadersVisible = false;
+            this.dtgvComunidades.RowHeadersWidth = 62;
+            this.dtgvComunidades.Size = new System.Drawing.Size(222, 150);
+            this.dtgvComunidades.TabIndex = 1;
+            this.dtgvComunidades.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvComunidades_CellClick_1);
             // 
             // Column4
             // 
             this.Column4.FillWeight = 53.1449F;
             this.Column4.HeaderText = "Id";
+            this.Column4.MinimumWidth = 8;
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
@@ -556,6 +573,7 @@ namespace ACAPOLAMI.VISTA
             // 
             this.Column5.FillWeight = 156.246F;
             this.Column5.HeaderText = "Nombre";
+            this.Column5.MinimumWidth = 8;
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             // 
@@ -567,13 +585,13 @@ namespace ACAPOLAMI.VISTA
             this.lblControlComunidades.ForeColor = System.Drawing.Color.RoyalBlue;
             this.lblControlComunidades.Location = new System.Drawing.Point(0, 0);
             this.lblControlComunidades.Name = "lblControlComunidades";
-            this.lblControlComunidades.Size = new System.Drawing.Size(226, 23);
+            this.lblControlComunidades.Size = new System.Drawing.Size(338, 33);
             this.lblControlComunidades.TabIndex = 0;
             this.lblControlComunidades.Text = "Control de Comunidades";
             // 
             // FrmAjustes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1064, 652);
@@ -600,13 +618,13 @@ namespace ACAPOLAMI.VISTA
             this.panelOtrosAjustes.PerformLayout();
             this.panelControlUsuario.ResumeLayout(false);
             this.panelControlUsuario.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvUsuarios)).EndInit();
             this.panelEstadoPagos.ResumeLayout(false);
             this.panelEstadoPagos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvEstadosPago)).EndInit();
             this.pnlComunidades.ResumeLayout(false);
             this.pnlComunidades.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvComunidades)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -633,26 +651,27 @@ namespace ACAPOLAMI.VISTA
         private System.Windows.Forms.TextBox txtPassAntigua;
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridView dtgvUsuarios;
         private System.Windows.Forms.Label lblControUsuarios;
         private System.Windows.Forms.Panel panelEstadoPagos;
         private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.Button btnEliminarEstado;
         private System.Windows.Forms.Button btnGuardarEstado;
         private System.Windows.Forms.TextBox txtEstado;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dtgvEstadosPago;
         private System.Windows.Forms.Label lblEstadosPagos;
         private System.Windows.Forms.Panel pnlComunidades;
         private System.Windows.Forms.Button btnGuardarComunidad;
         private System.Windows.Forms.Label lblComunidad;
-        private System.Windows.Forms.Button btnEliminarComunidad;
         private System.Windows.Forms.TextBox txtComunidad;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgvComunidades;
         private System.Windows.Forms.Label lblControlComunidades;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
     }
 }

@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ACAPOLAMI.DAO;
 using ACAPOLAMI.DOMINIO;
+using ACAPOLAMI.MODELO;
 using ACAPOLAMI.NEGOCIO;
 using WilianMiranda01.VISTA;
 
@@ -21,9 +23,36 @@ namespace ACAPOLAMI.VISTA
             InitializeComponent();
         }
 
+        void mostrar()
+        {
+            dtgvComunidades.Rows.Clear();
+            ClsDComunidad comunidad = new ClsDComunidad();
+            List<Comunidades> tbcomunidad = comunidad.ConsultarComunidades();
+            foreach (var iteracion in tbcomunidad)
+            {
+                dtgvComunidades.Rows.Add(iteracion.idComunidad, iteracion.nombreComunidad);
+            }
+
+            dtgvEstadosPago.Rows.Clear();
+            ClsDEstados estado = new ClsDEstados();
+            List<Estados> tbEstado = estado.MostrarEstados();
+            foreach (var iteracion in tbEstado)
+            {
+                dtgvEstadosPago.Rows.Add(iteracion.idEstado, iteracion.nombreEstado);
+            }
+
+            dtgvUsuarios.Rows.Clear();
+            ClsDUsuarios clsDUsuarios = new ClsDUsuarios();
+            List<Usuarios> tbuser = clsDUsuarios.CargarUsuario();
+            foreach (var iteracion in tbuser)
+            {
+                dtgvUsuarios.Rows.Add(iteracion.idUsuarios, iteracion.nombre, iteracion.clave);
+            }
+        }
+
         private void FrmAjustes_Load(object sender, EventArgs e)
         {
-
+            mostrar();
         }
 
         #region EVENTOS PLACEHOLDER DE LAS CAJAS DE TEXTO
@@ -195,25 +224,25 @@ namespace ACAPOLAMI.VISTA
             color.AzulClaro(boton);
         }
 
-        private void btnEliminarComunidad_MouseHover(object sender, EventArgs e)
-        {
-            boton.BotonAzulClaro = btnEliminarComunidad;
-            color.AzulClaro(boton);
-            btnEliminarComunidad.ForeColor = Color.White;
-        }
+        //private void btnEliminarComunidad_MouseHover(object sender, EventArgs e)
+        //{
+        //    boton.BotonAzulClaro = btnEliminarComunidad;
+        //    color.AzulClaro(boton);
+        //    btnEliminarComunidad.ForeColor = Color.White;
+        //}
 
-        private void btnEliminarComunidad_MouseLeave(object sender, EventArgs e)
-        {
-            btnEliminarComunidad.BackColor = Color.White;
-            btnEliminarComunidad.ForeColor = Color.Black;
-        }
+        //private void btnEliminarComunidad_MouseLeave(object sender, EventArgs e)
+        //{
+        //    btnEliminarComunidad.BackColor = Color.White;
+        //    btnEliminarComunidad.ForeColor = Color.Black;
+        //}
 
-        private void btnEliminarComunidad_MouseMove(object sender, MouseEventArgs e)
-        {
-            boton.BotonAzulClaro = btnEliminarComunidad;
-            color.AzulClaro(boton);
-            btnEliminarComunidad.ForeColor = Color.White;
-        }
+        //private void btnEliminarComunidad_MouseMove(object sender, MouseEventArgs e)
+        //{
+        //    boton.BotonAzulClaro = btnEliminarComunidad;
+        //    color.AzulClaro(boton);
+        //    btnEliminarComunidad.ForeColor = Color.White;
+        //}
 
         private void btnGuardarEstado_MouseHover(object sender, EventArgs e)
         {
@@ -310,43 +339,103 @@ namespace ACAPOLAMI.VISTA
         }
         #endregion
 
+        ClsDComunidad comunidad = new ClsDComunidad();
+        Comunidades tb_comunidades = new Comunidades();
         private void btnGuardarComunidad_Click_1(object sender, EventArgs e)
         {
             if (txtComunidad.Text.Equals("@nombre comunidad"))
             {
                 controlValidaciones.SetError(txtComunidad, "Este campo es obligatorio,\npara ejecutar esta acción");
             }
+            else if (txtComunidad.Text != "")
+            {
+                comunidad.GuardarComunidades(txtComunidad.Text);
+            }
             else
             {
                 controlValidaciones.SetError(txtComunidad, "");
             }
+
+            mostrar();
         }
 
+        ClsDEstados clsDEstado = new ClsDEstados(); 
         private void btnGuardarEstado_Click_1(object sender, EventArgs e)
         {
             if (txtEstado.Text.Equals("@nombre estado"))
             {
                 controlValidaciones.SetError(txtEstado, "Este campo es obligatorio,\npara ejecutar esta acción");
             }
+            else if (txtEstado.Text != "")
+            {
+                Estados estado = new Estados();
+                estado.nombreEstado = txtEstado.Text;
+
+                clsDEstado.GuardarEstado(estado);
+            }
             else
             {
                 controlValidaciones.SetError(txtEstado, "");
             }
+            mostrar();
         }
 
+        private void btnEliminarEstado_Click(object sender, EventArgs e)
+        {
+            string idEstado = dtgvEstadosPago.CurrentRow.Cells[0].Value.ToString();
+            clsDEstado.EliminarEstado(Convert.ToInt32(idEstado));
+
+            mostrar();
+        }
+
+        ClsDUsuarios usuarios = new ClsDUsuarios();
         private void btnGuardarUsuario_Click_1(object sender, EventArgs e)
         {
+            Usuarios user = new Usuarios();
+
+            string name = txtUsuario.Text;
+            string oldPass = txtPassAntigua.Text;
+            string newPass = txtPass.Text;
+
             if (txtUsuario.Text.Equals("ejemplo@gmail.com")
                 || txtPassAntigua.Text.Equals("@antigua"))
             {
                 controlValidaciones.SetError(txtUsuario, "Este campo es obligatorio,\npara ejecutar esta acción");
                 controlValidaciones.SetError(txtPassAntigua, "Para modificar su usuario y/o contraseña,\ndebe ingresar su antigua contraseña");
             }
+            else if(txtPassAntigua.Text.Equals("@antigua") || txtPassAntigua.Text.Equals(""))
+            {
+                user.nombre = name;
+                user.clave = newPass;
+
+                usuarios.GuardarUsuario(user);
+
+                MessageBox.Show("Usuario guardado");
+            }
+            else if(txtPassAntigua.Text != "@antigua" || txtPassAntigua.Text != "")
+            {
+                user.idUsuarios = Convert.ToInt32(dtgvUsuarios.CurrentRow.Cells[0].Value);
+                user.nombre = name;
+                user.clave = oldPass;
+
+                usuarios.CambiarPass(user, newPass);
+           
+            }
             else
             {
                 controlValidaciones.SetError(txtUsuario, "");
                 controlValidaciones.SetError(txtPassAntigua, "");
             }
+
+            mostrar();
+        }
+
+        private void btnEliminarUsuario_Click(object sender, EventArgs e)
+        {
+            string id = dtgvUsuarios.CurrentRow.Cells[0].Value.ToString();
+            usuarios.EliminarUsuario(Convert.ToInt32(id));
+
+            mostrar();
         }
 
         private void btnEstablecerPagoBase_Click_1(object sender, EventArgs e)
@@ -509,6 +598,31 @@ namespace ACAPOLAMI.VISTA
 
             else
                 k.Handled = true;
+        }
+
+        private void dtgvComunidades_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtComunidad.Text = dtgvComunidades.CurrentRow.Cells[1].Value.ToString();
+        }
+
+        private void dtgvEstadosPago_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string nombreEstado = dtgvEstadosPago.CurrentRow.Cells[1].Value.ToString();
+            txtEstado.Text = nombreEstado;
+        }
+
+        private void dtgvUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string nombre = dtgvUsuarios.CurrentRow.Cells[1].Value.ToString();
+            string clave = dtgvUsuarios.CurrentRow.Cells[2].Value.ToString();
+
+            txtUsuario.Text = nombre;
+            txtPassAntigua.Text = clave;
+        }
+
+        private void dtgvComunidades_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            txtComunidad.Text = dtgvComunidades.CurrentRow.Cells[1].Value.ToString();
         }
     }
 }
