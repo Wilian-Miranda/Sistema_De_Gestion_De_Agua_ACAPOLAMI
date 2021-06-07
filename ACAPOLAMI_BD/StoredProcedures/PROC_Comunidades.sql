@@ -46,7 +46,8 @@ BEGIN
 END
 go
 -------------------------------------------------------------------------------------------------
-
+select * from Comunidades
+DELETE FROM Comunidades WHERE idComunidad = 1
 --Prueba
 EXEC sp_EliminarComunidad 4
 go

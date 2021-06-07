@@ -78,7 +78,7 @@ namespace WilianMiranda01.VISTA
         private void btnNotificaciones_Click_1(object sender, EventArgs e)
         {
             // Se pasa como parametro el objeto sender; el boton que es seleccionado, y un color.
-            AbrirFormEnPanel<FrmActividades>();
+            AbrirFormEnPanel<FrmActividad>();
             BotonActivo(sender, Color.White);
             this.Text = "ACAPOLAMI - Actividad";
         }

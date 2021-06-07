@@ -450,7 +450,6 @@ C:\Users\cb272\Documents\GitHub\Sistema_De_Gestion_De_Agua_ACAPOLAMI\ACAPOLAMI\A
 C:\Users\cb272\Documents\GitHub\Sistema_De_Gestion_De_Agua_ACAPOLAMI\ACAPOLAMI\ACAPOLAMI\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\cb272\Documents\GitHub\Sistema_De_Gestion_De_Agua_ACAPOLAMI\ACAPOLAMI\ACAPOLAMI\obj\Debug\ACAPOLAMI.csprojAssemblyReference.cache
 C:\Users\cb272\Documents\GitHub\Sistema_De_Gestion_De_Agua_ACAPOLAMI\ACAPOLAMI\ACAPOLAMI\obj\Debug\ACAPOLAMI.Properties.Resources.resources
-C:\Users\cb272\Documents\GitHub\Sistema_De_Gestion_De_Agua_ACAPOLAMI\ACAPOLAMI\ACAPOLAMI\obj\Debug\ACAPOLAMI.VISTA.FrmActividades.resources
 C:\Users\cb272\Documents\GitHub\Sistema_De_Gestion_De_Agua_ACAPOLAMI\ACAPOLAMI\ACAPOLAMI\obj\Debug\ACAPOLAMI.VISTA.FrmGestionPagos.resources
 C:\Users\cb272\Documents\GitHub\Sistema_De_Gestion_De_Agua_ACAPOLAMI\ACAPOLAMI\ACAPOLAMI\obj\Debug\WilianMiranda01.Form1.resources
 C:\Users\cb272\Documents\GitHub\Sistema_De_Gestion_De_Agua_ACAPOLAMI\ACAPOLAMI\ACAPOLAMI\obj\Debug\ACAPOLAMI.VISTA.FrmAjustes.resources
@@ -479,3 +478,7 @@ C:\Users\Manuel Perlera\Documents\GitHub\Sistema_De_Gestion_De_Agua_ACAPOLAMI\AC
 C:\Users\Manuel Perlera\Documents\GitHub\Sistema_De_Gestion_De_Agua_ACAPOLAMI\ACAPOLAMI\ACAPOLAMI\obj\Debug\RdlCompile.compiled
 C:\Users\Manuel Perlera\Documents\GitHub\Sistema_De_Gestion_De_Agua_ACAPOLAMI\ACAPOLAMI\ACAPOLAMI\obj\Debug\ACAPOLAMI.VISTA.FrmDialogoError.resources
 C:\Users\Manuel Perlera\Documents\GitHub\Sistema_De_Gestion_De_Agua_ACAPOLAMI\ACAPOLAMI\ACAPOLAMI\obj\Debug\ACAPOLAMI.VISTA.FrmDialogoExito.resources
+C:\Users\cb272\Documents\GitHub\Sistema_De_Gestion_De_Agua_ACAPOLAMI\ACAPOLAMI\ACAPOLAMI\obj\Debug\ACAPOLAMI.VISTA.FrmDialogoAdvertencia.resources
+C:\Users\cb272\Documents\GitHub\Sistema_De_Gestion_De_Agua_ACAPOLAMI\ACAPOLAMI\ACAPOLAMI\obj\Debug\ACAPOLAMI.VISTA.FrmDialogoError.resources
+C:\Users\cb272\Documents\GitHub\Sistema_De_Gestion_De_Agua_ACAPOLAMI\ACAPOLAMI\ACAPOLAMI\obj\Debug\ACAPOLAMI.VISTA.FrmDialogoExito.resources
+C:\Users\cb272\Documents\GitHub\Sistema_De_Gestion_De_Agua_ACAPOLAMI\ACAPOLAMI\ACAPOLAMI\obj\Debug\ACAPOLAMI.VISTA.FrmActividad.resources

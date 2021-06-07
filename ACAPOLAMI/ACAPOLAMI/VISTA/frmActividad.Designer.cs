@@ -1,7 +1,6 @@
-﻿
-namespace ACAPOLAMI.VISTA
+﻿namespace ACAPOLAMI.VISTA
 {
-    partial class FrmLogin
+    partial class FrmActividad
     {
         /// <summary>
         /// Required designer variable.
@@ -49,7 +48,7 @@ namespace ACAPOLAMI.VISTA
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1291, 732);
+            this.reportViewer1.Size = new System.Drawing.Size(1308, 724);
             this.reportViewer1.TabIndex = 0;
             // 
             // cddActividad
@@ -66,15 +65,15 @@ namespace ACAPOLAMI.VISTA
             // 
             this.sucesosTableAdapter.ClearBeforeFill = true;
             // 
-            // frmActividad
+            // FrmActividad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1291, 732);
+            this.ClientSize = new System.Drawing.Size(1308, 724);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "frmActividad";
-            this.Text = "frmActividad";
-            this.Load += new System.EventHandler(this.frmActividad_Load);
+            this.Name = "FrmActividad";
+            this.Text = "FrmActividad";
+            this.Load += new System.EventHandler(this.FrmActividad_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cddActividad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sucesosBindingSource)).EndInit();
             this.ResumeLayout(false);

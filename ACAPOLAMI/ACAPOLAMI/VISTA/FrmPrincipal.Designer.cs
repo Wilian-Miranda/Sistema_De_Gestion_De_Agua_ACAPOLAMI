@@ -108,7 +108,7 @@ namespace WilianMiranda01.VISTA
             this.lblNombreUSuario.Location = new System.Drawing.Point(46, 71);
             this.lblNombreUSuario.Name = "lblNombreUSuario";
             this.lblNombreUSuario.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.lblNombreUSuario.Size = new System.Drawing.Size(84, 19);
+            this.lblNombreUSuario.Size = new System.Drawing.Size(117, 29);
             this.lblNombreUSuario.TabIndex = 1;
             this.lblNombreUSuario.Text = "Usuario";
             this.lblNombreUSuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -413,7 +413,7 @@ namespace WilianMiranda01.VISTA
             this.lblHora.ForeColor = System.Drawing.Color.Black;
             this.lblHora.Location = new System.Drawing.Point(0, 0);
             this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(185, 78);
+            this.lblHora.Size = new System.Drawing.Size(277, 115);
             this.lblHora.TabIndex = 1;
             this.lblHora.Text = "Hora";
             this.lblHora.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -424,10 +424,10 @@ namespace WilianMiranda01.VISTA
             this.lblFecha.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lblFecha.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.ForeColor = System.Drawing.Color.DimGray;
-            this.lblFecha.Location = new System.Drawing.Point(0, 114);
+            this.lblFecha.Location = new System.Drawing.Point(0, 100);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.lblFecha.Size = new System.Drawing.Size(104, 32);
+            this.lblFecha.Size = new System.Drawing.Size(143, 46);
             this.lblFecha.TabIndex = 2;
             this.lblFecha.Text = "Fecha";
             this.lblFecha.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -450,7 +450,7 @@ namespace WilianMiranda01.VISTA
             // 
             // FmrPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1072, 681);

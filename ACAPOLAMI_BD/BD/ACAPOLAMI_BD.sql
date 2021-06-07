@@ -60,9 +60,11 @@ CREATE TABLE Sucesos(
 -------------------------------------------------------------------------------------------------
 
 CREATE TABLE Usuarios(
-	idComunidad int not null IDENTITY PRIMARY KEY,
+	idUsuarios int not null IDENTITY PRIMARY KEY,
 	nombre varchar(50) not null,
 	clave varchar(100) not null,
 	rol varchar(20)
 );
 GO
+
+select * from Usuarios

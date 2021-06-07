@@ -1,6 +1,7 @@
 --**********************************************************
 -- Trigger para hacer calculos
-alter TRIGGER tg_CalculoPagos
+
+Create TRIGGER tg_CalculoPagos
    ON  Pagos
    AFTER INSERT
 AS 

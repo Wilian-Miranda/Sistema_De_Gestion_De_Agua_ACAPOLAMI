@@ -81,5 +81,19 @@ namespace ACAPOLAMI.VISTA
             btnReporteActividad.ForeColor = Color.White;
         }
         #endregion
+
+        private void btnReporteConsumidor_Click(object sender, EventArgs e)
+        {
+            FrmConsumidoresPorComunidad frm = new FrmConsumidoresPorComunidad();
+            this.Hide();
+            frm.ShowDialog();
+        }
+
+        private void btnReporteActividad_Click(object sender, EventArgs e)
+        {
+            FrmActividad frm = new FrmActividad();
+            this.Hide();
+            frm.ShowDialog();
+        }
     }
 }
