@@ -308,6 +308,7 @@ namespace ACAPOLAMI.VISTA
             // btnLimpiar
             // 
             this.btnLimpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnLimpiar.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpiar.ForeColor = System.Drawing.Color.Black;
             this.btnLimpiar.Image = global::ACAPOLAMI.Properties.Resources.escoba;
@@ -478,6 +479,7 @@ namespace ACAPOLAMI.VISTA
             // 
             // btnBuscarConsumidor
             // 
+            this.btnBuscarConsumidor.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuscarConsumidor.FlatAppearance.BorderSize = 0;
             this.btnBuscarConsumidor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarConsumidor.Image = global::ACAPOLAMI.Properties.Resources.lupa;

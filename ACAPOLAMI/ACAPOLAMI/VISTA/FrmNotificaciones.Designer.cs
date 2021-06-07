@@ -128,6 +128,7 @@ namespace ACAPOLAMI.VISTA
             this.Name = "FrmNotificaciones";
             this.Opacity = 0D;
             this.Text = "Notificacion";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.FrmNotificaciones_Load);
             this.MouseLeave += new System.EventHandler(this.FrmNotificaciones_MouseLeave);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmNotificaciones_MouseMove);

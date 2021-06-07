@@ -33,15 +33,12 @@ namespace ACAPOLAMI.VISTA
             DatosCBseleccionados();
             CargarEstados();
 
-            if (cbConsumidor.Items.Count > 9)
-                cbConsumidor.Items.RemoveAt(9);
-
             if (ValidacionCajasTexto() && btnEjecutar.Text.Equals("Actualizar"))
             {
                 txtPendiente.ReadOnly = false;
                 txtTotal.ReadOnly = false;
             }
-            }
+        }
 
         public String estado;
         public String nombreNonsumidor;
@@ -121,6 +118,7 @@ namespace ACAPOLAMI.VISTA
                 var deuda = (from a in db.Pagos
                              where a.idConsumidor_FK.ToString() == id
                              select a.montoTotal).ToList();
+
                 txtTotal.Text = deuda.Sum().ToString();
             }
         }
@@ -249,7 +247,7 @@ namespace ACAPOLAMI.VISTA
                 if (txtPendiente.Text != "0.0000" || txtImpuesto.Text != "0.0000")
                     CalculosPagos();
 
-                //CODIGO DE AGREGAR PAGO AQUI
+                //Agregar pago
                 ClsDPagos pago = new ClsDPagos();
 
                 String id = cbConsumidor.SelectedValue.ToString();
@@ -284,7 +282,7 @@ namespace ACAPOLAMI.VISTA
             }
             else if (ValidacionCajasTexto()&&btnEjecutar.Text.Equals("Actualizar"))
             {
-                //CODIGO DE MOFIFICAR PAGO AQUI
+                //Modificar pago
                 ClsDPagos pago = new ClsDPagos();
 
                 try
@@ -310,7 +308,7 @@ namespace ACAPOLAMI.VISTA
             }
             else if (ValidacionCajasTexto() && btnEjecutar.Text.Equals("Eliminar"))
             {
-                //CODIGO DE ELIMINAR PAGO AQUI
+                //Eliminar pago
                 ClsDPagos pago = new ClsDPagos();
 
                 try
@@ -456,7 +454,7 @@ namespace ACAPOLAMI.VISTA
             txtCancelado.Text = "0,0000";
         }
 
-        //metodo para cargar el los estados
+        //metodo para cargar los estados
         private void CargarEstados()
         {
             using(ACAPOLAMIEntities db = new ACAPOLAMIEntities())

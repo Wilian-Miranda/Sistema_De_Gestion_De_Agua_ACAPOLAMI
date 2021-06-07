@@ -79,6 +79,7 @@ namespace ACAPOLAMI.VISTA
             // 
             this.btnHistorial.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnHistorial.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnHistorial.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHistorial.FlatAppearance.BorderSize = 0;
             this.btnHistorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHistorial.ForeColor = System.Drawing.Color.White;
@@ -97,6 +98,7 @@ namespace ACAPOLAMI.VISTA
             // 
             this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnActualizar.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnActualizar.FlatAppearance.BorderSize = 0;
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizar.ForeColor = System.Drawing.Color.White;
