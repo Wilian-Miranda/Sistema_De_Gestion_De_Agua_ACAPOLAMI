@@ -15,7 +15,7 @@ namespace ACAPOLAMI.MODELO
     public partial class Sucesos
     {
         public int idSuceso { get; set; }
-        public System.DateTime fechaSuceso { get; set; }
+        public Nullable<System.DateTime> fechaSuceso { get; set; }
         public string tipoSuceso { get; set; }
         public string descripcion { get; set; }
     }

@@ -14,7 +14,7 @@ namespace ACAPOLAMI.MODELO
     
     public partial class Usuarios
     {
-        public int idComunidad { get; set; }
+        public int idUsuarios { get; set; }
         public string nombre { get; set; }
         public string clave { get; set; }
         public string rol { get; set; }

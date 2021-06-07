@@ -24,7 +24,7 @@ namespace ACAPOLAMI.MODELO
         public Nullable<int> idEstado_FK { get; set; }
         public Nullable<int> idConsumidor_FK { get; set; }
     
-        public virtual Consumidores Consumidores { get; set; }
-        public virtual Estados Estados { get; set; }
+        public virtual Consumidores Consumidore { get; set; }
+        public virtual Estados Estado { get; set; }
     }
 }
