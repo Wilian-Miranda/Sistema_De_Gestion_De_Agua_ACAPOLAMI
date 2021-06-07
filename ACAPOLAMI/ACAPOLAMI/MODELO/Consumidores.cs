@@ -28,7 +28,7 @@ namespace ACAPOLAMI.MODELO
         public string correo { get; set; }
         public Nullable<int> idComunidad_FK { get; set; }
     
-        public virtual Comunidades Comunidades { get; set; }
+        public virtual Comunidades Comunidade { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Pagos> Pagos { get; set; }
     }
