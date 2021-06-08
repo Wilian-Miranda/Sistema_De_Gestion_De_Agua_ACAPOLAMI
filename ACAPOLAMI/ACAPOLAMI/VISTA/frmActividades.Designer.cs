@@ -28,10 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.sucesosTableAdapter = new ACAPOLAMI.CDD.cddActividadTableAdapters.SucesosTableAdapter();
-            this.cddActividad = new ACAPOLAMI.CDD.cddActividad();
-            this.sucesosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblTexto = new System.Windows.Forms.Label();
             this.btnHistorial = new FontAwesome.Sharp.IconButton();
@@ -41,27 +37,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.cddActividad)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sucesosBindingSource)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // sucesosTableAdapter
-            // 
-            this.sucesosTableAdapter.ClearBeforeFill = true;
-            // 
-            // cddActividad
-            // 
-            this.cddActividad.DataSetName = "cddActividad";
-            this.cddActividad.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sucesosBindingSource
-            // 
-            this.sucesosBindingSource.DataMember = "Sucesos";
-            this.sucesosBindingSource.DataSource = this.cddActividad;
             // 
             // panel4
             // 
@@ -75,10 +55,11 @@
             this.panel4.Controls.Add(this.lstActividades);
             this.panel4.Controls.Add(this.dataGridView1);
             this.panel4.ForeColor = System.Drawing.Color.Black;
-            this.panel4.Location = new System.Drawing.Point(14, 131);
+            this.panel4.Location = new System.Drawing.Point(24, 98);
+            this.panel4.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Padding = new System.Windows.Forms.Padding(20);
-            this.panel4.Size = new System.Drawing.Size(1036, 496);
+            this.panel4.Padding = new System.Windows.Forms.Padding(33, 29, 33, 29);
+            this.panel4.Size = new System.Drawing.Size(1018, 530);
             this.panel4.TabIndex = 12;
             // 
             // lblTexto
@@ -88,8 +69,8 @@
             this.lblTexto.BackColor = System.Drawing.Color.White;
             this.lblTexto.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTexto.ForeColor = System.Drawing.Color.Black;
-            this.lblTexto.Location = new System.Drawing.Point(59, 431);
-            this.lblTexto.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblTexto.Location = new System.Drawing.Point(30, 456);
+            this.lblTexto.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.lblTexto.Name = "lblTexto";
             this.lblTexto.Size = new System.Drawing.Size(158, 19);
             this.lblTexto.TabIndex = 1;
@@ -106,7 +87,8 @@
             this.btnHistorial.IconColor = System.Drawing.Color.White;
             this.btnHistorial.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnHistorial.IconSize = 35;
-            this.btnHistorial.Location = new System.Drawing.Point(859, 417);
+            this.btnHistorial.Location = new System.Drawing.Point(853, 456);
+            this.btnHistorial.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnHistorial.Name = "btnHistorial";
             this.btnHistorial.Size = new System.Drawing.Size(127, 41);
             this.btnHistorial.TabIndex = 16;
@@ -124,7 +106,8 @@
             this.btnActualizar.IconColor = System.Drawing.Color.White;
             this.btnActualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnActualizar.IconSize = 40;
-            this.btnActualizar.Location = new System.Drawing.Point(708, 417);
+            this.btnActualizar.Location = new System.Drawing.Point(716, 456);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(127, 41);
             this.btnActualizar.TabIndex = 15;
@@ -153,7 +136,8 @@
             this.lstActividades.HideSelection = false;
             this.lstActividades.LineColor = System.Drawing.Color.White;
             this.lstActividades.LineHeight = 1;
-            this.lstActividades.Location = new System.Drawing.Point(26, 23);
+            this.lstActividades.Location = new System.Drawing.Point(16, 20);
+            this.lstActividades.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.lstActividades.Name = "lstActividades";
             this.lstActividades.NumberStyles = ((System.Globalization.NumberStyles)((((((((System.Globalization.NumberStyles.AllowLeadingWhite | System.Globalization.NumberStyles.AllowTrailingWhite) 
             | System.Globalization.NumberStyles.AllowLeadingSign) 
@@ -168,7 +152,7 @@
             this.lstActividades.ShowBorder = false;
             this.lstActividades.ShowCellBorder = false;
             this.lstActividades.ShowHeaderLine = false;
-            this.lstActividades.Size = new System.Drawing.Size(981, 378);
+            this.lstActividades.Size = new System.Drawing.Size(985, 421);
             this.lstActividades.Smoothing = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             this.lstActividades.SubTextColor = System.Drawing.Color.Red;
             this.lstActividades.SurrondBorder = false;
@@ -187,11 +171,12 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(23, 23);
+            this.dataGridView1.Location = new System.Drawing.Point(14, 15);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.Size = new System.Drawing.Size(990, 450);
+            this.dataGridView1.Size = new System.Drawing.Size(988, 501);
             this.dataGridView1.TabIndex = 0;
             // 
             // panel1
@@ -200,12 +185,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.MenuBar;
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(-32, 35);
+            this.panel1.Location = new System.Drawing.Point(24, 1);
             this.panel1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(0, 20, 0, 0);
-            this.panel1.Size = new System.Drawing.Size(1127, 89);
-            this.panel1.TabIndex = 11;
+            this.panel1.Size = new System.Drawing.Size(1018, 89);
+            this.panel1.TabIndex = 17;
             // 
             // panel2
             // 
@@ -213,19 +198,18 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(46, 15);
+            this.panel2.Location = new System.Drawing.Point(0, 20);
             this.panel2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1036, 50);
+            this.panel2.Size = new System.Drawing.Size(1018, 50);
             this.panel2.TabIndex = 7;
             // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(409, 14);
+            this.label1.Location = new System.Drawing.Point(400, 14);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(210, 19);
@@ -234,18 +218,18 @@
             // 
             // FrmActividad
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1064, 652);
-            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel4);
+            this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmActividad";
+            this.Padding = new System.Windows.Forms.Padding(33, 29, 33, 29);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmActividad";
             this.Load += new System.EventHandler(this.FrmActividad_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.cddActividad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sucesosBindingSource)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -257,9 +241,6 @@
         }
 
         #endregion
-        private CDD.cddActividadTableAdapters.SucesosTableAdapter sucesosTableAdapter;
-        private CDD.cddActividad cddActividad;
-        private System.Windows.Forms.BindingSource sucesosBindingSource;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label lblTexto;
         private FontAwesome.Sharp.IconButton btnHistorial;
