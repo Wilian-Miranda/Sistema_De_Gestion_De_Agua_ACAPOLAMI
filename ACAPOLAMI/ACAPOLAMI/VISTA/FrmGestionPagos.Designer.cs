@@ -131,6 +131,7 @@ namespace ACAPOLAMI.VISTA
             this.txtIdConsumidor.Location = new System.Drawing.Point(347, 8);
             this.txtIdConsumidor.Margin = new System.Windows.Forms.Padding(3, 3, 3, 24);
             this.txtIdConsumidor.Name = "txtIdConsumidor";
+            this.txtIdConsumidor.ReadOnly = true;
             this.txtIdConsumidor.ShortcutsEnabled = false;
             this.txtIdConsumidor.Size = new System.Drawing.Size(250, 26);
             this.txtIdConsumidor.TabIndex = 1;
@@ -285,7 +286,7 @@ namespace ACAPOLAMI.VISTA
             this.txtPendiente.ShortcutsEnabled = false;
             this.txtPendiente.Size = new System.Drawing.Size(250, 26);
             this.txtPendiente.TabIndex = 21;
-            this.txtPendiente.Text = "0,0000";
+            this.txtPendiente.Text = "0.0000";
             // 
             // lblPendiente
             // 
@@ -359,7 +360,7 @@ namespace ACAPOLAMI.VISTA
             this.txtTotal.ShortcutsEnabled = false;
             this.txtTotal.Size = new System.Drawing.Size(250, 26);
             this.txtTotal.TabIndex = 15;
-            this.txtTotal.Text = "0,0000";
+            this.txtTotal.Text = "0.0000";
             // 
             // lblDeudaAcumulada
             // 
@@ -382,7 +383,7 @@ namespace ACAPOLAMI.VISTA
             this.txtImpuesto.ShortcutsEnabled = false;
             this.txtImpuesto.Size = new System.Drawing.Size(250, 26);
             this.txtImpuesto.TabIndex = 3;
-            this.txtImpuesto.Text = "0,0000";
+            this.txtImpuesto.Text = "0.0000";
             this.txtImpuesto.Enter += new System.EventHandler(this.txtImpuesto_Enter);
             this.txtImpuesto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtImpuesto_KeyPress);
             this.txtImpuesto.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtImpuesto_KeyUp);
@@ -409,7 +410,7 @@ namespace ACAPOLAMI.VISTA
             this.txtCancelado.ShortcutsEnabled = false;
             this.txtCancelado.Size = new System.Drawing.Size(250, 26);
             this.txtCancelado.TabIndex = 2;
-            this.txtCancelado.Text = "0,0000";
+            this.txtCancelado.Text = "0.0000";
             this.txtCancelado.Enter += new System.EventHandler(this.txtCancelado_Enter);
             this.txtCancelado.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCancelado_KeyDown);
             this.txtCancelado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCancelado_KeyPress);

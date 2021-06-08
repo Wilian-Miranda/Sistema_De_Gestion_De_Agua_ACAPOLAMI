@@ -6,7 +6,7 @@
     </Key>
     <Property Name="idComunidad" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="nombreComunidad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="Consumidores" Relationship="Self.FK__Consumido__idCom__17F790F9" FromRole="Comunidades" ToRole="Consumidores" />
+    <NavigationProperty Name="Consumidores" Relationship="Self.FK__Consumido__idCom__398D8EEE" FromRole="Comunidades" ToRole="Consumidores" />
   </EntityType>
   <EntityType Name="Consumidores">
     <Key>
@@ -19,8 +19,8 @@
     <Property Name="telefono" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="idComunidad_FK" Type="Int32" />
-    <NavigationProperty Name="Comunidades" Relationship="Self.FK__Consumido__idCom__17F790F9" FromRole="Consumidores" ToRole="Comunidades" />
-    <NavigationProperty Name="Pagos" Relationship="Self.FK__Pagos__idConsumi__42E1EEFE" FromRole="Consumidores" ToRole="Pagos" />
+    <NavigationProperty Name="Comunidade" Relationship="Self.FK__Consumido__idCom__398D8EEE" FromRole="Consumidores" ToRole="Comunidades" />
+    <NavigationProperty Name="Pagos" Relationship="Self.FK__Pagos__idConsumi__3F466844" FromRole="Consumidores" ToRole="Pagos" />
   </EntityType>
   <EntityType Name="Estados">
     <Key>
@@ -28,7 +28,7 @@
     </Key>
     <Property Name="idEstado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="nombreEstado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="Pagos" Relationship="Self.FK__Pagos__idEstado___41EDCAC5" FromRole="Estados" ToRole="Pagos" />
+    <NavigationProperty Name="Pagos" Relationship="Self.FK__Pagos__idEstado___3E52440B" FromRole="Estados" ToRole="Pagos" />
   </EntityType>
   <EntityType Name="Pagos">
     <Key>
@@ -43,40 +43,30 @@
     <Property Name="fechaPago" Type="DateTime" Nullable="false" Precision="0" />
     <Property Name="idEstado_FK" Type="Int32" />
     <Property Name="idConsumidor_FK" Type="Int32" />
-    <NavigationProperty Name="Consumidores" Relationship="Self.FK__Pagos__idConsumi__42E1EEFE" FromRole="Pagos" ToRole="Consumidores" />
-    <NavigationProperty Name="Estados" Relationship="Self.FK__Pagos__idEstado___41EDCAC5" FromRole="Pagos" ToRole="Estados" />
+    <NavigationProperty Name="Consumidore" Relationship="Self.FK__Pagos__idConsumi__3F466844" FromRole="Pagos" ToRole="Consumidores" />
+    <NavigationProperty Name="Estado" Relationship="Self.FK__Pagos__idEstado___3E52440B" FromRole="Pagos" ToRole="Estados" />
   </EntityType>
   <EntityType Name="Sucesos">
     <Key>
       <PropertyRef Name="idSuceso" />
     </Key>
     <Property Name="idSuceso" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="fechaSuceso" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="tipoSuceso" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="descripcion" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
-  </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="fechaSuceso" Type="DateTime" Precision="3" />
+    <Property Name="tipoSuceso" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="descripcion" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="Usuarios">
     <Key>
-      <PropertyRef Name="idComunidad" />
+      <PropertyRef Name="idUsuarios" />
     </Key>
-    <Property Name="idComunidad" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idUsuarios" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="clave" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="rol" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
   </EntityType>
-  <Association Name="FK__Consumido__idCom__17F790F9">
-    <End Role="Comunidades" Type="Self.Comunidades" Multiplicity="0..1" />
-    <End Role="Consumidores" Type="Self.Consumidores" Multiplicity="*" />
+  <Association Name="FK__Consumido__idCom__398D8EEE">
+    <End Role="Comunidades" Type="ACAPOLAMIModel.Comunidades" Multiplicity="0..1" />
+    <End Role="Consumidores" Type="ACAPOLAMIModel.Consumidores" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Comunidades">
         <PropertyRef Name="idComunidad" />
@@ -86,9 +76,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Pagos__idConsumi__42E1EEFE">
-    <End Role="Consumidores" Type="Self.Consumidores" Multiplicity="0..1" />
-    <End Role="Pagos" Type="Self.Pagos" Multiplicity="*" />
+  <Association Name="FK__Pagos__idConsumi__3F466844">
+    <End Role="Consumidores" Type="ACAPOLAMIModel.Consumidores" Multiplicity="0..1" />
+    <End Role="Pagos" Type="ACAPOLAMIModel.Pagos" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Consumidores">
         <PropertyRef Name="idConsumidor" />
@@ -98,9 +88,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Pagos__idEstado___41EDCAC5">
-    <End Role="Estados" Type="Self.Estados" Multiplicity="0..1" />
-    <End Role="Pagos" Type="Self.Pagos" Multiplicity="*" />
+  <Association Name="FK__Pagos__idEstado___3E52440B">
+    <End Role="Estados" Type="ACAPOLAMIModel.Estados" Multiplicity="0..1" />
+    <End Role="Pagos" Type="ACAPOLAMIModel.Pagos" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Estados">
         <PropertyRef Name="idEstado" />
@@ -111,22 +101,21 @@
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="ACAPOLAMIEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="Comunidades" EntityType="Self.Comunidades" />
-    <EntitySet Name="Consumidores" EntityType="Self.Consumidores" />
-    <EntitySet Name="Estados" EntityType="Self.Estados" />
-    <EntitySet Name="Pagos" EntityType="Self.Pagos" />
-    <EntitySet Name="Sucesos" EntityType="Self.Sucesos" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
-    <EntitySet Name="Usuarios" EntityType="Self.Usuarios" />
-    <AssociationSet Name="FK__Consumido__idCom__17F790F9" Association="Self.FK__Consumido__idCom__17F790F9">
-      <End Role="Comunidades" EntitySet="Comunidades" />
-      <End Role="Consumidores" EntitySet="Consumidores" />
+    <EntitySet Name="Comunidades1" EntityType="ACAPOLAMIModel.Comunidades" />
+    <EntitySet Name="Consumidores1" EntityType="ACAPOLAMIModel.Consumidores" />
+    <EntitySet Name="Estados" EntityType="ACAPOLAMIModel.Estados" />
+    <EntitySet Name="Pagos" EntityType="ACAPOLAMIModel.Pagos" />
+    <EntitySet Name="Sucesos" EntityType="ACAPOLAMIModel.Sucesos" />
+    <EntitySet Name="Usuarios1" EntityType="ACAPOLAMIModel.Usuarios" />
+    <AssociationSet Name="FK__Consumido__idCom__398D8EEE" Association="Self.FK__Consumido__idCom__398D8EEE">
+      <End Role="Comunidades" EntitySet="Comunidades1" />
+      <End Role="Consumidores" EntitySet="Consumidores1" />
     </AssociationSet>
-    <AssociationSet Name="FK__Pagos__idConsumi__42E1EEFE" Association="Self.FK__Pagos__idConsumi__42E1EEFE">
-      <End Role="Consumidores" EntitySet="Consumidores" />
+    <AssociationSet Name="FK__Pagos__idConsumi__3F466844" Association="Self.FK__Pagos__idConsumi__3F466844">
+      <End Role="Consumidores" EntitySet="Consumidores1" />
       <End Role="Pagos" EntitySet="Pagos" />
     </AssociationSet>
-    <AssociationSet Name="FK__Pagos__idEstado___41EDCAC5" Association="Self.FK__Pagos__idEstado___41EDCAC5">
+    <AssociationSet Name="FK__Pagos__idEstado___3E52440B" Association="Self.FK__Pagos__idEstado___3E52440B">
       <End Role="Estados" EntitySet="Estados" />
       <End Role="Pagos" EntitySet="Pagos" />
     </AssociationSet>
@@ -154,12 +143,6 @@
       <Parameter Name="idEstado" Mode="In" Type="Int32" />
       <Parameter Name="idConsumidor" Mode="In" Type="Int32" />
     </FunctionImport>
-    <FunctionImport Name="sp_alterdiagram">
-      <Parameter Name="diagramname" Mode="In" Type="String" />
-      <Parameter Name="owner_id" Mode="In" Type="Int32" />
-      <Parameter Name="version" Mode="In" Type="Int32" />
-      <Parameter Name="definition" Mode="In" Type="Binary" />
-    </FunctionImport>
     <FunctionImport Name="sp_CalcularPagos">
       <Parameter Name="id" Mode="In" Type="Int32" />
       <Parameter Name="monto" Mode="In" Type="Decimal" />
@@ -167,16 +150,6 @@
       <Parameter Name="cancelado" Mode="In" Type="Decimal" />
     </FunctionImport>
     <FunctionImport Name="sp_ConsumidoresPorComunidad" ReturnType="Collection(ACAPOLAMIModel.sp_ConsumidoresPorComunidad_Result)" />
-    <FunctionImport Name="sp_creatediagram">
-      <Parameter Name="diagramname" Mode="In" Type="String" />
-      <Parameter Name="owner_id" Mode="In" Type="Int32" />
-      <Parameter Name="version" Mode="In" Type="Int32" />
-      <Parameter Name="definition" Mode="In" Type="Binary" />
-    </FunctionImport>
-    <FunctionImport Name="sp_dropdiagram">
-      <Parameter Name="diagramname" Mode="In" Type="String" />
-      <Parameter Name="owner_id" Mode="In" Type="Int32" />
-    </FunctionImport>
     <FunctionImport Name="sp_EliminarComunidad">
       <Parameter Name="id" Mode="In" Type="Int32" />
     </FunctionImport>
@@ -185,14 +158,6 @@
     </FunctionImport>
     <FunctionImport Name="sp_EliminarPago">
       <Parameter Name="id" Mode="In" Type="Int32" />
-    </FunctionImport>
-    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(ACAPOLAMIModel.sp_helpdiagramdefinition_Result)">
-      <Parameter Name="diagramname" Mode="In" Type="String" />
-      <Parameter Name="owner_id" Mode="In" Type="Int32" />
-    </FunctionImport>
-    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(ACAPOLAMIModel.sp_helpdiagrams_Result)">
-      <Parameter Name="diagramname" Mode="In" Type="String" />
-      <Parameter Name="owner_id" Mode="In" Type="Int32" />
     </FunctionImport>
     <FunctionImport Name="sp_InsertarComunidad">
       <Parameter Name="nombreComunidad" Mode="In" Type="String" />
@@ -227,29 +192,12 @@
     <FunctionImport Name="sp_obtenerMontoCanceladoMeses" ReturnType="Collection(ACAPOLAMIModel.sp_obtenerMontoCanceladoMeses_Result)">
       <Parameter Name="year" Mode="In" Type="String" />
     </FunctionImport>
-    <FunctionImport Name="sp_renamediagram">
-      <Parameter Name="diagramname" Mode="In" Type="String" />
-      <Parameter Name="owner_id" Mode="In" Type="Int32" />
-      <Parameter Name="new_diagramname" Mode="In" Type="String" />
-    </FunctionImport>
     <FunctionImport Name="sp_UltimosConsumidores" ReturnType="Collection(ACAPOLAMIModel.sp_UltimosConsumidores_Result)" />
     <FunctionImport Name="sp_UltimosPagos" ReturnType="Collection(ACAPOLAMIModel.sp_UltimosPagos_Result)" />
-    <FunctionImport Name="sp_upgraddiagrams" />
   </EntityContainer>
   <ComplexType Name="sp_ConsumidoresPorComunidad_Result">
     <Property Type="String" Name="Comunidad" Nullable="false" MaxLength="50" />
     <Property Type="Int32" Name="Total_Consumidores" Nullable="true" />
-  </ComplexType>
-  <ComplexType Name="sp_helpdiagramdefinition_Result">
-    <Property Type="Int32" Name="version" Nullable="true" />
-    <Property Type="Binary" Name="definition" Nullable="true" />
-  </ComplexType>
-  <ComplexType Name="sp_helpdiagrams_Result">
-    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
-    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
-    <Property Type="Int32" Name="ID" Nullable="false" />
-    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
-    <Property Type="Int32" Name="OwnerID" Nullable="false" />
   </ComplexType>
   <ComplexType Name="sp_MostrarComunidades_Result">
     <Property Type="Int32" Name="idComunidad" Nullable="false" />

@@ -12,7 +12,7 @@ namespace WilianMiranda01.VISTA
 {
     public partial class FmrPrincipal : Form
     {
-        public static string pagoBase = "2,00";
+        public static string pagoBase = "2.00".Replace(",",".");
 
         Form1 login = new Form1();
         FrmClientes data = new FrmClientes();
@@ -46,10 +46,6 @@ namespace WilianMiranda01.VISTA
         //Maximizar y minimizar
         int lx, ly;
         int sw, sh;
-
-        private void FmrPrincipal_Load(object sender, EventArgs e)
-        {
-        }
 
         private void btnPagos_Click(object sender, EventArgs e)
         {

@@ -1,4 +1,5 @@
 ﻿using ACAPOLAMI.MODELO;
+using ACAPOLAMI.VISTA;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,7 +31,7 @@ namespace ACAPOLAMI.DAO
                     db.sp_InsertarComunidad(nombreComunidad);
                     db.SaveChanges();
 
-                    MessageBox.Show("Se guardó existosamente");
+                    FrmDialogoExito.Confirmar("Se ha insertado correctamente");
                 }
             }
 
@@ -40,24 +41,5 @@ namespace ACAPOLAMI.DAO
             }
 
         }
-
-        //public void ElimiarComunidades(int idComunidad)
-        //{
-        //    try
-        //    {
-        //        using (ACAPOLAMIEntities db = new ACAPOLAMIEntities())
-        //        {
-        //            db.sp_EliminarComunidad(idComunidad);
-        //            db.SaveChanges();
-
-        //            MessageBox.Show("La comunidad se eliminó exitosamente");
-        //        }
-        //    }
-
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show(ex.ToString());
-        //    }
-        //}
     }
 }

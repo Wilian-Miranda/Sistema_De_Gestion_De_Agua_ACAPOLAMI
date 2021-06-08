@@ -123,6 +123,7 @@ namespace WilianMiranda01.VISTA
             this.dtgPagos.BackgroundColor = System.Drawing.Color.FloralWhite;
             this.dtgPagos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgPagos.Location = new System.Drawing.Point(23, 23);
+            this.dtgPagos.MultiSelect = false;
             this.dtgPagos.Name = "dtgPagos";
             this.dtgPagos.ReadOnly = true;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FloralWhite;

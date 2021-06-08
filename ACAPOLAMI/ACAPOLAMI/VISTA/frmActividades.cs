@@ -21,8 +21,6 @@ namespace ACAPOLAMI.VISTA
         {
             // TODO: esta línea de código carga datos en la tabla 'cddActividad.Sucesos' Puede moverla o quitarla según sea necesario.
             this.sucesosTableAdapter.Fill(this.cddActividad.Sucesos);
-
-            this.reportViewer1.RefreshReport();
         }
     }
 }

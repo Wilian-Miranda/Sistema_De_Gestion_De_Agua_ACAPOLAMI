@@ -394,8 +394,7 @@ namespace ACAPOLAMI.VISTA
 
         private void txtTelefono_Enter_1(object sender, EventArgs e)
         {
-
-            txtTelefono.Select(0,0);
+            txtTelefono.Select(txtTelefono.Text.Length,0);
             txtTelefono.ForeColor = Color.RoyalBlue;
         }
 
@@ -413,18 +412,18 @@ namespace ACAPOLAMI.VISTA
 
         private void TxtDUI_Enter_1(object sender, EventArgs e)
         {
-            txtDUI.Select(0,0);
+            txtDUI.Select(txtDUI.Text.Length,0);
             txtDUI.ForeColor = Color.RoyalBlue;
         }
 
         private void txtDUI_Click(object sender, EventArgs e)
         {
-            txtDUI.Select(0, 0);
+            txtDUI.Select(txtDUI.Text.Length, 0);
         }
 
         private void txtTelefono_Click(object sender, EventArgs e)
         {
-            txtTelefono.Select(0, 0);
+            txtTelefono.Select(txtTelefono.Text.Length, 0);
         }
     }
 }

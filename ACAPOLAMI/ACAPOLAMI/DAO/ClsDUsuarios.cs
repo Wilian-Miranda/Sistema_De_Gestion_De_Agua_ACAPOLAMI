@@ -1,4 +1,5 @@
 ﻿using ACAPOLAMI.MODELO;
+using ACAPOLAMI.VISTA;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,8 +29,6 @@ namespace ACAPOLAMI.DAO
             using (ACAPOLAMIEntities db = new ACAPOLAMIEntities())
             {
                 Usuarios Usuarios = new Usuarios();
-                    //for (int i = 0; i < list.Count; i++) { 
-                    //}
                 foreach (var usuario in listaUsuario)
                 {
                     if (usuario.nombre.Equals(user.nombre) && usuario.clave.Equals(user.clave))
@@ -67,7 +66,7 @@ namespace ACAPOLAMI.DAO
                     db.Usuarios.Remove(user);
                     db.SaveChanges();
 
-                    MessageBox.Show("El usuario se eliminó exitosamente");
+                    FrmDialogoExito.Confirmar("Se ha eliminado correctamente");
 
                 }
             }
@@ -91,7 +90,7 @@ namespace ACAPOLAMI.DAO
                         Usuarios usu = db.Usuarios.Where(x => x.idUsuarios == update).Select(x => x).FirstOrDefault();
                         usu.clave = newPass;
                         db.SaveChanges();
-                        MessageBox.Show("Clave modificada");
+                        FrmDialogoExito.Confirmar("Se ha modificado correctamente");
                     }
                 }
             }

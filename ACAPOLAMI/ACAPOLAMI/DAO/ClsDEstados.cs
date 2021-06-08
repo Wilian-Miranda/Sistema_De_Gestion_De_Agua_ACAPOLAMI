@@ -1,9 +1,10 @@
-﻿using System;
+﻿using ACAPOLAMI.MODELO;
+using ACAPOLAMI.VISTA;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ACAPOLAMI.MODELO;
 using System.Windows.Forms;
 
 namespace ACAPOLAMI.DAO
@@ -35,7 +36,7 @@ namespace ACAPOLAMI.DAO
                     db.Estados.Add(tb_estados);
                     db.SaveChanges();
 
-                    MessageBox.Show("Se guardó exitosamente");
+                    FrmDialogoExito.Confirmar("Se ha insertado correctamente");
                 }
             }
 
@@ -58,7 +59,7 @@ namespace ACAPOLAMI.DAO
                     db.Estados.Remove(estado);
                     db.SaveChanges();
 
-                    MessageBox.Show("Se eliminó exitosamente");
+                    FrmDialogoExito.Confirmar("Se ha eliminado correctamente");
                 }
             }
             catch (Exception ex)

@@ -68,8 +68,11 @@ namespace ACAPOLAMI.VISTA
                 if (txtCancelado.Text != "" && txtCancelado.Text != "0.0000")
                 {
                     ClsCalculosPagos calculos = new ClsCalculosPagos();
-                    calculos.CalculoDePago(Convert.ToDouble(txtMontoBase.Text), Convert.ToDouble(txtCancelado.Text),
-                        Convert.ToDouble(txtPendiente.Text), Convert.ToDouble(txtImpuesto.Text), Convert.ToDouble(txtTotal.Text));
+                    calculos.CalculoDePago(Convert.ToDouble(txtMontoBase.Text, System.Globalization.CultureInfo.InvariantCulture), 
+                        Convert.ToDouble(txtCancelado.Text, System.Globalization.CultureInfo.InvariantCulture),
+                        Convert.ToDouble(txtPendiente.Text, System.Globalization.CultureInfo.InvariantCulture), 
+                        Convert.ToDouble(txtImpuesto.Text, System.Globalization.CultureInfo.InvariantCulture), 
+                        Convert.ToDouble(txtTotal.Text, System.Globalization.CultureInfo.InvariantCulture));
                 }
             }
         }
@@ -84,7 +87,7 @@ namespace ACAPOLAMI.VISTA
             txtMontoBase.Text = FmrPrincipal.pagoBase;
 
             if (Convert.ToDouble(txtTotal.Text) < 0)
-                txtTotal.Text = "0,0000";
+                txtTotal.Text = "0.0000";
         }
         private void ConsumidorCBSeleccionado()
         {
@@ -145,7 +148,7 @@ namespace ACAPOLAMI.VISTA
 
         private void txtImpuesto_Enter(object sender, EventArgs e)
         {
-            if (txtImpuesto.Text.Equals("0,0000"))
+            if (txtImpuesto.Text.Equals("0.0000"))
             {
                 txtImpuesto.Text = "";
                 txtImpuesto.ForeColor = Color.RoyalBlue;
@@ -156,14 +159,14 @@ namespace ACAPOLAMI.VISTA
         {
             if (txtImpuesto.Text.Equals(""))
             {
-                txtImpuesto.Text = "0,0000";
+                txtImpuesto.Text = "0.0000";
                 txtImpuesto.ForeColor = Color.Gray;
             }
         }
 
         private void txtMontoBase_Enter(object sender, EventArgs e)
         {
-            if (txtMontoBase.Text.Equals("0,0000"))
+            if (txtMontoBase.Text.Equals("0.0000"))
             {
                 txtMontoBase.Text = "";
                 txtMontoBase.ForeColor = Color.RoyalBlue;
@@ -174,14 +177,14 @@ namespace ACAPOLAMI.VISTA
         {
             if (txtMontoBase.Text.Equals(""))
             {
-                txtMontoBase.Text = "0,0000";
+                txtMontoBase.Text = "0.0000";
                 txtMontoBase.ForeColor = Color.Gray;
             }
         }
 
         private void txtCancelado_Enter(object sender, EventArgs e)
         {
-            if (txtCancelado.Text.Equals("0,0000"))
+            if (txtCancelado.Text.Equals("0.0000"))
             {
                 txtCancelado.Text = "";
                 txtCancelado.ForeColor = Color.RoyalBlue;
@@ -192,7 +195,7 @@ namespace ACAPOLAMI.VISTA
         {
             if (txtCancelado.Text.Equals(""))
             {
-                txtCancelado.Text = "0,0000";
+                txtCancelado.Text = "0.0000";
                 txtCancelado.ForeColor = Color.Gray;
             }
         }
@@ -442,16 +445,16 @@ namespace ACAPOLAMI.VISTA
             Limpiar();
         }
 
-        private void Limpiar()
+        private void Limpiar()  
         {
             txtIdConsumidor.Text = "Codigo";
             txtNombres.Text = "Primero Segundo";
             txtApellidos.Text = "Primero Segundo";
-            txtMontoBase.Text = "2,00";
-            txtImpuesto.Text = "0,0000";
-            txtTotal.Text = "0,0000";
-            txtPendiente.Text = "0,0000";
-            txtCancelado.Text = "0,0000";
+            txtMontoBase.Text = FmrPrincipal.pagoBase;
+            txtImpuesto.Text = "0.0000";
+            txtTotal.Text = "0.0000";
+            txtPendiente.Text = "0.0000";
+            txtCancelado.Text = "0.0000";
         }
 
         //metodo para cargar los estados
@@ -524,8 +527,11 @@ namespace ACAPOLAMI.VISTA
         {
             if (txtCancelado.Text != "" && txtCancelado.Text != "0.0000")
             {
-                calculos.CalculoDePago(Convert.ToDouble(txtMontoBase.Text), Convert.ToDouble(txtCancelado.Text),
-                    Convert.ToDouble(txtPendiente.Text), Convert.ToDouble(txtImpuesto.Text), Convert.ToDouble(txtTotal.Text));
+                calculos.CalculoDePago(Convert.ToDouble(txtMontoBase.Text, System.Globalization.CultureInfo.InvariantCulture), 
+                    Convert.ToDouble(txtCancelado.Text, System.Globalization.CultureInfo.InvariantCulture),
+                    Convert.ToDouble(txtPendiente.Text, System.Globalization.CultureInfo.InvariantCulture), 
+                    Convert.ToDouble(txtImpuesto.Text, System.Globalization.CultureInfo.InvariantCulture), 
+                    Convert.ToDouble(txtTotal.Text, System.Globalization.CultureInfo.InvariantCulture));
 
                 txtPendiente.Text = calculos.Pendiente.ToString();
                 txtImpuesto.Text = calculos.Impuesto.ToString();
