@@ -72,6 +72,10 @@ namespace ACAPOLAMI.VISTA
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblControlComunidades = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.controlValidaciones)).BeginInit();
             this.panelSuperior.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -84,6 +88,10 @@ namespace ACAPOLAMI.VISTA
             ((System.ComponentModel.ISupportInitialize)(this.dtgvEstadosPago)).BeginInit();
             this.pnlComunidades.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvComunidades)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // controlValidaciones
@@ -100,19 +108,18 @@ namespace ACAPOLAMI.VISTA
             this.panelSuperior.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panelSuperior.Name = "panelSuperior";
             this.panelSuperior.Padding = new System.Windows.Forms.Padding(0, 20, 0, 0);
-            this.panelSuperior.Size = new System.Drawing.Size(1024, 74);
+            this.panelSuperior.Size = new System.Drawing.Size(832, 86);
             this.panelSuperior.TabIndex = 10;
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(0, 4);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 20);
             this.panel2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1024, 66);
+            this.panel2.Size = new System.Drawing.Size(832, 66);
             this.panel2.TabIndex = 7;
             // 
             // label3
@@ -120,7 +127,7 @@ namespace ACAPOLAMI.VISTA
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(403, 22);
+            this.label3.Location = new System.Drawing.Point(307, 22);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(196, 19);
@@ -133,36 +140,36 @@ namespace ACAPOLAMI.VISTA
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(20, 20);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1024, 612);
+            this.panelContenedor.Size = new System.Drawing.Size(832, 611);
             this.panelContenedor.TabIndex = 11;
             // 
             // panelControles
             // 
-            this.panelControles.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelControles.BackColor = System.Drawing.Color.White;
-            this.panelControles.Controls.Add(this.panelOtrosAjustes);
-            this.panelControles.Controls.Add(this.panelControlUsuario);
-            this.panelControles.Controls.Add(this.panelEstadoPagos);
-            this.panelControles.Controls.Add(this.pnlComunidades);
-            this.panelControles.Location = new System.Drawing.Point(0, 96);
+            this.panelControles.AutoScroll = true;
+            this.panelControles.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panelControles.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panelControles.Controls.Add(this.panel1);
+            this.panelControles.Controls.Add(this.panel3);
+            this.panelControles.Controls.Add(this.panel4);
+            this.panelControles.Controls.Add(this.panel5);
+            this.panelControles.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelControles.Location = new System.Drawing.Point(0, 103);
             this.panelControles.Name = "panelControles";
-            this.panelControles.Size = new System.Drawing.Size(1024, 516);
+            this.panelControles.Size = new System.Drawing.Size(832, 508);
             this.panelControles.TabIndex = 0;
             // 
             // panelOtrosAjustes
             // 
-            this.panelOtrosAjustes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.panelOtrosAjustes.AutoSize = true;
             this.panelOtrosAjustes.BackColor = System.Drawing.Color.White;
             this.panelOtrosAjustes.Controls.Add(this.btnEstablecerPagoBase);
             this.panelOtrosAjustes.Controls.Add(this.txtPagoBase);
             this.panelOtrosAjustes.Controls.Add(this.lblPagoBase);
             this.panelOtrosAjustes.Controls.Add(this.lblOtrosAjustes);
-            this.panelOtrosAjustes.Location = new System.Drawing.Point(767, 259);
+            this.panelOtrosAjustes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelOtrosAjustes.Location = new System.Drawing.Point(3, 3);
             this.panelOtrosAjustes.Name = "panelOtrosAjustes";
-            this.panelOtrosAjustes.Size = new System.Drawing.Size(247, 231);
+            this.panelOtrosAjustes.Size = new System.Drawing.Size(270, 248);
             this.panelOtrosAjustes.TabIndex = 6;
             // 
             // btnEstablecerPagoBase
@@ -172,7 +179,7 @@ namespace ACAPOLAMI.VISTA
             this.btnEstablecerPagoBase.ForeColor = System.Drawing.Color.White;
             this.btnEstablecerPagoBase.Location = new System.Drawing.Point(4, 97);
             this.btnEstablecerPagoBase.Name = "btnEstablecerPagoBase";
-            this.btnEstablecerPagoBase.Size = new System.Drawing.Size(208, 30);
+            this.btnEstablecerPagoBase.Size = new System.Drawing.Size(263, 30);
             this.btnEstablecerPagoBase.TabIndex = 10;
             this.btnEstablecerPagoBase.Text = "Guardar";
             this.btnEstablecerPagoBase.UseVisualStyleBackColor = false;
@@ -183,7 +190,7 @@ namespace ACAPOLAMI.VISTA
             this.txtPagoBase.ForeColor = System.Drawing.Color.DarkGray;
             this.txtPagoBase.Location = new System.Drawing.Point(4, 67);
             this.txtPagoBase.Name = "txtPagoBase";
-            this.txtPagoBase.Size = new System.Drawing.Size(208, 26);
+            this.txtPagoBase.Size = new System.Drawing.Size(263, 26);
             this.txtPagoBase.TabIndex = 8;
             this.txtPagoBase.Text = "0.0000";
             this.txtPagoBase.Enter += new System.EventHandler(this.txtPagoBase_Enter_1);
@@ -213,7 +220,6 @@ namespace ACAPOLAMI.VISTA
             // 
             // panelControlUsuario
             // 
-            this.panelControlUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.panelControlUsuario.AutoSize = true;
             this.panelControlUsuario.BackColor = System.Drawing.Color.White;
             this.panelControlUsuario.Controls.Add(this.label2);
@@ -226,16 +232,17 @@ namespace ACAPOLAMI.VISTA
             this.panelControlUsuario.Controls.Add(this.txtUsuario);
             this.panelControlUsuario.Controls.Add(this.dtgvUsuarios);
             this.panelControlUsuario.Controls.Add(this.lblControUsuarios);
-            this.panelControlUsuario.Location = new System.Drawing.Point(11, 259);
+            this.panelControlUsuario.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControlUsuario.Location = new System.Drawing.Point(3, 3);
             this.panelControlUsuario.Name = "panelControlUsuario";
-            this.panelControlUsuario.Size = new System.Drawing.Size(566, 231);
+            this.panelControlUsuario.Size = new System.Drawing.Size(535, 248);
             this.panelControlUsuario.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(390, 108);
+            this.label2.Location = new System.Drawing.Point(393, 109);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(104, 19);
             this.label2.TabIndex = 9;
@@ -245,7 +252,7 @@ namespace ACAPOLAMI.VISTA
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(231, 108);
+            this.label1.Location = new System.Drawing.Point(246, 109);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(104, 19);
             this.label1.TabIndex = 8;
@@ -255,7 +262,7 @@ namespace ACAPOLAMI.VISTA
             // 
             this.lblCorreo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCorreo.AutoSize = true;
-            this.lblCorreo.Location = new System.Drawing.Point(221, 45);
+            this.lblCorreo.Location = new System.Drawing.Point(236, 46);
             this.lblCorreo.Name = "lblCorreo";
             this.lblCorreo.Size = new System.Drawing.Size(75, 19);
             this.lblCorreo.TabIndex = 7;
@@ -265,9 +272,9 @@ namespace ACAPOLAMI.VISTA
             // 
             this.btnEliminarUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEliminarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarUsuario.Location = new System.Drawing.Point(394, 185);
+            this.btnEliminarUsuario.Location = new System.Drawing.Point(397, 186);
             this.btnEliminarUsuario.Name = "btnEliminarUsuario";
-            this.btnEliminarUsuario.Size = new System.Drawing.Size(154, 30);
+            this.btnEliminarUsuario.Size = new System.Drawing.Size(112, 30);
             this.btnEliminarUsuario.TabIndex = 7;
             this.btnEliminarUsuario.Text = "Eliminar";
             this.btnEliminarUsuario.UseVisualStyleBackColor = true;
@@ -277,9 +284,9 @@ namespace ACAPOLAMI.VISTA
             // 
             this.txtPassAntigua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPassAntigua.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtPassAntigua.Location = new System.Drawing.Point(225, 141);
+            this.txtPassAntigua.Location = new System.Drawing.Point(240, 142);
             this.txtPassAntigua.Name = "txtPassAntigua";
-            this.txtPassAntigua.Size = new System.Drawing.Size(154, 26);
+            this.txtPassAntigua.Size = new System.Drawing.Size(132, 26);
             this.txtPassAntigua.TabIndex = 5;
             this.txtPassAntigua.Text = "@antigua";
             this.txtPassAntigua.Enter += new System.EventHandler(this.txtPassAntigua_Enter_1);
@@ -291,9 +298,9 @@ namespace ACAPOLAMI.VISTA
             this.btnGuardarUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
             this.btnGuardarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardarUsuario.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarUsuario.Location = new System.Drawing.Point(225, 185);
+            this.btnGuardarUsuario.Location = new System.Drawing.Point(240, 186);
             this.btnGuardarUsuario.Name = "btnGuardarUsuario";
-            this.btnGuardarUsuario.Size = new System.Drawing.Size(154, 30);
+            this.btnGuardarUsuario.Size = new System.Drawing.Size(132, 30);
             this.btnGuardarUsuario.TabIndex = 6;
             this.btnGuardarUsuario.Text = "Guardar";
             this.btnGuardarUsuario.UseVisualStyleBackColor = false;
@@ -303,9 +310,9 @@ namespace ACAPOLAMI.VISTA
             // 
             this.txtPass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPass.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtPass.Location = new System.Drawing.Point(394, 141);
+            this.txtPass.Location = new System.Drawing.Point(397, 142);
             this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(154, 26);
+            this.txtPass.Size = new System.Drawing.Size(112, 26);
             this.txtPass.TabIndex = 4;
             this.txtPass.Text = "@nueva";
             this.txtPass.Enter += new System.EventHandler(this.txtPass_Enter_1);
@@ -315,9 +322,9 @@ namespace ACAPOLAMI.VISTA
             // 
             this.txtUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtUsuario.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtUsuario.Location = new System.Drawing.Point(225, 67);
+            this.txtUsuario.Location = new System.Drawing.Point(240, 68);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(323, 26);
+            this.txtUsuario.Size = new System.Drawing.Size(269, 26);
             this.txtUsuario.TabIndex = 3;
             this.txtUsuario.Text = "ejemplo@correo.com";
             this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter_1);
@@ -341,7 +348,7 @@ namespace ACAPOLAMI.VISTA
             this.dtgvUsuarios.ReadOnly = true;
             this.dtgvUsuarios.RowHeadersVisible = false;
             this.dtgvUsuarios.RowHeadersWidth = 62;
-            this.dtgvUsuarios.Size = new System.Drawing.Size(201, 186);
+            this.dtgvUsuarios.Size = new System.Drawing.Size(211, 199);
             this.dtgvUsuarios.TabIndex = 2;
             this.dtgvUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvUsuarios_CellClick);
             // 
@@ -382,7 +389,6 @@ namespace ACAPOLAMI.VISTA
             // 
             // panelEstadoPagos
             // 
-            this.panelEstadoPagos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panelEstadoPagos.AutoSize = true;
             this.panelEstadoPagos.BackColor = System.Drawing.Color.White;
             this.panelEstadoPagos.Controls.Add(this.lblEstado);
@@ -391,16 +397,17 @@ namespace ACAPOLAMI.VISTA
             this.panelEstadoPagos.Controls.Add(this.txtEstado);
             this.panelEstadoPagos.Controls.Add(this.dtgvEstadosPago);
             this.panelEstadoPagos.Controls.Add(this.lblEstadosPagos);
-            this.panelEstadoPagos.Location = new System.Drawing.Point(644, 26);
+            this.panelEstadoPagos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelEstadoPagos.Location = new System.Drawing.Point(3, 3);
             this.panelEstadoPagos.Name = "panelEstadoPagos";
-            this.panelEstadoPagos.Size = new System.Drawing.Size(371, 190);
+            this.panelEstadoPagos.Size = new System.Drawing.Size(394, 207);
             this.panelEstadoPagos.TabIndex = 5;
             // 
             // lblEstado
             // 
             this.lblEstado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEstado.AutoSize = true;
-            this.lblEstado.Location = new System.Drawing.Point(188, 42);
+            this.lblEstado.Location = new System.Drawing.Point(177, 48);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(69, 19);
             this.lblEstado.TabIndex = 6;
@@ -408,11 +415,11 @@ namespace ACAPOLAMI.VISTA
             // 
             // btnEliminarEstado
             // 
-            this.btnEliminarEstado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEliminarEstado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEliminarEstado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarEstado.Location = new System.Drawing.Point(279, 97);
+            this.btnEliminarEstado.Location = new System.Drawing.Point(294, 120);
             this.btnEliminarEstado.Name = "btnEliminarEstado";
-            this.btnEliminarEstado.Size = new System.Drawing.Size(84, 30);
+            this.btnEliminarEstado.Size = new System.Drawing.Size(94, 30);
             this.btnEliminarEstado.TabIndex = 5;
             this.btnEliminarEstado.Text = "Eliminar";
             this.btnEliminarEstado.UseVisualStyleBackColor = true;
@@ -424,9 +431,9 @@ namespace ACAPOLAMI.VISTA
             this.btnGuardarEstado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
             this.btnGuardarEstado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardarEstado.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarEstado.Location = new System.Drawing.Point(192, 97);
+            this.btnGuardarEstado.Location = new System.Drawing.Point(181, 120);
             this.btnGuardarEstado.Name = "btnGuardarEstado";
-            this.btnGuardarEstado.Size = new System.Drawing.Size(81, 30);
+            this.btnGuardarEstado.Size = new System.Drawing.Size(91, 30);
             this.btnGuardarEstado.TabIndex = 4;
             this.btnGuardarEstado.Text = "Guardar";
             this.btnGuardarEstado.UseVisualStyleBackColor = false;
@@ -436,9 +443,9 @@ namespace ACAPOLAMI.VISTA
             // 
             this.txtEstado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEstado.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtEstado.Location = new System.Drawing.Point(192, 64);
+            this.txtEstado.Location = new System.Drawing.Point(181, 87);
             this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(171, 26);
+            this.txtEstado.Size = new System.Drawing.Size(207, 26);
             this.txtEstado.TabIndex = 3;
             this.txtEstado.Text = "@nombre estado";
             this.txtEstado.Enter += new System.EventHandler(this.txtEstado_Enter_1);
@@ -457,7 +464,7 @@ namespace ACAPOLAMI.VISTA
             this.dtgvEstadosPago.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column2,
             this.Column3});
-            this.dtgvEstadosPago.Location = new System.Drawing.Point(4, 27);
+            this.dtgvEstadosPago.Location = new System.Drawing.Point(4, 44);
             this.dtgvEstadosPago.Name = "dtgvEstadosPago";
             this.dtgvEstadosPago.ReadOnly = true;
             this.dtgvEstadosPago.RowHeadersVisible = false;
@@ -503,9 +510,10 @@ namespace ACAPOLAMI.VISTA
             this.pnlComunidades.Controls.Add(this.txtComunidad);
             this.pnlComunidades.Controls.Add(this.dtgvComunidades);
             this.pnlComunidades.Controls.Add(this.lblControlComunidades);
-            this.pnlComunidades.Location = new System.Drawing.Point(12, 26);
+            this.pnlComunidades.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlComunidades.Location = new System.Drawing.Point(3, 3);
             this.pnlComunidades.Name = "pnlComunidades";
-            this.pnlComunidades.Size = new System.Drawing.Size(446, 190);
+            this.pnlComunidades.Size = new System.Drawing.Size(417, 207);
             this.pnlComunidades.TabIndex = 3;
             // 
             // btnGuardarComunidad
@@ -514,7 +522,7 @@ namespace ACAPOLAMI.VISTA
             this.btnGuardarComunidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
             this.btnGuardarComunidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardarComunidad.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarComunidad.Location = new System.Drawing.Point(246, 96);
+            this.btnGuardarComunidad.Location = new System.Drawing.Point(231, 119);
             this.btnGuardarComunidad.Name = "btnGuardarComunidad";
             this.btnGuardarComunidad.Size = new System.Drawing.Size(81, 30);
             this.btnGuardarComunidad.TabIndex = 7;
@@ -526,7 +534,7 @@ namespace ACAPOLAMI.VISTA
             // 
             this.lblComunidad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblComunidad.AutoSize = true;
-            this.lblComunidad.Location = new System.Drawing.Point(243, 41);
+            this.lblComunidad.Location = new System.Drawing.Point(228, 47);
             this.lblComunidad.Name = "lblComunidad";
             this.lblComunidad.Size = new System.Drawing.Size(104, 19);
             this.lblComunidad.TabIndex = 5;
@@ -537,9 +545,9 @@ namespace ACAPOLAMI.VISTA
             this.txtComunidad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtComunidad.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComunidad.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtComunidad.Location = new System.Drawing.Point(247, 63);
+            this.txtComunidad.Location = new System.Drawing.Point(232, 86);
             this.txtComunidad.Name = "txtComunidad";
-            this.txtComunidad.Size = new System.Drawing.Size(171, 26);
+            this.txtComunidad.Size = new System.Drawing.Size(174, 26);
             this.txtComunidad.TabIndex = 2;
             this.txtComunidad.Text = "@nombre comunidad";
             this.txtComunidad.Enter += new System.EventHandler(this.txtComunidad_Enter_1);
@@ -558,7 +566,7 @@ namespace ACAPOLAMI.VISTA
             this.dtgvComunidades.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column4,
             this.Column5});
-            this.dtgvComunidades.Location = new System.Drawing.Point(4, 27);
+            this.dtgvComunidades.Location = new System.Drawing.Point(4, 44);
             this.dtgvComunidades.Name = "dtgvComunidades";
             this.dtgvComunidades.ReadOnly = true;
             this.dtgvComunidades.RowHeadersVisible = false;
@@ -595,12 +603,57 @@ namespace ACAPOLAMI.VISTA
             this.lblControlComunidades.TabIndex = 0;
             this.lblControlComunidades.Text = "Control de Comunidades";
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel1.Controls.Add(this.pnlComunidades);
+            this.panel1.Location = new System.Drawing.Point(0, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Padding = new System.Windows.Forms.Padding(3);
+            this.panel1.Size = new System.Drawing.Size(423, 213);
+            this.panel1.TabIndex = 7;
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel3.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel3.Controls.Add(this.panelEstadoPagos);
+            this.panel3.Location = new System.Drawing.Point(429, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Padding = new System.Windows.Forms.Padding(3);
+            this.panel3.Size = new System.Drawing.Size(400, 213);
+            this.panel3.TabIndex = 8;
+            // 
+            // panel4
+            // 
+            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel4.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel4.Controls.Add(this.panelControlUsuario);
+            this.panel4.Location = new System.Drawing.Point(3, 246);
+            this.panel4.Name = "panel4";
+            this.panel4.Padding = new System.Windows.Forms.Padding(3);
+            this.panel4.Size = new System.Drawing.Size(541, 254);
+            this.panel4.TabIndex = 9;
+            // 
+            // panel5
+            // 
+            this.panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel5.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel5.Controls.Add(this.panelOtrosAjustes);
+            this.panel5.Location = new System.Drawing.Point(550, 246);
+            this.panel5.Name = "panel5";
+            this.panel5.Padding = new System.Windows.Forms.Padding(3);
+            this.panel5.Size = new System.Drawing.Size(276, 254);
+            this.panel5.TabIndex = 9;
+            // 
             // FrmAjustes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(1064, 652);
+            this.AutoScroll = true;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(872, 651);
             this.Controls.Add(this.panelSuperior);
             this.Controls.Add(this.panelContenedor);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -619,7 +672,6 @@ namespace ACAPOLAMI.VISTA
             this.panel2.PerformLayout();
             this.panelContenedor.ResumeLayout(false);
             this.panelControles.ResumeLayout(false);
-            this.panelControles.PerformLayout();
             this.panelOtrosAjustes.ResumeLayout(false);
             this.panelOtrosAjustes.PerformLayout();
             this.panelControlUsuario.ResumeLayout(false);
@@ -631,6 +683,14 @@ namespace ACAPOLAMI.VISTA
             this.pnlComunidades.ResumeLayout(false);
             this.pnlComunidades.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvComunidades)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -679,5 +739,9 @@ namespace ACAPOLAMI.VISTA
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
     }
 }
