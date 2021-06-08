@@ -293,7 +293,7 @@ namespace ACAPOLAMI.VISTA
 
                 try
                 {
-                    pago.Modificarpago(Convert.ToInt32(Id), Convert.ToDecimal(txtMontoBase.Text), Convert.ToDecimal(txtCancelado.Text),
+                    pago.Modificarpago(Convert.ToInt32(txtIdRegistro.Text), Convert.ToDecimal(txtMontoBase.Text), Convert.ToDecimal(txtCancelado.Text),
                         Convert.ToDecimal(txtPendiente.Text), Convert.ToDecimal(txtImpuesto.Text), Convert.ToDecimal(txtTotal.Text),
                         Convert.ToDateTime(dtpFechaPago.Text), Convert.ToInt32(cbEstado.SelectedValue.ToString()),
                         Convert.ToInt32(txtIdConsumidor.Text));
