@@ -65,9 +65,6 @@ namespace ACAPOLAMI.DAO
 
                     db.Usuarios.Remove(user);
                     db.SaveChanges();
-
-                    FrmDialogoExito.Confirmar("Se ha eliminado correctamente");
-
                 }
             }
             catch (Exception ex)
@@ -89,9 +86,7 @@ namespace ACAPOLAMI.DAO
                         int update = user.idUsuarios;
                         Usuarios usu = db.Usuarios.Where(x => x.idUsuarios == update).Select(x => x).FirstOrDefault();
                         usu.clave = newPass;
-                        db.SaveChanges();
-                        FrmDialogoExito.Confirmar("Se ha modificado correctamente");
-                    }
+                        db.SaveChanges();                    }
                 }
             }
         }

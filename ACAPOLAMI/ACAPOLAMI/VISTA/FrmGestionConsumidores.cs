@@ -317,7 +317,7 @@ namespace ACAPOLAMI.VISTA
                                                          Convert.ToInt32(cbComunidad.SelectedValue.ToString()), txtCorreo.Text);
 
                     FrmNotificaciones notificacion = new FrmNotificaciones(sucesos.CargarDatosSucesos().tipoSuceso,
-                            sucesos.CargarDatosSucesos().descripcion, FrmNotificaciones.TipoAlerta.Realizado);
+                            sucesos.CargarDatosSucesos().descripcion, FrmNotificaciones.TipoAlerta.Advertencia);
                     notificacion.Show();
 
                     Limpiar();
@@ -340,7 +340,7 @@ namespace ACAPOLAMI.VISTA
                     clsDconsumidor.EliminarConsumidor(Convert.ToInt32(txtCodigo.Text));
 
                     FrmNotificaciones notificacion = new FrmNotificaciones(sucesos.CargarDatosSucesos().tipoSuceso,
-                        sucesos.CargarDatosSucesos().descripcion, FrmNotificaciones.TipoAlerta.Realizado);
+                        sucesos.CargarDatosSucesos().descripcion, FrmNotificaciones.TipoAlerta.Error);
                     notificacion.Show();
 
                     this.Dispose();

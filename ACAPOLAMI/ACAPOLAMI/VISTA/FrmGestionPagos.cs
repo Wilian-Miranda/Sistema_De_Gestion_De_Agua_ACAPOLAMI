@@ -302,7 +302,7 @@ namespace ACAPOLAMI.VISTA
                 }
 
                 FrmNotificaciones notificacion = new FrmNotificaciones(sucesos.CargarDatosSucesos().tipoSuceso,
-                            sucesos.CargarDatosSucesos().descripcion, FrmNotificaciones.TipoAlerta.Realizado);
+                            sucesos.CargarDatosSucesos().descripcion, FrmNotificaciones.TipoAlerta.Advertencia);
                 notificacion.Show();
 
                 Limpiar();
@@ -325,7 +325,7 @@ namespace ACAPOLAMI.VISTA
                 }
 
                 FrmNotificaciones notificacion = new FrmNotificaciones(sucesos.CargarDatosSucesos().tipoSuceso,
-                        sucesos.CargarDatosSucesos().descripcion, FrmNotificaciones.TipoAlerta.Realizado);
+                        sucesos.CargarDatosSucesos().descripcion, FrmNotificaciones.TipoAlerta.Error);
                 notificacion.Show();
 
                 this.Close();
@@ -527,11 +527,11 @@ namespace ACAPOLAMI.VISTA
         {
             if (txtCancelado.Text != "" && txtCancelado.Text != "0.0000")
             {
-                calculos.CalculoDePago(Convert.ToDouble(txtMontoBase.Text, System.Globalization.CultureInfo.InvariantCulture), 
+                calculos.CalculoDePago(Convert.ToDouble(txtMontoBase.Text.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture), 
                     Convert.ToDouble(txtCancelado.Text.Replace(",","."), System.Globalization.CultureInfo.InvariantCulture),
-                    Convert.ToDouble(txtPendiente.Text, System.Globalization.CultureInfo.InvariantCulture), 
-                    Convert.ToDouble(txtImpuesto.Text, System.Globalization.CultureInfo.InvariantCulture), 
-                    Convert.ToDouble(txtTotal.Text, System.Globalization.CultureInfo.InvariantCulture));
+                    Convert.ToDouble(txtPendiente.Text.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture), 
+                    Convert.ToDouble(txtImpuesto.Text.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture), 
+                    Convert.ToDouble(txtTotal.Text.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture));
 
                 txtPendiente.Text = calculos.Pendiente.ToString();
                 txtImpuesto.Text = calculos.Impuesto.ToString();

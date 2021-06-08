@@ -35,8 +35,6 @@ namespace ACAPOLAMI.DAO
 
                     db.Estados.Add(tb_estados);
                     db.SaveChanges();
-
-                    FrmDialogoExito.Confirmar("Se ha insertado correctamente");
                 }
             }
 
@@ -58,8 +56,6 @@ namespace ACAPOLAMI.DAO
 
                     db.Estados.Remove(estado);
                     db.SaveChanges();
-
-                    FrmDialogoExito.Confirmar("Se ha eliminado correctamente");
                 }
             }
             catch (Exception ex)

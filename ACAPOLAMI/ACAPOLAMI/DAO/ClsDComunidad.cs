@@ -30,8 +30,6 @@ namespace ACAPOLAMI.DAO
                 {
                     db.sp_InsertarComunidad(nombreComunidad);
                     db.SaveChanges();
-
-                    FrmDialogoExito.Confirmar("Se ha insertado correctamente");
                 }
             }
 

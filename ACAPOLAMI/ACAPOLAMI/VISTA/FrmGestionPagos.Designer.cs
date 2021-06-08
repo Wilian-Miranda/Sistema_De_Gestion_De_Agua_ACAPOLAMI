@@ -596,7 +596,7 @@ namespace ACAPOLAMI.VISTA
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "FrmGestionPagos";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmGestioPagos";
             this.Load += new System.EventHandler(this.FrmGestioPagos_Load);
             this.pnlBorde.ResumeLayout(false);

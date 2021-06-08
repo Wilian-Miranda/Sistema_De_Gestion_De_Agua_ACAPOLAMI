@@ -399,7 +399,7 @@ namespace ACAPOLAMI.VISTA
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "FrmGestionConsumidores";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Gestion Consumidores";
             this.Load += new System.EventHandler(this.FrmGestionConsumidores_Load);
             this.pnlEncabezado.ResumeLayout(false);

@@ -350,13 +350,13 @@ namespace ACAPOLAMI.VISTA
             else if (txtComunidad.Text != "")
             {
                 comunidad.GuardarComunidades(txtComunidad.Text);
+                FrmDialogoExito.Confirmar("Se ha ingresado la comunidad");
+                mostrar();
             }
             else
             {
                 controlValidaciones.SetError(txtComunidad, "");
             }
-
-            mostrar();
         }
 
         ClsDEstados clsDEstado = new ClsDEstados(); 
@@ -372,12 +372,14 @@ namespace ACAPOLAMI.VISTA
                 estado.nombreEstado = txtEstado.Text;
 
                 clsDEstado.GuardarEstado(estado);
+                FrmDialogoExito.Confirmar("El estado se ha insertado con exito");
+                mostrar();
             }
             else
             {
                 controlValidaciones.SetError(txtEstado, "");
             }
-            mostrar();
+            
         }
 
         private void btnEliminarEstado_Click(object sender, EventArgs e)
@@ -410,7 +412,8 @@ namespace ACAPOLAMI.VISTA
 
                 usuarios.GuardarUsuario(user);
 
-                MessageBox.Show("Usuario guardado");
+                FrmDialogoExito.Confirmar("El nombre del usuario se ha modificado con exito");
+                mostrar();
             }
             else if(txtPassAntigua.Text != "@antigua" || txtPassAntigua.Text != "")
             {
@@ -419,7 +422,9 @@ namespace ACAPOLAMI.VISTA
                 user.clave = oldPass;
 
                 usuarios.CambiarPass(user, newPass);
-           
+                FrmDialogoExito.Confirmar("La clave se ha modificado con exito");
+                mostrar();
+
             }
             else
             {
@@ -434,7 +439,7 @@ namespace ACAPOLAMI.VISTA
         {
             string id = dtgvUsuarios.CurrentRow.Cells[0].Value.ToString();
             usuarios.EliminarUsuario(Convert.ToInt32(id));
-
+            FrmDialogoExito.Confirmar("El usuario se ha eliminado con exito");
             mostrar();
         }
 
@@ -452,7 +457,7 @@ namespace ACAPOLAMI.VISTA
             if(txtPagoBase.Text != "0.0000")
             {
                 FmrPrincipal.pagoBase = txtPagoBase.Text;
-                MessageBox.Show("Se ha modificado el pago base");
+                FrmDialogoExito.Confirmar("Se ha modificado el pago base");
             }
         }
 
