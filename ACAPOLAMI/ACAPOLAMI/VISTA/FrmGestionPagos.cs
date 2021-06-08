@@ -250,7 +250,7 @@ namespace ACAPOLAMI.VISTA
                 if (calculos.Impuesto < 0)
                     txtImpuesto.Text = "0";
 
-                if (txtPendiente.Text != "0.0000" || txtImpuesto.Text != "0.0000")
+                if (txtPendiente.Text == "0.0000" || txtImpuesto.Text != "0.0000")
                     CalculosPagos();
 
                 //Agregar pago
