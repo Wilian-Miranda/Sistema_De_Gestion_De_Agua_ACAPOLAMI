@@ -123,12 +123,12 @@ namespace WilianMiranda01.VISTA
                 String apellidos = dtgPagos.CurrentRow.Cells[2].Value.ToString();
                 modificarPago.nombreNonsumidor = nombres + " " + apellidos;
 
-                modificarPago.txtMontoBase.Text = dtgPagos.CurrentRow.Cells[3].Value.ToString();
-                modificarPago.txtCancelado.Text = dtgPagos.CurrentRow.Cells[4].Value.ToString();
-                modificarPago.txtPendiente.Text = dtgPagos.CurrentRow.Cells[5].Value.ToString();
-                modificarPago.txtImpuesto.Text = dtgPagos.CurrentRow.Cells[6].Value.ToString();
-                modificarPago.dtpFechaPago.Text = dtgPagos.CurrentRow.Cells[8].Value.ToString();
-                modificarPago.txtTotal.Text = dtgPagos.CurrentRow.Cells[7].Value.ToString();
+                modificarPago.txtMontoBase.Text = "0.0000";
+                modificarPago.txtCancelado.Text = dtgPagos.CurrentRow.Cells[4].Value.ToString().Replace(",",".");
+                modificarPago.txtPendiente.Text = dtgPagos.CurrentRow.Cells[5].Value.ToString().Replace(",", ".");
+                modificarPago.txtImpuesto.Text = dtgPagos.CurrentRow.Cells[6].Value.ToString().Replace(",", ".");
+                modificarPago.dtpFechaPago.Text = dtgPagos.CurrentRow.Cells[8].Value.ToString().Replace(",", ".");
+                modificarPago.txtTotal.Text = dtgPagos.CurrentRow.Cells[7].Value.ToString().Replace(",", ".");
 
 
 
