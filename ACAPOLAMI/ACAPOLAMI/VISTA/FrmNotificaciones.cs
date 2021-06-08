@@ -148,22 +148,12 @@ namespace ACAPOLAMI.VISTA
         }
 
         //Muestra la notificacion en la barra de tareas y en las notificaciones del sistema
-        public void MostrarNotificacion()
-        {
-            iconoNotificacion.Text = "Se han encontrado acciones en los registros";
-            iconoNotificacion.Visible = true;
-            iconoNotificacion.BalloonTipTitle = Titulo;
-            iconoNotificacion.BalloonTipText = Mensaje;
-            iconoNotificacion.BalloonTipIcon = ToolTipIcon.Info;
-            iconoNotificacion.ShowBalloonTip(10000);
-        }
 
         private void FrmNotificaciones_Load(object sender, EventArgs e)
         {
             this.Top = Vertical;
             this.Left = Horizontal;
             Mostrando.Enabled = true;
-            MostrarNotificacion();
         }
     }
 }
