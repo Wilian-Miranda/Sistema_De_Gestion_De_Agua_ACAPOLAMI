@@ -55,30 +55,37 @@ namespace WilianMiranda01.VISTA
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-            ClsDUsuarios ClsUsuario = new ClsDUsuarios();
-            Usuarios usuario = new Usuarios();
-            usuario.nombre = txtUsuario.Text;
-            usuario.clave = txtPassword.Text;
-
-            String comprobarPass = txtConfirmar.Text;
-            if (comprobarPass.Equals(txtPassword.Text))
+            if (txtUsuario.Text != "" && txtPassword.Text != "")
             {
-                ClsUsuario.GuardarUsuario(usuario);
+                ClsDUsuarios ClsUsuario = new ClsDUsuarios();
+                Usuarios usuario = new Usuarios();
+                usuario.nombre = txtUsuario.Text;
+                usuario.clave = txtPassword.Text;
 
-                FrmDialogoExito.Confirmar("Registro de usuario exitoso");
-                Form1 frm = new Form1();
-                this.Hide();
-                frm.Show();
+                String comprobarPass = txtConfirmar.Text;
+                if (comprobarPass.Equals(txtPassword.Text))
+                {
+                    ClsUsuario.GuardarUsuario(usuario);
+
+                    FrmDialogoExito.Confirmar("Registro de usuario exitoso");
+                    Form1 frm = new Form1();
+                    this.Hide();
+                    frm.Show();
+                }
+
+                else if (txtUsuario.Text == "" && txtPassword.Text == "" && txtConfirmar.Text == "")
+                {
+                    FrmDialogoError.Error("Por favor llene los campos");
+                }
+
+                else
+                {
+                    FrmDialogoError.Error("Debe confirmar la contraseña");
+                }
             }
 
-            else if (txtUsuario.Text == "" && txtPassword.Text == "" && txtConfirmar.Text == "")
-            {
+            else
                 FrmDialogoError.Error("Por favor llene los campos");
-            }
-
-            else {
-                FrmDialogoError.Error("Debe confirmar la contraseña");
-            }
         }
 
         int posX = 0;

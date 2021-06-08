@@ -41,6 +41,8 @@ namespace ACAPOLAMI.VISTA
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnEjecutar = new System.Windows.Forms.Button();
             this.pnlDatosConsumidor = new System.Windows.Forms.Panel();
+            this.txtDUI = new System.Windows.Forms.MaskedTextBox();
+            this.txtTelefono = new System.Windows.Forms.MaskedTextBox();
             this.cbComunidad = new System.Windows.Forms.ComboBox();
             this.lblComunidad = new System.Windows.Forms.Label();
             this.txtCorreo = new System.Windows.Forms.TextBox();
@@ -55,8 +57,6 @@ namespace ACAPOLAMI.VISTA
             this.lblId = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.ControlValidacion = new System.Windows.Forms.ErrorProvider(this.components);
-            this.txtTelefono = new System.Windows.Forms.MaskedTextBox();
-            this.txtDUI = new System.Windows.Forms.MaskedTextBox();
             this.pnlEncabezado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlBorde.SuspendLayout();
@@ -206,6 +206,30 @@ namespace ACAPOLAMI.VISTA
             this.pnlDatosConsumidor.Size = new System.Drawing.Size(626, 289);
             this.pnlDatosConsumidor.TabIndex = 1;
             // 
+            // txtDUI
+            // 
+            this.txtDUI.ForeColor = System.Drawing.Color.Gray;
+            this.txtDUI.Location = new System.Drawing.Point(27, 161);
+            this.txtDUI.Mask = "00000000-0";
+            this.txtDUI.Name = "txtDUI";
+            this.txtDUI.Size = new System.Drawing.Size(248, 26);
+            this.txtDUI.TabIndex = 3;
+            this.txtDUI.Click += new System.EventHandler(this.txtDUI_Click);
+            this.txtDUI.Enter += new System.EventHandler(this.TxtDUI_Enter_1);
+            this.txtDUI.Leave += new System.EventHandler(this.TxtDUI_Leave_1);
+            // 
+            // txtTelefono
+            // 
+            this.txtTelefono.ForeColor = System.Drawing.Color.Gray;
+            this.txtTelefono.Location = new System.Drawing.Point(347, 161);
+            this.txtTelefono.Mask = "0000-0000";
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(250, 26);
+            this.txtTelefono.TabIndex = 4;
+            this.txtTelefono.Click += new System.EventHandler(this.txtTelefono_Click);
+            this.txtTelefono.Enter += new System.EventHandler(this.txtTelefono_Enter_1);
+            this.txtTelefono.Leave += new System.EventHandler(this.txtTelefono_Leave_1);
+            // 
             // cbComunidad
             // 
             this.cbComunidad.BackColor = System.Drawing.Color.White;
@@ -313,6 +337,7 @@ namespace ACAPOLAMI.VISTA
             this.txtNombres.TabIndex = 1;
             this.txtNombres.Text = "Primero Segundo";
             this.txtNombres.Enter += new System.EventHandler(this.txtNombres_Enter);
+            this.txtNombres.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombres_KeyPress);
             this.txtNombres.Leave += new System.EventHandler(this.txtNombres_Leave);
             // 
             // lblNombres
@@ -359,30 +384,6 @@ namespace ACAPOLAMI.VISTA
             // ControlValidacion
             // 
             this.ControlValidacion.ContainerControl = this;
-            // 
-            // txtTelefono
-            // 
-            this.txtTelefono.ForeColor = System.Drawing.Color.Gray;
-            this.txtTelefono.Location = new System.Drawing.Point(347, 161);
-            this.txtTelefono.Mask = "0000-0000";
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(250, 26);
-            this.txtTelefono.TabIndex = 4;
-            this.txtTelefono.Click += new System.EventHandler(this.txtTelefono_Click);
-            this.txtTelefono.Enter += new System.EventHandler(this.txtTelefono_Enter_1);
-            this.txtTelefono.Leave += new System.EventHandler(this.txtTelefono_Leave_1);
-            // 
-            // txtDUI
-            // 
-            this.txtDUI.ForeColor = System.Drawing.Color.Gray;
-            this.txtDUI.Location = new System.Drawing.Point(27, 161);
-            this.txtDUI.Mask = "00000000-0";
-            this.txtDUI.Name = "txtDUI";
-            this.txtDUI.Size = new System.Drawing.Size(248, 26);
-            this.txtDUI.TabIndex = 3;
-            this.txtDUI.Click += new System.EventHandler(this.txtDUI_Click);
-            this.txtDUI.Enter += new System.EventHandler(this.TxtDUI_Enter_1);
-            this.txtDUI.Leave += new System.EventHandler(this.TxtDUI_Leave_1);
             // 
             // FrmGestionConsumidores
             // 

@@ -394,7 +394,7 @@ namespace ACAPOLAMI.VISTA
 
         private void txtTelefono_Enter_1(object sender, EventArgs e)
         {
-            txtTelefono.Select(txtTelefono.Text.Length,0);
+            txtDUI.Select(0, txtTelefono.Text.Length);
             txtTelefono.ForeColor = Color.RoyalBlue;
         }
 
@@ -412,18 +412,27 @@ namespace ACAPOLAMI.VISTA
 
         private void TxtDUI_Enter_1(object sender, EventArgs e)
         {
-            txtDUI.Select(txtDUI.Text.Length,0);
+            txtDUI.Select(0, txtDUI.Text.Length);
             txtDUI.ForeColor = Color.RoyalBlue;
         }
 
         private void txtDUI_Click(object sender, EventArgs e)
         {
-            txtDUI.Select(txtDUI.Text.Length, 0);
+            txtDUI.Select(0, txtDUI.Text.Length);
         }
 
         private void txtTelefono_Click(object sender, EventArgs e)
         {
-            txtTelefono.Select(txtTelefono.Text.Length, 0);
+            txtDUI.Select(0, txtTelefono.Text.Length);
+        }
+
+        private void txtNombres_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == 27)
+            {
+                e.Handled = true;
+                btnCancelar.PerformClick();
+            }
         }
     }
 }

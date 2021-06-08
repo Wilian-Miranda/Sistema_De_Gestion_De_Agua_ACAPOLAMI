@@ -528,7 +528,7 @@ namespace ACAPOLAMI.VISTA
             if (txtCancelado.Text != "" && txtCancelado.Text != "0.0000")
             {
                 calculos.CalculoDePago(Convert.ToDouble(txtMontoBase.Text, System.Globalization.CultureInfo.InvariantCulture), 
-                    Convert.ToDouble(txtCancelado.Text, System.Globalization.CultureInfo.InvariantCulture),
+                    Convert.ToDouble(txtCancelado.Text.Replace(",","."), System.Globalization.CultureInfo.InvariantCulture),
                     Convert.ToDouble(txtPendiente.Text, System.Globalization.CultureInfo.InvariantCulture), 
                     Convert.ToDouble(txtImpuesto.Text, System.Globalization.CultureInfo.InvariantCulture), 
                     Convert.ToDouble(txtTotal.Text, System.Globalization.CultureInfo.InvariantCulture));

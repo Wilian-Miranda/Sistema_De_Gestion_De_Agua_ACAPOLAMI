@@ -218,7 +218,7 @@ namespace WilianMiranda01.VISTA
             this.btnCantidadDeClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCantidadDeClientes.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCantidadDeClientes.ForeColor = System.Drawing.Color.Gray;
-            this.btnCantidadDeClientes.Location = new System.Drawing.Point(145, 0);
+            this.btnCantidadDeClientes.Location = new System.Drawing.Point(196, 0);
             this.btnCantidadDeClientes.Name = "btnCantidadDeClientes";
             this.btnCantidadDeClientes.Size = new System.Drawing.Size(71, 19);
             this.btnCantidadDeClientes.TabIndex = 1;
@@ -233,9 +233,9 @@ namespace WilianMiranda01.VISTA
             this.label1.ForeColor = System.Drawing.Color.Gray;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 19);
+            this.label1.Size = new System.Drawing.Size(196, 19);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Total de Clientes: ";
+            this.label1.Text = "Total de Consumidores: ";
             // 
             // pnlContenedorDataGrid
             // 

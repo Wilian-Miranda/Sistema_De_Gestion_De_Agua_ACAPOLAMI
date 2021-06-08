@@ -422,12 +422,12 @@ namespace WilianMiranda01.VISTA
             // 
             this.lblFecha.AutoSize = true;
             this.lblFecha.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lblFecha.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.ForeColor = System.Drawing.Color.DimGray;
-            this.lblFecha.Location = new System.Drawing.Point(0, 114);
+            this.lblFecha.Location = new System.Drawing.Point(0, 122);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.lblFecha.Size = new System.Drawing.Size(104, 32);
+            this.lblFecha.Size = new System.Drawing.Size(82, 24);
             this.lblFecha.TabIndex = 2;
             this.lblFecha.Text = "Fecha";
             this.lblFecha.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

@@ -80,7 +80,7 @@ namespace WilianMiranda01.VISTA
                 //cambiando el texto del boton ejecutar
                 modificar.btnEjecutar.Text = "Modificar";
 
-                modificar.lblEncabezado.ForeColor = Color.RoyalBlue;
+                modificar.lblEncabezado.ForeColor = Color.White;
                 modificar.txtNombres.ForeColor = Color.RoyalBlue;
                 modificar.txtApellidos.ForeColor = Color.RoyalBlue;
                 modificar.txtDUI.ForeColor = Color.RoyalBlue;
