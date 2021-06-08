@@ -91,7 +91,7 @@ namespace ACAPOLAMI.VISTA
 
         private void btnReporteActividad_Click(object sender, EventArgs e)
         {
-            FrmActividad frm = new FrmActividad();
+            FrmReporteActividad frm = new FrmReporteActividad();
             this.Hide();
             frm.ShowDialog();
         }
