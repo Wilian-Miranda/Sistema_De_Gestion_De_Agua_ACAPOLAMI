@@ -85,15 +85,25 @@ namespace ACAPOLAMI.VISTA
         private void btnReporteConsumidor_Click(object sender, EventArgs e)
         {
             FrmConsumidoresPorComunidad frm = new FrmConsumidoresPorComunidad();
-            this.Hide();
             frm.ShowDialog();
         }
 
         private void btnReporteActividad_Click(object sender, EventArgs e)
         {
             FrmReporteActividad frm = new FrmReporteActividad();
-            this.Hide();
             frm.ShowDialog();
+        }
+
+        private void btnReportePagos_Click(object sender, EventArgs e)
+        {
+            FrmGPagosPorAnio pagos = new FrmGPagosPorAnio();
+            pagos.ShowDialog();
+        }
+
+        private void btnPagosPorConsumidorYear_Click(object sender, EventArgs e)
+        {
+            FrmPagosPorAnioPorConsumidor pagos = new FrmPagosPorAnioPorConsumidor();
+            pagos.ShowDialog();
         }
     }
 }

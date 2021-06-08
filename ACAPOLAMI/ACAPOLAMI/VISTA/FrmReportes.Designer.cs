@@ -44,6 +44,7 @@ namespace ACAPOLAMI.VISTA
             this.pnlPagos = new System.Windows.Forms.Panel();
             this.btnReportePagos = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btnPagosPorConsumidorYear = new System.Windows.Forms.Button();
             this.pnlBorde.SuspendLayout();
             this.pnlContenedorReportes.SuspendLayout();
             this.panelSuperior.SuspendLayout();
@@ -115,7 +116,7 @@ namespace ACAPOLAMI.VISTA
             this.label3.Location = new System.Drawing.Point(406, 22);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(314, 29);
+            this.label3.Size = new System.Drawing.Size(211, 19);
             this.label3.TabIndex = 0;
             this.label3.Text = "REPORTES DEL SISTEMA";
             // 
@@ -221,6 +222,7 @@ namespace ACAPOLAMI.VISTA
             // 
             this.pnlPagos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlPagos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlPagos.Controls.Add(this.btnPagosPorConsumidorYear);
             this.pnlPagos.Controls.Add(this.btnReportePagos);
             this.pnlPagos.Controls.Add(this.pictureBox3);
             this.pnlPagos.ForeColor = System.Drawing.Color.Black;
@@ -231,18 +233,18 @@ namespace ACAPOLAMI.VISTA
             // 
             // btnReportePagos
             // 
-            this.btnReportePagos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnReportePagos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnReportePagos.BackColor = System.Drawing.Color.Linen;
             this.btnReportePagos.FlatAppearance.BorderSize = 0;
             this.btnReportePagos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReportePagos.ForeColor = System.Drawing.Color.Black;
-            this.btnReportePagos.Location = new System.Drawing.Point(250, 1);
+            this.btnReportePagos.Location = new System.Drawing.Point(617, 0);
             this.btnReportePagos.Name = "btnReportePagos";
-            this.btnReportePagos.Size = new System.Drawing.Size(728, 121);
+            this.btnReportePagos.Size = new System.Drawing.Size(250, 121);
             this.btnReportePagos.TabIndex = 1;
-            this.btnReportePagos.Text = "REPORTE DE PAGOS";
+            this.btnReportePagos.Text = "REPORTE DE PAGOS POR AÑO";
             this.btnReportePagos.UseVisualStyleBackColor = false;
+            this.btnReportePagos.Click += new System.EventHandler(this.btnReportePagos_Click);
             this.btnReportePagos.MouseLeave += new System.EventHandler(this.btnReportePagos_MouseLeave);
             this.btnReportePagos.MouseHover += new System.EventHandler(this.btnReportePagos_MouseHover);
             this.btnReportePagos.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnReportePagos_MouseMove);
@@ -250,6 +252,7 @@ namespace ACAPOLAMI.VISTA
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.White;
+            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox3.Image = global::ACAPOLAMI.Properties.Resources._2;
             this.pictureBox3.Location = new System.Drawing.Point(0, 0);
             this.pictureBox3.Name = "pictureBox3";
@@ -258,9 +261,24 @@ namespace ACAPOLAMI.VISTA
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
             // 
+            // btnPagosPorConsumidorYear
+            // 
+            this.btnPagosPorConsumidorYear.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnPagosPorConsumidorYear.BackColor = System.Drawing.Color.Linen;
+            this.btnPagosPorConsumidorYear.FlatAppearance.BorderSize = 0;
+            this.btnPagosPorConsumidorYear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPagosPorConsumidorYear.ForeColor = System.Drawing.Color.Black;
+            this.btnPagosPorConsumidorYear.Location = new System.Drawing.Point(355, -1);
+            this.btnPagosPorConsumidorYear.Name = "btnPagosPorConsumidorYear";
+            this.btnPagosPorConsumidorYear.Size = new System.Drawing.Size(256, 121);
+            this.btnPagosPorConsumidorYear.TabIndex = 2;
+            this.btnPagosPorConsumidorYear.Text = "REPORTE DE PAGOS POR CONSUMIDOR EN UN AÑO";
+            this.btnPagosPorConsumidorYear.UseVisualStyleBackColor = false;
+            this.btnPagosPorConsumidorYear.Click += new System.EventHandler(this.btnPagosPorConsumidorYear_Click);
+            // 
             // FrmReportes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1064, 652);
@@ -306,5 +324,6 @@ namespace ACAPOLAMI.VISTA
         private System.Windows.Forms.Panel panelSuperior;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnPagosPorConsumidorYear;
     }
 }

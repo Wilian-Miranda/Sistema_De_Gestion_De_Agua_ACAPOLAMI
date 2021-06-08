@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ACAPOLAMI.exe" size="1687064">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ACAPOLAMI.exe" size="1688088">
       <assemblyIdentity name="ACAPOLAMI" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>IUh2PwgQo8bzSRXqVa7Q8MJbZqaZV1DdjjgJj6ioE18=</dsig:DigestValue>
+        <dsig:DigestValue>zG9mmwAE2xgMYu65IKpx420B1/LQqAOMeIJnYnod0zs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
