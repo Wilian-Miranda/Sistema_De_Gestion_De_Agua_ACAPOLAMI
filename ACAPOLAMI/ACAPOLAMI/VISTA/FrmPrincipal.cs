@@ -12,7 +12,7 @@ namespace WilianMiranda01.VISTA
 {
     public partial class FmrPrincipal : Form
     {
-        public static string pagoBase = "2.00".Replace(",",".");
+        public static string pagoBase = "2.00";
 
         Form1 login = new Form1();
         FrmClientes data = new FrmClientes();

@@ -558,7 +558,7 @@ namespace ACAPOLAMI.VISTA
                 k.Handled = false;
             }
 
-            else if (k.KeyChar.ToString().Equals(","))
+            else if (k.KeyChar.ToString().Equals("."))
             {
                 k.Handled = false;
             }
