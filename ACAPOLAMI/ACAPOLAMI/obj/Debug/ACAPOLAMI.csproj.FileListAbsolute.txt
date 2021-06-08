@@ -183,7 +183,6 @@ C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ACAPOLAMI\ACAPOLAMI\bin\
 C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ACAPOLAMI\ACAPOLAMI\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ACAPOLAMI\ACAPOLAMI\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ACAPOLAMI\ACAPOLAMI\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ACAPOLAMI\ACAPOLAMI\obj\Debug\ACAPOLAMI.csprojAssemblyReference.cache
 C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ACAPOLAMI\ACAPOLAMI\obj\Debug\ACAPOLAMI.Properties.Resources.resources
 C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ACAPOLAMI\ACAPOLAMI\obj\Debug\WilianMiranda01.Form1.resources
 C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ACAPOLAMI\ACAPOLAMI\obj\Debug\ACAPOLAMI.VISTA.FrmAjustes.resources
@@ -377,7 +376,6 @@ C:\Users\Manuel Perlera\Documents\GitHub\Sistema_De_Gestion_De_Agua_ACAPOLAMI\AC
 C:\Users\Manuel Perlera\Documents\GitHub\Sistema_De_Gestion_De_Agua_ACAPOLAMI\ACAPOLAMI\ACAPOLAMI\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Manuel Perlera\Documents\GitHub\Sistema_De_Gestion_De_Agua_ACAPOLAMI\ACAPOLAMI\ACAPOLAMI\obj\Debug\ACAPOLAMI.csproj.CopyComplete
 C:\Users\Manuel Perlera\Documents\GitHub\Sistema_De_Gestion_De_Agua_ACAPOLAMI\ACAPOLAMI\ACAPOLAMI\obj\Debug\ACAPOLAMI.VISTA.FrmNotificaciones.resources
-C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ACAPOLAMI\ACAPOLAMI\obj\Debug\ACAPOLAMI.VISTA.FrmActividades.resources
 C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ACAPOLAMI\ACAPOLAMI\obj\Debug\ACAPOLAMI.VISTA.FrmNotificaciones.resources
 C:\Users\Manuel Perlera\Documents\GitHub\Sistema_De_Gestion_De_Agua_ACAPOLAMI\ACAPOLAMI\ACAPOLAMI\obj\Debug\ACAPOLAMI.VISTA.FrmGestionPagos.resources
 C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ACAPOLAMI\ACAPOLAMI\obj\Debug\ACAPOLAMI.VISTA.FrmGestionPagos.resources
@@ -492,3 +490,15 @@ C:\Users\cb272\Documents\GitHub\Sistema_De_Gestion_De_Agua_ACAPOLAMI\ACAPOLAMI\A
 C:\Users\cb272\Documents\GitHub\Sistema_De_Gestion_De_Agua_ACAPOLAMI\ACAPOLAMI\ACAPOLAMI\obj\Debug\ACAPOLAMI.application
 C:\Users\cb272\Documents\GitHub\Sistema_De_Gestion_De_Agua_ACAPOLAMI\ACAPOLAMI\ACAPOLAMI\obj\Debug\ACAPOLAMI.VISTA.FrmReporteActividad.resources
 C:\Users\Manuel Perlera\Documents\GitHub\Sistema_De_Gestion_De_Agua_ACAPOLAMI\ACAPOLAMI\ACAPOLAMI\obj\Debug\ACAPOLAMI.VISTA.FrmReporteActividad.resources
+C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ACAPOLAMI\ACAPOLAMI\bin\Debug\ACAPOLAMI.exe.manifest
+C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ACAPOLAMI\ACAPOLAMI\bin\Debug\ACAPOLAMI.application
+C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ACAPOLAMI\ACAPOLAMI\obj\Debug\ACAPOLAMI.csproj.AssemblyReference.cache
+C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ACAPOLAMI\ACAPOLAMI\obj\Debug\ACAPOLAMI.VISTA.FrmActividad.resources
+C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ACAPOLAMI\ACAPOLAMI\obj\Debug\ACAPOLAMI.VISTA.FrmDialogoAdvertencia.resources
+C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ACAPOLAMI\ACAPOLAMI\obj\Debug\ACAPOLAMI.VISTA.FrmDialogoError.resources
+C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ACAPOLAMI\ACAPOLAMI\obj\Debug\ACAPOLAMI.VISTA.FrmDialogoExito.resources
+C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ACAPOLAMI\ACAPOLAMI\obj\Debug\ACAPOLAMI.VISTA.FrmReporteActividad.resources
+C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ACAPOLAMI\ACAPOLAMI\obj\Debug\RdlCompile.cache
+C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ACAPOLAMI\ACAPOLAMI\obj\Debug\RdlCompile.compiled
+C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ACAPOLAMI\ACAPOLAMI\obj\Debug\ACAPOLAMI.exe.manifest
+C:\Users\Jose\Desktop\SOFTWARE_DE_GESTION_RURAL_DE_AGUA\ACAPOLAMI\ACAPOLAMI\obj\Debug\ACAPOLAMI.application

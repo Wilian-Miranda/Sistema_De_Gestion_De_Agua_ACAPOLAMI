@@ -44,6 +44,8 @@ namespace ACAPOLAMI.VISTA
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnEjecutar = new System.Windows.Forms.Button();
             this.pnlDatosPagos = new System.Windows.Forms.Panel();
+            this.txtIdRegistro = new System.Windows.Forms.TextBox();
+            this.lblIdRegistro = new System.Windows.Forms.Label();
             this.dtpFechaPago = new System.Windows.Forms.DateTimePicker();
             this.txtPendiente = new System.Windows.Forms.TextBox();
             this.lblPendiente = new System.Windows.Forms.Label();
@@ -89,7 +91,7 @@ namespace ACAPOLAMI.VISTA
             this.pnlBorde.Location = new System.Drawing.Point(0, 60);
             this.pnlBorde.Name = "pnlBorde";
             this.pnlBorde.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.pnlBorde.Size = new System.Drawing.Size(650, 611);
+            this.pnlBorde.Size = new System.Drawing.Size(650, 644);
             this.pnlBorde.TabIndex = 2;
             // 
             // pnlContenedorPrincipal
@@ -104,7 +106,7 @@ namespace ACAPOLAMI.VISTA
             this.pnlContenedorPrincipal.Location = new System.Drawing.Point(3, 0);
             this.pnlContenedorPrincipal.Name = "pnlContenedorPrincipal";
             this.pnlContenedorPrincipal.Padding = new System.Windows.Forms.Padding(0, 20, 0, 0);
-            this.pnlContenedorPrincipal.Size = new System.Drawing.Size(644, 608);
+            this.pnlContenedorPrincipal.Size = new System.Drawing.Size(644, 641);
             this.pnlContenedorPrincipal.TabIndex = 1;
             // 
             // pnlDatosConsumidor
@@ -213,7 +215,7 @@ namespace ACAPOLAMI.VISTA
             // 
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.Color.Black;
-            this.btnCancelar.Location = new System.Drawing.Point(357, 551);
+            this.btnCancelar.Location = new System.Drawing.Point(359, 588);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(250, 36);
             this.btnCancelar.TabIndex = 6;
@@ -229,7 +231,7 @@ namespace ACAPOLAMI.VISTA
             this.btnEjecutar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
             this.btnEjecutar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEjecutar.ForeColor = System.Drawing.Color.White;
-            this.btnEjecutar.Location = new System.Drawing.Point(37, 551);
+            this.btnEjecutar.Location = new System.Drawing.Point(39, 588);
             this.btnEjecutar.Name = "btnEjecutar";
             this.btnEjecutar.Size = new System.Drawing.Size(250, 36);
             this.btnEjecutar.TabIndex = 5;
@@ -243,6 +245,8 @@ namespace ACAPOLAMI.VISTA
             // pnlDatosPagos
             // 
             this.pnlDatosPagos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlDatosPagos.Controls.Add(this.txtIdRegistro);
+            this.pnlDatosPagos.Controls.Add(this.lblIdRegistro);
             this.pnlDatosPagos.Controls.Add(this.dtpFechaPago);
             this.pnlDatosPagos.Controls.Add(this.txtPendiente);
             this.pnlDatosPagos.Controls.Add(this.lblPendiente);
@@ -258,17 +262,40 @@ namespace ACAPOLAMI.VISTA
             this.pnlDatosPagos.Controls.Add(this.lblCancelado);
             this.pnlDatosPagos.Controls.Add(this.txtMontoBase);
             this.pnlDatosPagos.Controls.Add(this.lblMontoBase);
-            this.pnlDatosPagos.Location = new System.Drawing.Point(9, 246);
+            this.pnlDatosPagos.Location = new System.Drawing.Point(8, 236);
             this.pnlDatosPagos.Name = "pnlDatosPagos";
-            this.pnlDatosPagos.Size = new System.Drawing.Size(626, 283);
+            this.pnlDatosPagos.Size = new System.Drawing.Size(626, 337);
             this.pnlDatosPagos.TabIndex = 1;
+            // 
+            // txtIdRegistro
+            // 
+            this.txtIdRegistro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtIdRegistro.BackColor = System.Drawing.Color.White;
+            this.txtIdRegistro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtIdRegistro.ForeColor = System.Drawing.Color.Gray;
+            this.txtIdRegistro.Location = new System.Drawing.Point(30, 35);
+            this.txtIdRegistro.Margin = new System.Windows.Forms.Padding(3, 3, 3, 24);
+            this.txtIdRegistro.Name = "txtIdRegistro";
+            this.txtIdRegistro.ShortcutsEnabled = false;
+            this.txtIdRegistro.Size = new System.Drawing.Size(250, 26);
+            this.txtIdRegistro.TabIndex = 24;
+            this.txtIdRegistro.Text = "0";
+            // 
+            // lblIdRegistro
+            // 
+            this.lblIdRegistro.AutoSize = true;
+            this.lblIdRegistro.Location = new System.Drawing.Point(26, 13);
+            this.lblIdRegistro.Name = "lblIdRegistro";
+            this.lblIdRegistro.Size = new System.Drawing.Size(94, 19);
+            this.lblIdRegistro.TabIndex = 25;
+            this.lblIdRegistro.Text = "ID registro:";
             // 
             // dtpFechaPago
             // 
             this.dtpFechaPago.CalendarForeColor = System.Drawing.Color.Black;
             this.dtpFechaPago.CustomFormat = "dd/MM/yyyyy";
             this.dtpFechaPago.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFechaPago.Location = new System.Drawing.Point(347, 154);
+            this.dtpFechaPago.Location = new System.Drawing.Point(348, 225);
             this.dtpFechaPago.Name = "dtpFechaPago";
             this.dtpFechaPago.Size = new System.Drawing.Size(250, 26);
             this.dtpFechaPago.TabIndex = 23;
@@ -279,7 +306,7 @@ namespace ACAPOLAMI.VISTA
             this.txtPendiente.BackColor = System.Drawing.Color.White;
             this.txtPendiente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPendiente.ForeColor = System.Drawing.Color.Gray;
-            this.txtPendiente.Location = new System.Drawing.Point(27, 154);
+            this.txtPendiente.Location = new System.Drawing.Point(28, 225);
             this.txtPendiente.Margin = new System.Windows.Forms.Padding(3, 3, 3, 24);
             this.txtPendiente.Name = "txtPendiente";
             this.txtPendiente.ReadOnly = true;
@@ -291,7 +318,7 @@ namespace ACAPOLAMI.VISTA
             // lblPendiente
             // 
             this.lblPendiente.AutoSize = true;
-            this.lblPendiente.Location = new System.Drawing.Point(23, 132);
+            this.lblPendiente.Location = new System.Drawing.Point(24, 203);
             this.lblPendiente.Name = "lblPendiente";
             this.lblPendiente.Size = new System.Drawing.Size(92, 19);
             this.lblPendiente.TabIndex = 22;
@@ -300,7 +327,7 @@ namespace ACAPOLAMI.VISTA
             // lblFecha
             // 
             this.lblFecha.AutoSize = true;
-            this.lblFecha.Location = new System.Drawing.Point(345, 132);
+            this.lblFecha.Location = new System.Drawing.Point(346, 203);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(128, 19);
             this.lblFecha.TabIndex = 20;
@@ -313,7 +340,7 @@ namespace ACAPOLAMI.VISTA
             this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpiar.ForeColor = System.Drawing.Color.Black;
             this.btnLimpiar.Image = global::ACAPOLAMI.Properties.Resources.escoba;
-            this.btnLimpiar.Location = new System.Drawing.Point(469, 226);
+            this.btnLimpiar.Location = new System.Drawing.Point(470, 278);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(128, 43);
             this.btnLimpiar.TabIndex = 7;
@@ -333,7 +360,7 @@ namespace ACAPOLAMI.VISTA
             this.cbEstado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbEstado.ForeColor = System.Drawing.Color.Gray;
             this.cbEstado.FormattingEnabled = true;
-            this.cbEstado.Location = new System.Drawing.Point(27, 216);
+            this.cbEstado.Location = new System.Drawing.Point(28, 287);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(250, 27);
             this.cbEstado.TabIndex = 4;
@@ -341,7 +368,7 @@ namespace ACAPOLAMI.VISTA
             // lblEstado
             // 
             this.lblEstado.AutoSize = true;
-            this.lblEstado.Location = new System.Drawing.Point(25, 194);
+            this.lblEstado.Location = new System.Drawing.Point(26, 265);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(69, 19);
             this.lblEstado.TabIndex = 18;
@@ -353,7 +380,7 @@ namespace ACAPOLAMI.VISTA
             this.txtTotal.BackColor = System.Drawing.Color.White;
             this.txtTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTotal.ForeColor = System.Drawing.Color.Gray;
-            this.txtTotal.Location = new System.Drawing.Point(347, 95);
+            this.txtTotal.Location = new System.Drawing.Point(348, 166);
             this.txtTotal.Margin = new System.Windows.Forms.Padding(3, 3, 3, 24);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.ReadOnly = true;
@@ -365,7 +392,7 @@ namespace ACAPOLAMI.VISTA
             // lblDeudaAcumulada
             // 
             this.lblDeudaAcumulada.AutoSize = true;
-            this.lblDeudaAcumulada.Location = new System.Drawing.Point(343, 73);
+            this.lblDeudaAcumulada.Location = new System.Drawing.Point(344, 144);
             this.lblDeudaAcumulada.Name = "lblDeudaAcumulada";
             this.lblDeudaAcumulada.Size = new System.Drawing.Size(154, 19);
             this.lblDeudaAcumulada.TabIndex = 15;
@@ -377,7 +404,7 @@ namespace ACAPOLAMI.VISTA
             this.txtImpuesto.BackColor = System.Drawing.Color.White;
             this.txtImpuesto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtImpuesto.ForeColor = System.Drawing.Color.Gray;
-            this.txtImpuesto.Location = new System.Drawing.Point(27, 95);
+            this.txtImpuesto.Location = new System.Drawing.Point(28, 166);
             this.txtImpuesto.Margin = new System.Windows.Forms.Padding(3, 3, 3, 24);
             this.txtImpuesto.Name = "txtImpuesto";
             this.txtImpuesto.ShortcutsEnabled = false;
@@ -392,7 +419,7 @@ namespace ACAPOLAMI.VISTA
             // lblImpuesto
             // 
             this.lblImpuesto.AutoSize = true;
-            this.lblImpuesto.Location = new System.Drawing.Point(23, 73);
+            this.lblImpuesto.Location = new System.Drawing.Point(24, 144);
             this.lblImpuesto.Name = "lblImpuesto";
             this.lblImpuesto.Size = new System.Drawing.Size(86, 19);
             this.lblImpuesto.TabIndex = 13;
@@ -404,7 +431,7 @@ namespace ACAPOLAMI.VISTA
             this.txtCancelado.BackColor = System.Drawing.Color.White;
             this.txtCancelado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCancelado.ForeColor = System.Drawing.Color.Gray;
-            this.txtCancelado.Location = new System.Drawing.Point(347, 32);
+            this.txtCancelado.Location = new System.Drawing.Point(348, 103);
             this.txtCancelado.Margin = new System.Windows.Forms.Padding(3, 3, 3, 24);
             this.txtCancelado.Name = "txtCancelado";
             this.txtCancelado.ShortcutsEnabled = false;
@@ -419,7 +446,7 @@ namespace ACAPOLAMI.VISTA
             // lblCancelado
             // 
             this.lblCancelado.AutoSize = true;
-            this.lblCancelado.Location = new System.Drawing.Point(343, 10);
+            this.lblCancelado.Location = new System.Drawing.Point(344, 81);
             this.lblCancelado.Name = "lblCancelado";
             this.lblCancelado.Size = new System.Drawing.Size(97, 19);
             this.lblCancelado.TabIndex = 11;
@@ -432,7 +459,7 @@ namespace ACAPOLAMI.VISTA
             this.txtMontoBase.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMontoBase.Enabled = false;
             this.txtMontoBase.ForeColor = System.Drawing.Color.Gray;
-            this.txtMontoBase.Location = new System.Drawing.Point(27, 32);
+            this.txtMontoBase.Location = new System.Drawing.Point(28, 103);
             this.txtMontoBase.Margin = new System.Windows.Forms.Padding(3, 3, 3, 24);
             this.txtMontoBase.Name = "txtMontoBase";
             this.txtMontoBase.ReadOnly = true;
@@ -447,7 +474,7 @@ namespace ACAPOLAMI.VISTA
             // lblMontoBase
             // 
             this.lblMontoBase.AutoSize = true;
-            this.lblMontoBase.Location = new System.Drawing.Point(23, 10);
+            this.lblMontoBase.Location = new System.Drawing.Point(24, 81);
             this.lblMontoBase.Name = "lblMontoBase";
             this.lblMontoBase.Size = new System.Drawing.Size(104, 19);
             this.lblMontoBase.TabIndex = 7;
@@ -588,7 +615,7 @@ namespace ACAPOLAMI.VISTA
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(650, 671);
+            this.ClientSize = new System.Drawing.Size(650, 704);
             this.Controls.Add(this.pnlBorde);
             this.Controls.Add(this.pnlEncabezado);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -657,5 +684,7 @@ namespace ACAPOLAMI.VISTA
         public System.Windows.Forms.Panel pnlBuscador;
         private System.Windows.Forms.ComboBox cbConsumidor;
         public System.Windows.Forms.DateTimePicker dtpFechaPago;
+        public System.Windows.Forms.TextBox txtIdRegistro;
+        private System.Windows.Forms.Label lblIdRegistro;
     }
 }

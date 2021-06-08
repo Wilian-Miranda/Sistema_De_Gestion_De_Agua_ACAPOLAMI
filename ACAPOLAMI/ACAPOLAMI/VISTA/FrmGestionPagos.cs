@@ -24,14 +24,17 @@ namespace ACAPOLAMI.VISTA
         public FrmGestionPagos()
         {
             InitializeComponent();
+            CargarEstados();
             CargarConsumidor();
             txtMontoBase.Text = FmrPrincipal.pagoBase;
+            cbEstado.Text = estadoCB;
         }
 
         private void FrmGestioPagos_Load(object sender, EventArgs e)
         {
             DatosCBseleccionados();
-            CargarEstados();
+            cbEstado.SelectedIndex = -1;
+            cbEstado.Text = estadoCB;
 
             if (ValidacionCajasTexto() && btnEjecutar.Text.Equals("Actualizar"))
             {
@@ -40,12 +43,11 @@ namespace ACAPOLAMI.VISTA
             }
         }
 
-        public String estado;
+        public String estadoCB;
         public String nombreNonsumidor;
         private void DatosCBseleccionados()
         {
-           cbEstado.Text = estado;
-           cbConsumidor.Text = nombreNonsumidor;
+            cbConsumidor.Text = nombreNonsumidor;
             using (ACAPOLAMIEntities db = new ACAPOLAMIEntities())
             {
                 var cargarDatos = (from a in db.sp_MostrarConsumidores()
@@ -58,6 +60,7 @@ namespace ACAPOLAMI.VISTA
                     txtApellidos.Text = i.Apellidos;
                 }
             }
+
         }
 
         private void BuscarConsumidor()
@@ -316,7 +319,7 @@ namespace ACAPOLAMI.VISTA
 
                 try
                 {
-                    pago.EliminarPago(Convert.ToInt32(txtIdConsumidor.Text));
+                    pago.EliminarPago(Convert.ToInt32(txtIdRegistro.Text));
                 }
 
                 catch(Exception ex)
@@ -476,6 +479,7 @@ namespace ACAPOLAMI.VISTA
         //Evento para mover el formulario
         int posX = 0;
         int posY = 0;
+
         private void pnlEncabezado_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button!=MouseButtons.Left)

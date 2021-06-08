@@ -113,8 +113,12 @@ namespace WilianMiranda01.VISTA
 
             if (dtgPagos.SelectedRows.Count > 0)
             {
+                modificarPago.txtIdRegistro.Text = dtgPagos.CurrentRow.Cells[0].Value.ToString();
+
                 //cargando datos al formulario del modificar pago
                 modificarPago.Id = dtgPagos.CurrentRow.Cells[0].Value.ToString();
+                modificarPago.estadoCB = dtgPagos.CurrentRow.Cells[9].Value.ToString();
+
                 String nombres = dtgPagos.CurrentRow.Cells[1].Value.ToString();
                 String apellidos = dtgPagos.CurrentRow.Cells[2].Value.ToString();
                 modificarPago.nombreNonsumidor = nombres + " " + apellidos;
@@ -126,7 +130,7 @@ namespace WilianMiranda01.VISTA
                 modificarPago.dtpFechaPago.Text = dtgPagos.CurrentRow.Cells[8].Value.ToString();
                 modificarPago.txtTotal.Text = dtgPagos.CurrentRow.Cells[7].Value.ToString();
 
-                modificarPago.estado = dtgPagos.CurrentRow.Cells[8].Value.ToString();
+
 
                 modificarPago.pnlBuscador.Enabled = false;
 
@@ -149,13 +153,14 @@ namespace WilianMiranda01.VISTA
             nuevoPago.ShowDialog();
 
         }
-
         private void btnEliminarPago_Click(object sender, EventArgs e)
         {
             FrmGestionPagos eliminar = new FrmGestionPagos();
 
             if (dtgPagos.SelectedRows.Count > 0)
             {
+                eliminar.txtIdRegistro.Text = dtgPagos.CurrentRow.Cells[0].Value.ToString();
+
                 //cargando datos al formulario del modificar pago
                 String nombres = dtgPagos.CurrentRow.Cells[1].Value.ToString();
                 String apellidos = dtgPagos.CurrentRow.Cells[2].Value.ToString();
@@ -168,7 +173,7 @@ namespace WilianMiranda01.VISTA
                 eliminar.dtpFechaPago.Text = dtgPagos.CurrentRow.Cells[8].Value.ToString();
                 eliminar.txtTotal.Text = dtgPagos.CurrentRow.Cells[7].Value.ToString();
 
-                eliminar.estado = dtgPagos.CurrentRow.Cells[8].Value.ToString();
+                eliminar.estadoCB = dtgPagos.CurrentRow.Cells[9].Value.ToString();
 
                 eliminar.btnEjecutar.Text = "Eliminar";
                 eliminar.lblEncabezado.Text = "ELIMINAR PAGO";
