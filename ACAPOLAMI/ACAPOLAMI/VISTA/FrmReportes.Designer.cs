@@ -1,5 +1,4 @@
-﻿
-namespace ACAPOLAMI.VISTA
+﻿namespace ACAPOLAMI.VISTA
 {
     partial class FrmReportes
     {
@@ -29,301 +28,237 @@ namespace ACAPOLAMI.VISTA
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnlBorde = new System.Windows.Forms.Panel();
-            this.pnlContenedorReportes = new System.Windows.Forms.Panel();
-            this.panelSuperior = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pnlActividad = new System.Windows.Forms.Panel();
-            this.btnReporteActividad = new System.Windows.Forms.Button();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pnlConsumidor = new System.Windows.Forms.Panel();
-            this.btnReporteConsumidor = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pnlPagos = new System.Windows.Forms.Panel();
-            this.btnReportePagos = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.btnPagosPorConsumidorYear = new System.Windows.Forms.Button();
-            this.pnlBorde.SuspendLayout();
-            this.pnlContenedorReportes.SuspendLayout();
-            this.panelSuperior.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pnlContenedorFiltros = new System.Windows.Forms.Panel();
+            this.btnEjecutar = new System.Windows.Forms.Button();
+            this.lblFechaInicio = new System.Windows.Forms.Label();
+            this.cbConsumidores = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbTipoReporte = new System.Windows.Forms.ComboBox();
+            this.crystalReportViewer = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.txtFecha = new System.Windows.Forms.TextBox();
+            this.txtBuscador = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
-            this.pnlActividad.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.pnlConsumidor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.pnlPagos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.pnlContenedorFiltros.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pnlBorde
-            // 
-            this.pnlBorde.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlBorde.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
-            this.pnlBorde.Controls.Add(this.pnlContenedorReportes);
-            this.pnlBorde.Location = new System.Drawing.Point(-3, 0);
-            this.pnlBorde.Name = "pnlBorde";
-            this.pnlBorde.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.pnlBorde.Size = new System.Drawing.Size(1068, 654);
-            this.pnlBorde.TabIndex = 0;
-            // 
-            // pnlContenedorReportes
-            // 
-            this.pnlContenedorReportes.BackColor = System.Drawing.Color.Gainsboro;
-            this.pnlContenedorReportes.Controls.Add(this.panelSuperior);
-            this.pnlContenedorReportes.Controls.Add(this.panel1);
-            this.pnlContenedorReportes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContenedorReportes.Location = new System.Drawing.Point(3, 0);
-            this.pnlContenedorReportes.Name = "pnlContenedorReportes";
-            this.pnlContenedorReportes.Padding = new System.Windows.Forms.Padding(20, 23, 20, 20);
-            this.pnlContenedorReportes.Size = new System.Drawing.Size(1062, 651);
-            this.pnlContenedorReportes.TabIndex = 1;
-            // 
-            // panelSuperior
-            // 
-            this.panelSuperior.AutoSize = true;
-            this.panelSuperior.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.panelSuperior.Controls.Add(this.panel2);
-            this.panelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSuperior.Location = new System.Drawing.Point(20, 23);
-            this.panelSuperior.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.panelSuperior.Name = "panelSuperior";
-            this.panelSuperior.Padding = new System.Windows.Forms.Padding(0, 20, 0, 0);
-            this.panelSuperior.Size = new System.Drawing.Size(1022, 74);
-            this.panelSuperior.TabIndex = 11;
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(0, 4);
-            this.panel2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1022, 66);
-            this.panel2.TabIndex = 7;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(406, 22);
-            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(211, 19);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "REPORTES DEL SISTEMA";
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.pnlActividad);
-            this.panel1.Controls.Add(this.pnlConsumidor);
-            this.panel1.Controls.Add(this.pnlPagos);
-            this.panel1.Location = new System.Drawing.Point(23, 119);
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.txtBuscador);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.pnlContenedorFiltros);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.cbTipoReporte);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1019, 509);
-            this.panel1.TabIndex = 3;
+            this.panel1.Size = new System.Drawing.Size(872, 136);
+            this.panel1.TabIndex = 1;
             // 
-            // pnlActividad
+            // label2
             // 
-            this.pnlActividad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlActividad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlActividad.Controls.Add(this.btnReporteActividad);
-            this.pnlActividad.Controls.Add(this.pictureBox4);
-            this.pnlActividad.ForeColor = System.Drawing.Color.Black;
-            this.pnlActividad.Location = new System.Drawing.Point(19, 323);
-            this.pnlActividad.Name = "pnlActividad";
-            this.pnlActividad.Size = new System.Drawing.Size(980, 123);
-            this.pnlActividad.TabIndex = 2;
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(398, 13);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(70, 19);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Buscar:";
             // 
-            // btnReporteActividad
+            // button1
             // 
-            this.btnReporteActividad.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnReporteActividad.BackColor = System.Drawing.Color.AliceBlue;
-            this.btnReporteActividad.FlatAppearance.BorderSize = 0;
-            this.btnReporteActividad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReporteActividad.ForeColor = System.Drawing.Color.Black;
-            this.btnReporteActividad.Location = new System.Drawing.Point(250, 0);
-            this.btnReporteActividad.Name = "btnReporteActividad";
-            this.btnReporteActividad.Size = new System.Drawing.Size(729, 121);
-            this.btnReporteActividad.TabIndex = 1;
-            this.btnReporteActividad.Text = "REPORTE DE ACTIVIDAD";
-            this.btnReporteActividad.UseVisualStyleBackColor = false;
-            this.btnReporteActividad.Click += new System.EventHandler(this.btnReporteActividad_Click);
-            this.btnReporteActividad.MouseLeave += new System.EventHandler(this.btnReporteActividad_MouseLeave);
-            this.btnReporteActividad.MouseHover += new System.EventHandler(this.btnReporteActividad_MouseHover);
-            this.btnReporteActividad.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnReporteActividad_MouseMove);
+            this.button1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::ACAPOLAMI.Properties.Resources.lupa;
+            this.button1.Location = new System.Drawing.Point(808, 24);
+            this.button1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(50, 40);
+            this.button1.TabIndex = 11;
+            this.button1.UseVisualStyleBackColor = false;
             // 
-            // pictureBox4
+            // pnlContenedorFiltros
             // 
-            this.pictureBox4.BackColor = System.Drawing.Color.White;
-            this.pictureBox4.Image = global::ACAPOLAMI.Properties.Resources._3;
-            this.pictureBox4.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(250, 121);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 0;
-            this.pictureBox4.TabStop = false;
+            this.pnlContenedorFiltros.Controls.Add(this.txtFecha);
+            this.pnlContenedorFiltros.Controls.Add(this.btnEjecutar);
+            this.pnlContenedorFiltros.Controls.Add(this.lblFechaInicio);
+            this.pnlContenedorFiltros.Controls.Add(this.cbConsumidores);
+            this.pnlContenedorFiltros.Controls.Add(this.label7);
+            this.pnlContenedorFiltros.Controls.Add(this.btnLimpiar);
+            this.pnlContenedorFiltros.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlContenedorFiltros.Location = new System.Drawing.Point(0, 77);
+            this.pnlContenedorFiltros.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.pnlContenedorFiltros.Name = "pnlContenedorFiltros";
+            this.pnlContenedorFiltros.Size = new System.Drawing.Size(872, 59);
+            this.pnlContenedorFiltros.TabIndex = 8;
             // 
-            // pnlConsumidor
+            // btnEjecutar
             // 
-            this.pnlConsumidor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlConsumidor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlConsumidor.Controls.Add(this.btnReporteConsumidor);
-            this.pnlConsumidor.Controls.Add(this.pictureBox2);
-            this.pnlConsumidor.ForeColor = System.Drawing.Color.Gray;
-            this.pnlConsumidor.Location = new System.Drawing.Point(20, 65);
-            this.pnlConsumidor.Name = "pnlConsumidor";
-            this.pnlConsumidor.Size = new System.Drawing.Size(979, 123);
-            this.pnlConsumidor.TabIndex = 0;
+            this.btnEjecutar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
+            this.btnEjecutar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEjecutar.ForeColor = System.Drawing.Color.White;
+            this.btnEjecutar.Location = new System.Drawing.Point(650, 8);
+            this.btnEjecutar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.btnEjecutar.Name = "btnEjecutar";
+            this.btnEjecutar.Size = new System.Drawing.Size(148, 39);
+            this.btnEjecutar.TabIndex = 21;
+            this.btnEjecutar.Text = "Generar";
+            this.btnEjecutar.UseVisualStyleBackColor = false;
+            this.btnEjecutar.Click += new System.EventHandler(this.btnEjecutar_Click);
             // 
-            // btnReporteConsumidor
+            // lblFechaInicio
             // 
-            this.btnReporteConsumidor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnReporteConsumidor.BackColor = System.Drawing.Color.GhostWhite;
-            this.btnReporteConsumidor.FlatAppearance.BorderSize = 0;
-            this.btnReporteConsumidor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReporteConsumidor.ForeColor = System.Drawing.Color.Black;
-            this.btnReporteConsumidor.Location = new System.Drawing.Point(250, 0);
-            this.btnReporteConsumidor.Name = "btnReporteConsumidor";
-            this.btnReporteConsumidor.Size = new System.Drawing.Size(728, 121);
-            this.btnReporteConsumidor.TabIndex = 1;
-            this.btnReporteConsumidor.Text = "REPORTE DE CLIENTES";
-            this.btnReporteConsumidor.UseVisualStyleBackColor = false;
-            this.btnReporteConsumidor.Click += new System.EventHandler(this.btnReporteConsumidor_Click);
-            this.btnReporteConsumidor.MouseLeave += new System.EventHandler(this.btnReporteConsumidor_MouseLeave);
-            this.btnReporteConsumidor.MouseHover += new System.EventHandler(this.btnReporteConsumidor_MouseHover);
-            this.btnReporteConsumidor.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnReporteConsumidor_MouseMove);
+            this.lblFechaInicio.AutoSize = true;
+            this.lblFechaInicio.ForeColor = System.Drawing.Color.Black;
+            this.lblFechaInicio.Location = new System.Drawing.Point(406, 0);
+            this.lblFechaInicio.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblFechaInicio.Name = "lblFechaInicio";
+            this.lblFechaInicio.Size = new System.Drawing.Size(62, 19);
+            this.lblFechaInicio.TabIndex = 17;
+            this.lblFechaInicio.Tag = "";
+            this.lblFechaInicio.Text = "Fecha:";
             // 
-            // pictureBox2
+            // cbConsumidores
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.White;
-            this.pictureBox2.Image = global::ACAPOLAMI.Properties.Resources._1;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(250, 121);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
+            this.cbConsumidores.BackColor = System.Drawing.Color.White;
+            this.cbConsumidores.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbConsumidores.Enabled = false;
+            this.cbConsumidores.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbConsumidores.ForeColor = System.Drawing.Color.Black;
+            this.cbConsumidores.FormattingEnabled = true;
+            this.cbConsumidores.Location = new System.Drawing.Point(72, 23);
+            this.cbConsumidores.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.cbConsumidores.Name = "cbConsumidores";
+            this.cbConsumidores.Size = new System.Drawing.Size(323, 24);
+            this.cbConsumidores.TabIndex = 16;
             // 
-            // pnlPagos
+            // label7
             // 
-            this.pnlPagos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlPagos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlPagos.Controls.Add(this.btnPagosPorConsumidorYear);
-            this.pnlPagos.Controls.Add(this.btnReportePagos);
-            this.pnlPagos.Controls.Add(this.pictureBox3);
-            this.pnlPagos.ForeColor = System.Drawing.Color.Black;
-            this.pnlPagos.Location = new System.Drawing.Point(20, 194);
-            this.pnlPagos.Name = "pnlPagos";
-            this.pnlPagos.Size = new System.Drawing.Size(979, 123);
-            this.pnlPagos.TabIndex = 1;
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(72, 0);
+            this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(110, 19);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Consumidor:";
             // 
-            // btnReportePagos
+            // btnLimpiar
             // 
-            this.btnReportePagos.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnReportePagos.BackColor = System.Drawing.Color.Linen;
-            this.btnReportePagos.FlatAppearance.BorderSize = 0;
-            this.btnReportePagos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportePagos.ForeColor = System.Drawing.Color.Black;
-            this.btnReportePagos.Location = new System.Drawing.Point(617, 0);
-            this.btnReportePagos.Name = "btnReportePagos";
-            this.btnReportePagos.Size = new System.Drawing.Size(250, 121);
-            this.btnReportePagos.TabIndex = 1;
-            this.btnReportePagos.Text = "REPORTE DE PAGOS POR AÑO";
-            this.btnReportePagos.UseVisualStyleBackColor = false;
-            this.btnReportePagos.Click += new System.EventHandler(this.btnReportePagos_Click);
-            this.btnReportePagos.MouseLeave += new System.EventHandler(this.btnReportePagos_MouseLeave);
-            this.btnReportePagos.MouseHover += new System.EventHandler(this.btnReportePagos_MouseHover);
-            this.btnReportePagos.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnReportePagos_MouseMove);
+            this.btnLimpiar.FlatAppearance.BorderSize = 0;
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiar.Image = global::ACAPOLAMI.Properties.Resources.escoba;
+            this.btnLimpiar.Location = new System.Drawing.Point(0, 0);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(62, 47);
+            this.btnLimpiar.TabIndex = 11;
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
-            // pictureBox3
+            // label1
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.White;
-            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox3.Image = global::ACAPOLAMI.Properties.Resources._2;
-            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(250, 121);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(20, 13);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(231, 19);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Seleccione el tipo de reporte:";
             // 
-            // btnPagosPorConsumidorYear
+            // cbTipoReporte
             // 
-            this.btnPagosPorConsumidorYear.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnPagosPorConsumidorYear.BackColor = System.Drawing.Color.Linen;
-            this.btnPagosPorConsumidorYear.FlatAppearance.BorderSize = 0;
-            this.btnPagosPorConsumidorYear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPagosPorConsumidorYear.ForeColor = System.Drawing.Color.Black;
-            this.btnPagosPorConsumidorYear.Location = new System.Drawing.Point(355, -1);
-            this.btnPagosPorConsumidorYear.Name = "btnPagosPorConsumidorYear";
-            this.btnPagosPorConsumidorYear.Size = new System.Drawing.Size(256, 121);
-            this.btnPagosPorConsumidorYear.TabIndex = 2;
-            this.btnPagosPorConsumidorYear.Text = "REPORTE DE PAGOS POR CONSUMIDOR EN UN AÑO";
-            this.btnPagosPorConsumidorYear.UseVisualStyleBackColor = false;
-            this.btnPagosPorConsumidorYear.Click += new System.EventHandler(this.btnPagosPorConsumidorYear_Click);
+            this.cbTipoReporte.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cbTipoReporte.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTipoReporte.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbTipoReporte.FormattingEnabled = true;
+            this.cbTipoReporte.Items.AddRange(new object[] {
+            "Consumidores",
+            "Pagos por persona en un año",
+            "Reporte general de pagos",
+            "Reporte global"});
+            this.cbTipoReporte.Location = new System.Drawing.Point(25, 37);
+            this.cbTipoReporte.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.cbTipoReporte.Name = "cbTipoReporte";
+            this.cbTipoReporte.Size = new System.Drawing.Size(370, 24);
+            this.cbTipoReporte.TabIndex = 0;
+            this.cbTipoReporte.SelectedIndexChanged += new System.EventHandler(this.cbTipoReporte_SelectedIndexChanged);
+            // 
+            // crystalReportViewer
+            // 
+            this.crystalReportViewer.ActiveViewIndex = -1;
+            this.crystalReportViewer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crystalReportViewer.Location = new System.Drawing.Point(0, 136);
+            this.crystalReportViewer.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.crystalReportViewer.Name = "crystalReportViewer";
+            this.crystalReportViewer.Size = new System.Drawing.Size(872, 515);
+            this.crystalReportViewer.TabIndex = 2;
+            this.crystalReportViewer.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
+            this.crystalReportViewer.ToolPanelWidth = 333;
+            // 
+            // txtFecha
+            // 
+            this.txtFecha.Location = new System.Drawing.Point(410, 21);
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.Size = new System.Drawing.Size(232, 26);
+            this.txtFecha.TabIndex = 13;
+            // 
+            // txtBuscador
+            // 
+            this.txtBuscador.Location = new System.Drawing.Point(410, 35);
+            this.txtBuscador.Name = "txtBuscador";
+            this.txtBuscador.Size = new System.Drawing.Size(388, 26);
+            this.txtBuscador.TabIndex = 13;
+            this.txtBuscador.TextChanged += new System.EventHandler(this.txtBuscador_TextChanged);
             // 
             // FrmReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1064, 652);
-            this.Controls.Add(this.pnlBorde);
+            this.ClientSize = new System.Drawing.Size(872, 651);
+            this.Controls.Add(this.crystalReportViewer);
+            this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "FrmReportes";
-            this.Padding = new System.Windows.Forms.Padding(150, 80, 150, 80);
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmReportes";
-            this.pnlBorde.ResumeLayout(false);
-            this.pnlContenedorReportes.ResumeLayout(false);
-            this.pnlContenedorReportes.PerformLayout();
-            this.panelSuperior.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.Load += new System.EventHandler(this.FrmReportes_Load);
             this.panel1.ResumeLayout(false);
-            this.pnlActividad.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.pnlConsumidor.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.pnlPagos.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel1.PerformLayout();
+            this.pnlContenedorFiltros.ResumeLayout(false);
+            this.pnlContenedorFiltros.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel pnlBorde;
-        private System.Windows.Forms.Panel pnlContenedorReportes;
-        private System.Windows.Forms.Panel pnlConsumidor;
-        private System.Windows.Forms.Button btnReporteConsumidor;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel pnlPagos;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Panel pnlActividad;
-        private System.Windows.Forms.Button btnReporteActividad;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Button btnReportePagos;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panelSuperior;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnPagosPorConsumidorYear;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cbTipoReporte;
+        private System.Windows.Forms.Panel pnlContenedorFiltros;
+        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblFechaInicio;
+        private System.Windows.Forms.ComboBox cbConsumidores;
+        private System.Windows.Forms.Label label7;
+        public System.Windows.Forms.Button btnEjecutar;
+        private System.Windows.Forms.TextBox txtBuscador;
+        private System.Windows.Forms.TextBox txtFecha;
     }
 }

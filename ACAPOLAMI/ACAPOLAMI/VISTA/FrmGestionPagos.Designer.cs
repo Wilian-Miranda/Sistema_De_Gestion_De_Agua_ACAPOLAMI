@@ -53,7 +53,7 @@ namespace ACAPOLAMI.VISTA
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.cbEstado = new System.Windows.Forms.ComboBox();
             this.lblEstado = new System.Windows.Forms.Label();
-            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.txtAcumulado = new System.Windows.Forms.TextBox();
             this.lblDeudaAcumulada = new System.Windows.Forms.Label();
             this.txtImpuesto = new System.Windows.Forms.TextBox();
             this.lblImpuesto = new System.Windows.Forms.Label();
@@ -135,7 +135,7 @@ namespace ACAPOLAMI.VISTA
             this.txtIdConsumidor.Name = "txtIdConsumidor";
             this.txtIdConsumidor.ReadOnly = true;
             this.txtIdConsumidor.ShortcutsEnabled = false;
-            this.txtIdConsumidor.Size = new System.Drawing.Size(250, 26);
+            this.txtIdConsumidor.Size = new System.Drawing.Size(250, 30);
             this.txtIdConsumidor.TabIndex = 1;
             this.txtIdConsumidor.Tag = "";
             this.txtIdConsumidor.Text = "Codigo";
@@ -147,7 +147,7 @@ namespace ACAPOLAMI.VISTA
             this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label1.Location = new System.Drawing.Point(25, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(208, 23);
+            this.label1.Size = new System.Drawing.Size(256, 28);
             this.label1.TabIndex = 15;
             this.label1.Text = "Datos del consumidor:";
             // 
@@ -162,7 +162,7 @@ namespace ACAPOLAMI.VISTA
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.ReadOnly = true;
             this.txtApellidos.ShortcutsEnabled = false;
-            this.txtApellidos.Size = new System.Drawing.Size(250, 26);
+            this.txtApellidos.Size = new System.Drawing.Size(250, 30);
             this.txtApellidos.TabIndex = 15;
             this.txtApellidos.Tag = "";
             this.txtApellidos.Text = "Primero Segundo";
@@ -172,7 +172,7 @@ namespace ACAPOLAMI.VISTA
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(345, 53);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 19);
+            this.label4.Size = new System.Drawing.Size(103, 24);
             this.label4.TabIndex = 15;
             this.label4.Text = "Apellidos:";
             // 
@@ -189,7 +189,7 @@ namespace ACAPOLAMI.VISTA
             this.txtNombres.Name = "txtNombres";
             this.txtNombres.ReadOnly = true;
             this.txtNombres.ShortcutsEnabled = false;
-            this.txtNombres.Size = new System.Drawing.Size(250, 26);
+            this.txtNombres.Size = new System.Drawing.Size(250, 30);
             this.txtNombres.TabIndex = 15;
             this.txtNombres.Text = "Primero Segundo";
             // 
@@ -198,7 +198,7 @@ namespace ACAPOLAMI.VISTA
             this.lblNombres.AutoSize = true;
             this.lblNombres.Location = new System.Drawing.Point(25, 53);
             this.lblNombres.Name = "lblNombres";
-            this.lblNombres.Size = new System.Drawing.Size(85, 19);
+            this.lblNombres.Size = new System.Drawing.Size(102, 24);
             this.lblNombres.TabIndex = 15;
             this.lblNombres.Text = "Nombres:";
             // 
@@ -207,7 +207,7 @@ namespace ACAPOLAMI.VISTA
             this.lblId.AutoSize = true;
             this.lblId.Location = new System.Drawing.Point(310, 8);
             this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(31, 19);
+            this.lblId.Size = new System.Drawing.Size(36, 24);
             this.lblId.TabIndex = 15;
             this.lblId.Text = "ID:";
             // 
@@ -254,7 +254,7 @@ namespace ACAPOLAMI.VISTA
             this.pnlDatosPagos.Controls.Add(this.btnLimpiar);
             this.pnlDatosPagos.Controls.Add(this.cbEstado);
             this.pnlDatosPagos.Controls.Add(this.lblEstado);
-            this.pnlDatosPagos.Controls.Add(this.txtTotal);
+            this.pnlDatosPagos.Controls.Add(this.txtAcumulado);
             this.pnlDatosPagos.Controls.Add(this.lblDeudaAcumulada);
             this.pnlDatosPagos.Controls.Add(this.txtImpuesto);
             this.pnlDatosPagos.Controls.Add(this.lblImpuesto);
@@ -276,8 +276,9 @@ namespace ACAPOLAMI.VISTA
             this.txtIdRegistro.Location = new System.Drawing.Point(30, 35);
             this.txtIdRegistro.Margin = new System.Windows.Forms.Padding(3, 3, 3, 24);
             this.txtIdRegistro.Name = "txtIdRegistro";
+            this.txtIdRegistro.ReadOnly = true;
             this.txtIdRegistro.ShortcutsEnabled = false;
-            this.txtIdRegistro.Size = new System.Drawing.Size(250, 26);
+            this.txtIdRegistro.Size = new System.Drawing.Size(250, 30);
             this.txtIdRegistro.TabIndex = 24;
             this.txtIdRegistro.Text = "0";
             // 
@@ -286,7 +287,7 @@ namespace ACAPOLAMI.VISTA
             this.lblIdRegistro.AutoSize = true;
             this.lblIdRegistro.Location = new System.Drawing.Point(26, 13);
             this.lblIdRegistro.Name = "lblIdRegistro";
-            this.lblIdRegistro.Size = new System.Drawing.Size(94, 19);
+            this.lblIdRegistro.Size = new System.Drawing.Size(116, 24);
             this.lblIdRegistro.TabIndex = 25;
             this.lblIdRegistro.Text = "ID registro:";
             // 
@@ -297,7 +298,7 @@ namespace ACAPOLAMI.VISTA
             this.dtpFechaPago.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpFechaPago.Location = new System.Drawing.Point(348, 225);
             this.dtpFechaPago.Name = "dtpFechaPago";
-            this.dtpFechaPago.Size = new System.Drawing.Size(250, 26);
+            this.dtpFechaPago.Size = new System.Drawing.Size(250, 30);
             this.dtpFechaPago.TabIndex = 23;
             // 
             // txtPendiente
@@ -311,7 +312,7 @@ namespace ACAPOLAMI.VISTA
             this.txtPendiente.Name = "txtPendiente";
             this.txtPendiente.ReadOnly = true;
             this.txtPendiente.ShortcutsEnabled = false;
-            this.txtPendiente.Size = new System.Drawing.Size(250, 26);
+            this.txtPendiente.Size = new System.Drawing.Size(250, 30);
             this.txtPendiente.TabIndex = 21;
             this.txtPendiente.Text = "0.0000";
             // 
@@ -320,7 +321,7 @@ namespace ACAPOLAMI.VISTA
             this.lblPendiente.AutoSize = true;
             this.lblPendiente.Location = new System.Drawing.Point(24, 203);
             this.lblPendiente.Name = "lblPendiente";
-            this.lblPendiente.Size = new System.Drawing.Size(92, 19);
+            this.lblPendiente.Size = new System.Drawing.Size(111, 24);
             this.lblPendiente.TabIndex = 22;
             this.lblPendiente.Text = "Pendiente:";
             // 
@@ -329,7 +330,7 @@ namespace ACAPOLAMI.VISTA
             this.lblFecha.AutoSize = true;
             this.lblFecha.Location = new System.Drawing.Point(346, 203);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(128, 19);
+            this.lblFecha.Size = new System.Drawing.Size(156, 24);
             this.lblFecha.TabIndex = 20;
             this.lblFecha.Text = "Fecha de pago:";
             // 
@@ -362,7 +363,7 @@ namespace ACAPOLAMI.VISTA
             this.cbEstado.FormattingEnabled = true;
             this.cbEstado.Location = new System.Drawing.Point(28, 287);
             this.cbEstado.Name = "cbEstado";
-            this.cbEstado.Size = new System.Drawing.Size(250, 27);
+            this.cbEstado.Size = new System.Drawing.Size(250, 32);
             this.cbEstado.TabIndex = 4;
             // 
             // lblEstado
@@ -370,31 +371,31 @@ namespace ACAPOLAMI.VISTA
             this.lblEstado.AutoSize = true;
             this.lblEstado.Location = new System.Drawing.Point(26, 265);
             this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(69, 19);
+            this.lblEstado.Size = new System.Drawing.Size(83, 24);
             this.lblEstado.TabIndex = 18;
             this.lblEstado.Text = "Estado:";
             // 
-            // txtTotal
+            // txtAcumulado
             // 
-            this.txtTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTotal.BackColor = System.Drawing.Color.White;
-            this.txtTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTotal.ForeColor = System.Drawing.Color.Gray;
-            this.txtTotal.Location = new System.Drawing.Point(348, 166);
-            this.txtTotal.Margin = new System.Windows.Forms.Padding(3, 3, 3, 24);
-            this.txtTotal.Name = "txtTotal";
-            this.txtTotal.ReadOnly = true;
-            this.txtTotal.ShortcutsEnabled = false;
-            this.txtTotal.Size = new System.Drawing.Size(250, 26);
-            this.txtTotal.TabIndex = 15;
-            this.txtTotal.Text = "0.0000";
+            this.txtAcumulado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAcumulado.BackColor = System.Drawing.Color.White;
+            this.txtAcumulado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAcumulado.ForeColor = System.Drawing.Color.Gray;
+            this.txtAcumulado.Location = new System.Drawing.Point(348, 166);
+            this.txtAcumulado.Margin = new System.Windows.Forms.Padding(3, 3, 3, 24);
+            this.txtAcumulado.Name = "txtAcumulado";
+            this.txtAcumulado.ReadOnly = true;
+            this.txtAcumulado.ShortcutsEnabled = false;
+            this.txtAcumulado.Size = new System.Drawing.Size(250, 30);
+            this.txtAcumulado.TabIndex = 15;
+            this.txtAcumulado.Text = "0.0000";
             // 
             // lblDeudaAcumulada
             // 
             this.lblDeudaAcumulada.AutoSize = true;
             this.lblDeudaAcumulada.Location = new System.Drawing.Point(344, 144);
             this.lblDeudaAcumulada.Name = "lblDeudaAcumulada";
-            this.lblDeudaAcumulada.Size = new System.Drawing.Size(154, 19);
+            this.lblDeudaAcumulada.Size = new System.Drawing.Size(186, 24);
             this.lblDeudaAcumulada.TabIndex = 15;
             this.lblDeudaAcumulada.Text = "Deuda Acumulada:";
             // 
@@ -408,9 +409,9 @@ namespace ACAPOLAMI.VISTA
             this.txtImpuesto.Margin = new System.Windows.Forms.Padding(3, 3, 3, 24);
             this.txtImpuesto.Name = "txtImpuesto";
             this.txtImpuesto.ShortcutsEnabled = false;
-            this.txtImpuesto.Size = new System.Drawing.Size(250, 26);
+            this.txtImpuesto.Size = new System.Drawing.Size(250, 30);
             this.txtImpuesto.TabIndex = 3;
-            this.txtImpuesto.Text = "0.0000";
+            this.txtImpuesto.Text = "0.00";
             this.txtImpuesto.Enter += new System.EventHandler(this.txtImpuesto_Enter);
             this.txtImpuesto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtImpuesto_KeyPress);
             this.txtImpuesto.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtImpuesto_KeyUp);
@@ -421,7 +422,7 @@ namespace ACAPOLAMI.VISTA
             this.lblImpuesto.AutoSize = true;
             this.lblImpuesto.Location = new System.Drawing.Point(24, 144);
             this.lblImpuesto.Name = "lblImpuesto";
-            this.lblImpuesto.Size = new System.Drawing.Size(86, 19);
+            this.lblImpuesto.Size = new System.Drawing.Size(104, 24);
             this.lblImpuesto.TabIndex = 13;
             this.lblImpuesto.Text = "Impuesto:";
             // 
@@ -435,12 +436,13 @@ namespace ACAPOLAMI.VISTA
             this.txtCancelado.Margin = new System.Windows.Forms.Padding(3, 3, 3, 24);
             this.txtCancelado.Name = "txtCancelado";
             this.txtCancelado.ShortcutsEnabled = false;
-            this.txtCancelado.Size = new System.Drawing.Size(250, 26);
+            this.txtCancelado.Size = new System.Drawing.Size(250, 30);
             this.txtCancelado.TabIndex = 2;
-            this.txtCancelado.Text = "0.0000";
+            this.txtCancelado.Text = "0.00";
             this.txtCancelado.Enter += new System.EventHandler(this.txtCancelado_Enter);
             this.txtCancelado.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCancelado_KeyDown);
             this.txtCancelado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCancelado_KeyPress);
+            this.txtCancelado.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtCancelado_KeyUp);
             this.txtCancelado.Leave += new System.EventHandler(this.txtCancelado_Leave);
             // 
             // lblCancelado
@@ -448,7 +450,7 @@ namespace ACAPOLAMI.VISTA
             this.lblCancelado.AutoSize = true;
             this.lblCancelado.Location = new System.Drawing.Point(344, 81);
             this.lblCancelado.Name = "lblCancelado";
-            this.lblCancelado.Size = new System.Drawing.Size(97, 19);
+            this.lblCancelado.Size = new System.Drawing.Size(116, 24);
             this.lblCancelado.TabIndex = 11;
             this.lblCancelado.Text = "Cancelado:";
             // 
@@ -464,7 +466,7 @@ namespace ACAPOLAMI.VISTA
             this.txtMontoBase.Name = "txtMontoBase";
             this.txtMontoBase.ReadOnly = true;
             this.txtMontoBase.ShortcutsEnabled = false;
-            this.txtMontoBase.Size = new System.Drawing.Size(250, 26);
+            this.txtMontoBase.Size = new System.Drawing.Size(250, 30);
             this.txtMontoBase.TabIndex = 10;
             this.txtMontoBase.Text = "0.0000";
             this.txtMontoBase.Enter += new System.EventHandler(this.txtMontoBase_Enter);
@@ -476,7 +478,7 @@ namespace ACAPOLAMI.VISTA
             this.lblMontoBase.AutoSize = true;
             this.lblMontoBase.Location = new System.Drawing.Point(24, 81);
             this.lblMontoBase.Name = "lblMontoBase";
-            this.lblMontoBase.Size = new System.Drawing.Size(104, 19);
+            this.lblMontoBase.Size = new System.Drawing.Size(128, 24);
             this.lblMontoBase.TabIndex = 7;
             this.lblMontoBase.Text = "Monto base:";
             // 
@@ -498,7 +500,7 @@ namespace ACAPOLAMI.VISTA
             this.cbConsumidor.FormattingEnabled = true;
             this.cbConsumidor.Location = new System.Drawing.Point(130, 12);
             this.cbConsumidor.Name = "cbConsumidor";
-            this.cbConsumidor.Size = new System.Drawing.Size(425, 27);
+            this.cbConsumidor.Size = new System.Drawing.Size(425, 32);
             this.cbConsumidor.Sorted = true;
             this.cbConsumidor.TabIndex = 1;
             this.cbConsumidor.SelectedIndexChanged += new System.EventHandler(this.cbConsumidor_SelectedIndexChanged);
@@ -527,7 +529,7 @@ namespace ACAPOLAMI.VISTA
             this.label2.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(3, 17);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 23);
+            this.label2.Size = new System.Drawing.Size(149, 28);
             this.label2.TabIndex = 18;
             this.label2.Text = "Consumidor:";
             // 
@@ -565,7 +567,7 @@ namespace ACAPOLAMI.VISTA
             this.lblEncabezado.ForeColor = System.Drawing.Color.White;
             this.lblEncabezado.Location = new System.Drawing.Point(100, 13);
             this.lblEncabezado.Name = "lblEncabezado";
-            this.lblEncabezado.Size = new System.Drawing.Size(347, 33);
+            this.lblEncabezado.Size = new System.Drawing.Size(431, 42);
             this.lblEncabezado.TabIndex = 1;
             this.lblEncabezado.Text = "NUEVO RECIBO DE PAGO";
             // 
@@ -589,8 +591,9 @@ namespace ACAPOLAMI.VISTA
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackgroundImage = global::ACAPOLAMI.Properties.Resources.LOGO11;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(3, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(53, 60);
@@ -612,7 +615,7 @@ namespace ACAPOLAMI.VISTA
             // 
             // FrmGestionPagos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(650, 704);
@@ -621,6 +624,7 @@ namespace ACAPOLAMI.VISTA
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "FrmGestionPagos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -667,7 +671,7 @@ namespace ACAPOLAMI.VISTA
         private System.Windows.Forms.Label lblNombres;
         public System.Windows.Forms.Label lblId;
         private System.Windows.Forms.Label lblEstado;
-        public System.Windows.Forms.TextBox txtTotal;
+        public System.Windows.Forms.TextBox txtAcumulado;
         public System.Windows.Forms.ComboBox cbEstado;
         public System.Windows.Forms.TextBox txtIdConsumidor;
         private System.Windows.Forms.Label label2;

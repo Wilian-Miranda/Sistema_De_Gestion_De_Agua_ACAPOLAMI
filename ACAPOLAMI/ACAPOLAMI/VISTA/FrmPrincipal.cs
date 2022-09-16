@@ -5,17 +5,15 @@ using System.Windows.Forms;
 using System.Linq;
 using ACAPOLAMI.NEGOCIO;
 using ACAPOLAMI.DOMINIO;
-using ACAPOLAMI.VISTA;
-using ProyectoCiclo3.VISTA;
 
-namespace WilianMiranda01.VISTA
+namespace ACAPOLAMI.VISTA
 {
-    public partial class FmrPrincipal : Form
+    public partial class FrmPrincipal : Form
     {
         public static string pagoBase = "2.00";
 
-        Form1 login = new Form1();
-        FrmClientes data = new FrmClientes();
+        FrmLogin login = new FrmLogin();
+        //FrmClientes data = new FrmClientes();
         //variable para almacenar el botón actual
         public Button btnEnUso;
         //panel para aplicar el borde del lado izquierdo del botón
@@ -24,7 +22,7 @@ namespace WilianMiranda01.VISTA
         public Boolean estado = false;
 
         //constructor
-        public FmrPrincipal()
+        public FrmPrincipal()
         {
             InitializeComponent();
             //inicializando el borde izquierdo del botón
@@ -38,14 +36,11 @@ namespace WilianMiranda01.VISTA
             {
                 Reiniciar();
             }
+            AbrirFormEnPanel <FrmDashboard> ();
         }
 
         ClsButtonColor button = new ClsButtonColor();
         ButtonColor btn = new ButtonColor();
-
-        //Maximizar y minimizar
-        int lx, ly;
-        int sw, sh;
 
         private void btnPagos_Click(object sender, EventArgs e)
         {
@@ -92,7 +87,7 @@ namespace WilianMiranda01.VISTA
             // Se pasa como parametro el objeto sender; el boton que es seleccionado, y un color.
             BotonActivo(sender, Color.White);
 
-            AbrirFormEnPanel<FrmClientes>();
+            AbrirFormEnPanel<FrmConsumidores>();
             this.Text = "ACAPOLAMI - Consumidores";
         }
 
@@ -153,11 +148,6 @@ namespace WilianMiranda01.VISTA
                 //trayendo al frente
                 bordeIzquierdoDelBoton.BringToFront();
             }
-        }
-
-        internal void BotonActivo(object sender)
-        {
-            throw new NotImplementedException();
         }
 
         private Form formulario;
@@ -323,8 +313,7 @@ namespace WilianMiranda01.VISTA
 
         private void tmrTiempo_Tick(object sender, EventArgs e)
         {
-            lblHora.Text = DateTime.Now.ToString("hh:mm:ss");
-            lblFecha.Text = DateTime.Now.ToLongDateString();
+
         }
 
         int posX = 0;
@@ -393,27 +382,14 @@ namespace WilianMiranda01.VISTA
 
         private void btnMaximizar_Click(object sender, EventArgs e)
         {
-            //Guarda la posicion actual
-            lx = Location.X;
-            ly = Location.Y;
-            sw = Size.Width;
-            sh = Size.Height;
-
-            //ocupar toda la pantalla
-            Size = Screen.PrimaryScreen.WorkingArea.Size;
-            Location = Screen.PrimaryScreen.WorkingArea.Location;
-
-            btnMaximizar.Visible = false;
-            btnRestaurar.Visible = true;
-        }
-
-        private void btnRestaurar_Click(object sender, EventArgs e)
-        {
-            Size = new Size(sw, sh);
-            Location = new Point(lx, ly);
-
-            btnRestaurar.Visible = false;
-            btnMaximizar.Visible = true;
+            if (WindowState == FormWindowState.Normal)
+            {
+                WindowState = FormWindowState.Maximized;
+            }
+            else
+            {
+                WindowState = FormWindowState.Normal;
+            }
         }
 
         private void btnCerrarSesión_MouseMove(object sender, MouseEventArgs e)
@@ -430,7 +406,7 @@ namespace WilianMiranda01.VISTA
 
             if (resultado == DialogResult.OK)
             {
-                Form1 login = new Form1();
+                FrmLogin login = new FrmLogin();
                 this.ptrLogo_Click(sender, e);
                 this.Hide();
                 login.Show();

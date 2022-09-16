@@ -16,6 +16,7 @@ namespace ACAPOLAMI.VISTA
 {
     public partial class FrmGestionConsumidores : Form
     {
+        public FrmConsumidores currentFormConsumidores;
         ClsDSucesos sucesos = new ClsDSucesos();
         public FrmGestionConsumidores()
         {
@@ -104,16 +105,6 @@ namespace ACAPOLAMI.VISTA
             }
         }
 
-        private void txtTelefono_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtTelefono_Leave(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtCorreo_Enter(object sender, EventArgs e)
         {
             if (txtCorreo.Text.Equals("ejemplo@correo.com"))
@@ -135,12 +126,12 @@ namespace ACAPOLAMI.VISTA
         //metodo para limpiar las cajas de texto si se elije el radiobutton agregar
         private void Limpiar()
         {
-                txtNombres.Text= "Introduzca los nombres";
-                txtApellidos.Text = "Introduzca los apellidos";
-                txtDUI.Text= "Introduzca el número de DUI";
-                txtTelefono.Text= "0000-0000";
-                txtCorreo.Text = "ejemplo@correo.com";
-                ListarComunidades();
+            txtNombres.Text = "Primero Segundo";
+            txtApellidos.Text = "Primero Segundo";
+            txtDUI.Clear();
+            txtTelefono.Clear();
+            txtCorreo.Text = "ejemplo@correo.com";
+            cbComunidad.SelectedIndex = -1;
         }
 
 
@@ -148,7 +139,7 @@ namespace ACAPOLAMI.VISTA
         private string idComunidadSeleccionado = "";
         private void cbComunidad_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbComunidad.SelectedValue != null)
+            if (cbComunidad.SelectedValue != null && cbComunidad.SelectedIndex != -1)
             {
                 idComunidadSeleccionado = cbComunidad.SelectedValue.ToString();
             }
@@ -166,7 +157,10 @@ namespace ACAPOLAMI.VISTA
                     cbComunidad.DataSource = lista;
                     cbComunidad.DisplayMember = "nombreComunidad";
                     cbComunidad.ValueMember = "idComunidad";
+
+                    cbComunidad.SelectedIndex = -1;
                 }
+
             }
 
         }
@@ -261,47 +255,40 @@ namespace ACAPOLAMI.VISTA
 
         private void btnEjecutar_Click(object sender, EventArgs e)
         {
-            BorrarMensajesError();
             if(ValidarCajasTexto() && btnEjecutar.Text.Equals("Agregar"))
             {
                 //Metodo para guardar nuevo consumidor
                 ClsDConsumidores clsconsumidor = new ClsDConsumidores();
 
-                Consumidores consumidor = new Consumidores();
+                //Consumidores consumidor = new Consumidores();
 
-                if (cbComunidad.Text == "")
+                if (cbComunidad.SelectedIndex != -1 && cbComunidad.SelectedValue != null)
                 {
-                    consumidor.idComunidad_FK = null;
+                    
+                    try
+                    {
+                        clsconsumidor.InsertarConsumidor(txtNombres.Text, txtApellidos.Text, txtDUI.Text,
+                        txtTelefono.Text, txtCorreo.Text, Convert.ToInt32(idComunidadSeleccionado));
+                        
+                        FrmNotificaciones notificacion = new FrmNotificaciones(sucesos.CargarDatosSucesos().tipoSuceso,
+                                    sucesos.CargarDatosSucesos().descripcion, FrmNotificaciones.TipoAlerta.Realizado);
+                        notificacion.Show();
+
+                        Limpiar();
+                        currentFormConsumidores.MostrarConsumidores();
+
+                    }
+
+                    catch (Exception ex)
+                    {
+                        FrmDialogoError.Error("Ha ocurrido el siguiente error: " + ex.Message);
+                    }
                 }
                 else
                 {
-                    try
-                    {
-
-                    consumidor.idComunidad_FK = Convert.ToInt32(idComunidadSeleccionado);
-                    }
-                    catch(Exception ex)
-                    {
-                        FrmDialogoError.Error("Seleccione la comunidad");
-                    }
+                    FrmDialogoError.Error("Seleccione la comunidad");
                 }
 
-                try
-                {
-                    clsconsumidor.InsertarConsumidor(txtNombres.Text, txtApellidos.Text, txtDUI.Text,
-                    txtTelefono.Text, txtCorreo.Text, Convert.ToInt32(idComunidadSeleccionado));
-                FrmNotificaciones notificacion = new FrmNotificaciones(sucesos.CargarDatosSucesos().tipoSuceso,
-                            sucesos.CargarDatosSucesos().descripcion, FrmNotificaciones.TipoAlerta.Realizado);
-                notificacion.Show();
-
-                Limpiar();
-
-                }
-
-                catch (Exception ex)
-                {
-                    FrmDialogoError.Error("Ha ocurrido el siguiente error: " + ex.Message);
-                }
 
             }
 
@@ -321,6 +308,7 @@ namespace ACAPOLAMI.VISTA
                     notificacion.Show();
 
                     Limpiar();
+                    currentFormConsumidores.MostrarConsumidores();
                 }
 
                 catch (Exception ex)
@@ -330,7 +318,7 @@ namespace ACAPOLAMI.VISTA
 
                 this.Close();
             }
-            else if (ValidarCajasTexto() && btnEjecutar.Text.Equals("Eliminar"))
+            else if (btnEjecutar.Text.Equals("Eliminar"))
             {
                 //Metodo para eliminar consumidor
                 try
@@ -342,6 +330,7 @@ namespace ACAPOLAMI.VISTA
                     FrmNotificaciones notificacion = new FrmNotificaciones(sucesos.CargarDatosSucesos().tipoSuceso,
                         sucesos.CargarDatosSucesos().descripcion, FrmNotificaciones.TipoAlerta.Error);
                     notificacion.Show();
+                    currentFormConsumidores.MostrarConsumidores();
 
                     this.Dispose();
                 }
@@ -360,31 +349,28 @@ namespace ACAPOLAMI.VISTA
         {
             Boolean permitir = true;
 
-            if (txtNombres.Text.Equals("Introduzca los nombres"))
+            ControlValidacion.SetError(txtNombres, "");
+            ControlValidacion.SetError(txtApellidos, "");
+            ControlValidacion.SetError(txtDUI, "");
+
+            if (txtNombres.Text.Equals("Primero Segundo"))
             {                     //colocamos el icono de error, se manda el nombre de la caja y un mensaje
                 ControlValidacion.SetError(txtNombres, "Este campo es obligatorio");
                 permitir = false;
             }
-            if (txtApellidos.Text.Equals("Introduzca los apellidos"))
+            if (txtApellidos.Text.Equals("Primero Segundo"))
             {                     //colocamos el icono de error, se manda el nombre de la caja y un mensaje
                 ControlValidacion.SetError(txtApellidos, "Este campo es obligatorio");
                 permitir = false;
             }
-            if (txtDUI.Text.Equals("Introduzca el número de DUI"))
+            String []telefono = txtTelefono.Text.Split('-');
+            if (telefono[0].Trim().Length < 4 || telefono[1].Trim().Length < 4)
             {                     //colocamos el icono de error, se manda el nombre de la caja y un mensaje
-                ControlValidacion.SetError(txtDUI, "Este campo es obligatorio");
-                permitir = false;
+                ControlValidacion.SetError(txtTelefono, "Este campo es obligatorio");
+                permitir = false;               
             }
            
             return permitir;
-        }
-
-        //metodo para eliminar cuando se hayan ingresado datos en los campos obligatorios
-        private void BorrarMensajesError()
-        {
-            ControlValidacion.SetError(txtNombres, "");
-            ControlValidacion.SetError(txtApellidos, "");
-            ControlValidacion.SetError(txtDUI, "");
         }
 
         private void FrmGestionConsumidores_Load(object sender, EventArgs e)

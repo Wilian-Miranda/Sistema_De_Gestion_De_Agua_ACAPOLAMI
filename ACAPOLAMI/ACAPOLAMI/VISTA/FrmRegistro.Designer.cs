@@ -1,7 +1,7 @@
 ﻿
-namespace WilianMiranda01.VISTA
+namespace ACAPOLAMI.VISTA
 {
-    partial class FrmRegistroUsuario
+    partial class FrmRegistro
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace WilianMiranda01.VISTA
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRegistroUsuario));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRegistro));
             this.btnCancelarRegistro = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.btnRegistrarUsuario = new System.Windows.Forms.Button();
@@ -38,13 +38,13 @@ namespace WilianMiranda01.VISTA
             this.label1 = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.pnlCabeceraRegistroUsuario = new System.Windows.Forms.Panel();
+            this.btnMinimizarAplicacion = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCerrarAplicacion = new System.Windows.Forms.Button();
             this.txtConfirmar = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.chkPass = new System.Windows.Forms.CheckBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnMinimizarAplicacion = new System.Windows.Forms.Button();
-            this.btnCerrarAplicacion = new System.Windows.Forms.Button();
             this.pnlCabeceraRegistroUsuario.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -57,9 +57,10 @@ namespace WilianMiranda01.VISTA
             this.btnCancelarRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelarRegistro.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelarRegistro.ForeColor = System.Drawing.Color.White;
-            this.btnCancelarRegistro.Location = new System.Drawing.Point(679, 324);
+            this.btnCancelarRegistro.Location = new System.Drawing.Point(905, 399);
+            this.btnCancelarRegistro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancelarRegistro.Name = "btnCancelarRegistro";
-            this.btnCancelarRegistro.Size = new System.Drawing.Size(167, 43);
+            this.btnCancelarRegistro.Size = new System.Drawing.Size(223, 53);
             this.btnCancelarRegistro.TabIndex = 25;
             this.btnCancelarRegistro.Text = "Cancelar";
             this.btnCancelarRegistro.UseVisualStyleBackColor = false;
@@ -73,9 +74,10 @@ namespace WilianMiranda01.VISTA
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(549, 34);
+            this.label4.Location = new System.Drawing.Point(732, 42);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(118, 24);
+            this.label4.Size = new System.Drawing.Size(158, 32);
             this.label4.TabIndex = 24;
             this.label4.Text = "REGISTRO";
             // 
@@ -86,9 +88,10 @@ namespace WilianMiranda01.VISTA
             this.btnRegistrarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrarUsuario.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarUsuario.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrarUsuario.Location = new System.Drawing.Point(438, 324);
+            this.btnRegistrarUsuario.Location = new System.Drawing.Point(584, 399);
+            this.btnRegistrarUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRegistrarUsuario.Name = "btnRegistrarUsuario";
-            this.btnRegistrarUsuario.Size = new System.Drawing.Size(167, 43);
+            this.btnRegistrarUsuario.Size = new System.Drawing.Size(223, 53);
             this.btnRegistrarUsuario.TabIndex = 21;
             this.btnRegistrarUsuario.Text = "Registrarse";
             this.btnRegistrarUsuario.UseVisualStyleBackColor = false;
@@ -103,9 +106,10 @@ namespace WilianMiranda01.VISTA
             this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPassword.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.Color.White;
-            this.txtPassword.Location = new System.Drawing.Point(439, 173);
+            this.txtPassword.Location = new System.Drawing.Point(585, 213);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(407, 26);
+            this.txtPassword.Size = new System.Drawing.Size(541, 30);
             this.txtPassword.TabIndex = 20;
             this.txtPassword.UseSystemPasswordChar = true;
             this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
@@ -115,9 +119,10 @@ namespace WilianMiranda01.VISTA
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(435, 151);
+            this.label2.Location = new System.Drawing.Point(580, 186);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 19);
+            this.label2.Size = new System.Drawing.Size(126, 24);
             this.label2.TabIndex = 19;
             this.label2.Text = "Contraseña:";
             // 
@@ -126,9 +131,10 @@ namespace WilianMiranda01.VISTA
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(435, 83);
+            this.label1.Location = new System.Drawing.Point(580, 102);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 19);
+            this.label1.Size = new System.Drawing.Size(90, 24);
             this.label1.TabIndex = 18;
             this.label1.Text = "Usuario:";
             // 
@@ -138,9 +144,10 @@ namespace WilianMiranda01.VISTA
             this.txtUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUsuario.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.ForeColor = System.Drawing.Color.White;
-            this.txtUsuario.Location = new System.Drawing.Point(438, 105);
+            this.txtUsuario.Location = new System.Drawing.Point(584, 129);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(407, 26);
+            this.txtUsuario.Size = new System.Drawing.Size(541, 30);
             this.txtUsuario.TabIndex = 17;
             this.txtUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsuario_KeyPress);
             // 
@@ -151,19 +158,57 @@ namespace WilianMiranda01.VISTA
             this.pnlCabeceraRegistroUsuario.Controls.Add(this.panel1);
             this.pnlCabeceraRegistroUsuario.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlCabeceraRegistroUsuario.Location = new System.Drawing.Point(0, 0);
+            this.pnlCabeceraRegistroUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlCabeceraRegistroUsuario.Name = "pnlCabeceraRegistroUsuario";
-            this.pnlCabeceraRegistroUsuario.Size = new System.Drawing.Size(918, 30);
+            this.pnlCabeceraRegistroUsuario.Size = new System.Drawing.Size(1224, 37);
             this.pnlCabeceraRegistroUsuario.TabIndex = 26;
             this.pnlCabeceraRegistroUsuario.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlCabeceraRegistroUsuario_MouseMove);
+            // 
+            // btnMinimizarAplicacion
+            // 
+            this.btnMinimizarAplicacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
+            this.btnMinimizarAplicacion.BackgroundImage = global::ACAPOLAMI.Properties.Resources.minimize_118918;
+            this.btnMinimizarAplicacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMinimizarAplicacion.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMinimizarAplicacion.FlatAppearance.BorderSize = 0;
+            this.btnMinimizarAplicacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimizarAplicacion.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnMinimizarAplicacion.Location = new System.Drawing.Point(1145, 0);
+            this.btnMinimizarAplicacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMinimizarAplicacion.Name = "btnMinimizarAplicacion";
+            this.btnMinimizarAplicacion.Size = new System.Drawing.Size(35, 37);
+            this.btnMinimizarAplicacion.TabIndex = 14;
+            this.btnMinimizarAplicacion.UseVisualStyleBackColor = false;
+            this.btnMinimizarAplicacion.Click += new System.EventHandler(this.btnMinimizarAplicacion_Click_1);
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.btnCerrarAplicacion);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(885, 0);
+            this.panel1.Location = new System.Drawing.Point(1180, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(33, 30);
+            this.panel1.Size = new System.Drawing.Size(44, 37);
             this.panel1.TabIndex = 13;
+            // 
+            // btnCerrarAplicacion
+            // 
+            this.btnCerrarAplicacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
+            this.btnCerrarAplicacion.BackgroundImage = global::ACAPOLAMI.Properties.Resources.window_close_icon_135015__1_;
+            this.btnCerrarAplicacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCerrarAplicacion.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnCerrarAplicacion.FlatAppearance.BorderSize = 0;
+            this.btnCerrarAplicacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarAplicacion.Location = new System.Drawing.Point(9, 0);
+            this.btnCerrarAplicacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCerrarAplicacion.Name = "btnCerrarAplicacion";
+            this.btnCerrarAplicacion.Size = new System.Drawing.Size(35, 37);
+            this.btnCerrarAplicacion.TabIndex = 0;
+            this.btnCerrarAplicacion.UseVisualStyleBackColor = false;
+            this.btnCerrarAplicacion.Click += new System.EventHandler(this.btnCerrarAplicacion_Click);
+            this.btnCerrarAplicacion.MouseLeave += new System.EventHandler(this.btnCerrarAplicacion_MouseLeave);
+            this.btnCerrarAplicacion.MouseHover += new System.EventHandler(this.btnCerrarAplicacion_MouseHover);
+            this.btnCerrarAplicacion.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnCerrarAplicacion_MouseMove);
             // 
             // txtConfirmar
             // 
@@ -171,9 +216,10 @@ namespace WilianMiranda01.VISTA
             this.txtConfirmar.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtConfirmar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConfirmar.ForeColor = System.Drawing.Color.White;
-            this.txtConfirmar.Location = new System.Drawing.Point(438, 239);
+            this.txtConfirmar.Location = new System.Drawing.Point(584, 294);
+            this.txtConfirmar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtConfirmar.Name = "txtConfirmar";
-            this.txtConfirmar.Size = new System.Drawing.Size(407, 26);
+            this.txtConfirmar.Size = new System.Drawing.Size(541, 30);
             this.txtConfirmar.TabIndex = 28;
             this.txtConfirmar.UseSystemPasswordChar = true;
             this.txtConfirmar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtConfirmar_KeyPress);
@@ -183,9 +229,10 @@ namespace WilianMiranda01.VISTA
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(434, 217);
+            this.label5.Location = new System.Drawing.Point(579, 267);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(181, 19);
+            this.label5.Size = new System.Drawing.Size(223, 24);
             this.label5.TabIndex = 27;
             this.label5.Text = "Confirmar contraseña:";
             // 
@@ -195,9 +242,10 @@ namespace WilianMiranda01.VISTA
             this.chkPass.BackColor = System.Drawing.Color.Transparent;
             this.chkPass.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkPass.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.chkPass.Location = new System.Drawing.Point(439, 271);
+            this.chkPass.Location = new System.Drawing.Point(585, 334);
+            this.chkPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chkPass.Name = "chkPass";
-            this.chkPass.Size = new System.Drawing.Size(148, 20);
+            this.chkPass.Size = new System.Drawing.Size(185, 23);
             this.chkPass.TabIndex = 30;
             this.chkPass.Text = "Mostrar contraseña";
             this.chkPass.UseVisualStyleBackColor = false;
@@ -208,52 +256,19 @@ namespace WilianMiranda01.VISTA
             this.pictureBox1.BackColor = System.Drawing.Color.AliceBlue;
             this.pictureBox1.Image = global::ACAPOLAMI.Properties.Resources._11;
             this.pictureBox1.Location = new System.Drawing.Point(-1, -1);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(368, 404);
+            this.pictureBox1.Size = new System.Drawing.Size(491, 497);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 29;
             this.pictureBox1.TabStop = false;
             // 
-            // btnMinimizarAplicacion
+            // FrmRegistro
             // 
-            this.btnMinimizarAplicacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
-            this.btnMinimizarAplicacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnMinimizarAplicacion.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnMinimizarAplicacion.FlatAppearance.BorderSize = 0;
-            this.btnMinimizarAplicacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimizarAplicacion.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizarAplicacion.Image")));
-            this.btnMinimizarAplicacion.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnMinimizarAplicacion.Location = new System.Drawing.Point(859, 0);
-            this.btnMinimizarAplicacion.Name = "btnMinimizarAplicacion";
-            this.btnMinimizarAplicacion.Size = new System.Drawing.Size(26, 30);
-            this.btnMinimizarAplicacion.TabIndex = 14;
-            this.btnMinimizarAplicacion.UseVisualStyleBackColor = false;
-            this.btnMinimizarAplicacion.Click += new System.EventHandler(this.btnMinimizarAplicacion_Click_1);
-            // 
-            // btnCerrarAplicacion
-            // 
-            this.btnCerrarAplicacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
-            this.btnCerrarAplicacion.BackgroundImage = global::ACAPOLAMI.Properties.Resources.window_close_icon_135015__1_;
-            this.btnCerrarAplicacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCerrarAplicacion.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnCerrarAplicacion.FlatAppearance.BorderSize = 0;
-            this.btnCerrarAplicacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarAplicacion.Location = new System.Drawing.Point(7, 0);
-            this.btnCerrarAplicacion.Name = "btnCerrarAplicacion";
-            this.btnCerrarAplicacion.Size = new System.Drawing.Size(26, 30);
-            this.btnCerrarAplicacion.TabIndex = 0;
-            this.btnCerrarAplicacion.UseVisualStyleBackColor = false;
-            this.btnCerrarAplicacion.Click += new System.EventHandler(this.btnCerrarAplicacion_Click);
-            this.btnCerrarAplicacion.MouseLeave += new System.EventHandler(this.btnCerrarAplicacion_MouseLeave);
-            this.btnCerrarAplicacion.MouseHover += new System.EventHandler(this.btnCerrarAplicacion_MouseHover);
-            this.btnCerrarAplicacion.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnCerrarAplicacion_MouseMove);
-            // 
-            // FrmRegistroUsuario
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(133)))), ((int)(((byte)(206)))));
-            this.ClientSize = new System.Drawing.Size(918, 400);
+            this.ClientSize = new System.Drawing.Size(1224, 492);
             this.ControlBox = false;
             this.Controls.Add(this.chkPass);
             this.Controls.Add(this.pictureBox1);
@@ -269,7 +284,8 @@ namespace WilianMiranda01.VISTA
             this.Controls.Add(this.pnlCabeceraRegistroUsuario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "FrmRegistroUsuario";
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "FrmRegistro";
             this.Opacity = 0.99D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Tag = "";

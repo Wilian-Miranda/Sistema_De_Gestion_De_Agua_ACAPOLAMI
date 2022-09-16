@@ -45,12 +45,37 @@ namespace ACAPOLAMI.DAO
 
             using (ACAPOLAMIEntities db = new ACAPOLAMIEntities())
             {
-                Usuarios usuarioDB = new Usuarios();
-                usuarioDB.nombre = usuario.nombre;
-                usuarioDB.clave = usuario.clave;
+                var usuarios = (from a in db.Usuarios
+                                select a.idUsuarios).ToList();
+                if (usuarios.Count == 0)
+                {
+                    Usuarios usuarioDB = new Usuarios();
+                    usuarioDB.nombre = usuario.nombre;
+                    usuarioDB.clave = usuario.clave;
 
-                db.Usuarios.Add(usuarioDB);
-                db.SaveChanges();
+                    db.Usuarios.Add(usuarioDB);
+                    db.SaveChanges();
+                    FrmDialogoExito.Confirmar("Registro de usuario exitoso");
+                }
+                else
+                {
+                    new FrmDialogoError("Solo se permite tener un usuario en el sistema. Contacte con el administrador.").ShowDialog();
+                }
+
+            }
+        }
+        public void ActualizarUsuario(Usuarios usuario)
+        {
+
+            using (ACAPOLAMIEntities db = new ACAPOLAMIEntities())
+            {
+                    Usuarios data = db.Usuarios.Where(a => a.idUsuarios == usuario.idUsuarios).FirstOrDefault();
+                    data.nombre = usuario.nombre;
+                    data.clave = usuario.clave;;
+                    db.SaveChanges();
+
+                FrmDialogoExito.Confirmar("El <<nombre del usuario>> se ha modificado con exito");
+
             }
         }
 
@@ -86,7 +111,9 @@ namespace ACAPOLAMI.DAO
                         int update = user.idUsuarios;
                         Usuarios usu = db.Usuarios.Where(x => x.idUsuarios == update).Select(x => x).FirstOrDefault();
                         usu.clave = newPass;
-                        db.SaveChanges();                    }
+                        db.SaveChanges();
+                        FrmDialogoExito.Confirmar("La <<clave>> se ha modificado con exito");
+                    }
                 }
             }
         }

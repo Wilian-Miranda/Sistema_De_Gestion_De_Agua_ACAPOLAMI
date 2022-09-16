@@ -11,14 +11,19 @@ using ACAPOLAMI.DAO;
 using ACAPOLAMI.MODELO;
 using ACAPOLAMI.NEGOCIO;
 using ACAPOLAMI.DOMINIO;
+using System.Collections;
 
-namespace ProyectoCiclo3.VISTA
+namespace ACAPOLAMI.VISTA
 {
     public partial class FrmDashboard : Form
     {
         public FrmDashboard()
         {
             InitializeComponent();
+            cargarCBPagosYears();
+            GraficoPagosEnMesesPorYears();
+            cargarCBYears();
+
         }
         ButtonColor boton = new ButtonColor();
         ClsButtonColor color = new ClsButtonColor();
@@ -26,13 +31,15 @@ namespace ProyectoCiclo3.VISTA
         {
             TotalIngresos();
             GraficoComunidadesPorCliente();
-            cargarCBYears();
+            //cargarCBYears();
             cargarCBMesInicial();
-            CargarCBConsumidores();
-            GraficoPagosEnMesesPorYears();
-            cargarCBPagosYears();
+            //CargarCBConsumidores();
+            //GraficoPagosEnMesesPorYears();
+            //cargarCBPagosYears();
             CargarUltimosClientes();
             CargarUltimosPagos();
+            cbPagosYearGrafico.SelectedIndex = 0;
+            btnFiltro.PerformClick();
         }
 
         private void TotalIngresos()
@@ -64,47 +71,47 @@ namespace ProyectoCiclo3.VISTA
         }
         private int MesesToEntero(int mes)
         {
-            if (cbFechaInical.Text.Equals("Enero"))
+            if (cbMes.Text.Equals("Enero"))
             {
                 mes = 01;
             }
-            else if (cbFechaInical.Text.Equals("Febrero"))
+            else if (cbMes.Text.Equals("Febrero"))
             {
                 mes = 02;
             }
-            else if (cbFechaInical.Text.Equals("Marzo"))
+            else if (cbMes.Text.Equals("Marzo"))
             {
                 mes = 03;
             }
-            else if (cbFechaInical.Text.Equals("Abril"))
+            else if (cbMes.Text.Equals("Abril"))
             {
                 mes = 04;
             }
-            else if (cbFechaInical.Text.Equals("Mayo"))
+            else if (cbMes.Text.Equals("Mayo"))
             {
                 mes = 05;
             }
-            else if (cbFechaInical.Text.Equals("Junio"))
+            else if (cbMes.Text.Equals("Junio"))
             {
                 mes = 06;
             }
-            else if (cbFechaInical.Text.Equals("Julio"))
+            else if (cbMes.Text.Equals("Julio"))
             {
                 mes = 07;
             }
-            else if (cbFechaInical.Text.Equals("Agosto"))
+            else if (cbMes.Text.Equals("Agosto"))
             {
                 mes = 08;
             }
-            else if (cbFechaInical.Text.Equals("Septiembre"))
+            else if (cbMes.Text.Equals("Septiembre"))
             {
                 mes = 09;
             }
-            else if (cbFechaInical.Text.Equals("Octubre"))
+            else if (cbMes.Text.Equals("Octubre"))
             {
                 mes = 10;
             }
-            else if (cbFechaInical.Text.Equals("Noviembre"))
+            else if (cbMes.Text.Equals("Noviembre"))
             {
                 mes = 11;
             }
@@ -116,139 +123,78 @@ namespace ProyectoCiclo3.VISTA
         }
         private void TotalIngresosFiltrados()
         {
-            int mes=0;
-            long year=0;
-            int ID = 0;
-            if (!cbConsumidores.Text.Equals(""))
+            try
             {
-                ID = Convert.ToInt32(idConsumidor);
-            }
+                int mes = 0;
+                long year = 0;
 
-            if (cbYear.Text!="")
-            {
-                year = Convert.ToInt64(cbYear.Text);
-            }
-            mes = MesesToEntero(mes);
-
-            if (cbYear.Text!="" && cbFechaInical.Text.Equals("") && cbConsumidores.Text.Equals(""))
-            {
-                using (ACAPOLAMIEntities db = new ACAPOLAMIEntities())
+                if (cbYear.Text != "")
                 {
-                    var totalPagar = (from a in db.Pagos
-                                      where a.fechaPago.Year == year
-                                      select a.monto).ToList();
-                    lblTotaPagar.Text = "$" + totalPagar.Sum().ToString();
+                    year = Convert.ToInt64(cbYear.Text);
+                }
+                mes = MesesToEntero(mes);
 
-                    var totalCancelado = (from a in db.Pagos
+                if (cbYear.Text != "" && cbMes.Text.Equals(""))
+                {
+                    using (ACAPOLAMIEntities db = new ACAPOLAMIEntities())
+                    {
+                        var totalPagar = (from a in db.Pagos
                                           where a.fechaPago.Year == year
-                                          select a.montoCancelado).ToList();
-                    lblTotalPagado.Text = "$" + totalCancelado.Sum().ToString();
+                                          select a.monto).ToList();
+                        lblTotaPagar.Text = "$" + totalPagar.Sum().ToString();
 
-                    var totalPendiente = (from a in db.Pagos
-                                          where a.fechaPago.Year == year
-                                          select a.montoPendiente).ToList();
-                    lblTotalPendiente.Text = "$" + totalPendiente.Sum().ToString();
+                        var totalCancelado = (from a in db.Pagos
+                                              where a.fechaPago.Year == year
+                                              select a.montoCancelado).ToList();
+                        lblTotalPagado.Text = "$" + totalCancelado.Sum().ToString();
+
+                        var totalPendiente = (from a in db.Pagos
+                                              where a.fechaPago.Year == year
+                                              select a.montoPendiente).ToList();
+                        lblTotalPendiente.Text = "$" + totalPendiente.Sum().ToString();
+
+                        var totalImpuesto = (from a in db.Pagos
+                                              where a.fechaPago.Year == year
+                                              select a.impuesto).ToList();
+                        lblTotalImpuesto.Text = "$" + totalImpuesto.Sum().ToString();
+
+                    }
 
                 }
-
-            }
-            else if (cbYear.Text != "" && cbFechaInical.Text != "" && cbConsumidores.Text.Equals(""))
-            {
-                using (ACAPOLAMIEntities db = new ACAPOLAMIEntities())
+                else if (cbYear.Text != "" && cbMes.Text != "")
                 {
-                    var totalPagar = (from a in db.Pagos
-                                      where a.fechaPago.Year == year && a.fechaPago.Month == mes
-                                      select a.monto).ToList();
-                    lblTotaPagar.Text = "$" + totalPagar.Sum().ToString();
-
-                    var totalCancelado = (from a in db.Pagos
+                    using (ACAPOLAMIEntities db = new ACAPOLAMIEntities())
+                    {
+                        var totalPagar = (from a in db.Pagos
                                           where a.fechaPago.Year == year && a.fechaPago.Month == mes
-                                          select a.montoCancelado).ToList();
-                    lblTotalPagado.Text = "$" + totalCancelado.Sum().ToString();
+                                          select a.monto).ToList();
+                        lblTotaPagar.Text = "$" + totalPagar.Sum().ToString();
 
-                    var totalPendiente = (from a in db.Pagos
-                                          where a.fechaPago.Year == year && a.fechaPago.Month == mes
-                                          select a.montoPendiente).ToList();
-                    lblTotalPendiente.Text = "$" + totalPendiente.Sum().ToString();
+                        var totalCancelado = (from a in db.Pagos
+                                              where a.fechaPago.Year == year && a.fechaPago.Month == mes
+                                              select a.montoCancelado).ToList();
+                        lblTotalPagado.Text = "$" + totalCancelado.Sum().ToString();
 
+                        var totalPendiente = (from a in db.Pagos
+                                              where a.fechaPago.Year == year && a.fechaPago.Month == mes
+                                              select a.montoPendiente).ToList();
+                        lblTotalPendiente.Text = "$" + totalPendiente.Sum().ToString();
+
+                        var totalImpuesto = (from a in db.Pagos
+                                             where a.fechaPago.Year == year && a.fechaPago.Month == mes
+                                             select a.impuesto).ToList();
+                        lblTotalImpuesto.Text = "$" + totalImpuesto.Sum().ToString();
+
+                    }
                 }
-            }
-            else if (cbYear.Text != ""&& cbFechaInical.Text.Equals("")&& cbConsumidores.Text != "")
-            {
-                using (ACAPOLAMIEntities db = new ACAPOLAMIEntities())
+                else
                 {
-                    var totalPagar = (from a in db.Pagos
-                                      where a.fechaPago.Year == year && a.idConsumidor_FK == ID
-                                      select a.monto).ToList();
-                    lblTotaPagar.Text = "$" + totalPagar.Sum().ToString();
-
-                    var totalCancelado = (from a in db.Pagos
-                                          where a.fechaPago.Year == year && a.idConsumidor_FK == ID
-                                          select a.montoCancelado).ToList();
-                    lblTotalPagado.Text = "$" + totalCancelado.Sum().ToString();
-
-                    var totalPendiente = (from a in db.Pagos
-                                          where a.fechaPago.Year == year && a.idConsumidor_FK == ID
-                                          select a.montoPendiente).ToList();
-                    lblTotalPendiente.Text = "$" + totalPendiente.Sum().ToString();
-
+                    MessageBox.Show("Datos ingresados no son válidos para al realizar el filtro de datos");
                 }
-            }
-            else if (cbYear.Text != "" && cbFechaInical.Text != "" && cbConsumidores.Text != "")
+            }catch(Exception ex)
             {
-                using (ACAPOLAMIEntities db = new ACAPOLAMIEntities())
-                {
-                    var totalPagar = (from a in db.Pagos
-                                      where (a.fechaPago.Year == year && a.fechaPago.Month == mes) && a.idConsumidor_FK == ID
-                                      select a.monto).ToList();
-                    lblTotaPagar.Text = "$" + totalPagar.Sum().ToString();
 
-                    var totalCancelado = (from a in db.Pagos
-                                          where (a.fechaPago.Year == year && a.fechaPago.Month == mes) && a.idConsumidor_FK == ID
-                                          select a.montoCancelado).ToList();
-                    lblTotalPagado.Text = "$" + totalCancelado.Sum().ToString();
-
-                    var totalPendiente = (from a in db.Pagos
-                                          where (a.fechaPago.Year == year && a.fechaPago.Month == mes) && a.idConsumidor_FK == ID
-                                          select a.montoPendiente).ToList();
-                    lblTotalPendiente.Text = "$" + totalPendiente.Sum().ToString();
-
-                }
             }
-            else if (cbYear.Text.Equals("") && cbFechaInical.Text.Equals("") && cbConsumidores.Text!="")
-            {
-                using (ACAPOLAMIEntities db = new ACAPOLAMIEntities())
-                {
-                    var totalPagar = (from a in db.Pagos
-                                      where a.idConsumidor_FK == ID
-                                      select a.monto).ToList();
-                    lblTotaPagar.Text = "$" + totalPagar.Sum().ToString();
-
-                    var totalCancelado = (from a in db.Pagos
-                                          where a.idConsumidor_FK == ID
-                                          select a.montoCancelado).ToList();
-                    lblTotalPagado.Text = "$" + totalCancelado.Sum().ToString();
-
-                    var totalPendiente = (from a in db.Pagos
-                                          where a.idConsumidor_FK == ID
-                                          select a.montoPendiente).ToList();
-                    lblTotalPendiente.Text = "$" + totalPendiente.Sum().ToString();
-                }
-            }
-            else
-            {
-                MessageBox.Show("Datos ingresados no son válidos para al realizar el filtro de datos");
-            }
-        }
-
-        private void dtgTotalIngresos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void lblTotalIngresos_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void panel5_Paint(object sender, PaintEventArgs e)
@@ -256,10 +202,6 @@ namespace ProyectoCiclo3.VISTA
 
         }
 
-        private void chart2_Click(object sender, EventArgs e)
-        {
-
-        }
         private void GraficoComunidadesPorCliente()
         {
             using (ACAPOLAMIEntities db = new ACAPOLAMIEntities())
@@ -276,7 +218,7 @@ namespace ProyectoCiclo3.VISTA
         {
             using (ACAPOLAMIEntities db = new ACAPOLAMIEntities())
             {
-                String mesFiltro = "2021";
+                String mesFiltro = DateTime.Now.Year.ToString();
                 var meses = (from a in db.sp_obtenerMontoCanceladoMeses(mesFiltro)
                                  select a.Mes).ToList();
                 var total = (from a in db.sp_obtenerMontoCanceladoMeses(mesFiltro)
@@ -284,18 +226,6 @@ namespace ProyectoCiclo3.VISTA
                 graficoPagosMesesPorYear.Series[0].Points.DataBindXY(meses, total);
             }
 
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if(pnlContenedorFiltros.Visible==true)
-            {
-                pnlContenedorFiltros.Visible = false;
-            }
-            else
-            {
-                pnlContenedorFiltros.Visible = true;
-            }
         }
 
         private void cargarCBYears()
@@ -322,107 +252,29 @@ namespace ProyectoCiclo3.VISTA
                 var years = (from a in db.Pagos
                              select a.fechaPago.Year).ToList();
 
-                cbPagosYear.DataSource = years.Distinct().ToList();
-                cbPagosYear.DisplayMember = "fechaPago";
-                if (cbPagosYear.Items.Count > 0)
+                cbPagosYearGrafico.DataSource = years.Distinct().ToList();
+                cbPagosYearGrafico.DisplayMember = "fechaPago";
+                if (cbPagosYearGrafico.Items.Count > 0)
                 {
-                    cbPagosYear.SelectedIndex = -1;
+                    cbPagosYearGrafico.SelectedIndex = -1;
                 }
-
-
             }
         }
 
         private void cargarCBMesInicial()
         {
-            cbFechaInical.Items.Add("Enero");
-            cbFechaInical.Items.Add("Febrero");
-            cbFechaInical.Items.Add("Marzo");
-            cbFechaInical.Items.Add("Abril");
-            cbFechaInical.Items.Add("Mayo");
-            cbFechaInical.Items.Add("Junio");
-            cbFechaInical.Items.Add("Julio");
-            cbFechaInical.Items.Add("Agosto");
-            cbFechaInical.Items.Add("Septiembre");
-            cbFechaInical.Items.Add("Octubre");
-            cbFechaInical.Items.Add("Noviembre");
-            cbFechaInical.Items.Add("Diciembre");
-        }
-
-        private void CargarCBConsumidores()
-        {
-            using (ACAPOLAMIEntities db = new ACAPOLAMIEntities())
-            {
-                var consumidores = (from a in db.Consumidores
-                                    select new
-                                    {
-                                        a.idConsumidor,
-                                        nombres=a.nombresConsumidor+" "+a.apellidosConsumidor
-                                    }).ToList();
-                cbConsumidores.DataSource = consumidores.ToList();
-                cbConsumidores.DisplayMember = "nombres";
-                cbConsumidores.ValueMember = "idConsumidor";
-
-                if (cbConsumidores.Items.Count>0)
-                {
-                    cbConsumidores.SelectedIndex = -1;
-                }
-            }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            TotalIngresosFiltrados();
-        }
-
-        private void pnlContenedorFiltros_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        String idConsumidor;
-
-        private void cbConsumidores_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cbConsumidores.SelectedValue!=null)
-            {
-                idConsumidor = cbConsumidores.SelectedValue.ToString();
-                
-            }
-        }
-
-        private void cbConsumidores_TextChanged(object sender, EventArgs e)
-        {
-            
-            
-        }
-
-        private void cbConsumidores_KeyPress(object sender, KeyPressEventArgs e)
-        {
-        }
-
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-            cbConsumidores.SelectedIndex =-1;
-            cbFechaInical.SelectedIndex =-1;
-            cbYear.SelectedIndex = -1;
-        }
-
-        private void panel8_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btnActivarFiltro_Click(object sender, EventArgs e)
-        {
-            if (pnlFiltroPagos.Visible)
-            {
-                pnlFiltroPagos.Visible = false;
-            }
-            else
-            {
-                pnlFiltroPagos.Visible=true;
-            }
+            cbMes.Items.Add("Enero");
+            cbMes.Items.Add("Febrero");
+            cbMes.Items.Add("Marzo");
+            cbMes.Items.Add("Abril");
+            cbMes.Items.Add("Mayo");
+            cbMes.Items.Add("Junio");
+            cbMes.Items.Add("Julio");
+            cbMes.Items.Add("Agosto");
+            cbMes.Items.Add("Septiembre");
+            cbMes.Items.Add("Octubre");
+            cbMes.Items.Add("Noviembre");
+            cbMes.Items.Add("Diciembre");
         }
 
         private void btnFiltro_Click(object sender, EventArgs e)
@@ -432,9 +284,9 @@ namespace ProyectoCiclo3.VISTA
 
         private void FiltroPagosMesXYear()
         {
-            String year = cbPagosYear.Text;
+            String year = cbPagosYearGrafico.Text;
 
-            if (!cbPagosYear.Text.Equals(""))
+            if (cbPagosYearGrafico.SelectedItem != null)
             {
                 using (ACAPOLAMIEntities db = new ACAPOLAMIEntities())
                 {
@@ -448,6 +300,7 @@ namespace ProyectoCiclo3.VISTA
                 }
 
             }
+
         }
 
         private void CargarUltimosClientes()
@@ -475,32 +328,9 @@ namespace ProyectoCiclo3.VISTA
             }
         }
 
-        private void cbFechaInical_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void cbYear_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-        }
-
-        private void btnActivarFiltro_MouseHover(object sender, EventArgs e)
-        {
-            boton.BotonAzulOscuro = btnActivarFiltro;
-            color.AzulOscuro(boton);
-        }
-
-        private void btnActivarFiltro_MouseLeave(object sender, EventArgs e)
-        {
-            btnActivarFiltro.BackColor = Color.White;
-            btnActivarFiltro.ForeColor = Color.Black;
-        }
-
-        private void btnActivarFiltro_MouseMove(object sender, MouseEventArgs e)
-        {
-            boton.BotonAzulOscuro = btnActivarFiltro;
-            color.AzulOscuro(boton);
         }
 
         private void btnFiltro_MouseHover(object sender, EventArgs e)
@@ -536,42 +366,6 @@ namespace ProyectoCiclo3.VISTA
         private void btnBuscarToatlPagos_MouseMove(object sender, MouseEventArgs e)
         {
             boton.BotonAzulOscuro = btnBuscarToatlPagos;
-            color.AzulOscuro(boton);
-        }
-
-        private void btnFiltroPagos_MouseHover(object sender, EventArgs e)
-        {
-            boton.BotonAzulOscuro = btnFiltroPagos;
-            color.AzulOscuro(boton);
-        }
-
-        private void btnFiltroPagos_MouseLeave(object sender, EventArgs e)
-        {
-            btnFiltroPagos.BackColor = Color.White;
-            btnFiltroPagos.ForeColor = Color.Black;
-        }
-
-        private void btnFiltroPagos_MouseMove(object sender, MouseEventArgs e)
-        {
-            boton.BotonAzulOscuro = btnFiltroPagos;
-            color.AzulOscuro(boton);
-        }
-
-        private void btnLimpiar_MouseHover(object sender, EventArgs e)
-        {
-            boton.BotonAzulOscuro = btnLimpiar;
-            color.AzulOscuro(boton);
-        }
-
-        private void btnLimpiar_MouseLeave(object sender, EventArgs e)
-        {
-            btnLimpiar.BackColor = Color.White;
-            btnLimpiar.ForeColor = Color.Black;
-        }
-
-        private void btnLimpiar_MouseMove(object sender, MouseEventArgs e)
-        {
-            boton.BotonAzulOscuro = btnLimpiar;
             color.AzulOscuro(boton);
         }
 
@@ -657,6 +451,24 @@ namespace ProyectoCiclo3.VISTA
             dtgUltimosConumidores.RowsDefaultCellStyle.SelectionBackColor = Color.FloralWhite;
             dtgUltimosConumidores.ColumnHeadersDefaultCellStyle.BackColor = Color.FloralWhite;
             dtgUltimosConumidores.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FloralWhite;
+
+        }
+
+        private void pnlReporteGlobal_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+
+        private void btnBuscarToatlPagos_Click(object sender, EventArgs e)
+        {
+            TotalIngresosFiltrados();
+        }
+
+        private void btnLimpiarDatosDelFiltro_Click(object sender, EventArgs e)
+        {
+            cbMes.SelectedIndex = -1;
+            cbYear.SelectedIndex = -1;
 
         }
     }

@@ -20,7 +20,6 @@ namespace ACAPOLAMI.MODELO
         public Nullable<decimal> Cancelado { get; set; }
         public Nullable<decimal> Pendiente { get; set; }
         public Nullable<decimal> Impuesto { get; set; }
-        public Nullable<decimal> Total_deuda { get; set; }
         public string Estado { get; set; }
         public System.DateTime Fecha { get; set; }
     }

@@ -1,7 +1,7 @@
 ﻿
-namespace WilianMiranda01.VISTA
+namespace ACAPOLAMI.VISTA
 {
-    partial class FmrPrincipal
+    partial class FrmPrincipal
     {
         /// <summary>
         /// Required designer variable.
@@ -29,8 +29,7 @@ namespace WilianMiranda01.VISTA
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FmrPrincipal));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblNombreUSuario = new System.Windows.Forms.Label();
@@ -50,15 +49,9 @@ namespace WilianMiranda01.VISTA
             this.btnMinimizarAplicacion = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnMaximizar = new System.Windows.Forms.Button();
-            this.btnRestaurar = new System.Windows.Forms.Button();
             this.btnCerrarAplicacion = new System.Windows.Forms.Button();
             this.panelPadre = new System.Windows.Forms.Panel();
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.pnlHoraFecha = new System.Windows.Forms.Panel();
-            this.lblHora = new System.Windows.Forms.Label();
-            this.lblFecha = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tmrTiempo = new System.Windows.Forms.Timer(this.components);
             this.pnlMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -68,9 +61,6 @@ namespace WilianMiranda01.VISTA
             this.pnlCabezaPrincipal.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panelPadre.SuspendLayout();
-            this.panelContenedor.SuspendLayout();
-            this.pnlHoraFecha.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -108,14 +98,14 @@ namespace WilianMiranda01.VISTA
             this.lblNombreUSuario.Location = new System.Drawing.Point(46, 71);
             this.lblNombreUSuario.Name = "lblNombreUSuario";
             this.lblNombreUSuario.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.lblNombreUSuario.Size = new System.Drawing.Size(84, 19);
+            this.lblNombreUSuario.Size = new System.Drawing.Size(98, 24);
             this.lblNombreUSuario.TabIndex = 1;
             this.lblNombreUSuario.Text = "Usuario";
             this.lblNombreUSuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.BackgroundImage = global::ACAPOLAMI.Properties.Resources.usuario;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox2.Location = new System.Drawing.Point(55, 3);
             this.pictureBox2.Name = "pictureBox2";
@@ -151,6 +141,7 @@ namespace WilianMiranda01.VISTA
             this.btnNotificaciones.Text = "   Actividad";
             this.btnNotificaciones.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNotificaciones.UseVisualStyleBackColor = true;
+            this.btnNotificaciones.Visible = false;
             this.btnNotificaciones.Click += new System.EventHandler(this.btnNotificaciones_Click_1);
             // 
             // btnClientes
@@ -299,10 +290,10 @@ namespace WilianMiranda01.VISTA
             // 
             this.btnMinimizarAplicacion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMinimizarAplicacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
+            this.btnMinimizarAplicacion.BackgroundImage = global::ACAPOLAMI.Properties.Resources.minimize_118918;
             this.btnMinimizarAplicacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnMinimizarAplicacion.FlatAppearance.BorderSize = 0;
             this.btnMinimizarAplicacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimizarAplicacion.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizarAplicacion.Image")));
             this.btnMinimizarAplicacion.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnMinimizarAplicacion.Location = new System.Drawing.Point(784, 0);
             this.btnMinimizarAplicacion.Name = "btnMinimizarAplicacion";
@@ -318,7 +309,6 @@ namespace WilianMiranda01.VISTA
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.Controls.Add(this.btnMaximizar);
-            this.panel3.Controls.Add(this.btnRestaurar);
             this.panel3.Controls.Add(this.btnCerrarAplicacion);
             this.panel3.Location = new System.Drawing.Point(813, 0);
             this.panel3.Name = "panel3";
@@ -329,10 +319,10 @@ namespace WilianMiranda01.VISTA
             // 
             this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMaximizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
+            this.btnMaximizar.BackgroundImage = global::ACAPOLAMI.Properties.Resources.MAXIMIZAR;
             this.btnMaximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnMaximizar.FlatAppearance.BorderSize = 0;
             this.btnMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMaximizar.Image")));
             this.btnMaximizar.Location = new System.Drawing.Point(3, -6);
             this.btnMaximizar.Name = "btnMaximizar";
             this.btnMaximizar.Size = new System.Drawing.Size(26, 36);
@@ -340,30 +330,13 @@ namespace WilianMiranda01.VISTA
             this.btnMaximizar.UseVisualStyleBackColor = false;
             this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
             // 
-            // btnRestaurar
-            // 
-            this.btnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRestaurar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
-            this.btnRestaurar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnRestaurar.FlatAppearance.BorderSize = 0;
-            this.btnRestaurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("btnRestaurar.Image")));
-            this.btnRestaurar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnRestaurar.Location = new System.Drawing.Point(3, 0);
-            this.btnRestaurar.Name = "btnRestaurar";
-            this.btnRestaurar.Size = new System.Drawing.Size(26, 33);
-            this.btnRestaurar.TabIndex = 16;
-            this.btnRestaurar.UseVisualStyleBackColor = false;
-            this.btnRestaurar.Visible = false;
-            this.btnRestaurar.Click += new System.EventHandler(this.btnRestaurar_Click);
-            // 
             // btnCerrarAplicacion
             // 
             this.btnCerrarAplicacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
+            this.btnCerrarAplicacion.BackgroundImage = global::ACAPOLAMI.Properties.Resources.window_close_icon_135015__1_;
             this.btnCerrarAplicacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCerrarAplicacion.FlatAppearance.BorderSize = 0;
             this.btnCerrarAplicacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarAplicacion.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarAplicacion.Image")));
             this.btnCerrarAplicacion.Location = new System.Drawing.Point(29, 0);
             this.btnCerrarAplicacion.Name = "btnCerrarAplicacion";
             this.btnCerrarAplicacion.Size = new System.Drawing.Size(30, 30);
@@ -387,70 +360,15 @@ namespace WilianMiranda01.VISTA
             // 
             // panelContenedor
             // 
-            this.panelContenedor.Controls.Add(this.pnlHoraFecha);
-            this.panelContenedor.Controls.Add(this.pictureBox1);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(0, 0);
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(872, 651);
             this.panelContenedor.TabIndex = 4;
             // 
-            // pnlHoraFecha
+            // FrmPrincipal
             // 
-            this.pnlHoraFecha.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pnlHoraFecha.Controls.Add(this.lblHora);
-            this.pnlHoraFecha.Controls.Add(this.lblFecha);
-            this.pnlHoraFecha.Location = new System.Drawing.Point(294, 387);
-            this.pnlHoraFecha.Name = "pnlHoraFecha";
-            this.pnlHoraFecha.Size = new System.Drawing.Size(280, 146);
-            this.pnlHoraFecha.TabIndex = 3;
-            // 
-            // lblHora
-            // 
-            this.lblHora.AutoSize = true;
-            this.lblHora.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblHora.Font = new System.Drawing.Font("Arial", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHora.ForeColor = System.Drawing.Color.Black;
-            this.lblHora.Location = new System.Drawing.Point(0, 0);
-            this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(185, 78);
-            this.lblHora.TabIndex = 1;
-            this.lblHora.Text = "Hora";
-            this.lblHora.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblFecha
-            // 
-            this.lblFecha.AutoSize = true;
-            this.lblFecha.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lblFecha.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.ForeColor = System.Drawing.Color.DimGray;
-            this.lblFecha.Location = new System.Drawing.Point(0, 122);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.lblFecha.Size = new System.Drawing.Size(82, 24);
-            this.lblFecha.TabIndex = 2;
-            this.lblFecha.Text = "Fecha";
-            this.lblFecha.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = global::ACAPOLAMI.Properties.Resources.gif2;
-            this.pictureBox1.Location = new System.Drawing.Point(294, 118);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(280, 263);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // tmrTiempo
-            // 
-            this.tmrTiempo.Enabled = true;
-            this.tmrTiempo.Tick += new System.EventHandler(this.tmrTiempo_Tick);
-            // 
-            // FmrPrincipal
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1072, 681);
@@ -464,7 +382,7 @@ namespace WilianMiranda01.VISTA
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.MinimumSize = new System.Drawing.Size(736, 681);
-            this.Name = "FmrPrincipal";
+            this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ACAPOLAMI";
             this.pnlMenu.ResumeLayout(false);
@@ -477,10 +395,6 @@ namespace WilianMiranda01.VISTA
             this.pnlCabezaPrincipal.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panelPadre.ResumeLayout(false);
-            this.panelContenedor.ResumeLayout(false);
-            this.pnlHoraFecha.ResumeLayout(false);
-            this.pnlHoraFecha.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -496,12 +410,7 @@ namespace WilianMiranda01.VISTA
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button bntMinimizarMenu;
         private System.Windows.Forms.Panel panelPadre;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblFecha;
-        private System.Windows.Forms.Label lblHora;
-        private System.Windows.Forms.Timer tmrTiempo;
         private System.Windows.Forms.Button btnCerrarSesión;
-        private System.Windows.Forms.Panel pnlHoraFecha;
         private System.Windows.Forms.Button btnPrincipal;
         private System.Windows.Forms.Button btnPagos;
         private System.Windows.Forms.Button btnReporte;
@@ -511,7 +420,6 @@ namespace WilianMiranda01.VISTA
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox2;
         public System.Windows.Forms.Label lblNombreUSuario;
-        private System.Windows.Forms.Button btnRestaurar;
         private System.Windows.Forms.Button btnMaximizar;
         private System.Windows.Forms.Panel panelContenedor;
     }

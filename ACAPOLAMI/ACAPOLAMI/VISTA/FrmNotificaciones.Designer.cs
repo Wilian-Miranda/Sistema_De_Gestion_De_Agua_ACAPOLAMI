@@ -49,25 +49,28 @@ namespace ACAPOLAMI.VISTA
             this.txtMensaje.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtMensaje.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMensaje.ForeColor = System.Drawing.Color.White;
-            this.txtMensaje.Location = new System.Drawing.Point(87, 31);
+            this.txtMensaje.Location = new System.Drawing.Point(116, 38);
+            this.txtMensaje.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMensaje.Multiline = true;
             this.txtMensaje.Name = "txtMensaje";
             this.txtMensaje.ReadOnly = true;
-            this.txtMensaje.Size = new System.Drawing.Size(317, 46);
+            this.txtMensaje.Size = new System.Drawing.Size(423, 57);
             this.txtMensaje.TabIndex = 19;
             this.txtMensaje.Text = "Mensaje";
             // 
             // btnCerrar
             // 
+            this.btnCerrar.BackgroundImage = global::ACAPOLAMI.Properties.Resources.window_close_icon_135015__1_;
             this.btnCerrar.FlatAppearance.BorderSize = 0;
             this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
             this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar.ForeColor = System.Drawing.Color.White;
-            this.btnCerrar.Location = new System.Drawing.Point(380, -4);
+            this.btnCerrar.Location = new System.Drawing.Point(507, -5);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(41, 32);
+            this.btnCerrar.Size = new System.Drawing.Size(55, 39);
             this.btnCerrar.TabIndex = 18;
             this.btnCerrar.Text = "X";
             this.btnCerrar.UseVisualStyleBackColor = true;
@@ -78,9 +81,10 @@ namespace ACAPOLAMI.VISTA
             this.lbntitulo.AutoSize = true;
             this.lbntitulo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbntitulo.ForeColor = System.Drawing.Color.White;
-            this.lbntitulo.Location = new System.Drawing.Point(83, 7);
+            this.lbntitulo.Location = new System.Drawing.Point(111, 9);
+            this.lbntitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbntitulo.Name = "lbntitulo";
-            this.lbntitulo.Size = new System.Drawing.Size(49, 21);
+            this.lbntitulo.Size = new System.Drawing.Size(62, 28);
             this.lbntitulo.TabIndex = 16;
             this.lbntitulo.Text = "Titulo";
             // 
@@ -100,31 +104,33 @@ namespace ACAPOLAMI.VISTA
             // 
             // iconoNotificacion
             // 
-            this.iconoNotificacion.Icon = ((System.Drawing.Icon)(resources.GetObject("iconoNotificacion.Icon")));
             this.iconoNotificacion.Text = "notifyIcon1";
             this.iconoNotificacion.Visible = true;
             // 
             // pcbImagen
             // 
             this.pcbImagen.Image = global::ACAPOLAMI.Properties.Resources.WarnigWhite;
-            this.pcbImagen.Location = new System.Drawing.Point(6, 10);
+            this.pcbImagen.Location = new System.Drawing.Point(8, 12);
+            this.pcbImagen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pcbImagen.Name = "pcbImagen";
-            this.pcbImagen.Size = new System.Drawing.Size(71, 67);
+            this.pcbImagen.Size = new System.Drawing.Size(95, 82);
             this.pcbImagen.TabIndex = 17;
             this.pcbImagen.TabStop = false;
             // 
             // FrmNotificaciones
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
-            this.ClientSize = new System.Drawing.Size(411, 94);
+            this.ClientSize = new System.Drawing.Size(548, 116);
             this.Controls.Add(this.txtMensaje);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.pcbImagen);
             this.Controls.Add(this.lbntitulo);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmNotificaciones";
             this.Opacity = 0D;
             this.Text = "Notificacion";

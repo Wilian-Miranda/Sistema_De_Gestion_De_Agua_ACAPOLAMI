@@ -87,7 +87,7 @@ namespace ACAPOLAMI.VISTA
             this.lblEncabezado.ForeColor = System.Drawing.Color.White;
             this.lblEncabezado.Location = new System.Drawing.Point(181, 12);
             this.lblEncabezado.Name = "lblEncabezado";
-            this.lblEncabezado.Size = new System.Drawing.Size(304, 33);
+            this.lblEncabezado.Size = new System.Drawing.Size(378, 42);
             this.lblEncabezado.TabIndex = 0;
             this.lblEncabezado.Text = "NUEVO CONSUMIDOR";
             // 
@@ -113,7 +113,8 @@ namespace ACAPOLAMI.VISTA
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.BackgroundImage = global::ACAPOLAMI.Properties.Resources.LOGO11;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(12, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(53, 50);
@@ -176,7 +177,7 @@ namespace ACAPOLAMI.VISTA
             this.btnEjecutar.Name = "btnEjecutar";
             this.btnEjecutar.Size = new System.Drawing.Size(250, 36);
             this.btnEjecutar.TabIndex = 10;
-            this.btnEjecutar.Text = "Ejecutar acción";
+            this.btnEjecutar.Text = "Agregar";
             this.btnEjecutar.UseVisualStyleBackColor = false;
             this.btnEjecutar.Click += new System.EventHandler(this.btnEjecutar_Click);
             this.btnEjecutar.MouseLeave += new System.EventHandler(this.btnEjecutar_MouseLeave);
@@ -212,7 +213,7 @@ namespace ACAPOLAMI.VISTA
             this.txtDUI.Location = new System.Drawing.Point(27, 161);
             this.txtDUI.Mask = "00000000-0";
             this.txtDUI.Name = "txtDUI";
-            this.txtDUI.Size = new System.Drawing.Size(248, 26);
+            this.txtDUI.Size = new System.Drawing.Size(248, 30);
             this.txtDUI.TabIndex = 3;
             this.txtDUI.Click += new System.EventHandler(this.txtDUI_Click);
             this.txtDUI.Enter += new System.EventHandler(this.TxtDUI_Enter_1);
@@ -224,7 +225,7 @@ namespace ACAPOLAMI.VISTA
             this.txtTelefono.Location = new System.Drawing.Point(347, 161);
             this.txtTelefono.Mask = "0000-0000";
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(250, 26);
+            this.txtTelefono.Size = new System.Drawing.Size(250, 30);
             this.txtTelefono.TabIndex = 4;
             this.txtTelefono.Click += new System.EventHandler(this.txtTelefono_Click);
             this.txtTelefono.Enter += new System.EventHandler(this.txtTelefono_Enter_1);
@@ -232,14 +233,14 @@ namespace ACAPOLAMI.VISTA
             // 
             // cbComunidad
             // 
-            this.cbComunidad.BackColor = System.Drawing.Color.White;
+            this.cbComunidad.BackColor = System.Drawing.Color.WhiteSmoke;
             this.cbComunidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbComunidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbComunidad.ForeColor = System.Drawing.Color.RoyalBlue;
             this.cbComunidad.FormattingEnabled = true;
             this.cbComunidad.Location = new System.Drawing.Point(347, 233);
             this.cbComunidad.Name = "cbComunidad";
-            this.cbComunidad.Size = new System.Drawing.Size(250, 27);
+            this.cbComunidad.Size = new System.Drawing.Size(250, 32);
             this.cbComunidad.TabIndex = 6;
             this.cbComunidad.SelectedIndexChanged += new System.EventHandler(this.cbComunidad_SelectedIndexChanged);
             // 
@@ -248,7 +249,7 @@ namespace ACAPOLAMI.VISTA
             this.lblComunidad.AutoSize = true;
             this.lblComunidad.Location = new System.Drawing.Point(343, 211);
             this.lblComunidad.Name = "lblComunidad";
-            this.lblComunidad.Size = new System.Drawing.Size(104, 19);
+            this.lblComunidad.Size = new System.Drawing.Size(124, 24);
             this.lblComunidad.TabIndex = 15;
             this.lblComunidad.Text = "Comunidad:";
             // 
@@ -262,7 +263,7 @@ namespace ACAPOLAMI.VISTA
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(3, 3, 3, 24);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.ShortcutsEnabled = false;
-            this.txtCorreo.Size = new System.Drawing.Size(250, 26);
+            this.txtCorreo.Size = new System.Drawing.Size(250, 30);
             this.txtCorreo.TabIndex = 5;
             this.txtCorreo.Text = "ejemplo@correo.com";
             this.txtCorreo.Enter += new System.EventHandler(this.txtCorreo_Enter);
@@ -273,7 +274,7 @@ namespace ACAPOLAMI.VISTA
             this.lblCorreo.AutoSize = true;
             this.lblCorreo.Location = new System.Drawing.Point(23, 211);
             this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(153, 19);
+            this.lblCorreo.Size = new System.Drawing.Size(188, 24);
             this.lblCorreo.TabIndex = 13;
             this.lblCorreo.Text = "Correo Electrónico";
             // 
@@ -282,7 +283,7 @@ namespace ACAPOLAMI.VISTA
             this.lblTelefono.AutoSize = true;
             this.lblTelefono.Location = new System.Drawing.Point(343, 139);
             this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(81, 19);
+            this.lblTelefono.Size = new System.Drawing.Size(99, 24);
             this.lblTelefono.TabIndex = 11;
             this.lblTelefono.Text = "Teléfono:";
             // 
@@ -296,7 +297,7 @@ namespace ACAPOLAMI.VISTA
             this.txtApellidos.Margin = new System.Windows.Forms.Padding(3, 3, 3, 24);
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.ShortcutsEnabled = false;
-            this.txtApellidos.Size = new System.Drawing.Size(250, 26);
+            this.txtApellidos.Size = new System.Drawing.Size(250, 30);
             this.txtApellidos.TabIndex = 2;
             this.txtApellidos.Tag = "";
             this.txtApellidos.Text = "Primero Segundo";
@@ -308,7 +309,7 @@ namespace ACAPOLAMI.VISTA
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(343, 67);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 19);
+            this.label4.Size = new System.Drawing.Size(103, 24);
             this.label4.TabIndex = 9;
             this.label4.Text = "Apellidos:";
             // 
@@ -317,7 +318,7 @@ namespace ACAPOLAMI.VISTA
             this.lblDUI.AutoSize = true;
             this.lblDUI.Location = new System.Drawing.Point(23, 139);
             this.lblDUI.Name = "lblDUI";
-            this.lblDUI.Size = new System.Drawing.Size(192, 19);
+            this.lblDUI.Size = new System.Drawing.Size(234, 24);
             this.lblDUI.TabIndex = 7;
             this.lblDUI.Text = "Número de Documento:";
             // 
@@ -333,7 +334,7 @@ namespace ACAPOLAMI.VISTA
             this.txtNombres.Margin = new System.Windows.Forms.Padding(3, 3, 3, 24);
             this.txtNombres.Name = "txtNombres";
             this.txtNombres.ShortcutsEnabled = false;
-            this.txtNombres.Size = new System.Drawing.Size(250, 26);
+            this.txtNombres.Size = new System.Drawing.Size(250, 30);
             this.txtNombres.TabIndex = 1;
             this.txtNombres.Text = "Primero Segundo";
             this.txtNombres.Enter += new System.EventHandler(this.txtNombres_Enter);
@@ -345,7 +346,7 @@ namespace ACAPOLAMI.VISTA
             this.lblNombres.AutoSize = true;
             this.lblNombres.Location = new System.Drawing.Point(23, 67);
             this.lblNombres.Name = "lblNombres";
-            this.lblNombres.Size = new System.Drawing.Size(85, 19);
+            this.lblNombres.Size = new System.Drawing.Size(102, 24);
             this.lblNombres.TabIndex = 5;
             this.lblNombres.Text = "Nombres:";
             // 
@@ -359,7 +360,7 @@ namespace ACAPOLAMI.VISTA
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.ReadOnly = true;
             this.txtCodigo.ShortcutsEnabled = false;
-            this.txtCodigo.Size = new System.Drawing.Size(196, 26);
+            this.txtCodigo.Size = new System.Drawing.Size(196, 30);
             this.txtCodigo.TabIndex = 3;
             // 
             // lblId
@@ -367,7 +368,7 @@ namespace ACAPOLAMI.VISTA
             this.lblId.AutoSize = true;
             this.lblId.Location = new System.Drawing.Point(363, 17);
             this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(31, 19);
+            this.lblId.Size = new System.Drawing.Size(36, 24);
             this.lblId.TabIndex = 3;
             this.lblId.Text = "ID:";
             // 
@@ -377,7 +378,7 @@ namespace ACAPOLAMI.VISTA
             this.label1.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(23, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(208, 23);
+            this.label1.Size = new System.Drawing.Size(256, 28);
             this.label1.TabIndex = 2;
             this.label1.Text = "Datos del consumidor:";
             // 
@@ -387,7 +388,7 @@ namespace ACAPOLAMI.VISTA
             // 
             // FrmGestionConsumidores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(650, 478);

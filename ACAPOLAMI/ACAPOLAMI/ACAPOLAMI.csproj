@@ -1,10 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{93E169C3-A25E-4EB1-9D9C-C6C91CB190A8}</ProjectGuid>
+    <ProjectGuid>{99074BA1-F279-43E6-95E4-A6C84AC4D2DD}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>ACAPOLAMI</RootNamespace>
     <AssemblyName>ACAPOLAMI</AssemblyName>
@@ -12,8 +13,10 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\Manuel Perlera\Downloads\</PublishUrl>
+    <PublishUrl>C:\Users\Willian\Desktop\Las Lomas\PROGRAMAS\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -23,7 +26,9 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>1</ApplicationRevision>
+    <UpdateUrl>http://localhost/ACAPOLAMI/</UpdateUrl>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -49,7 +54,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>778C83494FA3F21A9E192EFA321663F3AB0B60EE</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>9CCA845831B5F15DED9B4D36AFC188F1613239CA</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>ACAPOLAMI_TemporaryKey.pfx</ManifestKeyFile>
@@ -60,41 +65,39 @@
   <PropertyGroup>
     <SignManifests>true</SignManifests>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icono.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\FontAwesome.Sharp.5.15.3\lib\net48\FontAwesome.Sharp.dll</HintPath>
+    <Reference Include="FontAwesome.Sharp, Version=6.1.1.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.6.1.1\lib\net48\FontAwesome.Sharp.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
-    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
+    <Reference Include="System.Collections.NonGeneric, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.NonGeneric.4.3.0\lib\net46\System.Collections.NonGeneric.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Design" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -104,106 +107,84 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="Zeroit.Framework.ListView">
-      <HintPath>..\..\..\..\..\Desktop\Hotel_Vanilla\Hotel_Vanilla\packages\Zeroit.Framework.ListView.1.0.0\lib\Zeroit.Framework.ListView.dll</HintPath>
-    </Reference>
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CDD\cddActividad.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>cddActividad.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="CDD\cddConsumidoresPorComunidad.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>cddConsumidoresPorComunidad.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="CDD\cddGPagosPorAnio.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>cddGPagosPorAnio.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="CDD\cddPagosPorAnioPorConsumidor.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>cddPagosPorAnioPorConsumidor.xsd</DependentUpon>
-    </Compile>
     <Compile Include="DAO\ClsDComunidad.cs" />
     <Compile Include="DAO\ClsDConsumidores.cs" />
     <Compile Include="DAO\ClsDEstados.cs" />
+    <Compile Include="DAO\ClsDPagos.cs" />
     <Compile Include="DAO\ClsDSucesos.cs" />
     <Compile Include="DAO\ClsDUsuarios.cs" />
-    <Compile Include="DAO\ClsDPagos.cs" />
     <Compile Include="DOMINIO\ButtonColor.cs" />
+    <Compile Include="MODELO\AcapolamiModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AcapolamiModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MODELO\AcapolamiModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AcapolamiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MODELO\AcapolamiModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AcapolamiModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="MODELO\Comunidades.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>AcapolamiModel.tt</DependentUpon>
     </Compile>
     <Compile Include="MODELO\Consumidores.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>AcapolamiModel.tt</DependentUpon>
     </Compile>
     <Compile Include="MODELO\Estados.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MODELO\Model1.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MODELO\Model1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MODELO\Model1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
+      <DependentUpon>AcapolamiModel.tt</DependentUpon>
     </Compile>
     <Compile Include="MODELO\Pagos.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>AcapolamiModel.tt</DependentUpon>
     </Compile>
     <Compile Include="MODELO\sp_ConsumidoresPorComunidad_Result.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MODELO\sp_helpdiagramdefinition_Result.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MODELO\sp_helpdiagrams_Result.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>AcapolamiModel.tt</DependentUpon>
     </Compile>
     <Compile Include="MODELO\sp_MostrarComunidades_Result.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>AcapolamiModel.tt</DependentUpon>
     </Compile>
     <Compile Include="MODELO\sp_MostrarConsumidoresId_Result.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>AcapolamiModel.tt</DependentUpon>
     </Compile>
     <Compile Include="MODELO\sp_MostrarConsumidores_Result.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>AcapolamiModel.tt</DependentUpon>
     </Compile>
     <Compile Include="MODELO\sp_MostrarPagosId_Result.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>AcapolamiModel.tt</DependentUpon>
     </Compile>
     <Compile Include="MODELO\sp_MostrarPagos_Result.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>AcapolamiModel.tt</DependentUpon>
     </Compile>
     <Compile Include="MODELO\sp_obtenerMontoCanceladoMeses_Result.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>AcapolamiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MODELO\sp_ReporteConsumidoresComunidad_Result.cs">
+      <DependentUpon>AcapolamiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MODELO\sp_rp_pagosByYear_Result.cs">
+      <DependentUpon>AcapolamiModel.tt</DependentUpon>
     </Compile>
     <Compile Include="MODELO\sp_UltimosConsumidores_Result.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>AcapolamiModel.tt</DependentUpon>
     </Compile>
     <Compile Include="MODELO\sp_UltimosPagos_Result.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>AcapolamiModel.tt</DependentUpon>
     </Compile>
     <Compile Include="MODELO\Sucesos.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>AcapolamiModel.tt</DependentUpon>
     </Compile>
     <Compile Include="MODELO\sysdiagrams.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>AcapolamiModel.tt</DependentUpon>
     </Compile>
     <Compile Include="MODELO\Usuarios.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>AcapolamiModel.tt</DependentUpon>
     </Compile>
     <Compile Include="MODELO\ViewModels\ConsumidoresViewModel.cs" />
     <Compile Include="MODELO\ViewModels\PagosViewModel.cs" />
@@ -211,12 +192,58 @@
     <Compile Include="NEGOCIO\ClsCalculosPagos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SqlServerTypes\Loader.cs" />
-    <Compile Include="VISTA\frmActividades.cs">
+    <Compile Include="REPORTE\CR_ReporteGlobalPorYear.cs" />
+    <Compile Include="REPORTE\rp_pagosPorYearConsumidor.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rp_pagosPorYearConsumidor.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTE\rp_reporteGeneralPorYear.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rp_reporteGeneralPorYear.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTE\CR_Pagos.cs" />
+    <Compile Include="REPORTE\Pagos.cs" />
+    <Compile Include="REPORTE\PagosGeneral.cs" />
+    <Compile Include="REPORTE\ReporteGeneralPagos.cs" />
+    <Compile Include="REPORTE\rp_consumidores.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rp_consumidores.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTE\rp_reporteGlobal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rp_reporteGlobal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VISTA\FrmActividad.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VISTA\frmActividades.Designer.cs">
-      <DependentUpon>frmActividades.cs</DependentUpon>
+    <Compile Include="VISTA\FrmActividad.Designer.cs">
+      <DependentUpon>FrmActividad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\FrmAjustes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VISTA\FrmAjustes.Designer.cs">
+      <DependentUpon>FrmAjustes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\FrmConsumidores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VISTA\FrmConsumidores.Designer.cs">
+      <DependentUpon>FrmConsumidores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\FrmDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VISTA\FrmDashboard.Designer.cs">
+      <DependentUpon>FrmDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="VISTA\FrmDialogoAdvertencia.cs">
       <SubType>Form</SubType>
@@ -236,6 +263,18 @@
     <Compile Include="VISTA\FrmDialogoExito.Designer.cs">
       <DependentUpon>FrmDialogoExito.cs</DependentUpon>
     </Compile>
+    <Compile Include="VISTA\FrmGestionConsumidores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VISTA\FrmGestionConsumidores.Designer.cs">
+      <DependentUpon>FrmGestionConsumidores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\FrmGestionDePagosOptimizados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VISTA\FrmGestionDePagosOptimizados.Designer.cs">
+      <DependentUpon>FrmGestionDePagosOptimizados.cs</DependentUpon>
+    </Compile>
     <Compile Include="VISTA\FrmGestionPagos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -247,36 +286,6 @@
     </Compile>
     <Compile Include="VISTA\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="VISTA\FrmAjustes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="VISTA\FrmAjustes.Designer.cs">
-      <DependentUpon>FrmAjustes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="VISTA\FrmConsumidoresPorComunidad.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="VISTA\FrmConsumidoresPorComunidad.Designer.cs">
-      <DependentUpon>FrmConsumidoresPorComunidad.cs</DependentUpon>
-    </Compile>
-    <Compile Include="VISTA\FrmDashboard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="VISTA\FrmDashboard.Designer.cs">
-      <DependentUpon>FrmDashboard.cs</DependentUpon>
-    </Compile>
-    <Compile Include="VISTA\FrmGestionConsumidores.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="VISTA\FrmGestionConsumidores.Designer.cs">
-      <DependentUpon>FrmGestionConsumidores.cs</DependentUpon>
-    </Compile>
-    <Compile Include="VISTA\FrmGPagosPorAnio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="VISTA\FrmGPagosPorAnio.Designer.cs">
-      <DependentUpon>FrmGPagosPorAnio.cs</DependentUpon>
     </Compile>
     <Compile Include="VISTA\FrmNotificaciones.cs">
       <SubType>Form</SubType>
@@ -290,35 +299,17 @@
     <Compile Include="VISTA\FrmPagos.Designer.cs">
       <DependentUpon>FrmPagos.cs</DependentUpon>
     </Compile>
-    <Compile Include="VISTA\FrmPagosPorAnioPorConsumidor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="VISTA\FrmPagosPorAnioPorConsumidor.Designer.cs">
-      <DependentUpon>FrmPagosPorAnioPorConsumidor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="VISTA\FrmRegistro.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="VISTA\FrmRegistro.Designer.cs">
-      <DependentUpon>FrmRegistro.cs</DependentUpon>
-    </Compile>
     <Compile Include="VISTA\FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="VISTA\FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="VISTA\FrmConsumidores.cs">
+    <Compile Include="VISTA\FrmRegistro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VISTA\FrmConsumidores.Designer.cs">
-      <DependentUpon>FrmConsumidores.cs</DependentUpon>
-    </Compile>
-    <Compile Include="VISTA\FrmReporteActividad.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="VISTA\FrmReporteActividad.Designer.cs">
-      <DependentUpon>FrmReporteActividad.cs</DependentUpon>
+    <Compile Include="VISTA\FrmRegistro.Designer.cs">
+      <DependentUpon>FrmRegistro.cs</DependentUpon>
     </Compile>
     <Compile Include="VISTA\FrmReportes.cs">
       <SubType>Form</SubType>
@@ -336,12 +327,33 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="REPORTES\Actividad.rdlc" />
-    <EmbeddedResource Include="REPORTES\ConsumidoresPorComunidad.rdlc" />
-    <EmbeddedResource Include="REPORTES\GPagosPorAnio.rdlc" />
-    <EmbeddedResource Include="REPORTES\PagosPorAnioPorConsumidor.rdlc" />
-    <EmbeddedResource Include="VISTA\frmActividades.resx">
-      <DependentUpon>frmActividades.cs</DependentUpon>
+    <EmbeddedResource Include="REPORTE\rp_pagosPorYearConsumidor.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rp_pagosPorYearConsumidor.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTE\rp_reporteGeneralPorYear.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rp_reporteGeneralPorYear.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTE\rp_consumidores.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rp_consumidores.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTE\rp_reporteGlobal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rp_reporteGlobal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VISTA\FrmActividad.resx">
+      <DependentUpon>FrmActividad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VISTA\FrmAjustes.resx">
+      <DependentUpon>FrmAjustes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VISTA\FrmConsumidores.resx">
+      <DependentUpon>FrmConsumidores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VISTA\FrmDashboard.resx">
+      <DependentUpon>FrmDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VISTA\FrmDialogoAdvertencia.resx">
       <DependentUpon>FrmDialogoAdvertencia.cs</DependentUpon>
@@ -352,26 +364,17 @@
     <EmbeddedResource Include="VISTA\FrmDialogoExito.resx">
       <DependentUpon>FrmDialogoExito.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VISTA\FrmGestionConsumidores.resx">
+      <DependentUpon>FrmGestionConsumidores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VISTA\FrmGestionDePagosOptimizados.resx">
+      <DependentUpon>FrmGestionDePagosOptimizados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VISTA\FrmGestionPagos.resx">
       <DependentUpon>FrmGestionPagos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VISTA\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VISTA\FrmAjustes.resx">
-      <DependentUpon>FrmAjustes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VISTA\FrmConsumidoresPorComunidad.resx">
-      <DependentUpon>FrmConsumidoresPorComunidad.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VISTA\FrmDashboard.resx">
-      <DependentUpon>FrmDashboard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VISTA\FrmGestionConsumidores.resx">
-      <DependentUpon>FrmGestionConsumidores.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VISTA\FrmGPagosPorAnio.resx">
-      <DependentUpon>FrmGPagosPorAnio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VISTA\FrmNotificaciones.resx">
       <DependentUpon>FrmNotificaciones.cs</DependentUpon>
@@ -379,76 +382,24 @@
     <EmbeddedResource Include="VISTA\FrmPagos.resx">
       <DependentUpon>FrmPagos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VISTA\FrmPagosPorAnioPorConsumidor.resx">
-      <DependentUpon>FrmPagosPorAnioPorConsumidor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VISTA\FrmRegistro.resx">
-      <DependentUpon>FrmRegistro.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="VISTA\FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VISTA\FrmConsumidores.resx">
-      <DependentUpon>FrmConsumidores.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VISTA\FrmReporteActividad.resx">
-      <DependentUpon>FrmReporteActividad.cs</DependentUpon>
+    <EmbeddedResource Include="VISTA\FrmRegistro.resx">
+      <DependentUpon>FrmRegistro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VISTA\FrmReportes.resx">
       <DependentUpon>FrmReportes.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ACAPOLAMI_TemporaryKey.pfx" />
-    <None Include="CDD\cddActividad.xsc">
-      <DependentUpon>cddActividad.xsd</DependentUpon>
-    </None>
-    <None Include="CDD\cddActividad.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>cddActividad.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="CDD\cddActividad.xss">
-      <DependentUpon>cddActividad.xsd</DependentUpon>
-    </None>
-    <None Include="CDD\cddConsumidoresPorComunidad.xsc">
-      <DependentUpon>cddConsumidoresPorComunidad.xsd</DependentUpon>
-    </None>
-    <None Include="CDD\cddConsumidoresPorComunidad.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>cddConsumidoresPorComunidad.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="CDD\cddConsumidoresPorComunidad.xss">
-      <DependentUpon>cddConsumidoresPorComunidad.xsd</DependentUpon>
-    </None>
-    <None Include="CDD\cddGPagosPorAnio.xsc">
-      <DependentUpon>cddGPagosPorAnio.xsd</DependentUpon>
-    </None>
-    <None Include="CDD\cddGPagosPorAnio.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>cddGPagosPorAnio.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="CDD\cddGPagosPorAnio.xss">
-      <DependentUpon>cddGPagosPorAnio.xsd</DependentUpon>
-    </None>
-    <None Include="CDD\cddPagosPorAnioPorConsumidor.xsc">
-      <DependentUpon>cddPagosPorAnioPorConsumidor.xsd</DependentUpon>
-    </None>
-    <None Include="CDD\cddPagosPorAnioPorConsumidor.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>cddPagosPorAnioPorConsumidor.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="CDD\cddPagosPorAnioPorConsumidor.xss">
-      <DependentUpon>cddPagosPorAnioPorConsumidor.xsd</DependentUpon>
-    </None>
-    <EntityDeploy Include="MODELO\Model1.edmx">
+    <EntityDeploy Include="MODELO\AcapolamiModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+      <LastGenOutput>AcapolamiModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="MODELO\Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
+    <None Include="MODELO\AcapolamiModel.edmx.diagram">
+      <DependentUpon>AcapolamiModel.edmx</DependentUpon>
     </None>
+    <None Include="Resources\Resources.resx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -476,77 +427,83 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\LOGO1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\588a64e0d06f6719692a2d101.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\585e4be1cb11b227491c339811.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\window_close_icon_135015 %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\minimize_118918.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\casa.png" />
-    <None Include="Resources\reportes.png" />
-    <None Include="Resources\rupia.png" />
-    <None Include="Resources\agenda.png" />
-    <None Include="Resources\notificacion.png" />
-    <None Include="Resources\ajustes.png" />
-    <None Include="Resources\menu.png" />
-    <None Include="Resources\mas.png" />
-    <None Include="Resources\salida %281%29.png" />
-    <None Include="Resources\escoba.png" />
-    <None Include="Resources\lupa.png" />
-    <None Include="Resources\filtrar.png" />
-    <None Include="Resources\habilidades.png" />
-    <None Include="Resources\casa-del-bosque.png" />
-    <None Include="Resources\aPagar.png" />
-    <None Include="Resources\pagado.png" />
+    <Content Include="icono.ico" />
+    <Content Include="MODELO\AcapolamiModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AcapolamiModel.edmx</DependentUpon>
+      <LastGenOutput>AcapolamiModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="MODELO\AcapolamiModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AcapolamiModel.edmx</DependentUpon>
+      <LastGenOutput>AcapolamiModel.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\guardar--.png" />
     <None Include="Resources\pendiente.png" />
-    <Content Include="MODELO\Model1.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="MODELO\Model1.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
-    </Content>
+    <None Include="Resources\Impuesto.png" />
+    <None Include="Resources\fondo.jpg" />
+    <None Include="Resources\cancelado.png" />
+    <None Include="Resources\aPagar.png" />
+    <None Include="Resources\basura.png" />
+    <None Include="Resources\agregar-archivo.png" />
+    <None Include="Resources\editar.png" />
+    <None Include="Resources\usuario.png" />
+    <None Include="Resources\window_close_icon_135015 %281%29.png" />
     <None Include="Resources\WarnigWhite.png" />
-    <None Include="Resources\cancelWhite.png" />
     <None Include="Resources\Sucesswhite.png" />
+    <None Include="Resources\salida %281%29.png" />
+    <None Include="Resources\rupia.png" />
+    <None Include="Resources\reportes.png" />
+    <None Include="Resources\pagado.png" />
+    <None Include="Resources\notificacion.png" />
+    <None Include="Resources\minimize_118918.png" />
+    <None Include="Resources\MINIMIZAR.png" />
+    <None Include="Resources\menu.png" />
+    <None Include="Resources\MAXIMIZAR.png" />
+    <None Include="Resources\mas.png" />
+    <None Include="Resources\lupa.png" />
     <None Include="Resources\logoInvertido.png" />
+    <None Include="Resources\logoCerradoVertical.jpg" />
     <None Include="Resources\logoCerrado.png" />
+    <None Include="Resources\logoCerrado - copia.png" />
+    <None Include="Resources\LOGO1.jpg" />
+    <None Include="Resources\LOGO.jpg" />
+    <None Include="Resources\Logo.jpeg" />
+    <None Include="Resources\habilidades.png" />
+    <None Include="Resources\gif2.gif" />
+    <None Include="Resources\gif.gif" />
+    <None Include="Resources\filtrar.png" />
+    <None Include="Resources\escoba.png" />
+    <None Include="Resources\CERRAR.png" />
+    <None Include="Resources\casa-del-bosque.png" />
+    <None Include="Resources\casa.png" />
+    <None Include="Resources\cancelWhite.png" />
+    <None Include="Resources\aviso.png" />
+    <None Include="Resources\ajustes.png" />
+    <None Include="Resources\agenda.png" />
+    <None Include="Resources\advertencia.png" />
+    <None Include="Resources\588a64e0d06f6719692a2d101.png" />
+    <None Include="Resources\588a64e0d06f6719692a2d10.png" />
+    <None Include="Resources\588a64cdd06f6719692a2d0d %281%29.png" />
+    <None Include="Resources\585e4be1cb11b227491c339811.png" />
+    <None Include="Resources\585e4be1cb11b227491c33981.png" />
+    <None Include="Resources\585e4be1cb11b227491c3398.png" />
+    <None Include="Resources\11.png" />
+    <None Include="Resources\3.png" />
     <None Include="Resources\2.png" />
     <None Include="Resources\1.png" />
-    <None Include="Resources\3.png" />
-    <None Include="Resources\11.png" />
-    <None Include="Resources\advertencia.png" />
-    <None Include="Resources\aviso.png" />
-    <Content Include="SqlServerTypes\readme.htm" />
-    <Content Include="SqlServerTypes\x64\msvcr120.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x86\msvcr120.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <None Include="Resources\gif.gif" />
-    <None Include="Resources\gif2.gif" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
 </Project>

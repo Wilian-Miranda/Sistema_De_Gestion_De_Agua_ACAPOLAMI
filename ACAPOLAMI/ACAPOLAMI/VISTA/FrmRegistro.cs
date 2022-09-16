@@ -2,7 +2,6 @@
 using ACAPOLAMI.DOMINIO;
 using ACAPOLAMI.MODELO;
 using ACAPOLAMI.NEGOCIO;
-using ACAPOLAMI.VISTA;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,11 +12,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WilianMiranda01.VISTA
+namespace ACAPOLAMI.VISTA
 {
-    public partial class FrmRegistroUsuario : Form
+    public partial class FrmRegistro : Form
     {
-        public FrmRegistroUsuario()
+        public FrmRegistro()
         {
             InitializeComponent();
         }
@@ -28,7 +27,7 @@ namespace WilianMiranda01.VISTA
         private void btnCerrarAplicacion_Click(object sender, EventArgs e)
         {
             this.Dispose();
-            Form1 login = new Form1();
+            FrmLogin login = new FrmLogin();
             login.Show();
         }
 
@@ -49,7 +48,7 @@ namespace WilianMiranda01.VISTA
         private void btnRegistroUsuario_Click(object sender, EventArgs e)
         {
             this.Dispose();
-            Form1 login = new Form1();
+            FrmLogin login = new FrmLogin();
             login.Show();
         }
 
@@ -67,8 +66,7 @@ namespace WilianMiranda01.VISTA
                 {
                     ClsUsuario.GuardarUsuario(usuario);
 
-                    FrmDialogoExito.Confirmar("Registro de usuario exitoso");
-                    Form1 frm = new Form1();
+                    FrmLogin frm = new FrmLogin();
                     this.Hide();
                     frm.Show();
                 }

@@ -44,9 +44,10 @@ namespace ACAPOLAMI.VISTA
             this.lblMensaje.BackColor = System.Drawing.Color.White;
             this.lblMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMensaje.ForeColor = System.Drawing.Color.DimGray;
-            this.lblMensaje.Location = new System.Drawing.Point(12, 313);
+            this.lblMensaje.Location = new System.Drawing.Point(16, 385);
+            this.lblMensaje.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMensaje.Name = "lblMensaje";
-            this.lblMensaje.Size = new System.Drawing.Size(295, 56);
+            this.lblMensaje.Size = new System.Drawing.Size(393, 69);
             this.lblMensaje.TabIndex = 9;
             this.lblMensaje.Text = "MENSAJE";
             this.lblMensaje.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -57,16 +58,19 @@ namespace ACAPOLAMI.VISTA
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(244, 101);
+            this.panel1.Size = new System.Drawing.Size(325, 124);
             this.panel1.TabIndex = 8;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(80, 10);
+            this.pictureBox1.ErrorImage = global::ACAPOLAMI.Properties.Resources.aviso;
+            this.pictureBox1.Image = global::ACAPOLAMI.Properties.Resources.WarnigWhite;
+            this.pictureBox1.Location = new System.Drawing.Point(107, 12);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(83, 79);
+            this.pictureBox1.Size = new System.Drawing.Size(111, 97);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -76,9 +80,10 @@ namespace ACAPOLAMI.VISTA
             this.lblMessage.BackColor = System.Drawing.Color.Transparent;
             this.lblMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMessage.ForeColor = System.Drawing.Color.DimGray;
-            this.lblMessage.Location = new System.Drawing.Point(-1, 103);
+            this.lblMessage.Location = new System.Drawing.Point(-1, 127);
+            this.lblMessage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(247, 51);
+            this.lblMessage.Size = new System.Drawing.Size(329, 63);
             this.lblMessage.TabIndex = 10;
             this.lblMessage.Text = "MENSAJE";
             this.lblMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -91,9 +96,10 @@ namespace ACAPOLAMI.VISTA
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.Color.White;
-            this.btnAceptar.Location = new System.Drawing.Point(68, 187);
+            this.btnAceptar.Location = new System.Drawing.Point(91, 230);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(110, 34);
+            this.btnAceptar.Size = new System.Drawing.Size(147, 42);
             this.btnAceptar.TabIndex = 12;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = false;
@@ -101,15 +107,17 @@ namespace ACAPOLAMI.VISTA
             // 
             // FrmDialogoError
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(244, 244);
+            this.ClientSize = new System.Drawing.Size(325, 300);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.lblMessage);
             this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmDialogoError";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmDialogoError";

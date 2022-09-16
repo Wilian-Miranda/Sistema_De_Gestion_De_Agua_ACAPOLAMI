@@ -2,17 +2,15 @@
 using ACAPOLAMI.DOMINIO;
 using ACAPOLAMI.MODELO;
 using ACAPOLAMI.NEGOCIO;
-using ACAPOLAMI.VISTA;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using WilianMiranda01.VISTA;
 
-namespace WilianMiranda01
+namespace ACAPOLAMI.VISTA
 {
-    public partial class Form1 : Form
+    public partial class FrmLogin : Form
     {
-        public Form1()
+        public FrmLogin()
         {
             InitializeComponent();
         }
@@ -33,7 +31,7 @@ namespace WilianMiranda01
             if (comprobar == 1)
             {
                 FrmDialogoExito.Confirmar("Inicio de sesion exitoso");
-                FmrPrincipal frmPrincipal = new FmrPrincipal();
+                FrmPrincipal frmPrincipal = new FrmPrincipal();
                 this.Hide();
                 frmPrincipal.Show();
                 frmPrincipal.lblNombreUSuario.Text = txtUsuario.Text;
@@ -91,7 +89,7 @@ namespace WilianMiranda01
         
         private void button1_Click(object sender, EventArgs e)
         {
-            FrmRegistroUsuario registro = new FrmRegistroUsuario();
+            FrmRegistro registro = new FrmRegistro();
             Hide();
             registro.ShowDialog();
         }

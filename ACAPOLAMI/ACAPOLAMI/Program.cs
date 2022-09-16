@@ -1,15 +1,13 @@
-﻿using ACAPOLAMI.VISTA;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WilianMiranda01;
-using WilianMiranda01.VISTA;
+using ACAPOLAMI.VISTA;
 
 namespace ACAPOLAMI
 {
-    static class Program
+    internal static class Program
     {
         /// <summary>
         /// Punto de entrada principal para la aplicación.
@@ -19,7 +17,7 @@ namespace ACAPOLAMI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FmrPrincipal());
+            Application.Run(new FrmLogin());
         }
     }
 }

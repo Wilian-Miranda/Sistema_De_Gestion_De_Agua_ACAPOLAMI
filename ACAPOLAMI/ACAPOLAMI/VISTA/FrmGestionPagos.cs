@@ -12,7 +12,6 @@ using ACAPOLAMI.DOMINIO;
 using ACAPOLAMI.NEGOCIO;
 using ACAPOLAMI.DAO;
 using System.Collections;
-using WilianMiranda01.VISTA;
 
 namespace ACAPOLAMI.VISTA
 {
@@ -20,14 +19,19 @@ namespace ACAPOLAMI.VISTA
     {
         ClsDSucesos sucesos = new ClsDSucesos();
         ClsCalculosPagos calculos = new ClsCalculosPagos();
-        public string Id;
+        public string IdRegistroPago="";
+        public FrmPagos ventanaActualPagos;
         public FrmGestionPagos()
         {
             InitializeComponent();
             CargarEstados();
-            CargarConsumidor();
-            txtMontoBase.Text = FmrPrincipal.pagoBase;
+            //CargarConsumidor();
+            txtMontoBase.Text = Properties.Settings.Default["montoBase"].ToString();
             cbEstado.Text = estadoCB;
+            //txtImpuesto.Text = "0.00";
+            //txtCancelado.Text = "0.00";
+            //DatosCBseleccionados();
+            
         }
 
         private void FrmGestioPagos_Load(object sender, EventArgs e)
@@ -35,12 +39,14 @@ namespace ACAPOLAMI.VISTA
             DatosCBseleccionados();
             cbEstado.SelectedIndex = -1;
             cbEstado.Text = estadoCB;
-
+            CargarMontoAcumulado(txtIdConsumidor.Text);
             if (ValidacionCajasTexto() && btnEjecutar.Text.Equals("Actualizar"))
             {
-                txtPendiente.ReadOnly = false;
-                txtTotal.ReadOnly = false;
+                txtPendiente.ReadOnly = true;
+                txtAcumulado.ReadOnly = true;
+               //DatosConsumidor();
             }
+            PagoAnterior = Convert.ToDouble(txtCancelado.Text);
         }
 
         public String estadoCB;
@@ -60,6 +66,7 @@ namespace ACAPOLAMI.VISTA
                     txtApellidos.Text = i.Apellidos;
                 }
             }
+            
 
         }
 
@@ -68,15 +75,15 @@ namespace ACAPOLAMI.VISTA
             if (!cbConsumidor.Text.Equals(""))
             {
                 CargarConsumidor();
-                if (txtCancelado.Text != "" && txtCancelado.Text != "0.0000")
+                /*if (txtCancelado.Text != "" && txtCancelado.Text != "0.0000")
                 {
                     ClsCalculosPagos calculos = new ClsCalculosPagos();
                     calculos.CalculoDePago(Convert.ToDouble(txtMontoBase.Text, System.Globalization.CultureInfo.InvariantCulture), 
                         Convert.ToDouble(txtCancelado.Text, System.Globalization.CultureInfo.InvariantCulture),
                         Convert.ToDouble(txtPendiente.Text, System.Globalization.CultureInfo.InvariantCulture), 
                         Convert.ToDouble(txtImpuesto.Text, System.Globalization.CultureInfo.InvariantCulture), 
-                        Convert.ToDouble(txtTotal.Text, System.Globalization.CultureInfo.InvariantCulture));
-                }
+                        Convert.ToDouble(txtAcumulado.Text, System.Globalization.CultureInfo.InvariantCulture));
+                }*/
             }
         }
 
@@ -87,10 +94,10 @@ namespace ACAPOLAMI.VISTA
             ConsumidorCBSeleccionado();
             txtCancelado.Focus();
             txtIdConsumidor.ReadOnly = true;
-            txtMontoBase.Text = FmrPrincipal.pagoBase;
+            txtMontoBase.Text = Properties.Settings.Default["montoBase"].ToString();
 
-            if (Convert.ToDouble(txtTotal.Text) < 0)
-                txtTotal.Text = "0.0000";
+            if (Convert.ToDouble(txtAcumulado.Text) < 0)
+                txtAcumulado.Text = "0.0000";
         }
         private void ConsumidorCBSeleccionado()
         {
@@ -100,6 +107,7 @@ namespace ACAPOLAMI.VISTA
             }
         }
 
+        double acumulado = 0;
         private void DatosConsumidor()
         {
             String id = cbConsumidor.SelectedValue.ToString();
@@ -120,12 +128,21 @@ namespace ACAPOLAMI.VISTA
                     txtNombres.Text = i.Nombres;
                     txtApellidos.Text = i.Apellidos;
                 }
+                CargarMontoAcumulado(id);
+            }
+        }
 
+        private void CargarMontoAcumulado(String id)
+        {
+            using (ACAPOLAMIEntities db = new ACAPOLAMIEntities())
+            {
                 var deuda = (from a in db.Pagos
                              where a.idConsumidor_FK.ToString() == id
-                             select a.montoTotal).ToList();
+                             select a.montoPendiente).ToList();
 
-                txtTotal.Text = deuda.Sum().ToString();
+                txtAcumulado.Text = deuda.Sum().ToString();
+                txtAcumulado.ReadOnly = true;
+                acumulado = (double)deuda.Sum();
             }
         }
 
@@ -153,7 +170,7 @@ namespace ACAPOLAMI.VISTA
         {
             if (txtImpuesto.Text.Equals("0.0000"))
             {
-                txtImpuesto.Text = "";
+                txtImpuesto.Text = "0.0000";
                 txtImpuesto.ForeColor = Color.RoyalBlue;
             }
         }
@@ -244,8 +261,8 @@ namespace ACAPOLAMI.VISTA
                 if (calculos.Pendiente < 0)
                     txtPendiente.Text = "0";
 
-                if (calculos.Total < 0)
-                    txtTotal.Text = "0";
+                if (calculos.Acumulado < 0)
+                    txtAcumulado.Text = "0";
 
                 if (calculos.Impuesto < 0)
                     txtImpuesto.Text = "0";
@@ -261,15 +278,23 @@ namespace ACAPOLAMI.VISTA
 
                 try
                 {
-                    if (cbEstado.SelectedValue == null)
+                    if (cbEstado.SelectedValue != null)
                     {
-                        cbEstado.SelectedIndex = 1;
+
+                        pago.AgregarPago(Convert.ToDecimal(txtMontoBase.Text), Convert.ToDecimal(txtCancelado.Text),
+                            Convert.ToDecimal(txtPendiente.Text), Convert.ToDecimal(txtImpuesto.Text),
+                            Convert.ToDateTime(dtpFechaPago.Text), Convert.ToInt32(cbEstado.SelectedValue.ToString()),
+                            idconsumidor, true);
+
+                        FrmNotificaciones notificacion = new FrmNotificaciones(sucesos.CargarDatosSucesos().tipoSuceso,
+                                    sucesos.CargarDatosSucesos().descripcion, FrmNotificaciones.TipoAlerta.Realizado);
+                        notificacion.Show();
+                    }
+                    else
+                    {
+                        FrmDialogoError.Error("Elija el estado del pago.");
                     }
 
-                    pago.AgregarPago(Convert.ToDecimal(txtMontoBase.Text), Convert.ToDecimal(txtCancelado.Text),
-                        Convert.ToDecimal(txtPendiente.Text), Convert.ToDecimal(txtImpuesto.Text), Convert.ToDecimal(txtTotal.Text),
-                        Convert.ToDateTime(dtpFechaPago.Text), Convert.ToInt32(cbEstado.SelectedValue.ToString()),
-                        idconsumidor);
                 }
 
                 catch (Exception ex)
@@ -277,14 +302,10 @@ namespace ACAPOLAMI.VISTA
                     FrmDialogoError.Error("Ha ocurrido el siguiente error: " + ex.Message);
                 }
 
-                FrmNotificaciones notificacion = new FrmNotificaciones(sucesos.CargarDatosSucesos().tipoSuceso,
-                            sucesos.CargarDatosSucesos().descripcion, FrmNotificaciones.TipoAlerta.Realizado);
-                notificacion.Show();
-
                 Limpiar();
 
-                txtMontoBase.Text = FmrPrincipal.pagoBase;
-                btnBuscarConsumidor.PerformClick();
+                txtMontoBase.Text = Properties.Settings.Default["montoBase"].ToString();
+                ventanaActualPagos.btnBuscarConsumidor.PerformClick();
             }
             else if (ValidacionCajasTexto()&&btnEjecutar.Text.Equals("Actualizar"))
             {
@@ -294,9 +315,13 @@ namespace ACAPOLAMI.VISTA
                 try
                 {
                     pago.Modificarpago(Convert.ToInt32(txtIdRegistro.Text), Convert.ToDecimal(txtMontoBase.Text), Convert.ToDecimal(txtCancelado.Text),
-                        Convert.ToDecimal(txtPendiente.Text), Convert.ToDecimal(txtImpuesto.Text), Convert.ToDecimal(txtTotal.Text),
+                        Convert.ToDecimal(txtPendiente.Text), Convert.ToDecimal(txtImpuesto.Text),
                         Convert.ToDateTime(dtpFechaPago.Text), Convert.ToInt32(cbEstado.SelectedValue.ToString()),
                         Convert.ToInt32(txtIdConsumidor.Text));
+
+                    FrmNotificaciones notificacion = new FrmNotificaciones(sucesos.CargarDatosSucesos().tipoSuceso,
+                    sucesos.CargarDatosSucesos().descripcion, FrmNotificaciones.TipoAlerta.Advertencia);
+                    notificacion.Show();
                 }
 
                 catch(Exception ex)
@@ -304,12 +329,8 @@ namespace ACAPOLAMI.VISTA
                     FrmDialogoError.Error("Ha ocurrido el siguiente error: " + ex.Message);
                 }
 
-                FrmNotificaciones notificacion = new FrmNotificaciones(sucesos.CargarDatosSucesos().tipoSuceso,
-                            sucesos.CargarDatosSucesos().descripcion, FrmNotificaciones.TipoAlerta.Advertencia);
-                notificacion.Show();
-
                 Limpiar();
-
+                ventanaActualPagos.btnBuscarConsumidor.PerformClick();
                 this.Close();
             }
             else if (ValidacionCajasTexto() && btnEjecutar.Text.Equals("Eliminar"))
@@ -320,17 +341,16 @@ namespace ACAPOLAMI.VISTA
                 try
                 {
                     pago.EliminarPago(Convert.ToInt32(txtIdRegistro.Text));
+                    FrmNotificaciones notificacion = new FrmNotificaciones(sucesos.CargarDatosSucesos().tipoSuceso,
+                    sucesos.CargarDatosSucesos().descripcion, FrmNotificaciones.TipoAlerta.Error);
+                    notificacion.Show();
                 }
 
                 catch(Exception ex)
                 {
                     FrmDialogoError.Error("Ha ocurrido el siguiente error: " + ex.Message);
                 }
-
-                FrmNotificaciones notificacion = new FrmNotificaciones(sucesos.CargarDatosSucesos().tipoSuceso,
-                        sucesos.CargarDatosSucesos().descripcion, FrmNotificaciones.TipoAlerta.Error);
-                notificacion.Show();
-
+                ventanaActualPagos.btnBuscarConsumidor.PerformClick();
                 this.Close();
             }
         }
@@ -453,9 +473,9 @@ namespace ACAPOLAMI.VISTA
             txtIdConsumidor.Text = "Codigo";
             txtNombres.Text = "Primero Segundo";
             txtApellidos.Text = "Primero Segundo";
-            txtMontoBase.Text = FmrPrincipal.pagoBase;
+            txtMontoBase.Text = Properties.Settings.Default["montoBase"].ToString();
             txtImpuesto.Text = "0.0000";
-            txtTotal.Text = "0.0000";
+            txtAcumulado.Text = "0.0000";
             txtPendiente.Text = "0.0000";
             txtCancelado.Text = "0.0000";
         }
@@ -527,20 +547,27 @@ namespace ACAPOLAMI.VISTA
             cbConsumidor.SelectAll();
         }
 
+        double PagoAnterior = 0.0;
         private void CalculosPagos()
         {
-            if (txtCancelado.Text != "" && txtCancelado.Text != "0.0000")
+            txtAcumulado.Text = acumulado.ToString();
+
+            double reduccion = 0.0;
+
+            if (txtCancelado.Text != "" && txtCancelado.Text != "0.0000" && txtImpuesto.Text != "")
             {
+                
                 calculos.CalculoDePago(Convert.ToDouble(txtMontoBase.Text.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture), 
                     Convert.ToDouble(txtCancelado.Text.Replace(",","."), System.Globalization.CultureInfo.InvariantCulture),
-                    Convert.ToDouble(txtPendiente.Text.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture), 
-                    Convert.ToDouble(txtImpuesto.Text.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture), 
-                    Convert.ToDouble(txtTotal.Text.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture));
+                    Convert.ToDouble(txtAcumulado.Text.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture));
 
                 txtPendiente.Text = calculos.Pendiente.ToString();
-                txtImpuesto.Text = calculos.Impuesto.ToString();
-                txtTotal.Text = calculos.Total.ToString();
-                cbEstado.SelectedIndex = cbEstado.FindString(calculos.Estado);
+                txtAcumulado.Text = calculos.Acumulado.ToString();
+                if (PagoAnterior > 0.0)
+                {
+                    reduccion = Convert.ToDouble(txtCancelado.Text.Replace(",", "."), System.Globalization.CultureInfo.InvariantCulture) - PagoAnterior;
+                    txtAcumulado.Text = "" + (acumulado - reduccion);
+                }
             }
         }
 
@@ -574,6 +601,7 @@ namespace ACAPOLAMI.VISTA
         private void txtCancelado_KeyPress(object sender, KeyPressEventArgs e)
         {
             SoloNumeros(e);
+
         }
 
         private void txtMontoBase_KeyPress(object sender, KeyPressEventArgs e)
@@ -589,6 +617,7 @@ namespace ACAPOLAMI.VISTA
                 btnEjecutar.PerformClick();
                 e.Handled = true;
             }
+
         }
 
         private void txtCancelado_KeyDown(object sender, KeyEventArgs e)
@@ -597,7 +626,9 @@ namespace ACAPOLAMI.VISTA
             {
                 CalculosPagos();
                 e.Handled = true;
+
             }
+
         }
 
         private void txtImpuesto_KeyUp(object sender, KeyEventArgs e)
@@ -607,6 +638,32 @@ namespace ACAPOLAMI.VISTA
                 CalculosPagos();
                 e.Handled = true;
             }
+        }
+
+        private void txtCancelado_KeyUp(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (Convert.ToDouble(txtCancelado.Text) > Convert.ToDouble(txtMontoBase.Text))
+                {
+                    txtCancelado.Text = "";
+                    txtCancelado.Focus();
+                    ControlValidacion.SetError(txtCancelado, "El valor cancelado no debe ser mayor que el monto base");
+                }
+                else
+                {
+                    ControlValidacion.SetError(txtCancelado, "");
+                    if (IdRegistroPago != "" && PagoAnterior > Convert.ToDouble(txtCancelado.Text))
+                    {
+                        txtCancelado.Text = PagoAnterior.ToString();
+                    }
+
+                }
+
+            }
+            catch (Exception ex) { }
+
+            
         }
     }
 }

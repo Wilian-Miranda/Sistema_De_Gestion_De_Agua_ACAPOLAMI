@@ -11,7 +11,6 @@ using ACAPOLAMI.DAO;
 using ACAPOLAMI.DOMINIO;
 using ACAPOLAMI.MODELO;
 using ACAPOLAMI.NEGOCIO;
-using WilianMiranda01.VISTA;
 
 namespace ACAPOLAMI.VISTA
 {
@@ -21,6 +20,8 @@ namespace ACAPOLAMI.VISTA
         public FrmAjustes()
         {
             InitializeComponent();
+            mostrar();
+            txtPagoBase.Text = Properties.Settings.Default["montoBase"].ToString();
         }
 
         void mostrar()
@@ -300,25 +301,6 @@ namespace ACAPOLAMI.VISTA
             color.AzulClaro(boton);
         }
 
-        private void btnEliminarUsuario_MouseHover(object sender, EventArgs e)
-        {
-            boton.BotonAzulClaro = btnEliminarUsuario;
-            color.AzulClaro(boton);
-            btnEliminarUsuario.ForeColor = Color.White;
-        }
-
-        private void btnEliminarUsuario_MouseLeave(object sender, EventArgs e)
-        {
-            btnEliminarUsuario.BackColor = Color.White;
-            btnEliminarUsuario.ForeColor = Color.Black;
-        }
-
-        private void btnEliminarUsuario_MouseMove(object sender, MouseEventArgs e)
-        {
-            boton.BotonAzulClaro = btnEliminarUsuario;
-            color.AzulClaro(boton);
-            btnEliminarUsuario.ForeColor = Color.White;
-        }
 
         private void btnEstablecerPagoBase_MouseHover(object sender, EventArgs e)
         {
@@ -399,47 +381,37 @@ namespace ACAPOLAMI.VISTA
             string oldPass = txtPassAntigua.Text;
             string newPass = txtPass.Text;
 
-            if (txtUsuario.Text.Equals("ejemplo@gmail.com")
+            if (txtUsuario.Text.Equals("ejemplo@gmail..com")
                 || txtPassAntigua.Text.Equals("@antigua"))
             {
                 controlValidaciones.SetError(txtUsuario, "Este campo es obligatorio,\npara ejecutar esta acción");
                 controlValidaciones.SetError(txtPassAntigua, "Para modificar su usuario y/o contraseña,\ndebe ingresar su antigua contraseña");
             }
-            else if(txtPassAntigua.Text.Equals("@antigua") || txtPassAntigua.Text.Equals(""))
-            {
-                user.nombre = name;
-                user.clave = newPass;
-
-                usuarios.GuardarUsuario(user);
-
-                FrmDialogoExito.Confirmar("El nombre del usuario se ha modificado con exito");
-                mostrar();
-            }
-            else if(txtPassAntigua.Text != "@antigua" || txtPassAntigua.Text != "")
-            {
-                user.idUsuarios = Convert.ToInt32(dtgvUsuarios.CurrentRow.Cells[0].Value);
-                user.nombre = name;
-                user.clave = oldPass;
-
-                usuarios.CambiarPass(user, newPass);
-                FrmDialogoExito.Confirmar("La clave se ha modificado con exito");
-                mostrar();
-
-            }
-            else
+            else if(!txtPassAntigua.Text.Equals("@antigua") || !txtPassAntigua.Text.Equals(""))
             {
                 controlValidaciones.SetError(txtUsuario, "");
                 controlValidaciones.SetError(txtPassAntigua, "");
+
+                if (txtPass.Text.Equals("@nueva"))
+                {
+                    user.idUsuarios = Convert.ToInt32(dtgvUsuarios.CurrentRow.Cells[0].Value);
+                    user.nombre = name;
+                    user.clave = oldPass;
+
+                    usuarios.ActualizarUsuario(user);
+                    mostrar();
+                }
+                else
+                {
+                        user.idUsuarios = Convert.ToInt32(dtgvUsuarios.CurrentRow.Cells[0].Value);
+                        user.nombre = name;
+                        user.clave = oldPass;
+
+                        usuarios.CambiarPass(user, newPass);
+                        mostrar();
+                    
+                }
             }
-
-            mostrar();
-        }
-
-        private void btnEliminarUsuario_Click(object sender, EventArgs e)
-        {
-            string id = dtgvUsuarios.CurrentRow.Cells[0].Value.ToString();
-            usuarios.EliminarUsuario(Convert.ToInt32(id));
-            FrmDialogoExito.Confirmar("El usuario se ha eliminado con exito");
             mostrar();
         }
 
@@ -456,7 +428,10 @@ namespace ACAPOLAMI.VISTA
 
             if(txtPagoBase.Text != "0.0000")
             {
-                FmrPrincipal.pagoBase = txtPagoBase.Text;
+                //FrmPrincipal.pagoBase = txtPagoBase.Text;
+                //guardando confuguracion en el sitema
+                Properties.Settings.Default["montoBase"] = Convert.ToDecimal(txtPagoBase.Text);
+                Properties.Settings.Default.Save();
                 FrmDialogoExito.Confirmar("Se ha modificado el pago base");
             }
         }
@@ -625,9 +600,9 @@ namespace ACAPOLAMI.VISTA
             txtPassAntigua.Text = clave;
         }
 
-        private void dtgvComunidades_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        private void panelContenedor_Paint(object sender, PaintEventArgs e)
         {
-            txtComunidad.Text = dtgvComunidades.CurrentRow.Cells[1].Value.ToString();
+
         }
     }
 }

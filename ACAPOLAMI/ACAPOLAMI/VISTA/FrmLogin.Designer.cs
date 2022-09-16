@@ -1,7 +1,7 @@
 ﻿
-namespace WilianMiranda01
+namespace ACAPOLAMI.VISTA
 {
-    partial class Form1
+    partial class FrmLogin
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -29,7 +29,7 @@ namespace WilianMiranda01
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -56,9 +56,10 @@ namespace WilianMiranda01
             this.txtUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUsuario.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.ForeColor = System.Drawing.Color.White;
-            this.txtUsuario.Location = new System.Drawing.Point(380, 90);
+            this.txtUsuario.Location = new System.Drawing.Point(507, 111);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(407, 26);
+            this.txtUsuario.Size = new System.Drawing.Size(541, 30);
             this.txtUsuario.TabIndex = 1;
             this.txtUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsuario_KeyPress);
             // 
@@ -67,9 +68,10 @@ namespace WilianMiranda01
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(376, 68);
+            this.label1.Location = new System.Drawing.Point(501, 84);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 19);
+            this.label1.Size = new System.Drawing.Size(90, 24);
             this.label1.TabIndex = 1;
             this.label1.Text = "Usuario:";
             // 
@@ -78,9 +80,10 @@ namespace WilianMiranda01
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(376, 136);
+            this.label2.Location = new System.Drawing.Point(501, 167);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 19);
+            this.label2.Size = new System.Drawing.Size(126, 24);
             this.label2.TabIndex = 2;
             this.label2.Text = "Contraseña:";
             // 
@@ -90,9 +93,10 @@ namespace WilianMiranda01
             this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPassword.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.Color.White;
-            this.txtPassword.Location = new System.Drawing.Point(380, 158);
+            this.txtPassword.Location = new System.Drawing.Point(507, 194);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(407, 26);
+            this.txtPassword.Size = new System.Drawing.Size(541, 30);
             this.txtPassword.TabIndex = 2;
             this.txtPassword.UseSystemPasswordChar = true;
             this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
@@ -104,9 +108,10 @@ namespace WilianMiranda01
             this.btnIniciarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIniciarSesion.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIniciarSesion.ForeColor = System.Drawing.Color.White;
-            this.btnIniciarSesion.Location = new System.Drawing.Point(380, 243);
+            this.btnIniciarSesion.Location = new System.Drawing.Point(507, 299);
+            this.btnIniciarSesion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnIniciarSesion.Name = "btnIniciarSesion";
-            this.btnIniciarSesion.Size = new System.Drawing.Size(407, 43);
+            this.btnIniciarSesion.Size = new System.Drawing.Size(543, 53);
             this.btnIniciarSesion.TabIndex = 4;
             this.btnIniciarSesion.Text = "Iniciar Sesión";
             this.btnIniciarSesion.UseVisualStyleBackColor = false;
@@ -120,9 +125,10 @@ namespace WilianMiranda01
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(543, 33);
+            this.label4.Location = new System.Drawing.Point(724, 41);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 24);
+            this.label4.Size = new System.Drawing.Size(101, 32);
             this.label4.TabIndex = 14;
             this.label4.Text = "LOGIN";
             // 
@@ -134,9 +140,10 @@ namespace WilianMiranda01
             this.btnRegistroUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistroUsuario.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistroUsuario.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnRegistroUsuario.Location = new System.Drawing.Point(380, 292);
+            this.btnRegistroUsuario.Location = new System.Drawing.Point(507, 359);
+            this.btnRegistroUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRegistroUsuario.Name = "btnRegistroUsuario";
-            this.btnRegistroUsuario.Size = new System.Drawing.Size(407, 43);
+            this.btnRegistroUsuario.Size = new System.Drawing.Size(543, 53);
             this.btnRegistroUsuario.TabIndex = 16;
             this.btnRegistroUsuario.Text = "¿No tienes una cuenta? Registrate";
             this.btnRegistroUsuario.UseVisualStyleBackColor = false;
@@ -151,8 +158,9 @@ namespace WilianMiranda01
             this.panel4.Controls.Add(this.pictureBox1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(314, 348);
+            this.panel4.Size = new System.Drawing.Size(419, 428);
             this.panel4.TabIndex = 17;
             // 
             // pictureBox1
@@ -161,8 +169,9 @@ namespace WilianMiranda01
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::ACAPOLAMI.Properties.Resources._11;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(314, 348);
+            this.pictureBox1.Size = new System.Drawing.Size(419, 428);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
@@ -172,9 +181,10 @@ namespace WilianMiranda01
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
             this.panel3.Controls.Add(this.panel1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(314, 0);
+            this.panel3.Location = new System.Drawing.Point(419, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(534, 27);
+            this.panel3.Size = new System.Drawing.Size(712, 33);
             this.panel3.TabIndex = 18;
             this.panel3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseMove_1);
             // 
@@ -183,23 +193,25 @@ namespace WilianMiranda01
             this.panel1.Controls.Add(this.btnMinimizarAplicacion);
             this.panel1.Controls.Add(this.btnCerrarAplicacion);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(475, 0);
+            this.panel1.Location = new System.Drawing.Point(633, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(59, 27);
+            this.panel1.Size = new System.Drawing.Size(79, 33);
             this.panel1.TabIndex = 13;
             // 
             // btnMinimizarAplicacion
             // 
             this.btnMinimizarAplicacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
+            this.btnMinimizarAplicacion.BackgroundImage = global::ACAPOLAMI.Properties.Resources.minimize_118918;
             this.btnMinimizarAplicacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnMinimizarAplicacion.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnMinimizarAplicacion.FlatAppearance.BorderSize = 0;
             this.btnMinimizarAplicacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimizarAplicacion.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizarAplicacion.Image")));
             this.btnMinimizarAplicacion.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnMinimizarAplicacion.Location = new System.Drawing.Point(7, 0);
+            this.btnMinimizarAplicacion.Location = new System.Drawing.Point(9, 0);
+            this.btnMinimizarAplicacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMinimizarAplicacion.Name = "btnMinimizarAplicacion";
-            this.btnMinimizarAplicacion.Size = new System.Drawing.Size(26, 27);
+            this.btnMinimizarAplicacion.Size = new System.Drawing.Size(35, 33);
             this.btnMinimizarAplicacion.TabIndex = 2;
             this.btnMinimizarAplicacion.UseVisualStyleBackColor = false;
             this.btnMinimizarAplicacion.Click += new System.EventHandler(this.btnMinimizarVentana);
@@ -210,14 +222,16 @@ namespace WilianMiranda01
             // btnCerrarAplicacion
             // 
             this.btnCerrarAplicacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173)))));
+            this.btnCerrarAplicacion.BackgroundImage = global::ACAPOLAMI.Properties.Resources.window_close_icon_135015__1_;
             this.btnCerrarAplicacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCerrarAplicacion.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnCerrarAplicacion.FlatAppearance.BorderSize = 0;
             this.btnCerrarAplicacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarAplicacion.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarAplicacion.Image")));
-            this.btnCerrarAplicacion.Location = new System.Drawing.Point(33, 0);
+            this.btnCerrarAplicacion.Image = global::ACAPOLAMI.Properties.Resources.CERRAR;
+            this.btnCerrarAplicacion.Location = new System.Drawing.Point(44, 0);
+            this.btnCerrarAplicacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCerrarAplicacion.Name = "btnCerrarAplicacion";
-            this.btnCerrarAplicacion.Size = new System.Drawing.Size(26, 27);
+            this.btnCerrarAplicacion.Size = new System.Drawing.Size(35, 33);
             this.btnCerrarAplicacion.TabIndex = 0;
             this.btnCerrarAplicacion.UseVisualStyleBackColor = false;
             this.btnCerrarAplicacion.Click += new System.EventHandler(this.btnCerrarVentana);
@@ -231,20 +245,21 @@ namespace WilianMiranda01
             this.chkPass.BackColor = System.Drawing.Color.Transparent;
             this.chkPass.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkPass.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.chkPass.Location = new System.Drawing.Point(380, 191);
+            this.chkPass.Location = new System.Drawing.Point(507, 235);
+            this.chkPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chkPass.Name = "chkPass";
-            this.chkPass.Size = new System.Drawing.Size(148, 20);
+            this.chkPass.Size = new System.Drawing.Size(185, 23);
             this.chkPass.TabIndex = 3;
             this.chkPass.Text = "Mostrar contraseña";
             this.chkPass.UseVisualStyleBackColor = false;
             this.chkPass.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // Form1
+            // FrmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(133)))), ((int)(((byte)(206)))));
-            this.ClientSize = new System.Drawing.Size(848, 348);
+            this.ClientSize = new System.Drawing.Size(1131, 428);
             this.ControlBox = false;
             this.Controls.Add(this.chkPass);
             this.Controls.Add(this.panel3);
@@ -258,7 +273,8 @@ namespace WilianMiranda01
             this.Controls.Add(this.txtUsuario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "FrmLogin";
             this.Opacity = 0.99D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Tag = "";

@@ -3,7 +3,6 @@ using ACAPOLAMI.DOMINIO;
 using ACAPOLAMI.MODELO;
 using ACAPOLAMI.MODELO.ViewModels;
 using ACAPOLAMI.NEGOCIO;
-using ACAPOLAMI.VISTA;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,11 +14,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static ACAPOLAMI.MODELO.ViewModels.ConsumidoresViewModel;
 
-namespace WilianMiranda01.VISTA
+namespace ACAPOLAMI.VISTA
 {
-    public partial class FrmClientes : Form
+    public partial class FrmConsumidores : Form
     {
-        public FrmClientes()
+        public FrmConsumidores()
         {
             InitializeComponent();
         }
@@ -32,6 +31,7 @@ namespace WilianMiranda01.VISTA
             //Llamada al método 
             MostrarConsumidores();
             dtgGestionDeConsumidores.Columns[0].Width = 70;
+            dtgGestionDeConsumidores.Columns[0].Visible = false;
             dtgGestionDeConsumidores.Columns[1].Width = 180;
             dtgGestionDeConsumidores.Columns[2].Width = 180;
             dtgGestionDeConsumidores.Columns[3].Width = 110;
@@ -40,7 +40,7 @@ namespace WilianMiranda01.VISTA
         }
         
         //Método utilizado para leer los datos del sp en el dtgGestionDeConsumidores
-        private void MostrarConsumidores()
+        public void MostrarConsumidores()
         {
             ClsDConsumidores consumidores = new ClsDConsumidores();
             dtgGestionDeConsumidores.DataSource = consumidores.MostrarConsumidores();
@@ -50,7 +50,7 @@ namespace WilianMiranda01.VISTA
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             FrmGestionConsumidores agregar = new FrmGestionConsumidores();
-
+            agregar.currentFormConsumidores = this;
             agregar.lblId.Visible = false;
             agregar.txtCodigo.Visible = false;
             agregar.btnEjecutar.Text = "Agregar";
@@ -65,6 +65,7 @@ namespace WilianMiranda01.VISTA
             {
                 FrmGestionConsumidores modificar = new FrmGestionConsumidores();
 
+                modificar.currentFormConsumidores = this;
                 modificar.txtCodigo.Text = dtgGestionDeConsumidores.CurrentRow.Cells[0].Value.ToString();
                 modificar.txtNombres.Text = dtgGestionDeConsumidores.CurrentRow.Cells[1].Value.ToString();
                 modificar.txtApellidos.Text = dtgGestionDeConsumidores.CurrentRow.Cells[2].Value.ToString();
@@ -102,6 +103,7 @@ namespace WilianMiranda01.VISTA
             if (dtgGestionDeConsumidores.SelectedRows.Count > 0)
             {
                 FrmGestionConsumidores eliminar = new FrmGestionConsumidores();
+                eliminar.currentFormConsumidores = this;
                 eliminar.txtCodigo.Text = dtgGestionDeConsumidores.CurrentRow.Cells[0].Value.ToString();
                 eliminar.txtNombres.Text = dtgGestionDeConsumidores.CurrentRow.Cells[1].Value.ToString();
                 eliminar.txtApellidos.Text = dtgGestionDeConsumidores.CurrentRow.Cells[2].Value.ToString();
@@ -136,7 +138,7 @@ namespace WilianMiranda01.VISTA
 
         private void btnBuscar_MouseLeave(object sender, EventArgs e)
         {
-            btnBuscar.BackColor = Color.WhiteSmoke;
+            btnBuscar.BackColor = Color.White;
             btnBuscar.ForeColor = Color.Black;
         }
 
@@ -156,7 +158,7 @@ namespace WilianMiranda01.VISTA
 
         private void btnAgregar_MouseLeave(object sender, EventArgs e)
         {
-            btnAgregar.BackColor = Color.WhiteSmoke;
+            btnAgregar.BackColor = Color.White;
             btnAgregar.ForeColor = Color.Black;
         }
 
@@ -176,7 +178,7 @@ namespace WilianMiranda01.VISTA
 
         private void btnModificar_MouseLeave(object sender, EventArgs e)
         {
-            btnModificar.BackColor = Color.WhiteSmoke;
+            btnModificar.BackColor = Color.White;
             btnModificar.ForeColor = Color.Black;
         }
 
@@ -196,7 +198,7 @@ namespace WilianMiranda01.VISTA
 
         private void btnEliminar_MouseLeave(object sender, EventArgs e)
         {
-            btnEliminar.BackColor = Color.WhiteSmoke;
+            btnEliminar.BackColor = Color.White;
             btnEliminar.ForeColor = Color.Black;
         }
 
@@ -208,52 +210,15 @@ namespace WilianMiranda01.VISTA
         }
 
         #endregion
-        public void btnRefrescar_Click(object sender, EventArgs e)
-        {
-            MostrarConsumidores();
-        }
-
-        private void btnRefrescar_MouseHover(object sender, EventArgs e)
-        {
-            btn.BotonAzulOscuro = btnRefrescar;
-            button.AzulOscuro(btn);
-            btnRefrescar.ForeColor = Color.White;
-        }
-
-        private void btnRefrescar_MouseLeave(object sender, EventArgs e)
-        {
-            btnRefrescar.BackColor = Color.WhiteSmoke;
-            btnRefrescar.ForeColor = Color.Black;
-        }
-
-        private void btnRefrescar_MouseMove(object sender, MouseEventArgs e)
-        {
-            btn.BotonAzulOscuro = btnRefrescar;
-            button.AzulOscuro(btn);
-            btnRefrescar.ForeColor = Color.White;
-        }
 
         //Evento click para buscar Consumidores
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            if(cbBuscarCliente.Text != "")
+            if(txtNombreConsumidor.Text != "")
             {
-                Buscador(cbBuscarCliente.Text.Trim());
+                Buscador(txtNombreConsumidor.Text.Trim());
             }
 
-            if (cbBuscarCliente.Items.Count > 9)
-                cbBuscarCliente.Items.RemoveAt(9);
-
-            if (cbBuscarCliente.FindString(cbBuscarCliente.Text) != -1)
-            {
-                int index = cbBuscarCliente.FindString(cbBuscarCliente.Text);
-                cbBuscarCliente.Items.RemoveAt(index);
-                cbBuscarCliente.Items.Insert(0, cbBuscarCliente.Text);
-            }
-
-            //Agregar al historial de busqueda
-            else if(cbBuscarCliente.SelectedIndex != 0)
-                cbBuscarCliente.Items.Insert(0, cbBuscarCliente.Text);
         }
 
         private void Buscador(string busqueda = null)
@@ -280,9 +245,8 @@ namespace WilianMiranda01.VISTA
                 if (busqueda != null && !busqueda.Equals(""))
                 {
                     //Empresion lamda para crear las condiciones de busquedas
-                    buscar = buscar.Where(d => busqueda == d.Id.ToString() || d.Nombres == busqueda || busqueda == d.Apellidos
-                    || busqueda == d.Dui || busqueda == d.Correo || busqueda == d.Telefono
-                    || busqueda == d.Comunidad);
+                    buscar = buscar.Where(d => d.Nombres.ToLower().Contains(busqueda.ToLower()) || d.Apellidos.ToLower().Contains(busqueda.ToLower()) || (d.Nombres + " "+ d.Apellidos).ToLower().Contains(busqueda.ToLower())
+                    || d.Dui.ToLower().Contains(busqueda.ToLower()) || d.Comunidad.ToLower().Contains(busqueda.ToLower()));
                 }
 
                 //Pasamos la lista de consultas al dataGridView
@@ -290,18 +254,13 @@ namespace WilianMiranda01.VISTA
             }
         }
 
-        private void cbBuscarCliente_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if(e.KeyChar == 13 && cbBuscarCliente.Text != "")
-            {
-                e.Handled = true;
-                btnBuscar.PerformClick();
-            }
-        }
 
-        private void cbBuscarCliente_Enter(object sender, EventArgs e)
+        private void txtNombreConsumidor_TextChanged(object sender, EventArgs e)
         {
-            cbBuscarCliente.SelectAll();
+            if (txtNombreConsumidor.Text.Trim().Length > 0)
+            {
+                Buscador(txtNombreConsumidor.Text.Trim());
+            }
         }
     }
 }

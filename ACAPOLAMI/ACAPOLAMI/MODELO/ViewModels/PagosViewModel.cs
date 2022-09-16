@@ -23,8 +23,6 @@ namespace ACAPOLAMI.MODELO.ViewModels
 
         public decimal? Impuesto { get; set; }
 
-        public decimal? Total { get; set; }
-
         public DateTime? Fecha { get; set; }
 
         public string Estado { get; set; }
